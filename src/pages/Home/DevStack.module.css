@@ -1,0 +1,13 @@
+.DevStackPaper:hover {
+  color: red;
+  border-color: black;
+  transition: 1s;
+}
+/* .Text {
+  color: red;
+} */
+
+.DevStackPaper:hover .Text {
+  color: black;
+  transition: 1s;
+}

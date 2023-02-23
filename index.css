@@ -1,0 +1,322 @@
+* {
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear; */
+  /* cursor: none; */
+}
+body {
+  background: #000;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* .carousel.indicators {
+  bottom: 50px !important;
+}
+ul .indicators {
+  bottom: 50px !important;
+} */
+.indicators {
+  bottom: 161px !important;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 52%;
+  }
+}
+
+* {
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear; */
+  /* text-transform: capitalize; */
+  /* cursor: none;*/
+}
+body {
+  background: #000;
+  user-select: none;
+  /* overflow-y: scroll !important;
+  overflow-x: hidden !important; */
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* .carousel.indicators {
+  bottom: 50px !important;
+}
+ul .indicators {
+  bottom: 50px !important;
+} */
+.indicators {
+  bottom: 161px !important;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@font-face {
+  font-family: "MBFCanno";
+  src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
+}
+@font-face {
+  font-family: "LGBold";
+  src: url("../src/assets/Fonts/LG/LabilGrotesk-Bold.ttf");
+}
+@font-face {
+  font-family: "LGLight";
+  src: url("../src/assets/Fonts/LG/LabilGrotesk-Light.ttf");
+}
+@font-face {
+  font-family: "LGMedium";
+  src: url("../src/assets/Fonts/LG/LabilGrotesk-Medium.ttf");
+}
+@font-face {
+  font-family: "LGRegular";
+  src: url("../src/assets/Fonts/LG/LabilGrotesk-Regular.ttf");
+}
+@font-face {
+  font-family: "LGThin";
+  src: url("../src/assets/Fonts/LG/LabilGrotesk-Thin.ttf");
+}
+@font-face {
+  font-family: "LGTrial";
+  src: url("../src/assets/Fonts/LG/labilgrotesktrial-regular.otf");
+}
+@font-face {
+  font-family: "MBFCanno";
+  src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../src/assets/Fonts/sf-pro-display/SFPRODISPLAYMEDIUM.OTF");
+}
+
+@font-face {
+  font-family: "Jeko Bold";
+  src: url("../src/assets/Fonts/FontsFree-Net-Jeko-Bold.ttf");
+}
+
+.cursor {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  /* border: 5px solid red; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10000;
+  mix-blend-mode: difference;
+}
+
+/* html::-webkit-scrollbar {
+  width: 25px;
+  background-color: red;
+  color: red;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #666;
+} */
+
+button:focus {
+  background-color: inherit !important;
+}
+
+.carousel-cell {
+  width: 28%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8c8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+.carousel-cell.is-selected {
+  background: #ed2;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.chat-arrow-img:hover {
+  width: 35px;
+}
+
+.marquee-container::before {
+  background: initial !important;
+}
+
+.bg-gradient-text {
+  font-family: "Jeko Bold";
+  font-style: normal;
+  font-weight: 750;
+  line-height: 110px;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    rgba(201, 75, 234, 1) 0%,
+    11.84210553765297%,
+    rgba(112, 62, 195, 1) 23.68421107530594%,
+    34.21052619814873%,
+    rgba(59, 33, 140, 1) 44.736841320991516%,
+    55.04385977983475%,
+    rgba(26, 16, 66, 1) 65.35087823867798%,
+    72.14912474155426%,
+    rgba(54, 9, 52, 1) 78.94737124443054%,
+    89.47368562221527%,
+    rgba(170, 2, 87, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+h1,
+h2,
+h3 {
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+.css-11lq3yg-MuiGrid-root {
+  flex-direction: row-reverse !important;
+}
+.css-nal9vn {
+  width: 33% !important;
+}
+@media (min-width: 1200px) {
+  .css-1vhm1q {
+    height: 450px !important;
+    object-fit: cover;
+  }
+}
+@media (min-width: 900px) {
+  .css-1jiv3lv-MuiTypography-root {
+    font-size: 16.5839px;
+    margin-left: 0rem !important;
+  }
+}
+.css-uqvsw2-MuiButtonBase-root-MuiButton-root:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(23 23 24 / 16%);
+}
+
+@media (max-width: 450px) {
+  .whatsappicon {
+    right: 3% !important;
+    top: 88% !important;
+  }
+}
+.whatsappicon {
+  width: 40px;
+  position: fixed;
+  top: 85%;
+  right: 3.4%;
+  z-index: 10;
+}
+._MenuIcon_16ujd_37 {
+  margin-right: -40px;
+  margin-top: 8px;
+}
+.css-13jdyyo {
+  width: 100px !important;
+}
+.cta-left:hover {
+  left: 5% !important;
+  padding-left: 4% !important;
+}
+
+.cta-right:hover {
+  right: 5% !important;
+  padding-right: 4% !important;
+}
+.cta span {
+  color: #000 !important;
+}
+
+.css-13jdyyo,
+.css-5jzr73 {
+  opacity: 1 !important;
+}
+.css-1aztaxg-MuiPaper-root {
+  padding-top: 40px;
+}
+@media (min-width: 1200px) {
+  .css-z6cr19,.css-sbxffd,.css-10o0v01,.css-1qjyzjd,.css-156fxck {
+    height: 550px !important;
+  }
+}
+.css-z6cr19,.css-1s16qga{
+  position: relative;
+}
+.css-z6cr19::after,.css-1s16qga::after{
+  content: '';
+  background: rgba(163, 163, 163, 0.3);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.css-z6cr19::before,.css-1s16qga::before{
+  content: '';
+  background: rgba(255, 255, 255, 1);
+  width: 33%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  bottom: 0;
+}
+.css-w4ysh{
+  object-fit: cover !important;
+}
+.kScZwU{
+  font-family: unset !important;
+}
+.css-3xsmmd-MuiButtonBase-root-MuiButton-root:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #fff !important;
+  color: #000 !important;
+}

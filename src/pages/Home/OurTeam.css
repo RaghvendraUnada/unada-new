@@ -1,0 +1,133 @@
+.image-grid-container {
+  display: flex;
+}
+
+.image-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.employe-card {
+  position: relative;
+  left: 0px;
+  animation: imageAnimation1 7s linear infinite;
+}
+
+@keyframes imageAnimation1 {
+  0% {
+    /* transform: translateY(0%); */
+
+    bottom: 3%;
+  }
+
+  /* 97% {
+    top: -70%;
+  } */
+
+  95% {
+    /* transform: translateY(-500%); */
+    bottom: 56%;
+
+    /* top: -120%; */
+  }
+
+  100% {
+    /* bottom: 100%; */
+  }
+}
+
+.culture-card {
+  position: relative;
+  left: 0px;
+  animation: slide 5s linear infinite;
+}
+
+@keyframes slide {
+  /* 0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1000px, 0, 0);
+  } */
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -800px;
+  }
+}
+
+/* new css */
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.block-33 {
+  width: 100%;
+}
+
+.display--inline-top {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.fill-dimensions {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.cover-img {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gallery-image {
+  padding-bottom: 2.35em;
+  animation: marqueeTop 5s linear infinite;
+}
+
+.gallery-h--tb .gallery-image {
+  animation: marqueeBottom 5s linear infinite;
+}
+
+.gallery-image__img {
+  padding-top: 06vh;
+  width: "250px";
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+}
+
+.gallery-h {
+  overflow: hidden;
+}
+
+@keyframes marqueeTop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes marqueeBottom {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
