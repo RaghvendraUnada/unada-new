@@ -5,6 +5,8 @@ import UnadaStoryImg from "../../assets/Images/Career/UnadaStoryImg.svg";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import storiesTitle from "../../assets/images/new/stories.png";
+import Slider from "react-slick";
+import { GrNext, GrPrevious } from "react-icons/gr";
 
 const ImgArr = [
   UnadaStoryImg,
@@ -14,7 +16,41 @@ const ImgArr = [
   UnadaStoryImg,
   UnadaStoryImg,
 ];
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "transparent" }}
+      onClick={onClick}
+    >
+      <GrNext />
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "transparent" }}
+      onClick={onClick}
+    />
+  );
+}
+
 const StoriesAtUnadaSection = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow className={"slick-arrow slick-next"} />,
+    prevArrow: <SamplePrevArrow />,
+  };
   return (
     <Grid
       container
@@ -30,7 +66,12 @@ const StoriesAtUnadaSection = () => {
         <Box display="flex" flexDirection="row">
           {/* <Typography sx={HeadText}>Stories at</Typography> */}
           {/* <AnimatedGradientText>Unada</AnimatedGradientText> */}
-          <img src={storiesTitle} alt="stories" style={{marginLeft: "40px"}} draggable="false" />
+          <img
+            src={storiesTitle}
+            alt="stories"
+            style={{ marginLeft: "40px" }}
+            draggable="false"
+          />
         </Box>
         {/* <span style={colorText}>Unada</span> */}
         <Typography sx={MetaText}>
@@ -49,7 +90,38 @@ const StoriesAtUnadaSection = () => {
           height: "100%",
         }}
       >
-        <SwiperSliderCara data={ImgArr} />
+        <Box sx={{ width: "98%", mx: "auto" }}>
+          <Slider {...settings}>
+            {ImgArr.map((slide, sid) => (
+              <Box
+                key={`slide-${sid}`}
+                sx={{
+                  flex: "none",
+                  boxSize: "90%",
+                  padding: "1.5rem",
+                  flexDirection: "column",
+                  gap: "1rem",
+                  width: "auto",
+                }}
+              >
+                <Box
+                  sx={{
+                    backgroundSize: "cover",
+                    width: "100%",
+                    height: {
+                      xs: "250px",
+                      lg: "450px",
+                    },
+                  }}
+                  component="img"
+                  alt="hello"
+                  src={slide}
+                />
+                <Typography sx={SwiperText}>Studio 25 Tiktok</Typography>
+              </Box>
+            ))}
+          </Slider>
+        </Box>
       </Grid>
     </Grid>
   );
@@ -155,4 +227,27 @@ const colorText = {
   backgroundClip: "text",
   textFillColor: "transparent",
   marginLeft: "0rem",
+};
+
+const SwiperText = {
+  fontFamily: "LGTrial",
+  fontStyle: "normal",
+  fontWeight: 400,
+  // fontSize: "16.5839px",
+  fontSize: {
+    xl: "16.5839px",
+    lg: "16.5839px",
+    md: "16.5839px",
+    sm: "12px",
+    xs: "12px",
+  },
+  lineHeight: " 11px",
+  color: "#FAFAFA",
+  marginLeft: {
+    sm: "0",
+    md: "20rem",
+  },
+  marginRight: "auto",
+  marginTop: "2rem",
+  marginBottom: "4rem",
 };

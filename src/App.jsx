@@ -210,9 +210,23 @@ function App() {
                           alignItems: "center",
                           justifyContent: "space-between",
                           px: "1rem",
-                          '&:hover': {
-                            background:"rgba(255, 255, 255, 0.8)"
-                          }
+                          "& img": {
+                            transform: "rotate(44deg)",
+                            transition: "all 0.6s ease-in-out",
+                          },
+                          "&:hover": {
+                            background: "rgba(255, 255, 255, 0.8)",
+                            backgroundImage:
+                              "-webkit-gradient( linear, left top, right bottom, color-stop(0, #3b5998), color-stop(1, #fff))",
+                            color: "transparent",
+                            backgroundClip: "text",
+                            WebkitBackgroundClip: "text",
+                            // on hover rotate image
+                            "& img": {
+                              transform: "rotate(10deg)",
+                              transition: "all 0.6s ease-in-out",
+                            },
+                          },
                         }}
                       >
                         Get in touch
@@ -224,6 +238,7 @@ function App() {
                             width: "10px",
                             marginLeft: "5px",
                             marginBottom: "-2px",
+                            // transform: "rotate(44deg)",
                           }}
                         />
                       </Box>

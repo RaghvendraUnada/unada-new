@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import IntoImg1 from "../../assets/Images/Career/IntroImg1.svg";
 import IntoImg2 from "../../assets/Images/Career/IntroImg2.svg";
 import IntoImg3 from "../../assets/Images/Career/IntroImg3.svg";
+import Slider from "react-slick";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -25,6 +27,13 @@ export default function SwiperSliderCara(props) {
     setCurrentSlide((s) => (s === slidesCount - 2 ? 0 : s + 1));
   };
 
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   return (
     <React.Fragment>
       <Box
@@ -105,58 +114,36 @@ export default function SwiperSliderCara(props) {
             &#10095;
           </Box>
         </Box>
-        <Box
-          sx={{
-            width: "100%",
-            display: "flex",
-            overflow: "hidden",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              position: "relative",
-              height: {
-                xs: "400px",
-                lg: "700px",
-              },
-              width: "100%",
-              transition: "all .5s",
-              marginLeft: `-${currentSlide * 50}%`,
-            }}
-          >
-            {props.data.map((slide, sid) => (
+        <Slider {...settings}>
+          {ImgArr.map((slide, sid) => (
+            <Box
+              key={`slide-${sid}`}
+              sx={{
+                flex: "none",
+                boxSize: "100%",
+                padding: "1.5rem",
+                flexDirection: "column",
+                gap: "1rem",
+                width: "33%",
+              }}
+            >
               <Box
-                key={`slide-${sid}`}
                 sx={{
-                  flex: "none",
-                  boxSize: "100%",
-                  padding: "1.5rem",
-                  flexDirection: "column",
-                  gap: "1rem",
-                  width: "33%",
-                  // marginRight: "3rem",
+                  backgroundSize: "cover",
+                  width: "100%",
+                  height: {
+                    xs: "250px",
+                    lg: "450px",
+                  },
                 }}
-              >
-                <Box
-                  sx={{
-                    backgroundSize: "cover",
-                    width: "100%",
-                    height: {
-                      xs: "250px",
-                      lg: "450px",
-                    },
-                  }}
-                  component="img"
-                  alt="hello"
-                  // sx={imge}
-                  src={slide}
-                />
-                <Typography sx={SwiperText}>Studio 25 Tiktok</Typography>
-              </Box>
-            ))}
-          </Box>
-        </Box>
+                component="img"
+                alt="hello"
+                src={slide}
+              />
+              <Typography sx={SwiperText}>Studio 25 Tiktok</Typography>
+            </Box>
+          ))}
+        </Slider>
       </Box>
     </React.Fragment>
   );
