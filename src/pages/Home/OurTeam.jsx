@@ -1,5 +1,5 @@
 import { Grid, Paper, Typography, Box } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TeamImgOne from "../../assets/Images/Home/OurTeam/ImgOne.png";
 import TeamImgTwo from "../../assets/Images/Home/OurTeam/ImgTwo.png";
 import "./OurTeam.css";
@@ -8,8 +8,19 @@ import Marquee from "react-marquee-master";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import teamTitle from "../../assets/images/new/team.png";
+import axios from "axios";
 
 const OurTeam = () => {
+  const [teamData, setTeamData] = useState();
+  const FetchTeamData = async () => {
+    await axios
+      .get("/team/get_members")
+      .then((res) => {
+        console.log(res.data);
+        setTeamData(res.data);
+      })
+      .catch((err) => console.log(err));
+  };
   const leftImages = [
     TeamImgOne,
     TeamImgOne,
@@ -17,6 +28,10 @@ const OurTeam = () => {
     TeamImgOne,
     TeamImgOne,
   ];
+  useEffect(() => {
+    FetchTeamData();
+  }, []);
+
   return (
     <Paper
       elevation={0}

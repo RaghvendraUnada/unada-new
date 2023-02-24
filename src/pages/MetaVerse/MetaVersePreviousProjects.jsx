@@ -10,6 +10,7 @@ import cara5 from "../../assets/Images/MetaVerse/CaraImg5.svg";
 import { Box } from "@mui/system";
 import Slider3dNew from "../../Components/Slider3dNew";
 import SpringSlider from "../../Components/SpringSlider/SpringSlider";
+import PreProjectCara from "../../components/PreProjectCara";
 const MetaVersePreviousProjects = () => {
   let cards = [
     {
@@ -80,8 +81,10 @@ const MetaVersePreviousProjects = () => {
           // background: "red",
         }}
       >
-        {/* <span style={prevProjectColorText}>Projects</span> */}
-        <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+        <Grid item xl={12} lg={12} md={12}>
+          <PreProjectCara />
+        </Grid>
+        {/* <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
           <Box
             sx={{
               display: "flex",
@@ -95,8 +98,7 @@ const MetaVersePreviousProjects = () => {
                 ...prevProjectText,
                 background:
                   "linear-gradient(to left, #D325E6 0%, 32.67543911933899%, #6E24B9 65.35087823867798%, 82.67543911933899%, #240D5D 100%)",
-                // background:
-                //   "linear-gradient(to left, rgba(201, 75, 234, 1) 0%, 11.84210553765297%, rgba(112, 62, 195, 1) 23.68421107530594%, 34.21052619814873%, rgba(59, 33, 140, 1) 44.736841320991516%, 55.04385977983475%, rgba(26, 16, 66, 1) 65.35087823867798%, 72.14912474155426%, rgba(54, 9, 52, 1) 78.94737124443054%, 89.47368562221527%, rgba(170, 2, 87, 1) 100%)",
+              
                 backgroundSize: " 100%",
                 backgroundRepeat: "repeat",
                 backgroundClip: "text",
@@ -110,8 +112,6 @@ const MetaVersePreviousProjects = () => {
             Purpose for Profit rewards contributors with short-term liquidity
             and bonuses
           </Typography>
-          {/* <SpringSlider /> */}
-          {/* <Slider3dNew /> */}
           <Box
             sx={{
               marginTop: {
@@ -132,13 +132,12 @@ const MetaVersePreviousProjects = () => {
             <Carousel
               cards={cards}
               height="600px"  
-              // width="10%"
               margin="0 auto"
               offset={2}
               showArrows={false}
             />
           </Box>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Paper>
   );

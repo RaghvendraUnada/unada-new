@@ -7,8 +7,6 @@ const ClientBox = ({ image, name = "client" }) => {
         marginX: "12px",
         borderRadius: "8px",
         backgroundColor: "#0d0d0d",
-        // paddingX: "120px",
-        // paddingY: "12px",
         width: "300px",
         height: "auto",
         minHeight: "90px",
