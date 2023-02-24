@@ -97,6 +97,7 @@ const ImageBox = (props) => {
           textAlign: "center",
           height: "100%",
           mx: "auto",
+          bgcolor: "transparent",
         }}
       >
         <img src={props.img} width="75%" height="auto" />

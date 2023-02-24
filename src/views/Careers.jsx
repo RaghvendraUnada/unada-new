@@ -35,9 +35,6 @@ const Careers = () => {
       >
         <Stack
           sx={{
-            // maxWidth: "2000px",
-            // marginLeft: "auto",
-            // marginRight: "auto",
             background: "#000",
           }}
         >
@@ -45,14 +42,11 @@ const Careers = () => {
           <UnadalifeSection />
           <CareerIntroSection />
           <OurCultureSection />
-          {/* <PositionsDev /> */}
-          {/* <OurTeams /> */}
           <RevolutionSetion />
           <PositionsDev />
           <InternshipSection />
           <StoriesAtUnadaSection />
           <ChatSection />
-          {/* <Footer /> */}
         </Stack>
       </motion.div>
     </>

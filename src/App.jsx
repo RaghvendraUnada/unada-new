@@ -8,11 +8,12 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import HeaderStyles from "../src/Components/Header/Header.module.scss";
 import { Link, useNavigate } from "react-router-dom";
-import arrowheader from "../src/assets/Images/Header/arrowheader.svg";
+import arrowheader from "../src/assets/Images/Header/headl.png";
 // import { HiArrowRight } from "react-icons/hi";
 import Logo from "../src/assets/Images/Header/Logo.png";
 import WhiteLogo from "../src/assets/Images/Header/unada-logo.png";
 import WhatsappIcon from "./assets/Images/WhatsappIcon.png";
+
 import { HiArrowRight } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { keyframes } from "styled-components";
@@ -194,23 +195,39 @@ function App() {
                         />
                       </Button>
                     )}
-                    <Box sx={{ ...ContactUsButton, background: "white" }}>
-                      <Link to={"/contact"}>
-                        <Button sx={ContactUsText}>
-                          Get in touch
-                          <img
-                            src={arrowheader}
-                            alt="arrow"
-                            style={{
-                              height: "auto",
-                              width: "13px",
-                              marginLeft: "5px",
-                              marginBottom: "-2px",
-                            }}
-                          />
-                        </Button>
-                      </Link>
-                    </Box>
+                    <Link to={"/contact"}>
+                      <Box
+                        sx={{
+                          ...ContactUsButton,
+                          background: "white",
+                          fontFamily: "SF Pro Display",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          fontSize: "14px",
+                          lineHeight: "20px",
+                          color: "#4E4E4E",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          px: "1rem",
+                          '&:hover': {
+                            background:"rgba(255, 255, 255, 0.8)"
+                          }
+                        }}
+                      >
+                        Get in touch
+                        <img
+                          src={arrowheader}
+                          alt="arrow"
+                          style={{
+                            height: "auto",
+                            width: "10px",
+                            marginLeft: "5px",
+                            marginBottom: "-2px",
+                          }}
+                        />
+                      </Box>
+                    </Link>
                   </Paper>
                 </Paper>
               ) : null}
@@ -286,7 +303,6 @@ function App() {
                     <Link
                       onClick={() => {
                         setOpen(false);
-                        setLocationData("/");
                       }}
                       className={
                         location === "/"
@@ -317,7 +333,6 @@ function App() {
                     <Link
                       onClick={() => {
                         setOpen(false);
-                        setLocationData("/careers");
                       }}
                       className={
                         location === "/careers"
@@ -348,7 +363,6 @@ function App() {
                     <Link
                       onClick={() => {
                         setOpen(false);
-                        setLocationData("/contact");
                       }}
                       className={
                         location === "/contact"
@@ -473,39 +487,26 @@ const LinkStyles = {
 };
 
 const ContactUsButton = {
-  width: "123px",
-  height: "30px",
+  width: "137px",
+  height: "41px",
   // background: " grey",
   // boxShadow: "0px 0px 3px rgba(51, 211, 212, 0.18)",
-  borderRadius: "8px",
+  borderRadius: "28px",
   // display: "flex",
   px: 0,
   zIndex: 0,
+  border: "0.5px solid #CCCCCC",
   mt: 1,
   justifyContent: "space-evenly",
   cursor: "pointer",
   alignItems: "center",
   paddingTop: "1rem",
   paddingBottom: "1rem",
-  display: { xl: "flex", lg: "flex", md: "flex", sm: "none", xs: "none" },
+  // display: { xl: "flex", lg: "flex", md: "flex", sm: "none", xs: "none" },
   // boxShadow: "10px 10px 10px 10px black",
-  WebkitBoxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
-  MozBoxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
-  boxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
+  // WebkitBoxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
+  // MozBoxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
+  // boxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
 };
 
-const ContactUsText = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 400,
-  fontSize: "14px",
-  lineHeight: "20px",
-  // color: "#000000",
-  background:
-    "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
-  textTransform: "none",
-  backgroundSize: " 100%",
-  backgroundRepeat: "repeat",
-  backgroundClip: "text",
-  textFillColor: "transparent",
-};
+const ContactUsText = {};

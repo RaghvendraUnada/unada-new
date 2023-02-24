@@ -1,18 +1,4 @@
-* {
-  /* margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-transform: capitalize;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear; */
-  /* cursor: none; */
-}
+
 body {
   background: #000;
 }
@@ -20,13 +6,6 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-
-/* .carousel.indicators {
-  bottom: 50px !important;
-}
-ul .indicators {
-  bottom: 50px !important;
-} */
 .indicators {
   bottom: 161px !important;
 }
@@ -42,17 +21,7 @@ ul .indicators {
   }
 }
 
-* {
-  /* margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  transition: all 0.2s linear; */
-  /* text-transform: capitalize; */
-  /* cursor: none;*/
-}
+
 body {
   background: #000;
   user-select: none;

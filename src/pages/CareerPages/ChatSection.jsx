@@ -1,14 +1,8 @@
 import React from "react";
 import { Grid, Typography, Box } from "@mui/material";
 import ChatUsCareer from "../CareerPages/ChatUsCareer";
-import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
-import styles from "./OurTeam.module.css";
+import { AiFillInstagram } from "react-icons/ai";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
-import { keyframes } from "styled-components";
-import styled from "styled-components"; 
-import { Link } from "react-router-dom";
-import chatTitle from "../../assets/images/new/chat.png";
-
 const ChatSection = () => {
   return (
     <Grid
@@ -45,53 +39,12 @@ const ChatSection = () => {
             sm: "center",
             xs: "center",
           },
+          borderRight: "0.5px solid rgba(163, 163, 163, 0.3)",
         }}
       >
-        {/* <Typography sx={textStyle1}>
+        <Typography sx={textStyle1}>
           Let’s chat,
-          <Box
-            className="content"
-            display="flex"
-            alignItems="center"
-            justifyContent="start"
-            sx={{
-              // padding: {
-              //   xl: "2rem",
-              //   lg: "2rem",
-              //   md: "2rem",
-              //   sm: "2rem",
-              //   xs: "2rem",
-              // },
-              // width: "95%",
-              // margin: {
-              //   sm: "auto",
-              //   md: 0,
-              // },
-              // marginLeft: "0px",
-              // marginRight: "auto",
-              // marginY: "5rem",
-            }}
-          > */}
-            {/* <AnimatedGradientText2>we respond fast</AnimatedGradientText2> */}
-            {/* <AnimatedGradientText2>We respond fast</AnimatedGradientText2> */}
-            {/* <Box
-              className="bg-gradient-text"
-              sx={{
-                fontSize: {
-                  lg: "6rem",
-                  md: "4rem",
-                  sm: "4rem",
-                  xs: "4rem",
-                },
-              }}
-            >
-              We respond fast
-            </Box> */}
-            {/* <AnimatedGradientText></AnimatedGradientText>  */}
-            {/* <h2 style={{ fontSize: "70px" }}> We respond fast</h2>
-            <h2 style={{ fontSize: "70px" }}>We respond fast</h2> */}
-          {/* </Box> */}
-          {/* <Typography
+          <Typography
             sx={{
               ...textStyle1,
               background:
@@ -103,9 +56,8 @@ const ChatSection = () => {
             }}
           >
             we respond fast
-          </Typography> */}
-        {/* </Typography> */}
-        <img src={chatTitle} alt="chat" width="70%" draggable="false" />
+          </Typography>{" "}
+        </Typography>
         <Box>
           <Typography sx={SubHeadText}>Follow us</Typography>
           <Box
@@ -123,10 +75,10 @@ const ChatSection = () => {
               gap: "20px",
             }}
           >
-            <BsFacebook className={styles.iconfb} size={19} />
-            <AiFillInstagram className={styles.iconinsta1} size={23} /> 
-            <AiFillLinkedin className={styles.icontwitter} size={23} /> 
-            <BsTwitter className={styles.icontwitter} size={19} />
+            <BsFacebook size={19} />
+            <AiFillInstagram size={23} />
+            <AiFillInstagram size={23} />
+            <BsTwitter size={19} />
           </Box>
           <Box sx={{ marginTop: "5rem" }}>
             <Typography sx={SubHeadText}>Find us</Typography>
@@ -146,7 +98,7 @@ const ChatSection = () => {
 
 export default ChatSection;
 const textStyle1 = {
-  fontFamily: "LGTrial",
+  fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
   fontSize: {
@@ -165,49 +117,6 @@ const textStyle1 = {
   },
   letterSpacing: 1,
 };
-const hue = keyframes`
- from {
-   -webkit-filter: hue-rotate(0deg);
- }
- to {
-   -webkit-filter: hue-rotate(-360deg);
- }
-`;
-const AnimatedGradientText = styled.h1`
-  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: ${hue} 10s infinite linear;
-  font-family: LGTrial;
-  letter-spacing: 1px;
-  font-size: 64px;
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
-  // overflow-wrap: break-word;
-  text-rendering: optimizelegibility;
-  -moz-osx-font-smoothing: grayscale;
-  @media (max-width: 1200px) {
-    font-size: 64px;
-    lineheight: 76px;
-  }
-  @media (max-width: 992px) {
-    font-size: 64px;
-    lineheight: 76px;
-  }
-  @media (max-width: 768px) {
-    font-size: 50px;
-    lineheight: 58px;
-  }
-  @media (max-width: 576px) {
-    font-size: 42px;
-    lineheight: 50px;
-  }
-  @media (max-width: 320px) {
-    font-size: 35px;
-    lineheight: 45px;
-  }
-`;
 const SubHeadText = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
@@ -229,7 +138,6 @@ const SubHeadText = {
     xs: "4rem",
   },
 };
-
 const metaTextStyle2 = {
   marginTop: "2rem",
   width: {
@@ -274,41 +182,3 @@ const metaTextStyle2 = {
     xs: "4rem",
   },
 };
-
-const AnimatedGradientText2 = styled.h1`
-  background-image: -webkit-linear-gradient(
-    2deg,
-    rgba(201, 75, 234, 1) 0%,
-    rgba(112, 62, 195, 1),
-    rgba(59, 33, 140, 1),
-    rgba(26, 16, 66, 1),
-    rgba(54, 9, 52, 1),
-    rgba(170, 2, 87, 1)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: ${hue} 10s infinite linear;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-feature-settings: "kern";
-  font-size: 6rem;
-  font-weight: 500;
-  text-align: center;
-  text-rendering: optimizelegibility;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1200px) {
-    width: 60%;
-    font-size: 4rem;
-    margin: auto;
-  }
-  @media (max-width: 992px) {
-    width: 60%;
-  }
-  @media (max-width: 768px) {
-    width: 60%;
-  }
-  @media (max-width: 576px) {
-    width: 100%;
-  }
-`;

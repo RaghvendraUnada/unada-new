@@ -13,20 +13,6 @@ const VideoBox = () => {
     <Box
       className={`${styles["circle-container"]}`}
       sx={{
-        // minHeight: {
-        //   xl: "450px",
-        //   lg: "450px",
-        //   md: "450px",
-        //   sm: "347px",
-        //   xs: "347px",
-        // },
-        // maxHeight: {
-        //   xl: "450px",
-        //   lg: "450px",
-        //   md: "450px",
-        //   sm: "347px",
-        //   xs: "347px",
-        // },
         top: {
           sm: "-135px",
           xs: "-135px",
@@ -41,10 +27,7 @@ const VideoBox = () => {
           lg: "-100px",
           xl: "-100px",
         },
-        // width: "100%",
         zIndex: "20",
-        // top: "-100px",
-        // left: "-100px",
         bgcolor: "transparent",
         position: "absolute",
       }}
@@ -62,31 +45,31 @@ const VideoBox = () => {
             width: "auto",
           }}
         > */}
-      <span
-        className={`${styles["circle-img"]} ${styles["circle-icon-1"]}`} 
-      >U</span>
-      <span
-        className={`${styles["circle-img"]} ${styles["circle-icon-2"]}`} 
-      >N</span>
-      <span
-        className={`${styles["circle-img"]} ${styles["circle-icon-3"]}`} 
-      >A</span>
-      <span
-        className={`${styles["circle-img"]} ${styles["circle-icon-4"]}`} 
-      >D</span>
-      <span
-        className={`${styles["circle-img"]} ${styles["circle-icon-5"]}`} 
-      >A</span>
-      <span
-        className={`${styles["circle-img"]} ${styles["circle-icon-6"]}`} 
-      >L</span>
-      <span
-        className={`${styles["circle-img"]} ${styles["circle-icon-7"]}`} 
-      >A</span>
-      <span
-        className={`${styles["circle-img"]} ${styles["circle-icon-8"]}`} 
-      >B</span>  
-       
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-1"]}`}>
+        U
+      </span>
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-2"]}`}>
+        N
+      </span>
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-3"]}`}>
+        A
+      </span>
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-4"]}`}>
+        D
+      </span>
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-5"]}`}>
+        A
+      </span>
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-6"]}`}>
+        L
+      </span>
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-7"]}`}>
+        A
+      </span>
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-8"]}`}>
+        B
+      </span>
+
       <Box className={`${styles["circle-center"]}`}></Box>
       {/* <img
         src={LogoVideo}
