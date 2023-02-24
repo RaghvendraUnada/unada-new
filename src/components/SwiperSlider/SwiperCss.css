@@ -69,12 +69,11 @@
   object-fit: cover;
 }
 .swiper-scrollbar-drag {
-  background: rgba(255, 255, 255, 1);
+  background: rgb(146, 38, 38);
 }
 .swiper-scrollbar.swiper-scrollbar-horizontal {
   background: rgba(163, 163, 163, 0.3);
   height: 1px;
   bottom: 45px;
-  /* border-top: 1px solid red; */
-  /* padding: 4rem; */
+
 }

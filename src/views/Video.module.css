@@ -10,8 +10,6 @@
   /*margin: -100px;*/
 }
 .circle-img {
-  /* width: 25px;
-  height: 25px; */ 
   font-size: 22px;
   position: absolute;
 }
@@ -45,6 +43,7 @@
 .circle-icon-8 {
   -webkit-animation: orbit8 10s linear infinite;
 }
+
 @-webkit-keyframes orbit {
   from {
     -webkit-transform: rotate(0deg) translateX(100px) rotate(0deg);

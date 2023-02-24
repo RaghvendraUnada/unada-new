@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
 import SwiperSliderCara from "../../Components/SwiperSlider/SwiperSliderCara";
 import IntroImg1 from "../../assets/Images/Career/IntroImg1.svg";
 // import IntroImg2 from "../../assets/Images/Career/IntroImg2.svg";
 // import IntroImg3 from "../../assets/Images/Career/IntroImg3.svg";
+import Slider from "react-slick";
+
 const ImgArr = [
   IntroImg1,
   IntroImg1,
@@ -13,12 +15,28 @@ const ImgArr = [
   IntroImg1,
 ];
 function CareerIntroSection() {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slidesCount = ImgArr.length;
+
+  const prevSlide = () => {
+    setCurrentSlide((s) => (s === 0 ? slidesCount - 2 : s - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((s) => (s === slidesCount - 2 ? 0 : s + 1));
+  };
   return (
     <Grid
       container
       sx={{
         height: "100%",
-        // minHeight: { lg: "100vh", md: "100vh", sm: "50vh", xs: "50vh" },
         marginTop: "-6rem",
       }}
     >
@@ -60,7 +78,38 @@ function CareerIntroSection() {
           height: "100%",
         }}
       >
-        <SwiperSliderCara data={ImgArr} />
+        <Box sx={{ width: "100%" }}>
+          <Slider {...settings}>
+            {ImgArr.map((slide, sid) => (
+              <Box
+                key={`slide-${sid}`}
+                sx={{
+                  flex: "none",
+                  boxSize: "100%",
+                  padding: "1.5rem",
+                  flexDirection: "column",
+                  gap: "1rem",
+                  width: "33%",
+                }}
+              >
+                <Box
+                  sx={{
+                    backgroundSize: "cover",
+                    width: "100%",
+                    height: {
+                      xs: "250px",
+                      lg: "450px",
+                    },
+                  }}
+                  component="img"
+                  alt="hello"
+                  src={slide}
+                />
+                <Typography sx={SwiperText}>Studio 25 Tiktok</Typography>
+              </Box>
+            ))}
+          </Slider>
+        </Box>
       </Grid>
     </Grid>
   );
@@ -83,4 +132,27 @@ const IntroMainText = {
   },
   color: "#484848",
   marginTop: "14rem",
+};
+
+const SwiperText = {
+  fontFamily: "LGTrial",
+  fontStyle: "normal",
+  fontWeight: 400,
+  // fontSize: "16.5839px",
+  fontSize: {
+    xl: "16.5839px",
+    lg: "16.5839px",
+    md: "16.5839px",
+    sm: "12px",
+    xs: "12px",
+  },
+  lineHeight: " 11px",
+  color: "#FAFAFA",
+  marginLeft: {
+    sm: "0",
+    md: "20rem",
+  },
+  marginRight: "auto",
+  marginTop: "2rem",
+  marginBottom: "4rem",
 };

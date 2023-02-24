@@ -1,6 +1,6 @@
 import React, { useEffect, lazy, Suspense, useState } from "react";
 import UnadaVid from "../assets/UnadaBGvid.mp4";
-import { Paper, Box, Button, Link } from "@mui/material";
+import { Paper, Box, Button } from "@mui/material";
 import "../Components/css/HomeStyle.css";
 import { motion } from "framer-motion";
 import SideArrowImg from "../assets/Images/Home/SideArrowImg.svg";
@@ -16,14 +16,13 @@ import HeaderStyles from "../../src/Components/Header/Header.module.scss";
 import arrowheader from "../../src/assets/Images/Header/arrowheader.svg";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
+import { Link } from "react-router-dom";
 // import WhatsappIcon from "./assets/Images/WhatsappIcon.png";
 import { HiArrowRight } from "react-icons/hi";
 // import { motion } from "framer-motion";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 
-import { Scrollbars } from "react-custom-scrollbars";
-import { FaArrowAltCircleUp } from "react-icons/fa";
 
 const VideoBox = React.lazy(() => import("./VideoBox"));
 
@@ -319,16 +318,15 @@ const MainHeroPage = () => {
                 }}
               >
                 <Link
+                  to={"/careers"}
                   onClick={() => {
                     setOpen(false);
-                    setLocationData("/careers");
                   }}
                   className={
                     location === "/careers"
                       ? HeaderStyles.navbarListTextActive
                       : HeaderStyles.navbarListText
                   }
-                  to="/careers"
                   style={{
                     margin: "auto",
                     textDecoration: "none",

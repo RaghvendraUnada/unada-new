@@ -4,8 +4,6 @@ import ServicesPage from "../Services/ServicesPage";
 import { HiArrowRight } from "react-icons/hi";
 import styles from "./DevStack.module.css";
 import { motion } from "framer-motion";
-import { keyframes } from "styled-components";
-import styled from "styled-components";
 const DevelopmentStack = () => {
   const [numberOne, setNumberOne] = useState(1);
   const [boxtextOne, setBoxtextOne] = useState("Application Development");
@@ -86,74 +84,19 @@ const DevelopmentStack = () => {
           height: "100%",
           maxWidth: "100vw",
           overflow: "hidden",
-          // minHeight: "97vh",
           position: "relative",
         }}
         elevation={0}
       >
         <Grid container>
-          {DataArray.map((res, idx) => {
-            if (res.id !== numberOne) {
-              return (
-                <Grid
-                  key={idx}
-                  item
-                  xl={1}
-                  lg={1}
-                  md={1}
-                  onClick={() => {
-                    if (numberOne != res.id) {
-                      FunctionOne(res.id, res.text, res.title, res.desc);
-                    }
-                  }}
-                >
-                  <Paper
-                    elevation={0}
-                    sx={paperStyle}
-                    className={styles.DevStackPaper}
-                  >
-                    <Box sx={PaperBoxStyle}>
-                      <Typography
-                        sx={{
-                          ...TransformedText,
-                          color: "#dddddd",
-                          marginBottom: "-20px",
-                        }}
-                        className={styles.Text}
-                      >
-                        <Typography
-                          sx={{
-                            ...TransformedText,
-                            color: "#dddddd",
-                            width: "20px",
-                            minWidth: "20px",
-                            maxWidth: "20px",
-                            mb: "-40px",
-                            ml: "-60px",
-                            transform: "rotate(90deg)",
-                          }}
-                          className={styles.Text}
-                        >
-                          {res.id}
-                        </Typography>
-                        {res.text}
-                      </Typography>
-                    </Box>
-                  </Paper>
-                </Grid>
-              );
-            }
-          })}
-          <Grid item xl={1} lg={1} md={1}>
+          {/* <Grid item xl={1} lg={1} md={1}>
             <Paper
               elevation={0}
-              // className="DevStackPaper"
-
               sx={paperStyle}
-              // onClick={() => {
-              //   setNumberOne("1");
-              //   setBoxtextOne("Application Development");
-              // }}
+              onClick={() => {
+                setNumberOne("1");
+                setBoxtextOne("Application Development");
+              }}
             >
               <Box sx={PaperBoxStyle}>
                 <Typography
@@ -185,10 +128,61 @@ const DevelopmentStack = () => {
                 </Typography>
               </Box>
             </Paper>
-          </Grid>
+          </Grid> */}
+
           <Grid item xl={6} lg={6} md={6}>
             <OpenDetails title={boxTitle} desc={boxDesc} />
           </Grid>
+          {DataArray.map((res, idx) => {
+            if (res.id) {
+              return (
+                <Grid
+                  key={idx}
+                  item
+                  xl={1}
+                  lg={1}
+                  md={1}
+                  onClick={() =>
+                    FunctionOne(res.id, res.text, res.title, res.desc)
+                  }
+                >
+                  <Paper
+                    elevation={0}
+                    sx={paperStyle}
+                    className={styles.DevStackPaper}
+                  >
+                    <Box sx={PaperBoxStyle}>
+                      <Typography
+                        sx={{
+                          ...TransformedText,
+                          color: res.id === numberOne ? "#000000" : "#dddddd",
+                          marginBottom: "-20px",
+                        }}
+                        className={styles.Text}
+                      >
+                        <Typography
+                          sx={{
+                            ...TransformedText,
+                            color: res.id === numberOne ? "#000000" : "#dddddd",
+                            width: "20px",
+                            minWidth: "20px",
+                            maxWidth: "20px",
+                            mb: "-40px",
+                            ml: "-60px",
+                            transform: "rotate(90deg)",
+                          }}
+                          className={styles.Text}
+                        >
+                          {res.id}
+                        </Typography>
+                        {res.text}
+                      </Typography>
+                    </Box>
+                  </Paper>
+                </Grid>
+              );
+            }
+          })}
         </Grid>
       </Paper>
       {/* Mobile View */}
@@ -231,29 +225,9 @@ const DevelopmentStack = () => {
                   </Box>
                   {/* <Box> */}
                   <Box sx={{ padding: "3rem" }}>
-                    {/* <Typography sx={verticalText}> 
+                    <Typography sx={verticalText}>
                       Ultra-flexible logistics
-                    </Typography> */}
-
-                    <Box
-                      className="bg-gradient-text"
-                      sx={{
-                        fontSize: {
-                          lg: "4rem",
-                          md: "5rem",
-                          sm: "5rem",
-                          xs: "5rem",
-                          lineHeight: "50px",
-                        },
-                        textAlign: "start",
-                        marginTop: "1rem",
-                        // margin: "2rem auto",
-                      }}
-                    >
-                      <Typography sx={verticalText}>
-                        Ultra-flexible logistics
-                      </Typography>
-                    </Box>
+                    </Typography>
                     {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
                       Adapt your warehousing capacities and network in real
@@ -265,7 +239,6 @@ const DevelopmentStack = () => {
                       View{" "}
                       <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
                     </Button>
-                    {/* <Typography sx={{}}>View</Typography> */}
                   </Box>
                 </Paper>
               </>
@@ -304,7 +277,6 @@ const DevelopmentStack = () => {
               <>
                 <Paper
                   sx={{
-                    // height: "50vh",
                     cursor: "pointer",
                   }}
                 >
@@ -321,13 +293,10 @@ const DevelopmentStack = () => {
                     <Typography sx={NumTextStyle}>2</Typography>
                     <Typography sx={ServiceText}>Wbsite Development</Typography>
                   </Box>
-                  {/* <Box> */}
                   <Box sx={{ padding: "3rem" }}>
                     <Typography sx={verticalText}>
                       Ultra-flexible logistics
                     </Typography>
-
-                    {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
                       Adapt your warehousing capacities and network in real
                       time. SpaceFill’s flexible model that enables you to
@@ -374,7 +343,6 @@ const DevelopmentStack = () => {
               <>
                 <Paper
                   sx={{
-                    // height: "50vh",
                     cursor: "pointer",
                   }}
                 >
@@ -391,13 +359,10 @@ const DevelopmentStack = () => {
                     <Typography sx={NumTextStyle}>3</Typography>
                     <Typography sx={ServiceText}>UI / UX Designing</Typography>
                   </Box>
-                  {/* <Box> */}
                   <Box sx={{ padding: "3rem" }}>
                     <Typography sx={verticalText}>
                       Ultra-flexible logistics
                     </Typography>
-
-                    {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
                       Adapt your warehousing capacities and network in real
                       time. SpaceFill’s flexible model that enables you to
@@ -444,7 +409,6 @@ const DevelopmentStack = () => {
               <>
                 <Paper
                   sx={{
-                    // height: "50vh",
                     cursor: "pointer",
                   }}
                 >
@@ -461,13 +425,10 @@ const DevelopmentStack = () => {
                     <Typography sx={NumTextStyle}>4</Typography>
                     <Typography sx={ServiceText}>Metaverse</Typography>
                   </Box>
-                  {/* <Box> */}
                   <Box sx={{ padding: "3rem" }}>
                     <Typography sx={verticalText}>
                       Ultra-flexible logistics
                     </Typography>
-
-                    {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
                       Adapt your warehousing capacities and network in real
                       time. SpaceFill’s flexible model that enables you to
@@ -536,7 +497,6 @@ const DevelopmentStack = () => {
                     <Typography sx={verticalText}>
                       Ultra-flexible logistics
                     </Typography>
-
                     {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
                       Adapt your warehousing capacities and network in real
@@ -606,7 +566,6 @@ const DevelopmentStack = () => {
                     <Typography sx={verticalText}>
                       Ultra-flexible logistics
                     </Typography>
-
                     {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
                       Adapt your warehousing capacities and network in real
@@ -678,10 +637,6 @@ const OpenDetails = (props) => {
         opacity: 0,
         transition: { duration: 1, ease: "easeInOut" },
       }}
-      transition={{
-        ease: "easeInOut",
-        duration: "1s",
-      }}
     >
       <Paper
         sx={{
@@ -706,11 +661,11 @@ const OpenDetails = (props) => {
         elevation={0}
       >
         <Box>
-          <AnimatedGradientText>{props.title}</AnimatedGradientText>
+          <Typography sx={OpenDetailsTextStyle}>{props.title}</Typography>
         </Box>
         <Box>
           <Typography sx={OpenDetailsBottomTextStyle}>{props.desc}</Typography>
-          <Button
+          <Typography
             sx={{
               fontSize: {
                 lg: "18px",
@@ -724,15 +679,6 @@ const OpenDetails = (props) => {
               color: "#9D9D9D",
               display: "flex",
               alignItems: "center",
-              cursor: "pointer",
-              opacity: 1,
-              textTransform: "capitalize",
-              transition: "0.4s all",
-              padding: "6px 15px",
-              "&:hover": {
-                background: "black",
-                color: "white",
-              },
             }}
           >
             View
@@ -746,98 +692,12 @@ const OpenDetails = (props) => {
                 border: "1px #9D9D9D solid",
               }}
             />
-          </Button>
+          </Typography>
         </Box>
       </Paper>
     </motion.div>
   );
 };
-const verticalText = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 500,
-  fontSize: "32.6073px",
-  lineHeight: "38px",
-  textTransform: "uppercase",
-
-  background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%)",
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  backgroundClip: "text",
-  textFillColor: "transparent",
-  // position: "absolute",
-  // bottom: "50%",
-  // right: "-20rem",
-
-  // transform: "rotate(90deg)",
-};
-// const OpenDetailsTextStyle = {
-//   fontFamily: "LGRegular",
-//   fontStyle: "normal",
-//   fontWeight: 500,
-//   fontSize: { xl: "65px", lg: "55px", md: "45px", sm: "40px", xs: "35px" },
-//   lineHeight: { xl: "75px", lg: "65px", md: "55px", sm: "50px", xs: "45px" },
-//   textTransform: "uppercase",
-//   background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%)",
-//   backgroundClip: "text",
-//   textFillColor: "transparent",
-// };
-const hue = keyframes`
- from {
-   -webkit-filter: hue-rotate(0deg);
- }
- to {
-   -webkit-filter: hue-rotate(-360deg);
- }
-`;
-const AnimatedGradientText = styled.h1`
-  background-image: -webkit-linear-gradient(
-    2deg,
-    rgba(201, 75, 234, 1) 0%,
-    rgba(112, 62, 195, 1),
-    rgba(59, 33, 140, 1),
-    rgba(26, 16, 66, 1),
-    rgba(54, 9, 52, 1),
-    rgba(170, 2, 87, 1)
-  );
-  @font-face {
-    font-family: "LGTrial";
-    src: url("../src/assets/Fonts/LG/labilgrotesktrial-regular.otf");
-  }
-  // background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: ${hue} 10s infinite linear;
-  font-family: LGTrial;
-  font-size: 65px;
-  font-weight: 500;
-  margin: 0;
-  text-transform: uppercase;
-  padding: 0;
-  // overflow-wrap: break-word;
-  text-rendering: optimizelegibility;
-  -moz-osx-font-smoothing: grayscale;
-  @media (max-width: 1200px) {
-    font-size: 65px;
-    lineheight: 75px;
-  }
-  @media (max-width: 992px) {
-    font-size: 55px;
-    lineheight: 65px;
-  }
-  @media (max-width: 768px) {
-    font-size: 45px;
-    lineheight: 55px;
-  }
-  @media (max-width: 576px) {
-    font-size: 40px;
-    lineheight: 50px;
-  }
-  @media (max-width: 320px) {
-    font-size: 35px;
-    lineheight: 45px;
-  }
-`;
 
 const PaperBoxStyle = {
   top: {
@@ -866,6 +726,17 @@ const PaperBoxStyle = {
   "&:hover": {
     color: "#000",
   },
+};
+const OpenDetailsTextStyle = {
+  fontFamily: "LGRegular",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: { xl: "65px", lg: "55px", md: "45px", sm: "40px", xs: "35px" },
+  lineHeight: { xl: "75px", lg: "65px", md: "55px", sm: "50px", xs: "45px" },
+  textTransform: "uppercase",
+  background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%)",
+  backgroundClip: "text",
+  textFillColor: "transparent",
 };
 
 const OpenDetailsBottomTextStyle = {
@@ -1148,7 +1019,25 @@ const NumTextStyle = {
 
   color: "#000000",
 };
+const verticalText = {
+  fontFamily: "LGRegular",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: "32.6073px",
+  lineHeight: "38px",
+  textTransform: "uppercase",
 
+  background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+  textFillColor: "transparent",
+  // position: "absolute",
+  // bottom: "50%",
+  // right: "-20rem",
+
+  // transform: "rotate(90deg)",
+};
 const paperTextStyle1 = {
   fontFamily: "LGRegular",
   fontStyle: "normal",

@@ -17,7 +17,7 @@ export default function ChatUs(props) {
           sm={6}
           sx={{
             ...manageGrid,
-            borderLeft: "0.5px solid rgba(163, 163, 163, 0.3)",
+            // borderLeft: "0.5px solid rgba(163, 163, 163, 0.3)",
           }}
         >
           <Grid item xl={6} lg={6} md={6} xs={6} sm={6}>
@@ -152,7 +152,7 @@ export default function ChatUs(props) {
           sm={6}
           sx={{
             ...manageGrid,
-            borderLeft: "0.5px solid rgba(163, 163, 163, 0.3)",
+            // borderLeft: "0.5px solid rgba(163, 163, 163, 0.3)",
           }}
         >
           <Grid item xl={6} lg={6} md={6} xs={6} sm={6}>
