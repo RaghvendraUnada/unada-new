@@ -42,14 +42,76 @@ function SamplePrevArrow(props) {
 }
 
 const StoriesAtUnadaSection = () => {
+  // const settings = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   nextArrow: <SampleNextArrow className={"slick-arrow slick-next"} />,
+  //   prevArrow: <SamplePrevArrow />,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //         infinite: true,
+  //         dots: false,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         initialSlide: 2,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 425,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow className={"slick-arrow slick-next"} />,
+    slidesToScroll: 3,
     prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <Grid
@@ -64,14 +126,26 @@ const StoriesAtUnadaSection = () => {
     >
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
         <Box display="flex" flexDirection="row">
-          {/* <Typography sx={HeadText}>Stories at</Typography> */}
+          <Typography
+            sx={{
+              ...textStyle1,
+              background:
+                "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+              backgroundSize: " 100%",
+              backgroundRepeat: "repeat",
+              backgroundClip: "text",
+              textFillColor: "transparent",
+            }}
+          >
+            Stories at Unada
+          </Typography>
           {/* <AnimatedGradientText>Unada</AnimatedGradientText> */}
-          <img
+          {/* <img
             src={storiesTitle}
             alt="stories"
             style={{ marginLeft: "40px" }}
             draggable="false"
-          />
+          /> */}
         </Box>
         {/* <span style={colorText}>Unada</span> */}
         <Typography sx={MetaText}>
@@ -250,4 +324,24 @@ const SwiperText = {
   marginRight: "auto",
   marginTop: "2rem",
   marginBottom: "4rem",
+};
+const textStyle1 = {
+  fontFamily: "LGRegular",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: {
+    xl: "64px",
+    lg: "64px",
+    md: "50px",
+    sm: "42px",
+    xs: "35px",
+  },
+  lineHeight: {
+    xl: "76px",
+    lg: "76px",
+    md: "58px",
+    sm: "50px",
+    xs: "45px",
+  },
+  letterSpacing: 1,
 };

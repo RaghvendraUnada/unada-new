@@ -4,7 +4,7 @@ import VerticalText from "../../components/Maarquee/VerticalText";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import careerTitle from "../../assets/images/new/career_title.png";
-
+import "./CareerHeroSectionNew.css";
 // import CareersText from "../../components/CareersText";
 const CareerHeroSection = () => {
   return (
@@ -68,17 +68,44 @@ const CareerHeroSection = () => {
           </Stack> */}
           <Box>
             <Stack sx={{ marginTop: {} }}>
-              {/* <Typography sx={careertext}>Join a team</Typography> */}
-              <img src={careerTitle} alt="title" width="80%" className="center-block" draggable="false" />
+              <Typography
+                className="animate-charcter"
+                sx={{
+                  // ...textStyle1,
+                  // background:
+                  //   "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+                  // backgroundSize: " 100%",
+                  // backgroundRepeat: "repeat",
+                  // backgroundClip: "text",
+                  // textFillColor: "transparent",
+                }}
+              >
+                Join a team
+              </Typography>
+              <Typography
+                className="animate-charcter"
+                sx={{
+                  // ...textStyle1,
+                  // background:
+                  //   "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+                  // backgroundSize: " 100%",
+                  // backgroundRepeat: "repeat",
+                  // backgroundClip: "text",
+                  // textFillColor: "transparent",
+                }}
+              >
+                Be a part of team who makes an impact
+              </Typography>
+              {/* <img src={careerTitle} alt="title" width="80%" className="center-block" draggable="false" /> */}
             </Stack>
           </Box>
 
           {/* <Box>
             <Stack> */}
-              {/* <Typography className="textAnimWrapper" sx={touch}>
+          {/* <Typography className="textAnimWrapper" sx={touch}>
                 Be part of a team who makes an impact.
               </Typography> */}
-              {/* 
+          {/* 
               <Box
                 className="bg-gradient-text"
                 sx={{
@@ -96,7 +123,7 @@ const CareerHeroSection = () => {
               >
                 Be part of a team who makes an impact.
               </Box> */}
-              {/* <AnimatedGradientText>
+          {/* <AnimatedGradientText>
                 Be part of a team who makes an impact.
               </AnimatedGradientText>
             </Stack>
@@ -313,3 +340,23 @@ const AnimatedGradientText = styled.h1`
     font-size: 4rem;
   }
 `;
+const textStyle1 = {
+  fontFamily: "LGRegular",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: {
+    xl: "64px",
+    lg: "64px",
+    md: "50px",
+    sm: "42px",
+    xs: "35px",
+  },
+  lineHeight: {
+    xl: "76px",
+    lg: "76px",
+    md: "58px",
+    sm: "50px",
+    xs: "45px",
+  },
+  letterSpacing: 1,
+};
