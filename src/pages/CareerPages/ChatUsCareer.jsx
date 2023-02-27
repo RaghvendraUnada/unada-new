@@ -1,10 +1,54 @@
-import { Typography, Box, Paper, Grid } from "@mui/material";
+import {
+  Typography,
+  Box,
+  Paper,
+  Grid,
+  Button,
+  TextField,
+  InputAdornment,
+  InputLabel,
+  FormControl,
+  OutlinedInput,
+  DialogTitle,
+  DialogContentText,
+  DialogContent,
+} from "@mui/material";
+import React, { useState } from "react";
 import chat from "../../assets/Images/Contact/chat.svg";
 import arrow from "../../assets/Images/Contact/arrow.svg";
 import phone from "../../assets/Images/Contact/phone.svg";
 import Frame from "../../assets/Images/Contact/Frame.svg";
 import send from "../../assets/Images/Contact/send.svg";
+import Dialog from "@mui/material/Dialog";
+import call from "../../assets/Images/Career/call.svg";
+import clipboard from "../../assets/Images/Career/clipboard.svg";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import location from "../../assets/Images/Career/location.svg";
+import whatsappiucon from "../../assets/Images/Career/whatsappiucon.svg";
+import { Link } from "react-router-dom";
 export default function ChatUs(props) {
+  const [open, setOpen] = React.useState(false);
+  const [copyText, setCopyText] = useState("");
+  const handleCopy = () => {
+    navigator.clipboard.writeText(copyText);
+    alert("Copied");
+  };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const [showPassword, setShowPassword] = React.useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
   return (
     <Paper elevation={0}>
       <Grid container>
@@ -79,6 +123,7 @@ export default function ChatUs(props) {
         <Grid item xl={6} lg={6} md={6} xs={6} sm={6} sx={manageGrid}>
           <Grid item xl={6} lg={6} md={6} xs={6} sm={6}>
             <Box
+              onClick={handleClickOpen}
               sx={{
                 padding: {
                   xl: "1.5rem",
@@ -115,6 +160,131 @@ export default function ChatUs(props) {
                   Give us a phone call.
                 </Typography>
               </Box>
+              <Paper sx={{ display: "flex", justifyContent: "center" }}>
+                <Dialog
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="alert-dialog-title"
+                  aria-describedby="alert-dialog-description"
+                  sx={{
+                    borderRadius: "2.6rem",
+                    minWidth: "510px",
+                    maxWidth: "510px",
+                    height: "auto",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    top: "0%",
+                    left: "35%",
+                  }}
+                >
+                  <DialogTitle id="alert-dialog-title">
+                    <Typography sx={contactUs}>CONNECT TO US</Typography>
+                  </DialogTitle>
+                  <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                          gap: "10px",
+                        }}
+                      >
+                        <img
+                          src={call}
+                          style={{ width: "auto", height: "auto" }}
+                        />
+                        <Typography sx={callUs}>Call us</Typography>
+                      </Box>
+                      <Typography sx={phNo}>+91 989898989</Typography>
+                      <Link to="https://api.whatsapp.com/send/?phone=918980298568&text&type=phone_number&app_absent=0">
+                        <Box sx={{ display: "flex" }}>
+                          <Button sx={wtspBtn} fullWidth>
+                            CONNECT TO US ON WHATSAPP
+                            <img
+                              src={whatsappiucon}
+                              style={{ width: "auto", height: "auto" }}
+                            />
+                          </Button>
+                        </Box>
+                      </Link>
+                    </DialogContentText>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "flex-start",
+                        mt: 3,
+                        // m: 1,
+                      }}
+                    >
+                      <Typography sx={pageLink}>Page link</Typography>
+                    </Box>
+                    {/* <TextField
+                    sx={{ mt: 2 }}
+                    id="input-with-icon-textfield"
+                    label="TextField"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="end">
+                          <img
+                            src={clipboard}
+                            style={{ width: "auto", height: "auto" }}
+                          />
+                        </InputAdornment>
+                      ),
+                    }}
+                    variant="outlined"
+                  /> */}
+
+                    <FormControl
+                      sx={{ m: 0, width: "72ch", mt: 1 }}
+                      variant="outlined"
+                    >
+                      <InputLabel htmlFor="outlined-adornment-password">
+                        Page Link
+                      </InputLabel>
+                      <OutlinedInput
+                        fullWidth
+                        id="outlined-adornment-password"
+                        type={showPassword ? "text" : "link"}
+                        // defaultValue="https://wa.me/919898989898"
+                        // disabled
+                        onChange={(e) => setCopyText(e.target.value)}
+                        endAdornment={
+                          <InputAdornment
+                            position="end"
+                            onClick={handleCopy}
+                            sx={{ cursor: "pointer" }}
+                          >
+                            <ContentCopyIcon
+                              onClick={handleClickShowPassword}
+                              onMouseDown={handleMouseDownPassword}
+                              edge="end"
+                            ></ContentCopyIcon>
+                          </InputAdornment>
+                        }
+                        label="Link"
+                      />
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                          mt: 2,
+                        }}
+                      >
+                        <img
+                          src={location}
+                          style={{ width: "auto", height: "auto" }}
+                        />
+                      </Box>
+                      <Typography sx={address}>
+                        550, Beside Star Bazaar, Satellite, Ahmedabad, Gujarat
+                        380015
+                      </Typography>
+                    </FormControl>
+                  </DialogContent>
+                </Dialog>
+              </Paper>
             </Box>
           </Grid>
           {props?.showArrow ? (
@@ -355,4 +525,72 @@ const boxText2 = {
 const boxText3 = {
   ...boxText,
   //   width: { xl: "50%", lg: "50%", md: "40%", sm: "50%", xs: "100%" },
+};
+
+const contactUs = {
+  fontFamily: "Labil Grotesk Trial",
+  fontStyle: "normal",
+  fontWeight: 600,
+  fontSize: 19,
+  textAlign: "center",
+  letterSpacing: 0.01,
+  color: "#000000",
+};
+
+const callUs = {
+  fontFamily: "Labil Grotesk Trial",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: 15,
+  textAlign: "center",
+  letterSpacing: 0.01,
+  color: "#000000",
+};
+
+const phNo = {
+  fontFamily: "Labil Grotesk Trial",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: 15,
+  textAlign: "center",
+  letterSpacing: 0.01,
+  color: "#000000",
+  lineHeight: "4rem",
+};
+
+const wtspBtn = {
+  fontFamily: "Labil Grotesk Trial",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: 15,
+  textAlign: "center",
+  letterSpacing: 0.01,
+  p: 1.5,
+  textDecorationLine: "underline",
+  color: "#68ED72",
+  borderRadius: "0.8rem",
+  backgroundColor: "rgba(60, 173, 156, 1)",
+  mt: 2,
+  gap: "15px",
+};
+
+const pageLink = {
+  fontFamily: "Labil Grotesk Trial",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: 15,
+  textAlign: "center",
+  letterSpacing: 0.01,
+  color: "#000000",
+};
+
+const address = {
+  fontFamily: "Labil Grotesk Trial",
+  fontStyle: "normal",
+  fontWeight: 300,
+  fontSize: 16,
+  textAlign: "center",
+  color: "#0D0D0D",
+  width: "95%",
+  mx: "auto",
 };

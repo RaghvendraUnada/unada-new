@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroPage from "../../components/HeroPage";
 import StackList from "../../components/StackList";
 import Intro from "../../components/Intro";
 // import Ux from "../../assets/Images/UIUX/uinewone.png";
 import Ux from "../../assets/Images/UIUX/uxpng.png";
 import uiintro from "../../assets/Images/UIUX/uiintro.svg";
-import { Grid, Typography, Box, Paper, Stack } from "@mui/material";
+import {
+  Grid,
+  Typography,
+  Box,
+  Paper,
+  Stack,
+  TextField,
+  Button,
+} from "@mui/material";
 import swift from "../../assets/Images/Application/swift.svg";
 import TechStack from "../Application/TechStack";
 const data = ["Social Media Agencies", "Healthcare", "Fashion"];
@@ -18,6 +26,11 @@ const data1 = [
   // "Warehousing",
 ];
 const Uiux = () => {
+  // const [copyText, setCopyText] = useState();
+  // const handleCopy = () => {
+  //   navigator.clipboard.writeText(copyText);
+  //   alert("Copied");
+  // };
   return (
     <Paper elevation={0}>
       <Grid container>
@@ -43,6 +56,16 @@ const Uiux = () => {
       {/* <Grid container> */}
       {/* <TechStack textone={data1} text={data} text1={"Design"} /> */}
       {/* </Grid> */}
+      {/* <Box>
+        <TextField
+          // fullWidth
+          value={copyText}
+          onChange={(e) => setCopyText(e.target.value)}
+        />
+        <Button variant="contained" onClick={handleCopy}>
+          Copy
+        </Button>
+      </Box> */}
     </Paper>
   );
 };
