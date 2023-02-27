@@ -165,7 +165,7 @@ const OurTeam = () => {
                   p: 0,
                 }}
               >
-                <div class="block-33 display--inline-top">
+                {/* <div class="block-33 display--inline-top">
                   <div class="gutter relative">
                     <div class="gallery-h">
                       <div class="gallery-image relative">
@@ -185,7 +185,7 @@ const OurTeam = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 <div class="block-33 display--inline-top">
                   <div class="gutter relative">
