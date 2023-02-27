@@ -13,7 +13,7 @@ import Close from "../../src/assets/Images/Header/CloseButton.svg";
 import OpenButton from "../../src/assets/Images/Header/MenuIcon.svg";
 import OpenButtonWhite from "../../src/assets/Images/Header/MenuIconWhite.svg";
 import HeaderStyles from "../../src/Components/Header/Header.module.scss";
-import arrowheader from "../../src/assets/Images/Header/arrowheader.svg";
+import arrowheader from "../../src/assets/Images/Header/headl.png";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { Link } from "react-router-dom";
@@ -22,7 +22,6 @@ import { HiArrowRight } from "react-icons/hi";
 // import { motion } from "framer-motion";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
-
 
 const VideoBox = React.lazy(() => import("./VideoBox"));
 
@@ -193,23 +192,55 @@ const MainHeroPage = () => {
                     />
                   </Button>
                 )}
-                <Box sx={{ ...ContactUsButton, background: "white" }}>
-                  <Link to={"/contact"}>
-                    <Button sx={ContactUsText}>
-                      Get in touch
-                      <img
-                        src={arrowheader}
-                        alt="arrow"
-                        style={{
-                          height: "auto",
-                          width: "13px",
-                          marginLeft: "5px",
-                          marginBottom: "-2px",
-                        }}
-                      />
-                    </Button>
-                  </Link>
-                </Box>
+
+                <Link to={"/contact"}>
+                  <Box
+                    sx={{
+                      ...ContactUsButton,
+                      background: "white",
+                      fontFamily: "SF Pro Display",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      fontSize: "14px",
+                      lineHeight: "20px",
+                      color: "#4E4E4E",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      px: "1rem",
+                      "& img": {
+                        transform: "rotate(44deg)",
+                        transition: "all 0.6s ease-in-out",
+                      },
+                      "&:hover": {
+                        background: "rgba(255, 255, 255, 0.8)",
+                        backgroundImage:
+                          "-webkit-gradient( linear, left top, right bottom, color-stop(0, #3b5998), color-stop(1, #fff))",
+                        color: "transparent",
+                        backgroundClip: "text",
+                        WebkitBackgroundClip: "text",
+                        // on hover rotate image
+                        "& img": {
+                          transform: "rotate(10deg)",
+                          transition: "all 0.6s ease-in-out",
+                        },
+                      },
+                    }}
+                  >
+                    Get in touch
+                    <img
+                      src={arrowheader}
+                      alt="arrow"
+                      style={{
+                        height: "auto",
+                        width: "10px",
+                        marginLeft: "5px",
+                        marginBottom: "-2px",
+                        // transform: "rotate(44deg)",
+                      }}
+                    />
+                  </Box>
+                </Link>
               </Paper>
             </Paper>
           ) : null}

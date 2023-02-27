@@ -14,7 +14,7 @@ const OurTeam = () => {
   const [teamData, setTeamData] = useState();
   const FetchTeamData = async () => {
     await axios
-      .get("/team/get_members")
+      .get("team/get_members")
       .then((res) => {
         console.log(res.data);
         setTeamData(res.data);
@@ -93,48 +93,6 @@ const OurTeam = () => {
               maxHeight: "100%",
             }}
           >
-            {/* <Box
-              sx={{
-                width: "90%",
-                height: "auto",
-                mx: "auto",
-                maxWidth: "400px",
-                maxHeight: "400px",
-                textAlign: {
-                  xl: "initial",
-                  lg: "initial",
-                  md: "initial",
-                  sm: "center",
-                  xs: "center",
-                },
-              }}
-            >
-              <Typography sx={TextStyle}>The people who push the</Typography>
-
-              <AnimatedGradientText>
-                boundaries of technology and make it happen.
-              </AnimatedGradientText>
-              {/* <Box
-                className="bg-gradient-text"
-                sx={{
-                  fontSize: {
-                    lg: "4rem",
-                    md: "5rem",
-                    sm: "5rem",
-                    xs: "5rem",
-                    lineHeight: "50px",
-                  },
-                  textAlign: "start",
-                  marginTop: "1rem",
-                  // margin: "2rem auto",
-                }}
-              >
-                boundaries of technology and make it happen.
-              </Box> */}
-            {/* <Typography sx={coloredText}>
-                boundaries of technology and make it happen.
-              </Typography>{" "} */}
-            {/* </Box> */}
             <img src={teamTitle} alt="team" width="60%" draggable="false" />
           </Grid>
           <Grid item xl={8} lg={8} md={7} sm={12} xs={12}>
@@ -168,21 +126,15 @@ const OurTeam = () => {
                 {/* <div class="block-33 display--inline-top">
                   <div class="gutter relative">
                     <div class="gallery-h">
-                      <div class="gallery-image relative">
-                        <div class="gallery-image__img relative">
-                          <EmployeeCard1 />
-                        </div>
-                      </div>
-                      <div class="gallery-image">
-                        <div class="gallery-image__img relative">
-                          <EmployeeCard1 />
-                        </div>
-                      </div>
-                      <div class="gallery-image">
-                        <div class="gallery-image__img relative">
-                          <EmployeeCard1 />
-                        </div>
-                      </div>
+                      {teamData?.map((res, idx) => {
+                        return (
+                          <div class="gallery-image relative" key={idx}>
+                            <div class="gallery-image__img relative">
+                              <EmployeeCard1 data={res} />
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div> */}
@@ -190,21 +142,15 @@ const OurTeam = () => {
                 <div class="block-33 display--inline-top">
                   <div class="gutter relative">
                     <div class="gallery-h">
-                      <div class="gallery-image relative">
-                        <div class="gallery-image__img relative">
-                          <EmployeeCard1 />
-                        </div>
-                      </div>
-                      <div class="gallery-image">
-                        <div class="gallery-image__img relative">
-                          <EmployeeCard1 />
-                        </div>
-                      </div>
-                      <div class="gallery-image">
-                        <div class="gallery-image__img relative">
-                          <EmployeeCard1 />
-                        </div>
-                      </div>
+                      {teamData?.map((res, idx) => {
+                        return (
+                          <div class="gallery-image relative" key={idx}>
+                            <div class="gallery-image__img relative">
+                              <EmployeeCard1 data={res} />
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -279,7 +225,8 @@ const AnimatedGradientText = styled.h1`
   }
 `;
 
-const EmployeeCard1 = () => {
+const EmployeeCard1 = (props) => {
+  console.log(props.data);
   return (
     <Grid
       item
@@ -300,8 +247,16 @@ const EmployeeCard1 = () => {
         }}
       >
         <img src={TeamImgOne} style={{ width: "100%", height: "100%" }} />
-        <Typography sx={TeamNameTextStyle}>Alex Rook</Typography>
-        <Typography sx={TeamProfessionTextStyle}>Web Designer</Typography>
+        <Typography sx={TeamNameTextStyle}>
+          {props?.data?.TeamMemberName
+            ? props?.data?.TeamMemberName
+            : "Lorem Ipsum"}
+        </Typography>
+        <Typography sx={TeamProfessionTextStyle}>
+          {props?.data?.TeamMemberPosition
+            ? props?.data?.TeamMemberPosition
+            : "Lorem Ipsum"}
+        </Typography>
       </Box>
     </Grid>
   );
