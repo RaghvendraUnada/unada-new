@@ -184,15 +184,16 @@ function App() {
                       </Button>
                     ) : (
                       <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
-                        <img
-                          src={Close}
+                        {/* <img
+                          // src={Close}
                           alt="Close"
                           style={{
                             width: "90%",
                             height: "auto",
                             maxWidth: "35px",
                           }}
-                        />
+                        /> */}
+                        Close
                       </Button>
                     )}
                     <Link to={"/contact"}>
@@ -200,27 +201,16 @@ function App() {
                         sx={{
                           ...ContactUsButton,
                           background: "white",
-                          fontFamily: "SF Pro Display",
-                          fontStyle: "normal",
-                          fontWeight: 400,
-                          fontSize: "14px",
-                          lineHeight: "20px",
-                          color: "#4E4E4E",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "space-between",
-                          px: "1rem",
+                          p: "1rem",
                           "& img": {
                             transform: "rotate(44deg)",
                             transition: "all 0.6s ease-in-out",
                           },
+                          color: "#4E4E4E",
                           "&:hover": {
-                            background: "rgba(255, 255, 255, 0.8)",
-                            backgroundImage:
-                              "-webkit-gradient( linear, left top, right bottom, color-stop(0, #3b5998), color-stop(1, #fff))",
-                            color: "transparent",
-                            backgroundClip: "text",
-                            WebkitBackgroundClip: "text",
                             // on hover rotate image
                             "& img": {
                               transform: "rotate(10deg)",
@@ -229,16 +219,13 @@ function App() {
                           },
                         }}
                       >
-                        Get in touch
+                        <Typography sx={ContactUsText}>Get in touch</Typography>
                         <img
                           src={arrowheader}
                           alt="arrow"
                           style={{
                             height: "auto",
                             width: "10px",
-                            marginLeft: "5px",
-                            marginBottom: "-2px",
-                            // transform: "rotate(44deg)",
                           }}
                         />
                       </Box>
@@ -274,9 +261,9 @@ function App() {
                     to={"/"}
                     style={{
                       textDecoration: "none",
-                      margin: "auto",
-                      marginLeft: "auto",
-                      paddingLeft: "74px",
+                      // margin: "auto",
+                      // marginLeft: "auto",
+                      // paddingLeft: "74px",
                       marginTop: "5px",
                     }}
                   >
@@ -289,7 +276,7 @@ function App() {
                   </Link>
 
                   <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
-                    <img
+                    {/* <img
                       src={Close}
                       alt="Close"
                       style={{
@@ -298,7 +285,8 @@ function App() {
                         marginTop: "10px",
                         maxWidth: "22px",
                       }}
-                    />
+                    /> */}
+                    Close
                   </Button>
                 </Paper>
                 <List sx={{ py: 5, height: "80vh", overflowY: "scroll" }}>
@@ -325,7 +313,7 @@ function App() {
                           : HeaderStyles.navbarListText
                       }
                       to="/"
-                      style={{ margin: "auto" }}
+                      // style={{ margin: "auto" }}
                     >
                       {location === "/" ? (
                         <AnimatedGradientText>Home</AnimatedGradientText>
@@ -355,7 +343,7 @@ function App() {
                           : HeaderStyles.navbarListText
                       }
                       to="/careers"
-                      style={{ margin: "auto" }}
+                      // style={{ margin: "auto" }}
                     >
                       {location === "/careers" ? (
                         <AnimatedGradientText>Careers</AnimatedGradientText>
@@ -385,7 +373,7 @@ function App() {
                           : HeaderStyles.navbarListText
                       }
                       to="/contact"
-                      style={{ margin: "auto" }}
+                      // style={{ margin: "auto" }}
                     >
                       {location === "/contact" ? (
                         <AnimatedGradientText>Contact us</AnimatedGradientText>
@@ -486,10 +474,13 @@ const AnimatedGradientText = styled.h1`
 `;
 
 const ButtonStyle = {
-  color: "black",
-  fontFamily: "Inter",
+  fontFamily: "LGRegular",
+  textTransform: "none",
+  fontSize: { xl: "24px", lg: "24px", md: "23px", sm: "20px", xs: "20px" },
+  color: "#393939",
+  fontStyle: "normal",
+  fontWeight: 400,
   mt: "07px",
-  fontSize: "12px",
   width: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   "&:hover": {
@@ -504,10 +495,7 @@ const LinkStyles = {
 const ContactUsButton = {
   width: "137px",
   height: "41px",
-  // background: " grey",
-  // boxShadow: "0px 0px 3px rgba(51, 211, 212, 0.18)",
   borderRadius: "28px",
-  // display: "flex",
   px: 0,
   zIndex: 0,
   border: "0.5px solid #CCCCCC",
@@ -517,11 +505,23 @@ const ContactUsButton = {
   alignItems: "center",
   paddingTop: "1rem",
   paddingBottom: "1rem",
-  // display: { xl: "flex", lg: "flex", md: "flex", sm: "none", xs: "none" },
-  // boxShadow: "10px 10px 10px 10px black",
-  // WebkitBoxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
-  // MozBoxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
-  // boxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
 };
 
-const ContactUsText = {};
+const ContactUsText = {
+  fontFamily: "LGRegular",
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: "17px",
+
+  background: "#4E4E4E",
+  backgroundClip: "text",
+  "&:hover": {
+    background:
+      "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
+    textTransform: "none",
+    backgroundSize: " 100%",
+    backgroundRepeat: "repeat",
+    backgroundClip: "text",
+    textFillColor: "transparent",
+  },
+};
