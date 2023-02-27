@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import SwiperSliderCara from "../../Components/SwiperSlider/SwiperSliderCara";
-import UnadaStoryImg from "../../assets/Images/Career/UnadaStoryImg.svg";
+import UnadaStoryImg from "../../assets/Images/Career/IntroImg1.svg";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import storiesTitle from "../../assets/images/new/stories.png";
@@ -48,32 +48,60 @@ const StoriesAtUnadaSection = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow className={"slick-arrow slick-next"} />,
     prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <Grid
       container
       sx={{
         background: "black",
-        // width: "90%",
-        // marginLeft: "auto",
-        // marginRight: "auto",
         padding: "8rem 2rem 0rem 2rem",
       }}
     >
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
         <Box display="flex" flexDirection="row">
-          {/* <Typography sx={HeadText}>Stories at</Typography> */}
-          {/* <AnimatedGradientText>Unada</AnimatedGradientText> */}
-          <img
-            src={storiesTitle}
-            alt="stories"
-            style={{ marginLeft: "40px" }}
-            draggable="false"
-          />
+          <Typography
+            sx={{
+              ...textStyle1,
+              background:
+                "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+              backgroundSize: " 100%",
+              backgroundRepeat: "repeat",
+              backgroundClip: "text",
+              textFillColor: "transparent",
+            }}
+          >
+            Stories at Unada
+          </Typography>
         </Box>
-        {/* <span style={colorText}>Unada</span> */}
+
         <Typography sx={MetaText}>
           Stories at Unada provide an authentic, unfiltered glimpse into our
           workplace where memories are made, innovations are fostered and
@@ -85,33 +113,51 @@ const StoriesAtUnadaSection = () => {
         container
         sx={{
           width: "100%",
-          marginLeft: "auto",
-          marginRight: "auto",
+          mx: "auto",
           height: "100%",
         }}
       >
-        <Box sx={{ width: "98%", mx: "auto" }}>
+        <Box
+          sx={{
+            width: {
+              xl: "98%",
+              lg: "98%",
+              md: "95%",
+              sm: "95%",
+              xs: "95%",
+            },
+            mx: "auto",
+            py: {
+              xl: "2rem",
+              lg: "2rem",
+              md: "1rem",
+              sm: "0.5rem",
+              xs: "0rem",
+            },
+          }}
+        >
           <Slider {...settings}>
             {ImgArr.map((slide, sid) => (
               <Box
                 key={`slide-${sid}`}
                 sx={{
                   flex: "none",
-                  boxSize: "90%",
+                  boxSize: "100%",
                   padding: "1.5rem",
                   flexDirection: "column",
                   gap: "1rem",
-                  width: "auto",
+                  width: "33%",
+                  height: "auto",
+                  // background: "red",
                 }}
               >
                 <Box
                   sx={{
                     backgroundSize: "cover",
                     width: "100%",
-                    height: {
-                      xs: "250px",
-                      lg: "450px",
-                    },
+                    mx: "auto",
+                    height: "auto",
+                    maxHeight: "570px",
                   }}
                   component="img"
                   alt="hello"
@@ -250,4 +296,24 @@ const SwiperText = {
   marginRight: "auto",
   marginTop: "2rem",
   marginBottom: "4rem",
+};
+const textStyle1 = {
+  fontFamily: "LGRegular",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: {
+    xl: "64px",
+    lg: "64px",
+    md: "50px",
+    sm: "42px",
+    xs: "35px",
+  },
+  lineHeight: {
+    xl: "76px",
+    lg: "76px",
+    md: "58px",
+    sm: "50px",
+    xs: "45px",
+  },
+  letterSpacing: 1,
 };

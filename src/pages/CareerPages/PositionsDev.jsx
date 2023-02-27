@@ -10,9 +10,8 @@ const PositionsDev = () => {
   const [JobData, setJobData] = useState();
   const FetchJobData = async () => {
     await axios
-      .get("job/get_jobs")
+      .get("/job/get_jobs")
       .then((res) => {
-        console.log(res);
         setJobData(res.data);
       })
       .catch((err) => console.log(err));
@@ -44,7 +43,14 @@ const PositionsDev = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "left",
+            alignItems: "center",
+            // padding: {
+            //   xl: "1rem",
+            //   lg: "1rem",
+            //   md: "3rem",
+            //   // sm:'',
+            //   // xs:''
+            // },
             paddingLeft: {
               xl: "6rem",
               lg: "6rem",
@@ -54,12 +60,26 @@ const PositionsDev = () => {
             },
           }}
         >
-          <img
+           <Typography
+            sx={{
+              ...textStyle1,
+              background:
+                "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+              backgroundSize: " 100%",
+              backgroundRepeat: "repeat",
+              backgroundClip: "text",
+              textFillColor: "transparent",
+            }}
+          >
+            Open Positions
+          </Typography>
+          {/* <AnimatedGradientText> Positions</AnimatedGradientText> */}
+          {/* <img
             src={positionTitle}
             alt="position"
-            style={{ marginLeft: "20px", width: "200px", height: "auto" }}
+            style={{ marginLeft: "-120px" }}
             draggable="false"
-          />
+          /> */}
           <Box mt={2}>
             <Typography sx={subText}>
               Didn’t find any suitable role, but you believe we should have you?
@@ -349,4 +369,24 @@ const ButtonStyle = {
   "&:focus": {
     backgroundColor: "transparent",
   },
+};
+const textStyle1 = {
+  fontFamily: "LGRegular",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: {
+    xl: "64px",
+    lg: "64px",
+    md: "50px",
+    sm: "42px",
+    xs: "35px",
+  },
+  lineHeight: {
+    xl: "76px",
+    lg: "76px",
+    md: "58px",
+    sm: "50px",
+    xs: "45px",
+  },
+  letterSpacing: 1,
 };

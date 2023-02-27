@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
 import SwiperSliderCara from "../../Components/SwiperSlider/SwiperSliderCara";
 import IntroImg1 from "../../assets/Images/Career/IntroImg1.svg";
+// import Arrow1 from "../../assets/Images/material-symbols_arrow-back-ios-new-rounded-1.png";
+// import Arrow1 from "../../assets/Images/material-symbols_arrow-back-ios-new-rounded.png "
+
 // import IntroImg2 from "../../assets/Images/Career/IntroImg2.svg";
 // import IntroImg3 from "../../assets/Images/Career/IntroImg3.svg";
 import Slider from "react-slick";
-
+import "./CareerIntroSection.css";
 const ImgArr = [
   IntroImg1,
   IntroImg1,
@@ -14,6 +17,42 @@ const ImgArr = [
   IntroImg1,
   IntroImg1,
 ];
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={"slick-prev slick-arrow"}
+      style={{
+        ...style,
+        display: "block",
+        // background: "green",
+        width: 20,
+        height: 20,
+        margin: "auto",
+        // border: "solid #fff",
+        border: "none",
+        // backgroundColor: "red",
+        borderRadius: "none",
+        // borderWidth: "0 3px 3px 0",
+        // transform: "rotate(135deg)",
+      }}
+      onClick={onClick}
+    />
+  );
+}
+
 function CareerIntroSection() {
   const settings = {
     dots: false,
@@ -21,6 +60,34 @@ function CareerIntroSection() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   const [currentSlide, setCurrentSlide] = useState(0);
   const slidesCount = ImgArr.length;
@@ -72,13 +139,23 @@ function CareerIntroSection() {
       <Grid
         container
         sx={{
-          width: "95%",
-          marginLeft: "auto",
-          marginRight: "auto",
+          width: "98%",
+          mx: "auto",
           height: "100%",
         }}
       >
-        <Box sx={{ width: "100%" }}>
+        <Box
+          sx={{
+            width: {
+              xl: "98%",
+              lg: "98%",
+              md: "95%",
+              sm: "95%",
+              xs: "95%",
+            },
+            mx: "auto",
+          }}
+        >
           <Slider {...settings}>
             {ImgArr.map((slide, sid) => (
               <Box
@@ -90,16 +167,15 @@ function CareerIntroSection() {
                   flexDirection: "column",
                   gap: "1rem",
                   width: "33%",
+                  // background: "red",
                 }}
               >
                 <Box
                   sx={{
                     backgroundSize: "cover",
                     width: "100%",
-                    height: {
-                      xs: "250px",
-                      lg: "450px",
-                    },
+                    mx: "auto",
+                    height: "auto",
                   }}
                   component="img"
                   alt="hello"
