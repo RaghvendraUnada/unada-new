@@ -10,8 +10,9 @@ const PositionsDev = () => {
   const [JobData, setJobData] = useState();
   const FetchJobData = async () => {
     await axios
-      .get("/job/get_jobs")
+      .get("job/get_jobs")
       .then((res) => {
+        console.log(res);
         setJobData(res.data);
       })
       .catch((err) => console.log(err));
@@ -43,14 +44,7 @@ const PositionsDev = () => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "center",
-            // padding: {
-            //   xl: "1rem",
-            //   lg: "1rem",
-            //   md: "3rem",
-            //   // sm:'',
-            //   // xs:''
-            // },
+            alignItems: "left",
             paddingLeft: {
               xl: "6rem",
               lg: "6rem",
@@ -60,9 +54,12 @@ const PositionsDev = () => {
             },
           }}
         >
-          {/* <Typography sx={mainText}>Open </Typography> */}
-          {/* <AnimatedGradientText> Positions</AnimatedGradientText> */}
-          <img src={positionTitle} alt="position" style={{marginLeft: "-120px"}} draggable="false" />
+          <img
+            src={positionTitle}
+            alt="position"
+            style={{ marginLeft: "20px", width: "200px", height: "auto" }}
+            draggable="false"
+          />
           <Box mt={2}>
             <Typography sx={subText}>
               Didn’t find any suitable role, but you believe we should have you?
@@ -94,7 +91,9 @@ const PositionsDev = () => {
               },
             }}
           >
-            <Button sx={ButtonStyle} className="demoBtn">Let's Chat</Button>
+            <Button sx={ButtonStyle} className="demoBtn">
+              Let's Chat
+            </Button>
           </Box>
         </Box>
       </Grid>

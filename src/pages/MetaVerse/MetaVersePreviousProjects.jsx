@@ -71,13 +71,8 @@ const MetaVersePreviousProjects = () => {
         sx={{
           marginTop: "12rem",
           height: "100%",
-          minHeight: {
-            xl: "100vh",
-            lg: "100vh",
-            md: "80vh",
-            sm: "70vh",
-            xs: "55vh",
-          },
+          minHeight: "auto",
+          my: "50px",
           // background: "red",
         }}
       >

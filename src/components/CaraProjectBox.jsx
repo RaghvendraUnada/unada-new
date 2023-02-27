@@ -2,20 +2,7 @@ import React from "react";
 import { Box, Paper } from "@mui/material";
 const CaraProjectBox = ({ image, name, hrefLink }) => {
   return (
-    // <Box
-    //   sx={{
-    //     marginX: "12px",
-    //     borderRadius: "8px",
-    //     width: "400px",
-    //     height: "100%",
-    //     minHeight: "100vh",
-    //     maxHeight: "120px",
-    //     display: "flex",
-    //     justifyContent: "center",
-    //     alignItems: "center",
-    //   }}
-    // >
-    <Paper elevation={0} sx={{ background: "#000" }}>
+    <Paper elevation={0} sx={{ background: "#000", ml: 2 }}>
       <a href={hrefLink}>
         <img
           style={{
@@ -27,7 +14,6 @@ const CaraProjectBox = ({ image, name, hrefLink }) => {
         />
       </a>
     </Paper>
-    // </Box>
   );
 };
 
