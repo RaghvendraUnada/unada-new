@@ -40,6 +40,7 @@ export default function ChatUs(props) {
     setOpen(true);
   };
   const handleClose = () => {
+    console.log("close");
     setOpen(false);
   };
   const [showPassword, setShowPassword] = React.useState(false);
@@ -166,75 +167,84 @@ export default function ChatUs(props) {
                 </Typography>
               </Box>
               <Paper sx={{ display: "flex", justifyContent: "center" }}>
-                <Dialog
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby="alert-dialog-title"
-                  aria-describedby="alert-dialog-description"
-                  sx={{
-                    borderRadius: "2.2rem",
-                    minWidth: "510px",
-                    maxWidth: "510px",
-                    height: "auto",
-                    display: "flex",
-                    // justifyContent: "center",
-                    alignItems: "center",
-                    top: "0%",
-                    left: "35%",
-                    // background: "red",
-                  }}
-                >
-                  <DialogTitle
-                    id="alert-dialog-title"
-                    sx={{ position: "relative" }}
+                {open ? (
+                  <Dialog
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                    sx={{
+                      borderRadius: "2.2rem",
+                      minWidth: "510px",
+                      maxWidth: "510px",
+                      height: "auto",
+                      display: "flex",
+                      // justifyContent: "center",
+                      alignItems: "center",
+                      top: "0%",
+                      left: "35%",
+                      // background: "red",
+                    }}
                   >
-                    <Typography sx={contactUs}>CONNECT TO US</Typography>
-                    <Box sx={{ position: "absolute", top: "35%", right: "5%" }}>
-                      <img
-                        src={cross}
-                        style={{ width: "auto", height: "auto" }}
-                      />
-                    </Box>
-                  </DialogTitle>
-                  <DialogContent>
-                    <DialogContentText id="alert-dialog-description">
+                    <DialogTitle
+                      id="alert-dialog-title"
+                      sx={{ position: "relative" }}
+                    >
+                      <Typography sx={contactUs}>CONNECT TO US</Typography>
+                      <Box
+                        sx={{
+                          position: "absolute",
+                          top: "35%",
+                          right: "5%",
+                          cursor: "pointer",
+                        }}
+                        onClick={handleClose}
+                      >
+                        <img
+                          src={cross}
+                          style={{ width: "auto", height: "auto" }}
+                        />
+                      </Box>
+                    </DialogTitle>
+                    <DialogContent>
+                      <DialogContentText id="alert-dialog-description">
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            gap: "10px",
+                          }}
+                        >
+                          <img
+                            src={call}
+                            style={{ width: "auto", height: "auto" }}
+                          />
+                          <Typography sx={callUs}>Call us</Typography>
+                        </Box>
+                        <Typography sx={phNo}>+91 989898989</Typography>
+                        <Link to="https://api.whatsapp.com/send/?phone=918980298568&text&type=phone_number&app_absent=0">
+                          <Box sx={{ display: "flex" }}>
+                            <Button sx={wtspBtn} fullWidth>
+                              CONNECT TO US ON WHATSAPP
+                              <img
+                                src={whatsappiucon}
+                                style={{ width: "auto", height: "auto" }}
+                              />
+                            </Button>
+                          </Box>
+                        </Link>
+                      </DialogContentText>
                       <Box
                         sx={{
                           display: "flex",
-                          justifyContent: "center",
-                          gap: "10px",
+                          justifyContent: "flex-start",
+                          mt: 3,
+                          // m: 1,
                         }}
                       >
-                        <img
-                          src={call}
-                          style={{ width: "auto", height: "auto" }}
-                        />
-                        <Typography sx={callUs}>Call us</Typography>
+                        <Typography sx={pageLink}>Page link</Typography>
                       </Box>
-                      <Typography sx={phNo}>+91 989898989</Typography>
-                      <Link to="https://api.whatsapp.com/send/?phone=918980298568&text&type=phone_number&app_absent=0">
-                        <Box sx={{ display: "flex" }}>
-                          <Button sx={wtspBtn} fullWidth>
-                            CONNECT TO US ON WHATSAPP
-                            <img
-                              src={whatsappiucon}
-                              style={{ width: "auto", height: "auto" }}
-                            />
-                          </Button>
-                        </Box>
-                      </Link>
-                    </DialogContentText>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "flex-start",
-                        mt: 3,
-                        // m: 1,
-                      }}
-                    >
-                      <Typography sx={pageLink}>Page link</Typography>
-                    </Box>
-                    {/* <TextField
+                      {/* <TextField
                     sx={{ mt: 2 }}
                     id="input-with-icon-textfield"
                     label="TextField"
@@ -251,54 +261,55 @@ export default function ChatUs(props) {
                     variant="outlined"
                   /> */}
 
-                    <FormControl
-                      sx={{ m: 0, width: "72ch", mt: 1 }}
-                      variant="outlined"
-                    >
-                      <InputLabel htmlFor="outlined-adornment-password">
-                        Page Link
-                      </InputLabel>
-                      <OutlinedInput
-                        fullWidth
-                        id="outlined-adornment-password"
-                        type={showPassword ? "text" : "link"}
-                        // defaultValue="https://wa.me/919898989898"
-                        // disabled
-                        onChange={(e) => setCopyText(e.target.value)}
-                        endAdornment={
-                          <InputAdornment
-                            position="end"
-                            onClick={handleCopy}
-                            sx={{ cursor: "pointer" }}
-                          >
-                            <ContentCopyIcon
-                              onClick={handleClickShowPassword}
-                              onMouseDown={handleMouseDownPassword}
-                              edge="end"
-                            ></ContentCopyIcon>
-                          </InputAdornment>
-                        }
-                        label="Link"
-                      />
-                      <Box
-                        sx={{
-                          display: "flex",
-                          justifyContent: "center",
-                          mt: 2,
-                        }}
+                      <FormControl
+                        sx={{ m: 0, width: "72ch", mt: 1 }}
+                        variant="outlined"
                       >
-                        <img
-                          src={location}
-                          style={{ width: "auto", height: "auto" }}
+                        <InputLabel htmlFor="outlined-adornment-password">
+                          Page Link
+                        </InputLabel>
+                        <OutlinedInput
+                          fullWidth
+                          id="outlined-adornment-password"
+                          type={showPassword ? "text" : "link"}
+                          // defaultValue="https://wa.me/919898989898"
+                          // disabled
+                          onChange={(e) => setCopyText(e.target.value)}
+                          endAdornment={
+                            <InputAdornment
+                              position="end"
+                              onClick={handleCopy}
+                              sx={{ cursor: "pointer" }}
+                            >
+                              <ContentCopyIcon
+                                onClick={handleClickShowPassword}
+                                onMouseDown={handleMouseDownPassword}
+                                edge="end"
+                              ></ContentCopyIcon>
+                            </InputAdornment>
+                          }
+                          label="Link"
                         />
-                      </Box>
-                      <Typography sx={address}>
-                        550, Beside Star Bazaar, Satellite, Ahmedabad, Gujarat
-                        380015
-                      </Typography>
-                    </FormControl>
-                  </DialogContent>
-                </Dialog>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            mt: 2,
+                          }}
+                        >
+                          <img
+                            src={location}
+                            style={{ width: "auto", height: "auto" }}
+                          />
+                        </Box>
+                        <Typography sx={address}>
+                          550, Beside Star Bazaar, Satellite, Ahmedabad, Gujarat
+                          380015
+                        </Typography>
+                      </FormControl>
+                    </DialogContent>
+                  </Dialog>
+                ) : null}
               </Paper>
             </Box>
           </Grid>
