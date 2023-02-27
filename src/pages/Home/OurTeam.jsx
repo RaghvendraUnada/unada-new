@@ -123,7 +123,7 @@ const OurTeam = () => {
                   p: 0,
                 }}
               >
-                {/* <div class="block-33 display--inline-top">
+                <div class="block-33 display--inline-top">
                   <div class="gutter relative">
                     <div class="gallery-h">
                       {teamData?.map((res, idx) => {
@@ -137,7 +137,7 @@ const OurTeam = () => {
                       })}
                     </div>
                   </div>
-                </div> */}
+                </div>
 
                 <div class="block-33 display--inline-top">
                   <div class="gutter relative">
@@ -240,8 +240,6 @@ const EmployeeCard1 = (props) => {
     >
       <Box
         sx={{
-          // width: "90%",
-          // maxWidth: "500px",
           height: "auto",
           mx: "auto",
         }}

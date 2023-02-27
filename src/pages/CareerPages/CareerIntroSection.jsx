@@ -52,18 +52,6 @@ function SamplePrevArrow(props) {
     />
   );
 }
-const PrevArrow = ({ onClick, className }) => (
-  <div className={className} onClick={onClick}>
-    <span className="arrow-left" />
-  </div>
-);
-
-// Custom NextArrow component
-const NextArrow = ({ onClick, className }) => (
-  <div className={className} onClick={onClick}>
-    <span className="arrow-right" />
-  </div>
-);
 
 function CareerIntroSection() {
   const settings = {
@@ -79,7 +67,7 @@ function CareerIntroSection() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: false,
         },
@@ -88,7 +76,7 @@ function CareerIntroSection() {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
@@ -151,13 +139,23 @@ function CareerIntroSection() {
       <Grid
         container
         sx={{
-          width: "95%",
-          marginLeft: "auto",
-          marginRight: "auto",
+          width: "98%",
+          mx: "auto",
           height: "100%",
         }}
       >
-        <Box sx={{ width: "100%" }}>
+        <Box
+          sx={{
+            width: {
+              xl: "98%",
+              lg: "98%",
+              md: "95%",
+              sm: "95%",
+              xs: "95%",
+            },
+            mx: "auto",
+          }}
+        >
           <Slider {...settings}>
             {ImgArr.map((slide, sid) => (
               <Box
@@ -176,10 +174,8 @@ function CareerIntroSection() {
                   sx={{
                     backgroundSize: "cover",
                     width: "100%",
-                    height: {
-                      xs: "250px",
-                      lg: "450px",
-                    },
+                    mx: "auto",
+                    height: "auto",
                   }}
                   component="img"
                   alt="hello"
@@ -189,36 +185,6 @@ function CareerIntroSection() {
               </Box>
             ))}
           </Slider>
-          {/* <Slider {...settings}>
-            {ImgArr.map((slide, sid) => (
-              <Box
-                key={`slide-${sid}`}
-                sx={{
-                  flex: "none",
-                  boxSize: "100%",
-                  padding: "1.5rem",
-                  flexDirection: "column",
-                  gap: "1rem",
-                  width: "33%",
-                }}
-              >
-                <Box
-                  sx={{
-                    backgroundSize: "cover",
-                    width: "100%",
-                    height: {
-                      xs: "250px",
-                      lg: "450px",
-                    },
-                  }}
-                  component="img"
-                  alt="hello"
-                  src={slide}
-                />
-                <Typography sx={SwiperText}>Studio 25 Tiktok</Typography>
-              </Box>
-            ))}
-          </Slider> */}
         </Box>
       </Grid>
     </Grid>
