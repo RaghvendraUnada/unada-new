@@ -60,14 +60,26 @@ const PositionsDev = () => {
             },
           }}
         >
-          {/* <Typography sx={mainText}>Open </Typography> */}
+           <Typography
+            sx={{
+              ...textStyle1,
+              background:
+                "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+              backgroundSize: " 100%",
+              backgroundRepeat: "repeat",
+              backgroundClip: "text",
+              textFillColor: "transparent",
+            }}
+          >
+            Open Positions
+          </Typography>
           {/* <AnimatedGradientText> Positions</AnimatedGradientText> */}
-          <img
+          {/* <img
             src={positionTitle}
             alt="position"
             style={{ marginLeft: "-120px" }}
             draggable="false"
-          />
+          /> */}
           <Box mt={2}>
             <Typography sx={subText}>
               Didn’t find any suitable role, but you believe we should have you?
@@ -357,4 +369,24 @@ const ButtonStyle = {
   "&:focus": {
     backgroundColor: "transparent",
   },
+};
+const textStyle1 = {
+  fontFamily: "LGRegular",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: {
+    xl: "64px",
+    lg: "64px",
+    md: "50px",
+    sm: "42px",
+    xs: "35px",
+  },
+  lineHeight: {
+    xl: "76px",
+    lg: "76px",
+    md: "58px",
+    sm: "50px",
+    xs: "45px",
+  },
+  letterSpacing: 1,
 };

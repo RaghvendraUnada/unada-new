@@ -4,7 +4,7 @@ import VerticalText from "../../components/Maarquee/VerticalText";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import careerTitle from "../../assets/images/new/career_title.png";
-import "./CareerHeroSectionNew.css";
+// import "./CareerHeroSectionNew.css";
 // import CareersText from "../../components/CareersText";
 const CareerHeroSection = () => {
   return (
@@ -71,13 +71,13 @@ const CareerHeroSection = () => {
               <Typography
                 className="animate-charcter"
                 sx={{
-                  // ...textStyle1,
-                  // background:
-                  //   "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
-                  // backgroundSize: " 100%",
-                  // backgroundRepeat: "repeat",
-                  // backgroundClip: "text",
-                  // textFillColor: "transparent",
+                  ...textStyle1,
+                  background:
+                    "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+                  backgroundSize: " 100%",
+                  backgroundRepeat: "repeat",
+                  backgroundClip: "text",
+                  textFillColor: "transparent",
                 }}
               >
                 Join a team
@@ -85,13 +85,13 @@ const CareerHeroSection = () => {
               <Typography
                 className="animate-charcter"
                 sx={{
-                  // ...textStyle1,
-                  // background:
-                  //   "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
-                  // backgroundSize: " 100%",
-                  // backgroundRepeat: "repeat",
-                  // backgroundClip: "text",
-                  // textFillColor: "transparent",
+                  ...textStyle1,
+                  background:
+                    "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+                  backgroundSize: " 100%",
+                  backgroundRepeat: "repeat",
+                  backgroundClip: "text",
+                  textFillColor: "transparent",
                 }}
               >
                 Be a part of team who makes an impact
