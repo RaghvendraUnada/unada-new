@@ -27,6 +27,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import location from "../../assets/Images/Career/location.svg";
 import whatsappiucon from "../../assets/Images/Career/whatsappiucon.svg";
+import cross from "../../assets/Images/Career/cross.svg";
 import { Link } from "react-router-dom";
 export default function ChatUs(props) {
   const [open, setOpen] = React.useState(false);
@@ -38,14 +39,11 @@ export default function ChatUs(props) {
   const handleClickOpen = () => {
     setOpen(true);
   };
-
   const handleClose = () => {
     setOpen(false);
   };
   const [showPassword, setShowPassword] = React.useState(false);
-
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
@@ -121,9 +119,16 @@ export default function ChatUs(props) {
           ) : null}
         </Grid>
         <Grid item xl={6} lg={6} md={6} xs={6} sm={6} sx={manageGrid}>
-          <Grid item xl={6} lg={6} md={6} xs={6} sm={6}>
+          <Grid
+            item
+            xl={6}
+            lg={6}
+            md={6}
+            xs={6}
+            sm={6}
+            onClick={handleClickOpen}
+          >
             <Box
-              onClick={handleClickOpen}
               sx={{
                 padding: {
                   xl: "1.5rem",
@@ -167,19 +172,29 @@ export default function ChatUs(props) {
                   aria-labelledby="alert-dialog-title"
                   aria-describedby="alert-dialog-description"
                   sx={{
-                    borderRadius: "2.6rem",
+                    borderRadius: "2.2rem",
                     minWidth: "510px",
                     maxWidth: "510px",
                     height: "auto",
                     display: "flex",
-                    justifyContent: "center",
+                    // justifyContent: "center",
                     alignItems: "center",
                     top: "0%",
                     left: "35%",
+                    // background: "red",
                   }}
                 >
-                  <DialogTitle id="alert-dialog-title">
+                  <DialogTitle
+                    id="alert-dialog-title"
+                    sx={{ position: "relative" }}
+                  >
                     <Typography sx={contactUs}>CONNECT TO US</Typography>
+                    <Box sx={{ position: "absolute", top: "35%", right: "5%" }}>
+                      <img
+                        src={cross}
+                        style={{ width: "auto", height: "auto" }}
+                      />
+                    </Box>
                   </DialogTitle>
                   <DialogContent>
                     <DialogContentText id="alert-dialog-description">
@@ -528,7 +543,7 @@ const boxText3 = {
 };
 
 const contactUs = {
-  fontFamily: "Labil Grotesk Trial",
+  fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 600,
   fontSize: 19,
@@ -538,7 +553,7 @@ const contactUs = {
 };
 
 const callUs = {
-  fontFamily: "Labil Grotesk Trial",
+  fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
   fontSize: 15,
@@ -548,7 +563,7 @@ const callUs = {
 };
 
 const phNo = {
-  fontFamily: "Labil Grotesk Trial",
+  fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
   fontSize: 15,
@@ -559,7 +574,7 @@ const phNo = {
 };
 
 const wtspBtn = {
-  fontFamily: "Labil Grotesk Trial",
+  fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
   fontSize: 15,
@@ -571,11 +586,15 @@ const wtspBtn = {
   borderRadius: "0.8rem",
   backgroundColor: "rgba(60, 173, 156, 1)",
   mt: 2,
+  textDecoration: "none",
   gap: "15px",
+  "&:hover": {
+    backgroundColor: "rgba(60, 173, 156, 1)",
+  },
 };
 
 const pageLink = {
-  fontFamily: "Labil Grotesk Trial",
+  fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
   fontSize: 15,
@@ -585,7 +604,7 @@ const pageLink = {
 };
 
 const address = {
-  fontFamily: "Labil Grotesk Trial",
+  fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 300,
   fontSize: 16,
