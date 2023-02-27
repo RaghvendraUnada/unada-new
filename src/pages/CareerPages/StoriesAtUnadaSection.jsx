@@ -86,7 +86,20 @@ const StoriesAtUnadaSection = () => {
       }}
     >
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-        <Box display="flex" flexDirection="row">
+        <Box
+          display="flex"
+          flexDirection="column"
+          sx={{
+            width: {
+              xl: "95%",
+              lg: "95%",
+              md: "90%",
+              sm: "90%",
+              xs: "90%",
+            },
+            mx: "auto",
+          }}
+        >
           <Typography
             sx={{
               ...textStyle1,
@@ -100,14 +113,13 @@ const StoriesAtUnadaSection = () => {
           >
             Stories at Unada
           </Typography>
+          <Typography sx={{ ...MetaText, mt: 2 }}>
+            Stories at Unada provide an authentic, unfiltered glimpse into our
+            workplace where memories are made, innovations are fostered and
+            foremost everyone feels included, valued, respected and are able to
+            bring their authentic selves to work.
+          </Typography>
         </Box>
-
-        <Typography sx={MetaText}>
-          Stories at Unada provide an authentic, unfiltered glimpse into our
-          workplace where memories are made, innovations are fostered and
-          foremost everyone feels included, valued, respected and are able to
-          bring their authentic selves to work.
-        </Typography>
       </Grid>
       <Grid
         container
@@ -209,8 +221,6 @@ const MetaText = {
     xs: "13px",
   },
   color: "#484848",
-  marginLeft: "4rem",
-  marginTop: "2rem",
 };
 const hue = keyframes`
  from {
