@@ -1,127 +1,208 @@
-import React from "react";
+import React, { useState } from "react";
 import { Typography, Box, Paper, Grid, Stack, Button } from "@mui/material";
 import arrows from "../assets/Images/Career/arrows.svg";
+import Dialog from "@mui/material/Dialog";
+import ListItemText from "@mui/material/ListItemText";
+import ListItem from "@mui/material/ListItem";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+// import Typography from "@mui/material/Typography";
+import CloseIcon from "@mui/icons-material/Close";
+import Slide from "@mui/material/Slide";
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
-    <Box sx={scrolltext}>
-      <Box
-        sx={{
-          width: "95%",
-          marginLeft: "auto",
-          marginRight: "auto",
-          padding: "15px",
-          borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
-        }}
-      >
-        <Grid
-          container
-          sx={{ display: "flex", justifyContent: "space-evenly" }}
+    <>
+      <Box sx={scrolltext}>
+        <Box
+          sx={{
+            width: "95%",
+            marginLeft: "auto",
+            marginRight: "auto",
+            padding: "15px",
+            borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
+          }}
         >
           <Grid
-            item
-            xl={6}
-            lg={6}
-            md={6}
-            sm={6}
-            xs={12}
-            sx={{
-              padding: {
-                xl: "4rem 0rem 4rem 0rem",
-                lg: "2rem 0rem 2rem 0rem",
-                md: "2rem 0rem 2rem 0rem",
-                sm: "35px",
-                xs: "30px",
-              },
-            }}
+            container
+            sx={{ display: "flex", justifyContent: "space-evenly" }}
           >
-            <Typography sx={textPos}>{positionDevo}</Typography>
-            <Box
+            <Grid
+              item
+              xl={6}
+              lg={6}
+              md={6}
+              sm={6}
+              xs={12}
               sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: {
-                  xl: "left",
-                  lg: "left",
-                  md: "left",
-                  sm: "center",
-                  xs: "center",
-                },
-                gap: "1rem",
-                // width: "70%",
-                marginLeft: "auto",
-                marginRight: "auto",
-                width: {
-                  xl: "100%",
-                  lg: "100%",
-                  md: "100%",
-                  sm: "100%",
-                  xs: "100%",
+                padding: {
+                  xl: "4rem 0rem 4rem 0rem",
+                  lg: "2rem 0rem 2rem 0rem",
+                  md: "2rem 0rem 2rem 0rem",
+                  sm: "35px",
+                  xs: "30px",
                 },
               }}
             >
-              <Button sx={ButtonStyle}>{pos1}</Button>
-              <Button sx={ButtonStyle}>{pos2}</Button>
-              <Button sx={ButtonStyle}>{pos3}</Button>
-            </Box>
-          </Grid>
-          <Grid
-            item
-            xl={6}
-            lg={6}
-            md={6}
-            sm={6}
-            xs={12}
-            sx={{
-              //   padding: "0px",
-              //   display: "flex",
-              //   flexDirection: "row",
-              //   justifyContent: "flex-end",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              alignContent: "center",
-              justifyContent: {
-                xl: "end",
-                lg: "end",
-                md: "end",
-                sm: "center",
-                xs: "center",
-              },
-              textAlign: {
-                xl: "right",
-                lg: "right",
-                md: "right",
-                sm: "center",
-                xs: "center",
-              },
-              marginTop: "0.5rem",
-            }}
-          >
-            <Button sx={ButtonStyle1}>
-              Apply
-              <span
-                style={{
-                  height: "35px",
-                  width: "35px",
-                  backgroundColor: "transparent",
-                  borderRadius: "50%",
+              <Typography sx={textPos}>{positionDevo}</Typography>
+              <Box
+                sx={{
                   display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginLeft: "18px",
+                  flexDirection: "row",
+                  justifyContent: {
+                    xl: "left",
+                    lg: "left",
+                    md: "left",
+                    sm: "center",
+                    xs: "center",
+                  },
+                  gap: "1rem",
+                  // width: "70%",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: {
+                    xl: "100%",
+                    lg: "100%",
+                    md: "100%",
+                    sm: "100%",
+                    xs: "100%",
+                  },
                 }}
               >
-                <img
-                  src={arrows}
-                  alt="arr"
-                  style={{ height: "auto", width: "20px" }}
-                />
-              </span>
-            </Button>
+                <Button sx={ButtonStyle}>{pos1}</Button>
+                <Button sx={ButtonStyle}>{pos2}</Button>
+                <Button sx={ButtonStyle}>{pos3}</Button>
+              </Box>
+            </Grid>
+            <Grid
+              item
+              xl={6}
+              lg={6}
+              md={6}
+              sm={6}
+              xs={12}
+              sx={{
+                //   padding: "0px",
+                //   display: "flex",
+                //   flexDirection: "row",
+                //   justifyContent: "flex-end",
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                alignContent: "center",
+                justifyContent: {
+                  xl: "end",
+                  lg: "end",
+                  md: "end",
+                  sm: "center",
+                  xs: "center",
+                },
+                textAlign: {
+                  xl: "right",
+                  lg: "right",
+                  md: "right",
+                  sm: "center",
+                  xs: "center",
+                },
+                marginTop: "0.5rem",
+              }}
+            >
+              <Button sx={ButtonStyle1} onClick={handleClickOpen}>
+                Apply
+                <span
+                  style={{
+                    height: "35px",
+                    width: "35px",
+                    backgroundColor: "transparent",
+                    borderRadius: "50%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginLeft: "18px",
+                  }}
+                >
+                  <img
+                    src={arrows}
+                    alt="arr"
+                    style={{ height: "auto", width: "20px" }}
+                  />
+                </span>
+              </Button>
+            </Grid>
           </Grid>
-        </Grid>
+        </Box>
       </Box>
-    </Box>
+      <Dialog
+        fullScreen
+        open={open}
+        onClose={handleClose}
+        TransitionComponent={Transition}
+        sx={{ width: "100%", height: "100%", padding: "2rem" }}
+      >
+        {/* <AppBar sx={{ position: "relative" }}> */}
+        {/* <Toolbar> */}
+        <Box
+          sx={{
+            width: "100%",
+            height: "95vh",
+            background: "red",
+            zIndex: 100,
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "center",
+              borderBottom: "1px solid yellow",
+            }}
+          >
+            <Typography variant="h6" component="div" sx={ApplyTextStyle}>
+              Applying For {"   "}
+            </Typography>
+            <Typography sx={PositionsDevText}>
+              {"  "}
+              {positionDevo}
+            </Typography>
+            <IconButton
+              edge="start"
+              color="inherit"
+              onClick={handleClose}
+              aria-label="close"
+            >
+              <CloseIcon sx={{ color: "white" }} />
+            </IconButton>
+          </Box>
+          {/* </Toolbar> */}
+          {/* </AppBar> */}
+          <List>
+            <ListItem>
+              <ListItemText primary="Phone ringtone" secondary="Titania" />
+            </ListItem>
+            <Divider />
+            <ListItem button>
+              <ListItemText
+                primary="Default notification ringtone"
+                secondary="Tethys"
+              />
+            </ListItem>
+          </List>
+        </Box>
+      </Dialog>
+    </>
   );
 };
 
@@ -209,4 +290,23 @@ const textPos = {
   fontWeight: 500,
 
   textAlign: { lg: "left", xl: "left", md: "left", sm: "center", xs: "center" },
+};
+const ApplyTextStyle = {
+  fontFamily: "LGThin",
+  fontStyle: "normal",
+  fontWeight: 300,
+  fontSize: "23px",
+  lineHeight: "36px",
+  letterSpacing: 0.1,
+  color: "#FFFFFF",
+};
+const PositionsDevText = {
+  fontFamily: "LGRegular",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: "32px",
+  lineHeight: "36px",
+  letterSpacing: 0.1,
+
+  color: "#FFFFFF",
 };
