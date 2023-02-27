@@ -3,7 +3,8 @@ import { Grid, Typography, Box, Paper, Stack } from "@mui/material";
 import HeroPage from "../../components/HeroPage";
 import Intro from "../../components/Intro";
 import webHero from "../../assets/Images/Web/newHeroPng.png";
-import webHero1 from "../../assets/Images/Application/WebImg.png";
+// import webHero1 from "../../assets/Images/Application/WebImg.png";
+import webHero1 from "../../assets/Images/Application/webnewShadow.svg";
 import introWeb from "../../assets/Images/Web/introWeb.svg";
 import TechStack from "../Application/TechStack";
 const data = [

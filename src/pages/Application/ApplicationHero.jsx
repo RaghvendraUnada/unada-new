@@ -1,7 +1,8 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Button } from "@mui/material";
 import chatimg from "../../assets/Images/Application/newHeroApp.svg";
-import ChatAppImg from "../../assets/Images/Application/appgroupapp.svg";
+// import ChatAppImg from "../../assets/Images/Application/appgroupapp.svg";
+import ChatAppImg from "../../assets/Images/Application/appSun.png";
 import HeroPage from "../../components/HeroPage";
 
 const ApplicationHero = () => {
@@ -13,7 +14,7 @@ const ApplicationHero = () => {
         subText1={
           "Our team of experienced, tech-savvy professionals create user-friendly, modern mobile apps for businesses seeking to stay competitive in today's digital age."
         }
-        imgHeight={"500px"}
+        imgHeight={"650px"}
         imgWidth={"500px"}
         imgHeightMobile={"375px"}
         imgWidthMobile={"520px"}

@@ -109,8 +109,8 @@ const HeroPage = ({
                 sx={{
                   borderRadius: "9rem",
                   background: "#0D6EFD",
-                  fontSize: "1.8rem",
-                  padding: "0.8rem 2rem",
+                  fontSize: "1.7rem",
+                  padding: "1.1rem 2.6rem",
                   fontWeight: 500,
                   // lineHeight: "2.9rem",
                   fontFamily: "LGLight",
@@ -153,7 +153,6 @@ const HeroPage = ({
             elevation={0}
             sx={{
               height: "100%",
-              bgcolor: "red",
               minHeight: imgHeight,
               maxWidth: imgWidth,
               width: "100%",

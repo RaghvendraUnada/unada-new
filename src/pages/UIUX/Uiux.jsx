@@ -2,7 +2,8 @@ import React from "react";
 import HeroPage from "../../components/HeroPage";
 import StackList from "../../components/StackList";
 import Intro from "../../components/Intro";
-import Ux from "../../assets/Images/UIUX/uinewone.png";
+// import Ux from "../../assets/Images/UIUX/uinewone.png";
+import Ux from "../../assets/Images/UIUX/uxpng.png";
 import uiintro from "../../assets/Images/UIUX/uiintro.svg";
 import { Grid, Typography, Box, Paper, Stack } from "@mui/material";
 import swift from "../../assets/Images/Application/swift.svg";
@@ -26,8 +27,8 @@ const Uiux = () => {
             "We believe that great design goes beyond aesthetics. We strive to create seamless and intuitive digital experiences that enhance the lives of users and help businesses."
           }
           imgUrl={Ux}
-          imgHeight={"500px"}
-          imgWidth={"500px"}
+          imgHeight={"650px"}
+          imgWidth={"650px"}
         />
       </Grid>
       <Grid container>
