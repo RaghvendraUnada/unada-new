@@ -10,7 +10,7 @@
 .employe-card {
   position: relative;
   left: 0px;
-  animation: imageAnimation1 7s linear infinite;
+  /* animation: imageAnimation1 7s linear infinite; */
 }
 
 @keyframes imageAnimation1 {
@@ -39,7 +39,7 @@
 .culture-card {
   position: relative;
   left: 0px;
-  animation: slide 5s linear infinite;
+  /* animation: slide 5s linear infinite; */
 }
 
 @keyframes slide {
@@ -93,12 +93,12 @@
 
 .gallery-image {
   padding-bottom: 2.35em;
-  animation: marqueeTop 5s linear infinite;
+  animation: marqueeTop 10s linear infinite;
 }
 
-.gallery-h--tb .gallery-image {
-  animation: marqueeBottom 5s linear infinite;
-}
+/* .gallery-h--tb .gallery-image {
+  animation: marqueeBottom 10s linear infinite;
+} */
 
 .gallery-image__img {
   padding-top: 06vh;

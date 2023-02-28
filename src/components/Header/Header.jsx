@@ -151,7 +151,7 @@ const Header = () => {
                 onClick={() => setOpen(false)}
               >
                 <img
-                  src={Close}
+                  // src={Close}
                   alt="Close"
                   style={{ width: "90%", height: "auto", maxWidth: "35px" }}
                 />
@@ -163,7 +163,7 @@ const Header = () => {
                 navigate("/contact");
               }}
             >
-              <Typography sx={ContactUsText}>Get in touch</Typography>
+              {/* <Typography sx={ContactUsText}>Get in touch</Typography> */}
               {/* <HiArrowRight size={16} /> */}
               <img
                 src={arrowheader}
@@ -210,7 +210,7 @@ const Header = () => {
 
           <Button disableRipple sx={ButtonStyle} onClick={() => setOpen(false)}>
             <img
-              src={Close}
+              // src={Close}
               alt="Close"
               style={{
                 width: "75%",

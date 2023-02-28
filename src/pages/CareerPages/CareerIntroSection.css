@@ -1,0 +1,64 @@
+.slick-prev,
+.slick-next {
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background: transparent;
+}
+
+.slick-prev:before {
+  /* left: 0; */
+  /* display: none; */
+  margin-left: -20px;
+  content: url("../../assets//Images/material-symbols_arrow-back-ios-new-rounded.svg");
+  transform: scale(0.6);
+  /* height: "10px"; */
+  /* background-size: 10px; */
+  /* background-color: #f00; */
+}
+
+.slick-next:before,
+[dir="rtl"] .slick-prev:before {
+  /* border: solid #fff; */
+  border-width: 0 3px 3px 0;
+  content: url("../../assets//Images/material-symbols_arrow-back-ios-new-rounded-1.svg");
+  /* font-size: small; */
+  /* background-color: #f00; */
+}
+.slick-next:before,
+.slick-prev:before {
+  /* font-size: 14px; */
+  line-height: 1;
+  opacity: 0.75;
+  color: #fff;
+}
+
+.slick-next {
+  right: -15px;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.arrow-left,
+.arrow-right {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(135deg);
+}
+
+.arrow-right {
+  transform: rotate(-45deg);
+}
+
+.slick-prev:hover .arrow-left,
+.slick-next:hover .arrow-right {
+  border-color: #f00;
+}

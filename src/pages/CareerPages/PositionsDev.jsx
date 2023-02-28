@@ -10,9 +10,8 @@ const PositionsDev = () => {
   const [JobData, setJobData] = useState();
   const FetchJobData = async () => {
     await axios
-      .get("job/get_jobs")
+      .get("/job/get_jobs")
       .then((res) => {
-        console.log(res);
         setJobData(res.data);
       })
       .catch((err) => console.log(err));
@@ -42,30 +41,44 @@ const PositionsDev = () => {
         <Box
           sx={{
             display: "flex",
+            width: "80%",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "left",
-            paddingLeft: {
-              xl: "6rem",
-              lg: "6rem",
-              md: "6rem",
-              sm: "0rem",
-              xs: "0rem",
+            alignItems: {
+              xl: "start",
+              lg: "start",
+              md: "start",
+              sm: "center",
+              xs: "center",
             },
           }}
         >
-          <img
+          <Typography
+            sx={{
+              ...textStyle1,
+              background:
+                "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+              backgroundSize: " 100%",
+              backgroundRepeat: "repeat",
+              backgroundClip: "text",
+              textFillColor: "transparent",
+              // textAlign: "center",
+            }}
+          >
+            Open Positions
+          </Typography>
+          {/* <AnimatedGradientText> Positions</AnimatedGradientText> */}
+          {/* <img
             src={positionTitle}
             alt="position"
-            style={{ marginLeft: "20px", width: "200px", height: "auto" }}
+            style={{ marginLeft: "-120px" }}
             draggable="false"
-          />
-          <Box mt={2}>
-            <Typography sx={subText}>
-              Didn’t find any suitable role, but you believe we should have you?
-              Get in touch as we’d love to connect.
-            </Typography>
-          </Box>
+          /> */}
+          <Typography sx={{ ...subText, mt: 2 }}>
+            Didn’t find any suitable role, but you believe we should have you?
+            Get in touch as we’d love to connect.
+          </Typography>
+
           <Box
             mt={4}
             sx={{
@@ -312,12 +325,10 @@ const subText = {
     sm: "2.1rem",
     xs: "2.0rem",
   },
-  marginLeft: "auto",
-  marginRight: "auto",
   textAlign: {
     xl: "left",
     lg: "left",
-    md: "center",
+    md: "left",
     sm: "center",
     xs: "center",
   },
@@ -348,5 +359,32 @@ const ButtonStyle = {
   },
   "&:focus": {
     backgroundColor: "transparent",
+  },
+};
+const textStyle1 = {
+  fontFamily: "LGRegular",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: {
+    xl: "64px",
+    lg: "64px",
+    md: "50px",
+    sm: "42px",
+    xs: "30px",
+  },
+  lineHeight: {
+    xl: "76px",
+    lg: "76px",
+    md: "58px",
+    sm: "50px",
+    xs: "45px",
+  },
+  letterSpacing: 1,
+  textAlign: {
+    xl: "left",
+    lg: "left",
+    md: "left",
+    sm: "center",
+    xs: "center",
   },
 };

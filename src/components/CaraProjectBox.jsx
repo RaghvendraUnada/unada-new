@@ -3,7 +3,7 @@ import { Box, Paper } from "@mui/material";
 const CaraProjectBox = ({ image, name, hrefLink }) => {
   return (
     <Paper elevation={0} sx={{ background: "#000", ml: 2 }}>
-      <a href={hrefLink}>
+      <a href={hrefLink} target="_blank">
         <img
           style={{
             height: "auto",

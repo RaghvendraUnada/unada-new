@@ -1,6 +1,6 @@
 import React, { useEffect, lazy, Suspense, useState } from "react";
 import UnadaVid from "../assets/UnadaBGvid.mp4";
-import { Paper, Box, Button } from "@mui/material";
+import { Paper, Box, Button, Typography } from "@mui/material";
 import "../Components/css/HomeStyle.css";
 import { motion } from "framer-motion";
 import SideArrowImg from "../assets/Images/Home/SideArrowImg.svg";
@@ -17,9 +17,7 @@ import arrowheader from "../../src/assets/Images/Header/headl.png";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { Link } from "react-router-dom";
-// import WhatsappIcon from "./assets/Images/WhatsappIcon.png";
 import { HiArrowRight } from "react-icons/hi";
-// import { motion } from "framer-motion";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 
@@ -181,66 +179,78 @@ const MainHeroPage = () => {
                   </Button>
                 ) : (
                   <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
-                    <img
-                      src={Close}
-                      alt="Close"
-                      style={{
-                        width: "90%",
-                        height: "auto",
-                        maxWidth: "35px",
-                      }}
-                    />
+                    Close
                   </Button>
                 )}
-
-                <Link to={"/contact"}>
-                  <Box
-                    sx={{
-                      ...ContactUsButton,
-                      background: "white",
-                      fontFamily: "SF Pro Display",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      fontSize: "14px",
-                      lineHeight: "20px",
-                      color: "#4E4E4E",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      px: "1rem",
-                      "& img": {
-                        transform: "rotate(44deg)",
-                        transition: "all 0.6s ease-in-out",
-                      },
-                      "&:hover": {
-                        background: "rgba(255, 255, 255, 0.8)",
-                        backgroundImage:
-                          "-webkit-gradient( linear, left top, right bottom, color-stop(0, #3b5998), color-stop(1, #fff))",
-                        color: "transparent",
-                        backgroundClip: "text",
-                        WebkitBackgroundClip: "text",
-                        // on hover rotate image
+                <Box
+                  sx={{
+                    background: "white",
+                    display: {
+                      xs: "none",
+                      sm: "none",
+                      md: "flex",
+                      lg: "flex",
+                      xl: "flex",
+                    },
+                  }}
+                >
+                  <Link to={"/contact"}>
+                    <Box
+                      sx={{
+                        ...ContactUsButton,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        p: "1rem",
                         "& img": {
-                          transform: "rotate(10deg)",
+                          transform: "rotate(44deg)",
                           transition: "all 0.6s ease-in-out",
                         },
-                      },
-                    }}
-                  >
-                    Get in touch
-                    <img
-                      src={arrowheader}
-                      alt="arrow"
-                      style={{
-                        height: "auto",
-                        width: "10px",
-                        marginLeft: "5px",
-                        marginBottom: "-2px",
-                        // transform: "rotate(44deg)",
+                        color: "#4E4E4E",
+                        "&:hover": {
+                          // on hover rotate image
+                          "& img": {
+                            transform: "rotate(10deg)",
+                            transition: "all 0.6s ease-in-out",
+                          },
+                          background:
+                            "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
+                          textTransform: "none",
+                          backgroundSize: " 100%",
+                          backgroundRepeat: "repeat",
+                          backgroundClip: "text",
+                          textFillColor: "transparent",
+                        },
+                        fontFamily: "LGRegular",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        fontSize: "15px",
+
+                        background: "#4E4E4E",
+                        backgroundClip: "text",
+                        // "&:hover": {
+                        //   background:
+                        //     "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
+                        //   textTransform: "none",
+                        //   backgroundSize: " 100%",
+                        //   backgroundRepeat: "repeat",
+                        //   backgroundClip: "text",
+                        //   textFillColor: "transparent",
+                        // },
                       }}
-                    />
-                  </Box>
-                </Link>
+                    >
+                      Get in touch
+                      <img
+                        src={arrowheader}
+                        alt="arrow"
+                        style={{
+                          height: "auto",
+                          width: "10px",
+                        }}
+                      />
+                    </Box>
+                  </Link>
+                </Box>
               </Paper>
             </Paper>
           ) : null}
@@ -272,10 +282,10 @@ const MainHeroPage = () => {
                 to={"/"}
                 style={{
                   textDecoration: "none",
-                  margin: "auto",
-                  marginLeft: "auto",
-                  paddingLeft: "74px",
-                  marginTop: "5px",
+                  // margin: "auto",
+                  // marginLeft: "auto",
+                  // paddingLeft: "74px",
+                  // marginTop: "5px",
                 }}
               >
                 <img
@@ -287,16 +297,7 @@ const MainHeroPage = () => {
               </Link>
 
               <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
-                <img
-                  src={Close}
-                  alt="Close"
-                  style={{
-                    width: "75%",
-                    height: "auto",
-                    marginTop: "10px",
-                    maxWidth: "22px",
-                  }}
-                />
+                Close
               </Button>
             </Paper>
             <List sx={{ py: 5, height: "80vh", overflowY: "scroll" }}>
@@ -325,7 +326,7 @@ const MainHeroPage = () => {
                   }
                   to="/"
                   style={{
-                    margin: "auto",
+                    // margin: "auto",
                     textDecoration: "none",
                     color: "#C9C9C9",
                   }}
@@ -359,7 +360,7 @@ const MainHeroPage = () => {
                       : HeaderStyles.navbarListText
                   }
                   style={{
-                    margin: "auto",
+                    // margin: "auto",
                     textDecoration: "none",
                     color: "#C9C9C9",
                   }}
@@ -394,7 +395,7 @@ const MainHeroPage = () => {
                   }
                   to="/contact"
                   style={{
-                    margin: "auto",
+                    // margin: "auto",
                     textDecoration: "none",
                     color: "#C9C9C9",
                   }}
@@ -451,6 +452,7 @@ const MainHeroPage = () => {
               <Box
                 sx={{
                   width: "100%",
+                  height: "200px",
                   position: "absolute",
                   top: "50%",
                   left: "50%",
@@ -485,7 +487,7 @@ const MainHeroPage = () => {
                 cursor: "pointer",
                 fontSize: {
                   xl: "17px",
-                  lg: "17px",
+                  lg: "15px",
                   md: "15px",
                   sm: "12px",
                   xs: "12px",
@@ -497,7 +499,7 @@ const MainHeroPage = () => {
                 alignItems: "flex-end",
                 textAlign: "center",
                 gap: "14px",
-                opacity: 0.6,
+                opacity: 1,
                 textTransform: "uppercase",
               }}
             >
@@ -524,10 +526,9 @@ const MainHeroPage = () => {
                 fontWeight: 400,
                 color: "black",
                 cursor: "pointer",
-
                 fontSize: {
                   xl: "17px",
-                  lg: "17px",
+                  lg: "15px",
                   md: "15px",
                   sm: "12px",
                   xs: "12px",
@@ -535,19 +536,12 @@ const MainHeroPage = () => {
                 lineHeight: "18px",
                 borderRadius: "61px",
                 padding: "1rem 2rem",
-                textTransform: "uppercase",
                 display: "flex",
                 alignItems: "flex-end",
                 textAlign: "center",
                 gap: "14px",
-                opacity: 0.6,
-                // transition: "0.5s all linear",
-                // "&:hover": {
-                //   backgroundColor: "transparent",
-                //   color: "black",
-                //   border: "1px solid gray",
-                //   opacity: 1,
-                // },
+                opacity: 1,
+                textTransform: "uppercase",
               }}
             >
               <span>Explore</span>
@@ -621,10 +615,13 @@ const AnimatedGradientText = styled.h1`
 `;
 
 const ButtonStyle = {
-  color: "black",
-  fontFamily: "Inter",
+  fontFamily: "LGRegular",
+  textTransform: "none",
+  fontSize: { xl: "24px", lg: "24px", md: "23px", sm: "20px", xs: "20px" },
+  color: "#393939",
+  fontStyle: "normal",
+  fontWeight: 400,
   mt: "07px",
-  fontSize: "12px",
   width: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   "&:hover": {
@@ -637,39 +634,35 @@ const LinkStyles = {
 };
 
 const ContactUsButton = {
-  width: "123px",
-  height: "30px",
-  // background: " grey",
-  // boxShadow: "0px 0px 3px rgba(51, 211, 212, 0.18)",
-  borderRadius: "8px",
-  // display: "flex",
+  width: "137px",
+  height: "41px",
+  borderRadius: "28px",
   px: 0,
   zIndex: 0,
+  border: "0.5px solid #CCCCCC",
   mt: 1,
   justifyContent: "space-evenly",
   cursor: "pointer",
   alignItems: "center",
   paddingTop: "1rem",
   paddingBottom: "1rem",
-  display: { xl: "flex", lg: "flex", md: "flex", sm: "none", xs: "none" },
-  // boxShadow: "10px 10px 10px 10px black",
-  WebkitBoxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
-  MozBoxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
-  boxShadow: "4px 4px 20px -1px rgba(0,0,0,0.11)",
 };
 
 const ContactUsText = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 400,
-  fontSize: "14px",
-  lineHeight: "20px",
-  // color: "#000000",
-  background:
-    "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
-  textTransform: "none",
-  backgroundSize: " 100%",
-  backgroundRepeat: "repeat",
+  fontSize: "15px",
+
+  background: "#4E4E4E",
   backgroundClip: "text",
-  textFillColor: "transparent",
+  "&:hover": {
+    background:
+      "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
+    textTransform: "none",
+    backgroundSize: " 100%",
+    backgroundRepeat: "repeat",
+    backgroundClip: "text",
+    textFillColor: "transparent",
+  },
 };

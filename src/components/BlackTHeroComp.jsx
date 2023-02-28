@@ -359,12 +359,12 @@ const heroMetaTextStyle = {
   //   sm: "0rem",
   //   xs: "0rem",
   // },
-  // marginTop: {
-  //   xl: "2rem",
-  //   lg: "2rem",
-  //   md: "2rem",
-  //   sm: "0rem",
-  //   xs: "0rem",
-  // },
+  marginTop: {
+    xl: "2rem",
+    lg: "2rem",
+    md: "2rem",
+    sm: "0.5rem",
+    xs: "0.5rem",
+  },
   color: "#FFFFFF",
 };
