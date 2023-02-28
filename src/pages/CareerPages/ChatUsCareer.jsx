@@ -12,14 +12,20 @@ import {
   DialogTitle,
   DialogContentText,
   DialogContent,
+  DialogActions,
+  Modal,
 } from "@mui/material";
+
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import chat from "../../assets/Images/Contact/chat.svg";
 import arrow from "../../assets/Images/Contact/arrow.svg";
 import phone from "../../assets/Images/Contact/phone.svg";
 import Frame from "../../assets/Images/Contact/Frame.svg";
 import send from "../../assets/Images/Contact/send.svg";
 import Dialog from "@mui/material/Dialog";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import call from "../../assets/Images/Career/call.svg";
 import clipboard from "../../assets/Images/Career/clipboard.svg";
 import Visibility from "@mui/icons-material/Visibility";
@@ -29,15 +35,36 @@ import location from "../../assets/Images/Career/location.svg";
 import whatsappiucon from "../../assets/Images/Career/whatsappiucon.svg";
 import cross from "../../assets/Images/Career/cross.svg";
 import { Link } from "react-router-dom";
+import { styled } from "@mui/material/styles";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: { xl: 400, lg: 400, md: 400, sm: 400, xs: 300 },
+  // height: { sm: 400, xs: 300 },
+  // height: 300,
+  bgcolor: "background.paper",
+  border: "2px solid #fff",
+  boxShadow: 24,
+  borderRadius: "20px",
+  p: { xl: 3, lg: 3, md: 3, sm: 3, xs: 1.5 },
+};
+
 export default function ChatUs(props) {
   const [open, setOpen] = React.useState(false);
   const [copyText, setCopyText] = useState("");
+  // const handleCopy = () => {
+  //   navigator.clipboard.writeText(copyText);
+  //   alert("Copied");
+  // };
   const handleCopy = () => {
-    navigator.clipboard.writeText(copyText);
+    navigator.clipboard.writeText("https://wa.me/919898989898");
     alert("Copied");
   };
   const handleClickOpen = () => {
-    setOpen(true);
+    setOpen(!open);
   };
   const handleClose = () => {
     setOpen(false);
@@ -118,7 +145,16 @@ export default function ChatUs(props) {
             </Grid>
           ) : null}
         </Grid>
-        <Grid item xl={6} lg={6} md={6} xs={6} sm={6} sx={manageGrid}>
+        <Grid
+          item
+          xl={6}
+          lg={6}
+          md={6}
+          xs={6}
+          sm={6}
+          onClick={handleClickOpen}
+          sx={{ ...manageGrid, cursor: "pointer" }}
+        >
           <Grid
             item
             xl={6}
@@ -126,7 +162,7 @@ export default function ChatUs(props) {
             md={6}
             xs={6}
             sm={6}
-            onClick={handleClickOpen}
+            // onClick={handleClickOpen}
           >
             <Box
               sx={{
@@ -165,44 +201,49 @@ export default function ChatUs(props) {
                   Give us a phone call.
                 </Typography>
               </Box>
-              <Paper sx={{ display: "flex", justifyContent: "center" }}>
-                <Dialog
+              <Paper
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <Modal
                   open={open}
                   onClose={handleClose}
-                  aria-labelledby="alert-dialog-title"
-                  aria-describedby="alert-dialog-description"
-                  sx={{
-                    borderRadius: "2.2rem",
-                    minWidth: "510px",
-                    maxWidth: "510px",
-                    height: "auto",
-                    display: "flex",
-                    // justifyContent: "center",
-                    alignItems: "center",
-                    top: "0%",
-                    left: "35%",
-                    // background: "red",
-                  }}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
                 >
-                  <DialogTitle
-                    id="alert-dialog-title"
-                    sx={{ position: "relative" }}
-                  >
-                    <Typography sx={contactUs}>CONNECT TO US</Typography>
-                    <Box sx={{ position: "absolute", top: "35%", right: "5%" }}>
-                      <img
-                        src={cross}
-                        style={{ width: "auto", height: "auto" }}
-                      />
+                  <Box sx={style}>
+                    <Box>
+                      <Typography sx={contactUs}>CONNECT TO US</Typography>
+                      <Box
+                        sx={{
+                          position: "absolute",
+                          top: {
+                            xl: "8%",
+                            lg: "8%",
+                            md: "8%",
+                            sm: "8%",
+                            xs: "5%",
+                          },
+                          right: "5%",
+                          cursor: "pointer",
+                        }}
+                        onClick={handleClickOpen}
+                      >
+                        <img
+                          src={cross}
+                          style={{ width: "auto", height: "auto" }}
+                        />
+                      </Box>
                     </Box>
-                  </DialogTitle>
-                  <DialogContent>
-                    <DialogContentText id="alert-dialog-description">
+                    <Box>
                       <Box
                         sx={{
                           display: "flex",
                           justifyContent: "center",
                           gap: "10px",
+                          mt: { xl: 5, lg: 5, md: 5, sm: 4, xs: 3 },
                         }}
                       >
                         <img
@@ -212,93 +253,77 @@ export default function ChatUs(props) {
                         <Typography sx={callUs}>Call us</Typography>
                       </Box>
                       <Typography sx={phNo}>+91 989898989</Typography>
-                      <Link to="https://api.whatsapp.com/send/?phone=918980298568&text&type=phone_number&app_absent=0">
-                        <Box sx={{ display: "flex" }}>
-                          <Button sx={wtspBtn} fullWidth>
-                            CONNECT TO US ON WHATSAPP
-                            <img
-                              src={whatsappiucon}
-                              style={{ width: "auto", height: "auto" }}
-                            />
-                          </Button>
-                        </Box>
-                      </Link>
-                    </DialogContentText>
+                    </Box>
+                    <a
+                      href="https://api.whatsapp.com/send/?phone=918980298568&text&type=phone_number&app_absent=0"
+                      target="_blank"
+                    >
+                      <Box sx={{ display: "flex" }}>
+                        <Button sx={wtspBtn} fullWidth>
+                          CONNECT TO US ON WHATSAPP
+                          <img
+                            src={whatsappiucon}
+                            style={{ width: "auto", height: "auto" }}
+                          />
+                        </Button>
+                      </Box>
+                    </a>
                     <Box
                       sx={{
                         display: "flex",
                         justifyContent: "flex-start",
                         mt: 3,
-                        // m: 1,
                       }}
                     >
                       <Typography sx={pageLink}>Page link</Typography>
                     </Box>
-                    {/* <TextField
-                    sx={{ mt: 2 }}
-                    id="input-with-icon-textfield"
-                    label="TextField"
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="end">
-                          <img
-                            src={clipboard}
-                            style={{ width: "auto", height: "auto" }}
-                          />
-                        </InputAdornment>
-                      ),
-                    }}
-                    variant="outlined"
-                  /> */}
-
-                    <FormControl
-                      sx={{ m: 0, width: "72ch", mt: 1 }}
-                      variant="outlined"
-                    >
-                      <InputLabel htmlFor="outlined-adornment-password">
-                        Page Link
-                      </InputLabel>
-                      <OutlinedInput
-                        fullWidth
-                        id="outlined-adornment-password"
-                        type={showPassword ? "text" : "link"}
-                        // defaultValue="https://wa.me/919898989898"
-                        // disabled
-                        onChange={(e) => setCopyText(e.target.value)}
-                        endAdornment={
-                          <InputAdornment
-                            position="end"
-                            onClick={handleCopy}
-                            sx={{ cursor: "pointer" }}
-                          >
-                            <ContentCopyIcon
-                              onClick={handleClickShowPassword}
-                              onMouseDown={handleMouseDownPassword}
-                              edge="end"
-                            ></ContentCopyIcon>
-                          </InputAdornment>
-                        }
-                        label="Link"
-                      />
+                    <Box sx={copyTextDes}>
                       <Box
                         sx={{
                           display: "flex",
-                          justifyContent: "center",
-                          mt: 2,
+                          // gap: "80px",
+                          justifyContent: "space-between",
                         }}
                       >
-                        <img
-                          src={location}
-                          style={{ width: "auto", height: "auto" }}
-                        />
+                        <Typography sx={linkText}>
+                          https://wa.me/919898989898
+                        </Typography>
+                        <Box
+                          sx={{
+                            p: 0.5,
+                            cursor: "pointer",
+                            display: "flex",
+                            // justifyContent: "flex-end",
+                          }}
+                          onClick={handleCopy}
+                        >
+                          <ContentCopyIcon
+                            sx={{
+                              fontSize: "20px",
+                              color: "rgba(110, 110, 110, 1)",
+                            }}
+                          />
+                        </Box>
                       </Box>
-                      <Typography sx={address}>
-                        550, Beside Star Bazaar, Satellite, Ahmedabad, Gujarat
-                        380015
-                      </Typography>
-                    </FormControl>
-                  </DialogContent>
-                </Dialog>
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        mt: 2,
+                      }}
+                    >
+                      <img
+                        src={location}
+                        style={{ width: "auto", height: "auto" }}
+                      />
+                    </Box>
+                    <Typography sx={address}>
+                      550, Beside Star Bazaar, Satellite, Ahmedabad, Gujarat
+                      380015
+                    </Typography>
+                  </Box>
+                </Modal>
               </Paper>
             </Box>
           </Grid>
@@ -546,7 +571,13 @@ const contactUs = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 600,
-  fontSize: 19,
+  fontSize: {
+    xl: "1.9rem",
+    lg: "1.9rem",
+    md: "1.9rem",
+    sm: "1.8rem",
+    xs: "1.8rem",
+  },
   textAlign: "center",
   letterSpacing: 0.01,
   color: "#000000",
@@ -556,7 +587,13 @@ const callUs = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
-  fontSize: 15,
+  fontSize: {
+    xl: "1.5rem",
+    lg: "1.5rem",
+    md: "1.5rem",
+    sm: "1.4rem",
+    xs: "1.4rem",
+  },
   textAlign: "center",
   letterSpacing: 0.01,
   color: "#000000",
@@ -566,7 +603,13 @@ const phNo = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
-  fontSize: 15,
+  fontSize: {
+    xl: "1.5rem",
+    lg: "1.5rem",
+    md: "1.5rem",
+    sm: "1.4rem",
+    xs: "1.4rem",
+  },
   textAlign: "center",
   letterSpacing: 0.01,
   color: "#000000",
@@ -577,7 +620,13 @@ const wtspBtn = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
-  fontSize: 15,
+  fontSize: {
+    xl: "1.5rem",
+    lg: "1.5rem",
+    md: "1.5rem",
+    sm: "1.4rem",
+    xs: "1.4rem",
+  },
   textAlign: "center",
   letterSpacing: 0.01,
   p: 1.5,
@@ -597,7 +646,13 @@ const pageLink = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
-  fontSize: 15,
+  fontSize: {
+    xl: "1.5rem",
+    lg: "1.5rem",
+    md: "1.5rem",
+    sm: "1.4rem",
+    xs: "1.4rem",
+  },
   textAlign: "center",
   letterSpacing: 0.01,
   color: "#000000",
@@ -607,9 +662,35 @@ const address = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 300,
-  fontSize: 16,
+  fontSize: {
+    xl: "1.6rem",
+    lg: "1.6rem",
+    md: "1.6rem",
+    sm: "1.5rem",
+    xs: "1.5rem",
+  },
   textAlign: "center",
   color: "#0D0D0D",
   width: "95%",
   mx: "auto",
+};
+
+const copyTextDes = {
+  height: "30%",
+  width: "100%",
+  minHeight: "10px",
+  backgroundColor: "rgba(246, 246, 246, 1)",
+  borderRadius: "8px",
+  mt: 1,
+  p: 1.5,
+};
+
+const linkText = {
+  fontFamily: "Labil Grotesk Trial",
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: 17,
+  textAlign: "center",
+  letterSpacing: 0.01,
+  color: "#898989",
 };
