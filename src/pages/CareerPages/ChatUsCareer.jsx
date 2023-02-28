@@ -62,6 +62,13 @@ export default function ChatUs(props) {
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+
+  async function openEmail(e) {
+    console.log("openEmail");
+    window.location.href =
+      "mailto:user@example.com?subject=Subject&body=message%20goes%20here";
+  }
+
   return (
     <Paper elevation={0}>
       <Grid container>
@@ -411,7 +418,16 @@ export default function ChatUs(props) {
             </Grid>
           ) : null}
         </Grid>
-        <Grid item xl={6} lg={6} md={6} xs={6} sm={6} sx={manageGrid}>
+        <Grid
+          item
+          xl={6}
+          lg={6}
+          md={6}
+          xs={6}
+          sm={6}
+          sx={manageGrid}
+          onClick={openEmail}
+        >
           <Grid item xl={6} lg={6} md={6} xs={6} sm={6}>
             <Box
               sx={{
@@ -422,6 +438,7 @@ export default function ChatUs(props) {
                   sm: "1rem",
                   xs: "1rem",
                 },
+                cursor: "pointer",
               }}
             >
               <img
@@ -535,6 +552,7 @@ const manageGrid = {
     // backgroundImage:
     backgroundImage: "linear-gradient(to top, #EDEDED 0%, #EDEDED 100%);",
   },
+  cursor: "pointer",
 };
 
 const boxText1 = {

@@ -41,6 +41,7 @@ export default function ChatUs(props) {
                   marginBottom: "1.5rem",
                 }}
               />
+
               <Typography
                 sx={{
                   ...boxText,

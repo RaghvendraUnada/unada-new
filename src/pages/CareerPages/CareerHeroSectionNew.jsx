@@ -66,17 +66,18 @@ const CareerHeroSection = () => {
               </h2>
             </div>
           </Stack> */}
-          <Box>
+          <Box sx={{width:"90%",mx:"auto"}}>
             <Stack sx={{ marginTop: {} }}>
               <Typography
-                className="animate-charcter"
+                // className="animate-charcter"
                 sx={{
                   ...textStyle1,
                   background:
-                    "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+                    "black",
                   backgroundSize: " 100%",
                   backgroundRepeat: "repeat",
                   backgroundClip: "text",
+                  
                   textFillColor: "transparent",
                 }}
               >
@@ -345,17 +346,17 @@ const textStyle1 = {
   fontStyle: "normal",
   fontWeight: 500,
   fontSize: {
-    xl: "64px",
-    lg: "64px",
-    md: "50px",
-    sm: "42px",
+    xl: "85px",
+    lg: "85px",
+    md: "65px",
+    sm: "50px",
     xs: "35px",
   },
   lineHeight: {
-    xl: "76px",
-    lg: "76px",
-    md: "58px",
-    sm: "50px",
+    xl: "95px",
+    lg: "95px",
+    md: "65px",
+    sm: "55px",
     xs: "45px",
   },
   letterSpacing: 1,
