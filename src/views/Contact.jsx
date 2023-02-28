@@ -6,6 +6,7 @@ import ChatUs from "../pages/ContactPages/ChatUs";
 import Jobs from "../pages/ContactPages/Jobs";
 import Map from "../pages/ContactPages/Map";
 import { motion } from "framer-motion";
+import ContactUsSection from "../pages/ContactPages/ContactUsSection";
 const Contact = () => {
   return (
     <>
@@ -35,7 +36,8 @@ const Contact = () => {
           }}
         >
           <ContactHeroSection />
-          <ChatUs showArrow={true} />
+          <ContactUsSection />
+          {/* <ChatUs showArrow={true} /> */}
           <Jobs />
           <Map />
         </Stack>

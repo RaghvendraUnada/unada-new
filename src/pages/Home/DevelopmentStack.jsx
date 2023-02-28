@@ -1042,7 +1042,8 @@ const paperTextStyle1 = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 400,
-  fontSize: "12.0396",
+  // fontSize: "12.0396",
+  fontSize: "1.4rem",
   lineHeight: "17px",
   color: "#010101",
   width: {
@@ -1053,4 +1054,5 @@ const paperTextStyle1 = {
     xs: "60%",
   },
   marginTop: "2rem",
+  // background: "red",
 };

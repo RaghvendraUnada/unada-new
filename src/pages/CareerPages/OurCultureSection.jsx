@@ -33,7 +33,8 @@ const OurCultureSection = () => {
       <Box>
         <Typography sx={headtext}>Our Culture</Typography>
         {/* <AnimatedGradientText>#ReshapeTheFuture</AnimatedGradientText> */}
-        <img src={reshapeTitle} alt="reshape" className="center-block" draggable="false" />
+        {/* <img src={reshapeTitle} alt="reshape" className="center-block" draggable="false" /> */}
+        <Typography sx={maintext}>#ReshapeTheFuture</Typography>
         {/* <Typography
           className="bg-gradient-text"
           sx={{
