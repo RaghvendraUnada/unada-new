@@ -93,7 +93,28 @@ const OurTeam = () => {
               maxHeight: "100%",
             }}
           >
-            <img src={teamTitle} alt="team" width="60%" draggable="false" />
+            {/* <img src={teamTitle} alt="team" width="60%" draggable="false" /> */}
+            <Box
+              sx={{
+                width: "90%",
+                height: "auto",
+                mx: "auto",
+                maxWidth: "400px",
+                maxHeight: "400px",
+                textAlign: {
+                  xl: "initial",
+                  lg: "initial",
+                  md: "initial",
+                  sm: "center",
+                  xs: "center",
+                },
+              }}
+            >
+              <Typography sx={TextStyle}>The people who push the</Typography>
+              <Typography sx={coloredText}>
+                boundaries of technology and make it happen.
+              </Typography>{" "}
+            </Box>
           </Grid>
           <Grid item xl={8} lg={8} md={7} sm={12} xs={12}>
             <Paper
