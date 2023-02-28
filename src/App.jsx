@@ -421,12 +421,24 @@ function App() {
           sx={{
             width: "40px",
             cursor: "pointer",
+            background: "white",
+            borderRadius: "20px",
+            height: "40px",
+            border: "none",
           }}
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <FaArrowAltCircleUp size={"100%"} />
+          <FaArrowAltCircleUp
+            fill="black"
+            size={"107%"}
+            height={"40px"}
+            style={{
+              marginTop: "-1px",
+              marginLeft: "-1.5px",
+            }}
+          />
         </Box>
       </motion.div>
     </Paper>
