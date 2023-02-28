@@ -33,11 +33,12 @@ const HeroIntro = () => {
         }}
       >
         <Typography sx={TextStyle}>
-          We build and use <br/>
+          We build and use <br />
           <span style={{ color: "#70ADFF" }}>
             technologies to disrupt industries
           </span>
-         &nbsp;and drive progress. Our mission is  <br/>to reshape the future.
+          &nbsp;and drive progress. Our mission is <br />
+          to reshape the future.
         </Typography>
       </Box>
     </Paper>

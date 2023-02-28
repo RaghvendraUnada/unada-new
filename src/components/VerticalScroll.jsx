@@ -120,7 +120,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 marginTop: "0.5rem",
               }}
             >
-              <Button sx={ButtonStyle1} onClick={handleClickOpen}>
+              <Button sx={ButtonStyle1}>
                 Apply
                 <span
                   style={{

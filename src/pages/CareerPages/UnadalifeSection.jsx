@@ -67,5 +67,10 @@ const text = {
 
   fontWeight: 600,
   textAlign: "center",
-  color: "#171717",
+  // color: "#171717",
+  background: "linear-gradient(182.5deg, #000000 2.09%, #272727 118.99%)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+  textFillColor: "transparent",
 };

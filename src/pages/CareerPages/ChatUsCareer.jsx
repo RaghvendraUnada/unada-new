@@ -67,6 +67,7 @@ export default function ChatUs(props) {
     setOpen(!open);
   };
   const handleClose = () => {
+    console.log("close");
     setOpen(false);
   };
   const [showPassword, setShowPassword] = React.useState(false);
