@@ -60,53 +60,25 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     handleFileChange(event);
   };
 
-  const StyledTextField = styled(TextField)({
-    "& label": {
-      color: "white",
-      fontWeight: 700,
-    },
-    "&:hover label": {
-      color: "white",
-      fontWeight: 700,
-    },
-    "& label.Mui-focused": {
-      color: "white",
-    },
-    "& .MuiInput-underline:after": {
-      borderBottomColor: "white",
-    },
-    "& .MuiInput": {
-      color: "white",
-    },
-    "& .MuiInput-underline:before": {
-      borderBottomColor: "white",
-    },
-    "& .MuiInputBase-root": {
-      color: "white",
-    },
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "white",
-        borderBottomColor: "white",
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "white",
-        borderBottomColor: "white",
-      },
-    },
-  });
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
   const [experience, setExperience] = useState();
   const [skill, setSkill] = useState();
-  const [link, setLink] = useState();
-  // const [city,setCity] = useState()
+  const [linkedin, setLinkedin] = useState();
   // const [state,setState] = useState()
 
   const apply = async () => {
+    console.log(firstName, lastName, email, experience, skill, linkedin);
     return await axios
-      .post("")
+      .post("user_data/apply", {
+        UserFirstName: firstName,
+        UserLastName: lastName,
+        UserEmail: email,
+        UserExperience: experience,
+        UserSkills: skill,
+        UserLinkedInUrl: linkedin,
+      })
       .then((res) => {
         console.log(res);
       })
@@ -315,26 +287,31 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   gap: 3,
                 }}
               >
-                <StyledTextField
-                  id="standard-textarea"
+                <input
+                  // id="standard-textarea"
                   label="First name"
                   placeholder="First name"
                   variant="standard"
                   multiline
-                  sx={{
+                  style={{
                     width: "40%",
                     color: "white",
                   }}
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
-                <StyledTextField
+                <input
                   id="standard-textarea"
                   label="Last name"
                   placeholder="Last name"
                   variant="standard"
                   multiline
-                  sx={{
+                  style={{
                     width: "40%",
+                    color: "white",
                   }}
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                 />
               </Box>
               <Typography sx={labeltext}>Email:</Typography>
@@ -345,15 +322,18 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   alignItems: "center",
                 }}
               >
-                <StyledTextField
+                <input
                   id="standard-textarea"
                   label="Email"
                   placeholder="Enter your email"
                   variant="standard"
                   multiline
-                  sx={{
+                  style={{
                     width: "84%",
+                    color: "white",
                   }}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </Box>
               <Typography sx={labeltext}>Experience:</Typography>
@@ -374,6 +354,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         border: "black",
                       },
                     }}
+                    value={experience}
+                    onChange={(e) => setExperience(e.target.value)}
                   >
                     <MenuItem value="">
                       <em>None</em>
@@ -393,7 +375,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   ml: "6rem",
                 }}
               >
-                <StyledTextField
+                <input
                   id="standard-textarea"
                   label="Skills"
                   placeholder="Skills"
@@ -402,6 +384,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   sx={{
                     width: "40%",
                   }}
+                  value={skill}
+                  onChange={(e) => setSkill(e.target.value)}
                 />
               </Box>
             </Grid>
@@ -435,7 +419,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     alignItems: "center",
                   }}
                 >
-                  <StyledTextField
+                  <input
                     id="standard-textarea"
                     label="Linked in url"
                     placeholder="Paste URL here"
@@ -446,6 +430,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       borderColor: "white",
                       color: "white",
                     }}
+                    value={linkedin}
+                    onChange={(e) => setLinkedin(e.target.value)}
                   />
                 </Box>
                 <Typography sx={labeltext}>Upload your resume:</Typography>
@@ -578,7 +564,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
               },
             }}
           >
-            <Button sx={ButtonStyle1}>Submit</Button>
+            <Button sx={ButtonStyle1} onClick={apply}>
+              Submit
+            </Button>
           </Box>
         </Box>
       </Dialog>
