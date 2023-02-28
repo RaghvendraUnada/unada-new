@@ -14,6 +14,8 @@ import {
   DialogContent,
   DialogActions,
   Modal,
+  Tooltip,
+  tooltipClasses,
 } from "@mui/material";
 
 import React, { useState } from "react";
@@ -36,21 +38,6 @@ import whatsappiucon from "../../assets/Images/Career/whatsappiucon.svg";
 import cross from "../../assets/Images/Career/cross.svg";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
-
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: { xl: 400, lg: 400, md: 400, sm: 400, xs: 300 },
-  // height: { sm: 400, xs: 300 },
-  // height: 300,
-  bgcolor: "background.paper",
-  border: "2px solid #fff",
-  boxShadow: 24,
-  borderRadius: "20px",
-  p: { xl: 3, lg: 3, md: 3, sm: 3, xs: 1.5 },
-};
 
 export default function ChatUs(props) {
   const [open, setOpen] = React.useState(false);
@@ -298,12 +285,14 @@ export default function ChatUs(props) {
                           }}
                           onClick={handleCopy}
                         >
-                          <ContentCopyIcon
-                            sx={{
-                              fontSize: "20px",
-                              color: "rgba(110, 110, 110, 1)",
-                            }}
-                          />
+                          <LightTooltip title="Copy" placement="top">
+                            <ContentCopyIcon
+                              sx={{
+                                fontSize: "20px",
+                                color: "rgba(110, 110, 110, 1)",
+                              }}
+                            />
+                          </LightTooltip>
                         </Box>
                       </Box>
                     </Box>
@@ -672,7 +661,7 @@ const address = {
   },
   textAlign: "center",
   color: "#0D0D0D",
-  width: "95%",
+  width: "100%",
   mx: "auto",
 };
 
@@ -695,3 +684,28 @@ const linkText = {
   letterSpacing: 0.01,
   color: "#898989",
 };
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: { xl: 400, lg: 400, md: 400, sm: 400, xs: 300 },
+  // height: { sm: 400, xs: 300 },
+  // height: 300,
+  bgcolor: "background.paper",
+  border: "2px solid #fff",
+  boxShadow: 24,
+  borderRadius: "20px",
+  p: { xl: 3, lg: 3, md: 3, sm: 3, xs: 1.5 },
+};
+const LightTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.arrow}`]: {
+    color: theme.palette.common.black,
+  },
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.common.black,
+  },
+}));
