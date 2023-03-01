@@ -58,7 +58,7 @@ function CareerIntroSection() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: <SamplePrevArrow />,
     nextArrow: <SampleNextArrow />,
@@ -174,6 +174,7 @@ function CareerIntroSection() {
                   sx={{
                     backgroundSize: "cover",
                     width: "100%",
+                    maxHeight: "400px",
                     mx: "auto",
                     height: "auto",
                   }}

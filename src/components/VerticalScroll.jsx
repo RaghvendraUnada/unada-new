@@ -30,8 +30,10 @@ import { json } from "react-router-dom";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
+
 const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [open, setOpen] = useState(false);
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -127,7 +129,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       redirect: "follow",
     };
 
-    fetch("http://192.168.29.5:8000/user_data/apply", requestOptions)
+    fetch("https://unada-backend.unada.in/user_data/apply", requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
@@ -237,6 +239,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     justifyContent: "center",
                     alignItems: "center",
                     marginLeft: "18px",
+                  }}
+                  onClick={() => {
+                    setOpen(true);
                   }}
                 >
                   <img

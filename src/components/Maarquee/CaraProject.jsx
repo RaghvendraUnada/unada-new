@@ -40,7 +40,25 @@ const RandomThirdList = [...clients].sort(() => Math.random() - 0.6);
 
 const CaraProject = (props) => {
   return (
-    <Box sx={{ width: "100%", mx: "auto", background: "#000" }}>
+    <Box
+      sx={{
+        width: "100%",
+        mx: "auto",
+        background: "#000",
+        display: "flex",
+        placeContent: "center",
+        placeItems: "center",
+        flexDirection: "column",
+        pt: {
+          xl: 4,
+          lg: 4,
+          md: 2,
+          sm: 2,
+          xs: 2,
+        },
+        pb: 4,
+      }}
+    >
       <HorizontalScrollingListBox>
         {clients.map((client, idx) => {
           return (

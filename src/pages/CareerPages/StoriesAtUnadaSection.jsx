@@ -46,7 +46,7 @@ const StoriesAtUnadaSection = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: <SamplePrevArrow />,
     nextArrow: <SampleNextArrow />,
@@ -149,7 +149,7 @@ const StoriesAtUnadaSection = () => {
           }}
         >
           <Slider {...settings}>
-            {ImgArr.map((slide, sid) => (
+            {ImgArr?.map((slide, sid) => (
               <Box
                 key={`slide-${sid}`}
                 sx={{
@@ -160,7 +160,6 @@ const StoriesAtUnadaSection = () => {
                   gap: "1rem",
                   width: "33%",
                   height: "auto",
-                  // background: "red",
                 }}
               >
                 <Box
@@ -169,7 +168,7 @@ const StoriesAtUnadaSection = () => {
                     width: "100%",
                     mx: "auto",
                     height: "auto",
-                    maxHeight: "570px",
+                    maxHeight: "400px",
                   }}
                   component="img"
                   alt="hello"
@@ -299,11 +298,6 @@ const SwiperText = {
   },
   lineHeight: " 11px",
   color: "#FAFAFA",
-  marginLeft: {
-    sm: "0",
-    md: "20rem",
-  },
-  marginRight: "auto",
   marginTop: "2rem",
   marginBottom: "4rem",
 };

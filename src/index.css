@@ -1,15 +1,4 @@
-* {
-  /* margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  transition: all 0.2s linear; */
-  /* text-transform: capitalize; */
-  /* cursor: none;*/
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @font-face {
   font-family: "MBFCanno";
   src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
@@ -19,6 +8,8 @@
   font-family: "MBFCanno";
   src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
 }
+
+
 
 body {
   background: #000;
