@@ -60,9 +60,7 @@ const MainHeroPage = () => {
       setColorState(false);
     }
   }, [location]);
-  // useEffect(() => {
-  //   console.log(CurrentLocation.pathname);
-  // });
+
   return (
     <Paper
       elevation={0}
@@ -233,15 +231,6 @@ const MainHeroPage = () => {
 
                         background: "#4E4E4E",
                         backgroundClip: "text",
-                        // "&:hover": {
-                        //   background:
-                        //     "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
-                        //   textTransform: "none",
-                        //   backgroundSize: " 100%",
-                        //   backgroundRepeat: "repeat",
-                        //   backgroundClip: "text",
-                        //   textFillColor: "transparent",
-                        // },
                       }}
                     >
                       Get in touch
@@ -270,6 +259,7 @@ const MainHeroPage = () => {
               transition: "all 1s ",
               borderRadius: "0px",
               bgcolor: open ? "#fff" : "transparent",
+              position: open ? "fixed" : "initial",
             }}
             elevation={0}
           >
@@ -287,10 +277,6 @@ const MainHeroPage = () => {
                 to={"/"}
                 style={{
                   textDecoration: "none",
-                  // margin: "auto",
-                  // marginLeft: "auto",
-                  // paddingLeft: "74px",
-                  // marginTop: "5px",
                 }}
               >
                 <img

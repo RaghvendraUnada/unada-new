@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @font-face {
   font-family: "MBFCanno";
   src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
@@ -8,8 +8,6 @@
   font-family: "MBFCanno";
   src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
 }
-
-
 
 body {
   background: #000;
@@ -84,9 +82,7 @@ ul .indicators {
   font-family: "Jeko Bold";
   src: url("../src/assets/Fonts/FontsFree-Net-Jeko-Bold.ttf");
 }
-body {
-  /* cursor: none; */
-}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -229,6 +225,35 @@ body {
   }
 } */
 /* TEXT ANIMAITON END */
+
+/*  input type text css */
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+input[type="text"] {
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 @keyframes animate {
   0%,
   100% {

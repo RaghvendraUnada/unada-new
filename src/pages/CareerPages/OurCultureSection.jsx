@@ -118,7 +118,7 @@ const para = {
     sm: "1.4rem",
     xs: "1.4rem",
   },
-  fontFamily: "LGLight",
+  fontFamily: "LGTrial",
   color: "#484848",
   textAlign: "center",
   padding: "2rem 5rem 0rem 5rem",

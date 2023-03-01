@@ -14,7 +14,18 @@ function UnadalifeSection() {
       }}
     >
       <Grid item sx={{ width: "inherit" }}>
-        <Box sx={{ position: "relative" }}>
+        <Box
+          sx={{
+            position: "relative",
+            minHeight: {
+              xl: "750px",
+              lg: "700px",
+              md: "50vh",
+              sm: "auto",
+              xs: "auto",
+            },
+          }}
+        >
           <img
             alt="Unada Life"
             src={UnadaSLife3}
@@ -24,14 +35,7 @@ function UnadalifeSection() {
               objectFit: "contain",
             }}
           />
-          <Typography
-            sx={text}
-            // style={{
-            //   color: "#171717",
-            // }}
-          >
-            Unada’s life
-          </Typography>
+          <Typography sx={text}>Unada’s life</Typography>
         </Box>
       </Grid>
     </Grid>
@@ -51,7 +55,7 @@ const text = {
   position: "absolute",
   fontFamily: "LGTrial",
   top: {
-    xl: "76.5%",
+    xl: "75%",
     lg: "73.5%",
     md: "85%",
     sm: "82.5%",

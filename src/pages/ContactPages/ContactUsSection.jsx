@@ -82,7 +82,7 @@ const ContactUsSection = () => {
             <input
               id="standard-textarea"
               label="Last name"
-              placeholder="Last name"
+              placeholder="Last Name"
               variant="standard"
               multiline
               style={{
@@ -167,7 +167,7 @@ const contacttext = {
 };
 
 const infotext = {
-  fontFamily: "LGTrial",
+  fontFamily: "LGLight",
   fontStyle: "normal",
   fontWeight: 100,
   fontSize: {

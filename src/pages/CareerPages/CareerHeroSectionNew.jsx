@@ -66,18 +66,17 @@ const CareerHeroSection = () => {
               </h2>
             </div>
           </Stack> */}
-          <Box sx={{width:"90%",mx:"auto"}}>
+          <Box sx={{ width: "90%", mx: "auto" }}>
             <Stack sx={{ marginTop: {} }}>
               <Typography
                 // className="animate-charcter"
                 sx={{
                   ...textStyle1,
-                  background:
-                    "black",
+                  background: "black",
                   backgroundSize: " 100%",
                   backgroundRepeat: "repeat",
                   backgroundClip: "text",
-                  
+
                   textFillColor: "transparent",
                 }}
               >
@@ -100,152 +99,8 @@ const CareerHeroSection = () => {
               {/* <img src={careerTitle} alt="title" width="80%" className="center-block" draggable="false" /> */}
             </Stack>
           </Box>
-
-          {/* <Box>
-            <Stack> */}
-          {/* <Typography className="textAnimWrapper" sx={touch}>
-                Be part of a team who makes an impact.
-              </Typography> */}
-          {/* 
-              <Box
-                className="bg-gradient-text"
-                sx={{
-                  fontSize: {
-                    xl: "9rem",
-                    lg: "9rem",
-                    md: "4rem",
-                    sm: "4rem",
-                    xs: "4rem",
-                  },
-                  width: "80%",
-                  textAlign: "center",
-                  margin: "2rem auto",
-                }}
-              >
-                Be part of a team who makes an impact.
-              </Box> */}
-          {/* <AnimatedGradientText>
-                Be part of a team who makes an impact.
-              </AnimatedGradientText>
-            </Stack>
-          </Box> */}
-
-          {/* <Box
-            className="content"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            sx={{
-              padding: {
-                xl: "2rem",
-                lg: "2rem",
-                md: "2rem",
-                sm: "2rem",
-                xs: "2rem",
-              },
-              width: "95%",
-              marginLeft: "auto",
-              marginRight: "auto",
-              marginY: "5rem",
-            }}
-          >
-            <h2>Be part of a team</h2>
-            <h2>Be part of a team</h2>
-          </Box>
-          <Box
-            className="content"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            sx={{
-              padding: {
-                xl: "2rem",
-                lg: "2rem",
-                md: "2rem",
-                sm: "2rem",
-                xs: "2rem",
-              },
-              width: "95%",
-              marginLeft: "auto",
-              marginRight: "auto",
-              marginY: "5rem",
-            }}
-          >
-            <h2>who makes an</h2>
-            <h2>who makes an</h2>
-          </Box>
-          <Box
-            className="content"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            sx={{
-              padding: {
-                xl: "2rem",
-                lg: "2rem",
-                md: "2rem",
-                sm: "2rem",
-                xs: "2rem",
-              },
-              width: "95%",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          >
-            <h2 style={{ textAlign: "center" }}> impact.</h2>
-            <h2 style={{ textAlign: "center" }}> impact.</h2>
-          </Box> */}
         </Box>
       </Grid>
-      {/* <Grid
-        item
-        xl={6}
-        lg={6}
-        md={6}
-        xs={12}
-        sm={12}
-        sx={{
-          height: { lg: "100vh", md: "100vh", sm: "40vh", xs: "40vh" },
-          paddingLeft: {
-            xl: "10em",
-            lg: "10rem",
-            md: "10rem",
-            sm: "4rem",
-            xs: "4rem",
-          },
-          backgroundColor: "black",
-          color: "white",
-          display: "flex",
-          flexDirection: "column",
-          gap: "80px",
-          overflowY: "scroll",
-          paddingTop: {
-            xl: "10em",
-            lg: "10rem",
-            md: "10rem",
-            sm: "4rem",
-            xs: "4rem",
-          },
-        }}
-      >
-        <Typography sx={scrolltext}>Oho Gujarati</Typography>
-        <Typography sx={scrolltext}>Cineman Productions</Typography>
-        <Typography sx={scrolltext}>Barter Exchange of India</Typography>
-        <Typography sx={scrolltext}>Medibank</Typography>
-        <Typography sx={scrolltext}>Unispace</Typography>
-        <Typography sx={scrolltext}>Ganesh Housing</Typography>
-        <Typography sx={scrolltext}>Khushi Advertising</Typography>
-        <Typography sx={scrolltext}>POTS</Typography>
-        <Typography sx={scrolltext}>White Valley Advisor</Typography>
-        <Typography sx={scrolltext}>Indo Colchem Ltd</Typography>
-        <Typography sx={scrolltext}>JITO Ahmedabad</Typography>
-        <Typography sx={scrolltext}>Mirash Industries</Typography>
-        <Typography sx={scrolltext}>Strategic Investors LLP</Typography>
-        <Typography sx={scrolltext}>Clear Water</Typography>
-        <Typography sx={scrolltext}>May Sixty</Typography>
-        <Typography sx={scrolltext}>Tulsi Dyechem</Typography>
-        <Typography sx={scrolltext}>Ashwika Warehousing</Typography>
-      </Grid> */}
     </Grid>
   );
 };

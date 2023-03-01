@@ -7,7 +7,6 @@ import ETH from "../assets/ETH.png";
 import Etherium from "../assets/Ethereum-icon-purple.png";
 import layers from "../assets/layers-1320568243494671052.png";
 import styles from "./Video.module.css";
-import ReactCurvedText from "react-curved-text";
 
 const VideoBox = () => {
   return (
@@ -19,7 +18,7 @@ const VideoBox = () => {
           xs: "-135px",
           md: "-100px",
           lg: "-100px",
-          xl: "-60px",
+          xl: "-100px",
         },
         left: {
           sm: "-120px",
@@ -31,7 +30,6 @@ const VideoBox = () => {
         zIndex: "20",
         bgcolor: "transparent",
         position: "absolute",
-        transform: "rotate(-60deg)",
       }}
     >
       {/* <video
@@ -46,8 +44,8 @@ const VideoBox = () => {
             maxHeight: "100%",
             width: "auto",
           }}
-        > */}
-      {/* <span className={`${styles["circle-img"]} ${styles["circle-icon-1"]}`}>
+> */}
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-1"]}`}>
         U
       </span>
       <span className={`${styles["circle-img"]} ${styles["circle-icon-2"]}`}>
@@ -70,32 +68,9 @@ const VideoBox = () => {
       </span>
       <span className={`${styles["circle-img"]} ${styles["circle-icon-8"]}`}>
         B
-      </span> */}
-      <ReactCurvedText
-        width={370}
-        height={300}
-        cx={190}
-        cy={120}
-        rx={100}
-        ry={100}
-        startOffset={60}
-        reversed={false}
-        text="U n a d a L a b"
-        textProps={{
-          style: {
-            fontFamily: "MBFCanno",
-            fontStyle: "normal",
-            fontWeight: 400,
-            fontSize: "2rem",
-          },
-        }}
-        textPathProps={null}
-        tspanProps={null}
-        ellipseProps={null}
-        svgProps={null}
-      />
+      </span>
 
-      {/* <Box className={`${styles["circle-center"]}`}></Box> */}
+      <Box className={`${styles["circle-center"]}`}></Box>
       {/* <img
         src={LogoVideo}
         // sx={{ filter: "invert" }}
