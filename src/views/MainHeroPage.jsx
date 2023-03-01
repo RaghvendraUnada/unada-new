@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
 
 const VideoBox = React.lazy(() => import("./VideoBox"));
 
@@ -37,6 +38,7 @@ const MainHeroPage = () => {
     x: 0,
     y: 0,
   });
+  const CurrentLocation = useLocation();
   const [cursorVariant, setCursorVariant] = useState("default");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
@@ -58,6 +60,9 @@ const MainHeroPage = () => {
       setColorState(false);
     }
   }, [location]);
+  // useEffect(() => {
+  //   console.log(CurrentLocation.pathname);
+  // });
   return (
     <Paper
       elevation={0}
@@ -463,7 +468,7 @@ const MainHeroPage = () => {
                   className="textMainClass"
                   style={{
                     fontFamily: "MBFCanno",
-                    lineHeight:"70px"
+                    lineHeight: "70px",
                   }}
                 >
                   REDEFINING TECHNOLOGIES

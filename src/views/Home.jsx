@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid, Paper } from "@mui/material";
 import HomeHerosection from "../pages/Home/HomeHerosection";
 import HomeIntro from "../pages/Home/HeroIntro";
@@ -13,7 +13,12 @@ import MainHeroPage from "./MainHeroPage";
 import OpenButtonWhite from "../assets/Images/Header/MenuIconWhite.svg";
 import LazyLoad from "react-lazy-load";
 import VideoBox from "./VideoBox";
+import { useLocation } from "react-router-dom";
 const Home = () => {
+  const currentLocation = useLocation();
+  // useEffect(() => {
+  //   console.log(currentLocation);
+  // });
   return (
     <div style={{ background: "white" }}>
       <motion.div
@@ -34,7 +39,6 @@ const Home = () => {
         }}
       ></motion.div>
 
-     
       <Paper elevation={0} sx={{ bgcolor: "transparent" }}>
         <Grid container>
           <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
