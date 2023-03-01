@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Grid, Paper } from "@mui/material";
 import HomeHerosection from "../pages/Home/HomeHerosection";
 import HomeIntro from "../pages/Home/HeroIntro";
@@ -16,9 +16,11 @@ import VideoBox from "./VideoBox";
 import { useLocation } from "react-router-dom";
 const Home = () => {
   const currentLocation = useLocation();
-  // useEffect(() => {
-  //   console.log(currentLocation);
-  // });
+  const [location, setLocation] = useState();
+  useEffect(() => {
+    console.log(currentLocation);
+    setLocation(currentLocation);
+  }, [currentLocation]);
   return (
     <div style={{ background: "white" }}>
       <motion.div
