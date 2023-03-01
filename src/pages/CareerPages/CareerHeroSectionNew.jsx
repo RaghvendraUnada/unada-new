@@ -66,18 +66,17 @@ const CareerHeroSection = () => {
               </h2>
             </div>
           </Stack> */}
-          <Box sx={{width:"90%",mx:"auto"}}>
+          <Box sx={{ width: "90%", mx: "auto" }}>
             <Stack sx={{ marginTop: {} }}>
               <Typography
                 // className="animate-charcter"
                 sx={{
                   ...textStyle1,
-                  background:
-                    "black",
+                  background: "black",
                   backgroundSize: " 100%",
                   backgroundRepeat: "repeat",
                   backgroundClip: "text",
-                  
+
                   textFillColor: "transparent",
                 }}
               >
@@ -95,7 +94,7 @@ const CareerHeroSection = () => {
                   textFillColor: "transparent",
                 }}
               >
-                Be a part of team who makes an impact
+                Be a part of team who makes an impact.
               </Typography>
               {/* <img src={careerTitle} alt="title" width="80%" className="center-block" draggable="false" /> */}
             </Stack>

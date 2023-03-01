@@ -66,7 +66,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
   const [experience, setExperience] = useState();
-  const [skill, setSkill] = useState();
+  const [skill, setSkill] = useState("");
   const [linkedin, setLinkedin] = useState();
   const [file, setFile] = useState();
   const [coverLetter, setCoverLetter] = useState();
@@ -135,6 +135,36 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       .catch((error) => console.log("error", error));
   };
 
+  const listOfSkill = [
+    {
+      id: 1,
+      skillName: "Html",
+    },
+    {
+      id1: 2,
+      skillName: "Css",
+    },
+    {
+      id: 3,
+      skillName: "Js",
+    },
+    {
+      id: 4,
+      skillName: "MongoDb",
+    },
+    {
+      id: 5,
+      skillName: "Node.js",
+    },
+  ];
+  // const selectedSkill = [];
+  const [selectedSkill, SetSelectedSkill] = useState([]);
+
+  // const [show, setShow] = useState(listOfSkill);
+  const removeElement = (index) => {
+    const newSelectedSkill = selectedSkill.filter((_, i) => i !== index);
+    SetSelectedSkill(newSelectedSkill);
+  };
   return (
     <>
       <Box sx={scrolltext}>
@@ -333,6 +363,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 </Typography>
               </Box>
             </Box>
+
             <Grid
               container
               sx={{
@@ -434,18 +465,11 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     display: "flex",
                     justifyContent: "left",
                     alignItems: "center",
-                    ml: {
-                      xl: "6rem",
-                      lg: "6rem",
-                      md: "6rem",
-                      sm: "2rem",
-                      xs: "2rem",
-                    },
+                    ml: "6rem",
                   }}
                 >
                   <FormControl sx={{ width: "40%" }}>
                     <Select
-                      placeholder="select"
                       sx={{
                         color: "white",
                         borderBottom: "1px solid white",
@@ -459,9 +483,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       <MenuItem value="">
                         <em>None</em>
                       </MenuItem>
-                      <MenuItem value={"1 Year"}>1 Year</MenuItem>
-                      <MenuItem value={"2 Year"}>2 Year</MenuItem>
-                      <MenuItem value={"3 Year"}>3 Year</MenuItem>
+                      <MenuItem value={10}>1 Year</MenuItem>
+                      <MenuItem value={20}>2 Year</MenuItem>
+                      <MenuItem value={30}>3 Year</MenuItem>
                     </Select>
                   </FormControl>
                 </Box>
@@ -471,29 +495,99 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     display: "flex",
                     justifyContent: "left",
                     alignItems: "center",
-                    ml: {
-                      xl: "6rem",
-                      lg: "6rem",
-                      md: "6rem",
-                      sm: "2rem",
-                      xs: "2rem",
-                    },
+                    ml: "6rem",
+                    borderBottom: "2px solid #fff",
+                    width: "40%",
                   }}
                 >
-                  <input
-                    id="standard-textarea"
-                    label="Skills"
-                    placeholder="Skills"
-                    variant="standard"
-                    multiline
-                    style={{
-                      width: "40%",
-                      color: "white",
-                    }}
-                    value={skill}
-                    onChange={(e) => setSkill(e.target.value)}
-                    required
-                  />
+                  {selectedSkill.map((el, idx) => {
+                    return (
+                      <>
+                        <Box
+                          sx={{
+                            border: "2px solid grey",
+                            borderRadius: "30px",
+                            width: "auto",
+                            minWidth: "15%",
+                            height: "auto",
+                            color: "#fff",
+                            textAlign: "center",
+                            p: 1,
+                            mb: 2,
+                            display: "flex",
+                            justifyContent: "center",
+                            gap: "20px",
+                            // position: "relative",
+                            ml: 1,
+                          }}
+                        >
+                          <Typography
+                            sx={{
+                              ...skillText,
+                              color: "#fff",
+                              fontSize: "1.2rem",
+                            }}
+                          >
+                            {el.skillName}
+                          </Typography>
+
+                          <CloseIcon
+                            onClick={() => removeElement(idx)}
+                            sx={{
+                              color: "white",
+                              mt: 0.3,
+                              fontSize: "15px",
+                              textAlign: "left",
+                              cursor: "pointer",
+                            }}
+                          />
+                        </Box>
+                      </>
+                    );
+                  })}
+                </Box>
+                <Box
+                  sx={{
+                    width: "85%",
+                    mx: "auto",
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    gap: "20px",
+                    cursor: "pointer",
+                  }}
+                  // onClick={listOfSkill}
+                >
+                  {listOfSkill.map((el, idx) => {
+                    return (
+                      <>
+                        <Box
+                          sx={{
+                            border: "2px solid grey",
+                            borderRadius: "20px",
+                            width: "auto",
+                            minWidth: "15%",
+                            height: "auto",
+                            color: "#fff",
+                            textAlign: "center",
+                            p: 0.5,
+                          }}
+                          onClick={() => {
+                            const skillData = selectedSkill.find(
+                              (item) => item.id === el.id
+                            );
+                            if (skillData) {
+                              ("alredy exists");
+                            } else {
+                              SetSelectedSkill([...selectedSkill, el]);
+                            }
+                            console.log(selectedSkill);
+                          }}
+                        >
+                          <Typography sx={skillText}>{el.skillName}</Typography>
+                        </Box>
+                      </>
+                    );
+                  })}
                 </Box>
               </Grid>
               <Grid
@@ -829,4 +923,12 @@ const labeltext = {
     sm: "2rem",
     xs: "2rem",
   },
+};
+
+const skillText = {
+  fontFamily: "LGLight",
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: 12,
+  color: "rgba(162, 162, 162, 0.5)",
 };
