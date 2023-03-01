@@ -20,9 +20,9 @@ const AnimatedRoutes = ({ setColorState }) => {
   useEffect(() => {
     setTimeout(() => {
       if (
-        Location.pathname === "/metaVerse" || 
+        Location.pathname === "/metaVerse" ||
         Location.pathname === "/home" ||
-        Location.pathname === "/ArVr" || 
+        Location.pathname === "/ArVr" ||
         Location.pathname === "/blockchain" ||
         Location.pathname === "/contact"
       ) {
