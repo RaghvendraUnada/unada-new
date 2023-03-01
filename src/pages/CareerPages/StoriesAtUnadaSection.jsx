@@ -100,19 +100,25 @@ const StoriesAtUnadaSection = () => {
             mx: "auto",
           }}
         >
-          <Typography
-            sx={{
-              ...textStyle1,
-              background:
-                "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
-              backgroundSize: " 100%",
-              backgroundRepeat: "repeat",
-              backgroundClip: "text",
-              textFillColor: "transparent",
-            }}
-          >
-            Stories at Unada
-          </Typography>
+          <Box sx={{ display: "flex", gap: "5px" }}>
+            <Typography sx={{ ...textStyle1, color: "#fff" }}>
+              {" "}
+              Stories at
+            </Typography>
+            <Typography
+              sx={{
+                ...textStyle1,
+                background:
+                  "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+                backgroundSize: " 100%",
+                backgroundRepeat: "repeat",
+                backgroundClip: "text",
+                textFillColor: "transparent",
+              }}
+            >
+              Unada
+            </Typography>
+          </Box>
           <Typography sx={{ ...MetaText, mt: 2 }}>
             Stories at Unada provide an authentic, unfiltered glimpse into our
             workplace where memories are made, innovations are fostered and

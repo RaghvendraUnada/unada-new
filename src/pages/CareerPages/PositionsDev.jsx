@@ -53,6 +53,7 @@ const PositionsDev = () => {
             },
           }}
         >
+          <Typography sx={{ ...textStyle1, color: "#fff" }}>Open</Typography>
           <Typography
             sx={{
               ...textStyle1,
@@ -65,7 +66,7 @@ const PositionsDev = () => {
               // textAlign: "center",
             }}
           >
-            Open Positions
+            Positions
           </Typography>
           {/* <AnimatedGradientText> Positions</AnimatedGradientText> */}
           {/* <img

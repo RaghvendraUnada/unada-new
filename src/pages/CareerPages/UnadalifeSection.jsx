@@ -1,9 +1,10 @@
 import React from "react";
-import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
+import { Typography, Box, Paper, Grid, Stack, Skeleton } from "@mui/material";
 // import UnadaLife from "../../assets/Images/Career/unadalife.svg";
 // import UnadaSLife1 from "../../assets/Images/Career/unadaslife1.svg";
 // import UnadaSLife2 from "../../assets/Images/Career/unadaslife2.svg";
 import UnadaSLife3 from "../../assets/Images/Career/unadalife3.svg";
+// import Skeleton from '@mui/material/Skeleton'
 
 function UnadalifeSection() {
   return (
@@ -15,7 +16,22 @@ function UnadalifeSection() {
     >
       <Grid item sx={{ width: "inherit" }}>
         <Box sx={{ position: "relative" }}>
-          <img
+          {1 ? (
+            <img
+              style={{
+                // width: 210,
+                // height: 118,
+                width: "100%",
+                height: "auto",
+                objectFit: "contain",
+              }}
+              alt="unadaslife"
+              src={UnadaSLife3}
+            />
+          ) : (
+            <Skeleton variant="rectangular" width={810} height={800} />
+          )}
+          {/* <img
             alt="Unada Life"
             src={UnadaSLife3}
             style={{
@@ -23,15 +39,8 @@ function UnadalifeSection() {
               height: "auto",
               objectFit: "contain",
             }}
-          />
-          <Typography
-            sx={text}
-            // style={{
-            //   color: "#171717",
-            // }}
-          >
-            Unada’s life
-          </Typography>
+          /> */}
+          <Typography sx={text}>Unada’s life</Typography>
         </Box>
       </Grid>
     </Grid>

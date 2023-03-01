@@ -1,4 +1,3 @@
-
 body {
   background: #000;
 }
@@ -20,7 +19,6 @@ html {
     font-size: 52%;
   }
 }
-
 
 body {
   background: #000;
@@ -251,15 +249,21 @@ h3 {
   padding-top: 40px;
 }
 @media (min-width: 1200px) {
-  .css-z6cr19,.css-sbxffd,.css-10o0v01,.css-1qjyzjd,.css-156fxck {
+  .css-z6cr19,
+  .css-sbxffd,
+  .css-10o0v01,
+  .css-1qjyzjd,
+  .css-156fxck {
     height: 550px !important;
   }
 }
-.css-z6cr19,.css-1s16qga{
+.css-z6cr19,
+.css-1s16qga {
   position: relative;
 }
-.css-z6cr19::after,.css-1s16qga::after{
-  content: '';
+.css-z6cr19::after,
+.css-1s16qga::after {
+  content: "";
   background: rgba(163, 163, 163, 0.3);
   width: 100%;
   height: 1px;
@@ -267,8 +271,9 @@ h3 {
   left: 0;
   bottom: 0;
 }
-.css-z6cr19::before,.css-1s16qga::before{
-  content: '';
+.css-z6cr19::before,
+.css-1s16qga::before {
+  content: "";
   background: rgba(255, 255, 255, 1);
   width: 33%;
   height: 2px;
@@ -277,10 +282,10 @@ h3 {
   z-index: 1;
   bottom: 0;
 }
-.css-w4ysh{
+.css-w4ysh {
   object-fit: cover !important;
 }
-.kScZwU{
+.kScZwU {
   font-family: unset !important;
 }
 .css-3xsmmd-MuiButtonBase-root-MuiButton-root:hover {

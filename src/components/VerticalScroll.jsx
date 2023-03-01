@@ -25,7 +25,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
 import Uploadimg from "../assets/uploadicon.svg";
 import axios from "axios";
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -64,9 +63,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
   const [experience, setExperience] = useState();
-  const [skill, setSkill] = useState();
+  const [skill, setSkill] = useState("");
   const [linkedin, setLinkedin] = useState();
-  // const [state,setState] = useState()
 
   const apply = async () => {
     console.log(firstName, lastName, email, experience, skill, linkedin);
@@ -85,6 +83,37 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  const listOfSkill = [
+    {
+      id: 1,
+      skillName: "Html",
+    },
+    {
+      id1: 2,
+      skillName: "Css",
+    },
+    {
+      id: 3,
+      skillName: "Js",
+    },
+    {
+      id: 4,
+      skillName: "MongoDb",
+    },
+    {
+      id: 5,
+      skillName: "Node.js",
+    },
+  ];
+  // const selectedSkill = [];
+  const [selectedSkill, SetSelectedSkill] = useState([]);
+
+  // const [show, setShow] = useState(listOfSkill);
+  const removeElement = (index) => {
+    const newSelectedSkill = selectedSkill.filter((_, i) => i !== index);
+    SetSelectedSkill(newSelectedSkill);
   };
   return (
     <>
@@ -178,7 +207,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 marginTop: "0.5rem",
               }}
             >
-              <Button sx={ButtonStyle1}>
+              <Button sx={ButtonStyle1} onClick={handleClickOpen}>
                 Apply
                 <span
                   style={{
@@ -373,20 +402,98 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   justifyContent: "left",
                   alignItems: "center",
                   ml: "6rem",
+                  borderBottom: "2px solid #fff",
+                  width: "40%",
                 }}
               >
-                <input
-                  id="standard-textarea"
-                  label="Skills"
-                  placeholder="Skills"
-                  variant="standard"
-                  multiline
-                  sx={{
-                    width: "40%",
-                  }}
-                  value={skill}
-                  onChange={(e) => setSkill(e.target.value)}
-                />
+                {selectedSkill.map((el, idx) => {
+                  return (
+                    <>
+                      <Box
+                        sx={{
+                          border: "2px solid grey",
+                          borderRadius: "30px",
+                          width: "auto",
+                          minWidth: "15%",
+                          height: "auto",
+                          color: "#fff",
+                          textAlign: "center",
+                          p: 1,
+                          mb: 2,
+                          display: "flex",
+                          justifyContent: "center",
+                          gap: "20px",
+                          // position: "relative",
+                          ml: 1,
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            ...skillText,
+                            color: "#fff",
+                            fontSize: "1.2rem",
+                          }}
+                        >
+                          {el.skillName}
+                        </Typography>
+
+                        <CloseIcon
+                          onClick={() => removeElement(idx)}
+                          sx={{
+                            color: "white",
+                            mt: 0.3,
+                            fontSize: "15px",
+                            textAlign: "left",
+                            cursor: "pointer",
+                          }}
+                        />
+                      </Box>
+                    </>
+                  );
+                })}
+              </Box>
+              <Box
+                sx={{
+                  width: "85%",
+                  mx: "auto",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  gap: "20px",
+                  cursor: "pointer",
+                }}
+                // onClick={listOfSkill}
+              >
+                {listOfSkill.map((el, idx) => {
+                  return (
+                    <>
+                      <Box
+                        sx={{
+                          border: "2px solid grey",
+                          borderRadius: "20px",
+                          width: "auto",
+                          minWidth: "15%",
+                          height: "auto",
+                          color: "#fff",
+                          textAlign: "center",
+                          p: 0.5,
+                        }}
+                        onClick={() => {
+                          const skillData = selectedSkill.find(
+                            (item) => item.id === el.id
+                          );
+                          if (skillData) {
+                            ("alredy exists");
+                          } else {
+                            SetSelectedSkill([...selectedSkill, el]);
+                          }
+                          console.log(selectedSkill);
+                        }}
+                      >
+                        <Typography sx={skillText}>{el.skillName}</Typography>
+                      </Box>
+                    </>
+                  );
+                })}
               </Box>
             </Grid>
             <Grid
@@ -692,4 +799,12 @@ const labeltext = {
     sm: "2rem",
     xs: "2rem",
   },
+};
+
+const skillText = {
+  fontFamily: "LGLight",
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: 12,
+  color: "rgba(162, 162, 162, 0.5)",
 };
