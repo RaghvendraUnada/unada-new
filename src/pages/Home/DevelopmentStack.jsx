@@ -21,7 +21,7 @@ const DevelopmentStack = () => {
   const FunctionOne = (id, text, title, desc) => {
     setNumberOne(id);
     setBoxtextOne(text);
-    setBoxTitle(title);
+    setBoxTitle(text);
     setDesc(desc);
   };
 

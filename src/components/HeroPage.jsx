@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+
 const HeroPage = ({
   mainText1,
   subText1,
@@ -106,17 +107,22 @@ const HeroPage = ({
             >
               <Button
                 variant="contained"
+                onFocusVisible
                 sx={{
                   borderRadius: "9rem",
-                  background: "#0D6EFD",
+                  // background: "#0D6EFD",
                   fontSize: "1.7rem",
                   padding: "1.1rem 2.6rem",
                   fontWeight: 500,
                   // lineHeight: "2.9rem",
                   fontFamily: "LGLight",
                   textTransform: "capitalize",
-                  "&:focus": {
-                    backgroundColor: "#1565c0;",
+                  // "&:focus": {
+                  //   backgroundColor: "#1565c0",
+                  //   color: "#fff",
+                  // },
+                  "&.Mui-focused": {
+                    backgroundColor: "#1565c0",
                   },
                 }}
               >

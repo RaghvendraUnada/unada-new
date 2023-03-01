@@ -1,9 +1,10 @@
 import React from "react";
-import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
+import { Typography, Box, Paper, Grid, Stack, Skeleton } from "@mui/material";
 // import UnadaLife from "../../assets/Images/Career/unadalife.svg";
 // import UnadaSLife1 from "../../assets/Images/Career/unadaslife1.svg";
 // import UnadaSLife2 from "../../assets/Images/Career/unadaslife2.svg";
 import UnadaSLife3 from "../../assets/Images/Career/unadalife3.svg";
+// import Skeleton from '@mui/material/Skeleton'
 
 function UnadalifeSection() {
   return (

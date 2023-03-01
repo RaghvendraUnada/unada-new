@@ -116,7 +116,6 @@ function CareerIntroSection() {
           gap: "4rem",
           textAlign: "center",
           padding: "6rem",
-          // marginTop: "5rem",
         }}
       >
         <Typography sx={IntroMainText}>

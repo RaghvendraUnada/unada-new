@@ -501,8 +501,13 @@ const ButtonStyle = {
   mt: "07px",
   width: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
+
   "&:hover": {
     bgcolor: "transparent",
+    textDecoration: "line-through",
+    // background: "#fff",
+    // width: "100%",
+    // transition: "width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)",
   },
   ml: "2.3%",
 };

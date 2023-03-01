@@ -4,7 +4,9 @@ import { Grid, Paper, Typography, Box, Button } from "@mui/material";
 import WhiteServiceAppIcon from "../../assets/Images/Services/WhiteServiceAppIcon.svg";
 import WhiteServiceWebIcon from "../../assets/Images/Services/WhiteServiceWebIcon.svg";
 import WhiteServiceuiuxIcon from "../../assets/Images/Services/WhiteServiceuiuxIcon.svg";
-import MobileMetaImg from "../../assets/Images/Services/MobileMetaImg.svg";
+import Applicationimg from "../../assets/Images/Services/Application.png";
+import Websiteimg from "../../assets/Images/Services/Website.png";
+import uiuximg from "../../assets/Images/Services/UIUX.png";
 import ExploreIcon from "../../assets/Images/Services/ExploreIcon.svg";
 import blackArrowImg from "../../assets/Images/Services/blackArrowImg.svg";
 import { useNavigate, Link } from "react-router-dom";
@@ -12,9 +14,9 @@ import { motion } from "framer-motion";
 
 const WhiteServicesPage = () => {
   const navigate = useNavigate();
-  const [paper1, setPaper1] = useState(false);
-  const [paper2, setPaper2] = useState(false);
-  const [paper3, setPaper3] = useState(false);
+  const [paper1, setPaper1] = useState(true);
+  const [paper2, setPaper2] = useState(true);
+  const [paper3, setPaper3] = useState(true);
   const [click1, setClick1] = useState(true);
   const [click2, setClick2] = useState(false);
   const [click3, setClick3] = useState(false);
@@ -94,33 +96,35 @@ const WhiteServicesPage = () => {
               </Box>
             </Paper>
           </Grid>
-          <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12}>
+          <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12} sx={adjGrid}>
             <Paper
               onClick={() => {
                 navigate("/application");
               }}
               elevation={0}
-              sx={ServicePaperStyle}
+              sx={{
+                ...ServicePaperStyle,
+                background: `url(${Applicationimg})`,
+                backgroundPosition: "center center",
+                backgroundSize: "cover",
+              }}
               onMouseOver={() => setPaper1(true)}
-              onMouseOut={() => setPaper1(false)}
+              onMouseOut={() => setPaper1(true)}
             >
               {paper1 ? (
                 <>
                   <Box sx={ActiveBoxStyles}>
-                    <img
+                    {/* <img
                       src={WhiteServiceAppIcon}
                       alt="servicesAppimg"
                       style={{
                         marginBottom: "2rem",
                       }}
-                    />
+                    /> */}
                     <Typography sx={paperTextStyle}>Application</Typography>
                     <Typography sx={activePaperText}>
-                      Imagine a world where anything is possible! At Unada, we
-                      create immersive virtual worlds for users to explore and
-                      customize. Our team of experienced developers and
-                      designers is passionate about creating the most engaging
-                      virtual experiences possible.{" "}
+                      We specialize in designing and creating innovative
+                      software
                     </Typography>
                     <Link
                       to={"/application"}
@@ -141,33 +145,35 @@ const WhiteServicesPage = () => {
               )}
             </Paper>
           </Grid>
-          <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12}>
+          <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12} sx={adjGrid}>
             <Paper
               onClick={() => {
                 navigate("/web");
               }}
               elevation={0}
-              sx={ServicePaperStyle}
+              sx={{
+                ...ServicePaperStyle,
+                background: `url(${Websiteimg})`,
+                backgroundPosition: "center center",
+                backgroundSize: "cover",
+              }}
               onMouseOver={() => setPaper2(true)}
-              onMouseOut={() => setPaper2(false)}
+              onMouseOut={() => setPaper2(true)}
             >
               {paper2 ? (
                 <>
                   <Box sx={ActiveBoxStyles}>
-                    <img
+                    {/* <img
                       src={WhiteServiceWebIcon}
                       alt="servicesAppimg"
                       style={{
                         marginBottom: "2rem",
                       }}
-                    />
+                    /> */}
                     <Typography sx={paperTextStyle}>Website</Typography>
                     <Typography sx={activePaperText}>
-                      Imagine a world where anything is possible! At Unada, we
-                      create immersive virtual worlds for users to explore and
-                      customize. Our team of experienced developers and
-                      designers is passionate about creating the most engaging
-                      virtual experiences possible.{" "}
+                      Unada specializes in web design, development, and
+                      maintenance.
                     </Typography>
                     <Link to={"/web"} style={{ textDecoration: "none" }}>
                       <Button sx={ButtonStyle}>View</Button>
@@ -185,33 +191,36 @@ const WhiteServicesPage = () => {
               )}
             </Paper>
           </Grid>
-          <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12}>
+          <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12} sx={adjGrid}>
             <Paper
               onClick={() => {
                 navigate("/ui");
               }}
               elevation={0}
-              sx={ServicePaperStyle}
+              sx={{
+                ...ServicePaperStyle,
+
+                background: `url(${uiuximg})`,
+                backgroundPosition: "center center",
+                backgroundSize: "cover",
+              }}
               onMouseOver={() => setPaper3(true)}
-              onMouseOut={() => setPaper3(false)}
+              onMouseOut={() => setPaper3(true)}
             >
               {paper3 ? (
                 <>
                   <Box sx={ActiveBoxStyles}>
-                    <img
+                    {/* <img
                       src={WhiteServiceAppIcon}
                       alt="servicesAppimg"
                       style={{
                         marginBottom: "2rem",
                       }}
-                    />
+                    /> */}
                     <Typography sx={paperTextStyle}>UI/UX</Typography>
                     <Typography sx={activePaperText}>
-                      Imagine a world where anything is possible! At Unada, we
-                      create immersive virtual worlds for users to explore and
-                      customize. Our team of experienced developers and
-                      designers is passionate about creating the most engaging
-                      virtual experiences possible.{" "}
+                      We specialize in designing intuitive and user-friendly
+                      interfaces for websites..
                     </Typography>
                     <Link to={"/ui"} style={{ textDecoration: "none" }}>
                       <Button sx={ButtonStyle}>View</Button>
@@ -667,5 +676,11 @@ const ButtonStyle = {
 
   marginTop: "2rem",
   opacity: 0.5,
+};
+const adjGrid = {
+  opacity: 0.5,
+  "&:hover": {
+    opacity: 1,
+  },
 };
 export default WhiteServicesPage;

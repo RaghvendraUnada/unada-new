@@ -94,7 +94,7 @@ const CareerHeroSection = () => {
                   textFillColor: "transparent",
                 }}
               >
-                Be a part of team who makes an impact
+                Be a part of team who makes an impact.
               </Typography>
               {/* <img src={careerTitle} alt="title" width="80%" className="center-block" draggable="false" /> */}
             </Stack>
