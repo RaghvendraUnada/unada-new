@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
@@ -25,6 +25,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Slide from "@mui/material/Slide";
 import Uploadimg from "../assets/uploadicon.svg";
 import axios from "axios";
+import { json } from "react-router-dom";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -40,15 +41,14 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   };
 
   const handleFileChange = (event) => {
-    const fileRegex = /([a-zA-Z0-9\s_\.-:])+(.doc|.docx|.pdf)$/;
     // if (fileRegex.test(event.dataTransfer.files[0])) {
     //   const selectedFile = event.dataTransfer.files[0];
     //   console.log(selectedFile);
     // }
+    const fileRegex = /([a-zA-Z0-9\s_\.-:])+(.doc|.docx|.pdf)$/;
     if (/jpeg|jpg|png|gif/.test(ext.toLowerCase())) {
       return cb(new Error("Only images are allowed"), false);
     }
-    // Handle file selection here
   };
 
   const handleDragOver = (event) => {
@@ -66,26 +66,73 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [experience, setExperience] = useState();
   const [skill, setSkill] = useState();
   const [linkedin, setLinkedin] = useState();
+  const [file, setFile] = useState();
+  const [coverLetter, setCoverLetter] = useState();
+  const uploadFileRef = useRef();
   // const [state,setState] = useState()
 
   const apply = async () => {
-    console.log(firstName, lastName, email, experience, skill, linkedin);
-    return await axios
-      .post("user_data/apply", {
-        UserFirstName: firstName,
-        UserLastName: lastName,
-        UserEmail: email,
-        UserExperience: experience,
-        UserSkills: skill,
-        UserLinkedInUrl: linkedin,
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    console.log(file);
+    console.log(
+      firstName,
+      lastName,
+      email,
+      experience,
+      skill,
+      linkedin,
+      file,
+      coverLetter
+    );
+    // const data = {
+    //   UserFirstName: firstName,
+    //   UserLastName: lastName,
+    //   UserEmail: email,
+    //   UserExperience: experience,
+    //   UserSkills: skill,
+    //   UserLinkedInUrl: linkedin,
+    //   resume: file,
+    //   coverLetter: coverLetter,
+    // };
+
+    // return await axios
+    //   .post("user_data/apply", data, {
+    //     headers: {
+    //       "Content-type": "multipart/form-data",
+    //       "Content-Length": JSON.stringify(data).length,
+    //     },
+    //   })
+    //   .then((res) => {
+    //     console.log(res);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+    // await fetch("http://192.168.29.5:8000/user_data/apply", {
+    //   method: "POST",
+    //   body: formData,
+    //   // headers: {
+    //   //   "Content-type": "multipart/form-data",
+    //   // },
+    // });
+    var formdata = new FormData();
+    formdata.append("UserLastName", firstName);
+    formdata.append("coverLetter", coverLetter[0]);
+    formdata.append("resume", file[0]);
+    formdata.append("UserFirstName", lastName);
+    formdata.append("UserEmail", email);
+
+    var requestOptions = {
+      method: "POST",
+      body: formdata,
+      redirect: "follow",
+    };
+
+    fetch("http://192.168.29.5:8000/user_data/apply", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
   };
+
   return (
     <>
       <Box sx={scrolltext}>
@@ -178,7 +225,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 marginTop: "0.5rem",
               }}
             >
-              <Button sx={ButtonStyle1}>
+              <Button sx={ButtonStyle1} onClick={handleClickOpen}>
                 Apply
                 <span
                   style={{
@@ -203,215 +250,156 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
           </Grid>
         </Box>
       </Box>
-      <Dialog
-        fullScreen
-        open={open}
-        onClose={handleClose}
-        TransitionComponent={Transition}
-        sx={{
-          width: "100%",
-          padding: "2rem",
-        }}
-      >
-        <Box
+      <form>
+        <Dialog
+          fullScreen
+          open={open}
+          onClose={handleClose}
+          TransitionComponent={Transition}
           sx={{
             width: "100%",
-            height: {
-              xl: "95vh",
-              lg: "95vh",
-            },
-            background: "Black",
-            zIndex: 100,
+            padding: "2rem",
           }}
         >
           <Box
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignContent: "center",
-              borderBottom: "1px solid #A3A3A3",
-              gap: "2rem",
-              bgcolor: "black",
-              p: 2,
+              width: "100%",
+              height: {
+                xl: "95vh",
+                lg: "95vh",
+              },
+              background: "Black",
+              zIndex: 100,
             }}
           >
-            <Typography variant="h6" component="div" sx={ApplyTextStyle}>
-              Applying For {"   "}
-            </Typography>
-            <Typography sx={PositionsDevText}>
-              {"  "}
-              {positionDevo}
-            </Typography>
-            <IconButton
-              edge="end"
-              color="inherit"
-              onClick={handleClose}
-              aria-label="close"
-            >
-              <CloseIcon sx={{ color: "white" }} />
-            </IconButton>
-          </Box>
-          <Grid
-            container
-            sx={{
-              height: "80%",
-              p: 2,
-            }}
-            xl={12}
-            lg={12}
-            md={12}
-            sm={12}
-            xs={12}
-          >
-            <Grid
-              item
-              xl={6}
-              lg={6}
-              md={12}
-              sm={12}
-              xs={12}
+            <Box
               sx={{
-                display: "flex",
-                flexDirection: "column",
+                display: "grid",
                 justifyContent: "center",
-                borderRight: "1px solid #A3A3A3",
+                alignContent: "center",
+                flexDirection: {
+                  xl: "row",
+                  lg: "row",
+                  md: "row",
+                  sm: "column",
+                  xs: "column",
+                },
+                borderBottom: "1px solid #A3A3A3",
                 gap: "2rem",
+                bgcolor: "",
+                p: 2,
               }}
             >
-              <Typography sx={labeltext}>Name:</Typography>
-
-              <Box
+              <IconButton
+                edge="end"
+                size="large"
+                color="inherit"
+                onClick={handleClose}
+                aria-label="close"
                 sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  gap: 3,
+                  position: "absolute",
+                  right: "2rem",
+                  top: "2rem",
                 }}
               >
-                <input
-                  // id="standard-textarea"
-                  label="First name"
-                  placeholder="First name"
-                  variant="standard"
-                  multiline
-                  style={{
-                    width: "40%",
-                    color: "white",
-                  }}
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                />
-                <input
-                  id="standard-textarea"
-                  label="Last name"
-                  placeholder="Last name"
-                  variant="standard"
-                  multiline
-                  style={{
-                    width: "40%",
-                    color: "white",
-                  }}
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                />
-              </Box>
-              <Typography sx={labeltext}>Email:</Typography>
+                <CloseIcon sx={{ color: "white" }} />
+              </IconButton>
               <Box
                 sx={{
                   display: "flex",
+                  flexDirection: {
+                    xl: "row",
+                    lg: "row",
+                    md: "row",
+                    sm: "column",
+                    xs: "column",
+                  },
                   justifyContent: "center",
                   alignItems: "center",
+                  gap: "1rem",
                 }}
               >
-                <input
-                  id="standard-textarea"
-                  label="Email"
-                  placeholder="Enter your email"
-                  variant="standard"
-                  multiline
-                  style={{
-                    width: "84%",
-                    color: "white",
-                  }}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
+                <Typography variant="h6" component="div" sx={ApplyTextStyle}>
+                  Applying For {"   "}
+                </Typography>
+                <Typography sx={PositionsDevText}>
+                  {"  "}
+                  {positionDevo}
+                </Typography>
               </Box>
-              <Typography sx={labeltext}>Experience:</Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "left",
-                  alignItems: "center",
-                  ml: "6rem",
-                }}
-              >
-                <FormControl sx={{ width: "40%" }}>
-                  <Select
-                    sx={{
-                      color: "white",
-                      borderBottom: "1px solid white",
-                      "& .Mui-focused": {
-                        border: "black",
-                      },
-                    }}
-                    value={experience}
-                    onChange={(e) => setExperience(e.target.value)}
-                  >
-                    <MenuItem value="">
-                      <em>None</em>
-                    </MenuItem>
-                    <MenuItem value={10}>1 Year</MenuItem>
-                    <MenuItem value={20}>2 Year</MenuItem>
-                    <MenuItem value={30}>3 Year</MenuItem>
-                  </Select>
-                </FormControl>
-              </Box>
-              <Typography sx={labeltext}>Skills:</Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "left",
-                  alignItems: "center",
-                  ml: "6rem",
-                }}
-              >
-                <input
-                  id="standard-textarea"
-                  label="Skills"
-                  placeholder="Skills"
-                  variant="standard"
-                  multiline
-                  sx={{
-                    width: "40%",
-                  }}
-                  value={skill}
-                  onChange={(e) => setSkill(e.target.value)}
-                />
-              </Box>
-            </Grid>
+            </Box>
             <Grid
-              item
-              xl={6}
-              lg={6}
+              container
+              sx={{
+                height: "80%",
+                p: 2,
+              }}
+              xl={12}
+              lg={12}
               md={12}
               sm={12}
               xs={12}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "2rem",
-                bgcolor: "black",
-              }}
             >
-              <Box
+              <Grid
+                item
+                xl={6}
+                lg={6}
+                md={12}
+                sm={12}
+                xs={12}
                 sx={{
-                  mt: 8,
-                  gap: "2rem",
                   display: "flex",
                   flexDirection: "column",
+                  justifyContent: "center",
+                  borderRight: {
+                    xl: "1px solid #A3A3A3",
+                    lg: "1px solid #A3A3A3",
+                    md: "1px solid #A3A3A3",
+                    sm: "none",
+                    xs: "none",
+                  },
+                  gap: "2rem",
                 }}
               >
-                <Typography sx={labeltext}>Linked in url:</Typography>
+                <Typography sx={labeltext}>Name:</Typography>
+
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: 3,
+                  }}
+                >
+                  <input
+                    // id="standard-textarea"
+                    label="First name"
+                    placeholder="First name"
+                    variant="standard"
+                    multiline
+                    style={{
+                      width: "40%",
+                      color: "white",
+                    }}
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    required
+                  />
+                  <input
+                    id="standard-textarea"
+                    label="Last name"
+                    placeholder="Last name"
+                    variant="standard"
+                    multiline
+                    style={{
+                      width: "40%",
+                      color: "white",
+                    }}
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    required
+                  />
+                </Box>
+                <Typography sx={labeltext}>Email:</Typography>
                 <Box
                   sx={{
                     display: "flex",
@@ -421,155 +409,299 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 >
                   <input
                     id="standard-textarea"
-                    label="Linked in url"
-                    placeholder="Paste URL here"
+                    label="Email"
+                    type="email"
+                    placeholder="Enter your email"
                     variant="standard"
                     multiline
-                    sx={{
+                    style={{
                       width: "84%",
-                      borderColor: "white",
                       color: "white",
                     }}
-                    value={linkedin}
-                    onChange={(e) => setLinkedin(e.target.value)}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </Box>
-                <Typography sx={labeltext}>Upload your resume:</Typography>
+                <Typography sx={labeltext}>Experience:</Typography>
                 <Box
                   sx={{
                     display: "flex",
                     justifyContent: "left",
+                    alignItems: "center",
                     ml: {
                       xl: "6rem",
                       lg: "6rem",
-                      md: "2rem",
+                      md: "6rem",
                       sm: "2rem",
                       xs: "2rem",
                     },
                   }}
                 >
-                  <Button
-                    variant="contained"
-                    component="label"
-                    sx={{
-                      textTransform: "none",
-                      fontSize: "16px",
-                      fontFamily: "LGTrial",
-                      color: "black",
-                      background: "#FAFAFA",
-                      borderRadius: "none",
-                    }}
-                  >
-                    Choose file
-                    <input type="file" hidden />
-                  </Button>
+                  <FormControl sx={{ width: "40%" }}>
+                    <Select
+                      placeholder="select"
+                      sx={{
+                        color: "white",
+                        borderBottom: "1px solid white",
+                        "& .Mui-focused": {
+                          border: "black",
+                        },
+                      }}
+                      value={experience}
+                      onChange={(e) => setExperience(e.target.value)}
+                    >
+                      <MenuItem value="">
+                        <em>None</em>
+                      </MenuItem>
+                      <MenuItem value={"1 Year"}>1 Year</MenuItem>
+                      <MenuItem value={"2 Year"}>2 Year</MenuItem>
+                      <MenuItem value={"3 Year"}>3 Year</MenuItem>
+                    </Select>
+                  </FormControl>
                 </Box>
-                <Typography sx={labeltext}>Cover letter</Typography>
+                <Typography sx={labeltext}>Skills:</Typography>
                 <Box
                   sx={{
                     display: "flex",
-                    justifyContent: "center",
+                    justifyContent: "left",
                     alignItems: "center",
+                    ml: {
+                      xl: "6rem",
+                      lg: "6rem",
+                      md: "6rem",
+                      sm: "2rem",
+                      xs: "2rem",
+                    },
                   }}
                 >
-                  <Paper
-                    elevation={0}
+                  <input
+                    id="standard-textarea"
+                    label="Skills"
+                    placeholder="Skills"
+                    variant="standard"
+                    multiline
+                    style={{
+                      width: "40%",
+                      color: "white",
+                    }}
+                    value={skill}
+                    onChange={(e) => setSkill(e.target.value)}
+                    required
+                  />
+                </Box>
+              </Grid>
+              <Grid
+                item
+                xl={6}
+                lg={6}
+                md={12}
+                sm={12}
+                xs={12}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "2rem",
+                  bgcolor: "black",
+                }}
+              >
+                <Box
+                  sx={{
+                    mt: 8,
+                    gap: "2rem",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Typography sx={labeltext}>Linked in url:</Typography>
+                  <Box
                     sx={{
                       display: "flex",
-                      alignItems: "center",
                       justifyContent: "center",
-                      flexDirection: "column",
-                      textAlign: "center",
-                      width: "84%",
-                      height: "175px",
-                      background: "#4D4D4D",
-                      border: "1px dashed #F0F0F0",
-                      borderRadius: "4px",
+                      alignItems: "center",
                     }}
-                    onDrag={handleDragOver}
-                    onDrop={handleDrop}
                   >
-                    <img src={Uploadimg} alt="img" />
-                    <Typography
-                      sx={{
-                        fontFamily: "LGTrial",
-                        fontStyle: "normal",
-                        fontWeight: 400,
-                        fontSize: 12,
-                        letterSpacing: 0.171613,
-                        color: "#FFFFFF",
+                    <input
+                      id="standard-textarea"
+                      label="Linked in url"
+                      type="url"
+                      placeholder="Paste URL here"
+                      variant="standard"
+                      multiline
+                      style={{
+                        width: "84%",
+                        color: "white",
                       }}
-                    >
-                      Drag and drop here
-                    </Typography>
-                    <Typography
-                      sx={{
-                        fontFamily: "LGTrial",
-                        fontStyle: "normal",
-                        fontWeight: 400,
-                        fontSize: 12,
-                        letterSpacing: 0.171613,
-                        color: "#FFFFFF",
+                      value={linkedin}
+                      onChange={(e) => setLinkedin(e.target.value)}
+                    />
+                  </Box>
+                  <Typography sx={labeltext}>Upload your resume:</Typography>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "left",
+                      ml: {
+                        xl: "6rem",
+                        lg: "6rem",
+                        md: "6rem",
+                        sm: "2rem",
+                        xs: "2rem",
+                      },
+                    }}
+                  >
+                    <input
+                      type="file"
+                      multiple
+                      ref={uploadFileRef}
+                      style={{ display: "none" }}
+                      onChange={(e) => {
+                        setFile(e.target.files);
                       }}
-                    >
-                      or
-                    </Typography>
-
+                    />
+                    {file?.length}
                     <Button
-                      variant="outlined"
-                      component="label"
                       sx={{
                         textTransform: "none",
-                        border: "none",
+                        fontSize: "16px",
+                        fontFamily: "LGTrial",
+                        color: "black",
+                        background: "#FAFAFA",
+                        borderRadius: "none",
+                        // "&:hover": {
+                        //   background: "#FAFAFA",
+                        //   color: "white",
+                        // },
+                      }}
+                      variant="contained"
+                      onClick={() => {
+                        console.log(uploadFileRef);
+                        uploadFileRef.current.click();
                       }}
                     >
+                      Choose file
+                    </Button>
+                  </Box>
+                  <Typography sx={labeltext}>Cover letter</Typography>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexDirection: "column",
+                        textAlign: "center",
+                        width: "84%",
+                        height: "175px",
+                        background: "#4D4D4D",
+                        border: "1px dashed #F0F0F0",
+                        borderRadius: "4px",
+                      }}
+                      onDrag={handleDragOver}
+                      onDrop={handleDrop}
+                    >
+                      <img src={Uploadimg} alt="img" />
                       <Typography
                         sx={{
                           fontFamily: "LGTrial",
                           fontStyle: "normal",
-                          fontWeight: 500,
+                          fontWeight: 400,
                           fontSize: 12,
                           letterSpacing: 0.171613,
-                          color: "#0051ED",
+                          color: "#FFFFFF",
                         }}
                       >
-                        Browse File
+                        Drag and drop here
                       </Typography>
-                      <input type="file" hidden />
-                    </Button>
+                      <Typography
+                        sx={{
+                          fontFamily: "LGTrial",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          fontSize: 12,
+                          letterSpacing: 0.171613,
+                          color: "#FFFFFF",
+                        }}
+                      >
+                        or
+                      </Typography>
 
-                    <Input
-                      type="file"
-                      pattern=".+.pdf$"
-                      sx={{ display: "none" }}
-                      onChange={handleFileChange}
-                    />
-                  </Paper>
+                      <input
+                        type="file"
+                        multiple
+                        ref={uploadFileRef}
+                        style={{ display: "none" }}
+                        onChange={(e) => {
+                          setCoverLetter(e.target.files);
+                        }}
+                      />
+                      {coverLetter?.length}
+                      <Button
+                        variant="outlined"
+                        component="label"
+                        sx={{
+                          textTransform: "none",
+                          border: "none",
+                        }}
+                        onClick={() => {
+                          console.log(uploadFileRef);
+                          uploadFileRef.current.click();
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            fontFamily: "LGTrial",
+                            fontStyle: "normal",
+                            fontWeight: 500,
+                            fontSize: 12,
+                            letterSpacing: 0.171613,
+                            color: "#0051ED",
+                          }}
+                        >
+                          Browse File
+                        </Typography>
+                      </Button>
+                      <Input
+                        type="file"
+                        pattern=".+.pdf$"
+                        sx={{ display: "none" }}
+                        // onChange={handleFileChange}
+                        required
+                      />
+                    </Paper>
+                  </Box>
                 </Box>
-              </Box>
+              </Grid>
             </Grid>
-          </Grid>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: "black",
-              mt: {
-                xl: "0px",
-                lg: "0px",
-                md: "6rem",
-                sm: "10rem",
-                xs: "10rem",
-              },
-            }}
-          >
-            <Button sx={ButtonStyle1} onClick={apply}>
-              Submit
-            </Button>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "black",
+                mt: {
+                  xl: "0px",
+                  lg: "5rem",
+                  md: "6rem",
+                  sm: "6rem",
+                  xs: "6rem",
+                },
+              }}
+            >
+              <Button sx={ButtonStyle1} onClick={apply} type="submit">
+                Submit
+              </Button>
+            </Box>
           </Box>
-        </Box>
-      </Dialog>
+        </Dialog>
+      </form>
     </>
   );
 };
@@ -631,13 +763,13 @@ const ButtonStyle1 = {
   borderRadius: "30px",
   border: "2px rgba(255, 255, 255, 1) solid",
   color: "rgba(255, 255, 255, 1)",
-  marginTop: {
-    xl: "2rem",
-    lg: "2rem",
-    md: "2rem",
-    sm: "0rem",
-    xs: "0rem",
-  },
+  // marginTop: {
+  //   xl: "2rem",
+  //   lg: "2rem",
+  //   md: "2rem",
+  //   sm: "-2rem",
+  //   xs: "-2rem",
+  // },
   opacity: 0.8,
   "&:hover": {
     opacity: 1,
