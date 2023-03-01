@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Grid, Paper, Typography, Box, Button } from "@mui/material";
-import MetaImgServices from "../../assets/Images/Services/MetaImgServices.svg";
-import BlockChainImg from "../../assets/Images/Services/BlockcChainImg.png";
+import MetaImgServices from "../../assets/Images/Services/Metaverse.png";
+import BlockChainImg from "../../assets/Images/Services/Blockchain.png";
 import EthImg from "../../assets/Images/Services/EthImg.svg";
-import ArVrimg from "../../assets/Images/Services/ArVrimg.svg";
+import ArVrimg from "../../assets/Images/Services/ARVR.png";
 import blockchain from "../../assets/Images/Services/blockchain.svg";
-import ArVrMobImg from "../../assets/Images/Services/ArVrMobImg.webp";
-import BlockChainMobImg from "../../assets/Images/Services/BlockcChainMobImg.png";
-import MobileMetaImg from "../../assets/Images/Services/MobileMetaImg.webp";
+import ArVrMobImg from "../../assets/Images/Services/ARVR.png";
+import BlockChainMobImg from "../../assets/Images/Services/Blockchain.png";
+import MobileMetaImg from "../../assets/Images/Services/Metaverse.png";
 import ExploreIcon from "../../assets/Images/Services/ExploreIcon.svg";
 import BigArrowImg from "../../assets/Images/Services/BigArrowImg.svg";
 import styles from "./Service.module.css";
@@ -16,9 +16,9 @@ import styles from "./Service.module.css";
 import { useNavigate, Link } from "react-router-dom";
 const ServicesPage = () => {
   const navigate = useNavigate();
-  const [paper1, setPaper1] = useState(false);
-  const [paper2, setPaper2] = useState(false);
-  const [paper3, setPaper3] = useState(false);
+  const [paper1, setPaper1] = useState(true);
+  const [paper2, setPaper2] = useState(true);
+  const [paper3, setPaper3] = useState(true);
   const [click1, setClick1] = useState(true);
   const [click2, setClick2] = useState(false);
   const [click3, setClick3] = useState(false);
@@ -49,26 +49,23 @@ const ServicesPage = () => {
             elevation={0}
             sx={{
               ...ServicePaperStyle,
-
+              background: `url(${MetaImgServices})`,
+              backgroundPosition: "center center",
+              backgroundSize: "cover",
+              opacity: 0.5,
               "&:hover": {
-                background: `url(${MetaImgServices})`,
-                backgroundPosition: "center center",
-                backgroundSize: "cover",
+                opacity: 1,
               },
             }}
             onMouseOver={() => setPaper1(true)}
-            onMouseOut={() => setPaper1(false)}
+            onMouseOut={() => setPaper1(true)}
           >
             {paper1 ? (
               <>
                 <Box sx={ActiveBoxStyles}>
                   <Typography sx={paperTextStyle}>Metaverse</Typography>
                   <Typography sx={activePaperText}>
-                    Imagine a world where anything is possible! At Unada, we
-                    create immersive virtual worlds for users to explore and
-                    customize. Our team of experienced developers and designers
-                    is passionate about creating the most engaging virtual
-                    experiences possible.{" "}
+                    Imagine a world where anything is possible! At Unada
                   </Typography>
                   <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
                     <img
@@ -99,15 +96,16 @@ const ServicesPage = () => {
             elevation={0}
             sx={{
               ...ServicePaperStyle,
+              background: `url(${ArVrimg})`,
+              backgroundPosition: "center center",
+              backgroundSize: "cover",
+              opacity: 0.5,
               "&:hover": {
-                background: `url(${ArVrimg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center center",
-                backgroundSize: "cover",
+                opacity: 1,
               },
             }}
             onMouseOver={() => setPaper2(true)}
-            onMouseOut={() => setPaper2(false)}
+            onMouseOut={() => setPaper2(ture)}
           >
             {paper2 ? (
               <>
@@ -115,10 +113,7 @@ const ServicesPage = () => {
                   <Typography sx={paperTextStyle}>AR/VR</Typography>
                   <Typography sx={activePaperText}>
                     Whether you're a game developer looking to create the next
-                    big hit, a business owner looking for a unique way to engage
-                    with customers, or just someone who loves exploring new
-                    worlds, Unada’s AR/VR has something for you. We offer a
-                    range of services, including custom AR and VR development.
+                    big hit.
                   </Typography>
                   <Link to={"/ArVr"} style={{ textDecoration: "none" }}>
                     <img
@@ -149,28 +144,23 @@ const ServicesPage = () => {
             elevation={0}
             sx={{
               ...ServicePaperStyle,
+              background: `url(${BlockChainMobImg})`,
+              backgroundPosition: "center center",
+              backgroundSize: "cover",
+              opacity: 0.5,
               "&:hover": {
-                background: `url(${BlockChainImg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center center",
-                backgroundSize: "cover",
+                opacity: 1,
               },
             }}
             onMouseOver={() => setPaper3(true)}
-            onMouseOut={() => setPaper3(false)}
+            onMouseOut={() => setPaper3(true)}
           >
             {paper3 ? (
               <>
                 <Box sx={ActiveBoxStyles}>
                   <Typography sx={paperTextStyle}>Blockchain</Typography>
                   <Typography sx={activePaperText}>
-                    Our services include custom blockchain and web3 development,
-                    consulting on blockchain and web3 strategy and
-                    implementation, and training on how to use these
-                    technologies. We work with clients from a variety of
-                    industries, including finance, supply chain, healthcare, and
-                    more, to help them improve security, efficiency, and
-                    transparency in their operations.
+                    Our services include custom blockchain and web3 development.
                   </Typography>
                   <Link to={"/blockchain"} style={{ textDecoration: "none" }}>
                     <img
@@ -272,11 +262,7 @@ const ServicesPage = () => {
                     }}
                   />
                   <Typography sx={mobileActivePaperMetaText}>
-                    We specialize in designing and creating innovative software
-                    applications for mobile devices. Whether you have a clear
-                    idea of what you want your app to do or you need help
-                    conceptualizing and designing a unique solution, we have the
-                    expertise to bring your vision to life
+                    Imagine a world where anything is possible! At Unada
                     <br />
                     <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
                       <Button sx={ButtonStyle}>View</Button>
@@ -337,10 +323,7 @@ const ServicesPage = () => {
                   />
                   <Typography sx={mobileActivePaperMetaText}>
                     Whether you're a game developer looking to create the next
-                    big hit, a business owner looking for a unique way to engage
-                    with customers, or just someone who loves exploring new
-                    worlds, Unada’s AR/VR has something for you. We offer a
-                    range of services, including custom AR and VR development.
+                    big hit.
                     <br />
                     <Link to={"/ArVr"} style={{ textDecoration: "none" }}>
                       <Button sx={ButtonStyle}>View</Button>
@@ -398,13 +381,7 @@ const ServicesPage = () => {
                     }}
                   />
                   <Typography sx={mobileActivePaperMetaText}>
-                    Our services include custom blockchain and web3 development,
-                    consulting on blockchain and web3 strategy and
-                    implementation, and training on how to use these
-                    technologies. We work with clients from a variety of
-                    industries, including finance, supply chain, healthcare, and
-                    more, to help them improve security, efficiency, and
-                    transparency in their operations.
+                    Our services include custom blockchain and web3 development.
                     <br />
                     <Link to={"/blockchain"} style={{ textDecoration: "none" }}>
                       <Button sx={ButtonStyle}>View</Button>
@@ -510,16 +487,17 @@ const ServicePaperStyle = {
     sm: "1px solid rgba(163, 163, 163, 0.3)",
     xs: "1px solid rgba(163, 163, 163, 0.3)",
   },
-  background: "black",
   position: "relative",
+  // background: `url(${MetaImgServices})`,
+  opacity: 0.5,
   // transition: "4s all linear",
-  "&:hover": {
-    background: `url(${MetaImgServices})`,
-    backgroundPosition: "center",
-    backgroundSize: "cover",
+  // "&:hover": {
+  //   background: `url(${MetaImgServices})`,
+  //   backgroundPosition: "center",
+  //   backgroundSize: "cover",
 
-    backgroundRepeat: "no-repeat",
-  },
+  //   backgroundRepeat: "no-repeat",
+  // },
   // padding: "3rem",
 };
 const mobilePaper = {
