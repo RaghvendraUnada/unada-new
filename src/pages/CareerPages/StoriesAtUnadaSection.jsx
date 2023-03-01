@@ -101,7 +101,19 @@ const StoriesAtUnadaSection = () => {
           }}
         >
           <Box sx={{ display: "flex", gap: "5px" }}>
-            <Typography sx={{ ...textStyle1, color: "#fff" }}>
+            <Typography
+              sx={{
+                ...textStyle1,
+                color: "#fff",
+                fontSize: {
+                  xl: "64px",
+                  lg: "64px",
+                  md: "52px",
+                  sm: "42px",
+                  xs: "30px",
+                },
+              }}
+            >
               {" "}
               Stories at
             </Typography>
@@ -323,7 +335,7 @@ const textStyle1 = {
     lg: "76px",
     md: "58px",
     sm: "50px",
-    xs: "45px",
+    xs: "40px",
   },
   letterSpacing: 1,
 };

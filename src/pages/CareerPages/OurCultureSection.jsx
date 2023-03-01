@@ -32,6 +32,19 @@ const OurCultureSection = () => {
     >
       <Box>
         <Typography sx={headtext}>Our Culture</Typography>
+        {/* <Box
+          sx={{
+            width: {
+              xl: "30%",
+              lg: "30%",
+              md: "30%",
+              sm: "40%",
+              xs: "40%",
+            },
+            mx: "auto",
+          }}
+        >
+        </Box> */}
         <Typography sx={maintext}>#ReshapeTheFuture</Typography>
         <Typography sx={para}>
           A stream of ideas, a coruscating workplace and the hub of the next
