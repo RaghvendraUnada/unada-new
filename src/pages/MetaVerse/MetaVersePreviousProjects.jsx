@@ -59,7 +59,13 @@ const MetaVersePreviousProjects = () => {
       elevation={0}
       sx={{
         height: "100%",
-        // minHeight: "100vh",
+        minHeight: {
+          xl: "92vh",
+          lg: "92vh",
+          md: "70vh",
+          sm: "60vh",
+          xs: "50vh",
+        },
         width: "100%",
         maxWidth: "100vw",
         overflowx: "hidden",
@@ -76,10 +82,7 @@ const MetaVersePreviousProjects = () => {
           // background: "red",
         }}
       >
-        <Grid item xl={12} lg={12} md={12}>
-          <PreProjectCara />
-        </Grid>
-        {/* <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+        <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
           <Box
             sx={{
               display: "flex",
@@ -93,10 +96,10 @@ const MetaVersePreviousProjects = () => {
                 ...prevProjectText,
                 background:
                   "linear-gradient(to left, #D325E6 0%, 32.67543911933899%, #6E24B9 65.35087823867798%, 82.67543911933899%, #240D5D 100%)",
-              
                 backgroundSize: " 100%",
                 backgroundRepeat: "repeat",
                 backgroundClip: "text",
+                fontWeight: 600,
                 textFillColor: "transparent",
               }}
             >
@@ -107,32 +110,8 @@ const MetaVersePreviousProjects = () => {
             Purpose for Profit rewards contributors with short-term liquidity
             and bonuses
           </Typography>
-          <Box
-            sx={{
-              marginTop: {
-                xl: "300px",
-                lg: "300px",
-                md: "300px",
-                sm: "250px",
-                xs: "140px",
-              },
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "50%",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          >
-            <Carousel
-              cards={cards}
-              height="600px"  
-              margin="0 auto"
-              offset={2}
-              showArrows={false}
-            />
-          </Box>
-        </Grid> */}
+          <PreProjectCara />
+        </Grid>
       </Grid>
     </Paper>
   );
@@ -178,7 +157,7 @@ const prevProjectColorText = {
   textFillColor: "transparent",
 };
 const prevProjectMetaText = {
-  fontFamily: "LGRegular",
+  fontFamily: "Inter",
   width: {
     xl: "35%",
     lg: "35%",
@@ -200,4 +179,5 @@ const prevProjectMetaText = {
   lineHeight: "160%",
   textAlign: "center",
   color: "rgba(255, 255, 255, 0.3)",
+  mt:1
 };

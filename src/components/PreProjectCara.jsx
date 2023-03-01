@@ -18,11 +18,9 @@ const PreProject = () => {
   });
 
   return (
-    <Paper elevation={0}>
-      <Box sx={{ background: "#000" }}>
-        <CaraProject />
-      </Box>
-    </Paper>
+    <Box sx={{ background: "#000", mt: 4 }}>
+      <CaraProject />
+    </Box>
   );
 };
 

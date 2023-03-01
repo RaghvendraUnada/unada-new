@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Grid, Typography } from "@mui/material";
+import axios from "axios";
 const RevolutionSetion = () => {
+  const [jobData, setJobData] = useState();
+  const FetchJobData = async () => {
+    await axios
+      .get("/job/get_jobs")
+      .then((res) => {
+        setJobData(res.data);
+      })
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    FetchJobData();
+  }, []);
   return (
     <Grid
       container
@@ -12,7 +25,7 @@ const RevolutionSetion = () => {
     >
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
         <Typography sx={textStyle}>Be a part of a revolution</Typography>
-        <Button sx={ButtonStyle}>04 Positions open</Button>
+        <Button sx={ButtonStyle}>{jobData?.length} Positions open</Button>
       </Grid>
     </Grid>
   );

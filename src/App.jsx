@@ -201,7 +201,13 @@ function App() {
                         sx={{
                           ...ContactUsButton,
                           background: "white",
-                          display: "flex",
+                          display: {
+                            xs: "none",
+                            sm: "none",
+                            md: "flex",
+                            lg: "flex",
+                            xl: "flex",
+                          },
                           alignItems: "center",
                           justifyContent: "space-between",
                           p: "1rem",

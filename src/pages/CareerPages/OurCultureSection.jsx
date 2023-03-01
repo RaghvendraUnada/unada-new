@@ -32,19 +32,7 @@ const OurCultureSection = () => {
     >
       <Box>
         <Typography sx={headtext}>Our Culture</Typography>
-        {/* <AnimatedGradientText>#ReshapeTheFuture</AnimatedGradientText> */}
-        {/* <img src={reshapeTitle} alt="reshape" className="center-block" draggable="false" /> */}
         <Typography sx={maintext}>#ReshapeTheFuture</Typography>
-        {/* <Typography
-          className="bg-gradient-text"
-          sx={{
-            fontSize: {
-              lg: "2.2rem",
-            }, 
-          }}
-        >
-          #ReshapeTheFuture
-        </Typography>  */}
         <Typography sx={para}>
           A stream of ideas, a coruscating workplace and the hub of the next
           generation of technologies - these are the philosophies of Unada.
@@ -84,163 +72,6 @@ const OurCultureSection = () => {
             })}
           </Marquee>
         </Box>{" "}
-        {/* <Box
-          className={"culture-card"}
-          sx={{
-            paddingTop: "7rem",
-            display: "flex",
-            flexDirection: "raw",
-          }}
-        >
-          <Box
-            component="img"
-            src={Ourculture}
-            sx={{
-              border: "1px solid white",
-              width: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-              height: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-            }}
-          ></Box>
-          <Box
-            component="img"
-            src={Ourculture2}
-            sx={{
-              border: "1px solid white",
-              width: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-              height: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-            }}
-          ></Box>
-          <Box
-            component="img"
-            src={Ourculture3}
-            sx={{
-              border: "1px solid white",
-              width: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-              height: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-            }}
-          ></Box>
-          <Box
-            component="img"
-            src={Ourculture4}
-            sx={{
-              border: "1px solid white",
-              width: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-              height: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-            }}
-          ></Box>
-          <Box
-            component="img"
-            src={Ourculture}
-            sx={{
-              border: "1px solid white",
-              width: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-              height: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-            }}
-          ></Box>
-          <Box
-            component="img"
-            src={Ourculture2}
-            sx={{
-              border: "1px solid white",
-              width: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-              height: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-            }}
-          ></Box>
-          <Box
-            component="img"
-            src={Ourculture3}
-            sx={{
-              border: "1px solid white",
-              width: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-              height: {
-                xl: "100%",
-                lg: "100%",
-                md: "50%",
-                sm: "30%",
-                xs: "30%",
-              },
-            }}
-          ></Box>
-          {/* <img alt="Our Culture" src={Ourculture5} /> */}
-        {/* </Box> */}
       </Box>
     </Grid>
   );
@@ -265,15 +96,17 @@ const headtext = {
 };
 
 const maintext = {
-  fontSize: { xl: "3rem", lg: "3rem", md: "3rem", sm: "2rem", xs: "2rem" },
+  fontSize: "30px",
   fontFamily: "LGTrial",
   fontweight: "bold",
-  display: "flex",
-  justifyContent: "center",
+  // display: "flex",
+  // justifyContent: "center",
   textalign: "center",
-  background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
-  backgroundSize: "20.5%",
-  backgroundRepeat: "repeat",
+  // background: "rgb(2,0,36)",
+  background:
+    "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(47,128,237,1) 44%, rgba(45,158,224,1) 100%)",
+  backgroundSize: "100%",
+  backgroundRepeat: "repeat-x",
   backgroundClip: "text",
   textFillColor: "transparent",
 };
