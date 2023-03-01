@@ -29,8 +29,10 @@ import axios from "axios";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
+
 const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [open, setOpen] = useState(false);
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -69,7 +71,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   // const [state,setState] = useState()
 
   const apply = async () => {
-    console.log(firstName, lastName, email, experience, skill, linkedin);
     return await axios
       .post("user_data/apply", {
         UserFirstName: firstName,
@@ -190,6 +191,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     justifyContent: "center",
                     alignItems: "center",
                     marginLeft: "18px",
+                  }}
+                  onClick={() => {
+                    setOpen(true);
                   }}
                 >
                   <img
