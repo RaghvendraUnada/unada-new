@@ -50,7 +50,7 @@ video {
   .textMainClass {
     font-size: 3rem;
     letter-spacing: 3.8378px;
-    line-height: 30px;
+    /* line-height: 10px; */
   }
   .videoTag {
     margin-left: "500px";

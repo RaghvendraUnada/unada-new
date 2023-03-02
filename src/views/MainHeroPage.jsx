@@ -478,7 +478,7 @@ const MainHeroPage = () => {
                   className="textMainClass"
                   style={{
                     fontFamily: "MBFCanno",
-                    lineHeight: "70px",
+                    // lineHeight: "70px",
                   }}
                 >
                   REDEFINING TECHNOLOGIES
