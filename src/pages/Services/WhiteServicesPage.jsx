@@ -7,6 +7,7 @@ import WhiteServiceuiuxIcon from "../../assets/Images/Services/WhiteServiceuiuxI
 import Applicationimg from "../../assets/Images/Services/Application.png";
 import Websiteimg from "../../assets/Images/Services/Website.png";
 import uiuximg from "../../assets/Images/Services/UIUX.png";
+import ApplicationMobile from "../../assets/Images/Services/ApplicationMobile.png";
 import ExploreIcon from "../../assets/Images/Services/ExploreIcon.svg";
 import blackArrowImg from "../../assets/Images/Services/blackArrowImg.svg";
 import { useNavigate, Link } from "react-router-dom";
@@ -246,7 +247,7 @@ const WhiteServicesPage = () => {
         sx={{
           background: "#fff",
           height: "100%",
-          minHeight: "90vh",
+          minHeight: "10vh",
           borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
           display: {
             xl: "none",
@@ -271,27 +272,41 @@ const WhiteServicesPage = () => {
             <Paper
               sx={{
                 ...mobileActivePaper,
-                height: "100%",
-                minHeight: "60vh",
+                height: "60%",
+                minHeight: "100vh",
               }}
               onClick={() => {
                 setClick1(false);
               }}
             >
               <Box>
-                <img src={WhiteServiceAppIcon} alt="metaVerseImg" />
-                <Typography sx={mobileActivePapertext}>Application</Typography>
-                <Typography sx={mobileActivePaperMetaText}>
-                  We specialize in designing and creating innovative software
-                  applications for mobile devices. Whether you have a clear idea
-                  of what you want your app to do or you need help
-                  conceptualizing and designing a unique solution, we have the
-                  expertise to bring your vision to life
-                  <br />
-                  <Link to={"/application"} style={{ textDecoration: "none" }}>
-                    <Button sx={ButtonStyle}>View</Button>
-                  </Link>
-                </Typography>
+                <img
+                  src={ApplicationMobile}
+                  alt="metaVerseImg"
+                  style={{
+                    height: "10%",
+                    width: "100%",
+                    // mx: "auto",
+                    // marginTop: "1rem",
+                    position: "relative",
+                  }}
+                />
+                <Box sx={{}}>
+                  <Typography sx={mobileActivePapertext}>
+                    Application
+                  </Typography>
+                  <Typography sx={mobileActivePaperMetaText}>
+                    We specialize in designing and creating innovative software
+                    applications for mobile devices.
+                    <br />
+                    <Link
+                      to={"/application"}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Button sx={ButtonStyle}>View</Button>
+                    </Link>
+                  </Typography>
+                </Box>
               </Box>
             </Paper>
           ) : (
@@ -331,7 +346,16 @@ const WhiteServicesPage = () => {
                 }}
               >
                 <Box>
-                  <img src={WhiteServiceWebIcon} alt="metaVerseImg" />
+                  <img
+                    src={Websiteimg}
+                    alt="metaVerseImg"
+                    style={{
+                      height: "90%",
+                      width: "100%",
+                      marginTop: "2rem",
+                      position: "relative",
+                    }}
+                  />
                   <Typography sx={mobileActivePapertext}>Website</Typography>
                   <Typography sx={mobileActivePaperMetaText}>
                     We specialize in designing and creating innovative software
@@ -396,7 +420,16 @@ const WhiteServicesPage = () => {
                 }}
               >
                 <Box>
-                  <img src={WhiteServiceuiuxIcon} alt="metaVerseImg" />
+                  <img
+                    src={uiuximg}
+                    alt="metaVerseImg"
+                    style={{
+                      height: "70%",
+                      width: "100%",
+                      marginTop: "2rem",
+                      position: "relative",
+                    }}
+                  />
                   <Typography sx={mobileActivePapertext}>UI/UX</Typography>
                   <Typography sx={mobileActivePaperMetaText}>
                     We specialize in designing and creating innovative software
@@ -619,7 +652,7 @@ const paperTextStyle = {
 const mobileActivePaper = {
   border: "1px solid rgba(163, 163, 163, 0.3)",
   textAlign: "center",
-  padding: "2rem",
+  // padding: "2rem",
   //   bgcolor: "yellow",
   height: "100%",
 };
@@ -632,29 +665,29 @@ const mobileActivePapertext = {
   backgroundSize: " 100%",
   backgroundRepeat: "repeat",
   backgroundClip: "text",
-  textFillColor: "transparent",
+  textFillColor: " ",
   fontSize: "35px",
-  lineHeight: "45px",
+  // lineHeight: "45px",
   textAlign: "center",
   letterSpacing: 0.01,
-  marginBottom: "2rem",
+  // marginBottom: "8rem",
 };
 const mobileActivePaperMetaText = {
   fontFamily: "LGThin",
-  padding: "2rem",
+  padding: "0.5rem",
   fontStyle: "normal",
   textAlign: "center",
   fontWeight: 400,
   fontSize: {
     sm: "18px",
-    xs: "15px",
+    xs: "14px",
   },
   lineHeight: {
     sm: "30px",
     xs: "21px",
   },
   color: "black",
-  top: "25%",
+  // top: "-25%",
 };
 const ButtonStyle = {
   fontFamily: "LGRegular",

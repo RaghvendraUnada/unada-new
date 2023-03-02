@@ -163,7 +163,7 @@ const prevProjectMetaText = {
     lg: "35%",
     md: "80%",
     sm: "80%",
-    xs: "80%",
+    xs: "95%",
   },
   marginLeft: "auto",
   marginRight: "auto",
@@ -174,10 +174,10 @@ const prevProjectMetaText = {
     lg: "18px",
     md: "15px",
     sm: "14px",
-    xs: "14px",
+    xs: "8px",
   },
   lineHeight: "160%",
   textAlign: "center",
-  color: "rgba(255, 255, 255, 0.3)",
-  mt:1
+  color: " #F5F5F5",
+  mt: 1,
 };

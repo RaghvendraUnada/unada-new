@@ -12,6 +12,10 @@ const HeroPage = ({
   imgWidthMobile,
 }) => {
   const navigate = useNavigate();
+  const [active, setActive] = React.useState(false);
+  const handleClick = () => {
+    setActive(!active);
+  };
   return (
     <Paper elevation={0} sx={{ height: "auto", minHeight: "100vh" }}>
       <Grid
@@ -110,24 +114,34 @@ const HeroPage = ({
                 onFocusVisible
                 sx={{
                   borderRadius: "9rem",
-                  // background: "#0D6EFD",
                   fontSize: "1.7rem",
                   padding: "1.1rem 2.6rem",
                   fontWeight: 500,
-                  // lineHeight: "2.9rem",
                   fontFamily: "LGLight",
                   textTransform: "capitalize",
-                  // "&:focus": {
-                  //   backgroundColor: "#1565c0",
-                  //   color: "#fff",
-                  // },
+
                   "&.Mui-focused": {
                     backgroundColor: "#1565c0",
+                    color: "#000",
                   },
                 }}
               >
                 Get Started
               </Button>
+              {/* <button
+                onClick={handleClick}
+                style={{
+                  borderRadius: "9rem",
+                  fontSize: "1.7rem",
+                  padding: "1.1rem 2.6rem",
+                  fontWeight: 500,
+                  fontFamily: "LGLight",
+                  textTransform: "capitalize",
+                  background: active ? "blue" : "blue",
+                }}
+              >
+                GetStarted
+              </button> */}
             </Box>
           </Box>
         </Grid>
@@ -317,7 +331,7 @@ const HeroPage = ({
         </Grid>
         <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
           <Box
-            mb={6}
+            mb={0}
             sx={{
               // alignItems: "start",
               marginRight: {

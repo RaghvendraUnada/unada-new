@@ -636,7 +636,7 @@ const mobileActivePaperMetaText = {
   },
   color: "white",
   position: "absolute",
-  top: "25%",
+  top: "70%",
 };
 const ButtonStyle = {
   fontFamily: "LGRegular",
