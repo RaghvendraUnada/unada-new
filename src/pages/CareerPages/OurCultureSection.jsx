@@ -61,8 +61,8 @@ const OurCultureSection = () => {
           paddingTop: "7rem",
           display: "flex",
           flexDirection: "raw",
-          width: "100vw",
-          overflowX: "hidden",
+          width: "100%",
+          maxWidth: "100%",
         }}
       >
         <Box sx={{ width: "100%", height: "500px" }}>
@@ -78,7 +78,12 @@ const OurCultureSection = () => {
                   <img
                     key={idx}
                     src={client}
-                    style={{ height: "100%", width: "150%" }}
+                    style={{
+                      height: "100%",
+                      width: "99.5%",
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                    }}
                   />
                 </Grid>
               );

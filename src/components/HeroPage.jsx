@@ -425,7 +425,7 @@ const mainText = {
     lg: "4.5rem",
     md: "3.8rem",
     sm: "3.7rem",
-    xs: "2.9rem",
+    xs: "3rem",
   },
   color: "#212121",
   letterSpacing: "-0.1rem",

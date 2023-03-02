@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Typography, Stack, Box } from "@mui/material";
 import contactHero from "../../assets/Images/Contact/contactHero.svg";
+import contactHeromb from "../../assets/Images/Contact/contactHeromb.svg";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import contactTitle from "../../assets/images/new/contact.png";
@@ -29,18 +30,12 @@ const ContactHeroSection = () => {
           marginBottom: "auto",
         }}
       >
-        <Box
-          sx={{
-            height: "auto",
-            padding: "8rem",
-          }}
-        >
-          {/* <Stack sx={{ marginTop: {} }}>
+        {/* <Stack sx={{ marginTop: {} }}>
             <Typography sx={contactText}>Contact</Typography>
           </Stack> */}
-          {/* <Stack> */}
-          {/* <AnimatedGradientText>Get in Touch !</AnimatedGradientText> */}
-          {/* <Box
+        {/* <Stack> */}
+        {/* <AnimatedGradientText>Get in Touch !</AnimatedGradientText> */}
+        {/* <Box
             className="bg-gradient-text"
             sx={{
               fontSize: {
@@ -57,7 +52,7 @@ const ContactHeroSection = () => {
           >
             Get in Touch !
           </Box> */}
-          {/* <Box
+        {/* <Box
             className="content"
             display="flex"
             alignItems="center"
@@ -79,9 +74,19 @@ const ContactHeroSection = () => {
             <h2>Get in Touch !</h2>
             <h2>Get in Touch !</h2>
           </Box> */}
-          {/* <Typography sx={contactText2}>Get in Touch !</Typography> */}
-          {/* </Stack> */}
-          {/* <img src={contactTitle} alt="contact" width="70%" draggable="false" /> */}
+        {/* <Typography sx={contactText2}>Get in Touch !</Typography> */}
+        {/* </Stack> */}
+        {/* <img src={contactTitle} alt="contact" width="70%" draggable="false" /> */}
+        <Box
+          sx={{
+            height: "auto",
+            paddingY: "8rem",
+            paddingX: "3rem",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+          }}
+        >
           <Stack sx={{ marginTop: {} }}>
             <Typography sx={contactText}>Contact</Typography>
           </Stack>
@@ -91,15 +96,51 @@ const ContactHeroSection = () => {
         </Box>
       </Grid>
       <Grid item xl={6} lg={6} md={6} xs={12} sm={12}>
-        <Box sx={{ width: "100%", height: "100%" }}>
-          <img
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            display: {
+              xl: "block",
+              lg: "block",
+              md: "block",
+              sm: "none",
+              xs: "none",
+            },
+          }}
+        >
+          <Box
+            component="img"
             src={contactHero}
             alt="contactHero"
-            style={{
+            sx={{
               width: "100%",
               height: "auto",
               objectFit: "contain",
-              border: "0px",
+            }}
+          />
+        </Box>
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            display: {
+              xl: "none",
+              lg: "none",
+              md: "none",
+              sm: "block",
+              xs: "block",
+            },
+          }}
+        >
+          <Box
+            component="img"
+            src={contactHeromb}
+            alt="contactHero"
+            sx={{
+              width: "100%",
+              height: "auto",
+              objectFit: "contain",
             }}
           />
         </Box>
@@ -120,8 +161,8 @@ const contactText = {
     xl: "left",
     lg: "left",
     md: "left",
-    sm: "center",
-    xs: "center",
+    sm: "left",
+    xs: "left",
   },
   lineHeight: { xl: "5rem", lg: "5rem", md: "4rem", sm: "4rem", xs: "4rem" },
 };

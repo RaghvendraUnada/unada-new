@@ -54,8 +54,8 @@ const PreProject = () => {
             xl: "2rem",
             lg: "2rem",
             md: "0rem",
-            sm: "4rem",
-            xs: "4rem",
+            // sm: "4rem",
+            // xs: "4rem",
           },
         }}
       >

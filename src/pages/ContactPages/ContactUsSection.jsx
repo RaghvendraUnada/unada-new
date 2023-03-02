@@ -61,7 +61,9 @@ const ContactUsSection = () => {
           </Typography>
         </Box>
         <Box>
-          <Typography sx={labeltext}>Name:</Typography>
+          <Typography sx={labeltext}>
+            Name:<span style={{ color: "#FF5F5F" }}>*</span>
+          </Typography>
           <Box sx={box}>
             <input
               id="standard-textarea"
@@ -73,7 +75,10 @@ const ContactUsSection = () => {
                 height: "60px",
                 width: "50%",
                 color: "black",
-                border: "2ox solid #A7A7A7",
+                borderBottom: "2px solid #A7A7A7",
+                borderTop: "none",
+                borderLeft: "none",
+                borderRight: "none",
               }}
               value={firstname}
               onChange={(e) => setFirstName(e.target.value)}
@@ -89,7 +94,10 @@ const ContactUsSection = () => {
                 height: "60px",
                 width: "50%",
                 color: "black",
-                border: "2ox solid #A7A7A7",
+                borderBottom: "2px solid #A7A7A7",
+                borderTop: "none",
+                borderLeft: "none",
+                borderRight: "none",
               }}
               value={lastname}
               onChange={(e) => setLastName(e.target.value)}
@@ -98,7 +106,9 @@ const ContactUsSection = () => {
           </Box>
         </Box>
         <Box>
-          <Typography sx={labeltext}>Email:</Typography>
+          <Typography sx={labeltext}>
+            Email:<span style={{ color: "#FF5F5F" }}>*</span>
+          </Typography>
           <Box sx={box}>
             <input
               id="standard-textarea"
@@ -109,7 +119,10 @@ const ContactUsSection = () => {
                 height: "60px",
                 width: "100%",
                 color: "black",
-                border: "2ox solid #A7A7A7",
+                borderBottom: "2px solid #A7A7A7",
+                borderTop: "none",
+                borderLeft: "none",
+                borderRight: "none",
               }}
               value={email}
               onChange={(e) => setEmail(e.target.value)}

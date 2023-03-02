@@ -34,6 +34,7 @@ function UnadalifeSection() {
               width: "100%",
               height: "auto",
               objectFit: "contain",
+              bgcolor: "red",
             }}
           />
           <Typography sx={text}>Unada’s life</Typography>

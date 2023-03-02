@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const DevelopmentStack = () => {
   const [numberOne, setNumberOne] = useState(1);
   const [boxtextOne, setBoxtextOne] = useState("Application Development");
-  const [boxTitle, setBoxTitle] = useState("Ultra-flexible logistics");
+  const [boxTitle, setBoxTitle] = useState("Application Development");
   const [Click1, setClick1] = useState(true);
   const [Click2, setClick2] = useState(false);
   const [Click3, setClick3] = useState(false);

@@ -53,21 +53,45 @@ const PositionsDev = () => {
             },
           }}
         >
-          <Typography sx={{ ...textStyle1, color: "#fff" }}>Open</Typography>
-          <Typography
+          <Box
             sx={{
-              ...textStyle1,
-              background:
-                "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
-              backgroundSize: " 100%",
-              backgroundRepeat: "repeat",
-              backgroundClip: "text",
-              textFillColor: "transparent",
-              // textAlign: "center",
+              display: "flex",
+              width: "80%",
+              flexDirection: {
+                xl: "column",
+                lg: "column",
+                md: "column",
+                sm: "row",
+                xs: "row",
+              },
+              justifyContent: "center",
+              alignItems: {
+                xl: "start",
+                lg: "start",
+                md: "start",
+                sm: "center",
+                xs: "center",
+              },
+              gap: "1rem",
             }}
           >
-            Positions
-          </Typography>
+            <Typography sx={{ ...textStyle1, color: "#fff" }}>Open</Typography>
+            <Typography
+              sx={{
+                ...textStyle1,
+                background:
+                  "linear-gradient(90deg, #091E3A -30%, #2F80ED 50%, #2D9EE0 100%);",
+                backgroundSize: " 100%",
+                backgroundRepeat: "repeat",
+                backgroundClip: "text",
+                textFillColor: "transparent",
+                // textAlign: "center",
+              }}
+            >
+              Positions
+            </Typography>
+          </Box>
+
           {/* <AnimatedGradientText> Positions</AnimatedGradientText> */}
           {/* <img
             src={positionTitle}
@@ -371,7 +395,7 @@ const textStyle1 = {
     lg: "64px",
     md: "50px",
     sm: "42px",
-    xs: "30px",
+    xs: "35px",
   },
   lineHeight: {
     xl: "76px",

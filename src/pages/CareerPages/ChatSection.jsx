@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Typography, Box } from "@mui/material";
 import ChatUsCareer from "../CareerPages/ChatUsCareer";
 import { AiFillInstagram } from "react-icons/ai";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
 const ChatSection = () => {
   return (
@@ -77,7 +78,7 @@ const ChatSection = () => {
           >
             <BsFacebook size={19} />
             <AiFillInstagram size={23} />
-            <AiFillInstagram size={23} />
+            <LinkedInIcon size={23} sx={{ fontSize: "23px" }} />
             <BsTwitter size={19} />
           </Box>
           <Box sx={{ marginTop: "5rem" }}>

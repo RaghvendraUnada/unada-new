@@ -15,6 +15,7 @@ const TechStack = (props) => {
           height: "100%",
           boxShadow: "rgba(0, 0, 0, 0.0364)",
           borderRadius: "0px",
+          // bgcolor: "red",
         }}
       >
         <Grid container>
@@ -25,6 +26,7 @@ const TechStack = (props) => {
                 justifyContent: "center",
                 textAlign: "center",
                 boxShadow: "rgba(0, 0, 0, 0.0364)",
+                // bgcolor: "red",
               }}
             >
               <Typography sx={mainText}>{props.text1} stack</Typography>
@@ -34,9 +36,10 @@ const TechStack = (props) => {
         <Paper
           elevation={0}
           sx={{
-            marginTop: "1rem",
-            marginBottom: "2rem",
+            // marginTop: "1rem",
+            // marginBottom: "2rem",
             borderTop: "0.1px solid rgba(0, 0, 0, 0.0364)",
+            // bgcolor: "red",
           }}
         >
           <Grid
@@ -55,7 +58,7 @@ const TechStack = (props) => {
           >
             <TechMarque Tech={storeData} />
           </Grid>
-        </Paper> 
+        </Paper>
         <Box
           sx={{
             display: {

@@ -118,7 +118,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     // });
     var formdata = new FormData();
     formdata.append("UserLastName", firstName);
-    formdata.append("coverLetter", coverLetter[0]);
+    formdata.append("coverLetter", file[0]);
     formdata.append("resume", file[0]);
     formdata.append("UserFirstName", lastName);
     formdata.append("UserEmail", email);
@@ -146,15 +146,23 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     },
     {
       id: 3,
-      skillName: "Js",
+      skillName: "JavaScript",
     },
     {
       id: 4,
-      skillName: "MongoDb",
+      skillName: "Node JS",
     },
     {
       id: 5,
-      skillName: "Node.js",
+      skillName: "Express JS",
+    },
+    {
+      id: 6,
+      skillName: "ReactJS",
+    },
+    {
+      id: 7,
+      skillName: "MongoDB",
     },
   ];
   // const selectedSkill = [];
@@ -397,13 +405,16 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   gap: "2rem",
                 }}
               >
-                <Typography sx={labeltext}>Name:</Typography>
+                <Typography sx={labeltext}>
+                  Name:<span style={{ color: "#FF5F5F" }}>*</span>
+                </Typography>
 
                 <Box
                   sx={{
                     display: "flex",
                     justifyContent: "center",
                     gap: 3,
+                    width: "100%",
                   }}
                 >
                   <input
@@ -435,7 +446,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     required
                   />
                 </Box>
-                <Typography sx={labeltext}>Email:</Typography>
+                <Typography sx={labeltext}>
+                  Email:<span style={{ color: "#FF5F5F" }}>*</span>
+                </Typography>
                 <Box
                   sx={{
                     display: "flex",
@@ -459,23 +472,48 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     required
                   />
                 </Box>
-                <Typography sx={labeltext}>Experience:</Typography>
+                <Typography sx={labeltext}>
+                  Experience:<span style={{ color: "#FF5F5F" }}>*</span>
+                </Typography>
                 <Box
                   sx={{
                     display: "flex",
-                    justifyContent: "left",
+                    justifyContent: {
+                      xl: "left",
+                      lg: "left",
+                      md: "left",
+                      sm: "left",
+                      xs: "flex-start",
+                    },
                     alignItems: "center",
-                    ml: "6rem",
+                    ml: {
+                      xl: "6rem",
+                      lg: "6rem",
+                      md: "8rem",
+                      sm: "6rem",
+                      xs: "2rem",
+                    },
                   }}
                 >
-                  <FormControl sx={{ width: "40%" }}>
+                  <FormControl
+                    sx={{
+                      width: {
+                        xl: "50%",
+                        lg: "50%",
+                        md: "50%",
+                        sm: "60%",
+                        xs: "90%",
+                      },
+                    }}
+                  >
+                    {/* <InputLabel htmlFor="name-multiple">Select Year</InputLabel> */}
                     <Select
                       sx={{
                         color: "white",
                         borderBottom: "1px solid white",
-                        "& .Mui-focused": {
-                          border: "black",
-                        },
+                        // "& .Mui-focused": {
+                        //   border: "black",
+                        // },
                       }}
                       value={experience}
                       onChange={(e) => setExperience(e.target.value)}
@@ -493,11 +531,30 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 <Box
                   sx={{
                     display: "flex",
-                    justifyContent: "left",
+                    justifyContent: {
+                      xl: "left",
+                      lg: "left",
+                      md: "left",
+                      sm: "left",
+                      xs: "flex-start",
+                    },
                     alignItems: "center",
-                    ml: "6rem",
-                    borderBottom: "2px solid #fff",
-                    width: "40%",
+                    ml: {
+                      xl: "6rem",
+                      lg: "6rem",
+                      md: "8rem",
+                      sm: "6rem",
+                      xs: "2rem",
+                    },
+                    borderBottom: "1px solid #FFFFFF",
+                    width: {
+                      xl: "50%",
+                      lg: "50%",
+                      md: "50%",
+                      sm: "60%",
+                      xs: "90%",
+                    },
+                    overflow: "scroll",
                   }}
                 >
                   {selectedSkill.map((el, idx) => {
@@ -506,14 +563,32 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         <Box
                           sx={{
                             border: "2px solid grey",
-                            borderRadius: "30px",
-                            width: "auto",
-                            minWidth: "15%",
+                            borderRadius: {
+                              xl: "30px",
+                              lg: "30px",
+                              md: "30px",
+                              sm: "15px",
+                              xs: "15px",
+                            },
+                            width: {
+                              xl: "35%",
+                              lg: "35%",
+                              md: "30%",
+                              sm: "40%",
+                              xs: "60%",
+                            },
+                            minWidth: {
+                              xl: "35%",
+                              lg: "35%",
+                              md: "30%",
+                              sm: "40%",
+                              xs: "60%",
+                            },
                             height: "auto",
                             color: "#fff",
                             textAlign: "center",
                             p: 1,
-                            mb: 2,
+                            mb: 1,
                             display: "flex",
                             justifyContent: "center",
                             gap: "20px",
@@ -535,7 +610,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                             onClick={() => removeElement(idx)}
                             sx={{
                               color: "white",
-                              mt: 0.3,
+                              mt: 0.2,
                               fontSize: "15px",
                               textAlign: "left",
                               cursor: "pointer",
@@ -546,14 +621,29 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     );
                   })}
                 </Box>
-                <Box
+                <Grid
+                  container
                   sx={{
-                    width: "85%",
-                    mx: "auto",
+                    width: {
+                      xl: "80%",
+                      lg: "80%",
+                      md: "50%",
+                      sm: "50%",
+                      xs: "60%",
+                    },
+                    // mx: "auto",
+                    ml: {
+                      xl: "6rem",
+                      lg: "6rem",
+                      md: "8rem",
+                      sm: "6rem",
+                      xs: "4rem",
+                    },
                     display: "flex",
                     justifyContent: "flex-start",
                     gap: "20px",
                     cursor: "pointer",
+                    // bgcolor: "red",
                   }}
                   // onClick={listOfSkill}
                 >
@@ -563,9 +653,15 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         <Box
                           sx={{
                             border: "2px solid grey",
-                            borderRadius: "20px",
+                            borderRadius: "15px",
                             width: "auto",
-                            minWidth: "15%",
+                            minWidth: {
+                              xl: "15%",
+                              lg: "15%",
+                              md: "15%",
+                              sm: "15%",
+                              xs: "40%",
+                            },
                             height: "auto",
                             color: "#fff",
                             textAlign: "center",
@@ -588,7 +684,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       </>
                     );
                   })}
-                </Box>
+                </Grid>
               </Grid>
               <Grid
                 item
@@ -612,7 +708,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     flexDirection: "column",
                   }}
                 >
-                  <Typography sx={labeltext}>Linked in url:</Typography>
+                  <Typography sx={labeltext}>
+                    Linked in url:<span style={{ color: "#FF5F5F" }}>*</span>
+                  </Typography>
                   <Box
                     sx={{
                       display: "flex",
@@ -635,7 +733,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       onChange={(e) => setLinkedin(e.target.value)}
                     />
                   </Box>
-                  <Typography sx={labeltext}>Upload your resume:</Typography>
+                  <Typography sx={labeltext}>
+                    Upload your resume:
+                    <span style={{ color: "#FF5F5F" }}>*</span>
+                  </Typography>
                   <Box
                     sx={{
                       display: "flex",
@@ -667,10 +768,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         color: "black",
                         background: "#FAFAFA",
                         borderRadius: "none",
-                        // "&:hover": {
-                        //   background: "#FAFAFA",
-                        //   color: "white",
-                        // },
+                        "&:hover": {
+                          background: "#FAFAFA",
+                          // color: "white",
+                        },
                       }}
                       variant="contained"
                       onClick={() => {
@@ -738,10 +839,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         ref={uploadFileRef}
                         style={{ display: "none" }}
                         onChange={(e) => {
-                          setCoverLetter(e.target.files);
+                          setFile(e.target.files);
                         }}
                       />
-                      {coverLetter?.length}
+                      {file?.length}
                       <Button
                         variant="outlined"
                         component="label"
@@ -788,9 +889,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 mt: {
                   xl: "0px",
                   lg: "5rem",
-                  md: "6rem",
-                  sm: "6rem",
-                  xs: "6rem",
+                  md: "8rem",
+                  sm: "8rem",
+                  xs: "8rem",
                 },
               }}
             >
