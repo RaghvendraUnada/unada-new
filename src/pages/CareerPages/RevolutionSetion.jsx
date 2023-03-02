@@ -20,7 +20,8 @@ const RevolutionSetion = () => {
       sx={{
         background: "white",
         textAlign: "center",
-        padding: "11.2rem 8rem ",
+        // padding: "11.2rem 8rem ",
+        p: { xl: 10, lg: 10, md: 8, sm: 5, xs: 3 },
       }}
     >
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
@@ -35,6 +36,7 @@ export default RevolutionSetion;
 const textStyle = {
   fontFamily: "LGTrial",
   fontStyle: "normal",
+  // width: "100%",
   fontWeight: 500,
   fontSize: {
     xl: "80px",

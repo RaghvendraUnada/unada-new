@@ -102,7 +102,7 @@ const headtext = {
   justifyContent: "center",
   textalign: "center",
   fontfamily: "LGTrial",
-  fontweight: 500,
+  fontweight: 900,
   fontSize: { xl: "7rem", lg: "7rem", md: "5rem", sm: "5rem", xs: "5rem" },
   color: "#000000",
   marginTop: "5rem",
