@@ -618,6 +618,7 @@ const ButtonStyle = {
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   "&:hover": {
     bgcolor: "transparent",
+    textDecoration: "line-through",
   },
   ml: "2.3%",
 };
