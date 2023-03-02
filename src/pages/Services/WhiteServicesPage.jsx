@@ -665,7 +665,7 @@ const mobileActivePapertext = {
   backgroundSize: " 100%",
   backgroundRepeat: "repeat",
   backgroundClip: "text",
-  textFillColor: "transparent",
+  textFillColor: " ",
   fontSize: "35px",
   // lineHeight: "45px",
   textAlign: "center",

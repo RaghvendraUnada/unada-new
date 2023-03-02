@@ -4,8 +4,6 @@
   position: relative;
 } */
 
-
-
 .text-box {
   display: inline-block;
   position: relative;
@@ -54,7 +52,11 @@ video {
     letter-spacing: 3.8378px;
     line-height: 30px;
   }
+  .videoTag {
+    margin-left: "500px";
+  }
 }
+
 .textMainClassGradient {
   background: linear-gradient(to right, #0038ff 0%, #ad00ff 100%);
   -webkit-background-clip: text;

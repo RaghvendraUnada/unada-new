@@ -21,6 +21,7 @@ import { HiArrowRight } from "react-icons/hi";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
+import "./HeroPageCss.css";
 
 const VideoBox = React.lazy(() => import("./VideoBox"));
 
@@ -70,6 +71,8 @@ const MainHeroPage = () => {
         bgcolor: "transparent",
         position: "relative",
         boxShadow: "none",
+        maxWidth: "100vw",
+        overflowX: "hidden",
       }}
     >
       <motion.div
@@ -425,21 +428,42 @@ const MainHeroPage = () => {
               }}
               elevation={0}
             >
-              <video
-                className="videoTag"
-                autoPlay
-                loop
-                muted
-                style={{
-                  height: "100%",
-                  minHeight: "90vh",
-                  maxHeight: "90vh",
-                  width: "100%",
-                  position: "relative",
-                }}
+              <div
+                // sx={{
+                //   position: "relative",
+                //   width: {
+                //     xl: "1000px",
+                //     lg: "1000px",
+                //     md: "900px",
+                //     sm: "850px",
+                //     xs: "700px",
+                //   },
+                //   ml: {
+                //     xl: "auto",
+                //     lg: "auto",
+                //     md: "auto",
+                //     sm: "0%",
+                //     xs: "-60%",
+                //   },
+                //   mr: "auto",
+                // }}
+                className="VideoPositioning"
               >
-                <source src={UnadaVid} type="video/mp4" />
-              </video>
+                <video
+                  className="videoTag"
+                  autoPlay
+                  loop
+                  muted
+                  style={{
+                    height: "100%",
+                    minHeight: "90vh",
+                    maxHeight: "90vh",
+                    width: "100%",
+                  }}
+                >
+                  <source src={UnadaVid} type="video/mp4" />
+                </video>
+              </div>
               <Box
                 sx={{
                   width: "100%",
