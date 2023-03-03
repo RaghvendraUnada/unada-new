@@ -4,6 +4,7 @@ import ServicesPage from "../Services/ServicesPage";
 import { HiArrowRight } from "react-icons/hi";
 import styles from "./DevStack.module.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const DevelopmentStack = () => {
   const [numberOne, setNumberOne] = useState(1);
   const [boxtextOne, setBoxtextOne] = useState("Application Development");
@@ -235,10 +236,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="application">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
@@ -303,10 +306,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="web">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
@@ -369,10 +374,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="ui">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
@@ -435,10 +442,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="metaVerse">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
@@ -504,10 +513,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="arvr">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
@@ -573,10 +584,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="blockchain">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
