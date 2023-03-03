@@ -48,7 +48,7 @@ const ContactUsSection = () => {
           height: "600px",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "left",
+          justifyContent: "center",
           textAlign: "center",
           //   bgcolor: "red",
         }}
@@ -170,11 +170,11 @@ const contacttext = {
   fontStyle: "normal",
   fontWeight: "500",
   fontSize: {
-    xs: "3rem",
-    sm: "3rem",
-    md: "4rem",
-    lg: "4.2rem",
-    xl: "4.2rem",
+    xs: "4rem",
+    sm: "4rem",
+    md: "5rem",
+    lg: "5.2rem",
+    xl: "5.2rem",
   },
   color: "#0D0D0D",
 };
@@ -236,7 +236,7 @@ const ButtonStyle1 = {
   color: "black",
   "&:hover": {
     opacity: 1,
-    color: "#fff",
-    background: "black",
+    // color: "black",
+    // background: "black",
   },
 };
