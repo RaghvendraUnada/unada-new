@@ -682,7 +682,7 @@ const OpenDetails = (props) => {
         </Box>
         <Box>
           <Typography sx={OpenDetailsBottomTextStyle}>{props.desc}</Typography>
-          <Link to={props.url}>
+          <a href={props.url}>
             <Typography
               sx={{
                 fontSize: {
@@ -711,7 +711,7 @@ const OpenDetails = (props) => {
                 }}
               />
             </Typography>
-          </Link>
+          </a>
         </Box>
       </Paper>
     </motion.div>
