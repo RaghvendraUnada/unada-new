@@ -109,8 +109,8 @@ const HeroPage = ({
                 },
               }}
             >
-              <Link
-                to="contact"
+              <a
+                href="contact"
                 // onClick={() => {
                 //   window.scrollTo({ top: 800, behavior: "smooth" });
                 // }}
@@ -134,7 +134,7 @@ const HeroPage = ({
                 >
                   Get Started
                 </Button>
-              </Link>
+              </a>
               {/* <button
                 onClick={handleClick}
                 style={{
