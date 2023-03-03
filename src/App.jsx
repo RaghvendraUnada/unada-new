@@ -330,6 +330,87 @@ function App() {
                   </ListItem>
                   <ListItem
                     sx={{
+                      cursor: "pointer",
+                      borderBottom: "1px solid #DBDBDB",
+                      "&:hover": {
+                        borderBottom: "1px solid #000",
+                        borderTop: "1px solid #000",
+                      },
+                    }}
+                  >
+                    <Link
+                      onClick={() => {
+                        setOpen(false);
+                      }}
+                      className={
+                        location === "/whiteService"
+                          ? HeaderStyles.navbarListTextActive
+                          : HeaderStyles.navbarListText
+                      }
+                      to="/whiteService"
+                    >
+                      <Typography
+                        sx={{
+                          fontSize: "23px",
+                          fontWeight: "500",
+                        }}
+                      >
+                        {location === "/whiteService" ? (
+                          <AnimatedGradientText>
+                            <Typography
+                              sx={{
+                                fontSize: {
+                                  xl: "65px",
+                                  lg: "65px",
+                                  md: "55px",
+                                  sm: "35px",
+                                  xs: "21px",
+                                },
+                              }}
+                            >
+                              Our Disruptive Technologies
+                            </Typography>
+                          </AnimatedGradientText>
+                        ) : (
+                          "Our Disruptive Technologies"
+                        )}
+                      </Typography>
+                    </Link>
+                  </ListItem>
+                  <ListItem
+                    sx={{
+                      // mt: 1,
+                      cursor: "pointer",
+                      borderBottom: "1px solid #DBDBDB",
+                      "&:hover": {
+                        borderBottom: "1px solid #000",
+                        borderTop: "1px solid #000",
+                      },
+                    }}
+                  >
+                    <Link
+                      onClick={() => {
+                        setOpen(false);
+                      }}
+                      className={
+                        location === "/service"
+                          ? HeaderStyles.navbarListTextActive
+                          : HeaderStyles.navbarListText
+                      }
+                      to="/service"
+                      // style={{ margin: "auto" }}
+                    >
+                      {location === "/service" ? (
+                        <AnimatedGradientText>
+                          Our Services
+                        </AnimatedGradientText>
+                      ) : (
+                        "Our Services"
+                      )}
+                    </Link>
+                  </ListItem>
+                  <ListItem
+                    sx={{
                       // mt: 1,
                       cursor: "pointer",
                       borderBottom: "1px solid #DBDBDB",
@@ -481,12 +562,15 @@ const AnimatedGradientText = styled.h1`
     lineheight: 65px;
   }
   @media (max-width: 768px) {
+    fontsize: 25px;
     lineheight: 55px;
   }
   @media (max-width: 576px) {
+    fontsize: 23px;
     lineheight: 50px;
   }
   @media (max-width: 320px) {
+    fontsize: 23px;
     lineheight: 45px;
   }
 `;

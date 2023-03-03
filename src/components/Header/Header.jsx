@@ -185,7 +185,7 @@ const Header = () => {
           marginTop: open ? "0vh" : "-100vh",
           transition: "all 1s ",
 
-          bgcolor: open ? "#fff" : "transparent",
+          // bgcolor: open ? "#fff" : "transparent",,
         }}
         elevation={0}
       >

@@ -709,6 +709,11 @@ const ButtonStyle = {
 
   marginTop: "2rem",
   opacity: 0.5,
+  "&:hover": {
+    background: "#000",
+    color: "#fff",
+    opacity: 1,
+  },
 };
 const adjGrid = {
   opacity: 0.5,
