@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Typography, Box } from "@mui/material";
 import ChatUsCareer from "../CareerPages/ChatUsCareer";
 import { AiFillInstagram } from "react-icons/ai";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import DoorSlidingSharpIcon from "@mui/icons-material/DoorSlidingSharp";
+import GlassDoorIcon from "../../assets/Images/Career/glassdoor.svg";
 const ChatSection = () => {
   return (
     <Grid
@@ -76,17 +79,25 @@ const ChatSection = () => {
               gap: "20px",
             }}
           >
-            <BsFacebook size={19} />
-            <AiFillInstagram size={23} />
-            <LinkedInIcon size={23} sx={{ fontSize: "23px" }} />
-            <BsTwitter size={19} />
+            {/* <BsFacebook size={19} /> */}
+            <AiFillInstagram size={24} />
+            <LinkedInIcon size={24} sx={{ fontSize: "24px" }} />
+            {/* <BsTwitter size={19} /> */}
+            <YouTubeIcon size={24} sx={{ fontSize: "24px" }} />
+            {/* <DoorSlidingSharpIcon size={23} sx={{ fontSize: "23px" }} /> */}
+            <Box component="img" src={GlassDoorIcon} alt="glassdoor" />
           </Box>
           <Box sx={{ marginTop: "5rem" }}>
-            <Typography sx={SubHeadText}>Find us</Typography>
-            <Typography sx={metaTextStyle2}>
-              550 Iscon Emporio, Besides StarBazaar, Jodhpur Cross Rd,
-              Satellite,Ahmedabad, Gujarat 380015
-            </Typography>
+            <a
+              href="https://www.google.com/maps?q=552,+Pandurang+Shashtri+Marg,+Beside+Star+Bazaar,+Satellite,+Ahmedabad,+Gujarat+380015"
+              target="_blank"
+            >
+              <Typography sx={SubHeadText}>Find us</Typography>
+              <Typography sx={metaTextStyle2}>
+                550 Iscon Emporio, Besides StarBazaar, Jodhpur Cross Rd,
+                Satellite,Ahmedabad, Gujarat 380015
+              </Typography>
+            </a>
           </Box>
         </Box>
       </Grid>

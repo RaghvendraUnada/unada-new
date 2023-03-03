@@ -12,6 +12,7 @@ import MobileMetaImg from "../../assets/Images/Services/Metaverse.png";
 import ExploreIcon from "../../assets/Images/Services/ExploreIcon.svg";
 import BigArrowImg from "../../assets/Images/Services/BigArrowImg.svg";
 import styles from "./Service.module.css";
+import EastSharpIcon from "@mui/icons-material/EastSharp";
 
 import { useNavigate, Link } from "react-router-dom";
 const ServicesPage = () => {
@@ -22,6 +23,9 @@ const ServicesPage = () => {
   const [click1, setClick1] = useState(true);
   const [click2, setClick2] = useState(false);
   const [click3, setClick3] = useState(false);
+  const [icon1, setIcon1] = useState("White");
+  const [icon2, setIcon2] = useState("White");
+  const [icon3, setIcon3] = useState("White");
 
   return (
     <>
@@ -68,12 +72,24 @@ const ServicesPage = () => {
                     Imagine a world where anything is possible! At Unada
                   </Typography>
                   <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
-                    <img
+                    {/* <img
                       src={BigArrowImg}
                       className={styles.BigArrowImg}
                       alt="nextImg"
                       // style={{ height: "100px", width: "100" }}
-                    />
+                    /> */}
+                    <Box
+                      className={styles.BigArrowImg}
+                      onMouseOut={() => setIcon1("white")}
+                      onMouseOver={() => setIcon1("black")}
+                      sx={{
+                        "&:hover": {
+                          color: "black",
+                        },
+                      }}
+                    >
+                      <EastSharpIcon fontSize="large" sx={{ color: icon1 }} />
+                    </Box>
                   </Link>
                 </Box>
               </>
@@ -116,12 +132,24 @@ const ServicesPage = () => {
                     big hit.
                   </Typography>
                   <Link to={"/ArVr"} style={{ textDecoration: "none" }}>
-                    <img
+                    {/* <img
                       src={BigArrowImg}
                       alt="nextImg"
                       className={styles.BigArrowImg}
                       // style={{ height: "100px", width: "100px" }}
-                    />
+                    /> */}
+                    <Box
+                      className={styles.BigArrowImg}
+                      onMouseOut={() => setIcon2("white")}
+                      onMouseOver={() => setIcon2("black")}
+                      sx={{
+                        "&:hover": {
+                          color: "black",
+                        },
+                      }}
+                    >
+                      <EastSharpIcon fontSize="large" sx={{ color: icon2 }} />
+                    </Box>
                   </Link>
                 </Box>
               </>
@@ -163,12 +191,24 @@ const ServicesPage = () => {
                     Our services include custom blockchain and web3 development.
                   </Typography>
                   <Link to={"/blockchain"} style={{ textDecoration: "none" }}>
-                    <img
+                    {/* <img
                       src={BigArrowImg}
                       alt="nextImg"
                       className={styles.BigArrowImg}
                       // style={{ height: "100px", width: "100px" }}
-                    />
+                    /> */}
+                    <Box
+                      className={styles.BigArrowImg}
+                      onMouseOut={() => setIcon3("white")}
+                      onMouseOver={() => setIcon3("black")}
+                      sx={{
+                        "&:hover": {
+                          color: "black",
+                        },
+                      }}
+                    >
+                      <EastSharpIcon fontSize="large" sx={{ color: icon3 }} />
+                    </Box>
                   </Link>
                 </Box>
               </>

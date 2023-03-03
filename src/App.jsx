@@ -196,7 +196,7 @@ function App() {
                         Close
                       </Button>
                     )}
-                    <Link to={"/contact"}>
+                    {/* <Link to={"/contact"}>
                       <Box
                         sx={{
                           ...ContactUsButton,
@@ -235,7 +235,7 @@ function App() {
                           }}
                         />
                       </Box>
-                    </Link>
+                    </Link> */}
                   </Paper>
                 </Paper>
               ) : null}
