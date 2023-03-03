@@ -893,6 +893,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   sm: "8rem",
                   xs: "8rem",
                 },
+                p: 2,
               }}
             >
               <Button sx={ButtonStyle1} onClick={apply} type="submit">
@@ -949,11 +950,11 @@ const ButtonStyle1 = {
     xs: "8px",
   },
   padding: {
-    xl: "0.3rem 2rem",
-    lg: "0.3rem 2rem",
-    md: "0.3rem 2rem",
-    sm: "0.3rem 2rem",
-    xs: "0.3rem 2rem",
+    xl: "0.8rem 5.5rem",
+    lg: "0.8rem 5.5rem",
+    md: "0.8rem 5.5rem",
+    sm: "0.8rem 5.5rem",
+    xs: "0.8rem 5.5rem",
   },
   background: "transparent",
   display: "flex",

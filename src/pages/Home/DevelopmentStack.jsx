@@ -4,6 +4,7 @@ import ServicesPage from "../Services/ServicesPage";
 import { HiArrowRight } from "react-icons/hi";
 import styles from "./DevStack.module.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const DevelopmentStack = () => {
   const [numberOne, setNumberOne] = useState(1);
   const [boxtextOne, setBoxtextOne] = useState("Application Development");
@@ -17,12 +18,14 @@ const DevelopmentStack = () => {
   const [boxDesc, setDesc] = useState(
     "Adapt your warehousing capacities and network in real time. SpaceFill’s flexible model that enables you to benefit unlimited storage capacity within the connected network."
   );
+  const [url, setUrl] = useState("/application");
 
-  const FunctionOne = (id, text, title, desc) => {
+  const FunctionOne = (id, text, title, desc, url) => {
     setNumberOne(id);
     setBoxtextOne(text);
     setBoxTitle(text);
     setDesc(desc);
+    setUrl(url);
   };
 
   const DataArray = [
@@ -31,42 +34,42 @@ const DevelopmentStack = () => {
       text: "Application Development",
       title: "Ultra-flexible logistics",
       desc: "Adapt your warehousing capacities and network in real time. SpaceFill’s flexible model that enables you to benefit unlimited storage capacity within the connected network.",
-      url: "View",
+      url: "/application",
     },
     {
       id: 2,
       text: "Website Development",
       title: "Ultra-flexible logistics",
       desc: "Unada specializes in web design, development, and maintenance. Our team of experienced developers, designers, and project managers can help your business create a powerful online presence be it in the form e-commerce solutions or custom development.",
-      url: "View",
+      url: "/web",
     },
     {
       id: 3,
       text: "UI / UX Designing",
       title: "Ultra-flexible logistics",
       desc: "We specialize in designing intuitive and user-friendly interfaces for websites, applications, and other digital products. Our team of experienced designers and researchers are experts in creating user experiences that are both functional and aesthetically pleasing. ",
-      url: "vIEW",
+      url: "/ui",
     },
     {
       id: 4,
       text: "Metaverse",
       title: "Ultra-flexible logistics",
       desc: "Imagine a world where anything is possible! At Unada, we create immersive virtual worlds for users to explore and customize. Our team of experienced developers and designers is passionate about creating the most engaging virtual experiences possible.",
-      url: "vIEW",
+      url: "/Metaverse",
     },
     {
       id: 5,
       text: "AR / VR",
       title: "Ultra-flexible logistics",
       desc: "Whether you're a game developer looking to create the next big hit, a business owner looking for a unique way to engage with customers, or just someone who loves exploring new worlds, Unada’s AR/VR has something for you. We offer a range of services, including custom AR and VR development.",
-      url: "vIEW",
+      url: "/arvr",
     },
     {
       id: 6,
       text: "Blockchain",
       title: "Ultra-flexible logistics",
       desc: "Our services include custom blockchain and web3 development, consulting on blockchain and web3 strategy and implementation, and training on how to use these technologies. We work with clients from a variety of industries, including finance, supply chain, healthcare, and more, to help them improve security, efficiency, and transparency in their operations.",
-      url: "vIEW",
+      url: "/blockchain",
     },
   ];
 
@@ -131,9 +134,10 @@ const DevelopmentStack = () => {
           </Grid> */}
 
           <Grid item xl={6} lg={6} md={6}>
-            <OpenDetails title={boxTitle} desc={boxDesc} />
+            <OpenDetails title={boxTitle} desc={boxDesc} url={url} />
           </Grid>
           {DataArray.map((res, idx) => {
+            console.log(res.url);
             if (res.id) {
               return (
                 <Grid
@@ -143,7 +147,7 @@ const DevelopmentStack = () => {
                   lg={1}
                   md={1}
                   onClick={() =>
-                    FunctionOne(res.id, res.text, res.title, res.desc)
+                    FunctionOne(res.id, res.text, res.title, res.desc, res.url)
                   }
                 >
                   <Paper
@@ -235,10 +239,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="application">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
@@ -303,10 +309,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="web">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
@@ -369,10 +377,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="ui">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
@@ -435,10 +445,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="metaVerse">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
@@ -504,10 +516,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="arvr">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
@@ -573,10 +587,12 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Button sx={ButtonStyle}>
-                      View{" "}
-                      <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                    </Button>
+                    <Link to="blockchain">
+                      <Button sx={ButtonStyle}>
+                        View{" "}
+                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
+                      </Button>
+                    </Link>
                   </Box>
                 </Paper>
               </>
@@ -626,6 +642,7 @@ const DevelopmentStack = () => {
 export default DevelopmentStack;
 
 const OpenDetails = (props) => {
+  console.log(props);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -665,34 +682,36 @@ const OpenDetails = (props) => {
         </Box>
         <Box>
           <Typography sx={OpenDetailsBottomTextStyle}>{props.desc}</Typography>
-          <Typography
-            sx={{
-              fontSize: {
-                lg: "18px",
-                xl: "18px",
-                md: "18px",
-              },
-              fontFamily: "LGRegular",
-              fontStyle: "normal",
-              fontWeight: 400,
-              marginTop: "1rem",
-              color: "#9D9D9D",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            View
-            <HiArrowRight
-              size={16}
-              style={{
-                marginLeft: "10px",
-                marginBottom: "-3px",
-                padding: "3px",
-                borderRadius: "10px",
-                border: "1px #9D9D9D solid",
+          <a href={props.url}>
+            <Typography
+              sx={{
+                fontSize: {
+                  lg: "18px",
+                  xl: "18px",
+                  md: "18px",
+                },
+                fontFamily: "LGRegular",
+                fontStyle: "normal",
+                fontWeight: 400,
+                marginTop: "1rem",
+                color: "#9D9D9D",
+                display: "flex",
+                alignItems: "center",
               }}
-            />
-          </Typography>
+            >
+              View
+              <HiArrowRight
+                size={16}
+                style={{
+                  marginLeft: "10px",
+                  marginBottom: "-3px",
+                  padding: "3px",
+                  borderRadius: "10px",
+                  border: "1px #9D9D9D solid",
+                }}
+              />
+            </Typography>
+          </a>
         </Box>
       </Paper>
     </motion.div>

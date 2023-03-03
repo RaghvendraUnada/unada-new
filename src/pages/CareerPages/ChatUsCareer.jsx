@@ -166,7 +166,7 @@ export default function ChatUs(props) {
                   lg: "1.5rem",
                   md: "1rem",
                   sm: "1rem",
-                  xs: "1rem",
+                  xs: "0rem",
                 },
               }}
             >
@@ -185,16 +185,29 @@ export default function ChatUs(props) {
                     xl: "140%",
                     md: "100%",
                     sm: "100%",
+                    xs: "100%",
                   },
                 }}
               >
-                <Typography
+                <Box
                   sx={{
-                    ...boxText,
+                    width: {
+                      xl: "100%",
+                      lg: "100%",
+                      md: "100%",
+                      sm: "100%",
+                      xs: "140%",
+                    },
                   }}
                 >
-                  Give us a phone call.
-                </Typography>
+                  <Typography
+                    sx={{
+                      ...boxText,
+                    }}
+                  >
+                    Give us a phone call.
+                  </Typography>
+                </Box>
               </Box>
               <Paper
                 sx={{
@@ -370,7 +383,7 @@ export default function ChatUs(props) {
                   lg: "1.5rem",
                   md: "1rem",
                   sm: "1rem",
-                  xs: "1rem",
+                  xs: "0rem",
                 },
               }}
             >
@@ -436,7 +449,7 @@ export default function ChatUs(props) {
                   lg: "1.5rem",
                   md: "1rem",
                   sm: "1rem",
-                  xs: "1rem",
+                  xs: "0rem",
                 },
                 cursor: "pointer",
               }}
@@ -450,13 +463,15 @@ export default function ChatUs(props) {
                   marginBottom: "1.5rem",
                 }}
               />
-              <Typography
-                sx={{
-                  ...boxText,
-                }}
-              >
-                Drop us an email.
-              </Typography>
+              <Box sx={{ width: "120%" }}>
+                <Typography
+                  sx={{
+                    ...boxText,
+                  }}
+                >
+                  Drop us an email.
+                </Typography>
+              </Box>
             </Box>
           </Grid>
           {props?.showArrow ? (
@@ -492,7 +507,7 @@ export default function ChatUs(props) {
 
 const boxText = {
   // marginTop: "1rem",
-  //   width: { xl: "30%", lg: "30%", md: "30%", sm: "60%", xs: "80%" },
+  // width: { xl: "30%", lg: "30%", md: "30%", sm: "60%", xs: "80%" },
   fontWeight: 500,
   lineHeight: {
     xl: "2.5rem",

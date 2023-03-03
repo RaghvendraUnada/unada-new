@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const HeroPage = ({
   mainText1,
@@ -109,25 +109,32 @@ const HeroPage = ({
                 },
               }}
             >
-              <Button
-                variant="contained"
-                onFocusVisible
-                sx={{
-                  borderRadius: "9rem",
-                  fontSize: "1.7rem",
-                  padding: "1.1rem 2.6rem",
-                  fontWeight: 500,
-                  fontFamily: "LGLight",
-                  textTransform: "capitalize",
-
-                  "&.Mui-focused": {
-                    backgroundColor: "#1565c0",
-                    color: "#000",
-                  },
-                }}
+              <Link
+                to="contact"
+                // onClick={() => {
+                //   window.scrollTo({ top: 800, behavior: "smooth" });
+                // }}
               >
-                Get Started
-              </Button>
+                <Button
+                  variant="contained"
+                  onFocusVisible
+                  sx={{
+                    borderRadius: "9rem",
+                    fontSize: "1.7rem",
+                    padding: "1.1rem 2.6rem",
+                    fontWeight: 500,
+                    fontFamily: "LGLight",
+                    textTransform: "capitalize",
+
+                    "&.Mui-focused": {
+                      backgroundColor: "#1565c0",
+                      color: "#000",
+                    },
+                  }}
+                >
+                  Get Started
+                </Button>
+              </Link>
               {/* <button
                 onClick={handleClick}
                 style={{
@@ -354,24 +361,26 @@ const HeroPage = ({
               },
             }}
           >
-            <Button
-              variant="contained"
-              sx={{
-                borderRadius: "9rem",
-                background: "#0D6EFD",
-                fontSize: "1.8rem",
-                padding: "0.8rem 2rem",
-                fontWeight: 500,
-                // lineHeight: "2.9rem",
-                fontFamily: "LGLight",
-                textTransform: "capitalize",
-                // "&:focus": {
-                //   backgroundColor: "transparent",
-                // },
-              }}
-            >
-              Get Started
-            </Button>
+            <a href="contact">
+              <Button
+                variant="contained"
+                sx={{
+                  borderRadius: "9rem",
+                  background: "#0D6EFD",
+                  fontSize: "1.8rem",
+                  padding: "0.8rem 2rem",
+                  fontWeight: 500,
+                  // lineHeight: "2.9rem",
+                  fontFamily: "LGLight",
+                  textTransform: "capitalize",
+                  // "&:focus": {
+                  //   backgroundColor: "transparent",
+                  // },
+                }}
+              >
+                Get Started
+              </Button>
+            </a>
           </Box>
         </Grid>
       </Grid>
