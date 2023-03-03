@@ -120,7 +120,8 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-@media only screen and (max-width: 960px) {
+
+@media only screen and (min-width: 500px) and (max-width: 960px) {
   .navbarListText {
     font-size: 25px;
     line-height: 40px;
@@ -128,6 +129,22 @@
   .navbarListTextActive {
     font-size: 25px;
     line-height: 50px;
+  }
+  .MenuIcon {
+    width: 90%;
+    height: auto;
+    max-width: 22px;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .navbarListText {
+    font-size: 11px !important;
+    line-height: "40px";
+  }
+  .navbarListTextActive {
+    font-size: 11px !important;
+    line-height: "50px";
   }
   .MenuIcon {
     width: 90%;

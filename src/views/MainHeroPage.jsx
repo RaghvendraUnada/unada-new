@@ -344,40 +344,6 @@ const MainHeroPage = () => {
                 }}
               >
                 <Link
-                  to={"/careers"}
-                  onClick={() => {
-                    setOpen(false);
-                  }}
-                  className={
-                    location === "/careers"
-                      ? HeaderStyles.navbarListTextActive
-                      : HeaderStyles.navbarListText
-                  }
-                  style={{
-                    // margin: "auto",
-                    textDecoration: "none",
-                    color: "#C9C9C9",
-                  }}
-                >
-                  {location === "/careers" ? (
-                    <AnimatedGradientText>Careers</AnimatedGradientText>
-                  ) : (
-                    "Careers"
-                  )}
-                </Link>
-              </ListItem>
-              <ListItem
-                sx={{
-                  // mt: 1,
-                  cursor: "pointer",
-                  borderBottom: "1px solid #DBDBDB",
-                  "&:hover": {
-                    borderBottom: "1px solid #000",
-                    borderTop: "1px solid #000",
-                  },
-                }}
-              >
-                <Link
                   onClick={() => {
                     setOpen(false);
                   }}
@@ -428,6 +394,41 @@ const MainHeroPage = () => {
                   )}
                 </Link>
               </ListItem>
+              <ListItem
+                sx={{
+                  // mt: 1,
+                  cursor: "pointer",
+                  borderBottom: "1px solid #DBDBDB",
+                  "&:hover": {
+                    borderBottom: "1px solid #000",
+                    borderTop: "1px solid #000",
+                  },
+                }}
+              >
+                <Link
+                  to={"/careers"}
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                  className={
+                    location === "/careers"
+                      ? HeaderStyles.navbarListTextActive
+                      : HeaderStyles.navbarListText
+                  }
+                  style={{
+                    // margin: "auto",
+                    textDecoration: "none",
+                    color: "#C9C9C9",
+                  }}
+                >
+                  {location === "/careers" ? (
+                    <AnimatedGradientText>Careers</AnimatedGradientText>
+                  ) : (
+                    "Careers"
+                  )}
+                </Link>
+              </ListItem>
+
               <ListItem
                 sx={{
                   cursor: "pointer",
@@ -688,6 +689,7 @@ const AnimatedGradientText = styled.h1`
   }
   @media (max-width: 320px) {
     lineheight: 45px;
+    font-size: 10px;
   }
 `;
 
