@@ -342,10 +342,11 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 sx={{
                   position: "absolute",
                   right: "2rem",
-                  top: "2rem",
+                  top: "1rem",
                 }}
               >
-                <CloseIcon sx={{ color: "white" }} />
+                {/* <CloseIcon sx={{ color: "white" }} /> */}
+                <Typography sx={closeBtn}>Close</Typography>
               </IconButton>
               <Box
                 sx={{
@@ -472,9 +473,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     required
                   />
                 </Box>
-                <Typography sx={labeltext}>
-                  Experience:<span style={{ color: "#FF5F5F" }}>*</span>
-                </Typography>
+                <Typography sx={labeltext}>Experience:</Typography>
                 <Box
                   sx={{
                     display: "flex",
@@ -708,9 +707,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     flexDirection: "column",
                   }}
                 >
-                  <Typography sx={labeltext}>
-                    Linked in url:<span style={{ color: "#FF5F5F" }}>*</span>
-                  </Typography>
+                  <Typography sx={labeltext}>Linked in url:</Typography>
                   <Box
                     sx={{
                       display: "flex",
@@ -1033,4 +1030,19 @@ const skillText = {
   fontWeight: 400,
   fontSize: 12,
   color: "rgba(162, 162, 162, 0.5)",
+};
+
+const closeBtn = {
+  fontFamily: "LGRegular",
+  textTransform: "none",
+  fontSize: { xl: "24px", lg: "24px", md: "23px", sm: "20px", xs: "20px" },
+  fontStyle: "normal",
+  fontWeight: 400,
+  mb: "5px",
+  color: "#fff",
+  "&:hover": {
+    bgcolor: "transparent",
+    textDecoration: "line-through",
+  },
+  // ml: "2.3%",
 };

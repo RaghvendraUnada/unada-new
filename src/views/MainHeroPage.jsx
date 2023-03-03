@@ -380,6 +380,67 @@ const MainHeroPage = () => {
                 <Link
                   onClick={() => {
                     setOpen(false);
+                  }}
+                  className={
+                    location === "/whiteService"
+                      ? HeaderStyles.navbarListTextActive
+                      : HeaderStyles.navbarListText
+                  }
+                  to="/whiteService"
+                  // style={{ margin: "auto" }}
+                >
+                  {location === "/whiteService" ? (
+                    <AnimatedGradientText>
+                      Our Disruptive Technologies
+                    </AnimatedGradientText>
+                  ) : (
+                    "Our Disruptive Technologies"
+                  )}
+                </Link>
+              </ListItem>
+              <ListItem
+                sx={{
+                  // mt: 1,
+                  cursor: "pointer",
+                  borderBottom: "1px solid #DBDBDB",
+                  "&:hover": {
+                    borderBottom: "1px solid #000",
+                    borderTop: "1px solid #000",
+                  },
+                }}
+              >
+                <Link
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                  className={
+                    location === "/service"
+                      ? HeaderStyles.navbarListTextActive
+                      : HeaderStyles.navbarListText
+                  }
+                  to="/service"
+                  // style={{ margin: "auto" }}
+                >
+                  {location === "/service" ? (
+                    <AnimatedGradientText>Our Services</AnimatedGradientText>
+                  ) : (
+                    "Our Services"
+                  )}
+                </Link>
+              </ListItem>
+              <ListItem
+                sx={{
+                  cursor: "pointer",
+                  borderBottom: "1px solid #DBDBDB",
+                  "&:hover": {
+                    borderBottom: "1px solid #000",
+                    borderTop: "1px solid #000",
+                  },
+                }}
+              >
+                <Link
+                  onClick={() => {
+                    setOpen(false);
                     setLocationData("/contact");
                   }}
                   className={
