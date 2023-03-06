@@ -797,6 +797,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   >
                     <input
                       type="file"
+                      accept="application/pdf"
                       // multiple
                       // ref={uploadFileRef}
                       style={{
@@ -900,14 +901,15 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
 
                       <input
                         type="file"
-                        // multiple
+                        accept="application/pdf"
                         ref={uploadFileRef2}
                         style={{ display: "none" }}
                         onChange={(e) => {
                           setCoverLetter(e.target.files);
+                          console.log(coverLetter);
                         }}
                       />
-                      {coverLetter?.length}
+                      {coverLetter?.file?.name}
                       <Button
                         variant="outlined"
                         component="label"
@@ -933,13 +935,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                           Browse File
                         </Typography>
                       </Button>
-                      <Input
-                        type="file"
-                        pattern=".+.pdf$"
-                        sx={{ display: "none" }}
-                        // onChange={handleFileChange}
-                        required
-                      />
                     </Paper>
                   </Box>
                 </Box>

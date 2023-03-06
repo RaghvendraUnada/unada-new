@@ -5,6 +5,7 @@ import { HiArrowRight } from "react-icons/hi";
 import styles from "./DevStack.module.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import EastSharpIcon from "@mui/icons-material/EastSharp";
 const DevelopmentStack = () => {
   const [numberOne, setNumberOne] = useState(1);
   const [boxtextOne, setBoxtextOne] = useState("Application Development");
@@ -643,6 +644,8 @@ export default DevelopmentStack;
 
 const OpenDetails = (props) => {
   console.log(props);
+  const [icon1, setIcon1] = useState("#9D9D9D");
+  const [border, setBorder] = useState("");
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -698,25 +701,37 @@ const OpenDetails = (props) => {
                 display: "flex",
                 alignItems: "center",
                 "&:hover": {
-                  borderRadius: "15px",
-                  background: "black",
-                  color: "#fff",
-                  width: "13%",
-                  p: 0.2,
+                  color: "#000",
                 },
+              }}
+              onMouseOut={() => {
+                setIcon1("#9D9D9D");
+                setBorder("");
+              }}
+              onMouseOver={() => {
+                setIcon1("White");
+                setBorder("black");
               }}
             >
               View
-              <HiArrowRight
-                size={16}
-                style={{
+              <Box
+                sx={{
+                  p: 0.3,
+                  borderRadius: "20px",
+                  border: `1px solid ${border}`,
+                  background: border,
+                  display: "flex",
                   marginLeft: "10px",
                   marginBottom: "-3px",
-                  padding: "3px",
-                  borderRadius: "10px",
-                  border: "1px #9D9D9D solid",
                 }}
-              />
+              >
+                <EastSharpIcon
+                  fontSize="small"
+                  sx={{
+                    color: icon1,
+                  }}
+                />
+              </Box>
             </Typography>
           </a>
         </Box>
