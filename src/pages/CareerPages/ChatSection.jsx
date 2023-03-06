@@ -6,8 +6,23 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import DoorSlidingSharpIcon from "@mui/icons-material/DoorSlidingSharp";
-import GlassDoorIcon from "../../assets/Images/Career/glassdoor.svg";
+// import glassdoor from "../../assets/Images/Career/glassdoor.svg";
+// import instagram from "../../assets/Images/Career/instagram.svg";
+// import linkedin from "../../assets/Images/Career/linkdin.svg";
+// import youtube from "../../assets/Images/Career/Youtube.svg";
+import glassdoor from "../../assets/Images/Career/glassdoor.svg";
+import instagram from "../../assets/Images/Career/instagram.svg";
+import linkedin from "../../assets/Images/Career/linkdin.svg";
+import youtube from "../../assets/Images/Career/Youtube.svg";
+import glassdoorblk from "../../assets/Images/Career/glassdoorblack.svg";
+import instagramblk from "../../assets/Images/Career/instagramblack.svg";
+import linkedinblk from "../../assets/Images/Career/linkdinblack.svg";
+import youtubeblk from "../../assets/Images/Career/youtubeblack.svg";
 const ChatSection = () => {
+  const [youtubestate, setyoutubestate] = useState(youtubeblk);
+  const [instastate, setinstastate] = useState(instagramblk);
+  const [linkedinstate, setlinkedinstate] = useState(linkedinblk);
+  const [glassdorstate, setglassdorstate] = useState(glassdoorblk);
   return (
     <Grid
       container
@@ -80,12 +95,39 @@ const ChatSection = () => {
             }}
           >
             {/* <BsFacebook size={19} /> */}
-            <AiFillInstagram size={24} />
-            <LinkedInIcon size={24} sx={{ fontSize: "24px" }} />
+            {/* <AiFillInstagram size={24} /> */}
+            {/* <LinkedInIcon size={24} sx={{ fontSize: "24px" }} /> */}
             {/* <BsTwitter size={19} /> */}
-            <YouTubeIcon size={24} sx={{ fontSize: "24px" }} />
+            {/* <YouTubeIcon size={24} sx={{ fontSize: "24px" }} /> */}
             {/* <DoorSlidingSharpIcon size={23} sx={{ fontSize: "23px" }} /> */}
-            <Box component="img" src={GlassDoorIcon} alt="glassdoor" />
+            <Box
+              component="img"
+              src={youtubestate}
+              onMouseOver={() => setyoutubestate(youtube)}
+              onMouseOut={() => setyoutubestate(youtubeblk)}
+              alt="glassdoor"
+            />
+            <Box
+              component="img"
+              src={linkedinstate}
+              alt="glassdoor"
+              onMouseOver={() => setlinkedinstate(linkedin)}
+              onMouseOut={() => setlinkedinstate(linkedinblk)}
+            />
+            <Box
+              component="img"
+              src={instastate}
+              alt="glassdoor"
+              onMouseOver={() => setinstastate(instagram)}
+              onMouseOut={() => setinstastate(instagramblk)}
+            />
+            <Box
+              component="img"
+              src={glassdorstate}
+              onMouseOver={() => setglassdorstate(glassdoor)}
+              onMouseOut={() => setglassdorstate(glassdoorblk)}
+              alt="glassdoor"
+            />
           </Box>
           <Box
             sx={{

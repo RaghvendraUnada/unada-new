@@ -135,7 +135,11 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       redirect: "follow",
     };
 
-    fetch("http://192.168.29.5:8000/user_data/apply", requestOptions)
+    fetch(
+      "https:/https://unada-backend.unada.in/user_data/apply",
+      requestOptions
+    )
+      // fetch("http://192.168.29.5:8000/user_data/apply", requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
