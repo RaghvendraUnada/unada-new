@@ -9,6 +9,7 @@ import { keyframes } from "styled-components";
 import styled from "styled-components";
 import teamTitle from "../../assets/images/new/team.png";
 import axios from "axios";
+import OurTeamMarquee from "../../views/OurTeamMarquee";
 
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
@@ -146,7 +147,7 @@ const OurTeam = () => {
                   p: 0,
                 }}
               >
-                <div class="block-33 display--inline-top">
+                {/* <div class="block-33 display--inline-top">
                   <div class="gutter relative">
                     <div class="gallery-h">
                       {teamData?.map((res, idx) => {
@@ -176,7 +177,8 @@ const OurTeam = () => {
                       })}
                     </div>
                   </div>
-                </div>
+                </div> */}
+                <OurTeamMarquee />
               </Paper>
             </Paper>
           </Grid>
