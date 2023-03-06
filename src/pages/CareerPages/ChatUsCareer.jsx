@@ -33,10 +33,10 @@ import clipboard from "../../assets/Images/Career/clipboard.svg";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import location from "../../assets/Images/Career/location.svg";
+// import location from "../../assets/Images/Career/location.svg";
 import whatsappiucon from "../../assets/Images/Career/whatsappiucon.svg";
 import cross from "../../assets/Images/Career/cross.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 
 export default function ChatUs(props) {
@@ -62,6 +62,12 @@ export default function ChatUs(props) {
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+  let location = useLocation();
+
+  function handleClicks() {
+    console.log("sajndkjnaskj");
+    location.push("/contact#section");
+  }
 
   async function openEmail(e) {
     console.log("openEmail");
@@ -87,6 +93,9 @@ export default function ChatUs(props) {
           <Grid item xl={6} lg={6} md={6} xs={6} sm={6}>
             {/* <Link to="contact"> */}
             <Box
+              onClick={() => {
+                location.push("/contact#section");
+              }}
               sx={{
                 padding: {
                   xl: "1.5rem",

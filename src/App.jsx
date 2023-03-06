@@ -347,7 +347,7 @@ function App() {
                           ? HeaderStyles.navbarListTextActive
                           : HeaderStyles.navbarListText
                       }
-                      to="/whiteService"
+                      to="/service"
                     >
                       {/* <Typography
                         sx={{
@@ -410,7 +410,7 @@ function App() {
                           ? HeaderStyles.navbarListTextActive
                           : HeaderStyles.navbarListText
                       }
-                      to="/service"
+                      to="/whiteService"
                       // style={{ margin: "auto" }}
                     >
                       {location === "/whiteService" ? (

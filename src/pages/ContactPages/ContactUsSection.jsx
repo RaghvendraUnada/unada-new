@@ -1,5 +1,5 @@
 import { Paper, Typography, Box, Grid, TextField, Button } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 import axios from "axios";
 
@@ -23,6 +23,10 @@ const ContactUsSection = () => {
         console.log(err);
       });
   };
+  useEffect(() => {
+    const section = document.getElementById("section");
+    section.scrollIntoView({ behavior: "smooth" });
+  }, []);
   return (
     <Grid
       container
@@ -71,6 +75,7 @@ const ContactUsSection = () => {
           <Typography sx={labeltext}>
             Name:<span style={{ color: "#FF5F5F" }}>*</span>
           </Typography>
+
           <Box sx={box}>
             <input
               id="standard-textarea"
@@ -138,6 +143,7 @@ const ContactUsSection = () => {
           </Box>
         </Box>
         <Box>
+          <div id="section"></div>
           <Typography sx={labeltext}>Message:</Typography>
           <Box sx={box}>
             <input
@@ -162,6 +168,7 @@ const ContactUsSection = () => {
             />
           </Box>
         </Box>
+
         <Button sx={ButtonStyle1} onClick={handleSubmit}>
           Submit
         </Button>

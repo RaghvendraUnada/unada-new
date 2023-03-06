@@ -185,7 +185,7 @@ const metaTextStyle2 = {
     xs: "11px",
   },
   "&:hover": {
-    textFillColor: "white",
+    textFillColor: "#000",
   },
   lineHeight: "24px",
   color: "rgba(15, 15, 15, 0.5)",
