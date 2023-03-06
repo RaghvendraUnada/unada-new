@@ -33,6 +33,11 @@ const ContactUsSection = () => {
       setTimeout(() => {
         window.scrollTo({ top: 800, behavior: "smooth" });
       }, [1200]);
+    } else if (location?.hash === "#miniSection") {
+      console.log("=====>hello");
+      setTimeout(() => {
+        window.scrollTo({ top: 400, behavior: "smooth" });
+      }, [1200]);
     } else {
       return console.log(window.location.pathname);
     }

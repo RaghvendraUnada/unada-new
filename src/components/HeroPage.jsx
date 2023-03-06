@@ -23,6 +23,11 @@ const HeroPage = ({
     navigate("/contact#section");
   }
 
+  function handleClicksMobile() {
+    // location.push("/contact/#section");
+    navigate("/contact#miniSection");
+  }
+
   return (
     <Paper elevation={0} sx={{ height: "auto", minHeight: "100vh" }}>
       <Grid
@@ -367,26 +372,27 @@ const HeroPage = ({
               },
             }}
           >
-            <a href="contact">
-              <Button
-                variant="contained"
-                sx={{
-                  borderRadius: "9rem",
-                  background: "#0D6EFD",
-                  fontSize: "1.8rem",
-                  padding: "0.8rem 2rem",
-                  fontWeight: 500,
-                  // lineHeight: "2.9rem",
-                  fontFamily: "LGLight",
-                  textTransform: "capitalize",
-                  // "&:focus": {
-                  //   backgroundColor: "transparent",
-                  // },
-                }}
-              >
-                Get Started
-              </Button>
-            </a>
+            {/* <a href="contact"> */}
+            <Button
+              onClick={handleClicksMobile}
+              variant="contained"
+              sx={{
+                borderRadius: "9rem",
+                background: "#0D6EFD",
+                fontSize: "1.8rem",
+                padding: "0.8rem 2rem",
+                fontWeight: 500,
+                // lineHeight: "2.9rem",
+                fontFamily: "LGLight",
+                textTransform: "capitalize",
+                // "&:focus": {
+                //   backgroundColor: "transparent",
+                // },
+              }}
+            >
+              Get Started
+            </Button>
+            {/* </a> */}
           </Box>
         </Grid>
       </Grid>

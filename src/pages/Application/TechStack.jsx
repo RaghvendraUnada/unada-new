@@ -322,9 +322,14 @@ const IndustriesNameText = {
     xs: "12px",
   },
   marginLeft: "30px",
+  // scale: 1,
+  transition: "0.3s all linear",
   "&:hover": {
-    fontSize: "15px",
+    // fontSize: "15px",
+    // scale: 1.2,
+    transform: "scale(1.07)",
   },
+  // background: "green",
 };
 
 const TestStyle = {
