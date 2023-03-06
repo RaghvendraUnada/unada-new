@@ -272,6 +272,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
               }}
             >
               <Button
+                disableRipple
                 sx={ButtonStyle1}
                 onClick={handleClickOpen}
                 onMouseOut={() => {
