@@ -243,7 +243,7 @@ const ButtonStyle1 = {
   color: "black",
   "&:hover": {
     opacity: 1,
-    // color: "black",
-    // background: "black",
+    color: "#fff",
+    background: "black",
   },
 };

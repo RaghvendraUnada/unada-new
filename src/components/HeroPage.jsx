@@ -125,7 +125,9 @@ const HeroPage = ({
                     fontWeight: 500,
                     fontFamily: "LGLight",
                     textTransform: "capitalize",
-
+                    "&:hover": {
+                      fontSize: "1.75rem",
+                    },
                     "&.Mui-focused": {
                       backgroundColor: "#1565c0",
                       color: "#000",

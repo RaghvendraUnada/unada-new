@@ -85,6 +85,7 @@ export default function ChatUs(props) {
           }}
         >
           <Grid item xl={6} lg={6} md={6} xs={6} sm={6}>
+            {/* <Link to="contact"> */}
             <Box
               sx={{
                 padding: {
@@ -113,6 +114,7 @@ export default function ChatUs(props) {
                 Chat to us
               </Typography>
             </Box>
+            {/* </Link> */}
           </Grid>
           {props?.showArrow ? (
             <Grid item xl={6} lg={6} md={6} xs={6} sm={6}>

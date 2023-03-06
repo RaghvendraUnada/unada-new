@@ -281,7 +281,7 @@ const WhiteServicesPage = () => {
             >
               <Box>
                 <img
-                  src={ApplicationMobile}
+                  src={Applicationimg}
                   alt="metaVerseImg"
                   style={{
                     height: "10%",

@@ -19,10 +19,21 @@
     margin-bottom: 50px;
   }
 } */
-@media only screen and (min-width: 320px) and (max-width: 400px) {
+@media only screen and (min-width: 320px) and (max-width: 375px) {
   .VideoPositioning {
     width: 720px;
     margin-left: -190px;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  .textMainClass {
+    line-height: 40px;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 400px) {
+  .VideoPositioning {
+    width: 720px;
+    margin-left: -165px;
     margin-right: auto;
     margin-bottom: 50px;
   }

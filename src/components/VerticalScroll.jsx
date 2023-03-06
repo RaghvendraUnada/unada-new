@@ -682,6 +682,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                             color: "#fff",
                             textAlign: "center",
                             p: 0.5,
+                            opacity: 0.7,
+                            "&:hover": {
+                              opacity: 1,
+                            },
                           }}
                           onClick={() => {
                             const skillData = selectedSkill.find(
@@ -1008,8 +1012,8 @@ const ButtonStyle1 = {
   opacity: 0.8,
   "&:hover": {
     opacity: 1,
-    // color: "black",
-    // background: "white",
+    color: "black",
+    background: "white",
   },
 };
 

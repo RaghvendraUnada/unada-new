@@ -343,7 +343,7 @@ function App() {
                         setOpen(false);
                       }}
                       className={
-                        location === "/whiteService"
+                        location === "/service"
                           ? HeaderStyles.navbarListTextActive
                           : HeaderStyles.navbarListText
                       }
@@ -382,7 +382,7 @@ function App() {
                           "Our Disruptive Technologies"
                         )}
                       </Typography> */}
-                      {location === "/whiteService" ? (
+                      {location === "/service" ? (
                         <AnimatedGradientText>
                           Our Disruptive Technologies
                         </AnimatedGradientText>
@@ -393,7 +393,6 @@ function App() {
                   </ListItem>
                   <ListItem
                     sx={{
-                      // mt: 1,
                       cursor: "pointer",
                       borderBottom: "1px solid #DBDBDB",
                       "&:hover": {
@@ -407,14 +406,14 @@ function App() {
                         setOpen(false);
                       }}
                       className={
-                        location === "/service"
+                        location === "/whiteService"
                           ? HeaderStyles.navbarListTextActive
                           : HeaderStyles.navbarListText
                       }
                       to="/service"
                       // style={{ margin: "auto" }}
                     >
-                      {location === "/service" ? (
+                      {location === "/whiteService" ? (
                         <AnimatedGradientText>
                           Our Services
                         </AnimatedGradientText>
@@ -596,7 +595,7 @@ const ButtonStyle = {
   color: "#393939",
   fontStyle: "normal",
   fontWeight: 400,
-  mt: "07px",
+  mt: "03px",
   width: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
 
