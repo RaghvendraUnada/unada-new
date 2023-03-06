@@ -19,7 +19,8 @@ const HeroPage = ({
   const location = useLocation();
 
   function handleClicks() {
-    location.push("/contact#section");
+    // location.push("/contact/#section");
+    navigate("/contact#section");
   }
 
   return (
@@ -115,29 +116,31 @@ const HeroPage = ({
                 },
               }}
             >
-              <a href="contact" onClicks={handleClicks}>
-                <Button
-                  variant="contained"
-                  onFocusVisible
-                  sx={{
-                    borderRadius: "9rem",
-                    fontSize: "1.7rem",
-                    padding: "1.1rem 2.6rem",
-                    fontWeight: 500,
-                    fontFamily: "LGLight",
-                    textTransform: "capitalize",
-                    "&:hover": {
-                      fontSize: "1.75rem",
-                    },
-                    "&.Mui-focused": {
-                      backgroundColor: "#1565c0",
-                      color: "#000",
-                    },
-                  }}
-                >
-                  Get Started
-                </Button>
-              </a>
+              {/* <a href="/contact/#section"> */}
+              <Button
+                onClick={handleClicks}
+                variant="contained"
+                onFocusVisible
+                sx={{
+                  color: "#fff",
+                  borderRadius: "9rem",
+                  fontSize: "1.7rem",
+                  padding: "1.1rem 2.6rem",
+                  fontWeight: 500,
+                  fontFamily: "LGLight",
+                  textTransform: "capitalize",
+                  "&:hover": {
+                    fontSize: "1.75rem",
+                  },
+                  "&.Mui-focused": {
+                    backgroundColor: "#1565c0",
+                    color: "#000",
+                  },
+                }}
+              >
+                Get Started
+              </Button>
+              {/* </a> */}
               {/* <button
                 onClick={handleClick}
                 style={{

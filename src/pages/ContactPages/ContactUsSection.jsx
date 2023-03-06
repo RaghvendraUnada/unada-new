@@ -2,12 +2,15 @@ import { Paper, Typography, Box, Grid, TextField, Button } from "@mui/material";
 import { useState, useEffect } from "react";
 import React from "react";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 const ContactUsSection = () => {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  let location = useLocation();
+  // console.log(location);
   const handleSubmit = async () => {
     return await axios
       .post("/contact_us/add_contact_data", {
@@ -23,10 +26,19 @@ const ContactUsSection = () => {
         console.log(err);
       });
   };
+
   useEffect(() => {
-    const section = document.getElementById("section");
-    section.scrollIntoView({ behavior: "smooth" });
+    if (location?.hash === "#section") {
+      console.log("=====>hello");
+      // const section = document.getElementById("section");
+      // return section.scrollIntoView({ behavior: "smooth" });
+      // window.scrollY(3000);
+      window.scrollTo({ top: 800, behavior: "smooth" });
+    } else {
+      return console.log(window.location.pathname);
+    }
   }, []);
+
   return (
     <Grid
       container

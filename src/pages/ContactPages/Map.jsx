@@ -18,6 +18,7 @@ const Map = () => {
               src="https://www.google.com/maps/search/unada/@22.9928039,72.5467606,13.09z"
               id="gmap_canvas"
               frameborder="0"
+              X-Frame-Options="SAMEORIGIN"
               scrolling="no"
               width="100%"
               height="690px"

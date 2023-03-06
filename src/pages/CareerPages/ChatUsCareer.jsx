@@ -38,10 +38,11 @@ import whatsappiucon from "../../assets/Images/Career/whatsappiucon.svg";
 import cross from "../../assets/Images/Career/cross.svg";
 import { Link, useLocation } from "react-router-dom";
 import { styled } from "@mui/material/styles";
-
+import { useNavigate } from "react-router-dom";
 export default function ChatUs(props) {
   const [open, setOpen] = React.useState(false);
   const [copyText, setCopyText] = useState("");
+  const navigate = useNavigate();
   // const handleCopy = () => {
   //   navigator.clipboard.writeText(copyText);
   //   alert("Copied");
@@ -94,7 +95,8 @@ export default function ChatUs(props) {
             {/* <Link to="contact"> */}
             <Box
               onClick={() => {
-                location.push("/contact#section");
+                // location.push("/contact#section");
+                navigate("/contact#section");
               }}
               sx={{
                 padding: {
