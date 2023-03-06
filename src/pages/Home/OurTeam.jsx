@@ -9,7 +9,6 @@ import { keyframes } from "styled-components";
 import styled from "styled-components";
 import teamTitle from "../../assets/images/new/team.png";
 import axios from "axios";
-import OurTeamMarquee from "../../views/OurTeamMarquee";
 
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
@@ -109,8 +108,6 @@ const OurTeam = () => {
                   sm: "center",
                   xs: "center",
                 },
-                // background: "red",
-                mb: { xl: 6, lg: 6, md: 6, sm: 0, xs: 0 },
               }}
             >
               <Typography sx={TextStyle}>The people who push the</Typography>
@@ -147,7 +144,7 @@ const OurTeam = () => {
                   p: 0,
                 }}
               >
-                {/* <div class="block-33 display--inline-top">
+                <div class="block-33 display--inline-top">
                   <div class="gutter relative">
                     <div class="gallery-h">
                       {teamData?.map((res, idx) => {
@@ -177,8 +174,7 @@ const OurTeam = () => {
                       })}
                     </div>
                   </div>
-                </div> */}
-                <OurTeamMarquee />
+                </div>
               </Paper>
             </Paper>
           </Grid>
@@ -195,7 +191,7 @@ const TextStyle = {
   fontStyle: "normal",
   fontWeight: 500,
   fontSize: { xl: "60px", lg: "60px", md: "40px", sm: "30px", xs: "30px" },
-  lineHeight: { xl: "70px", lg: "70px", md: "60px", sm: "30px", xs: "30px" },
+  lineHeight: { xl: "75px", lg: "75px", md: "60px", sm: "30px", xs: "30px" },
   color: "#000",
   textAlign: {
     xl: "left",
@@ -352,7 +348,7 @@ const TeamProfessionTextStyle = {
 
 const coloredText = {
   fontSize: { xl: "55px", lg: "50px", md: "40px", sm: "30px", xs: "30px" },
-  lineHeight: { xl: "70px", lg: "70px", md: "60px", sm: "35px", xs: "30px" },
+  lineHeight: { xl: "75px", lg: "75px", md: "60px", sm: "35px", xs: "30px" },
   fontWeight: 500,
   fontFamily: "LGRegular",
   background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
