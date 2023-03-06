@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typography, Box, Paper, Grid, Button } from "@mui/material";
-import { useNavigate, Link } from "react-router-dom";
-
+import { useNavigate, Link, useLocation } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 const HeroPage = ({
   mainText1,
   subText1,
@@ -16,6 +16,12 @@ const HeroPage = ({
   const handleClick = () => {
     setActive(!active);
   };
+  const location = useLocation();
+
+  function handleClicks() {
+    location.push("/contact#section");
+  }
+
   return (
     <Paper elevation={0} sx={{ height: "auto", minHeight: "100vh" }}>
       <Grid
@@ -109,12 +115,7 @@ const HeroPage = ({
                 },
               }}
             >
-              <a
-                href="contact"
-                // onClick={() => {
-                //   window.scrollTo({ top: 800, behavior: "smooth" });
-                // }}
-              >
+              <a href="contact" onClicks={handleClicks}>
                 <Button
                   variant="contained"
                   onFocusVisible
