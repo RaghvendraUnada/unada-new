@@ -527,7 +527,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   </FormControl>
                 </Box>
                 <Typography sx={labeltext}>Skills:</Typography>
-                <Box
+                <Grid
+                  container
                   sx={{
                     display: "flex",
                     justifyContent: {
@@ -553,7 +554,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       sm: "60%",
                       xs: "90%",
                     },
-                    overflow: "scroll",
+                    // bgcolor: "red",
+                    overflowY: "scroll",
                   }}
                 >
                   {selectedSkill.map((el, idx) => {
@@ -583,10 +585,24 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                               sm: "40%",
                               xs: "60%",
                             },
+                            // border: "2px solid grey",
+                            // borderRadius: "15px",
+                            // width: "auto",
+                            // minWidth: {
+                            //   xl: "15%",
+                            //   lg: "15%",
+                            //   md: "15%",
+                            //   sm: "15%",
+                            //   xs: "40%",
+                            // },
+                            // height: "auto",
+                            // color: "#fff",
+                            // textAlign: "center",
+                            p: 0.5,
                             height: "auto",
                             color: "#fff",
                             textAlign: "center",
-                            p: 1,
+                            // p: 1,
                             mb: 1,
                             display: "flex",
                             justifyContent: "center",
@@ -619,7 +635,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       </>
                     );
                   })}
-                </Box>
+                </Grid>
                 <Grid
                   container
                   sx={{

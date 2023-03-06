@@ -349,10 +349,17 @@ function App() {
                       }
                       to="/whiteService"
                     >
-                      <Typography
+                      {/* <Typography
                         sx={{
-                          fontSize: "23px",
-                          fontWeight: "500",
+                          // fontSize: "23px",
+                          fontSize: {
+                            xl: "65px",
+                            lg: "65px",
+                            md: "25px",
+                            sm: "35px",
+                            xs: "21px",
+                          },
+                          fontWeight: "060",
                         }}
                       >
                         {location === "/whiteService" ? (
@@ -362,7 +369,7 @@ function App() {
                                 fontSize: {
                                   xl: "65px",
                                   lg: "65px",
-                                  md: "55px",
+                                  md: "45px",
                                   sm: "35px",
                                   xs: "21px",
                                 },
@@ -374,7 +381,14 @@ function App() {
                         ) : (
                           "Our Disruptive Technologies"
                         )}
-                      </Typography>
+                      </Typography> */}
+                      {location === "/whiteService" ? (
+                        <AnimatedGradientText>
+                          Our Disruptive Technologies
+                        </AnimatedGradientText>
+                      ) : (
+                        "Our Disruptive Technologies"
+                      )}
                     </Link>
                   </ListItem>
                   <ListItem

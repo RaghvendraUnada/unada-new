@@ -88,16 +88,19 @@ const ChatSection = () => {
             <Box component="img" src={GlassDoorIcon} alt="glassdoor" />
           </Box>
           <Box sx={{ marginTop: "5rem" }}>
-            <a
-              href="https://www.google.com/maps?q=552,+Pandurang+Shashtri+Marg,+Beside+Star+Bazaar,+Satellite,+Ahmedabad,+Gujarat+380015"
-              target="_blank"
-            >
-              <Typography sx={SubHeadText}>Find us</Typography>
-              <Typography sx={metaTextStyle2}>
+            <Typography sx={SubHeadText}>Find us</Typography>
+            <Typography sx={metaTextStyle2}>
+              <a
+                href="https://www.google.com/maps?q=Iscon Emporio,+Satellite,+Ahmedabad,+Gujarat+380015"
+                target="_blank"
+                style={{
+                  color: "rgba(15, 15, 15, 0.5)",
+                }}
+              >
                 550 Iscon Emporio, Besides StarBazaar, Jodhpur Cross Rd,
                 Satellite,Ahmedabad, Gujarat 380015
-              </Typography>
-            </a>
+              </a>
+            </Typography>
           </Box>
         </Box>
       </Grid>
