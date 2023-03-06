@@ -18,7 +18,9 @@ const InternshipSection = () => {
         <Typography sx={metaTextStyle}>
           We look forward to helping you jumpstart your career in tech!
         </Typography>
-        <Button sx={ButtonStyle}>Apply</Button>
+        <Button disableRipple sx={ButtonStyle}>
+          Apply
+        </Button>
       </Grid>
     </Grid>
   );
