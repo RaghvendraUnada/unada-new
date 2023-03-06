@@ -2,7 +2,12 @@ import React from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
 import arrwhite from "../../assets/Images/Contact/arrwhite.svg";
 import { Link } from "react-router-dom";
+import styles from "./Contact.module.css";
+import { useState } from "react";
+import EastSharpIcon from "@mui/icons-material/EastSharp";
+
 const Jobs = () => {
+  const [icon1, setIcon1] = useState("White");
   return (
     <Paper
       elevation={0}
@@ -53,7 +58,7 @@ const Jobs = () => {
         }}
       >
         <Link to={"/careers"}>
-          <img
+          {/* <img
             src={arrwhite}
             alt="chat"
             className="chat-arrow-img"
@@ -63,7 +68,19 @@ const Jobs = () => {
               color: "#fff",
               cursor: "pointer",
             }}
-          />
+          /> */}
+          <Box
+            className={styles.BigArrowImg}
+            onMouseOut={() => setIcon1("white")}
+            onMouseOver={() => setIcon1("black")}
+            sx={{
+              "&:hover": {
+                color: "black",
+              },
+            }}
+          >
+            <EastSharpIcon fontSize="large" sx={{ color: icon1 }} />
+          </Box>
         </Link>
       </Box>
     </Paper>

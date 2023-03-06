@@ -207,7 +207,13 @@ const IntroMainText = {
     xs: "1rem",
   },
   color: "#484848",
-  marginTop: "14rem",
+  marginTop: {
+    xl: "12rem",
+    lg: "12rem",
+    md: "10rem",
+    sm: "6rem",
+    xs: "6rem",
+  },
 };
 
 const SwiperText = {
@@ -222,12 +228,9 @@ const SwiperText = {
     sm: "12px",
     xs: "12px",
   },
+  textAlign: "center",
   lineHeight: " 11px",
   color: "#FAFAFA",
-  marginLeft: {
-    sm: "0",
-    md: "20rem",
-  },
   marginRight: "auto",
   marginTop: "2rem",
   marginBottom: "4rem",

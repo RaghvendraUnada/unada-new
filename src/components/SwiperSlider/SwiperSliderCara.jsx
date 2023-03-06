@@ -162,10 +162,6 @@ const SwiperText = {
   },
   lineHeight: " 11px",
   color: "#FAFAFA",
-  marginLeft: {
-    sm: "0",
-    md: "20rem",
-  },
   marginRight: "auto",
   marginTop: "2rem",
   marginBottom: "4rem",

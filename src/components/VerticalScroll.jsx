@@ -71,6 +71,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [file, setFile] = useState();
   const [coverLetter, setCoverLetter] = useState();
   const uploadFileRef = useRef();
+  const uploadFileRef2 = useRef();
   // const [state,setState] = useState()
 
   const apply = async () => {
@@ -118,7 +119,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     // });
     var formdata = new FormData();
     formdata.append("UserLastName", firstName);
-    formdata.append("coverLetter", file[0]);
+    formdata.append("coverLetter", coverLetter[0]);
     formdata.append("resume", file[0]);
     formdata.append("UserFirstName", lastName);
     formdata.append("UserEmail", email);
@@ -129,7 +130,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       redirect: "follow",
     };
 
-    fetch("https://unada-backend.unada.in/user_data/apply", requestOptions)
+    fetch("http://192.168.29.5:8000/user_data/apply", requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
@@ -458,9 +459,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   }}
                 >
                   <input
-                    id="standard-textarea"
+                    // id="standard-textarea"
                     label="Email"
-                    type="email"
+                    // type="email"
                     placeholder="Enter your email"
                     variant="standard"
                     multiline
@@ -734,7 +735,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     <input
                       id="standard-textarea"
                       label="Linked in url"
-                      type="url"
+                      // type="url"
                       placeholder="Paste URL here"
                       variant="standard"
                       multiline
@@ -765,15 +766,28 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   >
                     <input
                       type="file"
-                      multiple
-                      ref={uploadFileRef}
-                      style={{ display: "none" }}
+                      // multiple
+                      // ref={uploadFileRef}
+                      style={{
+                        textTransform: "none",
+                        fontSize: "16px",
+                        fontFamily: "LGTrial",
+                        color: "white",
+                        "&:hover": {
+                          background: "#FAFAFA",
+                          // color: "white",
+                        },
+                      }}
                       onChange={(e) => {
                         setFile(e.target.files);
                       }}
+                      onClick={() => {
+                        console.log(uploadFileRef);
+                        uploadFileRef.current.click();
+                      }}
                     />
-                    {file?.length}
-                    <Button
+                    {/* {file?.length} */}
+                    {/* <Button
                       sx={{
                         textTransform: "none",
                         fontSize: "16px",
@@ -793,7 +807,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       }}
                     >
                       Choose file
-                    </Button>
+                    </Button> */}
                   </Box>
                   <Typography sx={labeltext}>Cover letter</Typography>
                   <Box
@@ -817,8 +831,15 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         border: "1px dashed #F0F0F0",
                         borderRadius: "4px",
                       }}
-                      onDrag={handleDragOver}
-                      onDrop={handleDrop}
+                      // onDrag={handleDragOver}
+                      // onDrop={handleDrop}
+                      onClick={() => {
+                        console.log(uploadFileRef2);
+                        uploadFileRef2.current.click();
+                      }}
+                      onChange={(e) => {
+                        setCoverLetter(e.target.files);
+                      }}
                     >
                       <img src={Uploadimg} alt="img" />
                       <Typography
@@ -848,14 +869,14 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
 
                       <input
                         type="file"
-                        multiple
-                        ref={uploadFileRef}
+                        // multiple
+                        ref={uploadFileRef2}
                         style={{ display: "none" }}
                         onChange={(e) => {
-                          setFile(e.target.files);
+                          setCoverLetter(e.target.files);
                         }}
                       />
-                      {file?.length}
+                      {coverLetter?.length}
                       <Button
                         variant="outlined"
                         component="label"
@@ -864,8 +885,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                           border: "none",
                         }}
                         onClick={() => {
-                          console.log(uploadFileRef);
-                          uploadFileRef.current.click();
+                          console.log(uploadFileRef2);
+                          uploadFileRef2.current.click();
                         }}
                       >
                         <Typography

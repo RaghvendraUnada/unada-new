@@ -27,7 +27,14 @@ const ContactUsSection = () => {
     <Grid
       container
       sx={{
-        height: "100vh",
+        height: "auto",
+        minHeight: {
+          xs: "100vh",
+          sm: "100vh",
+          md: "100vh",
+          lg: "25vh",
+          xl: "25vh",
+        },
         borderRadius: "none",
         bgcolor: "white",
         display: "flex",

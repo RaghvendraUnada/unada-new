@@ -87,7 +87,11 @@ const ChatSection = () => {
             {/* <DoorSlidingSharpIcon size={23} sx={{ fontSize: "23px" }} /> */}
             <Box component="img" src={GlassDoorIcon} alt="glassdoor" />
           </Box>
-          <Box sx={{ marginTop: "5rem" }}>
+          <Box
+            sx={{
+              marginTop: "5rem",
+            }}
+          >
             <Typography sx={SubHeadText}>Find us</Typography>
             <Typography sx={metaTextStyle2}>
               <a
@@ -179,6 +183,9 @@ const metaTextStyle2 = {
     md: "13px",
     sm: "11px",
     xs: "11px",
+  },
+  "&:hover": {
+    textFillColor: "white",
   },
   lineHeight: "24px",
   color: "rgba(15, 15, 15, 0.5)",

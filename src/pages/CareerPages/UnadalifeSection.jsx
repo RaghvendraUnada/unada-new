@@ -34,10 +34,25 @@ function UnadalifeSection() {
               width: "100%",
               height: "auto",
               objectFit: "contain",
-              bgcolor: "red",
+              // bgcolor: "red",
             }}
           />
-          <Typography sx={text}>Unada’s life</Typography>
+          <Box
+            sx={{
+              position: "absolute",
+              top: {
+                xl: "75%",
+                lg: "80%",
+                md: "75%",
+                xs: "80%",
+                sm: "80%",
+              },
+              width: "100%",
+              // bgcolor: "red",
+            }}
+          >
+            <Typography sx={text}>Unada’s life</Typography>
+          </Box>
         </Box>
       </Grid>
     </Grid>
@@ -54,22 +69,22 @@ const text = {
     sm: "8rem",
     xs: "5.1rem",
   },
-  position: "absolute",
+  // position: "absolute",
   fontFamily: "LGTrial",
-  top: {
-    xl: "75%",
-    lg: "73.5%",
-    md: "85%",
-    sm: "82.5%",
-    xs: "83%",
-  },
-  left: {
-    xl: "15%",
-    lg: "15%",
-    md: "23%",
-    sm: "20%",
-    xs: "15%",
-  },
+  // top: {
+  //   xl: "75%",
+  //   lg: "73.5%",
+  //   md: "85%",
+  //   sm: "82.5%",
+  //   xs: "83%",
+  // },
+  // left: {
+  //   xl: "15%",
+  //   lg: "15%",
+  //   md: "23%",
+  //   sm: "20%",
+  //   xs: "15%",
+  // },
 
   fontWeight: 600,
   textAlign: "center",

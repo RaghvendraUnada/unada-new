@@ -316,6 +316,7 @@ const SwiperText = {
   },
   lineHeight: " 11px",
   color: "#FAFAFA",
+  textAlign: "center",
   marginTop: "2rem",
   marginBottom: "4rem",
 };
