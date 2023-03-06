@@ -1094,6 +1094,10 @@ const skillText = {
   fontWeight: 400,
   fontSize: 12,
   color: "rgba(162, 162, 162, 0.5)",
+  opacity: 0.8,
+  "&:hover": {
+    opacity: 1,
+  },
 };
 
 const closeBtn = {
