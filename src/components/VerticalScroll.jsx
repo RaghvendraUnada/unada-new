@@ -3,6 +3,8 @@ import styled from "styled-components";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
+import EastSharpIcon from "@mui/icons-material/EastSharp";
+
 import {
   Typography,
   Box,
@@ -72,6 +74,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [coverLetter, setCoverLetter] = useState();
   const uploadFileRef = useRef();
   const uploadFileRef2 = useRef();
+  const [icon1, setIcon1] = useState("White");
+  const [border, setBorder] = useState("White");
+
   // const [state,setState] = useState()
 
   const apply = async () => {
@@ -266,7 +271,18 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 marginTop: "0.5rem",
               }}
             >
-              <Button sx={ButtonStyle1} onClick={handleClickOpen}>
+              <Button
+                sx={ButtonStyle1}
+                onClick={handleClickOpen}
+                onMouseOut={() => {
+                  setIcon1("white");
+                  setBorder("white");
+                }}
+                onMouseOver={() => {
+                  setIcon1("black");
+                  setBorder("black");
+                }}
+              >
                 Apply
                 <span
                   style={{
@@ -283,11 +299,21 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     setOpen(true);
                   }}
                 >
-                  <img
+                  <Box
+                    sx={{
+                      p: 0.3,
+                      borderRadius: "20px",
+                      border: `1px solid ${border}`,
+                      display: "flex",
+                    }}
+                  >
+                    <EastSharpIcon fontSize="small" sx={{ color: icon1 }} />
+                  </Box>
+                  {/* <img
                     src={arrows}
                     alt="arr"
                     style={{ height: "auto", width: "20px" }}
-                  />
+                  /> */}
                 </span>
               </Button>
             </Grid>
@@ -330,7 +356,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 },
                 borderBottom: "1px solid #A3A3A3",
                 gap: "2rem",
-                bgcolor: "",
+
                 p: 2,
               }}
             >
@@ -377,7 +403,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
             <Grid
               container
               sx={{
-                height: "80%",
+                height: "100%",
+                bgcolor: "black",
                 p: 2,
               }}
               xl={12}

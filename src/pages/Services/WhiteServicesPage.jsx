@@ -12,6 +12,7 @@ import ExploreIcon from "../../assets/Images/Services/ExploreIcon.svg";
 import blackArrowImg from "../../assets/Images/Services/blackArrowImg.svg";
 import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import EastSharpIcon from "@mui/icons-material/EastSharp";
 
 const WhiteServicesPage = () => {
   const navigate = useNavigate();
@@ -131,7 +132,9 @@ const WhiteServicesPage = () => {
                       to={"/application"}
                       style={{ textDecoration: "none" }}
                     >
-                      <Button sx={ButtonStyle}>View</Button>
+                      <Button sx={ButtonStyle}>
+                        <EastSharpIcon fontSize="large" />
+                      </Button>
                     </Link>
                   </Box>
                 </>
@@ -177,7 +180,9 @@ const WhiteServicesPage = () => {
                       maintenance.
                     </Typography>
                     <Link to={"/web"} style={{ textDecoration: "none" }}>
-                      <Button sx={ButtonStyle}>View</Button>
+                      <Button sx={ButtonStyle}>
+                        <EastSharpIcon fontSize="large" />
+                      </Button>
                     </Link>
                   </Box>
                 </>
@@ -224,7 +229,9 @@ const WhiteServicesPage = () => {
                       interfaces for websites..
                     </Typography>
                     <Link to={"/ui"} style={{ textDecoration: "none" }}>
-                      <Button sx={ButtonStyle}>View</Button>
+                      <Button sx={ButtonStyle}>
+                        <EastSharpIcon fontSize="large" />
+                      </Button>
                     </Link>
                   </Box>
                 </>
@@ -693,6 +700,7 @@ const ButtonStyle = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 400,
+  p: 1,
   fontSize: {
     xl: "16px",
     lg: "16px",
