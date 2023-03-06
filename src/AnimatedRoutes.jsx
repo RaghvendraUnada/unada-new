@@ -14,6 +14,7 @@ import Home from "./views/Home";
 import { AnimatePresence } from "framer-motion";
 import MainHeroPage from "./views/MainHeroPage";
 import Example from "./Components/SpringSlider/SpringSlider";
+import Marquee from "./views/OurTeamMarquee";
 // import Slider3d from "./Components/Slider3d16/Slider3d";
 const AnimatedRoutes = ({ setColorState }) => {
   const Location = useLocation();
@@ -49,6 +50,7 @@ const AnimatedRoutes = ({ setColorState }) => {
         <Route path="/blockchain" element={<Blockchain />} />
         <Route path="/ui" element={<Ui />} />
         <Route path="/slider" element={<Example />} />
+        <Route path="/marquee" element={<Marquee />} />
       </Routes>
     </AnimatePresence>
   );

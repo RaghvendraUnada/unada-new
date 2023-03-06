@@ -784,9 +784,10 @@ const OpenDetailsBottomTextStyle = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 400,
-  fontSize: "19px",
+  fontSize: "22px",
   lineHeight: "33px",
   color: "#010101",
+  // mb: 8,
 };
 
 const TransformedText = {

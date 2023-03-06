@@ -1,0 +1,15 @@
+.torotate {
+  width: auto;
+  height: 100vh;
+  background-color: transparent;
+  transform: rotate(90deg);
+}
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

@@ -42,7 +42,7 @@ const CaraProject = (props) => {
   return (
     <Box
       sx={{
-        width: "80%",
+        width: "90%",
         mx: "auto",
         background: "#000",
         display: "flex",

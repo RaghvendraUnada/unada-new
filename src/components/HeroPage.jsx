@@ -19,7 +19,13 @@ const HeroPage = ({
   const location = useLocation();
 
   function handleClicks() {
-    location.push("/contact#section");
+    // location.push("/contact/#section");
+    navigate("/contact#section");
+  }
+
+  function handleClicksMobile() {
+    // location.push("/contact/#section");
+    navigate("/contact#miniSection");
   }
 
   return (
@@ -115,29 +121,31 @@ const HeroPage = ({
                 },
               }}
             >
-              <a href="contact" onClicks={handleClicks}>
-                <Button
-                  variant="contained"
-                  onFocusVisible
-                  sx={{
-                    borderRadius: "9rem",
-                    fontSize: "1.7rem",
-                    padding: "1.1rem 2.6rem",
-                    fontWeight: 500,
-                    fontFamily: "LGLight",
-                    textTransform: "capitalize",
-                    "&:hover": {
-                      fontSize: "1.75rem",
-                    },
-                    "&.Mui-focused": {
-                      backgroundColor: "#1565c0",
-                      color: "#000",
-                    },
-                  }}
-                >
-                  Get Started
-                </Button>
-              </a>
+              {/* <a href="/contact/#section"> */}
+              <Button
+                onClick={handleClicks}
+                variant="contained"
+                onFocusVisible
+                sx={{
+                  color: "#fff",
+                  borderRadius: "9rem",
+                  fontSize: "1.7rem",
+                  padding: "1.1rem 2.6rem",
+                  fontWeight: 500,
+                  fontFamily: "LGLight",
+                  textTransform: "capitalize",
+                  "&:hover": {
+                    fontSize: "1.75rem",
+                  },
+                  "&.Mui-focused": {
+                    backgroundColor: "#1565c0",
+                    color: "#000",
+                  },
+                }}
+              >
+                Get Started
+              </Button>
+              {/* </a> */}
               {/* <button
                 onClick={handleClick}
                 style={{
@@ -364,26 +372,27 @@ const HeroPage = ({
               },
             }}
           >
-            <a href="contact">
-              <Button
-                variant="contained"
-                sx={{
-                  borderRadius: "9rem",
-                  background: "#0D6EFD",
-                  fontSize: "1.8rem",
-                  padding: "0.8rem 2rem",
-                  fontWeight: 500,
-                  // lineHeight: "2.9rem",
-                  fontFamily: "LGLight",
-                  textTransform: "capitalize",
-                  // "&:focus": {
-                  //   backgroundColor: "transparent",
-                  // },
-                }}
-              >
-                Get Started
-              </Button>
-            </a>
+            {/* <a href="contact"> */}
+            <Button
+              onClick={handleClicksMobile}
+              variant="contained"
+              sx={{
+                borderRadius: "9rem",
+                background: "#0D6EFD",
+                fontSize: "1.8rem",
+                padding: "0.8rem 2rem",
+                fontWeight: 500,
+                // lineHeight: "2.9rem",
+                fontFamily: "LGLight",
+                textTransform: "capitalize",
+                // "&:focus": {
+                //   backgroundColor: "transparent",
+                // },
+              }}
+            >
+              Get Started
+            </Button>
+            {/* </a> */}
           </Box>
         </Grid>
       </Grid>
