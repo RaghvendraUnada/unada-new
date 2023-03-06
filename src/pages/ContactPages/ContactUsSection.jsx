@@ -30,10 +30,9 @@ const ContactUsSection = () => {
   useEffect(() => {
     if (location?.hash === "#section") {
       console.log("=====>hello");
-      // const section = document.getElementById("section");
-      // return section.scrollIntoView({ behavior: "smooth" });
-      // window.scrollY(3000);
-      window.scrollTo({ top: 800, behavior: "smooth" });
+      setTimeout(() => {
+        window.scrollTo({ top: 800, behavior: "smooth" });
+      }, [1200]);
     } else {
       return console.log(window.location.pathname);
     }

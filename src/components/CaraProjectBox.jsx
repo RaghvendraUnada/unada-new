@@ -8,8 +8,8 @@ const CaraProjectBox = ({ image, name, hrefLink }) => {
         background: "#000",
         ml: 2,
         width: {
-          xl: "500px",
-          lg: "500px",
+          xl: "550px",
+          lg: "550px",
           md: "450px",
           sm: "400px",
           xs: "300px",
