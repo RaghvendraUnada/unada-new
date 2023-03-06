@@ -379,7 +379,6 @@ function App() {
                   </ListItem>
                   <ListItem
                     sx={{
-                      // mt: 1,
                       cursor: "pointer",
                       borderBottom: "1px solid #DBDBDB",
                       "&:hover": {

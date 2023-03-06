@@ -289,7 +289,6 @@ const ServicesPage = () => {
                   setClick1(false);
                 }}
               >
-                <Typography sx={mobileActivePapertext}>Metaverse</Typography>
                 <Box sx={{ position: "relative" }}>
                   <img
                     src={MobileMetaImg}
@@ -302,6 +301,9 @@ const ServicesPage = () => {
                     }}
                   />
                   <Typography sx={mobileActivePaperMetaText}>
+                    <Typography sx={mobileActivePapertext} mb={2}>
+                      Metaverse
+                    </Typography>
                     Imagine a world where anything is possible! At Unada
                     <br />
                     <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
@@ -349,7 +351,6 @@ const ServicesPage = () => {
                   setClick2(false);
                 }}
               >
-                <Typography sx={mobileActivePapertext}>AR/VR</Typography>
                 <Box sx={{ position: "relative" }}>
                   <img
                     src={ArVrMobImg}
@@ -362,6 +363,9 @@ const ServicesPage = () => {
                     }}
                   />
                   <Typography sx={mobileActivePaperMetaText}>
+                    <Typography sx={mobileActivePapertext} mb={2}>
+                      AR/VR
+                    </Typography>
                     Whether you're a game developer looking to create the next
                     big hit.
                     <br />
@@ -408,7 +412,6 @@ const ServicesPage = () => {
                   setClick3(false);
                 }}
               >
-                <Typography sx={mobileActivePapertext}>Blockchain</Typography>
                 <Box sx={{ position: "relative" }}>
                   <img
                     src={BlockChainMobImg}
@@ -421,6 +424,9 @@ const ServicesPage = () => {
                     }}
                   />
                   <Typography sx={mobileActivePaperMetaText}>
+                    <Typography sx={mobileActivePapertext} mb={2}>
+                      Blockchain
+                    </Typography>
                     Our services include custom blockchain and web3 development.
                     <br />
                     <Link to={"/blockchain"} style={{ textDecoration: "none" }}>
@@ -657,7 +663,7 @@ const mobileActivePapertext = {
   textFillColor: "transparent",
   fontSize: "35px",
   lineHeight: "45px",
-  textAlign: "center",
+  textAlign: "left",
   letterSpacing: 0.01,
 };
 const mobileActivePaperMetaText = {
