@@ -283,6 +283,7 @@ const mainText = {
 };
 
 const subText = {
+  mt: 6,
   width: { xl: "80%", lg: "80%", md: "80%", sm: "90%", xs: "90%" },
   fontSize: {
     xl: "1.5rem",
@@ -295,9 +296,9 @@ const subText = {
   fontWeight: 400,
   fontFamily: "LGRegular",
   lineHeight: {
-    xl: "2.6rem",
-    lg: "2.6rem",
-    md: "2.4rem",
+    xl: "3rem",
+    lg: "3rem",
+    md: "2.9rem",
     sm: "2.1rem",
     xs: "2.0rem",
   },

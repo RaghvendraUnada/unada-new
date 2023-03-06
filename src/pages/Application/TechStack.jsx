@@ -138,14 +138,6 @@ const TechStack = (props) => {
                   })}
                 </Grid>
                 <Grid item xl={6} lg={6} md={6} sm={6} xs={6}>
-                  {/* <Typography sx={IndustriesNameText}>
-                  <BsCheck2
-                    size={20}
-                    color={"#4caf50"}
-                    style={{ alignItems: "center" }}
-                  />
-                  Manufacturing
-                </Typography> */}
                   {props?.text?.map((res, idx) => {
                     return (
                       <Typography sx={IndustriesNameText} key={idx}>
@@ -207,10 +199,11 @@ const TechStack = (props) => {
                     return (
                       <Typography sx={IndustriesNameText} key={idx}>
                         <BsCheck2
-                          size={20}
+                          size={25}
                           color={"#4caf50"}
                           style={{ alignItems: "center" }}
                         />
+
                         {res}
                       </Typography>
                     );
@@ -329,6 +322,9 @@ const IndustriesNameText = {
     xs: "12px",
   },
   marginLeft: "30px",
+  "&:hover": {
+    fontSize: "15px",
+  },
 };
 
 const TestStyle = {

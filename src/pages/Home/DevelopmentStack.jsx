@@ -697,6 +697,13 @@ const OpenDetails = (props) => {
                 color: "#9D9D9D",
                 display: "flex",
                 alignItems: "center",
+                "&:hover": {
+                  borderRadius: "15px",
+                  background: "black",
+                  color: "#fff",
+                  width: "13%",
+                  p: 0.2,
+                },
               }}
             >
               View
@@ -762,7 +769,7 @@ const OpenDetailsBottomTextStyle = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 400,
-  fontSize: "16px",
+  fontSize: "19px",
   lineHeight: "33px",
   color: "#010101",
 };
@@ -1017,6 +1024,10 @@ const ButtonStyle = {
   color: "#000",
   marginTop: "2rem",
   opacity: 0.7,
+  // "&:hover": {
+  //   borderRadius: "15px solid black",
+  //   color: "#fff",
+  // },
 };
 const ServiceText = {
   fontFamily: "LGRegular",
@@ -1061,7 +1072,7 @@ const paperTextStyle1 = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 400,
-  // fontSize: "12.0396",
+  // fontSize: "12px",
   fontSize: "1.4rem",
   lineHeight: "17px",
   color: "#010101",

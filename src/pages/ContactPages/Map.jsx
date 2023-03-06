@@ -15,7 +15,7 @@ const Map = () => {
         >
           <Box sx={{ background: "#000" }}>
             <iframe
-              src="https://maps.google.com/maps?q=Iscon Emporio, Satellite, Ahmedabad, Gujarat&t=&z=10&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/search/unada/@22.9928039,72.5467606,13.09z"
               id="gmap_canvas"
               frameborder="0"
               scrolling="no"
