@@ -22,9 +22,13 @@ html {
 
 body {
   background: #000;
-  user-select: none;
+  /* user-select: none; */
   /* overflow-y: scroll !important;
   overflow-x: hidden !important; */
+}
+::selection {
+  color: black;
+  background: #fff;
 }
 html {
   font-size: 62.5%;
@@ -157,7 +161,7 @@ button:focus {
 .bg-gradient-text {
   font-family: "Jeko Bold";
   font-style: normal;
-  font-weight: 750;
+  font-weight: 550;
   line-height: 110px;
   text-align: center;
   background: linear-gradient(

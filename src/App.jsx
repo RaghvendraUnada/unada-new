@@ -36,10 +36,10 @@ function App() {
   // const navigate = useNavigate();
   const [locationdata, setLocationData] = useState("");
   let location = window.location.pathname;
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
+  // const [mousePosition, setMousePosition] = useState({
+  //   x: 0,
+  //   y: 0,
+  // });
   const [cursorVariant, setCursorVariant] = useState("default");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
@@ -47,29 +47,47 @@ function App() {
     } else setWhatsappView(false);
   });
 
-  const variants = {
-    default: {
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
-    },
-    text: {
-      height: 150,
-      width: 150,
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
-      backgroundColor: "transparent",
-      mixBlendMode: "normal",
-    },
-  };
+  // const variants = {
+  //   default: {
+  //     x: mousePosition.x - 16,
+  //     y: mousePosition.y - 16,
+  //   },
+  //   text: {
+  //     height: 150,
+  //     width: 150,
+  //     x: mousePosition.x - 75,
+  //     y: mousePosition.y - 75,
+  //     backgroundColor: "green",
+  //     mixBlendMode: "normal",
+  //   },
+  // };
 
-  const textEnter = () => setCursorVariant("text");
-  const textLeave = () => setCursorVariant("default");
-  useEffect(() => {
-    setCurrentLocation(window.location.pathname);
-  }, []);
+  // const textEnter = () => setCursorVariant("text");
+  // const textLeave = () => setCursorVariant("default");
+  // useEffect(() => {
+  //   setCurrentLocation(window.location.pathname);
+  // }, []);
+  // useEffect(() => {
+  //   const mouseMove = (e) => {
+  //     setMousePosition({
+  //       x: e.clientX,
+  //       y: e.clientY,
+  //     });
+  //   };
 
+  //   window.addEventListener("mousemove", mouseMove);
+
+  //   return () => {
+  //     window.removeEventListener("mousemove", mouseMove);
+  //   };
+  // }, []);
   return (
     <Paper elevation={0} sx={{ bgcolor: "transparent" }}>
+      {/* <motion.div
+        className="cursor"
+        variants={variants}
+        animate={cursorVariant}
+      /> */}
       <Stack
         sx={{
           maxWidth: "2000px",
@@ -306,6 +324,8 @@ function App() {
                           borderTop: "1px solid #000",
                           borderBottom: "1px solid #000",
                         },
+                        fontFamily: "JekoNormal",
+                        fontWeight: 400,
                       }}
                     >
                       {location === "/" ? (
@@ -334,6 +354,8 @@ function App() {
                           borderBottom: "1px solid #000",
                           borderTop: "1px solid #000",
                         },
+                        fontFamily: "JekoNormal",
+                        fontWeight: 400,
                       }}
                     >
                       {location === "/service" ? (
@@ -365,6 +387,8 @@ function App() {
                           borderBottom: "1px solid #000",
                           borderTop: "1px solid #000",
                         },
+                        fontFamily: "JekoNormal",
+                        fontWeight: 400,
                       }}
                     >
                       {location === "/whiteService" ? (
@@ -397,6 +421,8 @@ function App() {
                           borderBottom: "1px solid #000",
                           borderTop: "1px solid #000",
                         },
+                        fontFamily: "JekoNormal",
+                        fontWeight: 400,
                       }}
                     >
                       {location === "/careers" ? (
@@ -427,6 +453,8 @@ function App() {
                           borderBottom: "1px solid #000",
                           borderTop: "1px solid #000",
                         },
+                        fontFamily: "JekoNormal",
+                        fontWeight: 400,
                       }}
                     >
                       {location === "/contact" ? (
@@ -452,37 +480,37 @@ function App() {
         )}
       </Stack>
 
-      <motion.div
+      {/* <motion.div
         className="whatsappicon"
         style={{
           marginRight: WhatsappView ? "0px" : "-100px",
           transition: "all 1s ease-in-out",
         }}
+      > */}
+      <Box
+        sx={{
+          width: "40px",
+          cursor: "pointer",
+          background: "white",
+          borderRadius: "20px",
+          height: "40px",
+          border: "none",
+        }}
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
       >
-        <Box
-          sx={{
-            width: "40px",
-            cursor: "pointer",
-            background: "white",
-            borderRadius: "20px",
-            height: "40px",
-            border: "none",
+        <FaArrowAltCircleUp
+          fill="black"
+          size={"107%"}
+          height={"40px"}
+          style={{
+            marginTop: "-1px",
+            marginLeft: "-1.5px",
           }}
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
-          <FaArrowAltCircleUp
-            fill="black"
-            size={"107%"}
-            height={"40px"}
-            style={{
-              marginTop: "-1px",
-              marginLeft: "-1.5px",
-            }}
-          />
-        </Box>
-      </motion.div>
+        />
+      </Box>
+      {/* </motion.div> */}
     </Paper>
   );
 }
@@ -513,7 +541,7 @@ const AnimatedGradientText = styled.h1`
   -webkit-animation: ${hue} 10s infinite linear;
   font-family: LGRegular;
   font-size: 65px;
-  font-weight: 750;
+  font-weight: 550;
   margin: 0;
   // text-transform: uppercase;
   padding: 0;

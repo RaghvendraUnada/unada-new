@@ -83,6 +83,11 @@ ul .indicators {
   src: url("../src/assets/Fonts/FontsFree-Net-Jeko-Bold.ttf");
 }
 
+@font-face {
+  font-family: "JekoNormal";
+  src: url("../src/assets/Fonts/Jeko/JekoDEMO-Medium.otf");
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

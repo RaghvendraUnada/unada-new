@@ -4,7 +4,7 @@ import TeamImgOne from "../../assets/Images/Home/OurTeam/ImgOne.png";
 import TeamImgTwo from "../../assets/Images/Home/OurTeam/ImgTwo.png";
 import "./OurTeam.css";
 import Marquee from "react-marquee-master";
-
+import { motion } from "framer-motion";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import teamTitle from "../../assets/images/new/team.png";
@@ -57,7 +57,22 @@ const OurTeam = () => {
         }}
         elevation={0}
       >
-        <Typography sx={OurTeamTextStyle}>Our Team</Typography>
+        <motion.p
+          viewport={{ once: false }}
+          exit={{ y: 0 }}
+          transition={{ duration: 0.8, ease: "linear" }}
+          initial="top"
+          whileInView="visible"
+          variants={{
+            top: { y: -100 },
+            exit: { y: 0 },
+
+            visible: { y: 0, opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+        >
+          <Typography sx={OurTeamTextStyle}>Our Team</Typography>
+        </motion.p>
       </Paper>
       <Paper
         sx={{
