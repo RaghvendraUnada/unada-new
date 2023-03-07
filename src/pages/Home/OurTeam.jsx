@@ -178,6 +178,7 @@ const OurTeam = () => {
                     </div>
                   </div>
                 </div> */}
+
                 <OurTeamMarquee />
               </Paper>
             </Paper>

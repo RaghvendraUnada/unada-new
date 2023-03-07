@@ -267,9 +267,7 @@ function App() {
                     to={"/"}
                     style={{
                       textDecoration: "none",
-                      // margin: "auto",
-                      // marginLeft: "auto",
-                      // paddingLeft: "74px",
+
                       marginTop: "5px",
                     }}
                   >
@@ -282,106 +280,62 @@ function App() {
                   </Link>
 
                   <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
-                    {/* <img
-                      src={Close}
-                      alt="Close"
-                      style={{
-                        width: "75%",
-                        height: "auto",
-                        marginTop: "10px",
-                        maxWidth: "22px",
-                      }}
-                    /> */}
                     Close
                   </Button>
                 </Paper>
                 <List sx={{ py: 5, height: "80vh", overflowY: "scroll" }}>
-                  <ListItem
-                    sx={{
-                      mt: 1,
-                      cursor: "pointer",
-                      borderTop: "1px solid #DBDBDB",
-                      borderBottom: "1px solid #DBDBDB",
-                      "&:hover": {
-                        borderTop: "1px solid #000",
-                        borderBottom: "1px solid #000",
-                      },
+                  <Link
+                    onClick={() => {
+                      setOpen(false);
                     }}
+                    to="/"
                     className={HeaderStyles.Text}
                   >
-                    <Link
-                      onClick={() => {
-                        setOpen(false);
-                      }}
+                    <ListItem
                       className={
                         location === "/"
                           ? HeaderStyles.navbarListTextActive
                           : HeaderStyles.navbarListText
                       }
-                      to="/"
-                      // style={{ margin: "auto" }}
+                      sx={{
+                        mt: 1,
+                        cursor: "pointer",
+                        borderTop: "1px solid #DBDBDB",
+                        borderBottom: "1px solid #DBDBDB",
+                        "&:hover": {
+                          borderTop: "1px solid #000",
+                          borderBottom: "1px solid #000",
+                        },
+                      }}
                     >
                       {location === "/" ? (
                         <AnimatedGradientText>Home</AnimatedGradientText>
                       ) : (
                         "Home"
                       )}
-                    </Link>
-                  </ListItem>
-                  <ListItem
-                    sx={{
-                      cursor: "pointer",
-                      borderBottom: "1px solid #DBDBDB",
-                      "&:hover": {
-                        borderBottom: "1px solid #000",
-                        borderTop: "1px solid #000",
-                      },
+                    </ListItem>
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setOpen(false);
                     }}
+                    to="/service"
                   >
-                    <Link
-                      onClick={() => {
-                        setOpen(false);
-                      }}
+                    <ListItem
                       className={
                         location === "/service"
                           ? HeaderStyles.navbarListTextActive
                           : HeaderStyles.navbarListText
                       }
-                      to="/service"
+                      sx={{
+                        cursor: "pointer",
+                        borderBottom: "1px solid #DBDBDB",
+                        "&:hover": {
+                          borderBottom: "1px solid #000",
+                          borderTop: "1px solid #000",
+                        },
+                      }}
                     >
-                      {/* <Typography
-                        sx={{
-                          // fontSize: "23px",
-                          fontSize: {
-                            xl: "65px",
-                            lg: "65px",
-                            md: "25px",
-                            sm: "35px",
-                            xs: "21px",
-                          },
-                          fontWeight: "060",
-                        }}
-                      >
-                        {location === "/whiteService" ? (
-                          <AnimatedGradientText>
-                            <Typography
-                              sx={{
-                                fontSize: {
-                                  xl: "65px",
-                                  lg: "65px",
-                                  md: "45px",
-                                  sm: "35px",
-                                  xs: "21px",
-                                },
-                              }}
-                            >
-                              Our Disruptive Technologies
-                            </Typography>
-                          </AnimatedGradientText>
-                        ) : (
-                          "Our Disruptive Technologies"
-                        )}
-                      </Typography> */}
                       {location === "/service" ? (
                         <AnimatedGradientText>
                           Our Disruptive Technologies
@@ -389,29 +343,29 @@ function App() {
                       ) : (
                         "Our Disruptive Technologies"
                       )}
-                    </Link>
-                  </ListItem>
-                  <ListItem
-                    sx={{
-                      cursor: "pointer",
-                      borderBottom: "1px solid #DBDBDB",
-                      "&:hover": {
-                        borderBottom: "1px solid #000",
-                        borderTop: "1px solid #000",
-                      },
+                    </ListItem>
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setOpen(false);
                     }}
+                    to="/whiteService"
+                    // style={{ margin: "auto" }}
                   >
-                    <Link
-                      onClick={() => {
-                        setOpen(false);
-                      }}
+                    <ListItem
                       className={
                         location === "/whiteService"
                           ? HeaderStyles.navbarListTextActive
                           : HeaderStyles.navbarListText
                       }
-                      to="/whiteService"
-                      // style={{ margin: "auto" }}
+                      sx={{
+                        cursor: "pointer",
+                        borderBottom: "1px solid #DBDBDB",
+                        "&:hover": {
+                          borderBottom: "1px solid #000",
+                          borderTop: "1px solid #000",
+                        },
+                      }}
                     >
                       {location === "/whiteService" ? (
                         <AnimatedGradientText>
@@ -420,68 +374,68 @@ function App() {
                       ) : (
                         "Our Services"
                       )}
-                    </Link>
-                  </ListItem>
-                  <ListItem
-                    sx={{
-                      // mt: 1,
-                      cursor: "pointer",
-                      borderBottom: "1px solid #DBDBDB",
-                      "&:hover": {
-                        borderBottom: "1px solid #000",
-                        borderTop: "1px solid #000",
-                      },
+                    </ListItem>
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setOpen(false);
                     }}
+                    to="/careers"
+                    // style={{ margin: "auto" }}
                   >
-                    <Link
-                      onClick={() => {
-                        setOpen(false);
-                      }}
+                    <ListItem
                       className={
                         location === "/careers"
                           ? HeaderStyles.navbarListTextActive
                           : HeaderStyles.navbarListText
                       }
-                      to="/careers"
-                      // style={{ margin: "auto" }}
+                      sx={{
+                        // mt: 1,
+                        cursor: "pointer",
+                        borderBottom: "1px solid #DBDBDB",
+                        "&:hover": {
+                          borderBottom: "1px solid #000",
+                          borderTop: "1px solid #000",
+                        },
+                      }}
                     >
                       {location === "/careers" ? (
                         <AnimatedGradientText>Careers</AnimatedGradientText>
                       ) : (
                         "Careers"
                       )}
-                    </Link>
-                  </ListItem>
-                  <ListItem
-                    sx={{
-                      // mt: 1,
-                      cursor: "pointer",
-                      borderBottom: "1px solid #DBDBDB",
-                      "&:hover": {
-                        borderBottom: "1px solid #000",
-                        borderTop: "1px solid #000",
-                      },
+                    </ListItem>
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setOpen(false);
                     }}
+                    to="/contact"
+                    // style={{ margin: "auto" }}
                   >
-                    <Link
-                      onClick={() => {
-                        setOpen(false);
-                      }}
+                    <ListItem
                       className={
                         location === "/contact"
                           ? HeaderStyles.navbarListTextActive
                           : HeaderStyles.navbarListText
                       }
-                      to="/contact"
-                      // style={{ margin: "auto" }}
+                      sx={{
+                        // mt: 1,
+                        cursor: "pointer",
+                        borderBottom: "1px solid #DBDBDB",
+                        "&:hover": {
+                          borderBottom: "1px solid #000",
+                          borderTop: "1px solid #000",
+                        },
+                      }}
                     >
                       {location === "/contact" ? (
                         <AnimatedGradientText>Contact us</AnimatedGradientText>
                       ) : (
                         "Contact us"
                       )}
-                    </Link>
-                  </ListItem>
+                    </ListItem>
+                  </Link>
                 </List>
               </Paper>
             </Paper>
@@ -559,7 +513,7 @@ const AnimatedGradientText = styled.h1`
   -webkit-animation: ${hue} 10s infinite linear;
   font-family: LGRegular;
   font-size: 65px;
-  font-weight: 500;
+  font-weight: 750;
   margin: 0;
   // text-transform: uppercase;
   padding: 0;

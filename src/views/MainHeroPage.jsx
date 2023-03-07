@@ -295,65 +295,65 @@ const MainHeroPage = () => {
               </Button>
             </Paper>
             <List sx={{ py: 5, height: "80vh", overflowY: "scroll" }}>
-              <ListItem
-                sx={{
-                  mt: 1,
-                  cursor: "pointer",
-                  borderTop: "1px solid #DBDBDB",
-                  borderBottom: "1px solid #DBDBDB",
-                  "&:hover": {
-                    borderTop: "1px solid #000",
-                    borderBottom: "1px solid #000",
-                  },
+              <Link
+                onClick={() => {
+                  setOpen(false);
+                  setLocationData("/");
                 }}
                 className={HeaderStyles.Text}
+                to="/"
+                style={{
+                  // margin: "auto",
+                  textDecoration: "none",
+                  color: "#C9C9C9",
+                }}
               >
-                <Link
-                  onClick={() => {
-                    setOpen(false);
-                    setLocationData("/");
+                <ListItem
+                  sx={{
+                    mt: 1,
+                    cursor: "pointer",
+                    borderTop: "1px solid #DBDBDB",
+                    borderBottom: "1px solid #DBDBDB",
+                    "&:hover": {
+                      borderTop: "1px solid #000",
+                      borderBottom: "1px solid #000",
+                    },
                   }}
                   className={
                     location === "/"
                       ? HeaderStyles.navbarListTextActive
                       : HeaderStyles.navbarListText
                   }
-                  to="/"
-                  style={{
-                    // margin: "auto",
-                    textDecoration: "none",
-                    color: "#C9C9C9",
-                  }}
                 >
                   {location === "/" ? (
                     <AnimatedGradientText>Home</AnimatedGradientText>
                   ) : (
                     "Home"
                   )}
-                </Link>
-              </ListItem>
-              <ListItem
-                sx={{
-                  // mt: 1,
-                  cursor: "pointer",
-                  borderBottom: "1px solid #DBDBDB",
-                  "&:hover": {
-                    borderBottom: "1px solid #000",
-                    borderTop: "1px solid #000",
-                  },
+                </ListItem>
+              </Link>
+              <Link
+                onClick={() => {
+                  setOpen(false);
                 }}
+                to="/service"
+                // style={{ margin: "auto" }}
               >
-                <Link
-                  onClick={() => {
-                    setOpen(false);
-                  }}
+                <ListItem
                   className={
                     location === "/service"
                       ? HeaderStyles.navbarListTextActive
                       : HeaderStyles.navbarListText
                   }
-                  to="/service"
-                  // style={{ margin: "auto" }}
+                  sx={{
+                    // mt: 1,
+                    cursor: "pointer",
+                    borderBottom: "1px solid #DBDBDB",
+                    "&:hover": {
+                      borderBottom: "1px solid #000",
+                      borderTop: "1px solid #000",
+                    },
+                  }}
                 >
                   {location === "/service" ? (
                     <AnimatedGradientText>
@@ -362,63 +362,63 @@ const MainHeroPage = () => {
                   ) : (
                     "Our Disruptive Technologies"
                   )}
-                </Link>
-              </ListItem>
-              <ListItem
-                sx={{
-                  // mt: 1,
-                  cursor: "pointer",
-                  borderBottom: "1px solid #DBDBDB",
-                  "&:hover": {
-                    borderBottom: "1px solid #000",
-                    borderTop: "1px solid #000",
-                  },
+                </ListItem>
+              </Link>
+              <Link
+                onClick={() => {
+                  setOpen(false);
                 }}
+                to="/whiteService"
+                // style={{ margin: "auto" }}
               >
-                <Link
-                  onClick={() => {
-                    setOpen(false);
-                  }}
+                <ListItem
                   className={
                     location === "/whiteService"
                       ? HeaderStyles.navbarListTextActive
                       : HeaderStyles.navbarListText
                   }
-                  to="/whiteService"
-                  // style={{ margin: "auto" }}
+                  sx={{
+                    // mt: 1,
+                    cursor: "pointer",
+                    borderBottom: "1px solid #DBDBDB",
+                    "&:hover": {
+                      borderBottom: "1px solid #000",
+                      borderTop: "1px solid #000",
+                    },
+                  }}
                 >
                   {location === "/whiteService" ? (
                     <AnimatedGradientText>Our Services</AnimatedGradientText>
                   ) : (
                     "Our Services"
                   )}
-                </Link>
-              </ListItem>
-              <ListItem
-                sx={{
-                  // mt: 1,
-                  cursor: "pointer",
-                  borderBottom: "1px solid #DBDBDB",
-                  "&:hover": {
-                    borderBottom: "1px solid #000",
-                    borderTop: "1px solid #000",
-                  },
+                </ListItem>
+              </Link>
+              <Link
+                to={"/careers"}
+                onClick={() => {
+                  setOpen(false);
+                }}
+                style={{
+                  // margin: "auto",
+                  textDecoration: "none",
+                  color: "#C9C9C9",
                 }}
               >
-                <Link
-                  to={"/careers"}
-                  onClick={() => {
-                    setOpen(false);
-                  }}
+                <ListItem
                   className={
                     location === "/careers"
                       ? HeaderStyles.navbarListTextActive
                       : HeaderStyles.navbarListText
                   }
-                  style={{
-                    // margin: "auto",
-                    textDecoration: "none",
-                    color: "#C9C9C9",
+                  sx={{
+                    // mt: 1,
+                    cursor: "pointer",
+                    borderBottom: "1px solid #DBDBDB",
+                    "&:hover": {
+                      borderBottom: "1px solid #000",
+                      borderTop: "1px solid #000",
+                    },
                   }}
                 >
                   {location === "/careers" ? (
@@ -426,34 +426,34 @@ const MainHeroPage = () => {
                   ) : (
                     "Careers"
                   )}
-                </Link>
-              </ListItem>
+                </ListItem>
+              </Link>
 
-              <ListItem
-                sx={{
-                  cursor: "pointer",
-                  borderBottom: "1px solid #DBDBDB",
-                  "&:hover": {
-                    borderBottom: "1px solid #000",
-                    borderTop: "1px solid #000",
-                  },
+              <Link
+                onClick={() => {
+                  setOpen(false);
+                  setLocationData("/contact");
+                }}
+                to="/contact"
+                style={{
+                  // margin: "auto",
+                  textDecoration: "none",
+                  color: "#C9C9C9",
                 }}
               >
-                <Link
-                  onClick={() => {
-                    setOpen(false);
-                    setLocationData("/contact");
-                  }}
+                <ListItem
                   className={
                     location === "/contact"
                       ? HeaderStyles.navbarListTextActive
                       : HeaderStyles.navbarListText
                   }
-                  to="/contact"
-                  style={{
-                    // margin: "auto",
-                    textDecoration: "none",
-                    color: "#C9C9C9",
+                  sx={{
+                    cursor: "pointer",
+                    borderBottom: "1px solid #DBDBDB",
+                    "&:hover": {
+                      borderBottom: "1px solid #000",
+                      borderTop: "1px solid #000",
+                    },
                   }}
                 >
                   {location === "/contact" ? (
@@ -461,8 +461,8 @@ const MainHeroPage = () => {
                   ) : (
                     "Contact us"
                   )}
-                </Link>
-              </ListItem>
+                </ListItem>
+              </Link>
             </List>
           </Paper>
         </Paper>
@@ -666,7 +666,7 @@ const AnimatedGradientText = styled.h1`
   -webkit-animation: ${hue} 10s infinite linear;
   font-family: LGRegular;
   font-size: 65px;
-  font-weight: 500;
+  font-weight: 750;
   margin: 0;
   // text-transform: uppercase;
   padding: 0;
