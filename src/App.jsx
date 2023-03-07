@@ -177,35 +177,23 @@ function App() {
                         locationdta.pathname === "/ArVr" ||
                         locationdta.pathname === "/blockchain" ||
                         locationdta.pathname === "/contact" ? (
-                          <Box
-                            component="img"
+                          <img
                             src={OpenButtonWhite}
-                            sx={{
+                            style={{
                               width: "90%",
                               height: "auto",
                               maxWidth: "35px",
-                              transition: "0.3s all linear",
-                              "&:hover": {
-                                // bgcolor: "red",
-                                transform: "scale(1.15)",
-                              },
                             }}
                             alt="whyChooseUsimg"
                             className={HeaderStyles.MenuIcon}
                           />
                         ) : (
-                          <Box
-                            component="img"
+                          <img
                             src={OpenButton}
-                            sx={{
+                            style={{
                               width: "90%",
                               height: "auto",
                               maxWidth: "28px",
-                              transition: "0.3s all linear",
-                              "&:hover": {
-                                // bgcolor: "red",
-                                transform: "scale(1.15)",
-                              },
                             }}
                             alt="whyChooseUsimg"
                             className={HeaderStyles.MenuIcon}
@@ -297,9 +285,7 @@ function App() {
                     to={"/"}
                     style={{
                       textDecoration: "none",
-                      // margin: "auto",
-                      // marginLeft: "auto",
-                      // paddingLeft: "74px",
+
                       marginTop: "5px",
                     }}
                   >
@@ -312,68 +298,50 @@ function App() {
                   </Link>
 
                   <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
-                    {/* <img
-                      src={Close}
-                      alt="Close"
-                      style={{
-                        width: "75%",
-                        height: "auto",
-                        marginTop: "10px",
-                        maxWidth: "22px",
-                      }}
-                    /> */}
                     Close
                   </Button>
                 </Paper>
                 <List sx={{ py: 5, height: "80vh", overflowY: "scroll" }}>
-                  <ListItem
-                    sx={{
-                      mt: 1,
-                      cursor: "pointer",
-                      borderTop: "1px solid #DBDBDB",
-                      borderBottom: "1px solid #DBDBDB",
-                      "&:hover": {
-                        borderTop: "1px solid #000",
-                        borderBottom: "1px solid #000",
-                      },
-                        fontFamily: "JekoNormal",
-                        fontWeight: 400,
+                  <Link
+                    onClick={() => {
+                      setOpen(false);
                     }}
+                    to="/"
                     className={HeaderStyles.Text}
                   >
-                    <Link
-                      onClick={() => {
-                        setOpen(false);
-                      }}
+                    <ListItem
                       className={
                         location === "/"
                           ? HeaderStyles.navbarListTextActive
                           : HeaderStyles.navbarListText
                       }
-                      to="/"
-                      // style={{ margin: "auto" }}
+                      sx={{
+                        mt: 1,
+                        cursor: "pointer",
+                        borderTop: "1px solid #DBDBDB",
+                        borderBottom: "1px solid #DBDBDB",
+                        "&:hover": {
+                          borderTop: "1px solid #000",
+                          borderBottom: "1px solid #000",
+                        },
+                        fontFamily: "JekoNormal",
+                        fontWeight: 400,
+                      }}
                     >
                       {location === "/" ? (
                         <AnimatedGradientText>Home</AnimatedGradientText>
                       ) : (
                         "Home"
                       )}
-                    </Link>
-                  </ListItem>
-                  <ListItem
-                    sx={{
-                      cursor: "pointer",
-                      borderBottom: "1px solid #DBDBDB",
-                      "&:hover": {
-                        borderBottom: "1px solid #000",
-                        borderTop: "1px solid #000",
-                      },
+                    </ListItem>
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setOpen(false);
                     }}
+                    to="/service"
                   >
-                    <Link
-                      onClick={() => {
-                        setOpen(false);
-                      }}
+                    <ListItem
                       className={
                         location === "/service"
                           ? HeaderStyles.navbarListTextActive
@@ -386,6 +354,8 @@ function App() {
                           borderBottom: "1px solid #000",
                           borderTop: "1px solid #000",
                         },
+                        fontFamily: "JekoNormal",
+                        fontWeight: 400,
                       }}
                     >
                       {location === "/service" ? (
@@ -395,22 +365,16 @@ function App() {
                       ) : (
                         "Our Disruptive Technologies"
                       )}
-                    </Link>
-                  </ListItem>
-                  <ListItem
-                    sx={{
-                      cursor: "pointer",
-                      borderBottom: "1px solid #DBDBDB",
-                      "&:hover": {
-                        borderBottom: "1px solid #000",
-                        borderTop: "1px solid #000",
-                      },
+                    </ListItem>
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setOpen(false);
                     }}
+                    to="/whiteService"
+                    // style={{ margin: "auto" }}
                   >
-                    <Link
-                      onClick={() => {
-                        setOpen(false);
-                      }}
+                    <ListItem
                       className={
                         location === "/whiteService"
                           ? HeaderStyles.navbarListTextActive
@@ -423,6 +387,8 @@ function App() {
                           borderBottom: "1px solid #000",
                           borderTop: "1px solid #000",
                         },
+                        fontFamily: "JekoNormal",
+                        fontWeight: 400,
                       }}
                     >
                       {location === "/whiteService" ? (
@@ -432,23 +398,16 @@ function App() {
                       ) : (
                         "Our Services"
                       )}
-                    </Link>
-                  </ListItem>
-                  <ListItem
-                    sx={{
-                      // mt: 1,
-                      cursor: "pointer",
-                      borderBottom: "1px solid #DBDBDB",
-                      "&:hover": {
-                        borderBottom: "1px solid #000",
-                        borderTop: "1px solid #000",
-                      },
+                    </ListItem>
+                  </Link>
+                  <Link
+                    onClick={() => {
+                      setOpen(false);
                     }}
+                    to="/careers"
+                    // style={{ margin: "auto" }}
                   >
-                    <Link
-                      onClick={() => {
-                        setOpen(false);
-                      }}
+                    <ListItem
                       className={
                         location === "/careers"
                           ? HeaderStyles.navbarListTextActive
@@ -462,6 +421,8 @@ function App() {
                           borderBottom: "1px solid #000",
                           borderTop: "1px solid #000",
                         },
+                        fontFamily: "JekoNormal",
+                        fontWeight: 400,
                       }}
                     >
                       {location === "/careers" ? (
@@ -492,6 +453,8 @@ function App() {
                           borderBottom: "1px solid #000",
                           borderTop: "1px solid #000",
                         },
+                        fontFamily: "JekoNormal",
+                        fontWeight: 400,
                       }}
                     >
                       {location === "/contact" ? (
@@ -499,8 +462,8 @@ function App() {
                       ) : (
                         "Contact us"
                       )}
-                    </Link>
-                  </ListItem>
+                    </ListItem>
+                  </Link>
                 </List>
               </Paper>
             </Paper>
@@ -578,7 +541,7 @@ const AnimatedGradientText = styled.h1`
   -webkit-animation: ${hue} 10s infinite linear;
   font-family: LGRegular;
   font-size: 65px;
-  font-weight: 750;
+  font-weight: 550;
   margin: 0;
   // text-transform: uppercase;
   padding: 0;
