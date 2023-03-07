@@ -20,4 +20,11 @@
     background-color: white;
     border: 1px solid black;
   }
+  .BigArrow:hover .BigArrowImg{
+    scale: 1.1;
+    opacity: 1;
+    background-color: white;
+    border: 1px solid black;
+  }
+
   

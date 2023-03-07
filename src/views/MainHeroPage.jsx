@@ -160,23 +160,36 @@ const MainHeroPage = () => {
                     onClick={() => setOpen(true)}
                   >
                     {colorState === true ? (
-                      <img
+                      <Box
+                        component="img"
                         src={OpenButtonWhite}
-                        style={{
+                        sx={{
                           width: "90%",
                           height: "auto",
                           maxWidth: "35px",
+                          // bgcolor: "red",
+                          transition: "0.3s all linear",
+                          "&:hover": {
+                            // bgcolor: "red",
+                            transform: "scale(1.15)",
+                          },
                         }}
                         alt="whyChooseUsimg"
                         className={HeaderStyles.MenuIcon}
                       />
                     ) : (
-                      <img
+                      <Box
+                        component="img"
                         src={OpenButton}
-                        style={{
+                        sx={{
                           width: "90%",
                           height: "auto",
                           maxWidth: "28px",
+                          transition: "0.3s all linear",
+                          "&:hover": {
+                            // bgcolor: "red",
+                            transform: "scale(1.15)",
+                          },
                         }}
                         alt="whyChooseUsimg"
                         className={HeaderStyles.MenuIcon}

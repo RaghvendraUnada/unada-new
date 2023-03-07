@@ -11,55 +11,58 @@ const Jobs = () => {
 
   return (
     // <div id="section">
-    <Paper
-      elevation={0}
-      sx={{
-        bgcolor: "#000",
-        height: "40vh",
-        width: "100vw",
-        display: "flex",
-        // flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "space-between",
-        px: 5,
-      }}
-    >
-      <Box
+    <Link to={"/careers"}>
+      <Paper
+        elevation={0}
+        onMouseOut={() => setIcon1("white")}
+        onMouseOver={() => setIcon1("black")}
+        className={styles.BigArrow}
         sx={{
-          padding: {
-            xl: "2.5rem",
-            lg: "2.5rem",
-            md: "2.0rem",
-            sm: "0.5rem",
-            xs: "0.5rem",
-          },
-        }}
-      >
-        <Typography sx={text}>Unada Jobs</Typography>
-        <Typography sx={text1}>View our open position.</Typography>
-      </Box>
-      <Box
-        sx={{
+          bgcolor: "#000",
+          height: "40vh",
+          width: "100vw",
           display: "flex",
-          alignItems: "flex-end",
-          justifyContent: "flex-end",
-          padding: {
-            xl: "2.5rem",
-            lg: "2.5rem",
-            md: "2.0rem",
-            sm: "1.8rem",
-            xs: "1.6rem",
-          },
-          marginTop: {
-            xl: "2.2rem",
-            lg: "2.1rem",
-            md: "1.6rem",
-            sm: "0.5rem",
-            xs: "-0.5rem",
-          },
+          // flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-between",
+          px: 5,
         }}
       >
-        <Link to={"/careers"}>
+        <Box
+          sx={{
+            padding: {
+              xl: "2.5rem",
+              lg: "2.5rem",
+              md: "2.0rem",
+              sm: "0.5rem",
+              xs: "0.5rem",
+            },
+          }}
+        >
+          <Typography sx={text}>Unada Jobs</Typography>
+          <Typography sx={text1}>View our open position.</Typography>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "flex-end",
+            padding: {
+              xl: "2.5rem",
+              lg: "2.5rem",
+              md: "2.0rem",
+              sm: "1.8rem",
+              xs: "1.6rem",
+            },
+            marginTop: {
+              xl: "2.2rem",
+              lg: "2.1rem",
+              md: "1.6rem",
+              sm: "0.5rem",
+              xs: "-0.5rem",
+            },
+          }}
+        >
           {/* <img
             src={arrwhite}
             alt="chat"
@@ -83,9 +86,9 @@ const Jobs = () => {
           >
             <EastSharpIcon fontSize="large" sx={{ color: icon1 }} />
           </Box>
-        </Link>
-      </Box>
-    </Paper>
+        </Box>
+      </Paper>
+    </Link>
   );
 };
 

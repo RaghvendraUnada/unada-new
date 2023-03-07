@@ -1,5 +1,6 @@
 import HorizontalScrollingList from "./HorizontalScrollingList";
 import { Box } from "@mui/system";
+import React from "react";
 import Bxi from "../../assets/images/clients/bxi-white.svg";
 import Cineman from "../../assets/images/clients/cineman-white.svg";
 import Ganesh from "../../assets/images/clients/ganesh-white.svg";
@@ -12,6 +13,7 @@ import Strategic from "../../assets/images/clients/strategic-white.svg";
 import Unispace from "../../assets/images/clients/unispace-white.svg";
 import WhiteValley from "../../assets/images/clients/white-valley-white.svg";
 import ClientBox from "../ClientBox";
+import axios from "axios";
 
 const clients = [
   { image: Bxi },
@@ -32,13 +34,22 @@ const RandomSecondList = [...clients].sort(() => Math.random() - 0.6);
 const RandomThirdList = [...clients].sort(() => Math.random() - 0.6);
 
 const ClientMarquee = (props) => {
+  const [client, setclient] = React.useState();
+
+  React.useEffect(() => {
+    axios.get("/clients/get_clients").then((response) => {
+      setclient(response.data);
+      // console.log("===>", post[0].ClientLogo[0]);
+      console.log("===>", client);
+    });
+  }, []);
   return (
     <HorizontalScrollingList fromRight>
-      {clients.map((client, idx) => {
+      {client?.map((client, idx) => {
         return (
           <ClientBox
             key={idx}
-            image={client.image}
+            image={client.ClientLogo[0]}
             directions={props.directions}
           />
         );
