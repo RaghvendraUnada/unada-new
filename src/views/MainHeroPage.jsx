@@ -331,6 +331,8 @@ const MainHeroPage = () => {
                       borderTop: "1px solid #000",
                       borderBottom: "1px solid #000",
                     },
+                    fontFamily: "JekoNormal",
+                    fontWeight: 400,
                   }}
                   className={
                     location === "/"
@@ -366,6 +368,8 @@ const MainHeroPage = () => {
                       borderBottom: "1px solid #000",
                       borderTop: "1px solid #000",
                     },
+                    fontFamily: "JekoNormal",
+                    fontWeight: 400,
                   }}
                 >
                   {location === "/service" ? (
@@ -398,6 +402,8 @@ const MainHeroPage = () => {
                       borderBottom: "1px solid #000",
                       borderTop: "1px solid #000",
                     },
+                    fontFamily: "JekoNormal",
+                    fontWeight: 400,
                   }}
                 >
                   {location === "/whiteService" ? (
@@ -432,6 +438,8 @@ const MainHeroPage = () => {
                       borderBottom: "1px solid #000",
                       borderTop: "1px solid #000",
                     },
+                    fontFamily: "JekoNormal",
+                    fontWeight: 400,
                   }}
                 >
                   {location === "/careers" ? (
@@ -467,6 +475,8 @@ const MainHeroPage = () => {
                       borderBottom: "1px solid #000",
                       borderTop: "1px solid #000",
                     },
+                    fontFamily: "JekoNormal",
+                    fontWeight: 400,
                   }}
                 >
                   {location === "/contact" ? (
@@ -679,7 +689,7 @@ const AnimatedGradientText = styled.h1`
   -webkit-animation: ${hue} 10s infinite linear;
   font-family: LGRegular;
   font-size: 65px;
-  font-weight: 750;
+  font-weight: 550;
   margin: 0;
   // text-transform: uppercase;
   padding: 0;

@@ -1,8 +1,45 @@
 import { Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 const HeroIntro = () => {
+  const [cursorVariant, setCursorVariant] = useState("default");
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+    },
+    text: {
+      height: 150,
+      width: 150,
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      backgroundColor: "green",
+      mixBlendMode: "normal",
+    },
+  };
+
+  const textEnter = () => setCursorVariant("text");
+  const textLeave = () => setCursorVariant("default");
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
   return (
     <Paper
       elevation={0}
@@ -17,6 +54,11 @@ const HeroIntro = () => {
         alignItems: "center",
       }}
     >
+      <motion.div
+        className="cursor"
+        variants={variants}
+        animate={cursorVariant}
+      />
       <Box
         sx={{
           width: "80%",
@@ -32,6 +74,20 @@ const HeroIntro = () => {
           },
         }}
       >
+        {/* <motion.p
+          viewport={{ once: false }}
+          exit={{ y: 0 }}
+          transition={{ duration: 0.5, ease: "linear" }}
+          initial="top"
+          whileInView="visible"
+          variants={{
+            top: { y: -100 },
+            exit: { y: 0 },
+
+            visible: { y: 0, opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+        > */}
         <Typography sx={TextStyle}>
           We build and use <br />
           <span style={{ color: "#70ADFF" }}>
@@ -40,6 +96,7 @@ const HeroIntro = () => {
           &nbsp;and drive progress. Our mission is <br />
           to reshape the future.
         </Typography>
+        {/* </motion.p> */}
       </Box>
     </Paper>
   );

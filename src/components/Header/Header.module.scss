@@ -1,7 +1,7 @@
 .navbarListText {
-  font-family: "Jeko Bold";
+  font-family: "JekoNormal";
   font-style: normal;
-  font-weight: 750;
+  font-weight: 550;
   font-size: 60px;
   line-height: 72px;
   text-align: center;
@@ -14,7 +14,7 @@
   -o-transition: all 1s linear;
 }
 .navbarListText:hover {
-  font-family: "Jeko Bold";
+  font-family: "JekoNormal";
   background: linear-gradient(
     to right,
     rgba(201, 75, 234, 1) 0%,
@@ -35,9 +35,9 @@
 }
 
 .navbarListTextActive {
-  font-family: "Jeko Bold";
+  font-family: "JekoNormal";
   font-style: normal;
-  font-weight: 750;
+  font-weight: 550;
   font-size: 60px;
   line-height: 72px;
   text-align: center;
@@ -64,10 +64,10 @@
   height: auto;
   max-width: 35px;
 }
-.Text:hover .navbarListTextActive.navbarListText {
-  font-family: "Jeko Bold";
+.Text:hover .navbarListTextActive .navbarListText {
+  font-family: "JekoNormal";
   font-style: normal;
-  font-weight: 750;
+  font-weight: 550;
   font-size: 60px;
   line-height: 72px;
   text-align: center;
@@ -90,9 +90,9 @@
   background-clip: text;
 }
 .Text:hover .navbarListTextActive {
-  font-family: "Jeko Bold";
+  font-family: "JekoNormal";
   font-style: normal;
-  font-weight: 750;
+  font-weight: 550;
   font-size: 60px;
   line-height: 72px;
   text-align: center;
@@ -115,9 +115,9 @@
   background-clip: text;
 }
 .Text:hover .navbarListText {
-  font-family: "Jeko Bold";
+  font-family: "JekoNormal";
   font-style: normal;
-  font-weight: 750;
+  font-weight: 550;
   font-size: 60px;
   line-height: 72px;
   text-align: center;
