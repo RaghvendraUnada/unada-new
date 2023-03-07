@@ -1040,7 +1040,7 @@ const ButtonStyle1 = {
   "&:hover": {
     opacity: 1,
     color: "black",
-    background: "white",
+    bgcolor: "white",
   },
 };
 
