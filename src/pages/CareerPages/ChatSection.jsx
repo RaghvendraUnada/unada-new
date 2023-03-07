@@ -103,6 +103,7 @@ const ChatSection = () => {
             <Box
               component="img"
               src={youtubestate}
+              sx={link}
               onMouseOver={() => setyoutubestate(youtube)}
               onMouseOut={() => setyoutubestate(youtubeblk)}
               alt="glassdoor"
@@ -110,6 +111,7 @@ const ChatSection = () => {
             <Box
               component="img"
               src={linkedinstate}
+              sx={link}
               alt="glassdoor"
               onMouseOver={() => setlinkedinstate(linkedin)}
               onMouseOut={() => setlinkedinstate(linkedinblk)}
@@ -117,6 +119,7 @@ const ChatSection = () => {
             <Box
               component="img"
               src={instastate}
+              sx={link}
               alt="glassdoor"
               onMouseOver={() => setinstastate(instagram)}
               onMouseOut={() => setinstastate(instagramblk)}
@@ -124,6 +127,7 @@ const ChatSection = () => {
             <Box
               component="img"
               src={glassdorstate}
+              sx={link}
               onMouseOver={() => setglassdorstate(glassdoor)}
               onMouseOut={() => setglassdorstate(glassdoorblk)}
               alt="glassdoor"
@@ -245,4 +249,8 @@ const metaTextStyle2 = {
     sm: "4rem",
     xs: "4rem",
   },
+};
+
+const link = {
+  cursor: "pointer",
 };

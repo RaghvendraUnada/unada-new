@@ -334,6 +334,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
           sx={{
             width: "100%",
             padding: "2rem",
+            backgroundColor: "black",
           }}
         >
           <Box
@@ -604,20 +605,21 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                               sm: "15px",
                               xs: "15px",
                             },
-                            width: {
-                              xl: "35%",
-                              lg: "35%",
-                              md: "30%",
-                              sm: "40%",
-                              xs: "60%",
-                            },
-                            minWidth: {
-                              xl: "35%",
-                              lg: "35%",
-                              md: "30%",
-                              sm: "40%",
-                              xs: "60%",
-                            },
+                            // width: {
+                            //   xl: "35%",
+                            //   lg: "35%",
+                            //   md: "30%",
+                            //   sm: "40%",
+                            //   xs: "60%",
+                            // },
+                            // minWidth: {
+                            //   xl: "35%",
+                            //   lg: "35%",
+                            //   md: "30%",
+                            //   sm: "40%",
+                            //   xs: "60%",
+                            // },
+                            width: "auto",
                             // border: "2px solid grey",
                             // borderRadius: "15px",
                             // width: "auto",
@@ -644,26 +646,36 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                             ml: 1,
                           }}
                         >
-                          <Typography
+                          <Box
                             sx={{
-                              ...skillText,
-                              color: "#fff",
-                              fontSize: "1.2rem",
+                              display: "flex",
+                              gap: "4px",
+                              justifyContent: "space-around",
+                              p: 0.2,
+                              // bgcolor: "red",
                             }}
                           >
-                            {el.skillName}
-                          </Typography>
+                            <Typography
+                              sx={{
+                                ...skillText,
+                                color: "#fff",
+                                fontSize: "1.2rem",
+                              }}
+                            >
+                              {el.skillName}
+                            </Typography>
 
-                          <CloseIcon
-                            onClick={() => removeElement(idx)}
-                            sx={{
-                              color: "white",
-                              mt: 0.2,
-                              fontSize: "15px",
-                              textAlign: "left",
-                              cursor: "pointer",
-                            }}
-                          />
+                            <CloseIcon
+                              onClick={() => removeElement(idx)}
+                              sx={{
+                                color: "white",
+                                mt: 0.2,
+                                fontSize: "15px",
+                                textAlign: "left",
+                                cursor: "pointer",
+                              }}
+                            />
+                          </Box>
                         </Box>
                       </>
                     );
@@ -713,6 +725,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                             height: "auto",
                             color: "#fff",
                             textAlign: "center",
+                            // bgcolor: "#fff",
                             p: 0.5,
                             opacity: 0.7,
                             "&:hover": {
@@ -723,8 +736,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                             const skillData = selectedSkill.find(
                               (item) => item.id === el.id
                             );
+
                             if (skillData) {
-                              ("alredy exists");
+                              console.log(el);
+                              removeElement(idx);
                             } else {
                               SetSelectedSkill([...selectedSkill, el]);
                             }
@@ -953,10 +968,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 backgroundColor: "black",
                 mt: {
                   xl: "0px",
-                  lg: "5rem",
-                  md: "8rem",
-                  sm: "8rem",
-                  xs: "8rem",
+                  lg: "3rem",
+                  // md: "8rem",
+                  sm: "-4rem",
+                  xs: "-6rem",
                 },
                 p: 2,
               }}
@@ -1041,6 +1056,13 @@ const ButtonStyle1 = {
     opacity: 1,
     color: "black",
     bgcolor: "white",
+    fontSize: {
+      xl: "17px",
+      lg: "17px",
+      md: "14px",
+      sm: "10px",
+      xs: "10px",
+    },
   },
 };
 

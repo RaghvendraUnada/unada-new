@@ -3,8 +3,18 @@ import React from "react";
 import ClientMarquee from "../../components/Maarquee/ClientMarquee";
 import ClientMarqueeLeftToRight from "../../components/Maarquee/ClientMarqueeLeftToRight";
 import "./OurTeam.css";
+import { useEffect } from "react";
+import axios from "axios";
 
 const OurClients = () => {
+  const [post, setPost] = React.useState();
+
+  React.useEffect(() => {
+    axios.get("/clients/get_clients").then((response) => {
+      setPost(response.data);
+      console.log("===>", post);
+    });
+  }, []);
   return (
     <Paper
       elevation={0}

@@ -700,8 +700,15 @@ const OpenDetails = (props) => {
                 color: "#9D9D9D",
                 display: "flex",
                 alignItems: "center",
+                transition: "0.3s all linear",
                 "&:hover": {
                   color: "#000",
+                  // fontSize: {
+                  //   lg: "20px",
+                  //   xl: "20px",
+                  //   md: "20px",
+                  // },
+                  transform: "scale(1.007)",
                 },
               }}
               onMouseOut={() => {
