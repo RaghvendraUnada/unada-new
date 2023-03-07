@@ -19,7 +19,9 @@ const PreProject = () => {
 
   return (
     <Box sx={{ background: "#000", mt: 4 }}>
-      <CaraProject />
+      <Box>
+        <CaraProject />
+      </Box>
     </Box>
   );
 };
