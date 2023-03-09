@@ -173,7 +173,14 @@ function App() {
                     </Link>
                     {!open ? (
                       <Button
-                        sx={{ ...ButtonStyle, mt: 0.75 }}
+                        sx={{
+                          ...ButtonStyle,
+                          mt: 0.75,
+                          transition: "0.3s all linear",
+                          "&:hover": {
+                            transform: "scale(1.15)",
+                          },
+                        }}
                         onClick={() => setOpen(true)}
                       >
                         {locationdta.pathname === "/metaVerse" ||
@@ -475,7 +482,7 @@ function App() {
                       )}
                     </ListItem>
                   </Link>
-                  <Box>
+                  <Box sx={{ mt: 3 }}>
                     <Typography sx={centerMainText}>
                       Innovative Disruption
                     </Typography>
@@ -496,37 +503,37 @@ function App() {
         )}
       </Stack>
 
-      {/* <motion.div
+      <motion.div
         className="whatsappicon"
         style={{
           marginRight: WhatsappView ? "0px" : "-100px",
           transition: "all 1s ease-in-out",
         }}
-      > */}
-      {/* <Box
-        sx={{
-          width: "40px",
-          cursor: "pointer",
-          background: "white",
-          borderRadius: "20px",
-          height: "40px",
-          border: "none",
-        }}
-        onClick={() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
       >
-        <FaArrowAltCircleUp
-          fill="black"
-          size={"107%"}
-          height={"40px"}
-          style={{
-            marginTop: "-1px",
-            marginLeft: "-1.5px",
+        <Box
+          sx={{
+            width: "40px",
+            cursor: "pointer",
+            background: "white",
+            borderRadius: "20px",
+            height: "40px",
+            border: "none",
           }}
-        />
-      </Box> */}
-      {/* </motion.div> */}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          <FaArrowAltCircleUp
+            fill="black"
+            size={"107%"}
+            height={"40px"}
+            style={{
+              marginTop: "-1px",
+              marginLeft: "-1.5px",
+            }}
+          />
+        </Box>
+      </motion.div>
     </Paper>
   );
 }
@@ -551,6 +558,7 @@ const AnimatedGradientText = styled.h1`
     rgba(54, 9, 52, 1),
     rgba(170, 2, 87, 1)
   );
+
   // background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -593,10 +601,10 @@ const ButtonStyle = {
   color: "#393939",
   fontStyle: "normal",
   fontWeight: 400,
-  mt: "17px",
+  mt: { xl: "17px", lg: "17px", md: "17px", sm: "22px", xs: "27px" },
   width: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
-
+  zIndex: 6,
   "&:hover": {
     bgcolor: "transparent",
     textDecoration: "line-through",
@@ -663,9 +671,10 @@ const centerMainText = {
   fontFamily: "BSSign",
   fontStyle: "normal",
   fontWeight: 400,
-  fontSize: "50px",
-  lineHeight: 2,
+  // fontSize: "50px",
+  // lineHeight: 2,
   textAlign: "center",
+  fontSize: { xl: "42px", lg: "42px", md: "40px", sm: "30px", xs: "30px" },
   background:
     "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
   textTransform: "none",
@@ -673,4 +682,5 @@ const centerMainText = {
   backgroundRepeat: "repeat",
   backgroundClip: "text",
   textFillColor: "transparent",
+  // mt: 2,
 };

@@ -18,7 +18,6 @@ const Home = () => {
   const currentLocation = useLocation();
   const [location, setLocation] = useState();
   useEffect(() => {
-    console.log(currentLocation);
     setLocation(currentLocation);
   }, [currentLocation]);
   return (

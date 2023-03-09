@@ -21,15 +21,15 @@ const PositionsDev = () => {
     FetchJobData();
   }, []);
   useEffect(() => {
-    if (location?.hash === "#sectionDev") {
+    if (location?.hash === "#section") {
       console.log("=====>hello");
       setTimeout(() => {
-        window.scrollTo({ top: 800, behavior: "smooth" });
+        window.scrollTo({ top: 3640, behavior: "smooth" });
       }, [1200]);
     } else if (location?.hash === "#miniSection") {
       console.log("=====>hello");
       setTimeout(() => {
-        window.scrollTo({ top: 400, behavior: "smooth" });
+        window.scrollTo({ top: 500, behavior: "smooth" });
       }, [1200]);
     } else {
       return console.log(window.location.pathname);

@@ -103,19 +103,18 @@ ul .indicators {
   src: url("../src/assets/Fonts/brotherside_signature/Brotherside_Signature.ttf");
 }
 
-.cursor {
+/* .cursor {
   background-color: white;
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  /* border: 5px solid red; */
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
   z-index: 10000;
   mix-blend-mode: difference;
-}
+} */
 
 /* html::-webkit-scrollbar {
   width: 25px;

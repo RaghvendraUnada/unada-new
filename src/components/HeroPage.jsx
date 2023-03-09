@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Typography, Box, Paper, Grid, Button } from "@mui/material";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 // import { useHistory } from "react-router-dom";
@@ -13,6 +13,7 @@ const HeroPage = ({
 }) => {
   const navigate = useNavigate();
   const [active, setActive] = React.useState(false);
+  const [color, setColor] = useState("");
   const handleClick = () => {
     setActive(!active);
   };
@@ -21,6 +22,7 @@ const HeroPage = ({
   function handleClicks() {
     // location.push("/contact/#section");
     navigate("/contact#section");
+    setColor("red");
   }
 
   function handleClicksMobile() {
@@ -137,10 +139,12 @@ const HeroPage = ({
                   "&:hover": {
                     fontSize: "1.75rem",
                   },
-                  "&.Mui-focused": {
-                    backgroundColor: "#1565c0",
-                    color: "#000",
-                  },
+                  // "&.Mui-focused": {
+                  //   backgroundColor: "#1565c0",
+                  //   color: "#000",
+                  // },
+                  zIndex: 10000000000,
+                  background: color,
                 }}
               >
                 Get Started

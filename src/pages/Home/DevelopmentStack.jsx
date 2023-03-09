@@ -138,7 +138,6 @@ const DevelopmentStack = () => {
             <OpenDetails title={boxTitle} desc={boxDesc} url={url} />
           </Grid>
           {DataArray.map((res, idx) => {
-            console.log(res.url);
             if (res.id) {
               return (
                 <Grid
@@ -643,7 +642,6 @@ const DevelopmentStack = () => {
 export default DevelopmentStack;
 
 const OpenDetails = (props) => {
-  console.log(props);
   const [icon1, setIcon1] = useState("#9D9D9D");
   const [border, setBorder] = useState("");
   return (

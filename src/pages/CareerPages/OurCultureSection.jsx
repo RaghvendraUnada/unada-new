@@ -65,7 +65,18 @@ const OurCultureSection = () => {
           maxWidth: "100%",
         }}
       >
-        <Box sx={{ width: "100%", height: "500px" }}>
+        <Box
+          sx={{
+            width: "100%",
+            height: {
+              xl: "500px",
+              lg: "500px",
+              md: "500px",
+              sm: "400px",
+              xs: "200px",
+            },
+          }}
+        >
           <Marquee
             gradient={false}
             speed={100}
@@ -74,7 +85,13 @@ const OurCultureSection = () => {
           >
             {images.map((client, idx) => {
               return (
-                <Grid container style={{ width: "100%", height: "100%" }}>
+                <Grid
+                  container
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                  }}
+                >
                   <img
                     key={idx}
                     src={client}

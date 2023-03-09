@@ -28,7 +28,7 @@ const Footer = () => {
             lg: "20px",
             md: "20px",
             sm: "10px",
-            xs: "10px",
+            // xs: "10px",
           },
           width: "100%",
           marginLeft: "auto",
@@ -46,15 +46,41 @@ const Footer = () => {
         <Grid item xl={2} lg={2} md={2} sm={2.4} xs={2.4} sx={fooText}>
           Privacy policy
         </Grid>
-        <Grid item xl={2} lg={2} md={2} sm={2.4} xs={2.4} sx={fooText}>
+        <Grid item xl={2} lg={2} md={2} sm={2.4} xs={1} sx={{ ...fooText }}>
           Terms
         </Grid>
-        <Grid item xl={2} lg={2} md={2} sm={2.4} xs={2.4} sx={fooText}>
+        <Grid
+          item
+          xl={4}
+          lg={4}
+          md={2}
+          sm={2.4}
+          xs={5.2}
+          sx={{
+            ...fooText,
+            textAlign: "center",
+            // color: "#fff",
+            opacity: 1,
+          }}
+        >
           {/* Preferences */}
+          <Typography
+            sx={{
+              fontSize: {
+                xl: "1.2rem",
+                lg: "1.2rem",
+                md: "1.2rem",
+                sm: "1.2rem",
+                xs: "0.9rem",
+              },
+            }}
+          >
+            Copyright © 2023 Unada Labs Pvt Ltd.
+          </Typography>
         </Grid>
-        <Grid item xl={2} lg={2} md={2} sm={2.4} xs={2.4} sx={fooText}>
-          {/* Our Forest */}
-        </Grid>
+        {/* <Grid item xl={2} lg={2} md={2} sm={2.4} xs={2.4} sx={fooText}>
+         
+        </Grid> */}
         <Grid
           item
           xl={4}
@@ -63,7 +89,7 @@ const Footer = () => {
           sm={2.4}
           xs={2.4}
           sx={{
-            ...fooText,
+            // ...fooText,
             fontFamily: "LGRegular",
             fontStyle: "normal",
             fontWeight: 400,
@@ -72,7 +98,7 @@ const Footer = () => {
               lg: "1.2rem",
               md: "1.2rem",
               sm: "1rem",
-              xs: "0.99rem",
+              xs: "0.9rem",
             },
             textAlign: {
               xl: "right",
@@ -82,6 +108,7 @@ const Footer = () => {
               xs: "center",
             },
             color: "white",
+            cursor: "pointer",
           }}
         >
           Made with ❤️!!
@@ -106,6 +133,7 @@ const fooText = {
     xs: "1.0rem",
   },
   // mt: 1,
+  opacity: 0.6,
   textAlign: "left",
   cursor: "pointer",
 };

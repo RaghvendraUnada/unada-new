@@ -252,10 +252,17 @@ export default function ChatUs(props) {
                         }}
                         onClick={handleClickOpen}
                       >
-                        <img
-                          src={cross}
-                          style={{ width: "auto", height: "auto" }}
-                        />
+                        <Box
+                          sx={{
+                            transition: "0.3s all linear",
+                            "&:hover": { transform: "scale(1.15)" },
+                          }}
+                        >
+                          <img
+                            src={cross}
+                            style={{ width: "auto", height: "auto" }}
+                          />
+                        </Box>
                       </Box>
                     </Box>
                     <Box>

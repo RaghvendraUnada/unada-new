@@ -4,7 +4,6 @@ import { Box, Typography } from "@mui/material";
 import Marquee from "react-fast-marquee";
 
 const OurTeamMData = (props) => {
-  console.log("props", props);
   return (
     <Marquee
       gradient={false}
@@ -20,7 +19,6 @@ const OurTeamMData = (props) => {
       }}
     >
       {props?.data?.map((client, idx) => {
-        console.log("client", client.TeamMemberImage[0]);
         return (
           <Box
             sx={{

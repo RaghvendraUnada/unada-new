@@ -115,7 +115,13 @@ function CareerIntroSection() {
           flexDirection: "column",
           gap: "4rem",
           textAlign: "center",
-          padding: "6rem",
+          padding: {
+            xl: "6rem",
+            lg: "6rem",
+            md: "6rem",
+            sm: "5rem",
+            xs: "4rem",
+          },
         }}
       >
         <Typography sx={IntroMainText}>
@@ -204,7 +210,7 @@ const IntroMainText = {
     lg: "2rem",
     md: "2rem",
     sm: "1rem",
-    xs: "1rem",
+    xs: "1.5rem",
   },
   color: "#484848",
   marginTop: {

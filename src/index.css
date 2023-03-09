@@ -12,6 +12,7 @@
 body {
   background: #000;
   min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
   /* user-select: none; */
 }
 html {
@@ -19,6 +20,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/* input:focus,
+input.form-control:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+} */
 /* .carousel.indicators {
   bottom: 50px !important;
 }
@@ -91,12 +100,11 @@ ul .indicators {
 ::-webkit-scrollbar {
   display: none;
 }
-.cursor {
+/* .cursor {
   background-color: white;
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  /* border: 1px solid red; */
   position: fixed;
   top: 0;
   left: 0;
@@ -107,7 +115,7 @@ ul .indicators {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-}
+} */
 .whatsappicon {
   width: 40px;
   position: fixed;

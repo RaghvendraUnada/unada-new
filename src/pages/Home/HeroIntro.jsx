@@ -2,6 +2,11 @@ import { Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import heroIntro from "./HeroIntro.module.scss";
+
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
 const HeroIntro = () => {
   const [cursorVariant, setCursorVariant] = useState("default");
   const [mousePosition, setMousePosition] = useState({
@@ -22,6 +27,11 @@ const HeroIntro = () => {
       mixBlendMode: "normal",
     },
   };
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  console.log("isInView", isInView);
 
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
@@ -54,11 +64,6 @@ const HeroIntro = () => {
         alignItems: "center",
       }}
     >
-      <motion.div
-        className="cursor"
-        variants={variants}
-        animate={cursorVariant}
-      />
       <Box
         sx={{
           width: "80%",
@@ -74,21 +79,26 @@ const HeroIntro = () => {
           },
         }}
       >
-        {/* <motion.p
-          viewport={{ once: false }}
-          exit={{ y: 0 }}
-          transition={{ duration: 0.5, ease: "linear" }}
-          initial="top"
-          whileInView="visible"
-          variants={{
-            top: { y: -100 },
-            exit: { y: 0 },
-
-            visible: { y: 0, opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}
-        > */}
-        <Typography sx={TextStyle}>
+        {/* {isInView ? (
+          <motion.div
+            className={heroIntro.cursorchange}
+            variants={variants}
+            animate={cursorVariant}
+            style={{
+              backgroundColor: "white",
+              height: 50,
+              width: 50,
+              borderRadius: "50%",
+              position: "fixed",
+              top: 0,
+              left: 0,
+              pointerEvents: "none",
+              zIndex: 10000,
+              mixBlendMode: "difference",
+            }}
+          />
+        ) : null} */}
+        <Typography sx={TextStyle} ref={ref}>
           We build and use <br />
           <span style={{ color: "#70ADFF" }}>
             technologies to disrupt industries

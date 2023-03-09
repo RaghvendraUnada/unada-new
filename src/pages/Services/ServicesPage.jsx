@@ -649,7 +649,7 @@ const mobileActivePaper = {
   background: "black",
   border: "1px solid #191919",
   textAlign: "center",
-  padding: "2rem",
+  padding: { xl: "2rem", lg: "2rem", md: "2rem", sm: "1rem", xs: "0rem" },
   // position: "relative",
 };
 const mobileActivePapertext = {

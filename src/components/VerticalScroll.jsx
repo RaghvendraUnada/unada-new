@@ -4,7 +4,7 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
-
+// import "./verticalDesigin.css";
 import {
   Typography,
   Box,
@@ -80,17 +80,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   // const [state,setState] = useState()
 
   const apply = async () => {
-    console.log(file);
-    console.log(
-      firstName,
-      lastName,
-      email,
-      experience,
-      skill,
-      linkedin,
-      file,
-      coverLetter
-    );
     // const data = {
     //   UserFirstName: firstName,
     //   UserLastName: lastName,
@@ -375,7 +364,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 sx={{
                   position: "absolute",
                   right: "2rem",
-                  top: "1rem",
+                  top: "0.5rem",
                 }}
               >
                 {/* <CloseIcon sx={{ color: "white" }} /> */}
@@ -528,7 +517,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     },
                   }}
                 >
-                  <FormControl
+                  {/* <FormControl
                     sx={{
                       width: {
                         xl: "50%",
@@ -539,14 +528,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       },
                     }}
                   >
-                    {/* <InputLabel htmlFor="name-multiple">Select Year</InputLabel> */}
                     <Select
                       sx={{
                         color: "white",
                         borderBottom: "1px solid white",
-                        // "& .Mui-focused": {
-                        //   border: "black",
-                        // },
                       }}
                       value={experience}
                       onChange={(e) => setExperience(e.target.value)}
@@ -558,7 +543,23 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       <MenuItem value={20}>2 Year</MenuItem>
                       <MenuItem value={30}>3 Year</MenuItem>
                     </Select>
-                  </FormControl>
+                  </FormControl> */}
+                  <input
+                    // id="standard-textarea"
+                    className="feildText"
+                    label="Experience"
+                    placeholder="Enter your experience"
+                    variant="standard"
+                    multiline
+                    style={{
+                      width: "55%",
+                      color: "white",
+                      // outlineColor: "transparent",
+                    }}
+                    value={experience}
+                    onChange={(e) => setExperience(e.target.value)}
+                    required
+                  />
                 </Box>
                 <Typography sx={labeltext}>Skills:</Typography>
                 <Grid
@@ -580,7 +581,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       sm: "6rem",
                       xs: "2rem",
                     },
-                    borderBottom: "1px solid #FFFFFF",
+                    borderBottom: "1px solid #9e9e9e",
                     width: {
                       xl: "50%",
                       lg: "50%",
@@ -727,10 +728,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                             textAlign: "center",
                             // bgcolor: "#fff",
                             p: 0.5,
-                            opacity: 0.7,
-                            "&:hover": {
-                              opacity: 1,
-                            },
+                            // opacity: 0.7,
+                            // "&:hover": {
+                            //   opacity: 1,
+                            // },
                           }}
                           onClick={() => {
                             const skillData = selectedSkill.find(
@@ -738,12 +739,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                             );
 
                             if (skillData) {
-                              console.log(el);
                               removeElement(idx);
                             } else {
                               SetSelectedSkill([...selectedSkill, el]);
                             }
-                            console.log(selectedSkill);
                           }}
                         >
                           <Typography sx={skillText}>{el.skillName}</Typography>
@@ -834,7 +833,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         setFile(e.target.files);
                       }}
                       onClick={() => {
-                        console.log(uploadFileRef);
                         uploadFileRef.current.click();
                       }}
                     />
@@ -1119,8 +1117,8 @@ const skillText = {
   fontStyle: "normal",
   fontWeight: 400,
   fontSize: 12,
-  color: "rgba(162, 162, 162, 0.5)",
-  opacity: 0.8,
+  color: "#fff",
+  opacity: 0.5,
   "&:hover": {
     opacity: 1,
   },

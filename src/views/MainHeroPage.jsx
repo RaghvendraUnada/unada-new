@@ -122,6 +122,7 @@ const MainHeroPage = () => {
                 width: "100%",
                 transition: "all 1s",
                 bgcolor: "transparent",
+                // background: "red",
                 borderRadius: "0px",
                 mt: scrollState ? "0%" : "1%",
               }}
@@ -136,7 +137,8 @@ const MainHeroPage = () => {
                   marginRight: "auto",
                   display: "flex",
                   justifyContent: "space-between",
-                  bgcolor: "transparent",
+                  // bgcolor: "transparent",
+                  background: "transparent",
                 }}
                 elevation={0}
               >
@@ -496,7 +498,7 @@ const MainHeroPage = () => {
                   )}
                 </ListItem>
               </Link>
-              <Box>
+              <Box sx={{ mt: 3 }}>
                 <Typography sx={centerMainText}>
                   Innovative Disruption
                 </Typography>
@@ -738,7 +740,7 @@ const ButtonStyle = {
   color: "#393939",
   fontStyle: "normal",
   fontWeight: 400,
-  mt: "17px",
+  mt: { xl: "17px", lg: "17px", md: "17px", sm: "17px", xs: "25px" },
   width: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   "&:hover": {
@@ -789,7 +791,7 @@ const centerMainText = {
   fontFamily: "BSSign",
   fontStyle: "normal",
   fontWeight: 400,
-  fontSize: "50px",
+  fontSize: { xl: "42px", lg: "42px", md: "40px", sm: "30px", xs: "30px" },
   lineHeight: 2,
   textAlign: "center",
   background:
