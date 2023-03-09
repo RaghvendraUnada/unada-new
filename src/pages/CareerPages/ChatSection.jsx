@@ -111,22 +111,26 @@ const ChatSection = () => {
               onMouseOut={() => setyoutubestate(youtubeblk)}
               alt="glassdoor"
             />
-            <Box
-              component="img"
-              src={linkedinstate}
-              sx={link}
-              alt="glassdoor"
-              onMouseOver={() => setlinkedinstate(linkedin)}
-              onMouseOut={() => setlinkedinstate(linkedinblk)}
-            />
-            <Box
-              component="img"
-              src={instastate}
-              sx={link}
-              alt="glassdoor"
-              onMouseOver={() => setinstastate(instagram)}
-              onMouseOut={() => setinstastate(instagramblk)}
-            />
+            <a href="https://in.linkedin.com/company/unadalabs" target="_blank">
+              <Box
+                component="img"
+                src={linkedinstate}
+                sx={link}
+                alt="glassdoor"
+                onMouseOver={() => setlinkedinstate(linkedin)}
+                onMouseOut={() => setlinkedinstate(linkedinblk)}
+              />
+            </a>
+            <a href="https://www.instagram.com/unadalabs/" target="_blank">
+              <Box
+                component="img"
+                src={instastate}
+                sx={link}
+                alt="glassdoor"
+                onMouseOver={() => setinstastate(instagram)}
+                onMouseOut={() => setinstastate(instagramblk)}
+              />
+            </a>
             <Box
               component="img"
               src={glassdorstate}

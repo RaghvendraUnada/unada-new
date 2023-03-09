@@ -5,9 +5,12 @@ import pre2 from "../assets/Images/cara/pre2.png";
 import pre3 from "../assets/Images/cara/pre3.png";
 // import ExploreIcon from "../assets/Images/Services/ExploreIcon.svg";X
 import blackArrowImg from "../assets/Images/Services/blackArrowImg.svg";
-
+import EastSharpIcon from "@mui/icons-material/EastSharp";
+import styles from "../pages/Services/Service.module.css";
 import { useRef } from "react";
 const PreProject = () => {
+  const [icon1, setIcon1] = useState("black");
+  const [icon2, setIcon2] = useState("black");
   const boxRef = useRef();
   const scollToRef = useRef();
   useEffect(() => {
@@ -88,13 +91,11 @@ const PreProject = () => {
             },
             transform: "rotate(180deg)",
             cursor: "pointer",
-            "&:hover": {
-              scale: "1.2",
-            },
+
             zIndex: "10",
           }}
         >
-          <img
+          {/* <img
             style={{ height: "40px" }}
             src={blackArrowImg}
             alt="nextImg"
@@ -104,7 +105,20 @@ const PreProject = () => {
                 0
               );
             }}
-          />
+          /> */}
+          <Box
+            className={styles.CarouselArrowImg}
+            onMouseOut={() => setIcon1("black")}
+            onMouseOver={() => setIcon1("white")}
+            onClick={() => {
+              scollToRef?.current?.scroll(
+                scollToRef?.current?.scrollLeft - boxRef?.current?.offsetWidth,
+                0
+              );
+            }}
+          >
+            <EastSharpIcon fontSize="large" sx={{ color: icon1 }} />
+          </Box>
         </Box>
         {/* right  */}
         <Box
@@ -119,13 +133,11 @@ const PreProject = () => {
               lg: "7%",
             },
             cursor: "pointer",
-            "&:hover": {
-              scale: "1.2",
-            },
+
             zIndex: "10",
           }}
         >
-          <img
+          {/* <img
             style={{ height: "40px" }}
             src={blackArrowImg}
             alt="nextImg"
@@ -135,7 +147,20 @@ const PreProject = () => {
                 0
               );
             }}
-          />
+          /> */}
+          <Box
+            className={styles.CarouselArrowImg}
+            onMouseOut={() => setIcon2("black")}
+            onMouseOver={() => setIcon2("white")}
+            onClick={() => {
+              scollToRef?.current?.scroll(
+                scollToRef?.current?.scrollLeft + boxRef?.current?.offsetWidth,
+                0
+              );
+            }}
+          >
+            <EastSharpIcon fontSize="large" sx={{ color: icon2 }} />
+          </Box>
         </Box>
         <Box
           sx={{

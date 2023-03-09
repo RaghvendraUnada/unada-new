@@ -13,7 +13,7 @@ const HeroPage = ({
 }) => {
   const navigate = useNavigate();
   const [active, setActive] = React.useState(false);
-  const [color, setColor] = useState("");
+  const [color, setColor] = useState();
   const handleClick = () => {
     setActive(!active);
   };
@@ -143,8 +143,7 @@ const HeroPage = ({
                   //   backgroundColor: "#1565c0",
                   //   color: "#000",
                   // },
-                  zIndex: 10000000000,
-                  background: color,
+                  "&:focus": { color: "black" },
                 }}
               >
                 Get Started

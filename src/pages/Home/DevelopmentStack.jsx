@@ -49,7 +49,7 @@ const DevelopmentStack = () => {
       id: 3,
       text: "UI / UX Designing",
       title: "Ultra-flexible logistics",
-      desc: "We specialize in designing intuitive and user-friendly interfaces for websites, applications, and other digital products. Our team of experienced designers and researchers are experts in creating user experiences that are both functional and aesthetically pleasing. ",
+      desc: "We specialize in designing intuitive and user-friendly interfaces for websites, applications, and other digital products. Our team of experienced designers and researchers are experts in creating user experiences that are both functional and aesthetically pleasing.",
       url: "/ui",
     },
     {
@@ -139,6 +139,7 @@ const DevelopmentStack = () => {
             <OpenDetails title={boxTitle} desc={boxDesc} url={url} />
           </Grid>
           {DataArray.map((res, idx) => {
+            console.log(res.url);
             if (res.id) {
               return (
                 <Grid
@@ -231,7 +232,7 @@ const DevelopmentStack = () => {
                   {/* <Box> */}
                   <Box sx={{ padding: "3rem" }}>
                     <Typography sx={verticalText}>
-                      Ultra-flexible logistics
+                      Application Development
                     </Typography>
                     {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
@@ -298,17 +299,20 @@ const DevelopmentStack = () => {
                     }}
                   >
                     <Typography sx={NumTextStyle}>2</Typography>
-                    <Typography sx={ServiceText}>Wbsite Development</Typography>
+                    <Typography sx={ServiceText}>
+                      Website Development
+                    </Typography>
                   </Box>
                   <Box sx={{ padding: "3rem" }}>
                     <Typography sx={verticalText}>
-                      Ultra-flexible logistics
+                      Website Development
                     </Typography>
                     <Typography sx={paperTextStyle1}>
-                      Adapt your warehousing capacities and network in real
-                      time. SpaceFill’s flexible model that enables you to
-                      benefit unlimited storage capacity within the connected
-                      network.
+                      Unada specializes in web design, development, and
+                      maintenance. Our team of experienced developers,
+                      designers, and project managers can help your business
+                      create a powerful online presence be it in the form
+                      e-commerce solutions or custom development.
                     </Typography>
                     <Link to="web">
                       <Button sx={ButtonStyle}>
@@ -342,7 +346,7 @@ const DevelopmentStack = () => {
                   }}
                 >
                   <Typography sx={NumTextStyle}>2</Typography>
-                  <Typography sx={ServiceText}>Wbsite Development</Typography>
+                  <Typography sx={ServiceText}>Website Development</Typography>
                 </Box>
               </Paper>
             )}
@@ -369,14 +373,13 @@ const DevelopmentStack = () => {
                     <Typography sx={ServiceText}>UI / UX Designing</Typography>
                   </Box>
                   <Box sx={{ padding: "3rem" }}>
-                    <Typography sx={verticalText}>
-                      Ultra-flexible logistics
-                    </Typography>
+                    <Typography sx={verticalText}>UI / UX Designing</Typography>
                     <Typography sx={paperTextStyle1}>
-                      Adapt your warehousing capacities and network in real
-                      time. SpaceFill’s flexible model that enables you to
-                      benefit unlimited storage capacity within the connected
-                      network.
+                      We specialize in designing intuitive and user-friendly
+                      interfaces for websites, applications, and other digital
+                      products. Our team of experienced designers and
+                      researchers are experts in creating user experiences that
+                      are both functional and aesthetically pleasing.
                     </Typography>
                     <Link to="ui">
                       <Button sx={ButtonStyle}>
@@ -437,14 +440,13 @@ const DevelopmentStack = () => {
                     <Typography sx={ServiceText}>Metaverse</Typography>
                   </Box>
                   <Box sx={{ padding: "3rem" }}>
-                    <Typography sx={verticalText}>
-                      Ultra-flexible logistics
-                    </Typography>
+                    <Typography sx={verticalText}>Metaverse</Typography>
                     <Typography sx={paperTextStyle1}>
-                      Adapt your warehousing capacities and network in real
-                      time. SpaceFill’s flexible model that enables you to
-                      benefit unlimited storage capacity within the connected
-                      network.
+                      Imagine a world where anything is possible! At Unada, we
+                      create immersive virtual worlds for users to explore and
+                      customize. Our team of experienced developers and
+                      designers is passionate about creating the most engaging
+                      virtual experiences possible.
                     </Typography>
                     <Link to="metaVerse">
                       <Button sx={ButtonStyle}>
@@ -507,15 +509,15 @@ const DevelopmentStack = () => {
                   </Box>
                   {/* <Box> */}
                   <Box sx={{ padding: "3rem" }}>
-                    <Typography sx={verticalText}>
-                      Ultra-flexible logistics
-                    </Typography>
+                    <Typography sx={verticalText}>AR / VR</Typography>
                     {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
-                      Adapt your warehousing capacities and network in real
-                      time. SpaceFill’s flexible model that enables you to
-                      benefit unlimited storage capacity within the connected
-                      network.
+                      Whether you're a game developer looking to create the next
+                      big hit, a business owner looking for a unique way to
+                      engage with customers, or just someone who loves exploring
+                      new worlds, Unada’s AR/VR has something for you. We offer
+                      a range of services, including custom AR and VR
+                      development.
                     </Typography>
                     <Link to="arvr">
                       <Button sx={ButtonStyle}>
@@ -578,15 +580,16 @@ const DevelopmentStack = () => {
                   </Box>
                   {/* <Box> */}
                   <Box sx={{ padding: "3rem" }}>
-                    <Typography sx={verticalText}>
-                      Ultra-flexible logistics
-                    </Typography>
+                    <Typography sx={verticalText}>Blockchain</Typography>
                     {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
-                      Adapt your warehousing capacities and network in real
-                      time. SpaceFill’s flexible model that enables you to
-                      benefit unlimited storage capacity within the connected
-                      network.
+                      Our services include custom blockchain and web3
+                      development, consulting on blockchain and web3 strategy
+                      and implementation, and training on how to use these
+                      technologies. We work with clients from a variety of
+                      industries, including finance, supply chain, healthcare,
+                      and more, to help them improve security, efficiency, and
+                      transparency in their operations.
                     </Typography>
                     <Link to="blockchain">
                       <Button sx={ButtonStyle}>
@@ -643,6 +646,7 @@ const DevelopmentStack = () => {
 export default DevelopmentStack;
 
 const OpenDetails = (props) => {
+  console.log(props);
   const [icon1, setIcon1] = useState("#9D9D9D");
   const [border, setBorder] = useState("");
   return (
@@ -1057,7 +1061,7 @@ const ServiceText = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
-  fontSize: "20.066px",
+  fontSize: "19.066px",
   lineHeight: "23px",
   letterSpacing: 0.50165,
 
