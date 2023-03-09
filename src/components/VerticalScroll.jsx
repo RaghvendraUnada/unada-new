@@ -4,7 +4,7 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
-// import "./verticalDesigin.css";
+
 import {
   Typography,
   Box,
@@ -80,6 +80,17 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   // const [state,setState] = useState()
 
   const apply = async () => {
+    console.log(file);
+    console.log(
+      firstName,
+      lastName,
+      email,
+      experience,
+      skill,
+      linkedin,
+      file,
+      coverLetter
+    );
     // const data = {
     //   UserFirstName: firstName,
     //   UserLastName: lastName,
@@ -443,6 +454,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 >
                   <input
                     // id="standard-textarea"
+                    type="text"
                     label="First name"
                     placeholder="First name"
                     variant="standard"
@@ -450,12 +462,14 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     style={{
                       width: "40%",
                       color: "white",
+                      borderBottom: "2px solid white",
                     }}
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     required
                   />
                   <input
+                    type="text"
                     id="standard-textarea"
                     label="Last name"
                     placeholder="Last name"
@@ -464,6 +478,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     style={{
                       width: "40%",
                       color: "white",
+                      borderBottom: "2px solid white",
                     }}
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
@@ -482,6 +497,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 >
                   <input
                     // id="standard-textarea"
+                    type="email"
                     label="Email"
                     // type="email"
                     placeholder="Enter your email"
@@ -490,6 +506,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     style={{
                       width: "84%",
                       color: "white",
+                      borderBottom: "2px solid white",
                     }}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -517,44 +534,18 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     },
                   }}
                 >
-                  {/* <FormControl
-                    sx={{
-                      width: {
-                        xl: "50%",
-                        lg: "50%",
-                        md: "50%",
-                        sm: "60%",
-                        xs: "90%",
-                      },
-                    }}
-                  >
-                    <Select
-                      sx={{
-                        color: "white",
-                        borderBottom: "1px solid white",
-                      }}
-                      value={experience}
-                      onChange={(e) => setExperience(e.target.value)}
-                    >
-                      <MenuItem value="">
-                        <em>None</em>
-                      </MenuItem>
-                      <MenuItem value={10}>1 Year</MenuItem>
-                      <MenuItem value={20}>2 Year</MenuItem>
-                      <MenuItem value={30}>3 Year</MenuItem>
-                    </Select>
-                  </FormControl> */}
                   <input
                     // id="standard-textarea"
-                    className="feildText"
+                    type="text"
                     label="Experience"
-                    placeholder="Enter your experience"
+                    // type="email"
+                    placeholder="Enter your Experience"
                     variant="standard"
                     multiline
                     style={{
-                      width: "55%",
+                      width: "54%",
                       color: "white",
-                      // outlineColor: "transparent",
+                      borderBottom: "2px solid white",
                     }}
                     value={experience}
                     onChange={(e) => setExperience(e.target.value)}
@@ -581,7 +572,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       sm: "6rem",
                       xs: "2rem",
                     },
-                    borderBottom: "1px solid #9e9e9e",
+                    borderBottom: "2px solid white",
                     width: {
                       xl: "50%",
                       lg: "50%",
@@ -724,11 +715,11 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                               xs: "40%",
                             },
                             height: "auto",
-                            color: "#fff",
                             textAlign: "center",
-                            // bgcolor: "#fff",
                             p: 0.5,
-                            // opacity: 0.7,
+                            // color: "#fff",
+                            // bgcolor: "#fff",
+                            // opacity: 0.8,
                             // "&:hover": {
                             //   opacity: 1,
                             // },
@@ -739,10 +730,12 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                             );
 
                             if (skillData) {
+                              console.log(el);
                               removeElement(idx);
                             } else {
                               SetSelectedSkill([...selectedSkill, el]);
                             }
+                            console.log(selectedSkill);
                           }}
                         >
                           <Typography sx={skillText}>{el.skillName}</Typography>
@@ -784,6 +777,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   >
                     <input
                       id="standard-textarea"
+                      type="url"
                       label="Linked in url"
                       // type="url"
                       placeholder="Paste URL here"
@@ -792,6 +786,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       style={{
                         width: "84%",
                         color: "white",
+                        borderBottom: "2px solid white",
                       }}
                       value={linkedin}
                       onChange={(e) => setLinkedin(e.target.value)}
@@ -833,6 +828,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         setFile(e.target.files);
                       }}
                       onClick={() => {
+                        console.log(uploadFileRef);
                         uploadFileRef.current.click();
                       }}
                     />
@@ -1117,8 +1113,8 @@ const skillText = {
   fontStyle: "normal",
   fontWeight: 400,
   fontSize: 12,
-  color: "#fff",
-  opacity: 0.5,
+  color: "White",
+  opacity: 0.8,
   "&:hover": {
     opacity: 1,
   },

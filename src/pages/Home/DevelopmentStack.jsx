@@ -6,6 +6,7 @@ import styles from "./DevStack.module.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
+import Fade from "react-reveal/Fade";
 const DevelopmentStack = () => {
   const [numberOne, setNumberOne] = useState(1);
   const [boxtextOne, setBoxtextOne] = useState("Application Development");
@@ -679,7 +680,9 @@ const OpenDetails = (props) => {
         elevation={0}
       >
         <Box>
-          <Typography sx={OpenDetailsTextStyle}>{props.title}</Typography>
+          <Fade top duration={1500}>
+            <Typography sx={OpenDetailsTextStyle}>{props.title}</Typography>
+          </Fade>
         </Box>
         <Box>
           <Typography sx={OpenDetailsBottomTextStyle}>{props.desc}</Typography>

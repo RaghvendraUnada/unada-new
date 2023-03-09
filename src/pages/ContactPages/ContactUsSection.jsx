@@ -94,6 +94,7 @@ const ContactUsSection = () => {
 
           <Box sx={box}>
             <input
+              type="text"
               id="standard-textarea"
               label="First name"
               placeholder="First name"
@@ -113,6 +114,7 @@ const ContactUsSection = () => {
               required
             />
             <input
+              type="text"
               id="standard-textarea"
               label="Last name"
               placeholder="Last Name"
@@ -139,6 +141,7 @@ const ContactUsSection = () => {
           </Typography>
           <Box sx={box}>
             <input
+              type="text"
               id="standard-textarea"
               label="Email"
               placeholder="Enter your email"
@@ -163,6 +166,7 @@ const ContactUsSection = () => {
           <Typography sx={labeltext}>Message:</Typography>
           <Box sx={box}>
             <input
+              type="text"
               id="standard-textarea"
               label="Email"
               placeholder="Enter your Message"

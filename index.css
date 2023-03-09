@@ -301,3 +301,11 @@ h3 {
   background-color: #fff !important;
   color: #000 !important;
 }
+/* @media (max-width: 500px) {
+  .css-1pdkp98-MuiListItem-root {
+    height: 30px;
+  }
+  .css-1kl7gsi-MuiListItem-root {
+    height: 30px;
+  }
+} */

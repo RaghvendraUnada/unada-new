@@ -6,7 +6,7 @@ import UnispaceImg from "../../assets/Images/InvestedCompanies/Unispace.png";
 import KhushiImg from "../../assets/Images/InvestedCompanies/Khushi.png";
 import RatnaImg from "../../assets/Images/InvestedCompanies/ratna.png";
 import MunothImg from "../../assets/Images/InvestedCompanies/munoth.png";
-
+import Fade from "react-reveal/Fade";
 const InvestedCompanies = () => {
   return (
     <Box
@@ -38,9 +38,11 @@ const InvestedCompanies = () => {
           },
         }}
       >
-        <Typography sx={TextStle}>
-          Company that Invested & Trusted us.
-        </Typography>
+        <Fade top duration={1500}>
+          <Typography sx={TextStle}>
+            Company that Invested & Trusted us.
+          </Typography>
+        </Fade>
       </Box>
       <Box
         sx={{

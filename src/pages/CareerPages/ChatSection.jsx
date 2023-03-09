@@ -18,6 +18,7 @@ import glassdoorblk from "../../assets/Images/Career/glassdoorblack.svg";
 import instagramblk from "../../assets/Images/Career/instagramblack.svg";
 import linkedinblk from "../../assets/Images/Career/linkdinblack.svg";
 import youtubeblk from "../../assets/Images/Career/youtubeblack.svg";
+import Fade from "react-reveal/Fade";
 const ChatSection = () => {
   const [youtubestate, setyoutubestate] = useState(youtubeblk);
   const [instastate, setinstastate] = useState(instagramblk);
@@ -61,22 +62,24 @@ const ChatSection = () => {
           borderRight: "0.5px solid rgba(163, 163, 163, 0.3)",
         }}
       >
-        <Typography sx={textStyle1}>
-          Let’s chat,
-          <Typography
-            sx={{
-              ...textStyle1,
-              background:
-                "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
-              backgroundSize: " 100%",
-              backgroundRepeat: "repeat",
-              backgroundClip: "text",
-              textFillColor: "transparent",
-            }}
-          >
-            we respond fast
-          </Typography>{" "}
-        </Typography>
+        <Fade top duration={1500}>
+          <Typography sx={textStyle1}>
+            Let’s chat,
+            <Typography
+              sx={{
+                ...textStyle1,
+                background:
+                  "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+                backgroundSize: " 100%",
+                backgroundRepeat: "repeat",
+                backgroundClip: "text",
+                textFillColor: "transparent",
+              }}
+            >
+              we respond fast
+            </Typography>{" "}
+          </Typography>
+        </Fade>
         <Box>
           <Typography sx={SubHeadText}>Follow us</Typography>
           <Box

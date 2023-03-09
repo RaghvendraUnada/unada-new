@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import heroIntro from "./HeroIntro.module.scss";
-
+import Fade from "react-reveal/Fade";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -98,6 +98,7 @@ const HeroIntro = () => {
             }}
           />
         ) : null} */}
+        {/* <Fade top duration={1500}> */}
         <Typography sx={TextStyle} ref={ref}>
           We build and use <br />
           <span style={{ color: "#70ADFF" }}>
@@ -106,6 +107,7 @@ const HeroIntro = () => {
           &nbsp;and drive progress. Our mission is <br />
           to reshape the future.
         </Typography>
+        {/* </Fade> */}
         {/* </motion.p> */}
       </Box>
     </Paper>

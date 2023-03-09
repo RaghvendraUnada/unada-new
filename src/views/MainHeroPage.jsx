@@ -14,6 +14,7 @@ import OpenButton from "../../src/assets/Images/Header/MenuIcon.svg";
 import OpenButtonWhite from "../../src/assets/Images/Header/MenuIconWhite.svg";
 import HeaderStyles from "../../src/Components/Header/Header.module.scss";
 import arrowheader from "../../src/assets/Images/Header/headl.png";
+import Fade from "react-reveal/Fade";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { Link } from "react-router-dom";
@@ -364,6 +365,7 @@ const MainHeroPage = () => {
                   setOpen(false);
                 }}
                 to="/service"
+
                 // style={{ margin: "auto" }}
               >
                 <ListItem
@@ -576,15 +578,17 @@ const MainHeroPage = () => {
                   transform: "translate(-50%,-50%)",
                 }}
               >
-                <h1
-                  className="textMainClass"
-                  style={{
-                    fontFamily: "MBFCanno",
-                    // lineHeight: "70px",
-                  }}
-                >
-                  REDEFINING TECHNOLOGIES
-                </h1>
+                <Fade top duration={1500}>
+                  <h1
+                    className="textMainClass"
+                    style={{
+                      fontFamily: "MBFCanno",
+                      // lineHeight: "70px",
+                    }}
+                  >
+                    REDEFINING TECHNOLOGIES
+                  </h1>
+                </Fade>
               </Box>
             </Paper>
 

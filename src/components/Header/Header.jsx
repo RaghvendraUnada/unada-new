@@ -224,7 +224,7 @@ const Header = () => {
         <List sx={{ py: 5, height: "80vh", overflowY: "scroll" }}>
           <ListItem
             sx={{
-              mt: 1,
+              // mt: 1,
               cursor: "pointer",
               borderTop: "1px solid #DBDBDB",
               borderBottom: "1px solid #DBDBDB",
@@ -233,7 +233,7 @@ const Header = () => {
                 borderBottom: "1px solid #000",
               },
             }}
-            className={HeaderStyles.Text}
+            // className={HeaderStyles.Text}
           >
             <Link
               onClick={() => {

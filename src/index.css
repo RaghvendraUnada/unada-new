@@ -20,14 +20,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* input:focus,
-input.form-control:focus {
-  outline: none !important;
-  outline-width: 0 !important;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-} */
 /* .carousel.indicators {
   bottom: 50px !important;
 }
@@ -100,11 +92,12 @@ ul .indicators {
 ::-webkit-scrollbar {
   display: none;
 }
-/* .cursor {
+.cursor {
   background-color: white;
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  /* border: 1px solid red; */
   position: fixed;
   top: 0;
   left: 0;
@@ -115,7 +108,7 @@ ul .indicators {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-} */
+}
 .whatsappicon {
   width: 40px;
   position: fixed;
@@ -256,13 +249,15 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  border-bottom: none !important;
+  /* border-bottom: none !important; */
+  outline: none;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 
 input[type="text"] {
-  border-bottom: none !important;
+  outline: none;
+  /* border-bottom: none !important; */
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }

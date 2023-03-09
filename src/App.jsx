@@ -320,12 +320,65 @@ function App() {
                     zIndex: 1,
                   }}
                 >
+                  {/* <Link
+                    to={"/"}
+                    className={
+                      location === "/"
+                        ? HeaderStyles.navbarListTextActive
+                        : HeaderStyles.navbarListText1
+                    }
+                    onClick={() => {
+                      setOpen(false);
+                    }}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    to={"/"}
+                    className={
+                      location === "/"
+                        ? HeaderStyles.navbarListTextActive
+                        : HeaderStyles.navbarListText1
+                    }
+                    onClick={() => {
+                      setOpen(false);
+                    }}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    to={"/"}
+                    className={
+                      location === "/"
+                        ? HeaderStyles.navbarListTextActive
+                        : HeaderStyles.navbarListText1
+                    }
+                    onClick={() => {
+                      setOpen(false);
+                    }}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    to={"/"}
+                    className={
+                      location === "/"
+                        ? HeaderStyles.navbarListTextActive
+                        : HeaderStyles.navbarListText1
+                    }
+                    onClick={() => {
+                      setOpen(false);
+                    }}
+                  >
+                    Home
+                  </Link> */}
+
                   <Link
                     onClick={() => {
                       setOpen(false);
                     }}
                     to="/"
-                    className={HeaderStyles.Text}
+                    // className={HeaderStyles.Text}
                   >
                     <ListItem
                       className={
@@ -358,6 +411,7 @@ function App() {
                       setOpen(false);
                     }}
                     to="/service"
+                    // className={HeaderStyles.Text}
                   >
                     <ListItem
                       className={
@@ -390,6 +444,8 @@ function App() {
                       setOpen(false);
                     }}
                     to="/whiteService"
+                    // className={HeaderStyles.Text}
+
                     // style={{ margin: "auto" }}
                   >
                     <ListItem
@@ -423,6 +479,8 @@ function App() {
                       setOpen(false);
                     }}
                     to="/careers"
+                    // className={HeaderStyles.Text}
+
                     // style={{ margin: "auto" }}
                   >
                     <ListItem
@@ -455,6 +513,8 @@ function App() {
                       setOpen(false);
                     }}
                     to="/contact"
+                    // className={HeaderStyles.Text}
+
                     // style={{ margin: "auto" }}
                   >
                     <ListItem

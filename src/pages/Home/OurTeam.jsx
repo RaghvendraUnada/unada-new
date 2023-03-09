@@ -9,7 +9,7 @@ import { keyframes } from "styled-components";
 import styled from "styled-components";
 import teamTitle from "../../assets/images/new/team.png";
 import axios from "axios";
-
+import Fade from "react-reveal/Fade";
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
   const FetchTeamData = async () => {
@@ -56,7 +56,7 @@ const OurTeam = () => {
         }}
         elevation={0}
       >
-        <motion.p
+        {/* <motion.p
           viewport={{ once: false }}
           exit={{ y: 0 }}
           transition={{ duration: 0.8, ease: "linear" }}
@@ -69,24 +69,11 @@ const OurTeam = () => {
             visible: { y: 0, opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0 },
           }}
-          // animate={{ y: [5, 50, 10], opacity: 1, scale: 1 }}
-          // transition={{
-          //   duration: 3,
-          //   delay: 0.3,
-          //   ease: [0.5, 0.71, 1, 1.5],
-          // }}
-          // initial={{ opacity: 0, scale: 0.1 }}
-          // variants={{
-          //   top: { y: -10 },
-          //   exit: { y: 0 },
-
-          //   visible: { y: 0, opacity: 1, scale: 4 },
-          //   hidden: { opacity: 0, scale: 0 },
-          // }}
-          // whileHover={{ scale: 1.2 }}
         >
+        </motion.p> */}
+        <Fade top duration={1500}>
           <Typography sx={OurTeamTextStyle}>Our Team</Typography>
-        </motion.p>
+        </Fade>
       </Paper>
       <Paper
         sx={{
