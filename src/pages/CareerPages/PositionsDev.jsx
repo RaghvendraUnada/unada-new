@@ -4,10 +4,11 @@ import VerticalScroll from "../../components/VerticalScroll";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import positionTitle from "../../assets/images/new/position.png";
-
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 const PositionsDev = () => {
   const [JobData, setJobData] = useState();
+  const navigate = useNavigate();
   const FetchJobData = async () => {
     await axios
       .get("/job/get_jobs")
@@ -18,6 +19,21 @@ const PositionsDev = () => {
   };
   useEffect(() => {
     FetchJobData();
+  }, []);
+  useEffect(() => {
+    if (location?.hash === "#sectionDev") {
+      console.log("=====>hello");
+      setTimeout(() => {
+        window.scrollTo({ top: 800, behavior: "smooth" });
+      }, [1200]);
+    } else if (location?.hash === "#miniSection") {
+      console.log("=====>hello");
+      setTimeout(() => {
+        window.scrollTo({ top: 400, behavior: "smooth" });
+      }, [1200]);
+    } else {
+      return console.log(window.location.pathname);
+    }
   }, []);
   return (
     <Grid
@@ -129,7 +145,14 @@ const PositionsDev = () => {
               },
             }}
           >
-            <Button sx={ButtonStyle} className="demoBtn">
+            <Button
+              sx={ButtonStyle}
+              className="demoBtn"
+              onClick={() => {
+                // location.push("/contact#section");
+                navigate("/contact#section");
+              }}
+            >
               Let's Chat
             </Button>
           </Box>

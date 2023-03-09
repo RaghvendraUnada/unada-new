@@ -34,22 +34,22 @@ const RandomSecondList = [...clients].sort(() => Math.random() - 0.6);
 const RandomThirdList = [...clients].sort(() => Math.random() - 0.6);
 
 const ClientMarquee = (props) => {
-  const [client, setclient] = React.useState();
+  // const [client, setclient] = React.useState();
 
-  React.useEffect(() => {
-    axios.get("/clients/get_clients").then((response) => {
-      setclient(response.data);
-      // console.log("===>", post[0].ClientLogo[0]);
-      console.log("===>", client);
-    });
-  }, []);
+  // React.useEffect(() => {
+  //   axios.get("/clients/get_clients").then((response) => {
+  //     setclient(response.data);
+  //     // console.log("===>", post[0].ClientLogo[0]);
+  //     console.log("===>", client);
+  //   });
+  // }, []);
   return (
     <HorizontalScrollingList fromRight>
-      {client?.map((client, idx) => {
+      {clients.map((client, idx) => {
         return (
           <ClientBox
             key={idx}
-            image={client.ClientLogo[0]}
+            image={client.image}
             directions={props.directions}
           />
         );

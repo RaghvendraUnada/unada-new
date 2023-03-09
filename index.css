@@ -98,6 +98,10 @@ ul .indicators {
   font-family: "Jeko Bold";
   src: url("../src/assets/Fonts/FontsFree-Net-Jeko-Bold.ttf");
 }
+@font-face {
+  font-family: "BSSign";
+  src: url("../src/assets/Fonts/brotherside_signature/Brotherside_Signature.ttf");
+}
 
 .cursor {
   background-color: white;

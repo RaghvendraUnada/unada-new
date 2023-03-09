@@ -61,7 +61,12 @@ const MainHeroPage = () => {
       setColorState(false);
     }
   }, [location]);
-
+  document.onkeydown = function (evt) {
+    if (evt.key === "Escape") {
+      // Escape key pressed
+      setOpen(false);
+    }
+  };
   return (
     <Paper
       elevation={0}
@@ -169,9 +174,11 @@ const MainHeroPage = () => {
                           maxWidth: "35px",
                           // bgcolor: "red",
                           transition: "0.3s all linear",
+                          opacity: 0,
                           "&:hover": {
                             // bgcolor: "red",
                             transform: "scale(1.15)",
+                            opacity: 1,
                           },
                         }}
                         alt="whyChooseUsimg"
@@ -267,14 +274,15 @@ const MainHeroPage = () => {
           <Paper
             sx={{
               width: "100%",
-              height: "90%",
+              height: "100%",
               minHeight: "100vh",
               marginLeft: "auto",
               marginRight: "auto",
               marginTop: open ? "0vh" : "-100vh",
+              // opacity : open ? 1 :
               transition: "all 1s ",
               borderRadius: "0px",
-              bgcolor: open ? "#fff" : "transparent",
+              // background: "red",
               position: open ? "fixed" : "initial",
             }}
             elevation={0}
@@ -285,7 +293,7 @@ const MainHeroPage = () => {
                 mx: "auto",
                 display: "flex",
                 justifyContent: "space-between",
-                bgcolor: "transparent",
+                // bgcolor: "transparent",
               }}
               elevation={0}
             >
@@ -299,7 +307,7 @@ const MainHeroPage = () => {
                   src={Logo}
                   width="40px"
                   height={"auto"}
-                  style={{ marginTop: "10px" }}
+                  style={{ marginTop: "30px" }}
                 />
               </Link>
 
@@ -307,7 +315,9 @@ const MainHeroPage = () => {
                 Close
               </Button>
             </Paper>
-            <List sx={{ py: 5, height: "80vh", overflowY: "scroll" }}>
+            <List
+              sx={{ py: 5, height: "90vh", overflowY: "scroll", zIndex: -1 }}
+            >
               <Link
                 onClick={() => {
                   setOpen(false);
@@ -486,6 +496,11 @@ const MainHeroPage = () => {
                   )}
                 </ListItem>
               </Link>
+              <Box>
+                <Typography sx={centerMainText}>
+                  Innovative Disruption
+                </Typography>
+              </Box>
             </List>
           </Paper>
         </Paper>
@@ -723,7 +738,7 @@ const ButtonStyle = {
   color: "#393939",
   fontStyle: "normal",
   fontWeight: 400,
-  mt: "03px",
+  mt: "17px",
   width: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   "&:hover": {
@@ -768,4 +783,20 @@ const ContactUsText = {
     backgroundClip: "text",
     textFillColor: "transparent",
   },
+};
+
+const centerMainText = {
+  fontFamily: "BSSign",
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: "50px",
+  lineHeight: 2,
+  textAlign: "center",
+  background:
+    "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
+  textTransform: "none",
+  backgroundSize: " 100%",
+  backgroundRepeat: "repeat",
+  backgroundClip: "text",
+  textFillColor: "transparent",
 };

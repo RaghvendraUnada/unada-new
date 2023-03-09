@@ -46,7 +46,12 @@ function App() {
       setWhatsappView(true);
     } else setWhatsappView(false);
   });
-
+  document.onkeydown = function (evt) {
+    if (evt.key === "Escape") {
+      // Escape key pressed
+      setOpen(false);
+    }
+  };
   // const variants = {
   //   default: {
   //     x: mousePosition.x - 16,
@@ -277,7 +282,7 @@ function App() {
                     mx: "auto",
                     display: "flex",
                     justifyContent: "space-between",
-                    bgcolor: "transparent",
+                    // bgcolor: "transparent",
                   }}
                   elevation={0}
                 >
@@ -285,7 +290,6 @@ function App() {
                     to={"/"}
                     style={{
                       textDecoration: "none",
-
                       marginTop: "5px",
                     }}
                   >
@@ -293,7 +297,7 @@ function App() {
                       src={Logo}
                       width="40px"
                       height={"auto"}
-                      style={{ marginTop: "10px" }}
+                      style={{ marginTop: "30px" }}
                     />
                   </Link>
 
@@ -301,7 +305,14 @@ function App() {
                     Close
                   </Button>
                 </Paper>
-                <List sx={{ py: 5, height: "80vh", overflowY: "scroll" }}>
+                <List
+                  sx={{
+                    py: 5,
+                    height: "85vh",
+                    overflowY: "scroll",
+                    zIndex: 1,
+                  }}
+                >
                   <Link
                     onClick={() => {
                       setOpen(false);
@@ -464,6 +475,11 @@ function App() {
                       )}
                     </ListItem>
                   </Link>
+                  <Box>
+                    <Typography sx={centerMainText}>
+                      Innovative Disruption
+                    </Typography>
+                  </Box>
                 </List>
               </Paper>
             </Paper>
@@ -487,7 +503,7 @@ function App() {
           transition: "all 1s ease-in-out",
         }}
       > */}
-      <Box
+      {/* <Box
         sx={{
           width: "40px",
           cursor: "pointer",
@@ -509,7 +525,7 @@ function App() {
             marginLeft: "-1.5px",
           }}
         />
-      </Box>
+      </Box> */}
       {/* </motion.div> */}
     </Paper>
   );
@@ -577,7 +593,7 @@ const ButtonStyle = {
   color: "#393939",
   fontStyle: "normal",
   fontWeight: 400,
-  mt: "03px",
+  mt: "17px",
   width: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
 
@@ -614,7 +630,6 @@ const ContactUsText = {
   fontStyle: "normal",
   fontWeight: 400,
   fontSize: "17px",
-
   background: "#4E4E4E",
   backgroundClip: "text",
   "&:hover": {
@@ -626,4 +641,36 @@ const ContactUsText = {
     backgroundClip: "text",
     textFillColor: "transparent",
   },
+};
+
+// const centerMainText = {
+//   fontFamily: "BSSign",
+//   fontStyle: "normal",
+//   fontWeight: 400,
+//   fontSize: "50px",
+//   lineHeight: 1.8,
+//   textAlign: "center",
+//   background:
+//     "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
+//   textTransform: "none",
+//   backgroundSize: " 100%",
+//   backgroundRepeat: "repeat",
+//   backgroundClip: "text",
+//   textFillColor: "transparent",
+// };
+
+const centerMainText = {
+  fontFamily: "BSSign",
+  fontStyle: "normal",
+  fontWeight: 400,
+  fontSize: "50px",
+  lineHeight: 2,
+  textAlign: "center",
+  background:
+    "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
+  textTransform: "none",
+  backgroundSize: " 100%",
+  backgroundRepeat: "repeat",
+  backgroundClip: "text",
+  textFillColor: "transparent",
 };

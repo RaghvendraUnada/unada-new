@@ -51,7 +51,7 @@ const CaraProjectBoxOurClient = ({ image, name, hrefLink, desig }) => {
           />
           <Box>
             <Typography sx={TextStyleOne}>Ronak</Typography>
-            <Typography sx={TextStyleTwo}>desi</Typography>
+            <Typography sx={TextStyleTwo}>Web Designer</Typography>
           </Box>
         </Box>
       </Paper>

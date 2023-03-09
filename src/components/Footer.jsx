@@ -50,10 +50,10 @@ const Footer = () => {
           Terms
         </Grid>
         <Grid item xl={2} lg={2} md={2} sm={2.4} xs={2.4} sx={fooText}>
-          Preferences
+          {/* Preferences */}
         </Grid>
         <Grid item xl={2} lg={2} md={2} sm={2.4} xs={2.4} sx={fooText}>
-          Our Forest
+          {/* Our Forest */}
         </Grid>
         <Grid
           item

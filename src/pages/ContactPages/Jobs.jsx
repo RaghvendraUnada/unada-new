@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import styles from "./Contact.module.css";
 import { useState } from "react";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
-
+import { useNavigate } from "react-router-dom";
 const Jobs = () => {
   const [icon1, setIcon1] = useState("White");
-
+  const navigate = useNavigate();
   return (
     // <div id="section">
     <Link to={"/careers"}>
