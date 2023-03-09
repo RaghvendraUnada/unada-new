@@ -27,7 +27,7 @@ const VideoBox = () => {
           lg: "-100px",
           xl: "-100px",
         },
-        zIndex: "20",
+        zIndex: "100",
         bgcolor: "transparent",
         position: "absolute",
       }}

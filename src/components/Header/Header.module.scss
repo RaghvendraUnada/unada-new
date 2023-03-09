@@ -171,10 +171,10 @@
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 960px) {
-  .navbarListText {
-    font-size: 25px;
-    line-height: 40px;
-  }
+  // .navbarListText {
+  //   font-size: 25px;
+  //   line-height: 40px;
+  // }
   .navbarListTextActive {
     font-size: 25px;
     line-height: 40px;
@@ -188,12 +188,12 @@
 
 @media only screen and (max-width: 499px) {
   .navbarListText {
-    font-size: 11px !important;
-    line-height: "40px" !important;
+    font-size: 20px !important;
+    line-height: 40px !important;
   }
   .navbarListTextActive {
-    font-size: 11px !important;
-    line-height: "40px" !important;
+    font-size: "11px" !important;
+    line-height: 40px !important;
   }
   .MenuIcon {
     width: 90%;

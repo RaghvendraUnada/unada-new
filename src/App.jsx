@@ -402,7 +402,26 @@ function App() {
                       {location === "/" ? (
                         <AnimatedGradientText>Home</AnimatedGradientText>
                       ) : (
-                        "Home"
+                        <Typography
+                          sx={{
+                            fontSize: {
+                              xl: "60px",
+                              lg: "50px",
+                              md: "35px",
+                              sm: "25px",
+                              xs: "20px",
+                            },
+                            lineHeight: {
+                              xl: "72px",
+                              lg: "60px",
+                              md: "50px",
+                              sm: "35px",
+                              xs: "35px",
+                            },
+                          }}
+                        >
+                          Home
+                        </Typography>
                       )}
                     </ListItem>
                   </Link>
@@ -432,10 +451,48 @@ function App() {
                     >
                       {location === "/service" ? (
                         <AnimatedGradientText>
-                          Our Disruptive Technologies
+                          <Typography
+                            sx={{
+                              fontSize: {
+                                xl: "60px",
+                                lg: "50px",
+                                md: "35px",
+                                sm: "25px",
+                                xs: "20px",
+                              },
+                              lineHeight: {
+                                xl: "72px",
+                                lg: "60px",
+                                md: "50px",
+                                sm: "35px",
+                                xs: "35px",
+                              },
+                            }}
+                          >
+                            Our Disruptive Technologies
+                          </Typography>
                         </AnimatedGradientText>
                       ) : (
-                        "Our Disruptive Technologies"
+                        <Typography
+                          sx={{
+                            fontSize: {
+                              xl: "60px",
+                              lg: "50px",
+                              md: "35px",
+                              sm: "25px",
+                              xs: "20px",
+                            },
+                            lineHeight: {
+                              xl: "72px",
+                              lg: "60px",
+                              md: "50px",
+                              sm: "35px",
+                              xs: "35px",
+                            },
+                          }}
+                        >
+                          Our Disruptive Technologies
+                        </Typography>
                       )}
                     </ListItem>
                   </Link>
@@ -444,9 +501,6 @@ function App() {
                       setOpen(false);
                     }}
                     to="/whiteService"
-                    // className={HeaderStyles.Text}
-
-                    // style={{ margin: "auto" }}
                   >
                     <ListItem
                       className={
@@ -467,10 +521,48 @@ function App() {
                     >
                       {location === "/whiteService" ? (
                         <AnimatedGradientText>
-                          Our Services
+                          <Typography
+                            sx={{
+                              fontSize: {
+                                xl: "60px",
+                                lg: "50px",
+                                md: "35px",
+                                sm: "25px",
+                                xs: "20px",
+                              },
+                              lineHeight: {
+                                xl: "72px",
+                                lg: "60px",
+                                md: "50px",
+                                sm: "35px",
+                                xs: "35px",
+                              },
+                            }}
+                          >
+                            Our Services
+                          </Typography>
                         </AnimatedGradientText>
                       ) : (
-                        "Our Services"
+                        <Typography
+                          sx={{
+                            fontSize: {
+                              xl: "60px",
+                              lg: "50px",
+                              md: "35px",
+                              sm: "25px",
+                              xs: "20px",
+                            },
+                            lineHeight: {
+                              xl: "72px",
+                              lg: "60px",
+                              md: "50px",
+                              sm: "35px",
+                              xs: "35px",
+                            },
+                          }}
+                        >
+                          Our Services
+                        </Typography>
                       )}
                     </ListItem>
                   </Link>
@@ -502,9 +594,49 @@ function App() {
                       }}
                     >
                       {location === "/careers" ? (
-                        <AnimatedGradientText>Careers</AnimatedGradientText>
+                        <AnimatedGradientText>
+                          <Typography
+                            sx={{
+                              fontSize: {
+                                xl: "60px",
+                                lg: "50px",
+                                md: "35px",
+                                sm: "25px",
+                                xs: "20px",
+                              },
+                              lineHeight: {
+                                xl: "72px",
+                                lg: "60px",
+                                md: "50px",
+                                sm: "35px",
+                                xs: "35px",
+                              },
+                            }}
+                          >
+                            Careers
+                          </Typography>
+                        </AnimatedGradientText>
                       ) : (
-                        "Careers"
+                        <Typography
+                          sx={{
+                            fontSize: {
+                              xl: "60px",
+                              lg: "50px",
+                              md: "35px",
+                              sm: "25px",
+                              xs: "20px",
+                            },
+                            lineHeight: {
+                              xl: "72px",
+                              lg: "60px",
+                              md: "50px",
+                              sm: "35px",
+                              xs: "35px",
+                            },
+                          }}
+                        >
+                          Careers
+                        </Typography>
                       )}
                     </ListItem>
                   </Link>
@@ -536,9 +668,49 @@ function App() {
                       }}
                     >
                       {location === "/contact" ? (
-                        <AnimatedGradientText>Contact us</AnimatedGradientText>
+                        <AnimatedGradientText>
+                          <Typography
+                            sx={{
+                              fontSize: {
+                                xl: "60px",
+                                lg: "50px",
+                                md: "35px",
+                                sm: "25px",
+                                xs: "20px",
+                              },
+                              lineHeight: {
+                                xl: "72px",
+                                lg: "60px",
+                                md: "50px",
+                                sm: "35px",
+                                xs: "35px",
+                              },
+                            }}
+                          >
+                            Contact us
+                          </Typography>
+                        </AnimatedGradientText>
                       ) : (
-                        "Contact us"
+                        <Typography
+                          sx={{
+                            fontSize: {
+                              xl: "60px",
+                              lg: "50px",
+                              md: "35px",
+                              sm: "25px",
+                              xs: "20px",
+                            },
+                            lineHeight: {
+                              xl: "72px",
+                              lg: "60px",
+                              md: "50px",
+                              sm: "35px",
+                              xs: "35px",
+                            },
+                          }}
+                        >
+                          Contact us
+                        </Typography>
                       )}
                     </ListItem>
                   </Link>
@@ -661,10 +833,11 @@ const ButtonStyle = {
   color: "#393939",
   fontStyle: "normal",
   fontWeight: 400,
-  mt: { xl: "17px", lg: "17px", md: "17px", sm: "22px", xs: "27px" },
+  mt: { xl: "17px", lg: "17px", md: "17px", sm: "28px", xs: "34px" },
   width: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   zIndex: 6,
+  // background: "red",
   "&:hover": {
     bgcolor: "transparent",
     textDecoration: "line-through",

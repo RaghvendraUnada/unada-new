@@ -345,7 +345,6 @@ const MainHeroPage = () => {
                       borderBottom: "1px solid #000",
                     },
                     fontFamily: "JekoNormal",
-                    fontWeight: 400,
                   }}
                   className={
                     location === "/"
@@ -354,9 +353,49 @@ const MainHeroPage = () => {
                   }
                 >
                   {location === "/" ? (
-                    <AnimatedGradientText>Home</AnimatedGradientText>
+                    <AnimatedGradientText>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xl: "60px",
+                            lg: "50px",
+                            md: "35px",
+                            sm: "25px",
+                            xs: "20px",
+                          },
+                          lineHeight: {
+                            xl: "72px",
+                            lg: "60px",
+                            md: "50px",
+                            sm: "35px",
+                            xs: "35px",
+                          },
+                        }}
+                      >
+                        Home
+                      </Typography>
+                    </AnimatedGradientText>
                   ) : (
-                    "Home"
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xl: "60px",
+                          lg: "50px",
+                          md: "35px",
+                          sm: "25px",
+                          xs: "20px",
+                        },
+                        lineHeight: {
+                          xl: "72px",
+                          lg: "60px",
+                          md: "50px",
+                          sm: "35px",
+                          xs: "35px",
+                        },
+                      }}
+                    >
+                      Home
+                    </Typography>
                   )}
                 </ListItem>
               </Link>
@@ -388,10 +427,48 @@ const MainHeroPage = () => {
                 >
                   {location === "/service" ? (
                     <AnimatedGradientText>
-                      Our Disruptive Technologies
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xl: "60px",
+                            lg: "50px",
+                            md: "35px",
+                            sm: "25px",
+                            xs: "20px",
+                          },
+                          lineHeight: {
+                            xl: "60px",
+                            lg: "50px",
+                            md: "35px",
+                            sm: "25px",
+                            xs: "20px",
+                          },
+                        }}
+                      >
+                        Our Disruptive Technologies
+                      </Typography>
                     </AnimatedGradientText>
                   ) : (
-                    "Our Disruptive Technologies"
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xl: "60px",
+                          lg: "50px",
+                          md: "35px",
+                          sm: "25px",
+                          xs: "20px",
+                        },
+                        lineHeight: {
+                          xl: "72px",
+                          lg: "60px",
+                          md: "50px",
+                          sm: "35px",
+                          xs: "35px",
+                        },
+                      }}
+                    >
+                      Our Disruptive Technologies
+                    </Typography>
                   )}
                 </ListItem>
               </Link>
@@ -421,9 +498,49 @@ const MainHeroPage = () => {
                   }}
                 >
                   {location === "/whiteService" ? (
-                    <AnimatedGradientText>Our Services</AnimatedGradientText>
+                    <AnimatedGradientText>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xl: "60px",
+                            lg: "50px",
+                            md: "35px",
+                            sm: "25px",
+                            xs: "20px",
+                          },
+                          lineHeight: {
+                            xl: "60px",
+                            lg: "50px",
+                            md: "35px",
+                            sm: "25px",
+                            xs: "20px",
+                          },
+                        }}
+                      >
+                        Our Services
+                      </Typography>
+                    </AnimatedGradientText>
                   ) : (
-                    "Our Services"
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xl: "60px",
+                          lg: "50px",
+                          md: "35px",
+                          sm: "25px",
+                          xs: "20px",
+                        },
+                        lineHeight: {
+                          xl: "72px",
+                          lg: "60px",
+                          md: "50px",
+                          sm: "35px",
+                          xs: "35px",
+                        },
+                      }}
+                    >
+                      Our Services
+                    </Typography>
                   )}
                 </ListItem>
               </Link>
@@ -457,9 +574,49 @@ const MainHeroPage = () => {
                   }}
                 >
                   {location === "/careers" ? (
-                    <AnimatedGradientText>Careers</AnimatedGradientText>
+                    <AnimatedGradientText>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xl: "60px",
+                            lg: "50px",
+                            md: "35px",
+                            sm: "25px",
+                            xs: "20px",
+                          },
+                          lineHeight: {
+                            xl: "60px",
+                            lg: "50px",
+                            md: "35px",
+                            sm: "25px",
+                            xs: "20px",
+                          },
+                        }}
+                      >
+                        Careers
+                      </Typography>
+                    </AnimatedGradientText>
                   ) : (
-                    "Careers"
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xl: "60px",
+                          lg: "50px",
+                          md: "35px",
+                          sm: "25px",
+                          xs: "20px",
+                        },
+                        lineHeight: {
+                          xl: "72px",
+                          lg: "60px",
+                          md: "50px",
+                          sm: "35px",
+                          xs: "35px",
+                        },
+                      }}
+                    >
+                      Career
+                    </Typography>
                   )}
                 </ListItem>
               </Link>
@@ -494,9 +651,49 @@ const MainHeroPage = () => {
                   }}
                 >
                   {location === "/contact" ? (
-                    <AnimatedGradientText>Contact us</AnimatedGradientText>
+                    <AnimatedGradientText>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xl: "60px",
+                            lg: "50px",
+                            md: "35px",
+                            sm: "25px",
+                            xs: "20px",
+                          },
+                          lineHeight: {
+                            xl: "60px",
+                            lg: "50px",
+                            md: "35px",
+                            sm: "25px",
+                            xs: "20px",
+                          },
+                        }}
+                      >
+                        Contact us
+                      </Typography>
+                    </AnimatedGradientText>
                   ) : (
-                    "Contact us"
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xl: "60px",
+                          lg: "50px",
+                          md: "35px",
+                          sm: "25px",
+                          xs: "20px",
+                        },
+                        lineHeight: {
+                          xl: "72px",
+                          lg: "60px",
+                          md: "50px",
+                          sm: "35px",
+                          xs: "35px",
+                        },
+                      }}
+                    >
+                      Contact Us
+                    </Typography>
                   )}
                 </ListItem>
               </Link>
@@ -508,9 +705,11 @@ const MainHeroPage = () => {
             </List>
           </Paper>
         </Paper>
-        <LazyLoad>
-          <VideoBox />
-        </LazyLoad>
+        {open ? null : (
+          <LazyLoad>
+            <VideoBox />
+          </LazyLoad>
+        )}
         <Suspense>
           <Paper
             sx={{
