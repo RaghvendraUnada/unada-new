@@ -27,6 +27,8 @@ import Header from "./components/Header/Header";
 import AnimatedRoutes from "./AnimatedRoutes";
 import LoadingScreen from "./views/LoadingScreen";
 
+import GradientImage from "./assets/Images/grident.png";
+
 function App() {
   let locationdta = useLocation();
   const [WhatsappView, setWhatsappView] = useState(false);
@@ -100,7 +102,7 @@ function App() {
         className="cursor"
         variants={variants}
         animate={cursorVariant}
-      /> */}
+        /> */}
           <Stack
             sx={{
               maxWidth: "2000px",
@@ -402,6 +404,12 @@ function App() {
                             cursor: "pointer",
                             borderTop: "1px solid #DBDBDB",
                             borderBottom: "1px solid #DBDBDB",
+                            // backgroundImage: `url(${GradientImage})`,
+                            // backgroundRepeat: "repeat",
+                            // backgroundClip: "text",
+                            // textFillColor: "transparent",
+                            // backgroundSize: "cover",
+                            // // background: "red",
                             "&:hover": {
                               borderTop: "1px solid #000",
                               borderBottom: "1px solid #000",
@@ -428,6 +436,13 @@ function App() {
                                   md: "50px",
                                   sm: "35px",
                                   xs: "35px",
+                                },
+                                "&:hover": {
+                                  backgroundImage: `url(${GradientImage})`,
+                                  backgroundRepeat: "repeat",
+                                  backgroundClip: "text",
+                                  textFillColor: "transparent",
+                                  backgroundSize: "cover",
                                 },
                               }}
                             >
@@ -500,6 +515,13 @@ function App() {
                                   sm: "35px",
                                   xs: "35px",
                                 },
+                                "&:hover": {
+                                  backgroundImage: `url(${GradientImage})`,
+                                  backgroundRepeat: "repeat",
+                                  backgroundClip: "text",
+                                  textFillColor: "transparent",
+                                  backgroundSize: "cover",
+                                },
                               }}
                             >
                               Our Disruptive Technologies
@@ -548,6 +570,11 @@ function App() {
                                     sm: "35px",
                                     xs: "35px",
                                   },
+                                  backgroundImage: `url(${GradientImage})`,
+                                  backgroundRepeat: "repeat",
+                                  backgroundClip: "text",
+                                  textFillColor: "transparent",
+                                  backgroundSize: "cover",
                                 }}
                               >
                                 Our Services
@@ -569,6 +596,13 @@ function App() {
                                   md: "50px",
                                   sm: "35px",
                                   xs: "35px",
+                                },
+                                "&:hover": {
+                                  backgroundImage: `url(${GradientImage})`,
+                                  backgroundRepeat: "repeat",
+                                  backgroundClip: "text",
+                                  textFillColor: "transparent",
+                                  backgroundSize: "cover",
                                 },
                               }}
                             >
@@ -622,6 +656,11 @@ function App() {
                                     sm: "35px",
                                     xs: "35px",
                                   },
+                                  backgroundImage: `url(${GradientImage})`,
+                                  backgroundRepeat: "repeat",
+                                  backgroundClip: "text",
+                                  textFillColor: "transparent",
+                                  backgroundSize: "cover",
                                 }}
                               >
                                 Careers
@@ -643,6 +682,13 @@ function App() {
                                   md: "50px",
                                   sm: "35px",
                                   xs: "35px",
+                                },
+                                "&:hover": {
+                                  backgroundImage: `url(${GradientImage})`,
+                                  backgroundRepeat: "repeat",
+                                  backgroundClip: "text",
+                                  textFillColor: "transparent",
+                                  backgroundSize: "cover",
                                 },
                               }}
                             >
@@ -672,6 +718,7 @@ function App() {
                             borderBottom: "1px solid #DBDBDB",
                             "&:hover": {
                               borderBottom: "1px solid #000",
+
                               borderTop: "1px solid #000",
                             },
                             fontFamily: "JekoNormal",
@@ -696,6 +743,11 @@ function App() {
                                     sm: "35px",
                                     xs: "35px",
                                   },
+                                  backgroundImage: `url(${GradientImage})`,
+                                  backgroundRepeat: "repeat",
+                                  backgroundClip: "text",
+                                  textFillColor: "transparent",
+                                  backgroundSize: "cover",
                                 }}
                               >
                                 Contact us
@@ -718,6 +770,13 @@ function App() {
                                   sm: "35px",
                                   xs: "35px",
                                 },
+                                "&:hover": {
+                                  backgroundImage: `url(${GradientImage})`,
+                                  backgroundRepeat: "repeat",
+                                  backgroundClip: "text",
+                                  textFillColor: "transparent",
+                                  backgroundSize: "cover",
+                                },
                               }}
                             >
                               Contact us
@@ -738,6 +797,7 @@ function App() {
               {!open ? <AnimatedRoutes setColorState={setColorState} /> : null}
               {/* </BrowserRouter> */}
             </Box>
+
             {locationdta.pathname === "/home" ||
             locationdta.pathname === "/whiteService" ||
             locationdta.pathname === "/service" ||

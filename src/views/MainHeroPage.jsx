@@ -24,6 +24,8 @@ import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import "./HeroPageCss.css";
 
+import GradientImage from "../assets/Images/grident.png";
+
 const VideoBox = React.lazy(() => import("./VideoBox"));
 
 const MainHeroPage = () => {
@@ -370,6 +372,13 @@ const MainHeroPage = () => {
                             sm: "35px",
                             xs: "35px",
                           },
+                          "&:hover": {
+                            backgroundImage: `url(${GradientImage})`,
+                            backgroundRepeat: "repeat",
+                            backgroundClip: "text",
+                            textFillColor: "transparent",
+                            backgroundSize: "cover",
+                          },
                         }}
                       >
                         Home
@@ -465,6 +474,13 @@ const MainHeroPage = () => {
                           sm: "35px",
                           xs: "35px",
                         },
+                        "&:hover": {
+                          backgroundImage: `url(${GradientImage})`,
+                          backgroundRepeat: "repeat",
+                          backgroundClip: "text",
+                          textFillColor: "transparent",
+                          backgroundSize: "cover",
+                        },
                       }}
                     >
                       Our Disruptive Technologies
@@ -536,6 +552,13 @@ const MainHeroPage = () => {
                           md: "50px",
                           sm: "35px",
                           xs: "35px",
+                        },
+                        "&:hover": {
+                          backgroundImage: `url(${GradientImage})`,
+                          backgroundRepeat: "repeat",
+                          backgroundClip: "text",
+                          textFillColor: "transparent",
+                          backgroundSize: "cover",
                         },
                       }}
                     >
@@ -613,6 +636,13 @@ const MainHeroPage = () => {
                           sm: "35px",
                           xs: "35px",
                         },
+                        "&:hover": {
+                          backgroundImage: `url(${GradientImage})`,
+                          backgroundRepeat: "repeat",
+                          backgroundClip: "text",
+                          textFillColor: "transparent",
+                          backgroundSize: "cover",
+                        },
                       }}
                     >
                       Career
@@ -689,6 +719,13 @@ const MainHeroPage = () => {
                           md: "50px",
                           sm: "35px",
                           xs: "35px",
+                        },
+                        "&:hover": {
+                          backgroundImage: `url(${GradientImage})`,
+                          backgroundRepeat: "repeat",
+                          backgroundClip: "text",
+                          textFillColor: "transparent",
+                          backgroundSize: "cover",
                         },
                       }}
                     >
