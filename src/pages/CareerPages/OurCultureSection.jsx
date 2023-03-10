@@ -11,7 +11,7 @@ import { keyframes } from "styled-components";
 import styled from "styled-components";
 import reshapeTitle from "../../assets/images/new/reshape.png";
 // import "./OurTeam.module.css";
-
+import Fade from "react-reveal/Fade";
 const OurCultureSection = () => {
   const images = [
     Ourculture,
@@ -31,7 +31,9 @@ const OurCultureSection = () => {
       }}
     >
       <Box>
-        <Typography sx={headtext}>Our Culture</Typography>
+        <Fade top duration={1500}>
+          <Typography sx={headtext}>Our Culture</Typography>
+        </Fade>
         {/* <Box
           sx={{
             width: {

@@ -11,6 +11,7 @@ import { Box } from "@mui/system";
 import Slider3dNew from "../../Components/Slider3dNew";
 import SpringSlider from "../../Components/SpringSlider/SpringSlider";
 import PreProjectCara from "../../components/PreProjectCara";
+import Fade from "react-reveal/Fade";
 const MetaVersePreviousProjects = () => {
   let cards = [
     {
@@ -90,21 +91,23 @@ const MetaVersePreviousProjects = () => {
               justifyContent: "center",
             }}
           >
-            <Typography sx={prevProjectText}>Previous &nbsp; </Typography>{" "}
-            <Typography
-              sx={{
-                ...prevProjectText,
-                background:
-                  "linear-gradient(to left, #D325E6 0%, 32.67543911933899%, #6E24B9 65.35087823867798%, 82.67543911933899%, #240D5D 100%)",
-                backgroundSize: " 100%",
-                backgroundRepeat: "repeat",
-                backgroundClip: "text",
-                fontWeight: 600,
-                textFillColor: "transparent",
-              }}
-            >
-              Projects
-            </Typography>
+            <Fade top duration={1800}>
+              <Typography sx={prevProjectText}>Previous &nbsp; </Typography>{" "}
+              <Typography
+                sx={{
+                  ...prevProjectText,
+                  background:
+                    "linear-gradient(to left, #D325E6 0%, 32.67543911933899%, #6E24B9 65.35087823867798%, 82.67543911933899%, #240D5D 100%)",
+                  backgroundSize: " 100%",
+                  backgroundRepeat: "repeat",
+                  backgroundClip: "text",
+                  fontWeight: 600,
+                  textFillColor: "transparent",
+                }}
+              >
+                Projects
+              </Typography>
+            </Fade>
           </Box>
           <Typography sx={prevProjectMetaText}>
             Purpose for Profit rewards contributors with short-term liquidity

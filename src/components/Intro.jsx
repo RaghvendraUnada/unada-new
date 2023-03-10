@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Box, Paper, Grid } from "@mui/material";
+import Fade from "react-reveal/Fade";
 const Intro = ({ imgUrl, mainTextIntro, subTextIntro }) => {
   return (
     <Paper elevation={0}>
@@ -89,7 +90,9 @@ const Intro = ({ imgUrl, mainTextIntro, subTextIntro }) => {
               },
             }}
           >
-            <Typography sx={mainText}>{mainTextIntro}</Typography>
+            <Fade top duration={1800}>
+              <Typography sx={mainText}>{mainTextIntro}</Typography>
+            </Fade>
             <Box
               mt={2}
               sx={{
@@ -157,7 +160,9 @@ const Intro = ({ imgUrl, mainTextIntro, subTextIntro }) => {
               },
             }}
           >
-            <Typography sx={mainText}>{mainTextIntro}</Typography>
+            <Fade top duration={1800}>
+              <Typography sx={mainText}>{mainTextIntro}</Typography>
+            </Fade>
             <Box
               mt={2}
               // sx={{

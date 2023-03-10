@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Box, Typography } from "@mui/material";
+import Fade from "react-reveal/Fade";
 const BlackTIntroComp = (props) => {
   return (
     <Grid
@@ -84,8 +85,10 @@ const BlackTIntroComp = (props) => {
             },
           }}
         >
-          <Typography sx={IntroMainText}>{props.Text1}</Typography>
-          <Typography sx={IntroColorText}>{props.ColorText}</Typography>
+          <Fade top duration={1800}>
+            <Typography sx={IntroMainText}>{props.Text1}</Typography>
+            <Typography sx={IntroColorText}>{props.ColorText}</Typography>
+          </Fade>
           <Typography sx={IntroParaText}>{props.MetaText}</Typography>
         </Box>
       </Grid>

@@ -13,7 +13,7 @@ import blackArrowImg from "../../assets/Images/Services/blackArrowImg.svg";
 import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
-
+import Fade from "react-reveal/Fade";
 const WhiteServicesPage = () => {
   const navigate = useNavigate();
   const [paper1, setPaper1] = useState(true);
@@ -123,7 +123,9 @@ const WhiteServicesPage = () => {
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Typography sx={paperTextStyle}>Application</Typography>
+                    <Fade top duration={1800}>
+                      <Typography sx={paperTextStyle}>Application</Typography>
+                    </Fade>
                     <Typography sx={activePaperText}>
                       We specialize in designing and creating innovative
                       software
@@ -174,7 +176,9 @@ const WhiteServicesPage = () => {
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Typography sx={paperTextStyle}>Website</Typography>
+                    <Fade top duration={1800}>
+                      <Typography sx={paperTextStyle}>Website</Typography>
+                    </Fade>
                     <Typography sx={activePaperText}>
                       Unada specializes in web design, development, and
                       maintenance.
@@ -223,7 +227,9 @@ const WhiteServicesPage = () => {
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Typography sx={paperTextStyle}>UI/UX</Typography>
+                    <Fade top duration={1800}>
+                      <Typography sx={paperTextStyle}>UI/UX</Typography>
+                    </Fade>
                     <Typography sx={activePaperText}>
                       We specialize in designing intuitive and user-friendly
                       interfaces for websites..
@@ -299,9 +305,11 @@ const WhiteServicesPage = () => {
                   }}
                 />
                 <Box sx={{}}>
-                  <Typography sx={mobileActivePapertext}>
-                    Application
-                  </Typography>
+                  <Fade top duration={1800}>
+                    <Typography sx={mobileActivePapertext}>
+                      Application
+                    </Typography>
+                  </Fade>
                   <Typography sx={mobileActivePaperMetaText}>
                     We specialize in designing and creating innovative software
                     applications for mobile devices.
@@ -363,7 +371,9 @@ const WhiteServicesPage = () => {
                       position: "relative",
                     }}
                   />
-                  <Typography sx={mobileActivePapertext}>Website</Typography>
+                  <Fade top duration={1800}>
+                    <Typography sx={mobileActivePapertext}>Website</Typography>
+                  </Fade>
                   <Typography sx={mobileActivePaperMetaText}>
                     We specialize in designing and creating innovative software
                     applications for mobile devices. Whether you have a clear
@@ -437,7 +447,9 @@ const WhiteServicesPage = () => {
                       position: "relative",
                     }}
                   />
-                  <Typography sx={mobileActivePapertext}>UI/UX</Typography>
+                  <Fade top duration={1800}>
+                    <Typography sx={mobileActivePapertext}>UI/UX</Typography>
+                  </Fade>
                   <Typography sx={mobileActivePaperMetaText}>
                     We specialize in designing and creating innovative software
                     applications for mobile devices. Whether you have a clear

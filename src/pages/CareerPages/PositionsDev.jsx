@@ -5,6 +5,7 @@ import { keyframes } from "styled-components";
 import styled from "styled-components";
 import positionTitle from "../../assets/images/new/position.png";
 import { useNavigate } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 import axios from "axios";
 const PositionsDev = () => {
   const [JobData, setJobData] = useState();
@@ -91,21 +92,25 @@ const PositionsDev = () => {
               gap: "1rem",
             }}
           >
-            <Typography sx={{ ...textStyle1, color: "#fff" }}>Open</Typography>
-            <Typography
-              sx={{
-                ...textStyle1,
-                background:
-                  "linear-gradient(90deg, #091E3A -30%, #2F80ED 50%, #2D9EE0 100%);",
-                backgroundSize: " 100%",
-                backgroundRepeat: "repeat",
-                backgroundClip: "text",
-                textFillColor: "transparent",
-                // textAlign: "center",
-              }}
-            >
-              Positions
-            </Typography>
+            <Fade top duration={1800}>
+              <Typography sx={{ ...textStyle1, color: "#fff" }}>
+                Open
+              </Typography>
+              <Typography
+                sx={{
+                  ...textStyle1,
+                  background:
+                    "linear-gradient(90deg, #091E3A -30%, #2F80ED 50%, #2D9EE0 100%);",
+                  backgroundSize: " 100%",
+                  backgroundRepeat: "repeat",
+                  backgroundClip: "text",
+                  textFillColor: "transparent",
+                  // textAlign: "center",
+                }}
+              >
+                Positions
+              </Typography>
+            </Fade>
           </Box>
 
           {/* <AnimatedGradientText> Positions</AnimatedGradientText> */}

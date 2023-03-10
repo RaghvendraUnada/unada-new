@@ -4,7 +4,7 @@ import { Typography, Box, Paper, Grid, Button } from "@mui/material";
 import thumb from "../../assets/Images/Application/thumb.svg";
 import { BsCheck2 } from "react-icons/bs";
 import TechMarque from "../../components/Maarquee/TechMarque";
-
+import Fade from "react-reveal/Fade";
 const TechStack = (props) => {
   let storeData = props.Tech;
   return (
@@ -29,7 +29,9 @@ const TechStack = (props) => {
                 // bgcolor: "red",
               }}
             >
-              <Typography sx={mainText}>{props.text1} stack</Typography>
+              <Fade top duration={800}>
+                <Typography sx={mainText}>{props.text1} stack</Typography>
+              </Fade>
             </Box>
           </Grid>
         </Grid>

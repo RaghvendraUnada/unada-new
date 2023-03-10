@@ -5,7 +5,7 @@ import contactHeromb from "../../assets/Images/Contact/contactHeromb.svg";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import contactTitle from "../../assets/images/new/contact.png";
-
+import Fade from "react-reveal/Fade";
 const hue = keyframes`
  from {
    -webkit-filter: hue-rotate(0deg);
@@ -87,12 +87,14 @@ const ContactHeroSection = () => {
             alignItems: "flex-start",
           }}
         >
-          <Stack sx={{ marginTop: {} }}>
-            <Typography sx={contactText}>Contact</Typography>
-          </Stack>
-          <Stack>
-            <Typography sx={contactText2}>Get in Touch !</Typography>
-          </Stack>
+          <Fade top duration={1800}>
+            <Stack sx={{ marginTop: {} }}>
+              <Typography sx={contactText}>Contact</Typography>
+            </Stack>
+            <Stack>
+              <Typography sx={contactText2}>Get in Touch !</Typography>
+            </Stack>
+          </Fade>
         </Box>
       </Grid>
       <Grid item xl={6} lg={6} md={6} xs={12} sm={12}>
