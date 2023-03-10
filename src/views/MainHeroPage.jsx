@@ -333,7 +333,7 @@ const MainHeroPage = () => {
                 style={{
                   // margin: "auto",
                   textDecoration: "none",
-                  color: "#C9C9C9",
+                  // color: "#C9C9C9",
                 }}
               >
                 <ListItem
@@ -575,7 +575,7 @@ const MainHeroPage = () => {
                 style={{
                   // margin: "auto",
                   textDecoration: "none",
-                  color: "#C9C9C9",
+                  // color: "#C9C9C9",
                 }}
               >
                 <ListItem
@@ -660,7 +660,7 @@ const MainHeroPage = () => {
                 style={{
                   // margin: "auto",
                   textDecoration: "none",
-                  color: "#C9C9C9",
+                  // color: "#C9C9C9",
                 }}
               >
                 <ListItem

@@ -191,6 +191,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   ];
   // const selectedSkill = [];
   const [selectedSkill, SetSelectedSkill] = useState([]);
+  const [loader, setLoader] = useState(false);
 
   // const [show, setShow] = useState(listOfSkill);
   const removeElement = (index) => {
@@ -289,7 +290,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 marginTop: "0.5rem",
               }}
             >
-              <Button
+              {/* <Button
                 disableRipple
                 sx={ButtonStyle1}
                 onClick={handleClickOpen}
@@ -299,9 +300,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 onMouseOver={() => {
                   setIcon1(true);
                 }}
-                // onFocus={() => {
-                //   setFocus(true);
-                // }}
               >
                 Apply
                 <span
@@ -333,11 +331,41 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       },
                     }}
                   />
-                  {/* <img
-                    src={arrows}
-                    alt="arr"
-                    style={{ height: "auto", width: "20px" }}
-                  /> */}
+                </span>
+              </Button> */}
+              <Button disableRipple sx={ButtonStyle1} onClick={handleClickOpen}>
+                Apply
+                <span
+                  style={{
+                    height: "35px",
+                    width: "35px",
+                    backgroundColor: "transparent",
+                    borderRadius: "50%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginLeft: "18px",
+                  }}
+                  onClick={() => {
+                    setOpen(true);
+                  }}
+                >
+                  <EastSharpIcon
+                    // fontSize="small"
+                    sx={{
+                      p: 0.3,
+                      // color: icon1 ? "black" : "#fff",
+                      fontSize: "20px",
+                      borderRadius: "20px",
+                      border: icon1 ? "1px solid black" : "1px solid #fff",
+                      opacity: 0.5,
+                      "&:focus": {
+                        opacity: 1,
+                        color: "white",
+                        fontSize: "25px",
+                      },
+                    }}
+                  />
                 </span>
               </Button>
             </Grid>
@@ -846,18 +874,33 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       }}
                       onChange={(e) => {
                         setFile(e.target.files);
-                        toggleLoader();
+                        setLoader(true);
+                        setTimeout(() => {
+                          setLoader(false);
+                        }, [2000]);
                       }}
                       onClick={() => {
                         console.log(uploadFileRef);
                         uploadFileRef.current.click();
                       }}
                     />
-                    {loading ? (
+                    <Box
+                      sx={{
+                        ml: {
+                          xl: "6rem",
+                          lg: "6rem",
+                          md: "6rem",
+                          sm: "2rem",
+                          xs: "2rem",
+                        },
+                      }}
+                    ></Box>
+                    {loader ? (
                       <>
-                        <Typography sx={{ color: "green" }}>
-                          sucessfully
-                        </Typography>
+                        <CircularProgress
+                          size={"25px"}
+                          sx={{ color: "#fff" }}
+                        />
                       </>
                     ) : null}
 
@@ -1075,17 +1118,20 @@ const ButtonStyle1 = {
   //   xs: "-2rem",
   // },
   opacity: 0.8,
+  transition: "0.3s all linear",
   "&:hover": {
     opacity: 1,
-    color: "black",
-    bgcolor: "white",
-    fontSize: {
-      xl: "17px",
-      lg: "17px",
-      md: "14px",
-      sm: "10px",
-      xs: "10px",
-    },
+    // color: "black",
+    // bgcolor: "white",
+    // fontSize: {
+    //   xl: "17px",
+    //   lg: "17px",
+    //   md: "14px",
+    //   sm: "10px",
+    //   xs: "10px",
+    // },
+    scale: 1,
+    transform: "scale(1.1)",
   },
   // "&:focus": {
   //   opacity: 1,

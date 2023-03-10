@@ -8,6 +8,9 @@ html {
 .indicators {
   bottom: 161px !important;
 }
+a {
+  color: #000;
+}
 @media (max-width: 768px) {
   html {
     font-size: 55%;
