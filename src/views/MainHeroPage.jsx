@@ -345,6 +345,7 @@ const MainHeroPage = () => {
                     "&:hover": {
                       borderTop: "1px solid #000",
                       borderBottom: "1px solid #000",
+                      ...colorBoxGradientStyle,
                     },
                     fontFamily: "JekoNormal",
                   }}
@@ -429,6 +430,7 @@ const MainHeroPage = () => {
                     "&:hover": {
                       borderBottom: "1px solid #000",
                       borderTop: "1px solid #000",
+                      ...colorBoxGradientStyle,
                     },
                     fontFamily: "JekoNormal",
                     fontWeight: 400,
@@ -508,6 +510,7 @@ const MainHeroPage = () => {
                     "&:hover": {
                       borderBottom: "1px solid #000",
                       borderTop: "1px solid #000",
+                      ...colorBoxGradientStyle,
                     },
                     fontFamily: "JekoNormal",
                     fontWeight: 400,
@@ -591,6 +594,7 @@ const MainHeroPage = () => {
                     "&:hover": {
                       borderBottom: "1px solid #000",
                       borderTop: "1px solid #000",
+                      ...colorBoxGradientStyle,
                     },
                     fontFamily: "JekoNormal",
                     fontWeight: 400,
@@ -675,6 +679,8 @@ const MainHeroPage = () => {
                     "&:hover": {
                       borderBottom: "1px solid #000",
                       borderTop: "1px solid #000",
+                      // color: "black",
+                      ...colorBoxGradientStyle,
                     },
                     fontFamily: "JekoNormal",
                     fontWeight: 400,
@@ -705,6 +711,7 @@ const MainHeroPage = () => {
                     </AnimatedGradientText>
                   ) : (
                     <Typography
+                      className={HeaderStyles.typo}
                       sx={{
                         fontSize: {
                           xl: "60px",
@@ -1022,4 +1029,14 @@ const centerMainText = {
   backgroundRepeat: "repeat",
   backgroundClip: "text",
   textFillColor: "transparent",
+};
+const colorBoxGradientStyle = {
+  background:
+    "linear-gradient(to right,rgba(201, 75, 234, 1) 0%,11.84210553765297%,rgba(112, 62, 195, 1) 23.68421107530594%,34.21052619814873%,rgba(59, 33, 140, 1) 44.736841320991516%,55.04385977983475%,rgba(26, 16, 66, 1) 65.35087823867798%,72.14912474155426%,rgba(54, 9, 52, 1) 78.94737124443054%,89.47368562221527%,rgba(170, 2, 87, 1) 100%)",
+  WebkitBackgroundClip: "text",
+  // backgroundRepeat: "repeat-x",
+  // backgroundSize: "50%",
+  // width: "30%",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
 };
