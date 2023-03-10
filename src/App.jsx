@@ -25,6 +25,7 @@ import "./index.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header/Header";
 import AnimatedRoutes from "./AnimatedRoutes";
+import LoadingScreen from "./views/LoadingScreen";
 
 function App() {
   let locationdta = useLocation();
@@ -40,6 +41,11 @@ function App() {
   //   x: 0,
   //   y: 0,
   // });
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 6000);
+  }, []);
   const [cursorVariant, setCursorVariant] = useState("default");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
@@ -87,134 +93,139 @@ function App() {
   //   };
   // }, []);
   return (
-    <Paper elevation={0} sx={{ bgcolor: "transparent" }}>
-      {/* <motion.div
+    <>
+      {loading === false ? (
+        <Paper elevation={0} sx={{ bgcolor: "transparent" }}>
+          {/* <motion.div
         className="cursor"
         variants={variants}
         animate={cursorVariant}
       /> */}
-      <Stack
-        sx={{
-          maxWidth: "2000px",
-          marginLeft: "auto",
-          marginRight: "auto",
-          position: "relative",
-        }}
-      >
-        <Box sx={{ position: "relative" }}>
-          {/* <BrowserRouter> */}
-          {locationdta.pathname !== "/" ? (
-            <Paper
-              sx={{
-                left: "auto",
-                right: "auto",
-                width: "100%",
-                height: "auto",
-                minWidth: "100vw",
-                transition: "all 1s ",
-                bgcolor: "transparent",
-                position: "absolute",
-                zIndex: 100000,
-                borderRadius: "0px",
-                overflowY: "scroll",
-              }}
-              elevation={0}
-            >
-              {!open ? (
+          <Stack
+            sx={{
+              maxWidth: "2000px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              position: "relative",
+            }}
+          >
+            <Box sx={{ position: "relative" }}>
+              {/* <BrowserRouter> */}
+              {locationdta.pathname !== "/" ? (
                 <Paper
                   sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    height: scrollState ? "60px" : "60px",
+                    left: "auto",
+                    right: "auto",
                     width: "100%",
-                    transition: "all 1s",
+                    height: "auto",
+                    minWidth: "100vw",
+                    transition: "all 1s ",
                     bgcolor: "transparent",
+                    position: "absolute",
+                    zIndex: 100000,
                     borderRadius: "0px",
-                    mt: scrollState ? "0%" : "1%",
+                    overflowY: "scroll",
                   }}
                   elevation={0}
                 >
-                  <Paper
-                    sx={{
-                      width: "2000px",
-                      padding: "0rem 2rem",
-                      mx: "auto",
-                      marginLeft: 0,
-                      marginRight: "auto",
-                      display: "flex",
-                      justifyContent: "space-between",
-                      bgcolor: "transparent",
-                    }}
-                    elevation={0}
-                  >
-                    <Link to={"/"} style={{ textDecoration: "none" }}>
-                      {locationdta.pathname === "/metaVerse" ||
-                      locationdta.pathname === "/home" ||
-                      locationdta.pathname === "/service" ||
-                      locationdta.pathname === "/ArVr" ||
-                      locationdta.pathname === "/blockchain" ||
-                      locationdta.pathname === "/contact" ? (
-                        <img
-                          src={WhiteLogo}
-                          width="45px"
-                          height={"auto"}
-                          alt={colorState}
-                          style={{ marginTop: "7px" }}
-                        />
-                      ) : (
-                        <img
-                          src={Logo}
-                          width="40px"
-                          height={"auto"}
-                          alt={colorState}
-                          style={{ marginTop: "8px" }}
-                        />
-                      )}
-                    </Link>
-                    {!open ? (
-                      <Button
+                  {!open ? (
+                    <Paper
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        height: scrollState ? "60px" : "60px",
+                        width: "100%",
+                        transition: "all 1s",
+                        bgcolor: "transparent",
+                        borderRadius: "0px",
+                        mt: scrollState ? "0%" : "1%",
+                      }}
+                      elevation={0}
+                    >
+                      <Paper
                         sx={{
-                          ...ButtonStyle,
-                          mt: 0.75,
-                          transition: "0.3s all linear",
-                          "&:hover": {
-                            transform: "scale(1.15)",
-                          },
+                          width: "2000px",
+                          padding: "0rem 2rem",
+                          mx: "auto",
+                          marginLeft: 0,
+                          marginRight: "auto",
+                          display: "flex",
+                          justifyContent: "space-between",
+                          bgcolor: "transparent",
                         }}
-                        onClick={() => setOpen(true)}
+                        elevation={0}
                       >
-                        {locationdta.pathname === "/metaVerse" ||
-                        locationdta.pathname === "/home" ||
-                        locationdta.pathname === "/service" ||
-                        locationdta.pathname === "/ArVr" ||
-                        locationdta.pathname === "/blockchain" ||
-                        locationdta.pathname === "/contact" ? (
-                          <img
-                            src={OpenButtonWhite}
-                            style={{
-                              width: "90%",
-                              height: "auto",
-                              maxWidth: "35px",
+                        <Link to={"/"} style={{ textDecoration: "none" }}>
+                          {locationdta.pathname === "/metaVerse" ||
+                          locationdta.pathname === "/home" ||
+                          locationdta.pathname === "/service" ||
+                          locationdta.pathname === "/ArVr" ||
+                          locationdta.pathname === "/blockchain" ||
+                          locationdta.pathname === "/contact" ? (
+                            <img
+                              src={WhiteLogo}
+                              width="45px"
+                              height={"auto"}
+                              alt={colorState}
+                              style={{ marginTop: "7px" }}
+                            />
+                          ) : (
+                            <img
+                              src={Logo}
+                              width="40px"
+                              height={"auto"}
+                              alt={colorState}
+                              style={{ marginTop: "8px" }}
+                            />
+                          )}
+                        </Link>
+                        {!open ? (
+                          <Button
+                            sx={{
+                              ...ButtonStyle,
+                              mt: 0.75,
+                              transition: "0.3s all linear",
+                              "&:hover": {
+                                transform: "scale(1.15)",
+                              },
                             }}
-                            alt="whyChooseUsimg"
-                            className={HeaderStyles.MenuIcon}
-                          />
+                            onClick={() => setOpen(true)}
+                          >
+                            {locationdta.pathname === "/metaVerse" ||
+                            locationdta.pathname === "/home" ||
+                            locationdta.pathname === "/service" ||
+                            locationdta.pathname === "/ArVr" ||
+                            locationdta.pathname === "/blockchain" ||
+                            locationdta.pathname === "/contact" ? (
+                              <img
+                                src={OpenButtonWhite}
+                                style={{
+                                  width: "90%",
+                                  height: "auto",
+                                  maxWidth: "35px",
+                                }}
+                                alt="whyChooseUsimg"
+                                className={HeaderStyles.MenuIcon}
+                              />
+                            ) : (
+                              <img
+                                src={OpenButton}
+                                style={{
+                                  width: "90%",
+                                  height: "auto",
+                                  maxWidth: "28px",
+                                }}
+                                alt="whyChooseUsimg"
+                                className={HeaderStyles.MenuIcon}
+                              />
+                            )}
+                          </Button>
                         ) : (
-                          <img
-                            src={OpenButton}
-                            style={{
-                              width: "90%",
-                              height: "auto",
-                              maxWidth: "28px",
-                            }}
-                            alt="whyChooseUsimg"
-                            className={HeaderStyles.MenuIcon}
-                          />
-                        )}
-                      </Button>
-                    ) : (
-                      <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
-                        {/* <img
+                          <Button
+                            sx={ButtonStyle}
+                            onClick={() => setOpen(false)}
+                          >
+                            {/* <img
                           // src={Close}
                           alt="Close"
                           style={{
@@ -223,10 +234,10 @@ function App() {
                             maxWidth: "35px",
                           }}
                         /> */}
-                        Close
-                      </Button>
-                    )}
-                    {/* <Link to={"/contact"}>
+                            Close
+                          </Button>
+                        )}
+                        {/* <Link to={"/contact"}>
                       <Box
                         sx={{
                           ...ContactUsButton,
@@ -266,61 +277,61 @@ function App() {
                         />
                       </Box>
                     </Link> */}
-                  </Paper>
-                </Paper>
-              ) : null}
-              <Paper
-                sx={{
-                  width: "100%",
-                  height: "90%",
-                  minHeight: "100vh",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  marginTop: open ? "0vh" : "-100vh",
-                  transition: "all 1s ",
-                  borderRadius: "0px",
-                  bgcolor: open ? "#fff" : "transparent",
-                }}
-                elevation={0}
-              >
-                <Paper
-                  sx={{
-                    width: "95%",
-                    mx: "auto",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    // bgcolor: "transparent",
-                  }}
-                  elevation={0}
-                >
-                  <Link
-                    to={"/"}
-                    style={{
-                      textDecoration: "none",
-                      marginTop: "5px",
+                      </Paper>
+                    </Paper>
+                  ) : null}
+                  <Paper
+                    sx={{
+                      width: "100%",
+                      height: "90%",
+                      minHeight: "100vh",
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      marginTop: open ? "0vh" : "-100vh",
+                      transition: "all 1s ",
+                      borderRadius: "0px",
+                      bgcolor: open ? "#fff" : "transparent",
                     }}
+                    elevation={0}
                   >
-                    <img
-                      src={Logo}
-                      width="40px"
-                      height={"auto"}
-                      style={{ marginTop: "30px" }}
-                    />
-                  </Link>
+                    <Paper
+                      sx={{
+                        width: "95%",
+                        mx: "auto",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        // bgcolor: "transparent",
+                      }}
+                      elevation={0}
+                    >
+                      <Link
+                        to={"/"}
+                        style={{
+                          textDecoration: "none",
+                          marginTop: "5px",
+                        }}
+                      >
+                        <img
+                          src={Logo}
+                          width="40px"
+                          height={"auto"}
+                          style={{ marginTop: "30px" }}
+                        />
+                      </Link>
 
-                  <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
-                    Close
-                  </Button>
-                </Paper>
-                <List
-                  sx={{
-                    py: 5,
-                    height: "85vh",
-                    overflowY: "scroll",
-                    zIndex: 1,
-                  }}
-                >
-                  {/* <Link
+                      <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
+                        Close
+                      </Button>
+                    </Paper>
+                    <List
+                      sx={{
+                        py: 5,
+                        height: "85vh",
+                        overflowY: "scroll",
+                        zIndex: 1,
+                      }}
+                    >
+                      {/* <Link
                     to={"/"}
                     className={
                       location === "/"
@@ -373,400 +384,404 @@ function App() {
                     Home
                   </Link> */}
 
-                  <Link
-                    onClick={() => {
-                      setOpen(false);
-                    }}
-                    to="/"
-                    // className={HeaderStyles.Text}
-                  >
-                    <ListItem
-                      className={
-                        location === "/"
-                          ? HeaderStyles.navbarListTextActive
-                          : HeaderStyles.navbarListText
-                      }
-                      sx={{
-                        mt: 1,
-                        cursor: "pointer",
-                        borderTop: "1px solid #DBDBDB",
-                        borderBottom: "1px solid #DBDBDB",
-                        "&:hover": {
-                          borderTop: "1px solid #000",
-                          borderBottom: "1px solid #000",
-                        },
-                        fontFamily: "JekoNormal",
-                        fontWeight: 400,
-                      }}
-                    >
-                      {location === "/" ? (
-                        <AnimatedGradientText>Home</AnimatedGradientText>
-                      ) : (
-                        <Typography
+                      <Link
+                        onClick={() => {
+                          setOpen(false);
+                        }}
+                        to="/"
+                        // className={HeaderStyles.Text}
+                      >
+                        <ListItem
+                          className={
+                            location === "/"
+                              ? HeaderStyles.navbarListTextActive
+                              : HeaderStyles.navbarListText
+                          }
                           sx={{
-                            fontSize: {
-                              xl: "60px",
-                              lg: "50px",
-                              md: "35px",
-                              sm: "25px",
-                              xs: "20px",
+                            mt: 1,
+                            cursor: "pointer",
+                            borderTop: "1px solid #DBDBDB",
+                            borderBottom: "1px solid #DBDBDB",
+                            "&:hover": {
+                              borderTop: "1px solid #000",
+                              borderBottom: "1px solid #000",
                             },
-                            lineHeight: {
-                              xl: "72px",
-                              lg: "60px",
-                              md: "50px",
-                              sm: "35px",
-                              xs: "35px",
-                            },
+                            fontFamily: "JekoNormal",
+                            fontWeight: 400,
                           }}
                         >
-                          Home
-                        </Typography>
-                      )}
-                    </ListItem>
-                  </Link>
-                  <Link
-                    onClick={() => {
-                      setOpen(false);
-                    }}
-                    to="/service"
-                    // className={HeaderStyles.Text}
-                  >
-                    <ListItem
-                      className={
-                        location === "/service"
-                          ? HeaderStyles.navbarListTextActive
-                          : HeaderStyles.navbarListText
-                      }
-                      sx={{
-                        cursor: "pointer",
-                        borderBottom: "1px solid #DBDBDB",
-                        "&:hover": {
-                          borderBottom: "1px solid #000",
-                          borderTop: "1px solid #000",
-                        },
-                        fontFamily: "JekoNormal",
-                        fontWeight: 400,
-                      }}
-                    >
-                      {location === "/service" ? (
-                        <AnimatedGradientText>
-                          <Typography
-                            sx={{
-                              fontSize: {
-                                xl: "60px",
-                                lg: "50px",
-                                md: "35px",
-                                sm: "25px",
-                                xs: "20px",
-                              },
-                              lineHeight: {
-                                xl: "72px",
-                                lg: "60px",
-                                md: "50px",
-                                sm: "35px",
-                                xs: "35px",
-                              },
-                            }}
-                          >
-                            Our Disruptive Technologies
-                          </Typography>
-                        </AnimatedGradientText>
-                      ) : (
-                        <Typography
+                          {location === "/" ? (
+                            <AnimatedGradientText>Home</AnimatedGradientText>
+                          ) : (
+                            <Typography
+                              sx={{
+                                fontSize: {
+                                  xl: "60px",
+                                  lg: "50px",
+                                  md: "35px",
+                                  sm: "25px",
+                                  xs: "20px",
+                                },
+                                lineHeight: {
+                                  xl: "72px",
+                                  lg: "60px",
+                                  md: "50px",
+                                  sm: "35px",
+                                  xs: "35px",
+                                },
+                              }}
+                            >
+                              Home
+                            </Typography>
+                          )}
+                        </ListItem>
+                      </Link>
+                      <Link
+                        onClick={() => {
+                          setOpen(false);
+                        }}
+                        to="/service"
+                        // className={HeaderStyles.Text}
+                      >
+                        <ListItem
+                          className={
+                            location === "/service"
+                              ? HeaderStyles.navbarListTextActive
+                              : HeaderStyles.navbarListText
+                          }
                           sx={{
-                            fontSize: {
-                              xl: "60px",
-                              lg: "50px",
-                              md: "35px",
-                              sm: "25px",
-                              xs: "20px",
+                            cursor: "pointer",
+                            borderBottom: "1px solid #DBDBDB",
+                            "&:hover": {
+                              borderBottom: "1px solid #000",
+                              borderTop: "1px solid #000",
                             },
-                            lineHeight: {
-                              xl: "72px",
-                              lg: "60px",
-                              md: "50px",
-                              sm: "35px",
-                              xs: "35px",
-                            },
+                            fontFamily: "JekoNormal",
+                            fontWeight: 400,
                           }}
                         >
-                          Our Disruptive Technologies
-                        </Typography>
-                      )}
-                    </ListItem>
-                  </Link>
-                  <Link
-                    onClick={() => {
-                      setOpen(false);
-                    }}
-                    to="/whiteService"
-                  >
-                    <ListItem
-                      className={
-                        location === "/whiteService"
-                          ? HeaderStyles.navbarListTextActive
-                          : HeaderStyles.navbarListText
-                      }
-                      sx={{
-                        cursor: "pointer",
-                        borderBottom: "1px solid #DBDBDB",
-                        "&:hover": {
-                          borderBottom: "1px solid #000",
-                          borderTop: "1px solid #000",
-                        },
-                        fontFamily: "JekoNormal",
-                        fontWeight: 400,
-                      }}
-                    >
-                      {location === "/whiteService" ? (
-                        <AnimatedGradientText>
-                          <Typography
-                            sx={{
-                              fontSize: {
-                                xl: "60px",
-                                lg: "50px",
-                                md: "35px",
-                                sm: "25px",
-                                xs: "20px",
-                              },
-                              lineHeight: {
-                                xl: "72px",
-                                lg: "60px",
-                                md: "50px",
-                                sm: "35px",
-                                xs: "35px",
-                              },
-                            }}
-                          >
-                            Our Services
-                          </Typography>
-                        </AnimatedGradientText>
-                      ) : (
-                        <Typography
+                          {location === "/service" ? (
+                            <AnimatedGradientText>
+                              <Typography
+                                sx={{
+                                  fontSize: {
+                                    xl: "60px",
+                                    lg: "50px",
+                                    md: "35px",
+                                    sm: "25px",
+                                    xs: "20px",
+                                  },
+                                  lineHeight: {
+                                    xl: "72px",
+                                    lg: "60px",
+                                    md: "50px",
+                                    sm: "35px",
+                                    xs: "35px",
+                                  },
+                                }}
+                              >
+                                Our Disruptive Technologies
+                              </Typography>
+                            </AnimatedGradientText>
+                          ) : (
+                            <Typography
+                              sx={{
+                                fontSize: {
+                                  xl: "60px",
+                                  lg: "50px",
+                                  md: "35px",
+                                  sm: "25px",
+                                  xs: "20px",
+                                },
+                                lineHeight: {
+                                  xl: "72px",
+                                  lg: "60px",
+                                  md: "50px",
+                                  sm: "35px",
+                                  xs: "35px",
+                                },
+                              }}
+                            >
+                              Our Disruptive Technologies
+                            </Typography>
+                          )}
+                        </ListItem>
+                      </Link>
+                      <Link
+                        onClick={() => {
+                          setOpen(false);
+                        }}
+                        to="/whiteService"
+                      >
+                        <ListItem
+                          className={
+                            location === "/whiteService"
+                              ? HeaderStyles.navbarListTextActive
+                              : HeaderStyles.navbarListText
+                          }
                           sx={{
-                            fontSize: {
-                              xl: "60px",
-                              lg: "50px",
-                              md: "35px",
-                              sm: "25px",
-                              xs: "20px",
+                            cursor: "pointer",
+                            borderBottom: "1px solid #DBDBDB",
+                            "&:hover": {
+                              borderBottom: "1px solid #000",
+                              borderTop: "1px solid #000",
                             },
-                            lineHeight: {
-                              xl: "72px",
-                              lg: "60px",
-                              md: "50px",
-                              sm: "35px",
-                              xs: "35px",
-                            },
+                            fontFamily: "JekoNormal",
+                            fontWeight: 400,
                           }}
                         >
-                          Our Services
-                        </Typography>
-                      )}
-                    </ListItem>
-                  </Link>
-                  <Link
-                    onClick={() => {
-                      setOpen(false);
-                    }}
-                    to="/careers"
-                    // className={HeaderStyles.Text}
+                          {location === "/whiteService" ? (
+                            <AnimatedGradientText>
+                              <Typography
+                                sx={{
+                                  fontSize: {
+                                    xl: "60px",
+                                    lg: "50px",
+                                    md: "35px",
+                                    sm: "25px",
+                                    xs: "20px",
+                                  },
+                                  lineHeight: {
+                                    xl: "72px",
+                                    lg: "60px",
+                                    md: "50px",
+                                    sm: "35px",
+                                    xs: "35px",
+                                  },
+                                }}
+                              >
+                                Our Services
+                              </Typography>
+                            </AnimatedGradientText>
+                          ) : (
+                            <Typography
+                              sx={{
+                                fontSize: {
+                                  xl: "60px",
+                                  lg: "50px",
+                                  md: "35px",
+                                  sm: "25px",
+                                  xs: "20px",
+                                },
+                                lineHeight: {
+                                  xl: "72px",
+                                  lg: "60px",
+                                  md: "50px",
+                                  sm: "35px",
+                                  xs: "35px",
+                                },
+                              }}
+                            >
+                              Our Services
+                            </Typography>
+                          )}
+                        </ListItem>
+                      </Link>
+                      <Link
+                        onClick={() => {
+                          setOpen(false);
+                        }}
+                        to="/careers"
+                        // className={HeaderStyles.Text}
 
-                    // style={{ margin: "auto" }}
-                  >
-                    <ListItem
-                      className={
-                        location === "/careers"
-                          ? HeaderStyles.navbarListTextActive
-                          : HeaderStyles.navbarListText
-                      }
-                      sx={{
-                        // mt: 1,
-                        cursor: "pointer",
-                        borderBottom: "1px solid #DBDBDB",
-                        "&:hover": {
-                          borderBottom: "1px solid #000",
-                          borderTop: "1px solid #000",
-                        },
-                        fontFamily: "JekoNormal",
-                        fontWeight: 400,
-                      }}
-                    >
-                      {location === "/careers" ? (
-                        <AnimatedGradientText>
-                          <Typography
-                            sx={{
-                              fontSize: {
-                                xl: "60px",
-                                lg: "50px",
-                                md: "35px",
-                                sm: "25px",
-                                xs: "20px",
-                              },
-                              lineHeight: {
-                                xl: "72px",
-                                lg: "60px",
-                                md: "50px",
-                                sm: "35px",
-                                xs: "35px",
-                              },
-                            }}
-                          >
-                            Careers
-                          </Typography>
-                        </AnimatedGradientText>
-                      ) : (
-                        <Typography
+                        // style={{ margin: "auto" }}
+                      >
+                        <ListItem
+                          className={
+                            location === "/careers"
+                              ? HeaderStyles.navbarListTextActive
+                              : HeaderStyles.navbarListText
+                          }
                           sx={{
-                            fontSize: {
-                              xl: "60px",
-                              lg: "50px",
-                              md: "35px",
-                              sm: "25px",
-                              xs: "20px",
+                            // mt: 1,
+                            cursor: "pointer",
+                            borderBottom: "1px solid #DBDBDB",
+                            "&:hover": {
+                              borderBottom: "1px solid #000",
+                              borderTop: "1px solid #000",
                             },
-                            lineHeight: {
-                              xl: "72px",
-                              lg: "60px",
-                              md: "50px",
-                              sm: "35px",
-                              xs: "35px",
-                            },
+                            fontFamily: "JekoNormal",
+                            fontWeight: 400,
                           }}
                         >
-                          Careers
-                        </Typography>
-                      )}
-                    </ListItem>
-                  </Link>
-                  <Link
-                    onClick={() => {
-                      setOpen(false);
-                    }}
-                    to="/contact"
-                    // className={HeaderStyles.Text}
+                          {location === "/careers" ? (
+                            <AnimatedGradientText>
+                              <Typography
+                                sx={{
+                                  fontSize: {
+                                    xl: "60px",
+                                    lg: "50px",
+                                    md: "35px",
+                                    sm: "25px",
+                                    xs: "20px",
+                                  },
+                                  lineHeight: {
+                                    xl: "72px",
+                                    lg: "60px",
+                                    md: "50px",
+                                    sm: "35px",
+                                    xs: "35px",
+                                  },
+                                }}
+                              >
+                                Careers
+                              </Typography>
+                            </AnimatedGradientText>
+                          ) : (
+                            <Typography
+                              sx={{
+                                fontSize: {
+                                  xl: "60px",
+                                  lg: "50px",
+                                  md: "35px",
+                                  sm: "25px",
+                                  xs: "20px",
+                                },
+                                lineHeight: {
+                                  xl: "72px",
+                                  lg: "60px",
+                                  md: "50px",
+                                  sm: "35px",
+                                  xs: "35px",
+                                },
+                              }}
+                            >
+                              Careers
+                            </Typography>
+                          )}
+                        </ListItem>
+                      </Link>
+                      <Link
+                        onClick={() => {
+                          setOpen(false);
+                        }}
+                        to="/contact"
+                        // className={HeaderStyles.Text}
 
-                    // style={{ margin: "auto" }}
-                  >
-                    <ListItem
-                      className={
-                        location === "/contact"
-                          ? HeaderStyles.navbarListTextActive
-                          : HeaderStyles.navbarListText
-                      }
-                      sx={{
-                        // mt: 1,
-                        cursor: "pointer",
-                        borderBottom: "1px solid #DBDBDB",
-                        "&:hover": {
-                          borderBottom: "1px solid #000",
-                          borderTop: "1px solid #000",
-                        },
-                        fontFamily: "JekoNormal",
-                        fontWeight: 400,
-                      }}
-                    >
-                      {location === "/contact" ? (
-                        <AnimatedGradientText>
-                          <Typography
-                            sx={{
-                              fontSize: {
-                                xl: "60px",
-                                lg: "50px",
-                                md: "35px",
-                                sm: "25px",
-                                xs: "20px",
-                              },
-                              lineHeight: {
-                                xl: "72px",
-                                lg: "60px",
-                                md: "50px",
-                                sm: "35px",
-                                xs: "35px",
-                              },
-                            }}
-                          >
-                            Contact us
-                          </Typography>
-                        </AnimatedGradientText>
-                      ) : (
-                        <Typography
+                        // style={{ margin: "auto" }}
+                      >
+                        <ListItem
+                          className={
+                            location === "/contact"
+                              ? HeaderStyles.navbarListTextActive
+                              : HeaderStyles.navbarListText
+                          }
                           sx={{
-                            fontSize: {
-                              xl: "60px",
-                              lg: "50px",
-                              md: "35px",
-                              sm: "25px",
-                              xs: "20px",
+                            // mt: 1,
+                            cursor: "pointer",
+                            borderBottom: "1px solid #DBDBDB",
+                            "&:hover": {
+                              borderBottom: "1px solid #000",
+                              borderTop: "1px solid #000",
                             },
-                            lineHeight: {
-                              xl: "72px",
-                              lg: "60px",
-                              md: "50px",
-                              sm: "35px",
-                              xs: "35px",
-                            },
+                            fontFamily: "JekoNormal",
+                            fontWeight: 400,
                           }}
                         >
-                          Contact us
+                          {location === "/contact" ? (
+                            <AnimatedGradientText>
+                              <Typography
+                                sx={{
+                                  fontSize: {
+                                    xl: "60px",
+                                    lg: "50px",
+                                    md: "35px",
+                                    sm: "25px",
+                                    xs: "20px",
+                                  },
+                                  lineHeight: {
+                                    xl: "72px",
+                                    lg: "60px",
+                                    md: "50px",
+                                    sm: "35px",
+                                    xs: "35px",
+                                  },
+                                }}
+                              >
+                                Contact us
+                              </Typography>
+                            </AnimatedGradientText>
+                          ) : (
+                            <Typography
+                              sx={{
+                                fontSize: {
+                                  xl: "60px",
+                                  lg: "50px",
+                                  md: "35px",
+                                  sm: "25px",
+                                  xs: "20px",
+                                },
+                                lineHeight: {
+                                  xl: "72px",
+                                  lg: "60px",
+                                  md: "50px",
+                                  sm: "35px",
+                                  xs: "35px",
+                                },
+                              }}
+                            >
+                              Contact us
+                            </Typography>
+                          )}
+                        </ListItem>
+                      </Link>
+                      <Box sx={{ mt: 3 }}>
+                        <Typography sx={centerMainText}>
+                          Innovative Disruption
                         </Typography>
-                      )}
-                    </ListItem>
-                  </Link>
-                  <Box sx={{ mt: 3 }}>
-                    <Typography sx={centerMainText}>
-                      Innovative Disruption
-                    </Typography>
-                  </Box>
-                </List>
-              </Paper>
-            </Paper>
-          ) : null}
+                      </Box>
+                    </List>
+                  </Paper>
+                </Paper>
+              ) : null}
 
-          {!open ? <AnimatedRoutes setColorState={setColorState} /> : null}
-          {/* </BrowserRouter> */}
-        </Box>
-        {locationdta.pathname === "/home" ||
-        locationdta.pathname === "/whiteService" ||
-        locationdta.pathname === "/service" ||
-        open ? null : (
-          <Footer />
-        )}
-      </Stack>
+              {!open ? <AnimatedRoutes setColorState={setColorState} /> : null}
+              {/* </BrowserRouter> */}
+            </Box>
+            {locationdta.pathname === "/home" ||
+            locationdta.pathname === "/whiteService" ||
+            locationdta.pathname === "/service" ||
+            open ? null : (
+              <Footer />
+            )}
+          </Stack>
 
-      <motion.div
-        className="whatsappicon"
-        style={{
-          marginRight: WhatsappView ? "0px" : "-100px",
-          transition: "all 1s ease-in-out",
-        }}
-      >
-        <Box
-          sx={{
-            width: "40px",
-            cursor: "pointer",
-            background: "white",
-            borderRadius: "20px",
-            height: "40px",
-            border: "none",
-          }}
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
-          <FaArrowAltCircleUp
-            fill="black"
-            size={"107%"}
-            height={"40px"}
+          <motion.div
+            className="whatsappicon"
             style={{
-              marginTop: "-1px",
-              marginLeft: "-1.5px",
+              marginRight: WhatsappView ? "0px" : "-100px",
+              transition: "all 1s ease-in-out",
             }}
-          />
-        </Box>
-      </motion.div>
-    </Paper>
+          >
+            <Box
+              sx={{
+                width: "40px",
+                cursor: "pointer",
+                background: "white",
+                borderRadius: "20px",
+                height: "40px",
+                border: "none",
+              }}
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
+              <FaArrowAltCircleUp
+                fill="black"
+                size={"107%"}
+                height={"40px"}
+                style={{
+                  marginTop: "-1px",
+                  marginLeft: "-1.5px",
+                }}
+              />
+            </Box>
+          </motion.div>
+        </Paper>
+      ) : (
+        <LoadingScreen />
+      )}
+    </>
   );
 }
 

@@ -4,6 +4,7 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
+// import CircularProgress from "@mui/material/CircularProgress";
 
 import {
   Typography,
@@ -16,6 +17,7 @@ import {
   MenuItem,
   Select,
   Input,
+  CircularProgress,
 } from "@mui/material";
 import arrows from "../assets/Images/Career/arrows.svg";
 import Dialog from "@mui/material/Dialog";
@@ -35,6 +37,15 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [open, setOpen] = useState(false);
+  // const [loading, setloading] = useState(false);
+
+  // const toggleLoader = () => {
+  //   if (!loading) {
+  //     setloading(true);
+  //   } else {
+  //     setloading(false);
+  //   }
+  // };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -796,6 +807,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     Upload your resume:
                     <span style={{ color: "#FF5F5F" }}>*</span>
                   </Typography>
+                  {/* {loading ? <CircularProgress /> : null} */}
                   <Box
                     sx={{
                       display: "flex",
@@ -809,6 +821,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       },
                     }}
                   >
+                    {/* {loading ? "Hide Loader" : "Show Loader"} */}
                     <input
                       type="file"
                       accept="application/pdf"
@@ -826,6 +839,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       }}
                       onChange={(e) => {
                         setFile(e.target.files);
+                        // toggleLoader();
                       }}
                       onClick={() => {
                         console.log(uploadFileRef);
