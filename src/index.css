@@ -255,6 +255,10 @@ textarea:focus {
   box-shadow: none !important;
 }
 
+.contact-box:focus {
+  border-bottom:2px solid black !important;
+}
+
 input[type="text"] {
   outline: none;
   /* border-bottom: none !important; */

@@ -4,7 +4,6 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
-// import CircularProgress from "@mui/material/CircularProgress";
 
 import {
   Typography,
@@ -37,15 +36,18 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [open, setOpen] = useState(false);
-  // const [loading, setloading] = useState(false);
+  const [loading, setloading] = useState(false);
 
-  // const toggleLoader = () => {
-  //   if (!loading) {
-  //     setloading(true);
-  //   } else {
-  //     setloading(false);
-  //   }
-  // };
+  const toggleLoader = () => {
+    if (!loading) {
+      setTimeout(() => {
+        setloading(true);
+      }, 3000);
+      // setloading(true);
+    } else {
+      setloading(false);
+    }
+  };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -85,8 +87,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [coverLetter, setCoverLetter] = useState();
   const uploadFileRef = useRef();
   const uploadFileRef2 = useRef();
-  const [icon1, setIcon1] = useState("White");
-  const [border, setBorder] = useState("White");
+  const [icon1, setIcon1] = useState(false);
+  // const [border, setBorder] = useState("false");
+  const [focus, setFocus] = useState(false);
 
   // const [state,setState] = useState()
 
@@ -291,13 +294,14 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 sx={ButtonStyle1}
                 onClick={handleClickOpen}
                 onMouseOut={() => {
-                  setIcon1("white");
-                  setBorder("white");
+                  setIcon1(false);
                 }}
                 onMouseOver={() => {
-                  setIcon1("black");
-                  setBorder("black");
+                  setIcon1(true);
                 }}
+                // onFocus={() => {
+                //   setFocus(true);
+                // }}
               >
                 Apply
                 <span
@@ -315,16 +319,20 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     setOpen(true);
                   }}
                 >
-                  <Box
+                  <EastSharpIcon
+                    fontSize="small"
                     sx={{
                       p: 0.3,
+                      color: icon1 ? "black" : "#fff",
+                      fontSize: "20px",
                       borderRadius: "20px",
-                      border: `1px solid ${border}`,
-                      display: "flex",
+                      border: icon1 ? "1px solid black" : "1px solid #fff",
+                      "&:focus": {
+                        opacity: 1,
+                        color: "white",
+                      },
                     }}
-                  >
-                    <EastSharpIcon fontSize="small" sx={{ color: icon1 }} />
-                  </Box>
+                  />
                   {/* <img
                     src={arrows}
                     alt="arr"
@@ -807,7 +815,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     Upload your resume:
                     <span style={{ color: "#FF5F5F" }}>*</span>
                   </Typography>
-                  {/* {loading ? <CircularProgress /> : null} */}
                   <Box
                     sx={{
                       display: "flex",
@@ -839,13 +846,21 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       }}
                       onChange={(e) => {
                         setFile(e.target.files);
-                        // toggleLoader();
+                        toggleLoader();
                       }}
                       onClick={() => {
                         console.log(uploadFileRef);
                         uploadFileRef.current.click();
                       }}
                     />
+                    {loading ? (
+                      <>
+                        <Typography sx={{ color: "green" }}>
+                          sucessfully
+                        </Typography>
+                      </>
+                    ) : null}
+
                     {/* {file?.length} */}
                     {/* <Button
                       sx={{
@@ -1044,7 +1059,7 @@ const ButtonStyle1 = {
     sm: "0.8rem 5.5rem",
     xs: "0.8rem 5.5rem",
   },
-  background: "transparent",
+  // background: "transparent",
   display: "flex",
   justifyContent: "space-evenly",
   alignItems: "center",
@@ -1072,6 +1087,18 @@ const ButtonStyle1 = {
       xs: "10px",
     },
   },
+  // "&:focus": {
+  //   opacity: 1,
+  //   color: "white",
+  //   bgcolor: "white",
+  //   fontSize: {
+  //     xl: "17px",
+  //     lg: "17px",
+  //     md: "14px",
+  //     sm: "10px",
+  //     xs: "10px",
+  //   },
+  // },
 };
 
 const textPos = {

@@ -94,6 +94,7 @@ const ChatSection = () => {
                 sm: "center",
                 xs: "center",
               },
+              alignItems: "baseline",
               gap: "20px",
             }}
           >
