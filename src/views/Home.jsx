@@ -14,6 +14,7 @@ import OpenButtonWhite from "../assets/Images/Header/MenuIconWhite.svg";
 import LazyLoad from "react-lazy-load";
 import VideoBox from "./VideoBox";
 import { useLocation } from "react-router-dom";
+import LoadingScreen from "./LoadingScreen";
 const Home = () => {
   const currentLocation = useLocation();
   const [location, setLocation] = useState();
