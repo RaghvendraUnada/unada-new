@@ -7,6 +7,7 @@ import pre3 from "../assets/Images/cara/pre3.png";
 import blackArrowImg from "../assets/Images/Services/blackArrowImg.svg";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import styles from "../pages/Services/Service.module.css";
+import Fade from "react-reveal/Fade";
 import { useRef } from "react";
 const PreProject = () => {
   const [icon1, setIcon1] = useState("black");
@@ -62,7 +63,9 @@ const PreProject = () => {
           },
         }}
       >
-        <Typography sx={mainText}>Previous Projects</Typography>
+        <Fade top duration={1800}>
+          <Typography sx={mainText}>Previous Projects</Typography>
+        </Fade>
       </Grid>
 
       <Grid

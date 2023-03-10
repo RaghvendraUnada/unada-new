@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import axios from "axios";
+import Fade from "react-reveal/Fade";
 const RevolutionSetion = () => {
   const [jobData, setJobData] = useState();
   const FetchJobData = async () => {
@@ -25,7 +26,9 @@ const RevolutionSetion = () => {
       }}
     >
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-        <Typography sx={textStyle}>Be a part of a revolution</Typography>
+        <Fade top duration={1800}>
+          <Typography sx={textStyle}>Be a part of a revolution</Typography>
+        </Fade>
         <Button sx={ButtonStyle}>{jobData?.length} Positions open</Button>
       </Grid>
     </Grid>

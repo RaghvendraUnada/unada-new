@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Button } from "@mui/material";
 import vision from "../../assets/Images/Application/vision.svg";
+import Fade from "react-reveal/Fade";
 const Vision = () => {
   return (
     <>
@@ -82,7 +83,9 @@ const Vision = () => {
               }}
             >
               <Typography sx={mainText}>
-                Bring your Digital Vision to Life.
+                <Fade top duration={1800}>
+                  Bring your Digital Vision to Life.
+                </Fade>
               </Typography>
               <Box
                 mt={2}

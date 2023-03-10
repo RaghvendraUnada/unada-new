@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Typography, Box, Paper, Grid, Button } from "@mui/material";
 import { useNavigate, Link, useLocation } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 // import { useHistory } from "react-router-dom";
 const HeroPage = ({
   mainText1,
@@ -92,7 +93,9 @@ const HeroPage = ({
               },
             }}
           >
-            <Typography sx={mainText}>{mainText1}</Typography>
+            <Fade top duration={1800}>
+              <Typography sx={mainText}>{mainText1}</Typography>
+            </Fade>
             <Box mt={2}>
               <Typography sx={subText}>{subText1}</Typography>
             </Box>
@@ -305,7 +308,9 @@ const HeroPage = ({
               },
             }}
           >
-            <Typography sx={mainText}>{mainText1}</Typography>
+            <Fade top duration={1800}>
+              <Typography sx={mainText}>{mainText1}</Typography>
+            </Fade>
             <Box mt={2}>
               <Typography sx={subText}>{subText1}</Typography>
             </Box>

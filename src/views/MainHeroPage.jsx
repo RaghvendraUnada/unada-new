@@ -777,7 +777,7 @@ const MainHeroPage = () => {
                   transform: "translate(-50%,-50%)",
                 }}
               >
-                <Fade top duration={1500}>
+                <Fade top duration={1800}>
                   <h1
                     className="textMainClass"
                     style={{
@@ -969,25 +969,6 @@ const ContactUsButton = {
   alignItems: "center",
   paddingTop: "1rem",
   paddingBottom: "1rem",
-};
-
-const ContactUsText = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 400,
-  fontSize: "15px",
-
-  background: "#4E4E4E",
-  backgroundClip: "text",
-  "&:hover": {
-    background:
-      "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
-    textTransform: "none",
-    backgroundSize: " 100%",
-    backgroundRepeat: "repeat",
-    backgroundClip: "text",
-    textFillColor: "transparent",
-  },
 };
 
 const centerMainText = {

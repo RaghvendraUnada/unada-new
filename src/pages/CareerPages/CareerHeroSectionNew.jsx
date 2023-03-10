@@ -6,6 +6,7 @@ import styled from "styled-components";
 import careerTitle from "../../assets/images/new/career_title.png";
 // import "./CareerHeroSectionNew.css";
 // import CareersText from "../../components/CareersText";
+import Fade from "react-reveal/Fade";
 const CareerHeroSection = () => {
   return (
     <Grid
@@ -68,34 +69,38 @@ const CareerHeroSection = () => {
           </Stack> */}
           <Box sx={{ width: "90%", mx: "auto" }}>
             <Stack sx={{ marginTop: {} }}>
-              <Typography
-                // className="animate-charcter"
-                sx={{
-                  ...textStyle1,
-                  background: "black",
-                  backgroundSize: " 100%",
-                  backgroundRepeat: "repeat",
-                  backgroundClip: "text",
+              <Fade top duration={1800}>
+                <Typography
+                  // className="animate-charcter"
+                  sx={{
+                    ...textStyle1,
+                    background: "black",
+                    backgroundSize: " 100%",
+                    backgroundRepeat: "repeat",
+                    backgroundClip: "text",
 
-                  textFillColor: "transparent",
-                }}
-              >
-                Join a team
-              </Typography>
-              <Typography
-                className="animate-charcter"
-                sx={{
-                  ...textStyle1,
-                  background:
-                    "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
-                  backgroundSize: " 100%",
-                  backgroundRepeat: "repeat",
-                  backgroundClip: "text",
-                  textFillColor: "transparent",
-                }}
-              >
-                Be a part of team who makes an impact.
-              </Typography>
+                    textFillColor: "transparent",
+                  }}
+                >
+                  Join a team
+                </Typography>
+              </Fade>
+              <Fade top duration={1800}>
+                <Typography
+                  className="animate-charcter"
+                  sx={{
+                    ...textStyle1,
+                    background:
+                      "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+                    backgroundSize: " 100%",
+                    backgroundRepeat: "repeat",
+                    backgroundClip: "text",
+                    textFillColor: "transparent",
+                  }}
+                >
+                  Be a part of team who makes an impact.
+                </Typography>
+              </Fade>
               {/* <img src={careerTitle} alt="title" width="80%" className="center-block" draggable="false" /> */}
             </Stack>
           </Box>

@@ -13,7 +13,7 @@ import ExploreIcon from "../../assets/Images/Services/ExploreIcon.svg";
 import BigArrowImg from "../../assets/Images/Services/BigArrowImg.svg";
 import styles from "./Service.module.css";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
-
+import Fade from "react-reveal/Fade";
 import { useNavigate, Link } from "react-router-dom";
 const ServicesPage = () => {
   const navigate = useNavigate();
@@ -67,7 +67,9 @@ const ServicesPage = () => {
             {paper1 ? (
               <>
                 <Box sx={ActiveBoxStyles}>
-                  <Typography sx={paperTextStyle}>Metaverse</Typography>
+                  <Fade top duration={1800}>
+                    <Typography sx={paperTextStyle}>Metaverse</Typography>
+                  </Fade>
                   <Typography sx={activePaperText}>
                     Imagine a world where anything is possible! At Unada
                   </Typography>
@@ -126,7 +128,9 @@ const ServicesPage = () => {
             {paper2 ? (
               <>
                 <Box sx={ActiveBoxStyles}>
-                  <Typography sx={paperTextStyle}>AR/VR</Typography>
+                  <Fade top duration={1800}>
+                    <Typography sx={paperTextStyle}>AR/VR</Typography>
+                  </Fade>
                   <Typography sx={activePaperText}>
                     Whether you're a game developer looking to create the next
                     big hit.
@@ -186,7 +190,9 @@ const ServicesPage = () => {
             {paper3 ? (
               <>
                 <Box sx={ActiveBoxStyles}>
-                  <Typography sx={paperTextStyle}>Blockchain</Typography>
+                  <Fade top duration={1800}>
+                    <Typography sx={paperTextStyle}>Blockchain</Typography>
+                  </Fade>
                   <Typography sx={activePaperText}>
                     Our services include custom blockchain and web3 development.
                   </Typography>
@@ -301,9 +307,11 @@ const ServicesPage = () => {
                     }}
                   />
                   <Typography sx={mobileActivePaperMetaText}>
-                    <Typography sx={mobileActivePapertext} mb={2}>
-                      Metaverse
-                    </Typography>
+                    <Fade top duration={1800}>
+                      <Typography sx={mobileActivePapertext} mb={2}>
+                        Metaverse
+                      </Typography>
+                    </Fade>
                     Imagine a world where anything is possible! At Unada
                     <br />
                     <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
@@ -363,9 +371,11 @@ const ServicesPage = () => {
                     }}
                   />
                   <Typography sx={mobileActivePaperMetaText}>
-                    <Typography sx={mobileActivePapertext} mb={2}>
-                      AR/VR
-                    </Typography>
+                    <Fade top duration={1800}>
+                      <Typography sx={mobileActivePapertext} mb={2}>
+                        AR/VR
+                      </Typography>
+                    </Fade>
                     Whether you're a game developer looking to create the next
                     big hit.
                     <br />
@@ -424,9 +434,11 @@ const ServicesPage = () => {
                     }}
                   />
                   <Typography sx={mobileActivePaperMetaText}>
-                    <Typography sx={mobileActivePapertext} mb={2}>
-                      Blockchain
-                    </Typography>
+                    <Fade top duration={1800}>
+                      <Typography sx={mobileActivePapertext} mb={2}>
+                        Blockchain
+                      </Typography>
+                    </Fade>
                     Our services include custom blockchain and web3 development.
                     <br />
                     <Link to={"/blockchain"} style={{ textDecoration: "none" }}>

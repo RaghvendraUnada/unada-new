@@ -684,7 +684,7 @@ const OpenDetails = (props) => {
         elevation={0}
       >
         <Box>
-          <Fade top duration={1500}>
+          <Fade top duration={1800}>
             <Typography sx={OpenDetailsTextStyle}>{props.title}</Typography>
           </Fade>
         </Box>

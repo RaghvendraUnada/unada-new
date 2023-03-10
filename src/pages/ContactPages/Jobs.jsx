@@ -6,6 +6,7 @@ import styles from "./Contact.module.css";
 import { useState } from "react";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import { useNavigate } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 const Jobs = () => {
   const [icon1, setIcon1] = useState("White");
   const navigate = useNavigate();
@@ -45,7 +46,9 @@ const Jobs = () => {
           },
         }}
       >
-        <Typography sx={text}>Unada Jobs</Typography>
+        <Fade top duration={1800}>
+          <Typography sx={text}>Unada Jobs</Typography>
+        </Fade>
         <Typography sx={text1}>View our open position.</Typography>
       </Box>
       <Box

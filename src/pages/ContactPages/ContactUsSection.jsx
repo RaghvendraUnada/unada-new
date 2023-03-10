@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-
+import Fade from "react-reveal/Fade";
 const ContactUsSection = () => {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -81,7 +81,11 @@ const ContactUsSection = () => {
         }}
       >
         <Box>
-          <Typography sx={contacttext}>Contact Us</Typography>
+          <Typography sx={contacttext}>
+            <Fade top duration={3800}>
+              Contact Us
+            </Fade>
+          </Typography>
           <Typography sx={infotext}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit.

@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Paper, Typography, Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 const BlackTHeroComp = (props) => {
   const Navigate = useNavigate();
   return (
@@ -127,25 +128,27 @@ const BlackTHeroComp = (props) => {
             transform: "translate(0%,-50%)",
           }}
         >
-          <Typography sx={heroTextStyle}>
-            {props.text1}
-            <Typography
-              sx={{
-                ...heroTextStyle,
-                marginLeft: "0rem",
-                marginTop: "0rem",
-                background:
-                  "linear-gradient(to left, rgba(201, 75, 234, 1) 0%, 11.84210553765297%, rgba(112, 62, 195, 1) 23.68421107530594%, 34.21052619814873%, rgba(59, 33, 140, 1) 44.736841320991516%, 55.04385977983475%, rgba(26, 16, 66, 1) 65.35087823867798%, 72.14912474155426%, rgba(54, 9, 52, 1) 78.94737124443054%, 89.47368562221527%, rgba(170, 2, 87, 1) 100%)",
-                backgroundSize: " 100%",
-                backgroundRepeat: "repeat",
-                backgroundClip: "text",
-                textFillColor: "transparent",
-              }}
-            >
-              {props.ColorText}
+          <Fade top duration={1800}>
+            <Typography sx={heroTextStyle}>
+              {props.text1}
+              <Typography
+                sx={{
+                  ...heroTextStyle,
+                  marginLeft: "0rem",
+                  marginTop: "0rem",
+                  background:
+                    "linear-gradient(to left, rgba(201, 75, 234, 1) 0%, 11.84210553765297%, rgba(112, 62, 195, 1) 23.68421107530594%, 34.21052619814873%, rgba(59, 33, 140, 1) 44.736841320991516%, 55.04385977983475%, rgba(26, 16, 66, 1) 65.35087823867798%, 72.14912474155426%, rgba(54, 9, 52, 1) 78.94737124443054%, 89.47368562221527%, rgba(170, 2, 87, 1) 100%)",
+                  backgroundSize: " 100%",
+                  backgroundRepeat: "repeat",
+                  backgroundClip: "text",
+                  textFillColor: "transparent",
+                }}
+              >
+                {props.ColorText}
+              </Typography>
+              {props.text2}
             </Typography>
-            {props.text2}
-          </Typography>
+          </Fade>
           <Box
             sx={{
               display: "flex",

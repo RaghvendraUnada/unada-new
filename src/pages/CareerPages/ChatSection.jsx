@@ -62,9 +62,11 @@ const ChatSection = () => {
           borderRight: "0.5px solid rgba(163, 163, 163, 0.3)",
         }}
       >
-        <Fade top duration={1500}>
-          <Typography sx={textStyle1}>
+        <Typography sx={textStyle1}>
+          <Fade top duration={1800}>
             Let’s chat,
+          </Fade>
+          <Fade top duration={1800}>
             <Typography
               sx={{
                 ...textStyle1,
@@ -78,8 +80,8 @@ const ChatSection = () => {
             >
               we respond fast
             </Typography>{" "}
-          </Typography>
-        </Fade>
+          </Fade>
+        </Typography>
         <Box>
           <Typography sx={SubHeadText}>Follow us</Typography>
           <Box

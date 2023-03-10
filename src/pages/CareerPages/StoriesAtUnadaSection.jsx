@@ -7,7 +7,7 @@ import styled from "styled-components";
 import storiesTitle from "../../assets/images/new/stories.png";
 import Slider from "react-slick";
 import { GrNext, GrPrevious } from "react-icons/gr";
-
+import Fade from "react-reveal/Fade";
 const ImgArr = [
   UnadaStoryImg,
   UnadaStoryImg,
@@ -101,35 +101,37 @@ const StoriesAtUnadaSection = () => {
           }}
         >
           <Box sx={{ display: "flex", gap: "5px" }}>
-            <Typography
-              sx={{
-                ...textStyle1,
-                color: "#fff",
-                fontSize: {
-                  xl: "64px",
-                  lg: "64px",
-                  md: "52px",
-                  sm: "42px",
-                  xs: "30px",
-                },
-              }}
-            >
-              {" "}
-              Stories at
-            </Typography>
-            <Typography
-              sx={{
-                ...textStyle1,
-                background:
-                  "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
-                backgroundSize: " 100%",
-                backgroundRepeat: "repeat",
-                backgroundClip: "text",
-                textFillColor: "transparent",
-              }}
-            >
-              Unada
-            </Typography>
+            <Fade top duration={1800}>
+              <Typography
+                sx={{
+                  ...textStyle1,
+                  color: "#fff",
+                  fontSize: {
+                    xl: "64px",
+                    lg: "64px",
+                    md: "52px",
+                    sm: "42px",
+                    xs: "30px",
+                  },
+                }}
+              >
+                {" "}
+                Stories at
+              </Typography>
+              <Typography
+                sx={{
+                  ...textStyle1,
+                  background:
+                    "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
+                  backgroundSize: " 100%",
+                  backgroundRepeat: "repeat",
+                  backgroundClip: "text",
+                  textFillColor: "transparent",
+                }}
+              >
+                Unada
+              </Typography>
+            </Fade>
           </Box>
           <Typography sx={{ ...MetaText, mt: 2 }}>
             Stories at Unada provide an authentic, unfiltered glimpse into our
