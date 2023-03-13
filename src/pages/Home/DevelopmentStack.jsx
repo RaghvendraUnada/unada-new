@@ -233,9 +233,11 @@ const DevelopmentStack = () => {
                   </Box>
                   {/* <Box> */}
                   <Box sx={{ padding: "3rem" }}>
-                    <Typography sx={verticalText}>
-                      Application Development
-                    </Typography>
+                    <Fade top duration={1500}>
+                      <Typography sx={verticalText}>
+                        Application Development
+                      </Typography>
+                    </Fade>
                     {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
                       Adapt your warehousing capacities and network in real
@@ -306,9 +308,11 @@ const DevelopmentStack = () => {
                     </Typography>
                   </Box>
                   <Box sx={{ padding: "3rem" }}>
-                    <Typography sx={verticalText}>
-                      Website Development
-                    </Typography>
+                    <Fade top duration={1500}>
+                      <Typography sx={verticalText}>
+                        Website Development
+                      </Typography>
+                    </Fade>
                     <Typography sx={paperTextStyle1}>
                       Unada specializes in web design, development, and
                       maintenance. Our team of experienced developers,
@@ -741,12 +745,19 @@ const OpenDetails = (props) => {
                   display: "flex",
                   marginLeft: "10px",
                   marginBottom: "-3px",
+                  transition: "0.3s all linear",
+                  "&:hover": {
+                    transform: "scale(1.007)",
+                  },
                 }}
               >
                 <EastSharpIcon
                   fontSize="small"
                   sx={{
                     color: icon1,
+                    "&:hover": {
+                      fontSize: 15,
+                    },
                   }}
                 />
               </Box>
@@ -794,6 +805,7 @@ const OpenDetailsTextStyle = {
   lineHeight: { xl: "75px", lg: "65px", md: "55px", sm: "50px", xs: "45px" },
   textTransform: "uppercase",
   background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%)",
+  // background: "red",
   backgroundClip: "text",
   textFillColor: "transparent",
 };

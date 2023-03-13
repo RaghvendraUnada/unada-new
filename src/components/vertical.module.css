@@ -1,0 +1,6 @@
+.item:hover .btn {
+  border: 1px solid black;
+}
+.btn:hover {
+  opacity: 1;
+}

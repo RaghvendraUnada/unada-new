@@ -256,7 +256,7 @@ textarea:focus {
 }
 
 .contact-box:focus {
-  border-bottom:2px solid black !important;
+  border-bottom: 2px solid black !important;
 }
 
 input[type="text"] {
@@ -264,6 +264,14 @@ input[type="text"] {
   /* border-bottom: none !important; */
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 @keyframes animate {
