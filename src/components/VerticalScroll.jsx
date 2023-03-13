@@ -93,8 +93,18 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
 
   // const [state,setState] = useState()
 
-  const apply = async () => {
+  const apply = async (e) => {
     console.log(file);
+    e.preventDefault();
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setExperience("");
+    setSkill("");
+    setLinkedin("");
+    setFile("");
+    setCoverLetter("");
+    alert("data submitted");
     console.log(
       firstName,
       lastName,
@@ -604,9 +614,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 >
                   <input
                     // id="standard-textarea"
-                    type="text"
+                    type="number"
                     label="Experience"
                     // type="email"
+                    min={0}
                     placeholder="Enter your Experience"
                     variant="standard"
                     multiline

@@ -27,8 +27,29 @@ import Header from "./components/Header/Header";
 import AnimatedRoutes from "./AnimatedRoutes";
 import LoadingScreen from "./views/LoadingScreen";
 
-import GradientImage from "./assets/Images/grident.png";
-
+import GradientImage from "./assets/Images/gridentFixMid.png";
+let HeaderArray = [
+  {
+    text: "Home",
+    location: "/",
+  },
+  {
+    text: "Our Disruptive Technologies",
+    location: "/service",
+  },
+  {
+    text: "Our Services",
+    location: "/whiteService",
+  },
+  {
+    text: "Careers",
+    location: "/careers",
+  },
+  {
+    text: "Contact us",
+    location: "/contact",
+  },
+];
 function App() {
   let locationdta = useLocation();
   const [WhatsappView, setWhatsappView] = useState(false);
@@ -60,40 +81,7 @@ function App() {
       setOpen(false);
     }
   };
-  // const variants = {
-  //   default: {
-  //     x: mousePosition.x - 16,
-  //     y: mousePosition.y - 16,
-  //   },
-  //   text: {
-  //     height: 150,
-  //     width: 150,
-  //     x: mousePosition.x - 75,
-  //     y: mousePosition.y - 75,
-  //     backgroundColor: "green",
-  //     mixBlendMode: "normal",
-  //   },
-  // };
 
-  // const textEnter = () => setCursorVariant("text");
-  // const textLeave = () => setCursorVariant("default");
-  // useEffect(() => {
-  //   setCurrentLocation(window.location.pathname);
-  // }, []);
-  // useEffect(() => {
-  //   const mouseMove = (e) => {
-  //     setMousePosition({
-  //       x: e.clientX,
-  //       y: e.clientY,
-  //     });
-  //   };
-
-  //   window.addEventListener("mousemove", mouseMove);
-
-  //   return () => {
-  //     window.removeEventListener("mousemove", mouseMove);
-  //   };
-  // }, []);
   return (
     <>
       {/* {loading === false ? ( */}
@@ -331,59 +319,6 @@ function App() {
                     }}
                   >
                     {/* <Link
-                    to={"/"}
-                    className={
-                      location === "/"
-                        ? HeaderStyles.navbarListTextActive
-                        : HeaderStyles.navbarListText1
-                    }
-                    onClick={() => {
-                      setOpen(false);
-                    }}
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    to={"/"}
-                    className={
-                      location === "/"
-                        ? HeaderStyles.navbarListTextActive
-                        : HeaderStyles.navbarListText1
-                    }
-                    onClick={() => {
-                      setOpen(false);
-                    }}
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    to={"/"}
-                    className={
-                      location === "/"
-                        ? HeaderStyles.navbarListTextActive
-                        : HeaderStyles.navbarListText1
-                    }
-                    onClick={() => {
-                      setOpen(false);
-                    }}
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    to={"/"}
-                    className={
-                      location === "/"
-                        ? HeaderStyles.navbarListTextActive
-                        : HeaderStyles.navbarListText1
-                    }
-                    onClick={() => {
-                      setOpen(false);
-                    }}
-                  >
-                    Home
-                  </Link> */}
-
-                    <Link
                       onClick={() => {
                         setOpen(false);
                       }}
@@ -784,8 +719,112 @@ function App() {
                           </Typography>
                         )}
                       </ListItem>
-                    </Link>
-                    <Box sx={{ mt: 2.7 }}>
+                    </Link> */}
+                    {HeaderArray.map((res, idx) => {
+                      console.log(location === res.location, "------->");
+                      return (
+                        <Link
+                          onClick={() => {
+                            setOpen(false);
+                            setLocationData(res.location);
+                          }}
+                          className={HeaderStyles.Text}
+                          to={res.location}
+                          style={{
+                            textDecoration: "none",
+                          }}
+                        >
+                          <Box
+                            sx={{
+                              mt: 0,
+                              pl: 2,
+                              cursor: "pointer",
+                              borderTop: "1px solid #DBDBDB",
+                              borderBottom: "1px solid #DBDBDB",
+                              "&:hover": {
+                                borderTop: "1px solid #000",
+                                borderBottom: "1px solid #000",
+                              },
+                              fontFamily: "JekoNormal",
+                              textAlign: "left",
+                              height: "100px",
+                              pt: 1,
+                              // ...colorBoxGradientStyle,
+                            }}
+                            className={
+                              location === res.location
+                                ? HeaderStyles.navbarListTextActive
+                                : HeaderStyles.navbarListText
+                            }
+                          >
+                            {location === res.location ? (
+                              <Typography
+                                sx={{
+                                  fontSize: {
+                                    xl: "60px",
+                                    lg: "50px",
+                                    md: "35px",
+                                    sm: "25px",
+                                    xs: "20px",
+                                  },
+                                  lineHeight: {
+                                    xl: "72px",
+                                    lg: "60px",
+                                    md: "50px",
+                                    sm: "35px",
+                                    xs: "35px",
+                                  },
+                                  // "&:hover": {
+                                  backgroundImage: `url(${GradientImage})`,
+                                  backgroundRepeat: "repeat",
+                                  backgroundClip: "text",
+                                  textFillColor: "transparent",
+                                  backgroundSize: "cover",
+                                  // },
+                                  textAlign: "left",
+                                  height: "100%",
+                                }}
+                                className={HeaderStyles.neww}
+                              >
+                                {res?.text}
+                              </Typography>
+                            ) : (
+                              <Typography
+                                sx={{
+                                  fontSize: {
+                                    xl: "60px",
+                                    lg: "50px",
+                                    md: "35px",
+                                    sm: "25px",
+                                    xs: "20px",
+                                  },
+                                  lineHeight: {
+                                    xl: "72px",
+                                    lg: "60px",
+                                    md: "50px",
+                                    sm: "35px",
+                                    xs: "35px",
+                                  },
+                                  "&:hover": {
+                                    backgroundImage: `url(${GradientImage})`,
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundClip: "text",
+                                    textFillColor: "transparent",
+                                    backgroundSize: "cover",
+                                  },
+                                  textAlign: "left",
+                                  height: "100%",
+                                }}
+                                className={HeaderStyles.neww}
+                              >
+                                {res?.text}
+                              </Typography>
+                            )}
+                          </Box>
+                        </Link>
+                      );
+                    })}
+                    <Box sx={{ mt: open ? 2.7 : -2.7 }}>
                       <Typography sx={centerMainText}>
                         Innovative Disruption
                       </Typography>

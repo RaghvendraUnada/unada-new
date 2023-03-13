@@ -4,7 +4,6 @@
   font-weight: 550;
   font-size: 60px;
   line-height: 72px;
-  text-align: center;
   color: #c9c9c9;
   text-decoration: none;
   transition: all 1s linear;
@@ -13,7 +12,7 @@
   -ms-transition: all 1s linear;
   -o-transition: all 1s linear;
 }
-.navbarListText:hover {
+.navbarListText:hover .neww {
   font-family: "JekoNormal";
   // background: linear-gradient(
   //   to right,
@@ -32,6 +31,7 @@
   // -webkit-background-clip: text;
   // -webkit-text-fill-color: transparent;
   // background-clip: text;
+  // color: red;
 }
 
 .navbarListTextActive {
@@ -40,7 +40,6 @@
   font-weight: 550;
   font-size: 60px;
   line-height: 72px;
-  text-align: center;
   // background: linear-gradient(
   //   to right,
   //   rgba(201, 75, 234, 1) 0%,
@@ -71,8 +70,23 @@
   font-weight: 550;
   font-size: 60px;
   line-height: 72px;
-  text-align: center;
-  background: url(`../../../../assets/Images/grident.png);
+  // background: url(`../../../../assets/Images/grident.png);
+  background: url(`../../../../assets//Images/gridentFixMid.png);
+  // background: linear-gradient(
+  //   to right,
+  //   rgba(201, 75, 234, 1) 0%,
+  //   11.84210553765297%,
+  //   rgba(112, 62, 195, 1) 23.68421107530594%,
+  //   34.21052619814873%,
+  //   rgba(59, 33, 140, 1) 44.736841320991516%,
+  //   55.04385977983475%,
+  //   rgba(26, 16, 66, 1) 65.35087823867798%,
+  //   72.14912474155426%,
+  //   rgba(54, 9, 52, 1) 78.94737124443054%,
+  //   89.47368562221527%,
+  //   rgba(170, 2, 87, 1) 100%
+  // );
+  background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -83,7 +97,6 @@
   font-weight: 550;
   font-size: 60px;
   line-height: 72px;
-  text-align: center;
   // background: linear-gradient(
   //   to right,
   //   rgba(201, 75, 234, 1) 0%,
@@ -108,7 +121,6 @@
   font-weight: 550;
   font-size: 60px;
   line-height: 72px;
-  text-align: center;
   // background: linear-gradient(
   //   to right,
   //   rgba(201, 75, 234, 1) 0%,
