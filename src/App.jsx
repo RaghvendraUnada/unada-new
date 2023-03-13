@@ -785,7 +785,7 @@ function App() {
                         )}
                       </ListItem>
                     </Link>
-                    <Box sx={{ mt: 3 }}>
+                    <Box sx={{ mt: 2.7 }}>
                       <Typography sx={centerMainText}>
                         Innovative Disruption
                       </Typography>
@@ -839,9 +839,9 @@ function App() {
           </Box>
         </motion.div>
       </Paper>
-      {/* ) : ( */}
-      {/* <LoadingScreen /> */}
-      {/* )} */}
+      {/* ) : (
+        <LoadingScreen />
+      )} */}
     </>
   );
 }

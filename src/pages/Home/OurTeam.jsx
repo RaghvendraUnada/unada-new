@@ -348,18 +348,19 @@ const TeamNameTextStyle = {
   fontFamily: "LGMedium",
   fontStyle: "normal",
   fontWeight: 500,
-  fontSize: { xl: "23px", lg: "23px", md: "20px", sm: "18px", xs: "18px" },
+  fontSize: { xl: "23px", lg: "23px", md: "20px", sm: "16px", xs: "16px" },
   lineHeight: { xl: "36px", lg: "36px", md: "30px", sm: "25px", xs: "20px" },
   letterSpacing: "0.01px",
   color: "#000",
+  // ml: 2,
 };
 
 const TeamProfessionTextStyle = {
   fontFamily: "LGMedium",
   fontStyle: "normal",
   fontWeight: 500,
-  fontSize: { xl: "15px", lg: "15px", md: "14px", sm: "14px", xs: "14px" },
-  lineHeight: { xl: "20px", lg: "18px", md: "16px", sm: "16px", xs: "16px" },
+  fontSize: { xl: "15px", lg: "15px", md: "14px", sm: "12px", xs: "12px" },
+  lineHeight: { xl: "20px", lg: "18px", md: "16px", sm: "16px", xs: "15px" },
   letterSpacing: "0.01px",
   color: "#000",
 };

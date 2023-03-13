@@ -948,6 +948,12 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         background: "#4D4D4D",
                         border: "1px dashed #F0F0F0",
                         borderRadius: "4px",
+                        "&:hover": {
+                          background: "#4D4D4D",
+                          border: "2px dashed #0051ED",
+                          borderRadius: "4px",
+                          cursor: "pointer",
+                        },
                       }}
                       // onDrag={handleDragOver}
                       // onDrop={handleDrop}
