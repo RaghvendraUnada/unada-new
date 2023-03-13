@@ -112,7 +112,7 @@ const PositionsDev = () => {
                   textFillColor: "transparent",
                   // textAlign: "center",
                 }}
-                className={selection.invert}
+                className={selection.invert2}
               >
                 Positions
               </Typography>
