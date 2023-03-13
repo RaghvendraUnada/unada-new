@@ -379,8 +379,15 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
           onClose={handleClose}
           TransitionComponent={Transition}
           sx={{
+            height: "auto",
             width: "100%",
-            padding: "2rem",
+            padding: {
+              xl: "2rem",
+              lg: "2rem",
+              md: "2rem",
+              sm: "1rem",
+              xs: "1rem",
+            },
             backgroundColor: "black",
           }}
         >
@@ -480,7 +487,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   borderRight: {
                     xl: "1px solid #A3A3A3",
                     lg: "1px solid #A3A3A3",
-                    md: "1px solid #A3A3A3",
+                    md: "none",
                     sm: "none",
                     xs: "none",
                   },
@@ -495,7 +502,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   sx={{
                     display: "flex",
                     justifyContent: "center",
-                    gap: 3,
+                    gap: 2,
                     width: "100%",
                   }}
                 >
@@ -507,7 +514,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     variant="standard"
                     multiline
                     style={{
-                      width: "40%",
+                      width: "43%",
                       color: "white",
                       borderBottom: "2px solid white",
                     }}
@@ -523,7 +530,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     variant="standard"
                     multiline
                     style={{
-                      width: "40%",
+                      width: "41%",
                       color: "white",
                       borderBottom: "2px solid white",
                     }}
@@ -551,7 +558,14 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     variant="standard"
                     multiline
                     style={{
-                      width: "84%",
+                      // width: {
+                      //   xl: "87%",
+                      //   lg: "87%",
+                      //   md: "87%",
+                      //   sm: "95%",
+                      //   xs: "94%",
+                      // },
+                      width: "87%",
                       color: "white",
                       borderBottom: "2px solid white",
                     }}
@@ -573,11 +587,18 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     },
                     alignItems: "center",
                     ml: {
-                      xl: "6rem",
-                      lg: "6rem",
+                      xl: "5rem",
+                      lg: "5rem",
                       md: "8rem",
                       sm: "6rem",
                       xs: "2rem",
+                    },
+                    width: {
+                      xl: "50%",
+                      lg: "50%",
+                      md: "85%",
+                      sm: "85%",
+                      xs: "85%",
                     },
                   }}
                 >
@@ -590,9 +611,16 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     variant="standard"
                     multiline
                     style={{
-                      width: "54%",
+                      width: {
+                        xl: "54%",
+                        lg: "54%",
+                        md: "100%",
+                        sm: "100%",
+                        xs: "100%",
+                      },
                       color: "white",
                       borderBottom: "2px solid white",
+                      bgcolor: "red",
                     }}
                     value={experience}
                     onChange={(e) => setExperience(e.target.value)}
@@ -613,8 +641,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     },
                     alignItems: "center",
                     ml: {
-                      xl: "6rem",
-                      lg: "6rem",
+                      xl: "5rem",
+                      lg: "5rem",
                       md: "8rem",
                       sm: "6rem",
                       xs: "2rem",
@@ -623,9 +651,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     width: {
                       xl: "50%",
                       lg: "50%",
-                      md: "50%",
-                      sm: "60%",
-                      xs: "90%",
+                      md: "85%",
+                      sm: "85%",
+                      xs: "85%",
                     },
                     // bgcolor: "red",
                     overflowY: "scroll",
@@ -644,34 +672,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                               sm: "15px",
                               xs: "15px",
                             },
-                            // width: {
-                            //   xl: "35%",
-                            //   lg: "35%",
-                            //   md: "30%",
-                            //   sm: "40%",
-                            //   xs: "60%",
-                            // },
-                            // minWidth: {
-                            //   xl: "35%",
-                            //   lg: "35%",
-                            //   md: "30%",
-                            //   sm: "40%",
-                            //   xs: "60%",
-                            // },
                             width: "auto",
-                            // border: "2px solid grey",
-                            // borderRadius: "15px",
-                            // width: "auto",
-                            // minWidth: {
-                            //   xl: "15%",
-                            //   lg: "15%",
-                            //   md: "15%",
-                            //   sm: "15%",
-                            //   xs: "40%",
-                            // },
-                            // height: "auto",
-                            // color: "#fff",
-                            // textAlign: "center",
                             p: 0.5,
                             height: "auto",
                             color: "#fff",
@@ -831,7 +832,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       variant="standard"
                       multiline
                       style={{
-                        width: "84%",
+                        width: "86%",
                         color: "white",
                         borderBottom: "2px solid white",
                       }}
@@ -848,10 +849,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       display: "flex",
                       justifyContent: "left",
                       ml: {
-                        xl: "6rem",
-                        lg: "6rem",
+                        xl: "5rem",
+                        lg: "5rem",
                         md: "6rem",
-                        sm: "2rem",
+                        sm: "5rem",
                         xs: "2rem",
                       },
                     }}
@@ -890,7 +891,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                           xl: "6rem",
                           lg: "6rem",
                           md: "6rem",
-                          sm: "2rem",
+                          sm: "5rem",
                           xs: "2rem",
                         },
                       }}
@@ -943,7 +944,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         justifyContent: "center",
                         flexDirection: "column",
                         textAlign: "center",
-                        width: "84%",
+                        width: "85%",
                         height: "175px",
                         background: "#4D4D4D",
                         border: "1px dashed #F0F0F0",
@@ -1170,7 +1171,13 @@ const ApplyTextStyle = {
   fontFamily: "LGThin",
   fontStyle: "normal",
   fontWeight: 300,
-  fontSize: "23px",
+  fontSize: {
+    xl: "2.3rem",
+    lg: "2.3rem",
+    md: "2.3rem",
+    sm: "1.9rem",
+    xs: "1.8rem",
+  },
   lineHeight: "36px",
   letterSpacing: 0.1,
   color: "#FFFFFF",
@@ -1179,7 +1186,13 @@ const PositionsDevText = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
-  fontSize: "32px",
+  fontSize: {
+    xl: "3.2rem",
+    lg: "3.2rem",
+    md: "3.2rem",
+    sm: "2.9rem",
+    xs: "2.8rem",
+  },
   lineHeight: "36px",
   letterSpacing: 0.1,
 
@@ -1190,13 +1203,19 @@ const labeltext = {
   fontFamily: "LGTrial",
   fontStyle: "normal",
   fontWeight: 400,
-  fontSize: 20,
+  fontSize: {
+    xl: "2rem",
+    lg: "2rem",
+    md: "2rem",
+    sm: "1.9rem",
+    xs: "1.9rem",
+  },
   color: "White",
   marginLeft: {
     xl: "5rem",
     lg: "5rem",
-    md: "2rem",
-    sm: "2rem",
+    md: "7rem",
+    sm: "5rem",
     xs: "2rem",
   },
 };
@@ -1205,7 +1224,13 @@ const skillText = {
   fontFamily: "LGLight",
   fontStyle: "normal",
   fontWeight: 400,
-  fontSize: 12,
+  fontSize: {
+    xl: "1.2rem",
+    lg: "1.2rem",
+    md: "1.2rem",
+    sm: "1rem",
+    xs: "1rem",
+  },
   color: "White",
   opacity: 0.8,
   "&:hover": {
@@ -1216,7 +1241,7 @@ const skillText = {
 const closeBtn = {
   fontFamily: "LGRegular",
   textTransform: "none",
-  fontSize: { xl: "24px", lg: "24px", md: "23px", sm: "20px", xs: "20px" },
+  fontSize: { xl: "24px", lg: "24px", md: "23px", sm: "20px", xs: "18px" },
   fontStyle: "normal",
   fontWeight: 400,
   mb: "5px",
