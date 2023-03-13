@@ -4,6 +4,8 @@ import ClientMarquee from "../../components/Maarquee/ClientMarquee";
 import ClientMarqueeLeftToRight from "../../components/Maarquee/ClientMarqueeLeftToRight";
 import "./OurTeam.css";
 import Fade from "react-reveal/Fade";
+import selection from "./home.module.css";
+
 const OurClients = () => {
   return (
     <Paper
@@ -29,9 +31,11 @@ const OurClients = () => {
         }}
       >
         <Fade top duration={1500}>
-          <Typography sx={ParentTextStyle}>Our Clients</Typography>
+          <Typography sx={ParentTextStyle} className={selection.hero}>
+            Our Clients
+          </Typography>
         </Fade>
-        <Typography sx={ChildTextStyle}>
+        <Typography sx={ChildTextStyle} className={selection.hero}>
           We integrate with the tools you love. So you'll be that much more
           efficient when hiring your crew for your next mission to space.
         </Typography>

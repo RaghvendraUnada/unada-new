@@ -9,6 +9,8 @@ import IntroImg1 from "../../assets/Images/Career/IntroImg1.svg";
 // import IntroImg3 from "../../assets/Images/Career/IntroImg3.svg";
 import Slider from "react-slick";
 import "./CareerIntroSection.css";
+import selection from "../../pages/Home/home.module.css";
+
 const ImgArr = [
   IntroImg1,
   IntroImg1,
@@ -124,14 +126,17 @@ function CareerIntroSection() {
           },
         }}
       >
-        <Typography sx={IntroMainText}>
+        <Typography sx={IntroMainText} className={selection.hero}>
           We believe in building the future, one line of code at a time. We are
           looking for people who are voraciously curious and who are willing to
           confront challenges. At Unada, no two days are the same. We have gone
           beyond and replaced conventions and rules set by companies to foster
           growth, development, collaboration and innovation at our workplace.
         </Typography>
-        <Typography sx={{ ...IntroMainText, marginTop: "0rem" }}>
+        <Typography
+          sx={{ ...IntroMainText, marginTop: "0rem" }}
+          className={selection.hero}
+        >
           Be it spending time on a Saturday morning while playing cricket
           thinking about how Metaverse could transform the IPL. Or spending
           endless hours fine tuning your neuromorphic design themes to improve

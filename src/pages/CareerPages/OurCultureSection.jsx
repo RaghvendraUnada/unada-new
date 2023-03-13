@@ -10,6 +10,7 @@ import Marquee from "react-fast-marquee";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import reshapeTitle from "../../assets/images/new/reshape.png";
+import selection from "../../pages/Home/home.module.css";
 // import "./OurTeam.module.css";
 import Fade from "react-reveal/Fade";
 const OurCultureSection = () => {
@@ -32,7 +33,9 @@ const OurCultureSection = () => {
     >
       <Box>
         <Fade top duration={1500}>
-          <Typography sx={headtext}>Our Culture</Typography>
+          <Typography sx={headtext} className={selection.zero}>
+            Our Culture
+          </Typography>
         </Fade>
         {/* <Box
           sx={{
@@ -47,8 +50,10 @@ const OurCultureSection = () => {
           }}
         >
         </Box> */}
-        <Typography sx={maintext}>#ReshapeTheFuture</Typography>
-        <Typography sx={para}>
+        <Typography sx={maintext} className={selection.invert}>
+          #ReshapeTheFuture
+        </Typography>
+        <Typography sx={para} className={selection.zero}>
           A stream of ideas, a coruscating workplace and the hub of the next
           generation of technologies - these are the philosophies of Unada.
           Experience a “team-first” culture with an extremely collaborative open

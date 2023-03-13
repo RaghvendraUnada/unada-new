@@ -6,6 +6,7 @@ import heroIntro from "./HeroIntro.module.scss";
 import Fade from "react-reveal/Fade";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import selection from "./home.module.css";
 
 const HeroIntro = () => {
   const [cursorVariant, setCursorVariant] = useState("default");
@@ -99,12 +100,13 @@ const HeroIntro = () => {
           />
         ) : null} */}
         {/* <Fade top duration={1500}> */}
-        <Typography sx={TextStyle} ref={ref}>
-          We build and use <br />
-          <span style={{ color: "#70ADFF" }}>
+        <Typography sx={TextStyle} ref={ref} className={selection.hero}>
+          We build and use <br className={selection.hero} />
+          <span style={{ color: "#70ADFF" }} className={selection.hero}>
             technologies to disrupt industries
           </span>
-          &nbsp;and drive progress. Our mission is <br />
+          &nbsp;and drive progress. Our mission is{" "}
+          <br className={selection.hero} />
           to reshape the future.
         </Typography>
         {/* </Fade> */}

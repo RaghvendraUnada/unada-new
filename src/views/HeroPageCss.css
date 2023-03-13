@@ -115,3 +115,9 @@
     line-height: 70px;
   }
 }
+
+.textMainClass::selection {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  background: black;
+}

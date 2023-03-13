@@ -29,10 +29,10 @@ body {
   /* overflow-y: scroll !important;
   overflow-x: hidden !important; */
 }
-::selection {
+/* ::selection {
   color: black;
   background: #fff;
-}
+} */
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;

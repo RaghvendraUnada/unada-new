@@ -5,6 +5,7 @@ import { Typography, Box, Paper, Grid, Stack, Skeleton } from "@mui/material";
 // import UnadaSLife2 from "../../assets/Images/Career/unadaslife2.svg";
 import UnadaSLife3 from "../../assets/Images/Career/unadalife3.svg";
 // import Skeleton from '@mui/material/Skeleton'
+import selection from "../../pages/Home/home.module.css";
 
 function UnadalifeSection() {
   return (
@@ -51,7 +52,9 @@ function UnadalifeSection() {
               // bgcolor: "red",
             }}
           >
-            <Typography sx={text}>Unada’s life</Typography>
+            <Typography sx={text} className={selection.invert}>
+              Unada’s life
+            </Typography>
           </Box>
         </Box>
       </Grid>

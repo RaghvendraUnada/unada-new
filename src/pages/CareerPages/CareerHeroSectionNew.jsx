@@ -7,6 +7,7 @@ import careerTitle from "../../assets/images/new/career_title.png";
 // import "./CareerHeroSectionNew.css";
 // import CareersText from "../../components/CareersText";
 import Fade from "react-reveal/Fade";
+import selection from "../../pages/Home/home.module.css";
 const CareerHeroSection = () => {
   return (
     <Grid
@@ -81,13 +82,15 @@ const CareerHeroSection = () => {
 
                     textFillColor: "transparent",
                   }}
+                  className={selection.invert}
                 >
                   Join a team
                 </Typography>
               </Fade>
               <Fade top duration={1800}>
                 <Typography
-                  className="animate-charcter"
+                  // className="animate-charcter"
+                  className={selection.invert}
                   sx={{
                     ...textStyle1,
                     background:

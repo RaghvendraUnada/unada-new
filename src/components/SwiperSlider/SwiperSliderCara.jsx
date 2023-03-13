@@ -14,6 +14,7 @@ import "./SwiperCss.css";
 // import required modules
 import { Scrollbar } from "swiper";
 import { Box, TextField, Typography } from "@mui/material";
+import selection from "../../pages/Home/home.module.css";
 
 export default function SwiperSliderCara(props) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -140,7 +141,9 @@ export default function SwiperSliderCara(props) {
                 alt="hello"
                 src={slide}
               />
-              <Typography sx={SwiperText}>Studio 25 Tiktok</Typography>
+              <Typography sx={SwiperText} className={selection.hero}>
+                Studio 25 Tiktok
+              </Typography>
             </Box>
           ))}
         </Slider>

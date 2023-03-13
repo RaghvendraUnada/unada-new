@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import Fade from "react-reveal/Fade";
+import "./home.module.css";
+
 const DevelopmentStack = () => {
   const [numberOne, setNumberOne] = useState(1);
   const [boxtextOne, setBoxtextOne] = useState("Application Development");
@@ -685,11 +687,15 @@ const OpenDetails = (props) => {
       >
         <Box>
           <Fade top duration={1800}>
-            <Typography sx={OpenDetailsTextStyle}>{props.title}</Typography>
+            <Typography sx={OpenDetailsTextStyle} className={styles.Text}>
+              {props.title}
+            </Typography>
           </Fade>
         </Box>
         <Box>
-          <Typography sx={OpenDetailsBottomTextStyle}>{props.desc}</Typography>
+          <Typography sx={OpenDetailsBottomTextStyle} className={styles.Text}>
+            {props.desc}
+          </Typography>
           <a href={props.url}>
             <Typography
               sx={{

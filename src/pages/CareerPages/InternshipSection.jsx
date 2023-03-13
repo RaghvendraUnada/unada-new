@@ -1,6 +1,8 @@
 import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import Fade from "react-reveal/Fade";
+import selection from "../../pages/Home/home.module.css";
+
 const InternshipSection = () => {
   return (
     <Grid
@@ -9,16 +11,18 @@ const InternshipSection = () => {
     >
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
         <Fade top duration={1800}>
-          <Typography sx={textStyle}>Our Internship Program</Typography>
+          <Typography sx={textStyle} className={selection.zero}>
+            Our Internship Program
+          </Typography>
         </Fade>
-        <Typography sx={metaTextStyle}>
+        <Typography sx={metaTextStyle} className={selection.zero}>
           Our internship program is designed to provide hands-on experience and
           mentorship to help interns develop their skills and knowledge.
           Throughout the program, interns will work on real projects and
           challenges alongside our talented team of professionals, gaining
           exposure to a wide range of technologies and processes.
         </Typography>
-        <Typography sx={metaTextStyle}>
+        <Typography sx={metaTextStyle} className={selection.zero}>
           We look forward to helping you jumpstart your career in tech!
         </Typography>
         <Button disableRipple sx={ButtonStyle}>

@@ -10,6 +10,7 @@ import styled from "styled-components";
 import teamTitle from "../../assets/images/new/team.png";
 import axios from "axios";
 import Fade from "react-reveal/Fade";
+import selection from "./home.module.css";
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
   const FetchTeamData = async () => {
@@ -72,7 +73,9 @@ const OurTeam = () => {
         >
         </motion.p> */}
         <Fade top duration={1800}>
-          <Typography sx={OurTeamTextStyle}>Our Team</Typography>
+          <Typography sx={OurTeamTextStyle} className={selection.zero}>
+            Our Team
+          </Typography>
         </Fade>
       </Paper>
       <Paper
@@ -128,8 +131,10 @@ const OurTeam = () => {
                 mb: { xl: 6, lg: 6, md: 6, sm: 0, xs: 0 },
               }}
             >
-              <Typography sx={TextStyle}>The people who push the</Typography>
-              <Typography sx={coloredText}>
+              <Typography sx={TextStyle} className={selection.zero}>
+                The people who push the
+              </Typography>
+              <Typography sx={coloredText} className={selection.invert}>
                 boundaries of technology and make it happen.
               </Typography>{" "}
             </Box>

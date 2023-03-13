@@ -4,6 +4,7 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
+import selection from "../pages/Home/home.module.css";
 
 import {
   Typography,
@@ -231,7 +232,9 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 },
               }}
             >
-              <Typography sx={textPos}>{positionDevo}</Typography>
+              <Typography sx={textPos} className={selection.hero}>
+                {positionDevo}
+              </Typography>
               <Box
                 sx={{
                   display: "flex",

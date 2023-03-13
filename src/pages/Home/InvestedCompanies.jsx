@@ -7,6 +7,8 @@ import KhushiImg from "../../assets/Images/InvestedCompanies/Khushi.png";
 import RatnaImg from "../../assets/Images/InvestedCompanies/ratna.png";
 import MunothImg from "../../assets/Images/InvestedCompanies/munoth.png";
 import Fade from "react-reveal/Fade";
+import selection from "./home.module.css";
+
 const InvestedCompanies = () => {
   return (
     <Box
@@ -39,7 +41,7 @@ const InvestedCompanies = () => {
         }}
       >
         <Fade top duration={1800}>
-          <Typography sx={TextStle}>
+          <Typography sx={TextStle} className={selection.hero}>
             Company that Invested & Trusted us.
           </Typography>
         </Fade>

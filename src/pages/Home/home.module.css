@@ -1,0 +1,24 @@
+.hero::selection {
+    color: black;
+    background: #fff;
+}
+.zero::selection {
+    color: #fff;
+    background: black;
+} 
+
+/* ::selection {
+    color: white;
+    background: black;
+} */
+
+.invert::selection {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  background: black;
+}
+.invert::selection {
+  -webkit-text-fill-color: black;
+  color:black;
+  background: white;
+}

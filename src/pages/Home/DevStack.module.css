@@ -3,9 +3,16 @@
   border-color: black;
   transition: 1s;
 }
-/* .Text {
-  color: red;
-} */
+.Text::selection {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  background: black;
+}
+.DevStackPaper::selection {
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+  background: black;
+}
 
 .DevStackPaper:hover .Text {
   color: black;

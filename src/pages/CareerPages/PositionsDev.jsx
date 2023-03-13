@@ -7,6 +7,8 @@ import positionTitle from "../../assets/images/new/position.png";
 import { useNavigate } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import axios from "axios";
+import selection from "../../pages/Home/home.module.css";
+
 const PositionsDev = () => {
   const [JobData, setJobData] = useState();
   const navigate = useNavigate();
@@ -93,7 +95,10 @@ const PositionsDev = () => {
             }}
           >
             <Fade top duration={1800}>
-              <Typography sx={{ ...textStyle1, color: "#fff" }}>
+              <Typography
+                sx={{ ...textStyle1, color: "#fff" }}
+                className={selection.hero}
+              >
                 Open
               </Typography>
               <Typography
@@ -107,6 +112,7 @@ const PositionsDev = () => {
                   textFillColor: "transparent",
                   // textAlign: "center",
                 }}
+                className={selection.invert}
               >
                 Positions
               </Typography>
@@ -120,7 +126,7 @@ const PositionsDev = () => {
             style={{ marginLeft: "-120px" }}
             draggable="false"
           /> */}
-          <Typography sx={{ ...subText, mt: 2 }}>
+          <Typography sx={{ ...subText, mt: 2 }} className={selection.hero}>
             Didn’t find any suitable role, but you believe we should have you?
             Get in touch as we’d love to connect.
           </Typography>
