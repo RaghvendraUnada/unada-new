@@ -33,7 +33,7 @@ import clipboard from "../../assets/Images/Career/clipboard.svg";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-// import location from "../../assets/Images/Career/location.svg";
+import locationContact from "../../assets/Images/Career/locationContact.svg";
 import whatsappiucon from "../../assets/Images/Career/whatsappiucon.svg";
 import cross from "../../assets/Images/Career/cross.svg";
 import { Link, useLocation } from "react-router-dom";
@@ -344,7 +344,8 @@ export default function ChatUs(props) {
                       }}
                     >
                       <img
-                        src={location}
+                        src={locationContact}
+                        alt="loc"
                         style={{ width: "auto", height: "auto" }}
                       />
                     </Box>

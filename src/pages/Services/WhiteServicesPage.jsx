@@ -522,6 +522,7 @@ const paperStyle = {
     opacity: 1,
     background: "rgba(29, 29, 29, 0.12)",
   },
+  cursor: "pointer",
   //   bord,
 };
 const inActiveboxStyle = {
