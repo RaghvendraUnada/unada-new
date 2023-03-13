@@ -71,7 +71,7 @@
   font-size: 60px;
   line-height: 72px;
   // background: url(`../../../../assets/Images/grident.png);
-  background: url(`../../../../assets//Images/gridentFixMid.png);
+  background: url(`../../../../assets//Images/newGrident.svg);
   // background: linear-gradient(
   //   to right,
   //   rgba(201, 75, 234, 1) 0%,
@@ -90,6 +90,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  // background-repeat: repeat-x;
 }
 .Text:hover .navbarListTextActive {
   font-family: "JekoNormal";

@@ -351,12 +351,6 @@ const MainHeroPage = () => {
               }}
             >
               {HeaderArray.map((res, idx) => {
-                console.log(
-                  location === res.location,
-                  "-------> location",
-                  location,
-                  res.location
-                );
                 return (
                   <Link
                     onClick={() => {
@@ -384,7 +378,7 @@ const MainHeroPage = () => {
                         textAlign: "left",
                         height: "100px",
                         pt: 1,
-                        ...colorBoxGradientStyle,
+                        // ...colorBoxGradientStyle,
                       }}
                       className={
                         location === res.location
@@ -409,13 +403,13 @@ const MainHeroPage = () => {
                               sm: "35px",
                               xs: "35px",
                             },
-                            // "&:hover": {
-                            backgroundImage: `url(${GradientImage})`,
-                            backgroundRepeat: "repeat",
-                            backgroundClip: "text",
-                            textFillColor: "transparent",
-                            backgroundSize: "cover",
-                            // },
+                            "&:hover": {
+                              backgroundImage: `url(${GradientImage})`,
+                              backgroundRepeat: "repeat",
+                              backgroundClip: "text",
+                              textFillColor: "transparent",
+                              backgroundSize: "cover",
+                            },
                             textAlign: "left",
                             height: "100%",
                           }}

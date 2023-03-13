@@ -29,7 +29,7 @@ import Slide from "@mui/material/Slide";
 import Uploadimg from "../assets/uploadicon.svg";
 import axios from "axios";
 import { json } from "react-router-dom";
-
+import vertical from "./vertical.module.css";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -343,7 +343,40 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   />
                 </span>
               </Button> */}
-              <Button disableRipple sx={ButtonStyle1} onClick={handleClickOpen}>
+              <Box
+                onClick={handleClickOpen}
+                sx={ButtonStyle1}
+                className={vertical.item}
+              >
+                Apply
+                <EastSharpIcon
+                  // fontSize="small"
+                  className={vertical.btn}
+                  sx={{
+                    p: 0.3,
+                    ml: 3,
+                    // color: icon1 ? "black" : "#fff",
+                    fontSize: "20px",
+                    borderRadius: "20px",
+                    border: "1px solid white",
+                    zIndex: 1,
+                    opacity: 0.5,
+                    "&:focus": {
+                      opacity: 1,
+                      color: "white",
+                      fontSize: "25px",
+                      border: "1px solid red",
+                    },
+                    // "&:hover": {
+                    //   opacity: 1,
+                    //   color: "white",
+                    //   fontSize: "25px",
+                    //   border: "1px solid red",
+                    // },
+                  }}
+                />
+              </Box>
+              {/* <Button disableRipple sx={ButtonStyle1} onClick={handleClickOpen}>
                 Apply
                 <span
                   style={{
@@ -377,7 +410,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     }}
                   />
                 </span>
-              </Button>
+              </Button> */}
             </Grid>
           </Grid>
         </Box>
@@ -1102,6 +1135,7 @@ const ButtonStyle = {
   },
 };
 const ButtonStyle1 = {
+  cursor: "pointer",
   textTransform: "capitalize",
   fontFamily: "LGLight",
   fontStyle: "normal",
@@ -1114,8 +1148,8 @@ const ButtonStyle1 = {
     xs: "8px",
   },
   padding: {
-    xl: "0.8rem 5.5rem",
-    lg: "0.8rem 5.5rem",
+    xl: "1rem 5.8rem",
+    lg: "1rem 5.8rem",
     md: "0.8rem 5.5rem",
     sm: "0.8rem 5.5rem",
     xs: "0.8rem 5.5rem",
@@ -1128,41 +1162,21 @@ const ButtonStyle1 = {
   borderRadius: "30px",
   border: "2px rgba(255, 255, 255, 1) solid",
   color: "rgba(255, 255, 255, 1)",
-  // marginTop: {
-  //   xl: "2rem",
-  //   lg: "2rem",
-  //   md: "2rem",
-  //   sm: "-2rem",
-  //   xs: "-2rem",
-  // },
+
   opacity: 0.8,
-  transition: "0.3s all linear",
+
   "&:hover": {
     opacity: 1,
-    // color: "black",
-    // bgcolor: "white",
-    // fontSize: {
-    //   xl: "17px",
-    //   lg: "17px",
-    //   md: "14px",
-    //   sm: "10px",
-    //   xs: "10px",
-    // },
+    color: "black",
+    bgcolor: "white",
     scale: 1,
-    transform: "scale(1.1)",
   },
-  // "&:focus": {
-  //   opacity: 1,
-  //   color: "white",
-  //   bgcolor: "white",
-  //   fontSize: {
-  //     xl: "17px",
-  //     lg: "17px",
-  //     md: "14px",
-  //     sm: "10px",
-  //     xs: "10px",
-  //   },
-  // },
+  "&:active": {
+    opacity: 1,
+    color: "black",
+    bgcolor: "white",
+    scale: 1,
+  },
 };
 
 const textPos = {
