@@ -795,7 +795,9 @@ function App() {
               </Paper>
             ) : null}
 
-            {!open ? <AnimatedRoutes setColorState={setColorState} /> : null}
+            {!open || location === "/" ? (
+              <AnimatedRoutes setColorState={setColorState} />
+            ) : null}
             {/* </BrowserRouter> */}
           </Box>
 

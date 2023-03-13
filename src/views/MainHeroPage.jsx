@@ -302,19 +302,19 @@ const MainHeroPage = () => {
               }}
               elevation={0}
             >
-              <Link
+              {/* <Link
                 to={"/"}
                 style={{
                   textDecoration: "none",
                 }}
-              >
-                <img
-                  src={Logo}
-                  width="40px"
-                  height={"auto"}
-                  style={{ marginTop: "30px" }}
-                />
-              </Link>
+              > */}
+              <img
+                src={Logo}
+                width="40px"
+                height={"auto"}
+                style={{ marginTop: "30px" }}
+              />
+              {/* </Link> */}
 
               <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
                 Close
