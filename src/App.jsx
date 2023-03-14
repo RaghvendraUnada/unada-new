@@ -747,7 +747,13 @@ function App() {
                               },
                               fontFamily: "JekoNormal",
                               textAlign: "left",
-                              height: "100px",
+                              height: {
+                                xl: "100px",
+                                lg: "100px",
+                                md: "100px",
+                                sm: "60px",
+                                xs: "60px",
+                              },
                               pt: 1,
                               // ...colorBoxGradientStyle,
                             }}
@@ -811,14 +817,6 @@ function App() {
                                     backgroundClip: "text",
                                     textFillColor: "transparent",
                                     backgroundSize: "cover",
-
-                                    fontSize: {
-                                      xl: "56px",
-                                      lg: "56px",
-                                      md: "35px",
-                                      sm: "25px",
-                                      xs: "20px",
-                                    },
                                   },
                                   textAlign: "left",
                                   height: "100%",

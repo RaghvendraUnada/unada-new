@@ -447,13 +447,6 @@ const MainHeroPage = () => {
                               backgroundClip: "text",
                               textFillColor: "transparent",
                               backgroundSize: "cover",
-                              fontSize: {
-                                xl: "55.5px",
-                                lg: "55.5px",
-                                md: "35px",
-                                sm: "25px",
-                                xs: "20px",
-                              },
                             },
                             textAlign: "left",
                             height: "100%",
