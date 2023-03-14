@@ -105,16 +105,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     setFile("");
     setCoverLetter("");
     alert("data submitted");
-    console.log(
-      firstName,
-      lastName,
-      email,
-      experience,
-      skill,
-      linkedin,
-      file,
-      coverLetter
-    );
+
     // const data = {
     //   UserFirstName: firstName,
     //   UserLastName: lastName,
@@ -169,22 +160,13 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       .catch((error) => console.log("error", error));
   };
 
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState();
+
   const [data, setData] = useState([
-    { name: "Html" },
-    { name: "Css" },
-    { name: "Javascript" },
+    // { name: "Html" },
+    // { name: "Css" },
+    // { name: "Javascript" },
   ]);
-  const filterData = () => {
-    const filteredData = data.filter((item) => {
-      return Object.values(item)
-        .join(" ")
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
-    });
-    return filteredData;
-  };
-  // const [searchQuery, setSearchQuery] = useState("");
   const listOfSkill = [
     {
       id: 1,
@@ -215,16 +197,34 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     //   skillName: "MongoDB",
     // },
   ];
+
+  var newSkills = "";
+
+  const filterData = () => {
+    const filteredData = listOfSkill.filter((item) => {
+      if (item?.SkillName?.toLowerCase().includes(searchQuery?.toLowerCase())) {
+        return item?.SkillName;
+      }
+    });
+    return filteredData;
+  };
+
+  useEffect(() => {
+    filterData();
+  }, [searchQuery]);
+  // const [searchQuery, setSearchQuery] = useState("");
+
   const [selectedSkill, setSelectedSkill] = useState([]);
 
   async function StoreSelectedSkill(props) {
-    console.log("=====", props);
     const isSkillSelected = selectedSkill.includes(props);
     if (isSkillSelected) {
       const newSelectedSkill = selectedSkill.filter((skill) => skill !== props);
       setSelectedSkill(newSelectedSkill);
+      setSearchQuery("");
     } else {
       setSelectedSkill([...selectedSkill, props]);
+      setSearchQuery("");
     }
   }
 
@@ -241,17 +241,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   // console.log(listOfSkill, selectedSkill);
 
   useEffect(() => {
-    console.log(selectedSkill);
-    listOfSkill.includes(selectedSkill)
-      ? console.log("hey")
-      : console.log("no");
+    listOfSkill.includes(selectedSkill);
   }, [selectedSkill]);
 
   let SkillData = [];
-
-  useEffect(() => {
-    console.log(SkillData);
-  }, []);
 
   return (
     <>
@@ -688,70 +681,72 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     style={{ color: "#fff", border: "none" }}
                   />
                   <Box sx={{ display: "flex", gap: "10px" }}>
-                    {filterData().map((item) => {
-                      return (
-                        <>
-                          <Box
-                            sx={{
-                              border: "2px solid grey",
-                              borderRadius: {
-                                xl: "30px",
-                                lg: "30px",
-                                md: "30px",
-                                sm: "15px",
-                                xs: "15px",
-                              },
-                              width: "auto",
-                              p: 0.5,
-                              height: "auto",
-                              color: "#fff",
-                              textAlign: "center",
-                              // p: 1,
-                              mb: 1,
-                              display: "flex",
-                              justifyContent: "center",
-                              gap: "20px",
-                              // position: "relative",
-                              ml: 1,
-                            }}
-                          >
-                            <Box
-                              sx={{
-                                display: "flex",
-                                gap: "4px",
-                                justifyContent: "space-around",
-                                p: 0.2,
-                                // bgcolor: "red",
-                              }}
-                            >
-                              <Typography
+                    {searchQuery
+                      ? filterData().map((item) => {
+                          return (
+                            <>
+                              <Box
                                 sx={{
-                                  ...skillText,
+                                  border: "2px solid grey",
+                                  borderRadius: {
+                                    xl: "30px",
+                                    lg: "30px",
+                                    md: "30px",
+                                    sm: "15px",
+                                    xs: "15px",
+                                  },
+                                  width: "auto",
+                                  p: 0.5,
+                                  height: "auto",
                                   color: "#fff",
-                                  fontSize: "1.2rem",
+                                  textAlign: "center",
+                                  // p: 1,
+                                  mb: 1,
+                                  display: "flex",
+                                  justifyContent: "center",
+                                  gap: "20px",
+                                  // position: "relative",
+                                  ml: 1,
+                                }}
+                                onClick={() => {
+                                  StoreSelectedSkill(item.SkillName);
                                 }}
                               >
-                                <div key={item.name}>
-                                  {item.name}
-                                  {item.age}
-                                </div>
-                              </Typography>
+                                <Box
+                                  sx={{
+                                    display: "flex",
+                                    gap: "4px",
+                                    justifyContent: "space-around",
+                                    p: 0.2,
+                                    // bgcolor: "red",
+                                  }}
+                                >
+                                  <Typography
+                                    sx={{
+                                      ...skillText,
+                                      color: "#fff",
+                                      fontSize: "1.2rem",
+                                    }}
+                                  >
+                                    <div key={item}>{item.SkillName}</div>
+                                  </Typography>
 
-                              <CloseIcon
-                                onClick={() => removeElement(idx)}
-                                sx={{
-                                  color: "white",
-                                  mt: 0.2,
-                                  fontSize: "15px",
-                                  textAlign: "left",
-                                  cursor: "pointer",
-                                }}
-                              />
-                            </Box>
-                          </Box>
-                        </>
-                      );
-                    })}
+                                  {/* <CloseIcon
+                                    onClick={() => removeElement(idx)}
+                                    sx={{
+                                      color: "white",
+                                      mt: 0.2,
+                                      fontSize: "15px",
+                                      textAlign: "left",
+                                      cursor: "pointer",
+                                    }}
+                                  /> */}
+                                </Box>
+                              </Box>
+                            </>
+                          );
+                        })
+                      : null}
                   </Box>
                   {/* <Box
                     sx={{
@@ -1097,7 +1092,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       // onDrag={handleDragOver}
                       // onDrop={handleDrop}
                       onClick={() => {
-                        console.log(uploadFileRef2);
                         uploadFileRef2.current.click();
                       }}
                       onChange={(e) => {
