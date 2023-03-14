@@ -100,13 +100,13 @@ const HeroIntro = () => {
           />
         ) : null} */}
         {/* <Fade top duration={1500}> */}
-        <Typography sx={TextStyle} ref={ref} className={selection.hero}>
-          We build and use <br className={selection.hero} />
-          <span style={{ color: "#70ADFF" }} className={selection.hero}>
+        <Typography sx={TextStyle} ref={ref} className={selection.invert2}>
+          We build and use <br className={selection.invert2} />
+          <span style={{ color: "#70ADFF" }} className={selection.invert2}>
             technologies to disrupt industries
           </span>
           &nbsp;and drive progress. Our mission is{" "}
-          <br className={selection.hero} />
+          <br className={selection.invert2} />
           to reshape the future.
         </Typography>
         {/* </Fade> */}

@@ -97,7 +97,7 @@ const PositionsDev = () => {
             <Fade top duration={1800}>
               <Typography
                 sx={{ ...textStyle1, color: "#fff" }}
-                className={selection.hero}
+                className={selection.invert2}
               >
                 Open
               </Typography>
@@ -126,7 +126,7 @@ const PositionsDev = () => {
             style={{ marginLeft: "-120px" }}
             draggable="false"
           /> */}
-          <Typography sx={{ ...subText, mt: 2 }} className={selection.hero}>
+          <Typography sx={{ ...subText, mt: 2 }} className={selection.invert2}>
             Didn’t find any suitable role, but you believe we should have you?
             Get in touch as we’d love to connect.
           </Typography>

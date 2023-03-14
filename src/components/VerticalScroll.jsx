@@ -279,7 +279,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 },
               }}
             >
-              <Typography sx={textPos} className={selection.hero}>
+              <Typography sx={textPos} className={selection.invert2}>
                 {positionDevo}
               </Typography>
               <Box

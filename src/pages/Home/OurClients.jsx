@@ -31,11 +31,11 @@ const OurClients = () => {
         }}
       >
         <Fade top duration={1500}>
-          <Typography sx={ParentTextStyle} className={selection.hero}>
+          <Typography sx={ParentTextStyle} className={selection.invert2}>
             Our Clients
           </Typography>
         </Fade>
-        <Typography sx={ChildTextStyle} className={selection.hero}>
+        <Typography sx={ChildTextStyle} className={selection.invert2}>
           We integrate with the tools you love. So you'll be that much more
           efficient when hiring your crew for your next mission to space.
         </Typography>

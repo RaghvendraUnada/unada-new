@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Paper, Typography, Box } from "@mui/material";
 import BlackTHeroComp from "../../Components/BlackTHeroComp";
 import MetaVerseHeroImg from "../../assets/Images/MetaVerse/MetaverseHeroImg.svg";
+import "./metaverse.module.css";
 const MetaVerseHero = () => {
   return (
     // <Grid
