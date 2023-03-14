@@ -2,6 +2,29 @@ import React from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
 import culture1 from "../../assets/Images/Career/realCulture/culture1.jpg";
 import culture2 from "../../assets/Images/Career/realCulture/culture2.jpg";
+import culture3 from "../../assets/Images/Career/realCulture/culture3.jpg";
+// import culture4 from "../../assets/Images/Career/realCulture/culture4.jpg";
+import culture5 from "../../assets/Images/Career/realCulture/culture5.jpg";
+import culture6 from "../../assets/Images/Career/realCulture/culture6.jpg";
+import culture7 from "../../assets/Images/Career/realCulture/culture7.jpg";
+import culture8 from "../../assets/Images/Career/realCulture/culture8.jpg";
+import culture9 from "../../assets/Images/Career/realCulture/culture9.jpg";
+import culture10 from "../../assets/Images/Career/realCulture/culture10.jpg";
+import culture11 from "../../assets/Images/Career/realCulture/culture11.jpg";
+import culture12 from "../../assets/Images/Career/realCulture/culture12.jpg";
+import culture13 from "../../assets/Images/Career/realCulture/culture13.jpg";
+import culture14 from "../../assets/Images/Career/realCulture/culture14.jpg";
+import culture15 from "../../assets/Images/Career/realCulture/culture15.jpg";
+import culture16 from "../../assets/Images/Career/realCulture/culture16.jpg";
+import culture17 from "../../assets/Images/Career/realCulture/culture17.jpg";
+import culture18 from "../../assets/Images/Career/realCulture/culture18.jpg";
+import culture19 from "../../assets/Images/Career/realCulture/culture19.jpg";
+import culture20 from "../../assets/Images/Career/realCulture/culture20.jpg";
+import culture21 from "../../assets/Images/Career/realCulture/culture21.jpg";
+import culture22 from "../../assets/Images/Career/realCulture/culture22.jpg";
+import culture23 from "../../assets/Images/Career/realCulture/culture23.jpg";
+import culture24 from "../../assets/Images/Career/realCulture/culture24.jpg";
+
 import HorizontalScrollingList from "../../Components/Maarquee/HorizontalScrollingList";
 import Marquee from "react-fast-marquee";
 import { keyframes } from "styled-components";
@@ -11,7 +34,32 @@ import selection from "../../pages/Home/home.module.css";
 // import "./OurTeam.module.css";
 import Fade from "react-reveal/Fade";
 const OurCultureSection = () => {
-  const images = [culture1, culture2];
+  const images = [
+    culture1,
+    culture2,
+    culture3,
+    // culture4,
+    culture5,
+    culture6,
+    culture7,
+    culture8,
+    culture9,
+    culture10,
+    culture11,
+    culture12,
+    culture13,
+    culture14,
+    culture15,
+    culture16,
+    culture17,
+    culture18,
+    culture19,
+    culture20,
+    culture21,
+    culture22,
+    culture23,
+    culture24,
+  ];
   return (
     <Grid
       sx={{
@@ -76,7 +124,7 @@ const OurCultureSection = () => {
         >
           <Marquee
             gradient={false}
-            speed={100}
+            speed={20}
             direction={"left"}
             style={{ height: "100%" }}
           >
@@ -94,7 +142,7 @@ const OurCultureSection = () => {
                     src={client}
                     style={{
                       height: "90%",
-                      width: "95%",
+                      width: "98%",
                       marginLeft: "auto",
                       marginRight: "auto",
                     }}

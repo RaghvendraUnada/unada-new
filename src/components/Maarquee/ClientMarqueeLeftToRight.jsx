@@ -11,6 +11,7 @@ import Pots from "../../assets/images/clients/pots-white.svg";
 import Strategic from "../../assets/images/clients/strategic-white.svg";
 import Unispace from "../../assets/images/clients/unispace-white.svg";
 import WhiteValley from "../../assets/images/clients/white-valley-white.svg";
+import oho from "../../assets/images/clients/ohoclient.svg";
 import ClientBox from "../ClientBox";
 const clients = [
   { image: Bxi },
@@ -24,6 +25,7 @@ const clients = [
   { image: Strategic },
   { image: Unispace },
   { image: WhiteValley },
+  { image: oho },
 ];
 
 const RandomFirstList = [...clients].sort(() => Math.random() - 0.6);
@@ -33,7 +35,7 @@ const RandomThirdList = [...clients].sort(() => Math.random() - 0.6);
 const ClientMarqueeLeftToRight = (props) => {
   // console.log("props", props);
   return (
-    <HorizontalScrollingList> 
+    <HorizontalScrollingList>
       {clients.map((client, idx) => {
         return <ClientBox key={idx} image={client.image} />;
       })}
