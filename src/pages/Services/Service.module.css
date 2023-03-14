@@ -42,3 +42,9 @@
   background-color: black;
   border: 1px solid white;
 }
+
+::selection {
+  -webkit-text-fill-color:white;
+  color:white;
+  background: black;
+}

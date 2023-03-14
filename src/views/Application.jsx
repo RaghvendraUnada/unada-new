@@ -14,6 +14,8 @@ const data = ["Media & Entertainment", "Retail"];
 const data1 = ["Fintech", "Warehousing & Logistics", "Healthcare"];
 const Tech = [android, java, kotlin, react, flutter, swift];
 import { motion } from "framer-motion";
+import "../pages/Services/whiteservice.module.css";
+
 const Application = () => {
   return (
     <motion.div

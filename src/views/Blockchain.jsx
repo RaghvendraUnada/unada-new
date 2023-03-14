@@ -5,6 +5,8 @@ import BlockchainHero from "../pages/BlockchainPage/BlockchainHero";
 import BlockchainIntro from "../pages/BlockchainPage/BlockchainIntro";
 import MetaverseMarquee from "../pages/MetaVerse/MetaverseMarquee";
 import { motion } from "framer-motion";
+import "../pages/MetaVerse/metaverse.module.css";
+
 const Blockchain = () => {
   return (
     <>

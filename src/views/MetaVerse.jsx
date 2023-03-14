@@ -8,6 +8,7 @@ import MetaVerseIntro from "../pages/MetaVerse/MetaVerseIntro";
 import MetaverseMarquee from "../pages/MetaVerse/MetaverseMarquee";
 import Slider3dNew from "../Components/Slider3dNew";
 import { motion } from "framer-motion";
+import "../pages/MetaVerse/metaverse.module.css";
 
 const MetaVerse = () => {
   return (

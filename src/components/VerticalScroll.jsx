@@ -88,8 +88,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [coverLetter, setCoverLetter] = useState();
   const uploadFileRef = useRef();
   const uploadFileRef2 = useRef();
-  const [icon1, setIcon1] = useState(false);
-  // const [border, setBorder] = useState("false");
+  const [icon1, setIcon1] = useState("white");
+  const [border, setBorder] = useState("white");
   const [focus, setFocus] = useState(false);
 
   // const [state,setState] = useState()
@@ -302,118 +302,35 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 },
                 marginTop: "0.5rem",
               }}
+              className={selection.zero}
             >
-              {/* <Button
-                disableRipple
-                sx={ButtonStyle1}
-                onClick={handleClickOpen}
-                onMouseOut={() => {
-                  setIcon1(false);
-                }}
-                onMouseOver={() => {
-                  setIcon1(true);
-                }}
-              >
-                Apply
-                <span
-                  style={{
-                    height: "35px",
-                    width: "35px",
-                    backgroundColor: "transparent",
-                    borderRadius: "50%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    marginLeft: "18px",
-                  }}
-                  onClick={() => {
-                    setOpen(true);
-                  }}
-                >
-                  <EastSharpIcon
-                    fontSize="small"
-                    sx={{
-                      p: 0.3,
-                      color: icon1 ? "black" : "#fff",
-                      fontSize: "20px",
-                      borderRadius: "20px",
-                      border: icon1 ? "1px solid black" : "1px solid #fff",
-                      "&:focus": {
-                        opacity: 1,
-                        color: "white",
-                      },
-                    }}
-                  />
-                </span>
-              </Button> */}
               <Box
                 onClick={handleClickOpen}
                 sx={ButtonStyle1}
-                className={vertical.item}
+                onMouseOut={() => {
+                  setIcon1("white");
+                  setBorder("white");
+                }}
+                onMouseOver={() => {
+                  setIcon1("black");
+                  setBorder("black");
+                }}
               >
                 Apply
                 <EastSharpIcon
-                  // fontSize="small"
-                  className={vertical.btn}
+                  fontSize="small"
                   sx={{
                     p: 0.3,
                     ml: 3,
-                    // color: icon1 ? "black" : "#fff",
+                    color: icon1,
                     fontSize: "20px",
                     borderRadius: "20px",
-                    border: "1px solid white",
+                    border: `1px solid ${border}`,
                     zIndex: 1,
                     opacity: 0.5,
-                    "&:focus": {
-                      opacity: 1,
-                      color: "white",
-                      fontSize: "25px",
-                      border: "1px solid red",
-                    },
-                    // "&:hover": {
-                    //   opacity: 1,
-                    //   color: "white",
-                    //   fontSize: "25px",
-                    //   border: "1px solid red",
-                    // },
                   }}
                 />
               </Box>
-              {/* <Button disableRipple sx={ButtonStyle1} onClick={handleClickOpen}>
-                Apply
-                <span
-                  style={{
-                    height: "35px",
-                    width: "35px",
-                    backgroundColor: "transparent",
-                    borderRadius: "50%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    marginLeft: "18px",
-                  }}
-                  onClick={() => {
-                    setOpen(true);
-                  }}
-                >
-                  <EastSharpIcon
-                    // fontSize="small"
-                    sx={{
-                      p: 0.3,
-                      // color: icon1 ? "black" : "#fff",
-                      fontSize: "20px",
-                      borderRadius: "20px",
-                      border: icon1 ? "1px solid black" : "1px solid #fff",
-                      opacity: 0.5,
-                      "&:focus": {
-                        opacity: 1,
-                        color: "white",
-                        fontSize: "25px",
-                      },
-                    }}
-                  />
-                </span>
-              </Button> */}
             </Grid>
           </Grid>
         </Box>

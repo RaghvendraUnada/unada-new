@@ -4,3 +4,33 @@
 .btn:hover {
   opacity: 1;
 }
+
+.BigArrowImg {
+  scale: 1;
+  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  opacity: 0.5;
+  border: 1px solid #FFFFFF;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+}
+.BigArrowImg:hover {
+  scale: 1.1;
+  opacity: 1;
+  background-color: white;
+  border: 1px solid black;
+}
+.BigArrow:hover .BigArrowImg{
+  scale: 1.1;
+  opacity: 1;
+  background-color: white;
+  border: 1px solid black;
+}
+
