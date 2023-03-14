@@ -12,6 +12,7 @@ const ContactUsSection = () => {
   let location = useLocation();
   // console.log(location);
   const handleSubmit = async () => {
+    // alert("Thank You!");
     return await axios
       .post("/contact_us/add_contact_data", {
         FirstName: firstname,
@@ -197,9 +198,28 @@ const ContactUsSection = () => {
           </Box>
         </Box>
 
-        <Button sx={ButtonStyle1} onClick={handleSubmit}>
-          Submit
-        </Button>
+        <Box sx={ButtonStyle1} onClick={handleSubmit}>
+          <Button
+            sx={{
+              textAlign: "center",
+              width: "100%",
+              borderRadius: "30px",
+              color: "#000",
+              fontSize: {
+                xl: "15px",
+                lg: "15px",
+                md: "12px",
+                sm: "8px",
+                xs: "8px",
+              },
+              "&:hover": {
+                color: "#fff",
+              },
+            }}
+          >
+            Submit
+          </Button>
+        </Box>
       </Box>
     </Grid>
   );
@@ -259,6 +279,7 @@ const box = {
 };
 
 const ButtonStyle1 = {
+  textAlign: "center",
   fontFamily: "LGLight",
   fontStyle: "normal",
   fontWeight: 500,

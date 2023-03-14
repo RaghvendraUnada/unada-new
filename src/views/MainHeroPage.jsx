@@ -351,6 +351,7 @@ const MainHeroPage = () => {
               }}
             >
               {HeaderArray.map((res, idx) => {
+                console.log(location === res.location, "------->");
                 return (
                   <Link
                     onClick={() => {
@@ -376,7 +377,13 @@ const MainHeroPage = () => {
                         },
                         fontFamily: "JekoNormal",
                         textAlign: "left",
-                        height: "100px",
+                        height: {
+                          xl: "100px",
+                          lg: "100px",
+                          md: "100px",
+                          sm: "60px",
+                          xs: "60px",
+                        },
                         pt: 1,
                         // ...colorBoxGradientStyle,
                       }}
