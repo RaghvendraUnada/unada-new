@@ -126,8 +126,25 @@ const HeroPage = ({
                 },
               }}
             >
+              <Box sx={ButtonStyle1} onClick={handleClicks}>
+                <Button
+                  sx={{
+                    color: "#fff",
+                    bgColor: "blue",
+                    borderRadius: "9rem",
+                    fontSize: "1.7rem",
+                    padding: "1.1rem 4.6rem",
+                    fontWeight: 500,
+                    fontFamily: "LGLight",
+                    textTransform: "capitalize",
+                    // "&:focus": { color: "black" },
+                  }}
+                >
+                  Get started
+                </Button>
+              </Box>
               {/* <a href="/contact/#section"> */}
-              <Button
+              {/* <Button
                 onClick={handleClicks}
                 variant="contained"
                 onFocusVisible
@@ -142,16 +159,12 @@ const HeroPage = ({
                   "&:hover": {
                     fontSize: "1.75rem",
                   },
-                  // "&.Mui-focused": {
-                  //   backgroundColor: "#1565c0",
-                  //   color: "#000",
-                  // },
                   "&:focus": { color: "black" },
                 }}
               >
                 Get Started
-              </Button>
-              {/* </a> */}
+              </Button> */}
+
               {/* <button
                 onClick={handleClick}
                 style={{
@@ -460,6 +473,33 @@ const MetaTextStyle = {
     sm: "rotate(0deg)",
     xs: "rotate(0deg)",
   },
+};
+
+const ButtonStyle1 = {
+  textAlign: "center",
+  fontFamily: "LGLight",
+  fontStyle: "normal",
+  fontWeight: 500,
+  fontSize: {
+    xl: "15px",
+    lg: "15px",
+    md: "12px",
+    sm: "8px",
+    xs: "8px",
+  },
+  width: "100%",
+  color: "#fff",
+  // background: "transparent",
+  display: "flex",
+  alignItems: "center",
+  borderRadius: "30px",
+  border: "0px black solid",
+  background: "rgba(13, 110, 253, 1)",
+  // "&:hover": {
+  //   opacity: 1,
+  //   color: "#fff",
+  //   background: "black",
+  // },
 };
 
 const mainText = {
