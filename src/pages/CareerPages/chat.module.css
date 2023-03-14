@@ -1,0 +1,15 @@
+::selection {
+    -webkit-text-fill-color: #fff;
+    color: #fff;
+    background: black;
+}
+
+.hero::selection {
+    color: black;
+    background: #fff;
+}
+
+.zero::selection {
+    color: #fff;
+    background: black;
+}

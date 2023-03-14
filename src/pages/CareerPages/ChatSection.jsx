@@ -19,6 +19,9 @@ import instagramblk from "../../assets/Images/Career/instagramblack.svg";
 import linkedinblk from "../../assets/Images/Career/linkdinblack.svg";
 import youtubeblk from "../../assets/Images/Career/youtubeblack.svg";
 import Fade from "react-reveal/Fade";
+import selection from "./chat.module.css";
+import "./chat.module.css";
+
 const ChatSection = () => {
   const [youtubestate, setyoutubestate] = useState(youtubeblk);
   const [instastate, setinstastate] = useState(instagramblk);

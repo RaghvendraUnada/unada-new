@@ -131,7 +131,7 @@ const StoriesAtUnadaSection = () => {
                   backgroundClip: "text",
                   textFillColor: "transparent",
                 }}
-                className={selection.invert}
+                className={selection.invert2}
               >
                 Unada
               </Typography>
