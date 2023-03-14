@@ -12,6 +12,8 @@ import pronew from "../assets/Images/UIUX/pronew.svg";
 import ui from "../assets/Images/UIUX/ui.svg";
 import ps from "../assets/Images/UIUX/ps.svg";
 import TechStack from "../pages/Application/TechStack";
+import "../pages/Services/whiteservice.module.css";
+
 const data1 = ["Branding", "Gaming", "Fintech", "E-Commerce"];
 const data = ["Social Media Agencies", "Healthcare", "Fashion"];
 const Tech = [adobe, ai, figmanew, pronew, ps];

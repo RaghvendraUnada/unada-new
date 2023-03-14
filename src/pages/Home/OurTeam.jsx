@@ -288,13 +288,17 @@ const EmployeeCard1 = (props) => {
           mx: "auto",
         }}
       >
-        <img src={TeamImgOne} style={{ width: "100%", height: "100%" }} />
-        <Typography sx={TeamNameTextStyle}>
+        <img
+          src={TeamImgOne}
+          style={{ width: "100%", height: "100%" }}
+          className={selection.zero}
+        />
+        <Typography sx={TeamNameTextStyle} className={selection.zero}>
           {props?.data?.TeamMemberName
             ? props?.data?.TeamMemberName
             : "Lorem Ipsum"}
         </Typography>
-        <Typography sx={TeamProfessionTextStyle}>
+        <Typography sx={TeamProfessionTextStyle} className={selection.zero}>
           {props?.data?.TeamMemberPosition
             ? props?.data?.TeamMemberPosition
             : "Lorem Ipsum"}

@@ -14,6 +14,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import Fade from "react-reveal/Fade";
+import "./whiteservice.module.css";
 const WhiteServicesPage = () => {
   const navigate = useNavigate();
   const [paper1, setPaper1] = useState(true);

@@ -8,7 +8,7 @@ import storiesTitle from "../../assets/images/new/stories.png";
 import Slider from "react-slick";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import Fade from "react-reveal/Fade";
-import selection from "../../pages/Home/home.module.css";
+import selection from "./chat.module.css";
 
 const ImgArr = [
   UnadaStoryImg,

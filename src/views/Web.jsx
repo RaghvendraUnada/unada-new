@@ -13,6 +13,8 @@ import mongodb from "../assets/Images/web/mongodb.svg";
 import javascript from "../assets/Images/Web/javascript.svg";
 import mysql from "../assets/Images/Web/mysql.svg";
 import nodejs from "../assets/Images/Web/nodejs.svg";
+import "../pages/Services/whiteservice.module.css";
+
 // import
 const data1 = ["Manufacturing", "Warehousing", "Online Publishing", "Fintech"];
 const data = [

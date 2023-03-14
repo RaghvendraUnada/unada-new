@@ -5,6 +5,8 @@ import ArVrIntro from "../pages/ArVrPage/ArVrIntro";
 import MetaVersePreviousProjects from "../pages/MetaVerse/MetaVersePreviousProjects";
 import MetaverseMarquee from "../pages/MetaVerse/MetaverseMarquee";
 import { motion } from "framer-motion";
+import "../pages/MetaVerse/metaverse.module.css";
+
 const ArVr = () => {
   return (
     <motion.div
