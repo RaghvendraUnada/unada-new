@@ -126,7 +126,7 @@ function CareerIntroSection() {
           },
         }}
       >
-        <Typography sx={IntroMainText} className={selection.hero}>
+        <Typography sx={IntroMainText} className={selection.invert2}>
           We believe in building the future, one line of code at a time. We are
           looking for people who are voraciously curious and who are willing to
           confront challenges. At Unada, no two days are the same. We have gone
@@ -135,7 +135,7 @@ function CareerIntroSection() {
         </Typography>
         <Typography
           sx={{ ...IntroMainText, marginTop: "0rem" }}
-          className={selection.hero}
+          className={selection.invert2}
         >
           Be it spending time on a Saturday morning while playing cricket
           thinking about how Metaverse could transform the IPL. Or spending

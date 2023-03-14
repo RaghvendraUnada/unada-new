@@ -41,7 +41,7 @@ const InvestedCompanies = () => {
         }}
       >
         <Fade top duration={1800}>
-          <Typography sx={TextStle} className={selection.hero}>
+          <Typography sx={TextStle} className={selection.invert2}>
             Company that Invested & Trusted us.
           </Typography>
         </Fade>

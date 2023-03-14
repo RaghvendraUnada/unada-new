@@ -14,7 +14,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import Fade from "react-reveal/Fade";
-import "./whiteservice.module.css";
+import selection from "./whiteservice.module.css";
 const WhiteServicesPage = () => {
   const navigate = useNavigate();
   const [paper1, setPaper1] = useState(true);
@@ -27,6 +27,7 @@ const WhiteServicesPage = () => {
     <Paper
       elevation={0}
       sx={{ bgcolor: "white", borderRadius: "0px", minHeight: "100vh" }}
+      className={selection.invert3}
     >
       <motion.div
         initial={{ width: "100%", opacity: 0 }}

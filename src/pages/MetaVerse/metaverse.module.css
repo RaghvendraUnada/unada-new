@@ -1,10 +1,11 @@
-::selection {
-    -webkit-text-fill-color: black;
-    color: black;
-    background: white;
+
+.invert2::selection {
+  -webkit-text-fill-color: black;
+  color:black;
+  background: white;
 }
-/* ::selection {
-    -webkit-text-fill-color: white;
-    color: white;
-    background: ;
-} */
+::selection {
+  -webkit-text-fill-color: black;
+  color:black;
+  background: white;
+}

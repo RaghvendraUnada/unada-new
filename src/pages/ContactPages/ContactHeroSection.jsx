@@ -90,7 +90,7 @@ const ContactHeroSection = () => {
         >
           <Fade top duration={1800}>
             <Stack sx={{ marginTop: {} }}>
-              <Typography sx={contactText} className={selection.hero}>
+              <Typography sx={contactText} className={selection.invert2}>
                 Contact
               </Typography>
             </Stack>

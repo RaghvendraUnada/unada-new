@@ -1,0 +1,5 @@
+.invert::selection {
+    -webkit-text-fill-color:black;
+    color:black;
+    background: white;
+}

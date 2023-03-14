@@ -8,7 +8,7 @@ import storiesTitle from "../../assets/images/new/stories.png";
 import Slider from "react-slick";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import Fade from "react-reveal/Fade";
-import selection from "./chat.module.css";
+import selection from "./selection.module.css";
 
 const ImgArr = [
   UnadaStoryImg,
@@ -116,7 +116,7 @@ const StoriesAtUnadaSection = () => {
                     xs: "30px",
                   },
                 }}
-                className={selection.hero}
+                className={selection.invert2}
               >
                 {" "}
                 Stories at
@@ -137,7 +137,7 @@ const StoriesAtUnadaSection = () => {
               </Typography>
             </Fade>
           </Box>
-          <Typography sx={{ ...MetaText, mt: 2 }} className={selection.hero}>
+          <Typography sx={{ ...MetaText, mt: 2 }} className={selection.invert2}>
             Stories at Unada provide an authentic, unfiltered glimpse into our
             workplace where memories are made, innovations are fostered and
             foremost everyone feels included, valued, respected and are able to

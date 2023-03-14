@@ -141,7 +141,7 @@ export default function SwiperSliderCara(props) {
                 alt="hello"
                 src={slide}
               />
-              <Typography sx={SwiperText} className={selection.hero}>
+              <Typography sx={SwiperText} className={selection.invert2}>
                 Studio 25 Tiktok
               </Typography>
             </Box>
