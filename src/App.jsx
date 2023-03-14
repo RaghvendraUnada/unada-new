@@ -295,7 +295,7 @@ function App() {
                       to={"/"}
                       style={{
                         textDecoration: "none",
-                        marginTop: "5px",
+                        marginTop: "1px",
                       }}
                     >
                       <img
@@ -312,7 +312,7 @@ function App() {
                   </Paper>
                   <List
                     sx={{
-                      py: 5,
+                      py: 3,
                       height: "85vh",
                       overflowY: "scroll",
                       zIndex: 1,
@@ -747,13 +747,7 @@ function App() {
                               },
                               fontFamily: "JekoNormal",
                               textAlign: "left",
-                              height: {
-                                xl: "100px",
-                                lg: "100px",
-                                md: "100px",
-                                sm: "60px",
-                                xs: "60px",
-                              },
+                              height: "100px",
                               pt: 1,
                               // ...colorBoxGradientStyle,
                             }}
@@ -813,13 +807,14 @@ function App() {
                                   },
                                   "&:hover": {
                                     backgroundImage: `url(${GradientImage})`,
-                                    backgroundRepeat: "no-repeat",
+                                    backgroundRepeat: "repeat",
                                     backgroundClip: "text",
                                     textFillColor: "transparent",
                                     backgroundSize: "cover",
+
                                     fontSize: {
-                                      xl: "60px",
-                                      lg: "50px",
+                                      xl: "56px",
+                                      lg: "56px",
                                       md: "35px",
                                       sm: "25px",
                                       xs: "20px",
