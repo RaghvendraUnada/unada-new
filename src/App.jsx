@@ -170,7 +170,7 @@ function App() {
                         )}
                       </Link>
                       {!open ? (
-                        <Button
+                        <Box
                           sx={{
                             ...ButtonStyle,
                             mt: 0.75,
@@ -209,7 +209,7 @@ function App() {
                               className={HeaderStyles.MenuIcon}
                             />
                           )}
-                        </Button>
+                        </Box>
                       ) : (
                         <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
                           {/* <img
@@ -751,8 +751,8 @@ function App() {
                                 xl: "100px",
                                 lg: "100px",
                                 md: "100px",
-                                sm: "60px",
-                                xs: "60px",
+                                sm: "50px",
+                                xs: "50px",
                               },
                               pt: 1,
                               // ...colorBoxGradientStyle,
@@ -830,7 +830,7 @@ function App() {
                         </Link>
                       );
                     })}
-                    <Box sx={{ mt: open ? 2.7 : -2.7 }}>
+                    <Box sx={{ mt: open ? 2.7 : -10.7 }}>
                       <Typography sx={centerMainText}>
                         Innovative Disruption
                       </Typography>
@@ -960,6 +960,7 @@ const ButtonStyle = {
   width: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   zIndex: 6,
+  cursor: "pointer",
   // background: "red",
   "&:hover": {
     bgcolor: "transparent",

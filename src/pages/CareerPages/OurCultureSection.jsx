@@ -1,10 +1,7 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
-import Ourculture from "../../assets/Images/Career/ourculture.svg";
-import Ourculture2 from "../../assets/Images/Career/ourculture2.svg";
-import Ourculture3 from "../../assets/Images/Career/ourculture3.svg";
-import Ourculture4 from "../../assets/Images/Career/ourculture4.svg";
-import Ourculture5 from "../../assets/Images/Career/ourculture5.svg";
+import culture1 from "../../assets/Images/Career/realCulture/culture1.jpg";
+import culture2 from "../../assets/Images/Career/realCulture/culture2.jpg";
 import HorizontalScrollingList from "../../Components/Maarquee/HorizontalScrollingList";
 import Marquee from "react-fast-marquee";
 import { keyframes } from "styled-components";
@@ -14,14 +11,7 @@ import selection from "../../pages/Home/home.module.css";
 // import "./OurTeam.module.css";
 import Fade from "react-reveal/Fade";
 const OurCultureSection = () => {
-  const images = [
-    Ourculture,
-    Ourculture2,
-    Ourculture3,
-    Ourculture,
-    Ourculture2,
-    Ourculture3,
-  ];
+  const images = [culture1, culture2];
   return (
     <Grid
       sx={{
@@ -103,8 +93,8 @@ const OurCultureSection = () => {
                     key={idx}
                     src={client}
                     style={{
-                      height: "100%",
-                      width: "99.5%",
+                      height: "90%",
+                      width: "95%",
                       marginLeft: "auto",
                       marginRight: "auto",
                     }}
