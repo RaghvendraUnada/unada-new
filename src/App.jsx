@@ -817,6 +817,13 @@ function App() {
                                     backgroundClip: "text",
                                     textFillColor: "transparent",
                                     backgroundSize: "cover",
+                                    fontSize: {
+                                      xl: "60px",
+                                      lg: "50px",
+                                      md: "35px",
+                                      sm: "25px",
+                                      xs: "20px",
+                                    },
                                   },
                                   textAlign: "left",
                                   height: "100%",
