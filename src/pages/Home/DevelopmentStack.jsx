@@ -708,6 +708,7 @@ const OpenDetails = (props) => {
                   xl: "18px",
                   md: "18px",
                 },
+                width: "15%",
                 fontFamily: "LGRegular",
                 fontStyle: "normal",
                 fontWeight: 400,
@@ -718,12 +719,13 @@ const OpenDetails = (props) => {
                 transition: "0.3s all linear",
                 "&:hover": {
                   color: "#000",
+                  ml: "5px",
                   // fontSize: {
                   //   lg: "20px",
                   //   xl: "20px",
                   //   md: "20px",
                   // },
-                  transform: "scale(1.007)",
+                  transform: "scale(1.07)",
                 },
               }}
               onMouseOut={() => {
@@ -745,19 +747,12 @@ const OpenDetails = (props) => {
                   display: "flex",
                   marginLeft: "10px",
                   marginBottom: "-3px",
-                  transition: "0.3s all linear",
-                  "&:hover": {
-                    transform: "scale(1.007)",
-                  },
                 }}
               >
                 <EastSharpIcon
                   fontSize="small"
                   sx={{
                     color: icon1,
-                    "&:hover": {
-                      fontSize: 15,
-                    },
                   }}
                 />
               </Box>

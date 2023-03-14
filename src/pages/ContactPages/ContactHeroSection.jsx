@@ -6,6 +6,7 @@ import { keyframes } from "styled-components";
 import styled from "styled-components";
 import contactTitle from "../../assets/images/new/contact.png";
 import Fade from "react-reveal/Fade";
+import selection from "../Home/home.module.css";
 const hue = keyframes`
  from {
    -webkit-filter: hue-rotate(0deg);
@@ -89,10 +90,14 @@ const ContactHeroSection = () => {
         >
           <Fade top duration={1800}>
             <Stack sx={{ marginTop: {} }}>
-              <Typography sx={contactText}>Contact</Typography>
+              <Typography sx={contactText} className={selection.hero}>
+                Contact
+              </Typography>
             </Stack>
             <Stack>
-              <Typography sx={contactText2}>Get in Touch !</Typography>
+              <Typography sx={contactText2} className={selection.invert2}>
+                Get in Touch !
+              </Typography>
             </Stack>
           </Fade>
         </Box>

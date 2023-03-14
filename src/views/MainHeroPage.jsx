@@ -410,13 +410,13 @@ const MainHeroPage = () => {
                               sm: "35px",
                               xs: "35px",
                             },
-                            "&:hover": {
-                              backgroundImage: `url(${GradientImage})`,
-                              backgroundRepeat: "repeat",
-                              backgroundClip: "text",
-                              textFillColor: "transparent",
-                              backgroundSize: "cover",
-                            },
+                            // "&:hover": {
+                            backgroundImage: `url(${GradientImage})`,
+                            backgroundRepeat: "repeat",
+                            backgroundClip: "text",
+                            textFillColor: "transparent",
+                            backgroundSize: "cover",
+                            // },
                             textAlign: "left",
                             height: "100%",
                           }}

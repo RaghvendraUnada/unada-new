@@ -327,7 +327,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     borderRadius: "20px",
                     border: `1px solid ${border}`,
                     zIndex: 1,
-                    opacity: 0.5,
                   }}
                 />
               </Box>
