@@ -279,9 +279,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 },
               }}
             >
-              <Typography sx={textPos} className={selection.hero}>
-                {positionDevo}
-              </Typography>
+              <Typography sx={textPos}>{positionDevo}</Typography>
               <Box
                 sx={{
                   display: "flex",
@@ -1219,6 +1217,11 @@ const ButtonStyle = {
   "&:hover": {
     opacity: 1,
   },
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "black",
+    background: "white",
+  },
 };
 const ButtonStyle1 = {
   cursor: "pointer",
@@ -1277,6 +1280,11 @@ const textPos = {
   fontWeight: 500,
 
   textAlign: { lg: "left", xl: "left", md: "left", sm: "center", xs: "center" },
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "black",
+    background: "white",
+  },
 };
 const ApplyTextStyle = {
   fontFamily: "LGThin",

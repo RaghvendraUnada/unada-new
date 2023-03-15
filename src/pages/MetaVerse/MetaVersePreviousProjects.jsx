@@ -135,6 +135,11 @@ const prevProjectText = {
   lineHeight: "61px",
   textAlign: "center",
   color: "#FFFFFF",
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "black",
+    background: "white",
+  },
 };
 const prevProjectColorText = {
   fontFamily: "LGRegular",
@@ -183,4 +188,9 @@ const prevProjectMetaText = {
   textAlign: "center",
   color: " #F5F5F5",
   mt: 1,
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "black",
+    background: "white",
+  },
 };

@@ -1,29 +1,30 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
-import culture1 from "../../assets/Images/Career/realCulture/culture1.jpg";
-import culture2 from "../../assets/Images/Career/realCulture/culture2.jpg";
-import culture3 from "../../assets/Images/Career/realCulture/culture3.jpg";
-// import culture4 from "../../assets/Images/Career/realCulture/culture4.jpg";
-import culture5 from "../../assets/Images/Career/realCulture/culture5.jpg";
-import culture6 from "../../assets/Images/Career/realCulture/culture6.jpg";
-import culture7 from "../../assets/Images/Career/realCulture/culture7.jpg";
-import culture8 from "../../assets/Images/Career/realCulture/culture8.jpg";
-import culture9 from "../../assets/Images/Career/realCulture/culture9.jpg";
-import culture10 from "../../assets/Images/Career/realCulture/culture10.jpg";
-import culture11 from "../../assets/Images/Career/realCulture/culture11.jpg";
-import culture12 from "../../assets/Images/Career/realCulture/culture12.jpg";
-import culture13 from "../../assets/Images/Career/realCulture/culture13.jpg";
-import culture14 from "../../assets/Images/Career/realCulture/culture14.jpg";
-import culture15 from "../../assets/Images/Career/realCulture/culture15.jpg";
-import culture16 from "../../assets/Images/Career/realCulture/culture16.jpg";
-import culture17 from "../../assets/Images/Career/realCulture/culture17.jpg";
-import culture18 from "../../assets/Images/Career/realCulture/culture18.jpg";
-import culture19 from "../../assets/Images/Career/realCulture/culture19.jpg";
-import culture20 from "../../assets/Images/Career/realCulture/culture20.jpg";
-import culture21 from "../../assets/Images/Career/realCulture/culture21.jpg";
-import culture22 from "../../assets/Images/Career/realCulture/culture22.jpg";
-import culture23 from "../../assets/Images/Career/realCulture/culture23.jpg";
-import culture24 from "../../assets/Images/Career/realCulture/culture24.jpg";
+import culture1 from "../../assets/Images/Career/Culturesqueez/1.webp";
+import culture2 from "../../assets/Images/Career/Culturesqueez/2.webp";
+import culture3 from "../../assets/Images/Career/Culturesqueez/3.webp";
+import culture4 from "../../assets/Images/Career/Culturesqueez/4.webp";
+import culture5 from "../../assets/Images/Career/Culturesqueez/5.webp";
+import culture6 from "../../assets/Images/Career/Culturesqueez/6.webp";
+import culture7 from "../../assets/Images/Career/Culturesqueez/7.webp";
+import culture8 from "../../assets/Images/Career/Culturesqueez/8.webp";
+import culture9 from "../../assets/Images/Career/Culturesqueez/9.webp";
+import culture10 from "../../assets/Images/Career/Culturesqueez/10.webp";
+import culture11 from "../../assets/Images/Career/Culturesqueez/11.webp";
+import culture12 from "../../assets/Images/Career/Culturesqueez/12.webp";
+import culture13 from "../../assets/Images/Career/Culturesqueez/13.webp";
+import culture14 from "../../assets/Images/Career/Culturesqueez/14.webp";
+import culture15 from "../../assets/Images/Career/Culturesqueez/15.webp";
+import culture16 from "../../assets/Images/Career/Culturesqueez/16.webp";
+import culture17 from "../../assets/Images/Career/Culturesqueez/17.webp";
+import culture18 from "../../assets/Images/Career/Culturesqueez/18.webp";
+import culture19 from "../../assets/Images/Career/Culturesqueez/19.webp";
+import culture20 from "../../assets/Images/Career/Culturesqueez/20.webp";
+import culture21 from "../../assets/Images/Career/Culturesqueez/21.webp";
+import culture22 from "../../assets/Images/Career/Culturesqueez/22.webp";
+import culture23 from "../../assets/Images/Career/Culturesqueez/23.webp";
+import culture24 from "../../assets/Images/Career/Culturesqueez/24.webp";
+// import culture25 from "../../assets/Images/Career/Culturesqueez/newsqueez.jpg";
 
 import HorizontalScrollingList from "../../Components/Maarquee/HorizontalScrollingList";
 import Marquee from "react-fast-marquee";
@@ -38,7 +39,7 @@ const OurCultureSection = () => {
     culture1,
     culture2,
     culture3,
-    // culture4,
+    culture4,
     culture5,
     culture6,
     culture7,
@@ -59,6 +60,13 @@ const OurCultureSection = () => {
     culture22,
     culture23,
     culture24,
+    // culture25,
+    // culture25,
+    // culture25,
+    // culture25,
+    // culture25,
+    // culture25,
+    // culture25,
   ];
   return (
     <Grid
@@ -142,7 +150,7 @@ const OurCultureSection = () => {
                     src={client}
                     style={{
                       height: "90%",
-                      width: "98%",
+                      width: "99.5%",
                       marginLeft: "auto",
                       marginRight: "auto",
                     }}
