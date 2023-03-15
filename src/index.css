@@ -88,6 +88,10 @@ ul .indicators {
   font-family: "JekoNormal";
   src: url("../src/assets/Fonts/Jeko/JekoDEMO-Medium.otf");
 }
+/* @font-face {
+  font-family: "Alex-Brush";
+  src: url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap%27");
+} */
 
 ::-webkit-scrollbar {
   display: none;

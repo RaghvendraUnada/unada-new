@@ -24,7 +24,6 @@ const HeroIntro = () => {
       width: 150,
       x: mousePosition.x - 75,
       y: mousePosition.y - 75,
-      backgroundColor: "green",
       mixBlendMode: "normal",
     },
   };

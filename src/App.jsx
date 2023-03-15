@@ -1025,7 +1025,7 @@ const ContactUsText = {
 // };
 
 const centerMainText = {
-  fontFamily: "BSSign",
+  fontFamily: "Alex Brush",
   fontStyle: "normal",
   fontWeight: 400,
   // fontSize: "50px",

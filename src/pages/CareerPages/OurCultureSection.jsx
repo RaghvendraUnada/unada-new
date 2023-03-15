@@ -134,18 +134,43 @@ const OurCultureSection = () => {
             gradient={false}
             speed={20}
             direction={"left"}
+            infinite={true}
             style={{ height: "100%" }}
           >
             {images.map((client, idx) => {
               return (
                 <Grid
                   container
-                  style={{
+                  sx={{
                     width: "100%",
                     height: "100%",
                   }}
+                  key={idx}
                 >
-                  <img
+                  <Box
+                    component={"img"}
+                    src={client}
+                    style={{
+                      height: "100%",
+                      width: "99.5%",
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                    }}
+                  />
+                </Grid>
+
+                /* <Box
+                  sx={{
+                    // flex: "none",
+                    boxSize: "100%",
+                    padding: "0.2rem",
+                    // flexDirection: "column",
+                    // gap: "0rem",
+                    width: "2%",
+                    height: "100%",
+                  }}
+                >
+                  <Box
                     key={idx}
                     src={client}
                     style={{
@@ -154,8 +179,11 @@ const OurCultureSection = () => {
                       marginLeft: "auto",
                       marginRight: "auto",
                     }}
+                    component="img"
+                    alt="hello"
+                    src={client}
                   />
-                </Grid>
+                </Box> */
               );
             })}
           </Marquee>
@@ -243,3 +271,23 @@ const AnimatedGradientText = styled.h1`
   -moz-osx-font-smoothing: grayscale;
   margin: auto;
 `;
+
+// <Grid
+//   container
+//   sx={{
+//     width: "100%",
+//     height: "100%",
+//   }}
+//   key={idx}
+// >
+//   <Box
+//     component={"img"}
+//     src={client}
+//     style={{
+//       height: "100%",
+//       width: "99.5%",
+//       marginLeft: "auto",
+//       marginRight: "auto",
+//     }}
+//   />
+// </Grid>

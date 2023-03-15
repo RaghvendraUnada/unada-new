@@ -33,6 +33,7 @@ const Home = () => {
         exit={{
           x: window.innerWidth,
           opacity: 0,
+          color: "red",
           transition: { duration: 1, ease: "easeInOut" },
         }}
         transition={{
