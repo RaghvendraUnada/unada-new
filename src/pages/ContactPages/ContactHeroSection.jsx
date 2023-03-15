@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Typography, Stack, Box } from "@mui/material";
 import contactHero from "../../assets/Images/Contact/contactHero.svg";
 import contactHeromb from "../../assets/Images/Contact/contactHeromb.svg";
+import culture2 from "../../assets/Images/Career/realCulture/cultureEdit2.jpg";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import contactTitle from "../../assets/images/new/contact.png";
@@ -118,7 +119,7 @@ const ContactHeroSection = () => {
         >
           <Box
             component="img"
-            src={contactHero}
+            src={culture2}
             alt="contactHero"
             sx={{
               width: "100%",
@@ -142,7 +143,7 @@ const ContactHeroSection = () => {
         >
           <Box
             component="img"
-            src={contactHeromb}
+            src={contactHero}
             alt="contactHero"
             sx={{
               width: "100%",

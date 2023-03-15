@@ -24,7 +24,7 @@ import culture21 from "../../assets/Images/Career/realCulture/culture21.jpg";
 import culture22 from "../../assets/Images/Career/realCulture/culture22.jpg";
 import culture23 from "../../assets/Images/Career/realCulture/culture23.jpg";
 import culture24 from "../../assets/Images/Career/realCulture/culture24.jpg";
-
+import culture25 from "../../assets/Images/Career/realCulture/raghavedit.jpg";
 import HorizontalScrollingList from "../../Components/Maarquee/HorizontalScrollingList";
 import Marquee from "react-fast-marquee";
 import { keyframes } from "styled-components";
@@ -59,6 +59,7 @@ const OurCultureSection = () => {
     culture22,
     culture23,
     culture24,
+    culture25,
   ];
   return (
     <Grid
@@ -132,17 +133,18 @@ const OurCultureSection = () => {
               return (
                 <Grid
                   container
-                  style={{
+                  sx={{
                     width: "100%",
                     height: "100%",
                   }}
+                  key={idx}
                 >
-                  <img
-                    key={idx}
+                  <Box
+                    component={"img"}
                     src={client}
                     style={{
-                      height: "90%",
-                      width: "98%",
+                      height: "100%",
+                      width: "99.5%",
                       marginLeft: "auto",
                       marginRight: "auto",
                     }}

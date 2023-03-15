@@ -4,6 +4,7 @@ import { Typography, Box, Paper, Grid, Stack, Skeleton } from "@mui/material";
 // import UnadaSLife1 from "../../assets/Images/Career/unadaslife1.svg";
 // import UnadaSLife2 from "../../assets/Images/Career/unadaslife2.svg";
 import UnadaSLife3 from "../../assets/Images/Career/unadalife3.svg";
+// import culture5 from "../../assets/Images/Career/realCulture/"
 // import Skeleton from '@mui/material/Skeleton'
 import selection from "../../pages/Home/home.module.css";
 
