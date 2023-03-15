@@ -9,14 +9,40 @@ import Slider from "react-slick";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import Fade from "react-reveal/Fade";
 import selection from "./selection.module.css";
-
+// import culture23 from "../../assets/Images/Career/realCulture/culture23.jpg";
+// import culture21 from "../../assets/Images/Career/realCulture/culture21.jpg";
+// import culture24 from "../../assets/Images/Career/realCulture/culture24.jpg";
+// import culture11 from "../../assets/Images/Career/realCulture/culture11.jpg";
+// import culture12 from "../../assets/Images/Career/realCulture/culture12.jpg";
+// import culture13 from "../../assets/Images/Career/realCulture/culture13.jpg";
+// import culture14 from "../../assets/Images/Career/realCulture/culture14.jpg";
+// import culture15 from "../../assets/Images/Career/realCulture/culture15.jpg";
+// import culture16 from "../../assets/Images/Career/realCulture/culture16.jpg";
+import culture23 from "../../assets/Images/Career/imginwebp/14.webp";
+import culture21 from "../../assets/Images/Career/imginwebp/15.webp";
+import culture24 from "../../assets/Images/Career/imginwebp/16.webp";
+import culture11 from "../../assets/Images/Career/imginwebp/17.webp";
+import culture12 from "../../assets/Images/Career/imginwebp/18.webp";
+import culture13 from "../../assets/Images/Career/imginwebp/19.webp";
+import culture14 from "../../assets/Images/Career/imginwebp/20.webp";
+import culture15 from "../../assets/Images/Career/imginwebp/21.webp";
+import culture16 from "../../assets/Images/Career/imginwebp/22.webp";
 const ImgArr = [
-  UnadaStoryImg,
-  UnadaStoryImg,
-  UnadaStoryImg,
-  UnadaStoryImg,
-  UnadaStoryImg,
-  UnadaStoryImg,
+  // UnadaStoryImg,
+  // UnadaStoryImg,
+  // UnadaStoryImg,
+  // UnadaStoryImg,
+  // UnadaStoryImg,
+  // UnadaStoryImg,
+  { src: culture21, text: "Our Design Team" },
+  { src: culture23, text: "Our Dev Team" },
+  { src: culture24, text: "Our 3D Team" },
+  { src: culture11, text: "Our just Team" },
+  { src: culture12, text: "Our Design Team" },
+  { src: culture13, text: "Our Design Team" },
+  { src: culture14, text: "Our Design Team" },
+  { src: culture15, text: "Our Design Team" },
+  { src: culture16, text: "Our Design Team" },
 ];
 
 function SampleNextArrow(props) {
@@ -174,6 +200,32 @@ const StoriesAtUnadaSection = () => {
         >
           <Slider {...settings}>
             {ImgArr?.map((slide, sid) => (
+              // <Box
+              //   key={`slide-${sid}`}
+              //   sx={{
+              //     flex: "none",
+              //     boxSize: "100%",
+              //     padding: "1.5rem",
+              //     flexDirection: "column",
+              //     gap: "1rem",
+              //     width: "33%",
+              //     height: "auto",
+              //   }}
+              // >
+              //   <Box
+              //     sx={{
+              //       backgroundSize: "cover",
+              //       width: "100%",
+              //       mx: "auto",
+              //       height: "auto",
+              //       maxHeight: "400px",
+              //     }}
+              //     component="img"
+              //     alt="hello"
+              //     src={slide}
+              //   />
+              //   <Typography sx={SwiperText}>Studio 25 Tiktok</Typography>
+              // </Box>
               <Box
                 key={`slide-${sid}`}
                 sx={{
@@ -183,22 +235,26 @@ const StoriesAtUnadaSection = () => {
                   flexDirection: "column",
                   gap: "1rem",
                   width: "33%",
-                  height: "auto",
+                  // background: "red",
                 }}
               >
                 <Box
                   sx={{
                     backgroundSize: "cover",
                     width: "100%",
+                    maxHeight: "400px",
                     mx: "auto",
                     height: "auto",
-                    maxHeight: "400px",
+                    minHeight: "345px",
                   }}
                   component="img"
                   alt="hello"
-                  src={slide}
+                  src={slide.src}
                 />
-                <Typography sx={SwiperText}>Studio 25 Tiktok</Typography>
+                <Typography sx={SwiperText}>
+                  {/* Studio 25 Tiktok */}
+                  {slide.text}
+                </Typography>
               </Box>
             ))}
           </Slider>

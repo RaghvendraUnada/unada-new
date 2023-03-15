@@ -3,7 +3,6 @@ import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
 import culture1 from "../../assets/Images/Career/realCulture/culture1.jpg";
 import culture2 from "../../assets/Images/Career/realCulture/culture2.jpg";
 import culture3 from "../../assets/Images/Career/realCulture/culture3.jpg";
-// import culture4 from "../../assets/Images/Career/realCulture/culture4.jpg";
 import culture5 from "../../assets/Images/Career/realCulture/culture5.jpg";
 import culture6 from "../../assets/Images/Career/realCulture/culture6.jpg";
 import culture7 from "../../assets/Images/Career/realCulture/culture7.jpg";
@@ -127,29 +126,54 @@ const OurCultureSection = () => {
             gradient={false}
             speed={20}
             direction={"left"}
+            infinite={true}
             style={{ height: "100%" }}
           >
             {images.map((client, idx) => {
               return (
-                <Grid
-                  container
+                // <Grid
+                //   container
+                //   sx={{
+                //     width: "100%",
+                //     height: "100%",
+                //   }}
+                //   key={idx}
+                // >
+                //   <Box
+                //     component={"img"}
+                //     src={client}
+                //     style={{
+                //       height: "100%",
+                //       width: "99.5%",
+                //       marginLeft: "auto",
+                //       marginRight: "auto",
+                //     }}
+                //   />
+                // </Grid>
+                <Box
                   sx={{
-                    width: "100%",
+                    // flex: "none",
+                    boxSize: "100%",
+                    padding: "0.2rem",
+                    // flexDirection: "column",
+                    // gap: "0rem",
+                    width: "2%",
                     height: "100%",
                   }}
-                  key={idx}
                 >
                   <Box
-                    component={"img"}
-                    src={client}
-                    style={{
+                    key={idx}
+                    sx={{
+                      backgroundSize: "cover",
+                      width: "100%",
+                      // mx: "auto",
                       height: "100%",
-                      width: "99.5%",
-                      marginLeft: "auto",
-                      marginRight: "auto",
                     }}
+                    component="img"
+                    alt="hello"
+                    src={client}
                   />
-                </Grid>
+                </Box>
               );
             })}
           </Marquee>
@@ -237,3 +261,23 @@ const AnimatedGradientText = styled.h1`
   -moz-osx-font-smoothing: grayscale;
   margin: auto;
 `;
+
+// <Grid
+//   container
+//   sx={{
+//     width: "100%",
+//     height: "100%",
+//   }}
+//   key={idx}
+// >
+//   <Box
+//     component={"img"}
+//     src={client}
+//     style={{
+//       height: "100%",
+//       width: "99.5%",
+//       marginLeft: "auto",
+//       marginRight: "auto",
+//     }}
+//   />
+// </Grid>
