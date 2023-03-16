@@ -24,43 +24,34 @@ const WhiteServicesPage = () => {
   const [click2, setClick2] = useState(false);
   const [click3, setClick3] = useState(false);
   return (
-    <Paper
-      elevation={0}
-      sx={{ bgcolor: "white", borderRadius: "0px", minHeight: "100vh" }}
-      className={selection.invert3}
+    <motion.div
+      initial={{ width: "100%", opacity: 0 }}
+      animate={{
+        width: "100%",
+        opacity: 1,
+        transition: { duration: 1, ease: "easeInOut" },
+      }}
+      exit={{
+        x: window.innerWidth,
+        opacity: 0,
+        transition: { duration: 1.3, ease: "easeInOut" },
+      }}
+      transition={{
+        ease: "easeInOut",
+        duration: "1s",
+      }}
+      // initial={{ opacity: 0.5 }}
+      // animate={{ opacity: 5 }}
+      // exit={{
+      //   opicity: 0.5,
+      //   transition: { duration: 0.7 },
+      //   background: "black",
+      // }}
     >
-      {/* <motion.div
-        initial={{ width: "100%", opacity: 0 }}
-        animate={{
-          width: "100%",
-          opacity: 1,
-          transition: { duration: 1, ease: "easeInOut" },
-        }}
-        exit={{
-          x: window.innerWidth,
-          opacity: 0,
-          transition: { duration: 1.3, ease: "easeInOut" },
-        }}
-        transition={{
-          ease: "easeInOut",
-          duration: "1s",
-        }}
-      > */}
-      <Grid
-        container
-        sx={{
-          background: "white",
-          height: "100%",
-          minHeight: "100vh",
-          borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
-          display: {
-            xl: "flex",
-            lg: "flex",
-            md: "flex",
-            sm: "none",
-            xs: "none",
-          },
-        }}
+      <Paper
+        elevation={0}
+        sx={{ bgcolor: "white", borderRadius: "0px", minHeight: "100vh" }}
+        className={selection.invert3}
       >
         <Grid
           container
@@ -271,248 +262,253 @@ const WhiteServicesPage = () => {
             </Paper>
           </Grid>
         </Grid>
-      </Grid>
-      {/* </motion.div> */}
-      {/* MobileView */}
-      <Grid
-        container
-        sx={{
-          background: "#fff",
-          height: "100%",
-          minHeight: "10vh",
-          borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
-          display: {
-            xl: "none",
-            lg: "none",
-            md: "none",
-            sm: "inline",
-            xs: "inline",
-          },
-        }}
-      >
+        {/* MobileView */}
         <Grid
-          item
-          xl={12}
-          lg={12}
-          md={12}
-          sm={12}
-          xs={12}
-          sx={{ paddingTop: "10rem" }}
-          // sx={{ marginTop: "10rem" }}
+          container
+          sx={{
+            background: "#fff",
+            height: "100%",
+            minHeight: "10vh",
+            borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
+            display: {
+              xl: "none",
+              lg: "none",
+              md: "none",
+              sm: "inline",
+              xs: "inline",
+            },
+          }}
         >
-          {click1 ? (
-            <Paper
-              sx={{
-                ...mobileActivePaper,
-                height: "60%",
-                minHeight: "100vh",
-              }}
-              onClick={() => {
-                setClick1(false);
-              }}
-            >
-              <Box>
-                <img
-                  src={Applicationimg}
-                  alt="metaVerseImg"
-                  style={{
-                    height: "10%",
-                    width: "100%",
-                    // mx: "auto",
-                    // marginTop: "1rem",
-                    position: "relative",
-                  }}
-                />
-                <Box sx={{}}>
-                  <Fade top duration={1000}>
-                    <Typography sx={mobileActivePapertext}>
-                      Application
-                    </Typography>
-                  </Fade>
-                  <Typography sx={mobileActivePaperMetaText}>
-                    We specialize in designing and creating innovative software
-                    applications for mobile devices.
-                    <br />
-                    <Link
-                      to={"/application"}
-                      style={{ textDecoration: "none" }}
-                    >
-                      <Button sx={ButtonStyle}>View</Button>
-                    </Link>
-                  </Typography>
-                </Box>
-              </Box>
-            </Paper>
-          ) : (
-            <>
-              <Paper
-                sx={mobilePaper}
-                onClick={() => {
-                  setClick1(true);
-                  setClick2(false);
-                  setClick3(false);
-                }}
-              >
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Typography sx={mobileHeadText}>Application</Typography>
-                  <img
-                    src={blackArrowImg}
-                    alt="nextImg"
-                    // style={{ height: "2px", width: "2px" }}
-                  />
-                </Box>
-              </Paper>
-            </>
-          )}
-        </Grid>
-        <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-          {click2 ? (
-            <>
-              <Paper
-                sx={{ ...mobileActivePaper, height: "100%", minHeight: "60vh" }}
-                onClick={() => {
-                  setClick2(false);
-                }}
-              >
-                <Box>
-                  <img
-                    src={Websiteimg}
-                    alt="metaVerseImg"
-                    style={{
-                      height: "90%",
-                      width: "100%",
-                      marginTop: "2rem",
-                      position: "relative",
-                    }}
-                  />
-                  <Fade top duration={1000}>
-                    <Typography sx={mobileActivePapertext}>Website</Typography>
-                  </Fade>
-                  <Typography sx={mobileActivePaperMetaText}>
-                    We specialize in designing and creating innovative software
-                    applications for mobile devices. Whether you have a clear
-                    idea of what you want your app to do or you need help
-                    conceptualizing and designing a unique solution, we have the
-                    expertise to bring your vision to life
-                    <br />
-                    <Link to={"/web"} style={{ textDecoration: "none" }}>
-                      <Button sx={ButtonStyle}>View</Button>
-                    </Link>
-                  </Typography>
-                </Box>
-              </Paper>
-            </>
-          ) : (
-            <>
-              <Paper
-                sx={mobilePaper}
-                onClick={() => {
-                  setClick1(false);
-                  setClick2(true);
-                  setClick3(false);
-                }}
-              >
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <Typography sx={mobileHeadText}>Website</Typography>
-                  <img
-                    src={blackArrowImg}
-                    alt="nextImg"
-                    // style={{ height: "2px", width: "2px" }}
-                  />
-                </Box>
-              </Paper>
-            </>
-          )}
-        </Grid>
-        <Grid
-          item
-          xl={12}
-          lg={12}
-          md={12}
-          sm={12}
-          xs={12}
-          // sx={{ marginBottom: "50rem" ,paddingBottom: }}
-        >
-          {click3 ? (
-            <>
+          <Grid
+            item
+            xl={12}
+            lg={12}
+            md={12}
+            sm={12}
+            xs={12}
+            sx={{ paddingTop: "10rem" }}
+            // sx={{ marginTop: "10rem" }}
+          >
+            {click1 ? (
               <Paper
                 sx={{
                   ...mobileActivePaper,
-                  height: "100%",
-                  minHeight: "60vh",
+                  height: "60%",
+                  minHeight: "100vh",
                 }}
                 onClick={() => {
-                  setClick3(false);
+                  setClick1(false);
                 }}
               >
                 <Box>
                   <img
-                    src={uiuximg}
+                    src={Applicationimg}
                     alt="metaVerseImg"
                     style={{
-                      height: "70%",
+                      height: "10%",
                       width: "100%",
-                      marginTop: "2rem",
+                      // mx: "auto",
+                      // marginTop: "1rem",
                       position: "relative",
                     }}
                   />
-                  <Fade top duration={1000}>
-                    <Typography sx={mobileActivePapertext}>UI/UX</Typography>
-                  </Fade>
-                  <Typography sx={mobileActivePaperMetaText}>
-                    We specialize in designing and creating innovative software
-                    applications for mobile devices. Whether you have a clear
-                    idea of what you want your app to do or you need help
-                    conceptualizing and designing a unique solution, we have the
-                    expertise to bring your vision to life
-                    <br />
-                    <Link to={"/ui"} style={{ textDecoration: "none" }}>
-                      <Button sx={ButtonStyle}>View</Button>
-                    </Link>
-                  </Typography>
+                  <Box sx={{}}>
+                    <Fade top duration={1800}>
+                      <Typography sx={mobileActivePapertext}>
+                        Application
+                      </Typography>
+                    </Fade>
+                    <Typography sx={mobileActivePaperMetaText}>
+                      We specialize in designing and creating innovative
+                      software applications for mobile devices.
+                      <br />
+                      <Link
+                        to={"/application"}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Button sx={ButtonStyle}>View</Button>
+                      </Link>
+                    </Typography>
+                  </Box>
                 </Box>
               </Paper>
-            </>
-          ) : (
-            <>
-              <Paper
-                sx={mobilePaper}
-                onClick={() => {
-                  setClick1(false);
-                  setClick2(false);
-                  setClick3(true);
-                }}
-              >
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
+            ) : (
+              <>
+                <Paper
+                  sx={mobilePaper}
+                  onClick={() => {
+                    setClick1(true);
+                    setClick2(false);
+                    setClick3(false);
                   }}
                 >
-                  <Typography sx={mobileHeadText}>UI/UX</Typography>
-                  <img
-                    src={blackArrowImg}
-                    alt="nextImg"
-                    // style={{ height: "2px", width: "2px" }}
-                  />
-                </Box>
-              </Paper>
-            </>
-          )}
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <Typography sx={mobileHeadText}>Application</Typography>
+                    <img
+                      src={blackArrowImg}
+                      alt="nextImg"
+                      // style={{ height: "2px", width: "2px" }}
+                    />
+                  </Box>
+                </Paper>
+              </>
+            )}
+          </Grid>
+          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+            {click2 ? (
+              <>
+                <Paper
+                  sx={{
+                    ...mobileActivePaper,
+                    height: "100%",
+                    minHeight: "60vh",
+                  }}
+                  onClick={() => {
+                    setClick2(false);
+                  }}
+                >
+                  <Box>
+                    <img
+                      src={Websiteimg}
+                      alt="metaVerseImg"
+                      style={{
+                        height: "90%",
+                        width: "100%",
+                        marginTop: "2rem",
+                        position: "relative",
+                      }}
+                    />
+                    <Fade top duration={1800}>
+                      <Typography sx={mobileActivePapertext}>
+                        Website
+                      </Typography>
+                    </Fade>
+                    <Typography sx={mobileActivePaperMetaText}>
+                      We specialize in designing and creating innovative
+                      software applications for mobile devices. Whether you have
+                      a clear idea of what you want your app to do or you need
+                      help conceptualizing and designing a unique solution, we
+                      have the expertise to bring your vision to life
+                      <br />
+                      <Link to={"/web"} style={{ textDecoration: "none" }}>
+                        <Button sx={ButtonStyle}>View</Button>
+                      </Link>
+                    </Typography>
+                  </Box>
+                </Paper>
+              </>
+            ) : (
+              <>
+                <Paper
+                  sx={mobilePaper}
+                  onClick={() => {
+                    setClick1(false);
+                    setClick2(true);
+                    setClick3(false);
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <Typography sx={mobileHeadText}>Website</Typography>
+                    <img
+                      src={blackArrowImg}
+                      alt="nextImg"
+                      // style={{ height: "2px", width: "2px" }}
+                    />
+                  </Box>
+                </Paper>
+              </>
+            )}
+          </Grid>
+          <Grid
+            item
+            xl={12}
+            lg={12}
+            md={12}
+            sm={12}
+            xs={12}
+            // sx={{ marginBottom: "50rem" ,paddingBottom: }}
+          >
+            {click3 ? (
+              <>
+                <Paper
+                  sx={{
+                    ...mobileActivePaper,
+                    height: "100%",
+                    minHeight: "60vh",
+                  }}
+                  onClick={() => {
+                    setClick3(false);
+                  }}
+                >
+                  <Box>
+                    <img
+                      src={uiuximg}
+                      alt="metaVerseImg"
+                      style={{
+                        height: "70%",
+                        width: "100%",
+                        marginTop: "2rem",
+                        position: "relative",
+                      }}
+                    />
+                    <Fade top duration={1800}>
+                      <Typography sx={mobileActivePapertext}>UI/UX</Typography>
+                    </Fade>
+                    <Typography sx={mobileActivePaperMetaText}>
+                      We specialize in designing and creating innovative
+                      software applications for mobile devices. Whether you have
+                      a clear idea of what you want your app to do or you need
+                      help conceptualizing and designing a unique solution, we
+                      have the expertise to bring your vision to life
+                      <br />
+                      <Link to={"/ui"} style={{ textDecoration: "none" }}>
+                        <Button sx={ButtonStyle}>View</Button>
+                      </Link>
+                    </Typography>
+                  </Box>
+                </Paper>
+              </>
+            ) : (
+              <>
+                <Paper
+                  sx={mobilePaper}
+                  onClick={() => {
+                    setClick1(false);
+                    setClick2(false);
+                    setClick3(true);
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <Typography sx={mobileHeadText}>UI/UX</Typography>
+                    <img
+                      src={blackArrowImg}
+                      alt="nextImg"
+                      // style={{ height: "2px", width: "2px" }}
+                    />
+                  </Box>
+                </Paper>
+              </>
+            )}
+          </Grid>
+          {/* <Grid item xl={12} lg={12} md={12} sm={12} xs={12}></Grid> */}
         </Grid>
-        {/* <Grid item xl={12} lg={12} md={12} sm={12} xs={12}></Grid> */}
-      </Grid>
-    </Paper>
+      </Paper>
+    </motion.div>
   );
 };
 
