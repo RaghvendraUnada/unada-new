@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Stack } from "@mui/material";
 import ApplicationHero from "../pages/Application/ApplicationHero";
 import Vision from "../pages/Application/Vision";
