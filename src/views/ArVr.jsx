@@ -25,6 +25,9 @@ const ArVr = () => {
         ease: "easeInOut",
         duration: "1s",
       }}
+      // initial={{ opacity: 1 }}
+      // animate={{ opacity: 2 }}
+      // exit={{ opicity: 1 }}
     >
       <Stack
         sx={{

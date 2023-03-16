@@ -93,33 +93,36 @@ const MainHeroPage = () => {
     }
   };
   return (
-    <Paper
-      elevation={0}
-      sx={{
+    <motion.div
+      initial={{ width: "100%", opacity: 0 }}
+      animate={{
         width: "100%",
-        height: "100%",
-        bgcolor: "transparent",
-        position: "relative",
-        boxShadow: "none",
-        maxWidth: "100vw",
-        overflowX: "hidden",
+        opacity: 1,
+        transition: { duration: 1, ease: "easeInOut" },
       }}
+      exit={{
+        x: window.innerWidth,
+        opacity: 0,
+        transition: { duration: 1, ease: "easeInOut" },
+      }}
+      transition={{
+        ease: "easeInOut",
+        duration: "1s",
+      }}
+      // initial={{ opacity: 1 }}
+      // animate={{ opacity: 2 }}
+      // exit={{ opicity: 1 }}
     >
-      <motion.div
-        initial={{ width: "100%", opacity: 0 }}
-        animate={{
+      <Paper
+        elevation={0}
+        sx={{
           width: "100%",
-          opacity: 1,
-          transition: { duration: 1, ease: "easeInOut" },
-        }}
-        exit={{
-          x: window.innerWidth,
-          opacity: 0,
-          transition: { duration: 1, ease: "easeInOut" },
-        }}
-        transition={{
-          ease: "easeInOut",
-          duration: "1s",
+          height: "100%",
+          bgcolor: "transparent",
+          position: "relative",
+          boxShadow: "none",
+          maxWidth: "100vw",
+          overflowX: "hidden",
         }}
       >
         <Paper
@@ -641,8 +644,8 @@ const MainHeroPage = () => {
             </Box>
           </Paper>
         </Suspense>
-      </motion.div>
-    </Paper>
+      </Paper>
+    </motion.div>
   );
 };
 
