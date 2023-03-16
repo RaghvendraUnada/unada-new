@@ -206,7 +206,7 @@ const MainHeroPage = () => {
                         component="img"
                         src={OpenButtonWhite}
                         sx={{
-                          width: "90%",
+                          width: "40%",
                           height: "auto",
                           maxWidth: "35px",
                           // bgcolor: "red",
@@ -226,7 +226,7 @@ const MainHeroPage = () => {
                         component="img"
                         src={OpenButton}
                         sx={{
-                          width: "90%",
+                          width: "40%",
                           height: "auto",
                           maxWidth: "28px",
                           transition: "0.3s all linear",

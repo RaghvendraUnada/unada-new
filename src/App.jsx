@@ -190,6 +190,7 @@ function App() {
                                 component="img"
                                 sx={{
                                   transition: "0.3s all linear",
+                                  // background: "red",
                                   "&:hover": {
                                     // transform: "scale(1.15)",
                                     transform: "rotate(360deg)",
@@ -197,7 +198,7 @@ function App() {
                                 }}
                                 src={OpenButtonWhite}
                                 style={{
-                                  width: "90%",
+                                  width: "50%",
                                   height: "auto",
                                   maxWidth: "35px",
                                 }}
@@ -216,7 +217,7 @@ function App() {
                                 }}
                                 src={OpenButton}
                                 style={{
-                                  width: "90%",
+                                  width: "50%",
                                   height: "auto",
                                   maxWidth: "28px",
                                 }}

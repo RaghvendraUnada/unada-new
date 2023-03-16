@@ -7,7 +7,7 @@ const OurTeamMData = (props) => {
   return (
     <Marquee
       gradient={false}
-      speed={15}
+      speed={50}
       pauseOnHover={false}
       // pauseOnClick={true}
       direction={"left"}
