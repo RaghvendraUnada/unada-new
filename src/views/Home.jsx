@@ -23,7 +23,7 @@ const Home = () => {
   }, [currentLocation]);
   return (
     <div style={{ background: "white" }}>
-      <motion.div
+      {/* <motion.div
         initial={{ width: "100%", opacity: 0 }}
         animate={{
           width: "100%",
@@ -43,7 +43,8 @@ const Home = () => {
         // initial={{ opacity: 1 }}
         // animate={{ opacity: 2 }}
         // exit={{ opicity: 1 }}
-      >
+      > */}
+      <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
         <Paper elevation={0} sx={{ bgcolor: "transparent" }}>
           <Grid container>
             <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
@@ -104,6 +105,12 @@ const Home = () => {
       </motion.div>
     </div>
   );
+};
+const AnimationSettings = {
+  transition: { duration: 0.5 },
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
 };
 
 export default Home;

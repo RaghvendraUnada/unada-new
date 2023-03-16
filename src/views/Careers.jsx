@@ -20,7 +20,7 @@ const Careers = () => {
   }, []);
   return (
     <>
-      <motion.div
+      {/* <motion.div
         initial={{ width: "100%", opacity: 0 }}
         animate={{
           width: "100%",
@@ -39,7 +39,8 @@ const Careers = () => {
         // initial={{ opacity: 1 }}
         // animate={{ opacity: 2 }}
         // exit={{ opicity: 1 }}
-      >
+      > */}
+      <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
         <Stack
           sx={{
             background: "#000",
@@ -59,5 +60,10 @@ const Careers = () => {
     </>
   );
 };
-
+const AnimationSettings = {
+  transition: { duration: 0.5 },
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 export default Careers;

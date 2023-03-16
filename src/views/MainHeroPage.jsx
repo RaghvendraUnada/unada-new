@@ -97,26 +97,27 @@ const MainHeroPage = () => {
     }
   };
   return (
-    <motion.div
-      initial={{ width: "100%", opacity: 0 }}
-      animate={{
-        width: "100%",
-        opacity: 1,
-        transition: { duration: 1, ease: "easeInOut" },
-      }}
-      exit={{
-        x: window.innerWidth,
-        opacity: 0,
-        transition: { duration: 1, ease: "easeInOut" },
-      }}
-      transition={{
-        ease: "easeInOut",
-        duration: "1s",
-      }}
-      // initial={{ opacity: 1 }}
-      // animate={{ opacity: 2 }}
-      // exit={{ opicity: 1 }}
-    >
+    // <motion.div
+    //   initial={{ width: "100%", opacity: 0 }}
+    //   animate={{
+    //     width: "100%",
+    //     opacity: 1,
+    //     transition: { duration: 1, ease: "easeInOut" },
+    //   }}
+    //   exit={{
+    //     x: window.innerWidth,
+    //     opacity: 0,
+    //     transition: { duration: 1, ease: "easeInOut" },
+    //   }}
+    //   transition={{
+    //     ease: "easeInOut",
+    //     duration: "1s",
+    //   }}
+    //   // initial={{ opacity: 1 }}
+    //   // animate={{ opacity: 2 }}
+    //   // exit={{ opicity: 1 }}
+    // >
+    <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
       <Paper
         elevation={0}
         sx={{
@@ -666,6 +667,13 @@ const MainHeroPage = () => {
 };
 
 export default MainHeroPage;
+
+const AnimationSettings = {
+  transition: { duration: 0.5 },
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 
 const hue = keyframes`
  from {
