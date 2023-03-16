@@ -38,6 +38,9 @@ const Application = () => {
         ease: "easeInOut",
         duration: "1s",
       }}
+      // initial={{ opacity: 0.5 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opicity: 0.5 }}
     >
       <Stack>
         <ApplicationHero />

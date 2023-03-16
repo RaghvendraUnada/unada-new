@@ -666,6 +666,9 @@ const OpenDetails = (props) => {
         opacity: 0,
         transition: { duration: 1, ease: "easeInOut" },
       }}
+      // initial={{ opacity: 1 }}
+      // animate={{ opacity: 2 }}
+      // exit={{ opicity: 1 }}
     >
       <Paper
         sx={{
