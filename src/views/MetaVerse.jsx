@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import ClientMarquee from "../Components/Maarquee/ClientMarquee";
 import { Stack } from "@mui/material";
 // import ClientMarqueeLeftToRight from "../Components/Maarquee/ClientMarqueeLeftToRight";
@@ -11,8 +11,12 @@ import { motion } from "framer-motion";
 // import "../pages/Services/selectionwhite.module.css";
 // import selection from "../pages/Home/home.module.css";
 import selection from "../pages/MetaVerse/metaverse.module.css";
+import { SendEvent } from "../utils/SendEvent";
 
 const MetaVerse = () => {
+  useEffect(() => {
+    SendEvent("Metaverse Page");
+  }, []);
   return (
     <motion.div
       initial={{ width: "100%", opacity: 0 }}

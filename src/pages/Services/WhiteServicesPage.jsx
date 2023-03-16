@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Grid, Paper, Typography, Box, Button } from "@mui/material";
 import WhiteServiceAppIcon from "../../assets/Images/Services/WhiteServiceAppIcon.svg";
@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import Fade from "react-reveal/Fade";
 import selection from "./whiteservice.module.css";
+import { SendEvent } from "../../utils/SendEvent";
 const WhiteServicesPage = () => {
   const navigate = useNavigate();
   const [paper1, setPaper1] = useState(true);
@@ -23,13 +24,16 @@ const WhiteServicesPage = () => {
   const [click1, setClick1] = useState(true);
   const [click2, setClick2] = useState(false);
   const [click3, setClick3] = useState(false);
+  useEffect(() => {
+    SendEvent("White Services Page");
+  }, []);
   return (
     <Paper
       elevation={0}
       sx={{ bgcolor: "white", borderRadius: "0px", minHeight: "100vh" }}
       className={selection.invert3}
     >
-      <motion.div
+      {/* <motion.div
         initial={{ width: "100%", opacity: 0 }}
         animate={{
           width: "100%",
@@ -45,217 +49,213 @@ const WhiteServicesPage = () => {
           ease: "easeInOut",
           duration: "1s",
         }}
+      > */}
+      <Grid
+        container
+        sx={{
+          background: "white",
+          height: "100%",
+          minHeight: "100vh",
+          borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
+          display: {
+            xl: "flex",
+            lg: "flex",
+            md: "flex",
+            sm: "none",
+            xs: "none",
+          },
+        }}
       >
-        <Grid
-          container
-          sx={{
-            background: "white",
-            height: "100%",
-            minHeight: "100vh",
-            borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
-            display: {
-              xl: "flex",
-              lg: "flex",
-              md: "flex",
-              sm: "none",
-              xs: "none",
-            },
-          }}
-        >
-          <Grid item xl={1.5} lg={1.5} md={1.5} sm={12} xs={12}>
-            <Paper
-              elevation={0}
-              sx={paperStyle}
-              onClick={() => {
-                navigate("/");
-              }}
-            >
-              <Box
-                sx={{
-                  top: {
-                    xl: "50%",
-                    lg: "50%",
-                    md: "50%",
-                    sm: "50%",
-                    xs: "50%",
-                  },
-                  left: {
-                    xl: "47%",
-                    lg: "47%",
-                    md: "47%",
-                    sm: "50%",
-                    xs: "50%",
-                  },
-                  position: "absolute",
-                  transform: {
-                    xl: "translate(-50%,70%)",
-                    lg: "translate(-50%,70%)",
-                    md: "translate(-50%,70%)",
-                    sm: "translate(-50%,-50%)",
-                    xs: "translate(-50%,-50%)",
-                  },
-                }}
-              >
-                <Typography sx={MetaTextStyle}>Home</Typography>
-              </Box>
-            </Paper>
-          </Grid>
-          <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12} sx={adjGrid}>
-            <Paper
-              onClick={() => {
-                navigate("/application");
-              }}
-              elevation={0}
+        <Grid item xl={1.5} lg={1.5} md={1.5} sm={12} xs={12}>
+          <Paper
+            elevation={0}
+            sx={paperStyle}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <Box
               sx={{
-                ...ServicePaperStyle,
-                background: `url(${Applicationimg})`,
-                backgroundPosition: "center center",
-                backgroundSize: "cover",
+                top: {
+                  xl: "50%",
+                  lg: "50%",
+                  md: "50%",
+                  sm: "50%",
+                  xs: "50%",
+                },
+                left: {
+                  xl: "47%",
+                  lg: "47%",
+                  md: "47%",
+                  sm: "50%",
+                  xs: "50%",
+                },
+                position: "absolute",
+                transform: {
+                  xl: "translate(-50%,70%)",
+                  lg: "translate(-50%,70%)",
+                  md: "translate(-50%,70%)",
+                  sm: "translate(-50%,-50%)",
+                  xs: "translate(-50%,-50%)",
+                },
               }}
-              onMouseOver={() => setPaper1(true)}
-              onMouseOut={() => setPaper1(true)}
             >
-              {paper1 ? (
-                <>
-                  <Box sx={ActiveBoxStyles}>
-                    {/* <img
+              <Typography sx={MetaTextStyle}>Home</Typography>
+            </Box>
+          </Paper>
+        </Grid>
+        <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12} sx={adjGrid}>
+          <Paper
+            onClick={() => {
+              navigate("/application");
+            }}
+            elevation={0}
+            sx={{
+              ...ServicePaperStyle,
+              background: `url(${Applicationimg})`,
+              backgroundPosition: "center center",
+              backgroundSize: "cover",
+            }}
+            onMouseOver={() => setPaper1(true)}
+            onMouseOut={() => setPaper1(true)}
+          >
+            {paper1 ? (
+              <>
+                <Box sx={ActiveBoxStyles}>
+                  {/* <img
                       src={WhiteServiceAppIcon}
                       alt="servicesAppimg"
                       style={{
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Fade top duration={1000}>
-                      <Typography sx={paperTextStyle}>Application</Typography>
-                    </Fade>
-                    <Typography sx={activePaperText}>
-                      We specialize in designing and creating innovative
-                      software
-                    </Typography>
-                    <Link
-                      to={"/application"}
-                      style={{ textDecoration: "none" }}
-                    >
-                      <Button sx={ButtonStyle}>
-                        <EastSharpIcon fontSize="large" />
-                      </Button>
-                    </Link>
-                  </Box>
-                </>
-              ) : (
-                <>
-                  <Box sx={inActiveboxStyle}>
+                  <Fade top duration={1000}>
                     <Typography sx={paperTextStyle}>Application</Typography>
+                  </Fade>
+                  <Typography sx={activePaperText}>
+                    We specialize in designing and creating innovative software
+                  </Typography>
+                  <Link to={"/application"} style={{ textDecoration: "none" }}>
+                    <Button sx={ButtonStyle}>
+                      <EastSharpIcon fontSize="large" />
+                    </Button>
+                  </Link>
+                </Box>
+              </>
+            ) : (
+              <>
+                <Box sx={inActiveboxStyle}>
+                  <Typography sx={paperTextStyle}>Application</Typography>
 
-                    <img src={blackArrowImg} alt="nextImg" />
-                  </Box>
-                </>
-              )}
-            </Paper>
-          </Grid>
-          <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12} sx={adjGrid}>
-            <Paper
-              onClick={() => {
-                navigate("/web");
-              }}
-              elevation={0}
-              sx={{
-                ...ServicePaperStyle,
-                background: `url(${Websiteimg})`,
-                backgroundPosition: "center center",
-                backgroundSize: "cover",
-              }}
-              onMouseOver={() => setPaper2(true)}
-              onMouseOut={() => setPaper2(true)}
-            >
-              {paper2 ? (
-                <>
-                  <Box sx={ActiveBoxStyles}>
-                    {/* <img
+                  <img src={blackArrowImg} alt="nextImg" />
+                </Box>
+              </>
+            )}
+          </Paper>
+        </Grid>
+        <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12} sx={adjGrid}>
+          <Paper
+            onClick={() => {
+              navigate("/web");
+            }}
+            elevation={0}
+            sx={{
+              ...ServicePaperStyle,
+              background: `url(${Websiteimg})`,
+              backgroundPosition: "center center",
+              backgroundSize: "cover",
+            }}
+            onMouseOver={() => setPaper2(true)}
+            onMouseOut={() => setPaper2(true)}
+          >
+            {paper2 ? (
+              <>
+                <Box sx={ActiveBoxStyles}>
+                  {/* <img
                       src={WhiteServiceWebIcon}
                       alt="servicesAppimg"
                       style={{
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Fade top duration={1000}>
-                      <Typography sx={paperTextStyle}>Website</Typography>
-                    </Fade>
-                    <Typography sx={activePaperText}>
-                      Unada specializes in web design, development, and
-                      maintenance.
-                    </Typography>
-                    <Link to={"/web"} style={{ textDecoration: "none" }}>
-                      <Button sx={ButtonStyle}>
-                        <EastSharpIcon fontSize="large" />
-                      </Button>
-                    </Link>
-                  </Box>
-                </>
-              ) : (
-                <Paper>
-                  <Box sx={inActiveboxStyle}>
+                  <Fade top duration={1000}>
                     <Typography sx={paperTextStyle}>Website</Typography>
+                  </Fade>
+                  <Typography sx={activePaperText}>
+                    Unada specializes in web design, development, and
+                    maintenance.
+                  </Typography>
+                  <Link to={"/web"} style={{ textDecoration: "none" }}>
+                    <Button sx={ButtonStyle}>
+                      <EastSharpIcon fontSize="large" />
+                    </Button>
+                  </Link>
+                </Box>
+              </>
+            ) : (
+              <Paper>
+                <Box sx={inActiveboxStyle}>
+                  <Typography sx={paperTextStyle}>Website</Typography>
 
-                    <img src={blackArrowImg} alt="nextImg" />
-                  </Box>
-                </Paper>
-              )}
-            </Paper>
-          </Grid>
-          <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12} sx={adjGrid}>
-            <Paper
-              onClick={() => {
-                navigate("/ui");
-              }}
-              elevation={0}
-              sx={{
-                ...ServicePaperStyle,
+                  <img src={blackArrowImg} alt="nextImg" />
+                </Box>
+              </Paper>
+            )}
+          </Paper>
+        </Grid>
+        <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12} sx={adjGrid}>
+          <Paper
+            onClick={() => {
+              navigate("/ui");
+            }}
+            elevation={0}
+            sx={{
+              ...ServicePaperStyle,
 
-                background: `url(${uiuximg})`,
-                backgroundPosition: "center center",
-                backgroundSize: "cover",
-              }}
-              onMouseOver={() => setPaper3(true)}
-              onMouseOut={() => setPaper3(true)}
-            >
-              {paper3 ? (
-                <>
-                  <Box sx={ActiveBoxStyles}>
-                    {/* <img
+              background: `url(${uiuximg})`,
+              backgroundPosition: "center center",
+              backgroundSize: "cover",
+            }}
+            onMouseOver={() => setPaper3(true)}
+            onMouseOut={() => setPaper3(true)}
+          >
+            {paper3 ? (
+              <>
+                <Box sx={ActiveBoxStyles}>
+                  {/* <img
                       src={WhiteServiceAppIcon}
                       alt="servicesAppimg"
                       style={{
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Fade top duration={1000}>
-                      <Typography sx={paperTextStyle}>UI/UX</Typography>
-                    </Fade>
-                    <Typography sx={activePaperText}>
-                      We specialize in designing intuitive and user-friendly
-                      interfaces for websites..
-                    </Typography>
-                    <Link to={"/ui"} style={{ textDecoration: "none" }}>
-                      <Button sx={ButtonStyle}>
-                        <EastSharpIcon fontSize="large" />
-                      </Button>
-                    </Link>
-                  </Box>
-                </>
-              ) : (
-                <>
-                  <Box sx={inActiveboxStyle}>
+                  <Fade top duration={1000}>
                     <Typography sx={paperTextStyle}>UI/UX</Typography>
+                  </Fade>
+                  <Typography sx={activePaperText}>
+                    We specialize in designing intuitive and user-friendly
+                    interfaces for websites..
+                  </Typography>
+                  <Link to={"/ui"} style={{ textDecoration: "none" }}>
+                    <Button sx={ButtonStyle}>
+                      <EastSharpIcon fontSize="large" />
+                    </Button>
+                  </Link>
+                </Box>
+              </>
+            ) : (
+              <>
+                <Box sx={inActiveboxStyle}>
+                  <Typography sx={paperTextStyle}>UI/UX</Typography>
 
-                    <img src={blackArrowImg} alt="nextImg" />
-                  </Box>
-                </>
-              )}
-            </Paper>
-          </Grid>
+                  <img src={blackArrowImg} alt="nextImg" />
+                </Box>
+              </>
+            )}
+          </Paper>
         </Grid>
-      </motion.div>
+      </Grid>
+      {/* </motion.div> */}
       {/* MobileView */}
       <Grid
         container

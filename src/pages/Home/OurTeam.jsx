@@ -11,8 +11,20 @@ import teamTitle from "../../assets/images/new/team.png";
 import axios from "axios";
 import Fade from "react-reveal/Fade";
 import selection from "./home.module.css";
+import { useSpring, animated } from "react-spring";
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
+  const [flip, setFlip] = useState(false);
+
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    reset: true,
+    flip: false,
+    delay: 800,
+    onRest: () => setFlip(!flip),
+  });
+
   const FetchTeamData = async () => {
     await axios
       .get("team/get_members")
@@ -72,11 +84,13 @@ const OurTeam = () => {
           }}
         >
         </motion.p> */}
-        <Fade top duration={1000}>
+        {/* <Fade top duration={1000}> */}
+        <animated.div styled={props}>
           <Typography sx={OurTeamTextStyle} className={selection.zero}>
             Our Team
           </Typography>
-        </Fade>
+        </animated.div>
+        {/* </Fade> */}
       </Paper>
       <Paper
         sx={{

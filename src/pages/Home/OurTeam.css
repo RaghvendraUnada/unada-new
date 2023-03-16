@@ -109,6 +109,7 @@
 
 .gallery-h {
   overflow: hidden;
+  /* background-color: red; */
 }
 
 @keyframes marqueeTop {

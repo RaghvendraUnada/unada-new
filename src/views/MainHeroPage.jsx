@@ -1,5 +1,6 @@
 import React, { useEffect, lazy, Suspense, useState } from "react";
-import UnadaVid from "../assets/UnadaBGvid.mp4";
+// import UnadaVid from "../assets/UnadaBGvid.mp4";
+import UnadaVid from "../assets/newAnimationVideo.mp4";
 import { Paper, Box, Button, Typography } from "@mui/material";
 import "../Components/css/HomeStyle.css";
 import { motion } from "framer-motion";
@@ -10,7 +11,7 @@ import LazyLoad from "react-lazy-load";
 import Logo from "../../src/assets/Images/Header/Logo.png";
 import WhiteLogo from "../../src/assets/Images/Header/unada-logo.png";
 import Close from "../../src/assets/Images/Header/CloseButton.svg";
-import OpenButton from "../../src/assets/Images/Header/MenuIcon.svg";
+import OpenButton from "../../src/assets/Images/Header/newHeader.svg";
 import OpenButtonWhite from "../../src/assets/Images/Header/MenuIconWhite.svg";
 import HeaderStyles from "../../src/Components/Header/Header.module.scss";
 import arrowheader from "../../src/assets/Images/Header/headl.png";
@@ -23,6 +24,8 @@ import { keyframes } from "styled-components";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import "./HeroPageCss.css";
+
+import { SendEvent } from "../utils/SendEvent";
 
 import GradientImage from "../assets/Images/gridentFixMid.png";
 
@@ -74,6 +77,7 @@ const MainHeroPage = () => {
   });
 
   useEffect(() => {
+    SendEvent("Home Page Hero Section");
     if (
       location === "/metaVerse" ||
       location === "/home" ||
@@ -189,7 +193,10 @@ const MainHeroPage = () => {
                 {!open ? (
                   <Button
                     sx={{ ...ButtonStyle, mt: 0.75 }}
-                    onClick={() => setOpen(true)}
+                    onClick={() => {
+                      setOpen(true);
+                      SendEvent("Header Menu open button click");
+                    }}
                   >
                     {colorState === true ? (
                       <Box
@@ -222,7 +229,8 @@ const MainHeroPage = () => {
                           transition: "0.3s all linear",
                           "&:hover": {
                             // bgcolor: "red",
-                            transform: "scale(1.15)",
+                            // transform: "scale(1.15)",
+                            transform: "rotate(360deg)",
                           },
                         }}
                         alt="whyChooseUsimg"
@@ -231,7 +239,13 @@ const MainHeroPage = () => {
                     )}
                   </Button>
                 ) : (
-                  <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
+                  <Button
+                    sx={ButtonStyle}
+                    onClick={() => {
+                      setOpen(false);
+                      SendEvent("Header Close Button Click");
+                    }}
+                  >
                     Close
                   </Button>
                 )}
@@ -557,6 +571,7 @@ const MainHeroPage = () => {
             <Box
               onClick={() => {
                 navigate("/service");
+                SendEvent("left explore button click");
               }}
               className="cta cta-left"
               sx={{
@@ -598,6 +613,7 @@ const MainHeroPage = () => {
             <Box
               onClick={() => {
                 navigate("/whiteService");
+                SendEvent("right explore button click");
               }}
               className="cta cta-right"
               sx={{

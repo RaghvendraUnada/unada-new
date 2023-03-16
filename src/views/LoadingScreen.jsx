@@ -1,6 +1,6 @@
 import { Grid, Box, Typography } from "@mui/material";
 import React from "react";
-import Loadinggif from "../assets/LoderGif.gif";
+import Loadinggif from "../assets/loderImg.svg";
 
 const LoadingScreen = () => {
   return (
@@ -21,7 +21,7 @@ const LoadingScreen = () => {
         sx={{
           height: "auto",
           width: "auto",
-          minWidth: "50%",
+          // minWidth: "50%",
         }}
       />
     </Grid>

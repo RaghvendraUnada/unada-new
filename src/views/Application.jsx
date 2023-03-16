@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Stack } from "@mui/material";
 import ApplicationHero from "../pages/Application/ApplicationHero";
 import Vision from "../pages/Application/Vision";
@@ -15,8 +15,12 @@ const data1 = ["Fintech", "Warehousing & Logistics", "Healthcare"];
 const Tech = [android, java, kotlin, react, flutter, swift];
 import { motion } from "framer-motion";
 import "../pages/Services/whiteservice.module.css";
+import { SendEvent } from "../utils/SendEvent";
 
 const Application = () => {
+  useEffect(() => {
+    SendEvent("Application Page");
+  }, []);
   return (
     <motion.div
       initial={{ width: "100%", opacity: 0 }}
