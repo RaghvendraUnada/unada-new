@@ -70,7 +70,7 @@
 
 .display--inline-top {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .fill-dimensions {
@@ -92,7 +92,7 @@
 }
 
 .gallery-image {
-  padding-bottom: 2.35em;
+  /* padding-bottom: 2.35em; */
   animation: marqueeTop 10s linear infinite;
 }
 
@@ -109,6 +109,7 @@
 
 .gallery-h {
   overflow: hidden;
+  /* background-color: red; */
 }
 
 @keyframes marqueeTop {
@@ -121,4 +122,3 @@
     transform: translate3d(0, -100%, 0);
   }
 }
-

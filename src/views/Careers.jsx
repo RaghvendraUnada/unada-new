@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Stack } from "@mui/material";
 
 // import CareerHeroSection from "../pages/CareerPages/CareerHeroSection";
@@ -13,7 +13,11 @@ import ChatSection from "../pages/CareerPages/ChatSection";
 import OurCultureSection from "../pages/CareerPages/OurCultureSection";
 import StoriesAtUnadaSection from "../pages/CareerPages/StoriesAtUnadaSection";
 import { motion } from "framer-motion";
+import { SendEvent } from "../utils/SendEvent";
 const Careers = () => {
+  useEffect(() => {
+    SendEvent("Careers Page");
+  }, []);
   return (
     <>
       <motion.div

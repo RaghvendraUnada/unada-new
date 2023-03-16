@@ -56,8 +56,8 @@ const OurTeamMData = (props) => {
               alt="Team Member"
             />
             <Box>
-              <Typography sx={TextStyleOne}>{client.TeamMemberName}</Typography>
-              <Typography sx={TextStyleTwo}>{client.TeamMemberName}</Typography>
+              {/* <Typography sx={TextStyleOne}>{client.TeamMemberName}</Typography>
+              <Typography sx={TextStyleTwo}>{client.TeamMemberName}</Typography> */}
             </Box>
           </Box>
         );

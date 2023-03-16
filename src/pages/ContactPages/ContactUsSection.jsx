@@ -12,7 +12,12 @@ const ContactUsSection = () => {
   let location = useLocation();
   // console.log(location);
   const handleSubmit = async () => {
-    // alert("Thank You!");
+    console.log({
+      FirstName: firstname,
+      LastName: lastname,
+      Email: email,
+      Message: message,
+    });
     return await axios
       .post("/contact_us/add_contact_data", {
         FirstName: firstname,
@@ -83,7 +88,7 @@ const ContactUsSection = () => {
       >
         <Box>
           <Typography sx={contacttext}>
-            <Fade top duration={3800}>
+            <Fade top duration={1000}>
               Contact Us
             </Fade>
           </Typography>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Stack } from "@mui/material";
 import WebHero from "../pages/Web/WebHero";
 import PreProject from "../components/PreProject";
@@ -25,7 +25,11 @@ const data = [
 ];
 const Tech = [aws, css, html, react, mongodb, javascript, nodejs, mysql];
 import TechStack from "../pages/Application/TechStack";
+import { SendEvent } from "../utils/SendEvent";
 const Web = () => {
+  useEffect(() => {
+    SendEvent("Web Page");
+  }, []);
   return (
     <motion.div
       initial={{ width: "100%", opacity: 0 }}

@@ -2,8 +2,11 @@ import React, { useEffect } from "react";
 import { Stack } from "@mui/material";
 import ServicesPage from "../pages/Services/ServicesPage";
 import { motion } from "framer-motion";
-
+import { SendEvent } from "../utils/SendEvent";
 const Service = () => {
+  useEffect(() => {
+    SendEvent("Service Page ");
+  }, []);
   return (
     <motion.div
       initial={{ width: "100%", opacity: 0 }}

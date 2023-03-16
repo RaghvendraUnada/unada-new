@@ -70,7 +70,7 @@ const CareerHeroSection = () => {
           </Stack> */}
           <Box sx={{ width: "90%", mx: "auto" }}>
             <Stack sx={{ marginTop: {} }}>
-              <Fade top duration={1800}>
+              <Fade top duration={1000}>
                 <Typography
                   // className="animate-charcter"
                   sx={{
@@ -86,8 +86,8 @@ const CareerHeroSection = () => {
                 >
                   Join a team
                 </Typography>
-              </Fade>
-              <Fade top duration={1500}>
+                {/* </Fade>
+              <Fade top duration={1100}> */}
                 <Typography
                   // className="animate-charcter"
                   className={selection.invert}

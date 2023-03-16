@@ -49,8 +49,8 @@ const AnimatedRoutes = ({ setColorState }) => {
         <Route path="/ArVr" element={<ArVr />} />
         <Route path="/blockchain" element={<Blockchain />} />
         <Route path="/ui" element={<Ui />} />
-        <Route path="/slider" element={<Example />} />
-        <Route path="/marquee" element={<Marquee />} />
+        {/* <Route path="/slider" element={<Example />} />
+        <Route path="/marquee" element={<Marquee />} /> */}
       </Routes>
     </AnimatePresence>
   );

@@ -29,7 +29,7 @@ const TechStack = (props) => {
                 // bgcolor: "red",
               }}
             >
-              <Fade top duration={800}>
+              <Fade top duration={1000}>
                 <Typography sx={mainText}>{props.text1} stack</Typography>
               </Fade>
             </Box>

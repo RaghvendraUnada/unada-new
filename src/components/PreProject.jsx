@@ -63,7 +63,7 @@ const PreProject = () => {
           },
         }}
       >
-        <Fade top duration={1800}>
+        <Fade top duration={1000}>
           <Typography sx={mainText}>Previous Projects</Typography>
         </Fade>
       </Grid>
@@ -231,4 +231,9 @@ const mainText = {
 const imge = {
   height: { xl: "80%", lg: "80%", md: "70%", sm: "60%", xs: "60%" },
   width: { xl: "80%", lg: "80%", md: "70%", sm: "60%", xs: "60%" },
+  transition: "0.5s all ease-in-out",
+  cursor: "pointer",
+  "&:hover": {
+    transform: "scale(0.9)",
+  },
 };

@@ -89,7 +89,7 @@ const ContactHeroSection = () => {
             alignItems: "flex-start",
           }}
         >
-          <Fade top duration={1800}>
+          <Fade top duration={1000}>
             <Stack sx={{ marginTop: {} }}>
               <Typography sx={contactText} className={selection.invert2}>
                 Contact

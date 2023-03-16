@@ -10,7 +10,7 @@ const InternshipSection = () => {
       sx={{ background: "white", textAlign: "center", padding: "4rem 4rem " }}
     >
       <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-        <Fade top duration={1800}>
+        <Fade top duration={1000}>
           <Typography sx={textStyle} className={selection.zero}>
             Our Internship Program
           </Typography>

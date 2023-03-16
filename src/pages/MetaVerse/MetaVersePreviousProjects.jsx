@@ -91,7 +91,7 @@ const MetaVersePreviousProjects = () => {
               justifyContent: "center",
             }}
           >
-            <Fade top duration={1800}>
+            <Fade top duration={1000}>
               <Typography sx={prevProjectText}>Previous &nbsp; </Typography>{" "}
               <Typography
                 sx={{

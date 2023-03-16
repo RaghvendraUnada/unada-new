@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Stack, Box } from "@mui/material";
 import Uiux from "../pages/UIUX/Uiux";
 import HorizontalScrollingList from "../components/Maarquee/HorizontalScrollingList";
@@ -18,7 +18,11 @@ const data1 = ["Branding", "Gaming", "Fintech", "E-Commerce"];
 const data = ["Social Media Agencies", "Healthcare", "Fashion"];
 const Tech = [adobe, ai, figmanew, pronew, ps];
 import { motion } from "framer-motion";
+import { SendEvent } from "../utils/SendEvent";
 const Ui = () => {
+  useEffect(() => {
+    SendEvent("UI Page");
+  }, []);
   return (
     <motion.div
       initial={{ width: "100%", opacity: 0 }}

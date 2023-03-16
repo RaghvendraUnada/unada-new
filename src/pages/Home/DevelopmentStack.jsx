@@ -233,7 +233,7 @@ const DevelopmentStack = () => {
                   </Box>
                   {/* <Box> */}
                   <Box sx={{ padding: "3rem" }}>
-                    <Fade top duration={1500}>
+                    <Fade top duration={1000}>
                       <Typography sx={verticalText}>
                         Application Development
                       </Typography>
@@ -308,7 +308,7 @@ const DevelopmentStack = () => {
                     </Typography>
                   </Box>
                   <Box sx={{ padding: "3rem" }}>
-                    <Fade top duration={1500}>
+                    <Fade top duration={1000}>
                       <Typography sx={verticalText}>
                         Website Development
                       </Typography>
@@ -693,7 +693,7 @@ const OpenDetails = (props) => {
         elevation={0}
       >
         <Box>
-          <Fade top duration={1800}>
+          <Fade top duration={1000}>
             <Typography sx={OpenDetailsTextStyle} className={styles.Text}>
               {props.title}
             </Typography>
