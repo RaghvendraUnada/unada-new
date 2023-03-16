@@ -540,7 +540,7 @@ const MainHeroPage = () => {
                   transform: "translate(-50%,-50%)",
                 }}
               >
-                <Fade top duration={1800}>
+                <Fade top duration={1000}>
                   <h1
                     className="textMainClass"
                     style={{

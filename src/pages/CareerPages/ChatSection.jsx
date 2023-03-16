@@ -66,10 +66,8 @@ const ChatSection = () => {
         }}
       >
         <Typography sx={textStyle1}>
-          <Fade top duration={1800}>
+          <Fade top duration={800}>
             Let’s chat,
-          </Fade>
-          <Fade top duration={1800}>
             <Typography
               sx={{
                 ...textStyle1,
