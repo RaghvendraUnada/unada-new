@@ -24,30 +24,31 @@ const WhiteServicesPage = () => {
   const [click2, setClick2] = useState(false);
   const [click3, setClick3] = useState(false);
   return (
-    <motion.div
-      initial={{ width: "100%", opacity: 0 }}
-      animate={{
-        width: "100%",
-        opacity: 1,
-        transition: { duration: 1, ease: "easeInOut" },
-      }}
-      exit={{
-        x: window.innerWidth,
-        opacity: 0,
-        transition: { duration: 1.3, ease: "easeInOut" },
-      }}
-      transition={{
-        ease: "easeInOut",
-        duration: "1s",
-      }}
-      // initial={{ opacity: 0.5 }}
-      // animate={{ opacity: 5 }}
-      // exit={{
-      //   opicity: 0.5,
-      //   transition: { duration: 0.7 },
-      //   background: "black",
-      // }}
-    >
+    // <motion.div
+    //   initial={{ width: "100%", opacity: 0 }}
+    //   animate={{
+    //     width: "100%",
+    //     opacity: 1,
+    //     transition: { duration: 1, ease: "easeInOut" },
+    //   }}
+    //   exit={{
+    //     x: window.innerWidth,
+    //     opacity: 0,
+    //     transition: { duration: 1.3, ease: "easeInOut" },
+    //   }}
+    //   transition={{
+    //     ease: "easeInOut",
+    //     duration: "1s",
+    //   }}
+    //   // initial={{ opacity: 0.5 }}
+    //   // animate={{ opacity: 5 }}
+    //   // exit={{
+    //   //   opicity: 0.5,
+    //   //   transition: { duration: 0.7 },
+    //   //   background: "black",
+    //   // }}
+    // >
+    <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
       <Paper
         elevation={0}
         sx={{ bgcolor: "white", borderRadius: "0px", minHeight: "100vh" }}
@@ -132,7 +133,7 @@ const WhiteServicesPage = () => {
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={paperTextStyle}>Application</Typography>
                     </Fade>
                     <Typography sx={activePaperText}>
@@ -185,7 +186,7 @@ const WhiteServicesPage = () => {
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={paperTextStyle}>Website</Typography>
                     </Fade>
                     <Typography sx={activePaperText}>
@@ -236,7 +237,7 @@ const WhiteServicesPage = () => {
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={paperTextStyle}>UI/UX</Typography>
                     </Fade>
                     <Typography sx={activePaperText}>
@@ -313,7 +314,7 @@ const WhiteServicesPage = () => {
                     }}
                   />
                   <Box sx={{}}>
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={mobileActivePapertext}>
                         Application
                       </Typography>
@@ -383,7 +384,7 @@ const WhiteServicesPage = () => {
                         position: "relative",
                       }}
                     />
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={mobileActivePapertext}>
                         Website
                       </Typography>
@@ -461,7 +462,7 @@ const WhiteServicesPage = () => {
                         position: "relative",
                       }}
                     />
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={mobileActivePapertext}>UI/UX</Typography>
                     </Fade>
                     <Typography sx={mobileActivePaperMetaText}>
@@ -511,7 +512,12 @@ const WhiteServicesPage = () => {
     </motion.div>
   );
 };
-
+const AnimationSettings = {
+  transition: { duration: 0.5 },
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 const paperStyle = {
   width: "auto",
 

@@ -78,7 +78,7 @@ const OurCultureSection = () => {
       }}
     >
       <Box>
-        <Fade top duration={1500}>
+        <Fade top duration={1000}>
           <Typography sx={headtext} className={selection.zero}>
             Our Culture
           </Typography>

@@ -22,26 +22,25 @@ const Application = () => {
     SendEvent("Application Page");
   }, []);
   return (
-    <motion.div
-      initial={{ width: "100%", opacity: 0 }}
-      animate={{
-        width: "100%",
-        opacity: 1,
-        transition: { duration: 1, ease: "easeInOut" },
-      }}
-      exit={{
-        x: -window.innerWidth,
-        opacity: 0,
-        transition: { duration: 1, ease: "easeInOut" },
-      }}
-      transition={{
-        ease: "easeInOut",
-        duration: "1s",
-      }}
-      // initial={{ opacity: 0.5 }}
-      // animate={{ opacity: 1 }}
-      // exit={{ opicity: 0.5 }}
-    >
+    // <motion.div
+    //   initial={{ width: "100%", opacity: 0 }}
+    //   animate={{
+    //     width: "100%",
+    //     opacity: 1,
+    //     transition: { duration: 1, ease: "easeInOut" },
+    //   }}
+    //   exit={{
+    //     x: -window.innerWidth,
+    //     opacity: 0,
+    //     transition: { duration: 1, ease: "easeInOut" },
+    //   }}
+    //   transition={{
+    //     ease: "easeInOut",
+    //     duration: "1s",
+    //   }}
+
+    // >
+    <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
       <Stack>
         <ApplicationHero />
         <Vision />
@@ -56,5 +55,10 @@ const Application = () => {
     </motion.div>
   );
 };
-
+const AnimationSettings = {
+  transition: { duration: 0.5 },
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 export default Application;
