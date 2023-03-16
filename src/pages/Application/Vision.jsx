@@ -83,7 +83,7 @@ const Vision = () => {
               }}
             >
               <Typography sx={mainText}>
-                <Fade top duration={1800}>
+                <Fade top duration={1000}>
                   Bring your Digital Vision to Life.
                 </Fade>
               </Typography>

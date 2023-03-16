@@ -85,7 +85,7 @@ const BlackTIntroComp = (props) => {
             },
           }}
         >
-          <Fade top duration={1800}>
+          <Fade top duration={1000}>
             <Typography sx={IntroMainText}>{props.Text1}</Typography>
             <Typography sx={IntroColorText}>{props.ColorText}</Typography>
           </Fade>

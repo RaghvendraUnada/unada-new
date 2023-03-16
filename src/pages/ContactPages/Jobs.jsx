@@ -46,7 +46,7 @@ const Jobs = () => {
           },
         }}
       >
-        <Fade top duration={1800}>
+        <Fade top duration={1000}>
           <Typography sx={text}>Unada Jobs</Typography>
         </Fade>
         <Typography sx={text1}>View our open position.</Typography>

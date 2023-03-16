@@ -83,7 +83,7 @@ const ContactUsSection = () => {
       >
         <Box>
           <Typography sx={contacttext}>
-            <Fade top duration={3800}>
+            <Fade top duration={1000}>
               Contact Us
             </Fade>
           </Typography>

@@ -63,7 +63,7 @@ const PreProject = () => {
           },
         }}
       >
-        <Fade top duration={1800}>
+        <Fade top duration={1000}>
           <Typography sx={mainText}>Previous Projects</Typography>
         </Fade>
       </Grid>

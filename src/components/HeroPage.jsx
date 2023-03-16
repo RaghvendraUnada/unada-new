@@ -93,7 +93,7 @@ const HeroPage = ({
               },
             }}
           >
-            <Fade top duration={1800}>
+            <Fade top duration={1000}>
               <Typography sx={mainText}>{mainText1}</Typography>
             </Fade>
             <Box mt={2}>
@@ -321,7 +321,7 @@ const HeroPage = ({
               },
             }}
           >
-            <Fade top duration={1800}>
+            <Fade top duration={1000}>
               <Typography sx={mainText}>{mainText1}</Typography>
             </Fade>
             <Box mt={2}>

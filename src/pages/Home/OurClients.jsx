@@ -30,7 +30,7 @@ const OurClients = () => {
           pt: 10,
         }}
       >
-        <Fade top duration={1500}>
+        <Fade top duration={1000}>
           <Typography sx={ParentTextStyle} className={selection.invert2}>
             Our Clients
           </Typography>

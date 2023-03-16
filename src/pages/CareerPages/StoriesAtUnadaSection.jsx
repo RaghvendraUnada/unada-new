@@ -129,7 +129,7 @@ const StoriesAtUnadaSection = () => {
           }}
         >
           <Box sx={{ display: "flex", gap: "5px" }}>
-            <Fade top duration={1800}>
+            <Fade top duration={1000}>
               <Typography
                 sx={{
                   ...textStyle1,

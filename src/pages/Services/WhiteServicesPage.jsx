@@ -125,7 +125,7 @@ const WhiteServicesPage = () => {
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={paperTextStyle}>Application</Typography>
                     </Fade>
                     <Typography sx={activePaperText}>
@@ -178,7 +178,7 @@ const WhiteServicesPage = () => {
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={paperTextStyle}>Website</Typography>
                     </Fade>
                     <Typography sx={activePaperText}>
@@ -229,7 +229,7 @@ const WhiteServicesPage = () => {
                         marginBottom: "2rem",
                       }}
                     /> */}
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={paperTextStyle}>UI/UX</Typography>
                     </Fade>
                     <Typography sx={activePaperText}>
@@ -307,7 +307,7 @@ const WhiteServicesPage = () => {
                   }}
                 />
                 <Box sx={{}}>
-                  <Fade top duration={1800}>
+                  <Fade top duration={1000}>
                     <Typography sx={mobileActivePapertext}>
                       Application
                     </Typography>
@@ -373,7 +373,7 @@ const WhiteServicesPage = () => {
                       position: "relative",
                     }}
                   />
-                  <Fade top duration={1800}>
+                  <Fade top duration={1000}>
                     <Typography sx={mobileActivePapertext}>Website</Typography>
                   </Fade>
                   <Typography sx={mobileActivePaperMetaText}>
@@ -449,7 +449,7 @@ const WhiteServicesPage = () => {
                       position: "relative",
                     }}
                   />
-                  <Fade top duration={1800}>
+                  <Fade top duration={1000}>
                     <Typography sx={mobileActivePapertext}>UI/UX</Typography>
                   </Fade>
                   <Typography sx={mobileActivePaperMetaText}>

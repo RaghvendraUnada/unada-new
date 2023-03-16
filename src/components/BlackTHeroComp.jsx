@@ -128,7 +128,7 @@ const BlackTHeroComp = (props) => {
             transform: "translate(0%,-50%)",
           }}
         >
-          <Fade top duration={1800}>
+          <Fade top duration={1000}>
             <Typography sx={heroTextStyle}>
               {props.text1}
               <Typography

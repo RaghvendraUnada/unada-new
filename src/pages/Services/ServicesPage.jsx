@@ -67,7 +67,7 @@ const ServicesPage = () => {
             {paper1 ? (
               <>
                 <Box sx={ActiveBoxStyles}>
-                  <Fade top duration={1800}>
+                  <Fade top duration={1000}>
                     <Typography sx={paperTextStyle}>Metaverse</Typography>
                   </Fade>
                   <Typography sx={activePaperText}>
@@ -128,7 +128,7 @@ const ServicesPage = () => {
             {paper2 ? (
               <>
                 <Box sx={ActiveBoxStyles}>
-                  <Fade top duration={1800}>
+                  <Fade top duration={1000}>
                     <Typography sx={paperTextStyle}>AR/VR</Typography>
                   </Fade>
                   <Typography sx={activePaperText}>
@@ -190,7 +190,7 @@ const ServicesPage = () => {
             {paper3 ? (
               <>
                 <Box sx={ActiveBoxStyles}>
-                  <Fade top duration={1800}>
+                  <Fade top duration={1000}>
                     <Typography sx={paperTextStyle}>Blockchain</Typography>
                   </Fade>
                   <Typography sx={activePaperText}>
@@ -307,7 +307,7 @@ const ServicesPage = () => {
                     }}
                   />
                   <Typography sx={mobileActivePaperMetaText}>
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={mobileActivePapertext} mb={2}>
                         Metaverse
                       </Typography>
@@ -371,7 +371,7 @@ const ServicesPage = () => {
                     }}
                   />
                   <Typography sx={mobileActivePaperMetaText}>
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={mobileActivePapertext} mb={2}>
                         AR/VR
                       </Typography>
@@ -434,7 +434,7 @@ const ServicesPage = () => {
                     }}
                   />
                   <Typography sx={mobileActivePaperMetaText}>
-                    <Fade top duration={1800}>
+                    <Fade top duration={1000}>
                       <Typography sx={mobileActivePapertext} mb={2}>
                         Blockchain
                       </Typography>
