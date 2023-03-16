@@ -190,7 +190,7 @@ const OurTeam = () => {
                         return (
                           <div class="gallery-image relative" key={idx}>
                             <div class="gallery-image__img relative">
-                              <EmployeeCard1 data={res} />
+                              <EmployeeCard2 data={res} />
                             </div>
                           </div>
                         );
@@ -270,6 +270,140 @@ const AnimatedGradientText = styled.h1`
 `;
 
 const EmployeeCard1 = (props) => {
+  const nameListEmp = [
+    {
+      name: "Ronak Goswami",
+      place: "Full Stack Developer",
+    },
+    {
+      name: "Zaid Shaikh ",
+      place: "Full Stack Developer",
+    },
+    {
+      name: "Raghvendra Singh ",
+      place: "Full Stack Developer",
+    },
+    {
+      name: "Shrikant Kanthale ",
+      place: "Front-end Developer",
+    },
+    {
+      name: "Sandeep Singh",
+      place: "UI/UX",
+    },
+    {
+      name: "Shreyansh Sheth",
+      place: "Full Stack Developer",
+    },
+    {
+      name: "Akash Mishra",
+      place: "Full-stack Developer",
+    },
+    {
+      name: "Yash Deliwala ",
+      place: "UI/UX",
+    },
+    {
+      name: "Harsiddh Rajput ",
+      place: "UI/UX",
+    },
+    {
+      name: "Devendra Chaudhari ",
+      place: "UI/UX",
+    },
+  ];
+  console.log(props.data);
+  return (
+    <Grid
+      item
+      xl={6}
+      lg={6}
+      md={6}
+      sm={6}
+      xs={12}
+      sx={{ mx: "auto", mt: 0, p: 0 }}
+      className={"employe-card employe-card-1"}
+    >
+      <Box
+        sx={{
+          height: "auto",
+          mx: "auto",
+        }}
+      >
+        {nameListEmp?.map((el, idx) => {
+          return (
+            <Box
+              sx={{
+                mt: idx === 0 ? "-30px" : 0,
+                height: "100%",
+                minHeight: "400px",
+              }}
+            >
+              <img
+                src={TeamImgOne}
+                style={{ width: "100%", height: "100%" }}
+                className={selection.zero}
+              />
+              <Typography sx={TeamNameTextStyle} className={selection.zero}>
+                {el.name}
+              </Typography>
+              <Typography
+                sx={TeamProfessionTextStyle}
+                className={selection.zero}
+              >
+                {el.place}
+              </Typography>
+            </Box>
+          );
+        })}
+      </Box>
+    </Grid>
+  );
+};
+
+const EmployeeCard2 = (props) => {
+  const nameListEmp = [
+    {
+      name: "Mit Shah",
+      place: "Full Stack Developer",
+    },
+    {
+      name: "Dev Mistry",
+      place: "Full Stack Developer",
+    },
+    {
+      name: "Jahnavi Makwana ",
+      place: "UI/UX",
+    },
+    {
+      name: "Tejas Lohar",
+      place: "DevOps",
+    },
+    {
+      name: "Samir Vitlani",
+      place: "UI/UX",
+    },
+    {
+      name: "Khushboo Rai ",
+      place: "UI/UX",
+    },
+    {
+      name: "Rutuja Karnavat ",
+      place: "UI/UX",
+    },
+    {
+      name: "Virendra Parihar",
+      place: "UI/UX",
+    },
+    {
+      name: "Harikrushna Chuhan",
+      place: "UI/UX",
+    },
+    {
+      name: "Nammish Gadhiya ",
+      place: "UI/UX",
+    },
+  ];
   console.log(props.data);
   return (
     <Grid
@@ -288,56 +422,67 @@ const EmployeeCard1 = (props) => {
           mx: "auto",
         }}
       >
-        <img
-          src={TeamImgOne}
-          style={{ width: "100%", height: "100%" }}
-          className={selection.zero}
-        />
-        <Typography sx={TeamNameTextStyle} className={selection.zero}>
-          {props?.data?.TeamMemberName
-            ? props?.data?.TeamMemberName
-            : "Lorem Ipsum"}
-        </Typography>
-        <Typography sx={TeamProfessionTextStyle} className={selection.zero}>
-          {props?.data?.TeamMemberPosition
-            ? props?.data?.TeamMemberPosition
-            : "Lorem Ipsum"}
-        </Typography>
+        {nameListEmp?.map((el, idx) => {
+          return (
+            <Box
+              sx={{
+                mt: idx === 0 ? "-30px" : 0,
+                height: "100%",
+                minHeight: "400px",
+              }}
+            >
+              <img
+                src={TeamImgOne}
+                style={{ width: "100%", height: "100%" }}
+                className={selection.zero}
+              />
+              <Typography sx={TeamNameTextStyle} className={selection.zero}>
+                {el.name}
+              </Typography>
+              <Typography
+                sx={TeamProfessionTextStyle}
+                className={selection.zero}
+              >
+                {el.place}
+              </Typography>
+            </Box>
+          );
+        })}
       </Box>
     </Grid>
   );
 };
 
-const EmployeeCard2 = () => {
-  return (
-    <Grid
-      // scrollEnabled={false}
-      // nestedScrollEnabled={false}
-      item
-      xl={6}
-      lg={6}
-      md={6}
-      sm={6}
-      xs={12}
-      sx={{ mx: "auto", mt: 4 }}
-      className={"employe-card employe-card-2"}
-    >
-      <Box
-        // scrollEnabled={false}
-        sx={{
-          // width: "90%",
-          // maxWidth: "500px",
-          height: "auto",
-          mx: "auto",
-        }}
-      >
-        <img src={TeamImgTwo} style={{ width: "100%", height: "100%" }} />
-        <Typography sx={TeamNameTextStyle}>Alex Rook</Typography>
-        <Typography sx={TeamProfessionTextStyle}>Web Designer</Typography>
-      </Box>
-    </Grid>
-  );
-};
+// const EmployeeCard2 = () => {
+//   return (
+//     <Grid
+//       // scrollEnabled={false}
+//       // nestedScrollEnabled={false}
+//       item
+//       xl={6}
+//       lg={6}
+//       md={6}
+//       sm={6}
+//       xs={12}
+//       sx={{ mx: "auto", mt: 4 }}
+//       className={"employe-card employe-card-2"}
+//     >
+//       <Box
+//         // scrollEnabled={false}
+//         sx={{
+//           // width: "90%",
+//           // maxWidth: "500px",
+//           height: "auto",
+//           mx: "auto",
+//         }}
+//       >
+//         <img src={TeamImgTwo} style={{ width: "100%", height: "100%" }} />
+//         <Typography sx={TeamNameTextStyle}>Alex Rook</Typography>
+//         <Typography sx={TeamProfessionTextStyle}>Web Designer</Typography>
+//       </Box>
+//     </Grid>
+//   );
+// };
 
 const OurTeamTextStyle = {
   fontFamily: "LGLight",
@@ -362,6 +507,7 @@ const TeamNameTextStyle = {
   letterSpacing: "0.01px",
   color: "#000",
   // ml: 2,
+  mt: 0.5,
 };
 
 const TeamProfessionTextStyle = {
@@ -372,6 +518,7 @@ const TeamProfessionTextStyle = {
   lineHeight: { xl: "20px", lg: "18px", md: "16px", sm: "16px", xs: "15px" },
   letterSpacing: "0.01px",
   color: "#000",
+  mb: 3,
 };
 
 const coloredText = {

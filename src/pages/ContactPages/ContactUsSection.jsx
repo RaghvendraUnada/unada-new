@@ -12,7 +12,12 @@ const ContactUsSection = () => {
   let location = useLocation();
   // console.log(location);
   const handleSubmit = async () => {
-    // alert("Thank You!");
+    console.log({
+      FirstName: firstname,
+      LastName: lastname,
+      Email: email,
+      Message: message,
+    });
     return await axios
       .post("/contact_us/add_contact_data", {
         FirstName: firstname,

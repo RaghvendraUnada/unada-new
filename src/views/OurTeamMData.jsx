@@ -7,7 +7,7 @@ const OurTeamMData = (props) => {
   return (
     <Marquee
       gradient={false}
-      speed={15}
+      speed={20}
       pauseOnHover={false}
       // pauseOnClick={true}
       direction={"left"}
@@ -56,8 +56,8 @@ const OurTeamMData = (props) => {
               alt="Team Member"
             />
             <Box>
-              <Typography sx={TextStyleOne}>{client.TeamMemberName}</Typography>
-              <Typography sx={TextStyleTwo}>{client.TeamMemberName}</Typography>
+              {/* <Typography sx={TextStyleOne}>{client.TeamMemberName}</Typography>
+              <Typography sx={TextStyleTwo}>{client.TeamMemberName}</Typography> */}
             </Box>
           </Box>
         );
