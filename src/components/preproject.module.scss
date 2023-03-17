@@ -1,0 +1,92 @@
+      /* Zoom Out #1 */
+      .hover03 figure img {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        -webkit-transition: .8s ease-in-out;
+        transition: .8s ease-in-out;
+      }
+      .hover03 figure:hover img {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+
+      figure {
+        border-radius: 10px;
+        width: 700px;
+        height: 450px;
+        margin: auto;
+        padding: auto;
+        overflow: hidden;
+      }
+
+      .imgs{
+        width: 700px;
+        height: 450px;
+      }
+
+      @media (max-width:900px) and (min-width:800){
+        .hover03 figure img {
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+            -webkit-transition: .8s ease-in-out;
+            transition: .8s ease-in-out;
+          }
+          .hover03 figure:hover img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+        figure {
+            border-radius: 10px;
+            width: 450px;
+            height: 250px;
+            overflow: hidden;
+          }
+          .imgs{
+            width: 550px;
+            height: 350px;
+          }
+      }
+      @media (max-width:800px){
+        .hover03 figure img {
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+            -webkit-transition: .8s ease-in-out;
+            transition: .8s ease-in-out;
+          }
+          .hover03 figure:hover img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+        figure {
+            border-radius: 10px;
+            width: 350px;
+            height: 250px;
+            overflow: hidden;
+          }
+          .imgs{
+            width: 350px;
+            height: 250px;
+          }
+      }
+      @media (max-width:600px) {
+        .hover03 figure img {
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+            -webkit-transition: .8s ease-in-out;
+            transition: .8s ease-in-out;
+          }
+          .hover03 figure:hover img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+        figure {
+            border-radius: 10px;
+            width: 250px;
+            height: 150px;
+            overflow: hidden;
+          }
+          .imgs{
+            width: 250px;
+            height: 150px;
+          }
+      }

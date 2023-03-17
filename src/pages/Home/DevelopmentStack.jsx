@@ -308,11 +308,9 @@ const DevelopmentStack = () => {
                     </Typography>
                   </Box>
                   <Box sx={{ padding: "3rem" }}>
-                    <Fade top duration={1000}>
-                      <Typography sx={verticalText}>
-                        Website Development
-                      </Typography>
-                    </Fade>
+                    <Typography sx={verticalText}>
+                      Website Development
+                    </Typography>
                     <Typography sx={paperTextStyle1}>
                       Unada specializes in web design, development, and
                       maintenance. Our team of experienced developers,

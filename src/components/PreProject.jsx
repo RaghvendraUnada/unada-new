@@ -9,6 +9,7 @@ import EastSharpIcon from "@mui/icons-material/EastSharp";
 import styles from "../pages/Services/Service.module.css";
 import Fade from "react-reveal/Fade";
 import { useRef } from "react";
+import preStyles from "./preproject.module.scss";
 const PreProject = () => {
   const [icon1, setIcon1] = useState("black");
   const [icon2, setIcon2] = useState("black");
@@ -98,17 +99,6 @@ const PreProject = () => {
             zIndex: "10",
           }}
         >
-          {/* <img
-            style={{ height: "40px" }}
-            src={blackArrowImg}
-            alt="nextImg"
-            onClick={() => {
-              scollToRef?.current?.scroll(
-                scollToRef?.current?.scrollLeft - boxRef?.current?.offsetWidth,
-                0
-              );
-            }}
-          /> */}
           <Box
             className={styles.CarouselArrowImg}
             onMouseOut={() => setIcon1("black")}
@@ -140,17 +130,6 @@ const PreProject = () => {
             zIndex: "10",
           }}
         >
-          {/* <img
-            style={{ height: "40px" }}
-            src={blackArrowImg}
-            alt="nextImg"
-            onClick={() => {
-              scollToRef?.current?.scroll(
-                scollToRef?.current?.scrollLeft + boxRef?.current?.offsetWidth,
-                0
-              );
-            }}
-          /> */}
           <Box
             className={styles.CarouselArrowImg}
             onMouseOut={() => setIcon2("black")}
@@ -179,20 +158,57 @@ const PreProject = () => {
               sm: "1.8rem",
               xs: "1rem",
             },
-            // marginLeft: "-160px",v
+            // marginLeft: "-160px",
             marginTop: "2rem",
-            marginLeft: "-100px",
+            marginLeft: {
+              xl: "-250px",
+              lg: "-250px",
+              md: "-250px",
+              sm: "-90px",
+              xs: "-90px",
+            },
           }}
           id="abc"
           // ref={myRef}
           ref={scollToRef}
         >
-          <Box component="img" id="ill" alt="hello" sx={imge} src={pre1} />
+          {/* <Box component="img" id="ill" alt="hello" sx={imge} src={pre1} />
           <Box ref={boxRef} component="img" alt="hello" sx={imge} src={pre2} />
           <Box component="img" alt="hello" sx={imge} src={pre3} />
           <Box component="img" alt="hello" sx={imge} src={pre1} />
           <Box component="img" alt="hello" sx={imge} src={pre2} />
-          <Box component="img" alt="hello" sx={imge} src={pre3} />
+          <Box component="img" alt="hello" sx={imge} src={pre3} /> */}
+
+          <Box class={preStyles.hover03}>
+            <figure>
+              <Box component="img" className={preStyles.imgs} src={pre1} />
+            </figure>
+          </Box>
+          <Box class={preStyles.hover03}>
+            <figure>
+              <Box component="img" className={preStyles.imgs} src={pre2} />
+            </figure>
+          </Box>
+          <Box class={preStyles.hover03}>
+            <figure>
+              <Box component="img" className={preStyles.imgs} src={pre3} />
+            </figure>
+          </Box>
+          <Box class={preStyles.hover03}>
+            <figure>
+              <Box component="img" className={preStyles.imgs} src={pre1} />
+            </figure>
+          </Box>
+          <Box class={preStyles.hover03}>
+            <figure>
+              <Box component="img" className={preStyles.imgs} src={pre2} />
+            </figure>
+          </Box>
+          <Box class={preStyles.hover03}>
+            <figure>
+              <Box component="img" className={preStyles.imgs} src={pre3} />
+            </figure>
+          </Box>
         </Box>
       </Grid>
     </Grid>
@@ -228,12 +244,8 @@ const mainText = {
   // marginBottom: "2rem",
 };
 
-const imge = {
-  height: { xl: "80%", lg: "80%", md: "70%", sm: "60%", xs: "60%" },
-  width: { xl: "80%", lg: "80%", md: "70%", sm: "60%", xs: "60%" },
-  transition: "0.5s all ease-in-out",
-  cursor: "pointer",
-  "&:hover": {
-    transform: "scale(0.9)",
-  },
-};
+// const imge = {
+//   height: "350px",
+//   width: "600px",
+//   cursor: "pointer",
+// };
