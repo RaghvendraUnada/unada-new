@@ -304,11 +304,7 @@ const EmployeeCard1 = (props) => {
       name: "Ronak Goswami",
       place: "Full Stack Developer",
     },
-    {
-      img: Zaid,
-      name: "Zaid Shaikh ",
-      place: "Full Stack Developer",
-    },
+
     {
       img: Raghvendra,
       name: "Raghvendra Singh ",
@@ -337,22 +333,27 @@ const EmployeeCard1 = (props) => {
     {
       img: Yash,
       name: "Yash Deliwala ",
-      place: "UI/UX",
+      place: "HR",
     },
     {
       img: Harsiddh,
       name: "Harsiddh Rajput ",
-      place: "UI/UX",
+      place: "3D",
     },
     {
       img: Zaid,
       name: "Devendra Chaudhari ",
-      place: "UI/UX",
+      place: "3D",
     },
     {
       img: Nishit,
       name: "Nishit",
-      place: "UI/UX",
+      place: "3D",
+    },
+    {
+      img: Zaid,
+      name: "Zaid Shaikh ",
+      place: "Full Stack Developer",
     },
   ];
   console.log(props.data);
@@ -440,17 +441,17 @@ const EmployeeCard2 = (props) => {
     {
       img: Khushboo,
       name: "Khushboo Rai ",
-      place: "UI/UX",
+      place: "Andriod Developer",
     },
     {
       img: Rutuja,
       name: "Rutuja Karnavat ",
-      place: "UI/UX",
+      place: "HR",
     },
     {
       img: Virendra,
       name: "Virendra Parihar",
-      place: "UI/UX",
+      place: "Andriod Developer",
     },
     {
       img: TeamImgOne,
@@ -460,7 +461,7 @@ const EmployeeCard2 = (props) => {
     {
       img: Nammish,
       name: "Nammish Gadhiya ",
-      place: "UI/UX",
+      place: "Full Stack Developer",
     },
     {
       img: Aashvi,

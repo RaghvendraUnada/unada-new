@@ -211,35 +211,67 @@ const MainHeroPage = () => {
                           height: "auto",
                           maxWidth: "35px",
                           // bgcolor: "red",
-                          transition: "0.3s all linear",
+                          transition: "0.5s all linear",
                           opacity: 0,
                           "&:hover": {
                             // bgcolor: "red",
-                            transform: "scale(1.15)",
+                            transform: "scale(1.1)",
                             opacity: 1,
+                          },
+                          "&:focus": {
+                            background: "transparent",
+                          },
+                          "&:click": {
+                            bgColor: "transparent",
+                          },
+                          "& .MuiTouchRipple-root span": {
+                            backgroundColor: "transparent !important",
+                            opacity: 1,
+                          },
+                          "& .MuiTouchRipple-rippleVisible": {
+                            color: "transparent !important",
                           },
                         }}
                         alt="whyChooseUsimg"
                         className={HeaderStyles.MenuIcon}
                       />
                     ) : (
-                      <Box
-                        component="img"
+                      <Button
                         src={OpenButton}
                         sx={{
-                          width: "40%",
-                          height: "auto",
-                          maxWidth: "28px",
-                          transition: "0.3s all linear",
+                          transition: "0.4s all linear",
+                          // bgcolor: "red",
                           "&:hover": {
-                            // bgcolor: "red",
+                            background: "transparent",
                             // transform: "scale(1.15)",
                             transform: "rotate(360deg)",
+                          },
+                          "&:focus": {
+                            background: "transparent",
+                          },
+                          "&:click": {
+                            bgColor: "transparent",
+                          },
+                          "& .MuiTouchRipple-root span": {
+                            backgroundColor: "transparent !important",
+                            opacity: 1,
+                          },
+                          "& .MuiTouchRipple-rippleVisible": {
+                            color: "#005d83 !important",
                           },
                         }}
                         alt="whyChooseUsimg"
                         className={HeaderStyles.MenuIcon}
-                      />
+                      >
+                        <img
+                          src={OpenButton}
+                          style={{
+                            width: "40%",
+                            height: "auto",
+                            maxWidth: "28px",
+                          }}
+                        />
+                      </Button>
                     )}
                   </Button>
                 ) : (
@@ -741,6 +773,19 @@ const ButtonStyle = {
     textDecoration: "line-through",
   },
   ml: "2.3%",
+  "&:focus": {
+    background: "transparent",
+  },
+  "&:click": {
+    bgColor: "transparent",
+  },
+  "& .MuiTouchRipple-root span": {
+    backgroundColor: "transparent !important",
+    opacity: 1,
+  },
+  "& .MuiTouchRipple-rippleVisible": {
+    color: "transparent !important",
+  },
 };
 const LinkStyles = {
   textDecoration: "none",

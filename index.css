@@ -6,6 +6,7 @@
 
 body {
   background: #000;
+  font-family: "LGRegular";
 }
 html {
   font-size: 62.5%;
@@ -53,6 +54,7 @@ ul .indicators {
 .indicators {
   bottom: 161px !important;
 }
+
 @media (max-width: 768px) {
   html {
     font-size: 55%;

@@ -14,7 +14,9 @@ body {
   min-height: 100vh;
   -webkit-tap-highlight-color: transparent;
   /* user-select: none; */
+  font-family: "MBFCanno";
 }
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;

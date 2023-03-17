@@ -86,8 +86,8 @@ const CareerHeroSection = () => {
                 >
                   Join a team
                 </Typography>
-                {/* </Fade>
-              <Fade top duration={1100}> */}
+              </Fade>
+              <Fade top duration={900}>
                 <Typography
                   // className="animate-charcter"
                   className={selection.invert}

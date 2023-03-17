@@ -70,7 +70,7 @@ function App() {
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
+    setTimeout(() => setLoading(false), 2000);
   }, []);
   const [cursorVariant, setCursorVariant] = useState("default");
   window.addEventListener("scroll", () => {
@@ -186,13 +186,11 @@ function App() {
                               locationdta.pathname === "/home" ||
                               locationdta.pathname === "/service" ||
                               locationdta.pathname === "/ArVr" ||
-                              locationdta.pathname === "/blockchain" ||
-                              locationdta.pathname === "/contact" ? (
+                              locationdta.pathname === "/blockchain" ? (
                                 <Box
                                   component="img"
                                   sx={{
                                     transition: "0.3s all linear",
-                                    // background: "red",
                                     "&:hover": {
                                       // transform: "scale(1.15)",
                                       transform: "rotate(360deg)",
@@ -296,7 +294,7 @@ function App() {
                         marginLeft: "auto",
                         marginRight: "auto",
                         marginTop: open ? "0vh" : "-100vh",
-                        transition: "all 1s ",
+                        // transition: "all 5s ",
                         borderRadius: "0px",
                         bgcolor: open ? "#fff" : "transparent",
                       }}
@@ -874,7 +872,7 @@ function App() {
                 <Footer />
               )}
             </Stack>
-            <motion.div
+            {/* <motion.div
               className="whatsappicon"
               style={{
                 marginRight: WhatsappView ? "0px" : "-100px",
@@ -904,7 +902,7 @@ function App() {
                   }}
                 />
               </Box>
-            </motion.div>
+            </motion.div> */}
           </Paper>
         </motion.div>
       ) : (

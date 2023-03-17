@@ -28,6 +28,7 @@
   }
   .textMainClass {
     line-height: 40px;
+    /* font-family: "MBFCanno"; */
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 400px) {

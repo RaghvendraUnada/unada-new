@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useLayoutEffect } from "react";
 import { Stack } from "@mui/material";
 import ApplicationHero from "../pages/Application/ApplicationHero";
 import Vision from "../pages/Application/Vision";
@@ -21,6 +21,10 @@ const Application = () => {
   useEffect(() => {
     SendEvent("Application Page");
   }, []);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     // <motion.div
     //   initial={{ width: "100%", opacity: 0 }}
