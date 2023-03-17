@@ -3,7 +3,8 @@ import { Typography, Box, Paper, Grid, Stack, Skeleton } from "@mui/material";
 // import UnadaLife from "../../assets/Images/Career/unadalife.svg";
 // import UnadaSLife1 from "../../assets/Images/Career/unadaslife1.svg";
 // import UnadaSLife2 from "../../assets/Images/Career/unadaslife2.svg";
-import UnadaSLife3 from "../../assets/Images/Career/unadalife3.svg";
+// import UnadaSLife3 from "../../assets/Images/Career/unadalife3.svg";
+import unadasLifeImg from "../../assets/Images/cutOutImg/1.webp";
 // import culture5 from "../../assets/Images/Career/realCulture/"
 // import Skeleton from '@mui/material/Skeleton'
 import selection from "../../pages/Home/home.module.css";
@@ -31,7 +32,7 @@ function UnadalifeSection() {
         >
           <img
             alt="Unada Life"
-            src={UnadaSLife3}
+            src={unadasLifeImg}
             style={{
               width: "100%",
               height: "auto",

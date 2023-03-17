@@ -12,6 +12,22 @@ import axios from "axios";
 import Fade from "react-reveal/Fade";
 import selection from "./home.module.css";
 import { useSpring, animated } from "react-spring";
+import Zaid from "../../assets/Images/ourTeamCutOut/Zaid.webp";
+import Raghvendra from "../../assets/Images/ourTeamCutOut/Raghvendra.webp";
+import Ronak from "../../assets/Images/ourTeamCutOut/Ronak.webp";
+import Shri from "../../assets/Images/ourTeamCutOut/Shri.webp";
+import Sandeep from "../../assets/Images/ourTeamCutOut/Sandeep.webp";
+import Akash from "../../assets/Images/ourTeamCutOut/Akash.webp";
+import Yash from "../../assets/Images/ourTeamCutOut/Yash.webp";
+import Harsiddh from "../../assets/Images/ourTeamCutOut/Harsiddh.webp";
+import Mit from "../../assets/Images/ourTeamCutOut/Mit.webp";
+import Khushboo from "../../assets/Images/ourTeamCutOut/Khushboo.webp";
+import Jin from "../../assets/Images/ourTeamCutOut/Jin.webp";
+import Rutuja from "../../assets/Images/ourTeamCutOut/Rutuja.webp";
+import Virendra from "../../assets/Images/ourTeamCutOut/Virendra.webp";
+import Nammish from "../../assets/Images/ourTeamCutOut/Nammish.webp";
+import Nishit from "../../assets/Images/ourTeamCutOut/Nishit.webp";
+import Aashvi from "../../assets/Images/ourTeamCutOut/Aashvi.webp";
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
   const [flip, setFlip] = useState(false);
@@ -84,13 +100,11 @@ const OurTeam = () => {
           }}
         >
         </motion.p> */}
-        {/* <Fade top duration={1000}> */}
-        <animated.div styled={props}>
+        <Fade top duration={1000}>
           <Typography sx={OurTeamTextStyle} className={selection.zero}>
             Our Team
           </Typography>
-        </animated.div>
-        {/* </Fade> */}
+        </Fade>
       </Paper>
       <Paper
         sx={{
@@ -286,43 +300,58 @@ const AnimatedGradientText = styled.h1`
 const EmployeeCard1 = (props) => {
   const nameListEmp = [
     {
+      img: Ronak,
       name: "Ronak Goswami",
       place: "Full Stack Developer",
     },
     {
+      img: Zaid,
       name: "Zaid Shaikh ",
       place: "Full Stack Developer",
     },
     {
+      img: Raghvendra,
       name: "Raghvendra Singh ",
       place: "Full Stack Developer",
     },
     {
+      img: Shri,
       name: "Shrikant Kanthale ",
       place: "Front-end Developer",
     },
     {
+      img: Sandeep,
       name: "Sandeep Singh",
       place: "UI/UX",
     },
     {
+      img: Zaid,
       name: "Shreyansh Sheth",
       place: "Full Stack Developer",
     },
     {
+      img: Akash,
       name: "Akash Mishra",
       place: "Full-stack Developer",
     },
     {
+      img: Yash,
       name: "Yash Deliwala ",
       place: "UI/UX",
     },
     {
+      img: Harsiddh,
       name: "Harsiddh Rajput ",
       place: "UI/UX",
     },
     {
+      img: Zaid,
       name: "Devendra Chaudhari ",
+      place: "UI/UX",
+    },
+    {
+      img: Nishit,
+      name: "Nishit",
       place: "UI/UX",
     },
   ];
@@ -350,11 +379,17 @@ const EmployeeCard1 = (props) => {
               sx={{
                 mt: idx === 0 ? "-30px" : 0,
                 height: "100%",
-                minHeight: "400px",
+                minHeight: {
+                  xl: "380px",
+                  lg: "380px",
+                  md: "350px",
+                  sm: "300px",
+                  xs: "250px",
+                },
               }}
             >
               <img
-                src={TeamImgOne}
+                src={el.img}
                 style={{ width: "100%", height: "100%" }}
                 className={selection.zero}
               />
@@ -378,43 +413,58 @@ const EmployeeCard1 = (props) => {
 const EmployeeCard2 = (props) => {
   const nameListEmp = [
     {
+      img: Mit,
       name: "Mit Shah",
       place: "Full Stack Developer",
     },
     {
+      img: TeamImgOne,
       name: "Dev Mistry",
       place: "Full Stack Developer",
     },
     {
+      img: Jin,
       name: "Jahnavi Makwana ",
       place: "UI/UX",
     },
     {
+      img: TeamImgOne,
       name: "Tejas Lohar",
       place: "DevOps",
     },
     {
+      img: TeamImgOne,
       name: "Samir Vitlani",
       place: "UI/UX",
     },
     {
+      img: Khushboo,
       name: "Khushboo Rai ",
       place: "UI/UX",
     },
     {
+      img: Rutuja,
       name: "Rutuja Karnavat ",
       place: "UI/UX",
     },
     {
+      img: Virendra,
       name: "Virendra Parihar",
       place: "UI/UX",
     },
     {
-      name: "Harikrushna Chuhan",
+      img: TeamImgOne,
+      name: "Harikrushna Chauhan",
+      place: "Software Tester",
+    },
+    {
+      img: Nammish,
+      name: "Nammish Gadhiya ",
       place: "UI/UX",
     },
     {
-      name: "Nammish Gadhiya ",
+      img: Aashvi,
+      name: "aashvi zala ",
       place: "UI/UX",
     },
   ];
@@ -440,13 +490,19 @@ const EmployeeCard2 = (props) => {
           return (
             <Box
               sx={{
-                mt: idx === 0 ? "-30px" : 0,
+                mt: idx === 0 ? "-60px" : 0,
                 height: "100%",
-                minHeight: "400px",
+                minHeight: {
+                  xl: "380px",
+                  lg: "380px",
+                  md: "350px",
+                  sm: "300px",
+                  xs: "250px",
+                },
               }}
             >
               <img
-                src={TeamImgOne}
+                src={el.img}
                 style={{ width: "100%", height: "100%" }}
                 className={selection.zero}
               />
