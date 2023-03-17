@@ -10,40 +10,25 @@ import IntroImg1 from "../../assets/Images/Career/IntroImg1.svg";
 import Slider from "react-slick";
 import "./CareerIntroSection.css";
 import selection from "../../pages/Home/home.module.css";
-import culture23 from "../../assets/Images/Career/imginwebp/14.webp";
-import culture21 from "../../assets/Images/Career/imginwebp/15.webp";
-import culture24 from "../../assets/Images/Career/imginwebp/16.webp";
-import culture11 from "../../assets/Images/Career/imginwebp/17.webp";
-import culture12 from "../../assets/Images/Career/imginwebp/18.webp";
-import culture13 from "../../assets/Images/Career/imginwebp/19.webp";
-import culture14 from "../../assets/Images/Career/imginwebp/20.webp";
-import culture15 from "../../assets/Images/Career/imginwebp/21.webp";
-import culture16 from "../../assets/Images/Career/imginwebp/22.webp";
+import Unada3 from "../../assets/Images/cutOutImg/3.webp";
+import Unada9 from "../../assets/Images/cutOutImg/9.webp";
+import Unada4 from "../../assets/Images/cutOutImg/4.webp";
+import Unada5 from "../../assets/Images/cutOutImg/5.webp";
+import Unada2 from "../../assets/Images/cutOutImg/2.webp";
+import Unada7 from "../../assets/Images/cutOutImg/7.webp";
+import Unada21 from "../../assets/Images/cutOutImg/21.webp";
+import Unada19 from "../../assets/Images/cutOutImg/19.webp";
+import Unada10 from "../../assets/Images/cutOutImg/10.webp";
 const ImgArr = [
-  // IntroImg1,
-  // IntroImg1,
-  // IntroImg1,
-  // IntroImg1,
-  // IntroImg1,
-  // IntroImg1,
-  // culture21,
-  // culture23,
-  // culture24,
-  // culture11,
-  // culture12,
-  // culture13,
-  // culture14,
-  // culture15,
-  // culture16,
-  { src: culture21, text: "Our Design Team" },
-  { src: culture23, text: "Our Dev Team" },
-  { src: culture24, text: "Our 3D Team" },
-  { src: culture11, text: "Our just Team" },
-  { src: culture12, text: "Our Design Team" },
-  { src: culture13, text: "Our Design Team" },
-  { src: culture14, text: "Our Design Team" },
-  { src: culture15, text: "Our Design Team" },
-  { src: culture16, text: "Our Design Team" },
+  { src: Unada3, text: "Our Design Team" },
+  { src: Unada9, text: "Our Design Team" },
+  { src: Unada4, text: "Our Design Team" },
+  { src: Unada5, text: "Our Design Team" },
+  { src: Unada2, text: "Our Design Team" },
+  { src: Unada7, text: "Our Design Team" },
+  { src: Unada21, text: "Our Design Team" },
+  { src: Unada19, text: "Our Design Team" },
+  { src: Unada10, text: "Our Design Team" },
 ];
 
 function SampleNextArrow(props) {

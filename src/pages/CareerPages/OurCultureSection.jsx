@@ -1,31 +1,15 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
-import culture1 from "../../assets/Images/Career/Culturesqueez/1.webp";
-import culture2 from "../../assets/Images/Career/Culturesqueez/2.webp";
-import culture3 from "../../assets/Images/Career/Culturesqueez/3.webp";
-import culture4 from "../../assets/Images/Career/Culturesqueez/4.webp";
-import culture5 from "../../assets/Images/Career/Culturesqueez/5.webp";
-import culture6 from "../../assets/Images/Career/Culturesqueez/6.webp";
-import culture7 from "../../assets/Images/Career/Culturesqueez/7.webp";
-import culture8 from "../../assets/Images/Career/Culturesqueez/8.webp";
-import culture9 from "../../assets/Images/Career/Culturesqueez/9.webp";
-import culture10 from "../../assets/Images/Career/Culturesqueez/10.webp";
-import culture11 from "../../assets/Images/Career/Culturesqueez/11.webp";
-import culture12 from "../../assets/Images/Career/Culturesqueez/12.webp";
-import culture13 from "../../assets/Images/Career/Culturesqueez/13.webp";
-import culture14 from "../../assets/Images/Career/Culturesqueez/14.webp";
-import culture15 from "../../assets/Images/Career/Culturesqueez/15.webp";
-import culture16 from "../../assets/Images/Career/Culturesqueez/16.webp";
-import culture17 from "../../assets/Images/Career/Culturesqueez/17.webp";
-import culture18 from "../../assets/Images/Career/Culturesqueez/18.webp";
-import culture19 from "../../assets/Images/Career/Culturesqueez/19.webp";
-import culture20 from "../../assets/Images/Career/Culturesqueez/20.webp";
-import culture21 from "../../assets/Images/Career/Culturesqueez/21.webp";
-import culture22 from "../../assets/Images/Career/Culturesqueez/22.webp";
-import culture23 from "../../assets/Images/Career/Culturesqueez/23.webp";
-import culture24 from "../../assets/Images/Career/Culturesqueez/24.webp";
-// import culture25 from "../../assets/Images/Career/Culturesqueez/newsqueez.jpg";
-
+import cul20 from "../../assets/Images/cutOutImg/20.webp";
+import cul13 from "../../assets/Images/cutOutImg/13.webp";
+import cul16 from "../../assets/Images/cutOutImg/16.webp";
+import cul23 from "../../assets/Images/cutOutImg/23.webp";
+import cul11 from "../../assets/Images/cutOutImg/11.webp";
+import chess from "../../assets/Images/cutOutImg/chess.webp";
+import cul18 from "../../assets/Images/cutOutImg/18.webp";
+import cul17 from "../../assets/Images/cutOutImg/17.webp";
+import cul24 from "../../assets/Images/cutOutImg/24.webp";
+import cul14 from "../../assets/Images/cutOutImg/14.webp";
 import HorizontalScrollingList from "../../Components/Maarquee/HorizontalScrollingList";
 import Marquee from "react-fast-marquee";
 import { keyframes } from "styled-components";
@@ -36,30 +20,52 @@ import selection from "../../pages/Home/home.module.css";
 import Fade from "react-reveal/Fade";
 const OurCultureSection = () => {
   const images = [
-    culture1,
-    culture2,
-    culture3,
-    culture4,
-    culture5,
-    culture6,
-    culture7,
-    culture8,
-    culture9,
-    culture10,
-    culture11,
-    culture12,
-    culture13,
-    culture14,
-    culture15,
-    culture16,
-    culture17,
-    culture18,
-    culture19,
-    culture20,
-    culture21,
-    culture22,
-    culture23,
-    culture24,
+    cul20,
+    cul13,
+    cul16,
+    cul23,
+    chess,
+    cul18,
+    cul17,
+    cul24,
+    cul14,
+    // cul20,
+    // cul20,
+    // cul20,
+    // cul20,
+    // cul20,
+    // cul20,
+    // cul20,
+    // cul20,
+    // cul20,
+    // cul20,
+    // cul20,
+    // cul20,
+    // cul20,
+    // culture1,
+    // culture2,
+    // culture3,
+    // culture4,
+    // culture5,
+    // culture6,
+    // culture7,
+    // culture8,
+    // culture9,
+    // culture10,
+    // culture11,
+    // culture12,
+    // culture13,
+    // culture14,
+    // culture15,
+    // culture16,
+    // culture17,
+    // culture18,
+    // culture19,
+    // culture20,
+    // culture21,
+    // culture22,
+    // culture23,
+    // culture24,
     // culture25,
     // culture25,
     // culture25,
@@ -132,7 +138,7 @@ const OurCultureSection = () => {
         >
           <Marquee
             gradient={false}
-            speed={20}
+            speed={100}
             direction={"left"}
             infinite={true}
             style={{ height: "100%" }}
