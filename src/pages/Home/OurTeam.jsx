@@ -84,13 +84,11 @@ const OurTeam = () => {
           }}
         >
         </motion.p> */}
-        {/* <Fade top duration={1000}> */}
-        <animated.div styled={props}>
+        <Fade top duration={1000}>
           <Typography sx={OurTeamTextStyle} className={selection.zero}>
             Our Team
           </Typography>
-        </animated.div>
-        {/* </Fade> */}
+        </Fade>
       </Paper>
       <Paper
         sx={{
