@@ -22,9 +22,9 @@ const Application = () => {
     SendEvent("Application Page");
   }, []);
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  });
+  // useLayoutEffect(() => {
+  //   window.scrollTo(0, 0);
+  // });
   return (
     // <motion.div
     //   initial={{ width: "100%", opacity: 0 }}

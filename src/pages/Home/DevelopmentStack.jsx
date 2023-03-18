@@ -494,7 +494,7 @@ const DevelopmentStack = () => {
               <>
                 <Paper
                   sx={{
-                    // height: "50vh",
+                   
                     cursor: "pointer",
                   }}
                 >
@@ -511,10 +511,10 @@ const DevelopmentStack = () => {
                     <Typography sx={NumTextStyle}>5</Typography>
                     <Typography sx={ServiceText}>AR / VR</Typography>
                   </Box>
-                  {/* <Box> */}
+               
                   <Box sx={{ padding: "3rem" }}>
                     <Typography sx={verticalText}>AR / VR</Typography>
-                    {/* </Box> */}
+                 
                     <Typography sx={paperTextStyle1}>
                       Whether you're a game developer looking to create the next
                       big hit, a business owner looking for a unique way to
@@ -664,9 +664,7 @@ const OpenDetails = (props) => {
         opacity: 0,
         transition: { duration: 1, ease: "easeInOut" },
       }}
-      // initial={{ opacity: 1 }}
-      // animate={{ opacity: 2 }}
-      // exit={{ opicity: 1 }}
+   
     >
       <Paper
         sx={{

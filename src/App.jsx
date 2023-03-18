@@ -150,7 +150,7 @@ function App() {
                           }}
                           elevation={0}
                         >
-                          <Link to={"/"} style={{ textDecoration: "none" }}>
+                          <Link to={"/"} style={{ textDecoration: "none" ,  }}>
                             {locationdta.pathname === "/metaVerse" ||
                             locationdta.pathname === "/home" ||
                             locationdta.pathname === "/service" ||
@@ -294,7 +294,7 @@ function App() {
                         marginLeft: "auto",
                         marginRight: "auto",
                         marginTop: open ? "0vh" : "-100vh",
-                        // transition: "all 5s ",
+                        // transition: "all 1s ",
                         borderRadius: "0px",
                         bgcolor: open ? "#fff" : "transparent",
                       }}
