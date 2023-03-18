@@ -60,6 +60,8 @@ function App() {
   const [scrollState, setScroll] = useState(false);
   const [colorState, setColorState] = useState(false);
   const [currentLocation, setCurrentLocation] = useState("");
+
+  const [navfalse, setNavFalse] = useState(false);
   // const navigate = useNavigate();
   const [locationdata, setLocationData] = useState("");
   let location = window.location.pathname;
@@ -67,6 +69,8 @@ function App() {
   //   x: 0,
   //   y: 0,
   // });
+
+  console.log("navfalse", navfalse);
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -84,6 +88,17 @@ function App() {
       setOpen(false);
     }
   };
+
+  const { pathname } = useLocation();
+  console.log(pathname);
+  useEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <>
@@ -150,7 +165,7 @@ function App() {
                           }}
                           elevation={0}
                         >
-                          <Link to={"/"} style={{ textDecoration: "none" ,  }}>
+                          <Link to={"/"} style={{ textDecoration: "none" }}>
                             {locationdta.pathname === "/metaVerse" ||
                             locationdta.pathname === "/home" ||
                             locationdta.pathname === "/service" ||
@@ -180,7 +195,9 @@ function App() {
                                 ...ButtonStyle,
                                 mt: 0.75,
                               }}
-                              onClick={() => setOpen(true)}
+                              onClick={() => {
+                                setOpen(true), setNavFalse(true);
+                              }}
                             >
                               {locationdta.pathname === "/metaVerse" ||
                               locationdta.pathname === "/home" ||
@@ -229,7 +246,9 @@ function App() {
                           ) : (
                             <Button
                               sx={ButtonStyle}
-                              onClick={() => setOpen(false)}
+                              onClick={() => {
+                                setNavFalse(true), setOpen(false);
+                              }}
                             >
                               {/* <img
                           // src={Close}
@@ -286,6 +305,7 @@ function App() {
                         </Paper>
                       </Paper>
                     ) : null}
+
                     <Paper
                       sx={{
                         width: "100%",
@@ -294,9 +314,20 @@ function App() {
                         marginLeft: "auto",
                         marginRight: "auto",
                         marginTop: open ? "0vh" : "-100vh",
-                        // transition: "all 1s ",
+                        transition: navfalse ? "all 1s" : "all 0s",
                         borderRadius: "0px",
                         bgcolor: open ? "#fff" : "transparent",
+                        // width: "100%",
+                        // height: "100%",
+                        // minHeight: "100vh",
+                        // marginLeft: "auto",
+                        // marginRight: "auto",
+                        // marginTop: open ? "0vh" : "-100vh",
+                        // // opacity : open ? 1 :
+                        // transition: "all 1s ",
+                        // borderRadius: "0px",
+                        // // background: "red",
+                        // position: open ? "absolute" : "fixed",
                       }}
                       elevation={0}
                     >
@@ -325,7 +356,12 @@ function App() {
                           />
                         </Link>
 
-                        <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
+                        <Button
+                          sx={ButtonStyle}
+                          onClick={() => {
+                            setOpen(false), setNavFalse(false);
+                          }}
+                        >
                           Close
                         </Button>
                       </Paper>
@@ -744,6 +780,7 @@ function App() {
                           return (
                             <Link
                               onClick={() => {
+                                setNavFalse(false);
                                 setOpen(false);
                                 setLocationData(res.location);
                               }}

@@ -16,22 +16,21 @@ const Tech = [android, java, kotlin, react, flutter, swift];
 import { motion } from "framer-motion";
 import "../pages/Services/whiteservice.module.css";
 import { SendEvent } from "../utils/SendEvent";
-
+import {useLocation} from "react-router-dom"
 const Application = () => {
   useEffect(() => {
     SendEvent("Application Page");
   }, []);
-
-  // useLayoutEffect(() => {
-  //   window.scrollTo(0, 0);
-  // });
+ 
   return (
     // <motion.div
     //   initial={{ width: "100%", opacity: 0 }}
     //   animate={{
     //     width: "100%",
     //     opacity: 1,
-    //     transition: { duration: 1, ease: "easeInOut" },
+    //     transition:  // useLayoutEffect(() => {
+  //   window.scrollTo(0, 0);
+  // });{ duration: 1, ease: "easeInOut" },
     //   }}
     //   exit={{
     //     x: -window.innerWidth,
