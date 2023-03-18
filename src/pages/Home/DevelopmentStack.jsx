@@ -8,10 +8,8 @@ import { Link } from "react-router-dom";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import Fade from "react-reveal/Fade";
 import "./home.module.css";
-import { useNavigate } from "react-router-dom";
 
 const DevelopmentStack = () => {
-  let navigater = useNavigate();
   const [numberOne, setNumberOne] = useState(1);
   const [boxtextOne, setBoxtextOne] = useState("Application Development");
   const [boxTitle, setBoxTitle] = useState("Application Development");
@@ -143,6 +141,7 @@ const DevelopmentStack = () => {
             <OpenDetails title={boxTitle} desc={boxDesc} url={url} />
           </Grid>
           {DataArray.map((res, idx) => {
+            console.log(res.url);
             if (res.id) {
               return (
                 <Grid
@@ -651,7 +650,7 @@ const DevelopmentStack = () => {
 export default DevelopmentStack;
 
 const OpenDetails = (props) => {
-  console.log(props.url);
+  console.log(props);
   const [icon1, setIcon1] = useState("#9D9D9D");
   const [border, setBorder] = useState("");
   return (
@@ -702,7 +701,7 @@ const OpenDetails = (props) => {
           <Typography sx={OpenDetailsBottomTextStyle} className={styles.Text}>
             {props.desc}
           </Typography>
-          <Link to={props.url}>
+          <a href={props.url}>
             <Typography
               sx={{
                 fontSize: {
@@ -759,7 +758,7 @@ const OpenDetails = (props) => {
                 />
               </Box>
             </Typography>
-          </Link>
+          </a>
         </Box>
       </Paper>
     </motion.div>

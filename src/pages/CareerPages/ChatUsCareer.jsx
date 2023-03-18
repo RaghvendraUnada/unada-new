@@ -280,7 +280,7 @@ export default function ChatUs(props) {
                         />
                         <Typography sx={callUs}>Call us</Typography>
                       </Box>
-                      <Typography sx={phNo}>+91 989898989</Typography>
+                      <Typography sx={phNo}>+91 9510983354</Typography>
                     </Box>
                     <a
                       href="https://api.whatsapp.com/send/?phone=918980298568&text&type=phone_number&app_absent=0"
@@ -314,7 +314,7 @@ export default function ChatUs(props) {
                         }}
                       >
                         <Typography sx={linkText}>
-                          https://wa.me/919898989898
+                          https://wa.me/9510983354
                         </Typography>
                         <Box
                           sx={{
