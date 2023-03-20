@@ -235,6 +235,7 @@ const WhiteServicesPage = () => {
             >
               <Box
                 sx={{
+                  width: "100px",
                   top: {
                     xl: "50%",
                     lg: "50%",
@@ -304,7 +305,7 @@ const WhiteServicesPage = () => {
               >
                 <Box>
                   <img
-                    src={Applicationimg}
+                    src={ApplicationMobile}
                     alt="metaVerseImg"
                     style={{
                       height: "10%",
@@ -544,11 +545,12 @@ const WhiteServicesPage = () => {
   );
 };
 const AnimationSettings = {
-  transition: { duration: 0.4 },
-  initial: { opacity: 0 },
+  transition: { duration: 0.8 },
+  initial: { opacity: 0.5 },
   animate: { opacity: 1 },
-  exit: { opacity: 0 },
+  exit: { opacity: 0.2 },
 };
+
 const paperStyle = {
   width: "auto",
 

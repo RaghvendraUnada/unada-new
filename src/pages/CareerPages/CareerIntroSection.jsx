@@ -10,25 +10,24 @@ import IntroImg1 from "../../assets/Images/Career/IntroImg1.svg";
 import Slider from "react-slick";
 import "./CareerIntroSection.css";
 import selection from "../../pages/Home/home.module.css";
-import Unada3 from "../../assets/Images/cutOutImg/3.webp";
-import Unada9 from "../../assets/Images/cutOutImg/9.webp";
-import Unada4 from "../../assets/Images/cutOutImg/4.webp";
-import Unada5 from "../../assets/Images/cutOutImg/5.webp";
-import Unada2 from "../../assets/Images/cutOutImg/2.webp";
-import Unada7 from "../../assets/Images/cutOutImg/7.webp";
-import Unada21 from "../../assets/Images/cutOutImg/21.webp";
-import Unada19 from "../../assets/Images/cutOutImg/19.webp";
-import Unada10 from "../../assets/Images/cutOutImg/10.webp";
+
+import Unada1 from "../../assets/Images/cutOutImg/image-10.webp";
+import Unada2 from "../../assets/Images/cutOutImg/image-11.webp";
+import Unada3 from "../../assets/Images/cutOutImg/image-12.webp";
+import Unada4 from "../../assets/Images/cutOutImg/image-13.webp";
+import Unada5 from "../../assets/Images/cutOutImg/image-14.webp";
+import Unada6 from "../../assets/Images/cutOutImg/image-15.webp";
+import Unada7 from "../../assets/Images/cutOutImg/image-22.webp";
+import Unada8 from "../../assets/Images/cutOutImg/image-23.webp";
 const ImgArr = [
+  { src: Unada1, text: "Our Design Team" },
+  { src: Unada2, text: "Our Design Team" },
   { src: Unada3, text: "Our Design Team" },
-  { src: Unada9, text: "Our Design Team" },
   { src: Unada4, text: "Our Design Team" },
   { src: Unada5, text: "Our Design Team" },
-  { src: Unada2, text: "Our Design Team" },
+  { src: Unada6, text: "Our Design Team" },
   { src: Unada7, text: "Our Design Team" },
-  { src: Unada21, text: "Our Design Team" },
-  { src: Unada19, text: "Our Design Team" },
-  { src: Unada10, text: "Our Design Team" },
+  { src: Unada8, text: "Our Design Team" },
 ];
 
 function SampleNextArrow(props) {

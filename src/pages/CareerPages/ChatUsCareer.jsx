@@ -350,8 +350,8 @@ export default function ChatUs(props) {
                       />
                     </Box>
                     <Typography sx={address}>
-                      550, Beside Star Bazaar, Satellite, Ahmedabad, Gujarat
-                      380015
+                      550 Iscon Emporio, Besides StarBazaar, Satellite,
+                      Ahmedabad, Gujarat 380015
                     </Typography>
                   </Box>
                 </Modal>

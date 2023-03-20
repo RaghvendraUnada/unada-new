@@ -54,7 +54,7 @@ const ServicesPage = () => {
           >
             <Box
               sx={{
-                // width: "100px",
+                width: "100px",
                 top: {
                   xl: "50%",
                   lg: "50%",

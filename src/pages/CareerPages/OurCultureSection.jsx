@@ -1,15 +1,15 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
-import cul20 from "../../assets/Images/cutOutImg/20.webp";
-import cul13 from "../../assets/Images/cutOutImg/13.webp";
-import cul16 from "../../assets/Images/cutOutImg/16.webp";
-import cul23 from "../../assets/Images/cutOutImg/23.webp";
-import cul11 from "../../assets/Images/cutOutImg/11.webp";
-import chess from "../../assets/Images/cutOutImg/chess.webp";
-import cul18 from "../../assets/Images/cutOutImg/18.webp";
-import cul17 from "../../assets/Images/cutOutImg/17.webp";
-import cul24 from "../../assets/Images/cutOutImg/24.webp";
-import cul14 from "../../assets/Images/cutOutImg/14.webp";
+import cul1 from "../../assets/Images/cutOutImg/image-0.webp";
+import cul2 from "../../assets/Images/cutOutImg/image-1.webp";
+import cul3 from "../../assets/Images/cutOutImg/image-2.webp";
+import cul4 from "../../assets/Images/cutOutImg/image-3.webp";
+import cul5 from "../../assets/Images/cutOutImg/image-4.webp";
+import cul6 from "../../assets/Images/cutOutImg/image-5.webp";
+import cul7 from "../../assets/Images/cutOutImg/image-6.webp";
+import cul8 from "../../assets/Images/cutOutImg/image-7.webp";
+import cul9 from "../../assets/Images/cutOutImg/image-8.webp";
+import cul10 from "../../assets/Images/cutOutImg/image-9.webp";
 import HorizontalScrollingList from "../../Components/Maarquee/HorizontalScrollingList";
 import Marquee from "react-fast-marquee";
 import { keyframes } from "styled-components";
@@ -19,61 +19,7 @@ import selection from "../../pages/Home/home.module.css";
 // import "./OurTeam.module.css";
 import Fade from "react-reveal/Fade";
 const OurCultureSection = () => {
-  const images = [
-    cul20,
-    cul13,
-    cul16,
-    cul23,
-    chess,
-    cul18,
-    cul17,
-    cul24,
-    cul14,
-    // cul20,
-    // cul20,
-    // cul20,
-    // cul20,
-    // cul20,
-    // cul20,
-    // cul20,
-    // cul20,
-    // cul20,
-    // cul20,
-    // cul20,
-    // cul20,
-    // cul20,
-    // culture1,
-    // culture2,
-    // culture3,
-    // culture4,
-    // culture5,
-    // culture6,
-    // culture7,
-    // culture8,
-    // culture9,
-    // culture10,
-    // culture11,
-    // culture12,
-    // culture13,
-    // culture14,
-    // culture15,
-    // culture16,
-    // culture17,
-    // culture18,
-    // culture19,
-    // culture20,
-    // culture21,
-    // culture22,
-    // culture23,
-    // culture24,
-    // culture25,
-    // culture25,
-    // culture25,
-    // culture25,
-    // culture25,
-    // culture25,
-    // culture25,
-  ];
+  const images = [cul1, cul2, cul9, cul3, cul10, cul4, cul7, cul5, cul6, cul8];
   return (
     <Grid
       sx={{
@@ -218,7 +164,13 @@ const headtext = {
 };
 
 const maintext = {
-  fontSize: "30px",
+  fontSize: {
+    xl: "30px",
+    lg: "30px",
+    md: "25px",
+    sm: "20px",
+    xs: "20px",
+  },
   fontFamily: "LGTrial",
   fontweight: "bold",
   // display: "flex",

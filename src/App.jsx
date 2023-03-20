@@ -203,7 +203,8 @@ function App() {
                               locationdta.pathname === "/home" ||
                               locationdta.pathname === "/service" ||
                               locationdta.pathname === "/ArVr" ||
-                              locationdta.pathname === "/blockchain" ? (
+                              locationdta.pathname === "/blockchain" ||
+                              locationdta.pathname === "/contact" ? (
                                 <Box
                                   component="img"
                                   sx={{
@@ -952,10 +953,10 @@ function App() {
 export default App;
 
 const AnimationSettings = {
-  transition: { duration: 0.4 },
-  initial: { opacity: 0 },
+  transition: { duration: 0.8 },
+  initial: { opacity: 0.5 },
   animate: { opacity: 1 },
-  exit: { opacity: 0 },
+  exit: { opacity: 0.2 },
 };
 
 const hue = keyframes`

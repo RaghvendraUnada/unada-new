@@ -59,8 +59,8 @@ const MetaVerse = () => {
 
 export default MetaVerse;
 const AnimationSettings = {
-  transition: { duration: 0.4 },
-  initial: { opacity: 0 },
+  transition: { duration: 0.8 },
+  initial: { opacity: 0.5 },
   animate: { opacity: 1 },
-  exit: { opacity: 0 },
+  exit: { opacity: 0.2 },
 };

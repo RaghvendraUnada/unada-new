@@ -5,7 +5,7 @@ import contactHeromb from "../../assets/Images/Contact/contactHeromb.svg";
 import culture2 from "../../assets/Images/Career/realCulture/cultureEdit2.jpg";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
-import contactHeroReal from "../../assets/Images/cutOutImg/8.webp";
+import contactHeroReal from "../../assets/Images/cutOutImg/image-20.webp";
 import contactTitle from "../../assets/images/new/contact.png";
 import Fade from "react-reveal/Fade";
 import selection from "../Home/home.module.css";

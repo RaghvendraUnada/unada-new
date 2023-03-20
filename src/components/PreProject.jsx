@@ -88,9 +88,8 @@ const PreProject = () => {
             left: {
               xs: "1%",
             },
-
             bottom: {
-              xs: "53%",
+              xs: "10%",
               lg: "7%",
             },
             transform: "rotate(180deg)",
@@ -122,7 +121,7 @@ const PreProject = () => {
               xs: "1%",
             },
             bottom: {
-              xs: "53%",
+              xs: "10%",
               lg: "7%",
             },
             cursor: "pointer",

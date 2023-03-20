@@ -104,7 +104,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     setLinkedin("");
     setFile("");
     setCoverLetter("");
-    alert("data submitted");
 
     // const data = {
     //   UserFirstName: firstName,
@@ -155,7 +154,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       requestOptions
     )
       // fetch("http://192.168.29.5:8000/user_data/apply", requestOptions)
-      .then((response) => response.text())
+      .then((response) => {
+        alert("data submitted");
+        response.text();
+      })
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
   };
@@ -1257,12 +1259,12 @@ const ButtonStyle1 = {
   "&:hover": {
     opacity: 1,
     color: "black",
-    bgcolor: "white",
+    backgroundColor: "#fff",
     scale: 1,
   },
-  "&:active": {
+  "&:focus": {
     opacity: 1,
-    color: "black",
+    color: "white",
     bgcolor: "white",
     scale: 1,
   },
