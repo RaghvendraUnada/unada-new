@@ -21,6 +21,29 @@
   background-color: white;
   border: 1px solid black;
 }
+.BigArrowImgmb {
+  scale: 1;
+  transition: 0.2s all linear;
+  -webkit-transition: 0.2s all linear;
+  -moz-transition: 0.2s all linear;
+  -ms-transition: 0.2s all linear;
+  -o-transition: 0.2s all linear;
+  opacity: 0.5;
+  margin-top: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+}
+.BigArrowImgmb:hover {
+  scale: 1.1;
+  opacity: 1;
+  background-color: white;
+  border: 1px solid black;
+}
 
 .CarouselArrowImg {
   scale: 0.8;

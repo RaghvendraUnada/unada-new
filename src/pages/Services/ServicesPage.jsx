@@ -44,6 +44,45 @@ const ServicesPage = () => {
           },
         }}
       >
+        <Grid item xl={1.5} lg={1.5} md={1.5} sm={12} xs={12}>
+          <Paper
+            elevation={0}
+            sx={paperStyle}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            <Box
+              sx={{
+                // width: "100px",
+                top: {
+                  xl: "50%",
+                  lg: "50%",
+                  md: "50%",
+                  sm: "50%",
+                  xs: "50%",
+                },
+                left: {
+                  xl: "47%",
+                  lg: "47%",
+                  md: "47%",
+                  sm: "50%",
+                  xs: "50%",
+                },
+                position: "absolute",
+                transform: {
+                  xl: "translate(-50%,70%)",
+                  lg: "translate(-50%,70%)",
+                  md: "translate(-50%,70%)",
+                  sm: "translate(-50%,-50%)",
+                  xs: "translate(-50%,-50%)",
+                },
+              }}
+            >
+              <Typography sx={MetaTextStyle}>Home</Typography>
+            </Box>
+          </Paper>
+        </Grid>
         <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12}>
           <Paper
             onClick={() => {
@@ -229,45 +268,6 @@ const ServicesPage = () => {
             )}
           </Paper>
         </Grid>
-        <Grid item xl={1.5} lg={1.5} md={1.5} sm={12} xs={12}>
-          <Paper
-            elevation={0}
-            sx={paperStyle}
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            <Box
-              sx={{
-                width: "100px",
-                top: {
-                  xl: "50%",
-                  lg: "50%",
-                  md: "50%",
-                  sm: "50%",
-                  xs: "50%",
-                },
-                left: {
-                  xl: "47%",
-                  lg: "47%",
-                  md: "47%",
-                  sm: "50%",
-                  xs: "50%",
-                },
-                position: "absolute",
-                transform: {
-                  xl: "translate(-50%,70%)",
-                  lg: "translate(-50%,70%)",
-                  md: "translate(-50%,70%)",
-                  sm: "translate(-50%,-50%)",
-                  xs: "translate(-50%,-50%)",
-                },
-              }}
-            >
-              <Typography sx={MetaTextStyle}>Home</Typography>
-            </Box>
-          </Paper>
-        </Grid>
       </Grid>
       {/* MobileView */}
       <Grid
@@ -315,7 +315,19 @@ const ServicesPage = () => {
                     Imagine a world where anything is possible! At Unada
                     <br />
                     <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
-                      <Button sx={ButtonStyle}>View</Button>
+                      {/* <Button sx={ButtonStyle}>View</Button> */}
+                      <Box
+                        className={styles.BigArrowImgmb}
+                        onMouseOut={() => setIcon1("white")}
+                        onMouseOver={() => setIcon1("black")}
+                        sx={{
+                          "&:hover": {
+                            color: "black",
+                          },
+                        }}
+                      >
+                        <EastSharpIcon fontSize="large" sx={{ color: icon1 }} />
+                      </Box>
                     </Link>
                   </Typography>
                 </Box>
@@ -380,7 +392,19 @@ const ServicesPage = () => {
                     big hit.
                     <br />
                     <Link to={"/ArVr"} style={{ textDecoration: "none" }}>
-                      <Button sx={ButtonStyle}>View</Button>
+                      {/* <Button sx={ButtonStyle}>View</Button> */}
+                      <Box
+                        className={styles.BigArrowImgmb}
+                        onMouseOut={() => setIcon2("white")}
+                        onMouseOver={() => setIcon2("black")}
+                        sx={{
+                          "&:hover": {
+                            color: "black",
+                          },
+                        }}
+                      >
+                        <EastSharpIcon fontSize="large" sx={{ color: icon2 }} />
+                      </Box>
                     </Link>
                   </Typography>
                 </Box>
@@ -442,7 +466,19 @@ const ServicesPage = () => {
                     Our services include custom blockchain and web3 development.
                     <br />
                     <Link to={"/blockchain"} style={{ textDecoration: "none" }}>
-                      <Button sx={ButtonStyle}>View</Button>
+                      {/* <Button sx={ButtonStyle}>View</Button> */}
+                      <Box
+                        className={styles.BigArrowImgmb}
+                        onMouseOut={() => setIcon3("white")}
+                        onMouseOver={() => setIcon3("black")}
+                        sx={{
+                          "&:hover": {
+                            color: "black",
+                          },
+                        }}
+                      >
+                        <EastSharpIcon fontSize="large" sx={{ color: icon3 }} />
+                      </Box>
                     </Link>
                   </Typography>
                 </Box>

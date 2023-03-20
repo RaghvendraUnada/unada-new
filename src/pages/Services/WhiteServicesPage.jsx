@@ -23,6 +23,7 @@ const WhiteServicesPage = () => {
   const [click1, setClick1] = useState(true);
   const [click2, setClick2] = useState(false);
   const [click3, setClick3] = useState(false);
+
   return (
     // <motion.div
     //   initial={{ width: "100%", opacity: 0 }}
@@ -70,44 +71,6 @@ const WhiteServicesPage = () => {
             },
           }}
         >
-          <Grid item xl={1.5} lg={1.5} md={1.5} sm={12} xs={12}>
-            <Paper
-              elevation={0}
-              sx={paperStyle}
-              onClick={() => {
-                navigate("/");
-              }}
-            >
-              <Box
-                sx={{
-                  top: {
-                    xl: "50%",
-                    lg: "50%",
-                    md: "50%",
-                    sm: "50%",
-                    xs: "50%",
-                  },
-                  left: {
-                    xl: "47%",
-                    lg: "47%",
-                    md: "47%",
-                    sm: "50%",
-                    xs: "50%",
-                  },
-                  position: "absolute",
-                  transform: {
-                    xl: "translate(-50%,70%)",
-                    lg: "translate(-50%,70%)",
-                    md: "translate(-50%,70%)",
-                    sm: "translate(-50%,-50%)",
-                    xs: "translate(-50%,-50%)",
-                  },
-                }}
-              >
-                <Typography sx={MetaTextStyle}>Home</Typography>
-              </Box>
-            </Paper>
-          </Grid>
           <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12} sx={adjGrid}>
             <Paper
               onClick={() => {
@@ -262,6 +225,44 @@ const WhiteServicesPage = () => {
               )}
             </Paper>
           </Grid>
+          <Grid item xl={1.5} lg={1.5} md={1.5} sm={12} xs={12}>
+            <Paper
+              elevation={0}
+              sx={paperStyle}
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              <Box
+                sx={{
+                  top: {
+                    xl: "50%",
+                    lg: "50%",
+                    md: "50%",
+                    sm: "50%",
+                    xs: "50%",
+                  },
+                  left: {
+                    xl: "47%",
+                    lg: "47%",
+                    md: "47%",
+                    sm: "50%",
+                    xs: "50%",
+                  },
+                  position: "absolute",
+                  transform: {
+                    xl: "translate(-50%,70%)",
+                    lg: "translate(-50%,70%)",
+                    md: "translate(-50%,70%)",
+                    sm: "translate(-50%,-50%)",
+                    xs: "translate(-50%,-50%)",
+                  },
+                }}
+              >
+                <Typography sx={MetaTextStyle}>Home</Typography>
+              </Box>
+            </Paper>
+          </Grid>
         </Grid>
         {/* MobileView */}
         <Grid
@@ -325,9 +326,17 @@ const WhiteServicesPage = () => {
                       <br />
                       <Link
                         to={"/application"}
-                        style={{ textDecoration: "none" }}
+                        style={{
+                          textDecoration: "none",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
                       >
-                        <Button sx={ButtonStyle}>View</Button>
+                        {/* <Button sx={ButtonStyle}>View</Button> */}
+                        <Button sx={ButtonStyle}>
+                          <EastSharpIcon fontSize="large" />
+                        </Button>
                       </Link>
                     </Typography>
                   </Box>
@@ -396,8 +405,19 @@ const WhiteServicesPage = () => {
                       help conceptualizing and designing a unique solution, we
                       have the expertise to bring your vision to life
                       <br />
-                      <Link to={"/web"} style={{ textDecoration: "none" }}>
-                        <Button sx={ButtonStyle}>View</Button>
+                      <Link
+                        to={"/web"}
+                        style={{
+                          textDecoration: "none",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        {/* <Button sx={ButtonStyle}>View</Button> */}
+                        <Button sx={ButtonStyle}>
+                          <EastSharpIcon fontSize="large" />
+                        </Button>
                       </Link>
                     </Typography>
                   </Box>
@@ -472,8 +492,19 @@ const WhiteServicesPage = () => {
                       help conceptualizing and designing a unique solution, we
                       have the expertise to bring your vision to life
                       <br />
-                      <Link to={"/ui"} style={{ textDecoration: "none" }}>
-                        <Button sx={ButtonStyle}>View</Button>
+                      <Link
+                        to={"/ui"}
+                        style={{
+                          textDecoration: "none",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        {/* <Button sx={ButtonStyle}>View</Button> */}
+                        <Button sx={ButtonStyle}>
+                          <EastSharpIcon fontSize="large" />
+                        </Button>
                       </Link>
                     </Typography>
                   </Box>

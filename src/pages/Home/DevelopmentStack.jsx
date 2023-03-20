@@ -24,6 +24,9 @@ const DevelopmentStack = () => {
   );
   const [url, setUrl] = useState("/application");
 
+  const [icon1, setIcon1] = useState("#9D9D9D");
+  const [border, setBorder] = useState("");
+
   const FunctionOne = (id, text, title, desc, url) => {
     setNumberOne(id);
     setBoxtextOne(text);
@@ -246,10 +249,62 @@ const DevelopmentStack = () => {
                       network.
                     </Typography>
                     <Link to="application">
-                      <Button sx={ButtonStyle}>
+                      {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button>
+                      </Button> */}
+                      <Typography
+                        sx={{
+                          fontSize: "15px",
+                          width: "15%",
+                          fontFamily: "LGRegular",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          marginTop: "1rem",
+                          color: "#9D9D9D",
+                          display: "flex",
+                          alignItems: "center",
+                          transition: "0.3s all linear",
+                          "&:hover": {
+                            color: "#000",
+                            ml: "5px",
+                            // fontSize: {
+                            //   lg: "20px",
+                            //   xl: "20px",
+                            //   md: "20px",
+                            // },
+                            transform: "scale(1.07)",
+                          },
+                        }}
+                        onMouseOut={() => {
+                          setIcon1("#9D9D9D");
+                          setBorder("");
+                        }}
+                        onMouseOver={() => {
+                          setIcon1("White");
+                          setBorder("black");
+                        }}
+                      >
+                        View
+                        <Box
+                          sx={{
+                            p: 0.2,
+                            borderRadius: "20px",
+                            border: `1px solid ${border}`,
+                            background: border,
+                            display: "flex",
+                            marginLeft: "10px",
+                            marginBottom: "-3px",
+                          }}
+                        >
+                          <EastSharpIcon
+                            fontSize="small"
+                            sx={{
+                              color: icon1,
+                            }}
+                          />
+                        </Box>
+                      </Typography>
                     </Link>
                   </Box>
                 </Paper>
@@ -319,10 +374,62 @@ const DevelopmentStack = () => {
                       e-commerce solutions or custom development.
                     </Typography>
                     <Link to="web">
-                      <Button sx={ButtonStyle}>
+                      {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button>
+                      </Button> */}
+                      <Typography
+                        sx={{
+                          fontSize: "15px",
+                          width: "15%",
+                          fontFamily: "LGRegular",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          marginTop: "1rem",
+                          color: "#9D9D9D",
+                          display: "flex",
+                          alignItems: "center",
+                          transition: "0.3s all linear",
+                          "&:hover": {
+                            color: "#000",
+                            ml: "5px",
+                            // fontSize: {
+                            //   lg: "20px",
+                            //   xl: "20px",
+                            //   md: "20px",
+                            // },
+                            transform: "scale(1.07)",
+                          },
+                        }}
+                        onMouseOut={() => {
+                          setIcon1("#9D9D9D");
+                          setBorder("");
+                        }}
+                        onMouseOver={() => {
+                          setIcon1("White");
+                          setBorder("black");
+                        }}
+                      >
+                        View
+                        <Box
+                          sx={{
+                            p: 0.2,
+                            borderRadius: "20px",
+                            border: `1px solid ${border}`,
+                            background: border,
+                            display: "flex",
+                            marginLeft: "10px",
+                            marginBottom: "-3px",
+                          }}
+                        >
+                          <EastSharpIcon
+                            fontSize="small"
+                            sx={{
+                              color: icon1,
+                            }}
+                          />
+                        </Box>
+                      </Typography>
                     </Link>
                   </Box>
                 </Paper>
@@ -386,10 +493,62 @@ const DevelopmentStack = () => {
                       are both functional and aesthetically pleasing.
                     </Typography>
                     <Link to="ui">
-                      <Button sx={ButtonStyle}>
+                      {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button>
+                      </Button> */}
+                      <Typography
+                        sx={{
+                          fontSize: "15px",
+                          width: "15%",
+                          fontFamily: "LGRegular",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          marginTop: "1rem",
+                          color: "#9D9D9D",
+                          display: "flex",
+                          alignItems: "center",
+                          transition: "0.3s all linear",
+                          "&:hover": {
+                            color: "#000",
+                            ml: "5px",
+                            // fontSize: {
+                            //   lg: "20px",
+                            //   xl: "20px",
+                            //   md: "20px",
+                            // },
+                            transform: "scale(1.07)",
+                          },
+                        }}
+                        onMouseOut={() => {
+                          setIcon1("#9D9D9D");
+                          setBorder("");
+                        }}
+                        onMouseOver={() => {
+                          setIcon1("White");
+                          setBorder("black");
+                        }}
+                      >
+                        View
+                        <Box
+                          sx={{
+                            p: 0.2,
+                            borderRadius: "20px",
+                            border: `1px solid ${border}`,
+                            background: border,
+                            display: "flex",
+                            marginLeft: "10px",
+                            marginBottom: "-3px",
+                          }}
+                        >
+                          <EastSharpIcon
+                            fontSize="small"
+                            sx={{
+                              color: icon1,
+                            }}
+                          />
+                        </Box>
+                      </Typography>
                     </Link>
                   </Box>
                 </Paper>
@@ -453,10 +612,62 @@ const DevelopmentStack = () => {
                       virtual experiences possible.
                     </Typography>
                     <Link to="metaVerse">
-                      <Button sx={ButtonStyle}>
+                      {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button>
+                      </Button> */}
+                      <Typography
+                        sx={{
+                          fontSize: "15px",
+                          width: "15%",
+                          fontFamily: "LGRegular",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          marginTop: "1rem",
+                          color: "#9D9D9D",
+                          display: "flex",
+                          alignItems: "center",
+                          transition: "0.3s all linear",
+                          "&:hover": {
+                            color: "#000",
+                            ml: "5px",
+                            // fontSize: {
+                            //   lg: "20px",
+                            //   xl: "20px",
+                            //   md: "20px",
+                            // },
+                            transform: "scale(1.07)",
+                          },
+                        }}
+                        onMouseOut={() => {
+                          setIcon1("#9D9D9D");
+                          setBorder("");
+                        }}
+                        onMouseOver={() => {
+                          setIcon1("White");
+                          setBorder("black");
+                        }}
+                      >
+                        View
+                        <Box
+                          sx={{
+                            p: 0.2,
+                            borderRadius: "20px",
+                            border: `1px solid ${border}`,
+                            background: border,
+                            display: "flex",
+                            marginLeft: "10px",
+                            marginBottom: "-3px",
+                          }}
+                        >
+                          <EastSharpIcon
+                            fontSize="small"
+                            sx={{
+                              color: icon1,
+                            }}
+                          />
+                        </Box>
+                      </Typography>
                     </Link>
                   </Box>
                 </Paper>
@@ -494,7 +705,6 @@ const DevelopmentStack = () => {
               <>
                 <Paper
                   sx={{
-                   
                     cursor: "pointer",
                   }}
                 >
@@ -511,10 +721,10 @@ const DevelopmentStack = () => {
                     <Typography sx={NumTextStyle}>5</Typography>
                     <Typography sx={ServiceText}>AR / VR</Typography>
                   </Box>
-               
+
                   <Box sx={{ padding: "3rem" }}>
                     <Typography sx={verticalText}>AR / VR</Typography>
-                 
+
                     <Typography sx={paperTextStyle1}>
                       Whether you're a game developer looking to create the next
                       big hit, a business owner looking for a unique way to
@@ -524,10 +734,62 @@ const DevelopmentStack = () => {
                       development.
                     </Typography>
                     <Link to="arvr">
-                      <Button sx={ButtonStyle}>
+                      {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button>
+                      </Button> */}
+                      <Typography
+                        sx={{
+                          fontSize: "15px",
+                          width: "15%",
+                          fontFamily: "LGRegular",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          marginTop: "1rem",
+                          color: "#9D9D9D",
+                          display: "flex",
+                          alignItems: "center",
+                          transition: "0.3s all linear",
+                          "&:hover": {
+                            color: "#000",
+                            ml: "5px",
+                            // fontSize: {
+                            //   lg: "20px",
+                            //   xl: "20px",
+                            //   md: "20px",
+                            // },
+                            transform: "scale(1.07)",
+                          },
+                        }}
+                        onMouseOut={() => {
+                          setIcon1("#9D9D9D");
+                          setBorder("");
+                        }}
+                        onMouseOver={() => {
+                          setIcon1("White");
+                          setBorder("black");
+                        }}
+                      >
+                        View
+                        <Box
+                          sx={{
+                            p: 0.2,
+                            borderRadius: "20px",
+                            border: `1px solid ${border}`,
+                            background: border,
+                            display: "flex",
+                            marginLeft: "10px",
+                            marginBottom: "-3px",
+                          }}
+                        >
+                          <EastSharpIcon
+                            fontSize="small"
+                            sx={{
+                              color: icon1,
+                            }}
+                          />
+                        </Box>
+                      </Typography>
                     </Link>
                   </Box>
                 </Paper>
@@ -596,10 +858,62 @@ const DevelopmentStack = () => {
                       transparency in their operations.
                     </Typography>
                     <Link to="blockchain">
-                      <Button sx={ButtonStyle}>
+                      {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button>
+                      </Button> */}
+                      <Typography
+                        sx={{
+                          fontSize: "15px",
+                          width: "15%",
+                          fontFamily: "LGRegular",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          marginTop: "1rem",
+                          color: "#9D9D9D",
+                          display: "flex",
+                          alignItems: "center",
+                          transition: "0.3s all linear",
+                          "&:hover": {
+                            color: "#000",
+                            ml: "5px",
+                            // fontSize: {
+                            //   lg: "20px",
+                            //   xl: "20px",
+                            //   md: "20px",
+                            // },
+                            transform: "scale(1.07)",
+                          },
+                        }}
+                        onMouseOut={() => {
+                          setIcon1("#9D9D9D");
+                          setBorder("");
+                        }}
+                        onMouseOver={() => {
+                          setIcon1("White");
+                          setBorder("black");
+                        }}
+                      >
+                        View
+                        <Box
+                          sx={{
+                            p: 0.2,
+                            borderRadius: "20px",
+                            border: `1px solid ${border}`,
+                            background: border,
+                            display: "flex",
+                            marginLeft: "10px",
+                            marginBottom: "-3px",
+                          }}
+                        >
+                          <EastSharpIcon
+                            fontSize="small"
+                            sx={{
+                              color: icon1,
+                            }}
+                          />
+                        </Box>
+                      </Typography>
                     </Link>
                   </Box>
                 </Paper>
@@ -664,7 +978,6 @@ const OpenDetails = (props) => {
         opacity: 0,
         transition: { duration: 1, ease: "easeInOut" },
       }}
-   
     >
       <Paper
         sx={{

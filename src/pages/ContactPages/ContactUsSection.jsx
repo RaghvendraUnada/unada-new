@@ -12,7 +12,6 @@ const ContactUsSection = () => {
   let location = useLocation();
   // console.log(location);
   const handleSubmit = async () => {
-    alert("Thank You!");
     setFirstName("");
     setLastName("");
     setEmail("");
@@ -32,6 +31,7 @@ const ContactUsSection = () => {
       })
       .then((res) => {
         console.log(res);
+        alert("Thank You!");
       })
       .catch((err) => {
         console.log(err);
@@ -98,8 +98,8 @@ const ContactUsSection = () => {
             </Fade>
           </Typography>
           <Typography sx={infotext}>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
+            Got a question? We'd love to hear from you. Send us a message and
+            we'll respond as soon as possible
           </Typography>
         </Box>
         <Box>

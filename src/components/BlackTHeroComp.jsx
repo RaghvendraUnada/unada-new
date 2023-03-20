@@ -281,7 +281,7 @@ const heroTextStyle = {
 const MetaTextStyle = {
   fontFamily: "LGThin",
   fontStyle: "normal",
-  fontWeight: 500,
+  fontWeight: 600,
   fontSize: {
     xl: "10rem",
     lg: "10rem",
