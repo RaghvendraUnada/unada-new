@@ -1,15 +1,18 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
-import cul1 from "../../assets/Images/cutOutImg/image-0.webp";
-import cul2 from "../../assets/Images/cutOutImg/image-1.webp";
-import cul3 from "../../assets/Images/cutOutImg/image-2.webp";
-import cul4 from "../../assets/Images/cutOutImg/image-3.webp";
-import cul5 from "../../assets/Images/cutOutImg/image-4.webp";
-import cul6 from "../../assets/Images/cutOutImg/image-5.webp";
-import cul7 from "../../assets/Images/cutOutImg/image-6.webp";
-import cul8 from "../../assets/Images/cutOutImg/image-7.webp";
-import cul9 from "../../assets/Images/cutOutImg/image-8.webp";
-import cul10 from "../../assets/Images/cutOutImg/image-9.webp";
+import cul1 from "../../assets/Images/ourculture/cul1.webp";
+import cul2 from "../../assets/Images/ourculture/cul2.webp";
+import cul3 from "../../assets/Images/ourculture/cul3.webp";
+import cul4 from "../../assets/Images/ourculture/cul4.webp";
+import cul5 from "../../assets/Images/ourculture/cul5.webp";
+import cul6 from "../../assets/Images/ourculture/cul6.webp";
+import cul7 from "../../assets/Images/ourculture/cul7.webp";
+import cul8 from "../../assets/Images/ourculture/cul8.webp";
+import cul9 from "../../assets/Images/ourculture/cul9.webp";
+import cul10 from "../../assets/Images/ourculture/cul10.webp";
+import cul11 from "../../assets/Images/ourculture/cul11.webp";
+import cul12 from "../../assets/Images/ourculture/cul12.webp";
+import cul13 from "../../assets/Images/ourculture/cul13.webp";
 import HorizontalScrollingList from "../../Components/Maarquee/HorizontalScrollingList";
 import Marquee from "react-fast-marquee";
 import { keyframes } from "styled-components";
@@ -19,7 +22,21 @@ import selection from "../../pages/Home/home.module.css";
 // import "./OurTeam.module.css";
 import Fade from "react-reveal/Fade";
 const OurCultureSection = () => {
-  const images = [cul1, cul2, cul9, cul3, cul10, cul4, cul7, cul5, cul6, cul8];
+  const images = [
+    cul1,
+    cul2,
+    cul3,
+    cul4,
+    cul5,
+    cul6,
+    cul7,
+    cul8,
+    cul9,
+    cul10,
+    cul11,
+    cul12,
+    cul13,
+  ];
   return (
     <Grid
       sx={{
