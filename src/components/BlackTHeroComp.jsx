@@ -151,7 +151,7 @@ const BlackTHeroComp = (props) => {
           </Fade>
           <Box
             sx={{
-              display: "flex",
+              // display: "flex",
               width: "100%",
               // mt: 2,
               justifyContent: {

@@ -169,43 +169,55 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     // { name: "Css" },
     // { name: "Javascript" },
   ]);
-  const listOfSkill = [
-    {
-      id: 1,
-      SkillName: "Html",
-    },
-    {
-      id1: 2,
-      SkillName: "Css",
-    },
-    {
-      id: 3,
-      SkillName: "JavaScript",
-    },
-    {
-      id: 4,
-      SkillName: "Node JS",
-    },
-    {
-      id: 5,
-      SkillName: "Express JS",
-    },
-    {
-      id: 6,
-      SkillName: "ReactJS",
-    },
-    // {
-    //   id: 7,
-    //   skillName: "MongoDB",
-    // },
-  ];
+  // const listOfSkill = [
+  //   {
+  //     id: 1,
+  //     SkillName: "Html",
+  //   },
+  //   {
+  //     id1: 2,
+  //     SkillName: "Css",
+  //   },
+  //   {
+  //     id: 3,
+  //     SkillName: "JavaScript",
+  //   },
+  //   {
+  //     id: 4,
+  //     SkillName: "Node JS",
+  //   },
+  //   {
+  //     id: 5,
+  //     SkillName: "Express JS",
+  //   },
+  //   {
+  //     id: 6,
+  //     SkillName: "ReactJS",
+  //   },
+  //   // {
+  //   //   id: 7,
+  //   //   skillName: "MongoDB",
+  //   // },
+  // ];
+  const [listOfSkillss, setlistOfSkillss] = useState([]);
+  const listSkilss = async () => {
+    axios
+      .get("/skills/get_all_skill")
+      .then((response) => {
+        console.log("----->", response.data.SkillData[0].Skills);
+        setlistOfSkillss(response.data.SkillData[0].Skills);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   var newSkills = "";
 
   const filterData = () => {
-    const filteredData = listOfSkill.filter((item) => {
-      if (item?.SkillName?.toLowerCase().includes(searchQuery?.toLowerCase())) {
-        return item?.SkillName;
+    const filteredData = listOfSkillss?.filter((item) => {
+      if (item?.toLowerCase().includes(searchQuery?.toLowerCase())) {
+        return item;
       }
     });
     return filteredData;
@@ -213,6 +225,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
 
   useEffect(() => {
     filterData();
+    listSkilss();
   }, [searchQuery]);
   // const [searchQuery, setSearchQuery] = useState("");
 
@@ -243,7 +256,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   // console.log(listOfSkill, selectedSkill);
 
   useEffect(() => {
-    listOfSkill.includes(selectedSkill);
+    listOfSkillss?.includes(selectedSkill);
   }, [selectedSkill]);
 
   let SkillData = [];
@@ -709,7 +722,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                                   ml: 1,
                                 }}
                                 onClick={() => {
-                                  StoreSelectedSkill(item.SkillName);
+                                  StoreSelectedSkill(item);
                                 }}
                               >
                                 <Box
@@ -728,7 +741,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                                       fontSize: "1.2rem",
                                     }}
                                   >
-                                    <div key={item}>{item.SkillName}</div>
+                                    <div key={item}>{item}</div>
                                   </Typography>
 
                                   {/* <CloseIcon
@@ -891,7 +904,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   }}
                   // onClick={listOfSkill}
                 >
-                  {listOfSkill?.map((el, idx) => {
+                  {listOfSkillss?.map((el, idx) => {
                     return (
                       <>
                         <Box
@@ -917,10 +930,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                             // },
                           }}
                           onClick={() => {
-                            StoreSelectedSkill(el.SkillName);
+                            StoreSelectedSkill(el);
                           }}
                         >
-                          <Typography sx={skillText}>{el.SkillName}</Typography>
+                          <Typography sx={skillText}>{el}</Typography>
                         </Box>
                       </>
                     );

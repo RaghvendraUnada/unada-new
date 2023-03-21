@@ -46,28 +46,28 @@ const VideoBox = () => {
           }}
 > */}
       <span className={`${styles["circle-img"]} ${styles["circle-icon-1"]}`}>
-        U
+        B
       </span>
       <span className={`${styles["circle-img"]} ${styles["circle-icon-2"]}`}>
-        N
+        A
       </span>
       <span className={`${styles["circle-img"]} ${styles["circle-icon-3"]}`}>
-        A
-      </span>
-      <span className={`${styles["circle-img"]} ${styles["circle-icon-4"]}`}>
-        D
-      </span>
-      <span className={`${styles["circle-img"]} ${styles["circle-icon-5"]}`}>
-        A
-      </span>
-      <span className={`${styles["circle-img"]} ${styles["circle-icon-6"]}`}>
         L
       </span>
-      <span className={`${styles["circle-img"]} ${styles["circle-icon-7"]}`}>
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-4"]}`}>
         A
       </span>
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-5"]}`}>
+        D
+      </span>
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-6"]}`}>
+        A
+      </span>
+      <span className={`${styles["circle-img"]} ${styles["circle-icon-7"]}`}>
+        N
+      </span>
       <span className={`${styles["circle-img"]} ${styles["circle-icon-8"]}`}>
-        B
+        U
       </span>
 
       <Box className={`${styles["circle-center"]}`}></Box>

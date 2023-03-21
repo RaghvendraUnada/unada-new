@@ -297,7 +297,7 @@ const WhiteServicesPage = () => {
                 sx={{
                   ...mobileActivePaper,
                   height: "60%",
-                  minHeight: "100vh",
+                  minHeight: "85vh",
                 }}
                 onClick={() => {
                   setClick1(false);
@@ -376,8 +376,8 @@ const WhiteServicesPage = () => {
                 <Paper
                   sx={{
                     ...mobileActivePaper,
-                    height: "100%",
-                    minHeight: "60vh",
+                    height: "60%",
+                    minHeight: "85vh",
                   }}
                   onClick={() => {
                     setClick2(false);
@@ -465,8 +465,8 @@ const WhiteServicesPage = () => {
                 <Paper
                   sx={{
                     ...mobileActivePaper,
-                    height: "100%",
-                    minHeight: "60vh",
+                    height: "60%",
+                    minHeight: "85vh",
                   }}
                   onClick={() => {
                     setClick3(false);
@@ -545,8 +545,8 @@ const WhiteServicesPage = () => {
   );
 };
 const AnimationSettings = {
-  transition: { duration: 0.8 },
-  initial: { opacity: 0.5 },
+  transition: { duration: 0.6 },
+  initial: { opacity: 0.2 },
   animate: { opacity: 1 },
   exit: { opacity: 0.2 },
 };
