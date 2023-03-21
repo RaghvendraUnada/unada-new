@@ -573,7 +573,7 @@ const MainHeroPage = () => {
                   muted
                   style={{
                     height: "100%",
-                    minHeight: "90vh",
+                    minHeight: "85vh",
                     maxHeight: "90vh",
                     width: "100%",
                   }}

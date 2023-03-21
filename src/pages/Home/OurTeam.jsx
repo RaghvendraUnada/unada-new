@@ -363,7 +363,7 @@ const EmployeeCard1 = (props) => {
       md={6}
       sm={6}
       xs={12}
-      sx={{ mx: "auto", mt: 0, p: 0 }}
+      sx={{ mx: "auto", mt: 0.25, p: 0 }}
       className={"employe-card employe-card-1"}
     >
       <Box
@@ -576,6 +576,7 @@ const TeamNameTextStyle = {
   color: "#000",
   // ml: 2,
   mt: 0.5,
+  ml: { xl: 0, lg: 0, md: 0, sm: 0, xs: 1 },
 };
 
 const TeamProfessionTextStyle = {
@@ -587,6 +588,7 @@ const TeamProfessionTextStyle = {
   letterSpacing: "0.01px",
   color: "#000",
   mb: 3,
+  ml: { xl: 0, lg: 0, md: 0, sm: 0, xs: 1 },
 };
 
 const coloredText = {

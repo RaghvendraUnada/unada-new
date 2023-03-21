@@ -25,7 +25,13 @@ const BoxOneStyle = {
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
   height: "100%",
-  minHeight: { xl: "800px", lg: "100vh", md: "100vh", sm: "400px", xs: "400px" },
+  minHeight: {
+    xl: "800px",
+    lg: "100vh",
+    md: "100vh",
+    sm: "400px",
+    xs: "400px",
+  },
 };
 
 const BoxTwoStyle = {
@@ -33,5 +39,11 @@ const BoxTwoStyle = {
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
   height: "100%",
-  minHeight: { xl: "800px", lg: "100vh", md: "100vh", sm: "400px", xs: "400px" },
+  minHeight: {
+    xl: "800px",
+    lg: "100vh",
+    md: "100vh",
+    sm: "400px",
+    xs: "400px",
+  },
 };
