@@ -576,6 +576,7 @@ const TeamNameTextStyle = {
   color: "#000",
   // ml: 2,
   mt: 0.5,
+  ml: { xl: 0, lg: 0, md: 0, sm: 0, xs: 1 },
 };
 
 const TeamProfessionTextStyle = {
@@ -587,6 +588,7 @@ const TeamProfessionTextStyle = {
   letterSpacing: "0.01px",
   color: "#000",
   mb: 3,
+  ml: { xl: 0, lg: 0, md: 0, sm: 0, xs: 1 },
 };
 
 const coloredText = {
