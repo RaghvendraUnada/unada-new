@@ -401,7 +401,6 @@ const MainHeroPage = () => {
               }}
             >
               {HeaderArray.map((res, idx) => {
-                console.log(location === res.location, "------->");
                 return (
                   <Link
                     onClick={() => {

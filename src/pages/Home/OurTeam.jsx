@@ -45,7 +45,6 @@ const OurTeam = () => {
     await axios
       .get("team/get_members")
       .then((res) => {
-        console.log(res.data);
         setTeamData(res.data);
       })
       .catch((err) => console.log(err));
@@ -356,7 +355,6 @@ const EmployeeCard1 = (props) => {
       place: "Full Stack Developer",
     },
   ];
-  console.log(props.data);
   return (
     <Grid
       item
@@ -469,7 +467,6 @@ const EmployeeCard2 = (props) => {
       place: "UI/UX",
     },
   ];
-  console.log(props.data);
   return (
     <Grid
       item

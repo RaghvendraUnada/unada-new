@@ -31,8 +31,6 @@ const HeroIntro = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
-  console.log("isInView", isInView);
-
   const textEnter = () => setCursorVariant("text");
   const textLeave = () => setCursorVariant("default");
 

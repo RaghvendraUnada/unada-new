@@ -70,7 +70,7 @@ function App() {
   //   y: 0,
   // });
 
-  console.log("navfalse", navfalse);
+  // console.log("navfalse", navfalse);
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -90,7 +90,7 @@ function App() {
   };
 
   const { pathname } = useLocation();
-  console.log(pathname);
+  // console.log(pathname);
   useEffect(() => {
     document.documentElement.scrollTo({
       top: 0,
@@ -777,7 +777,6 @@ function App() {
                       </ListItem>
                     </Link> */}
                         {HeaderArray.map((res, idx) => {
-                          console.log(location === res.location, "------->");
                           return (
                             <Link
                               onClick={() => {

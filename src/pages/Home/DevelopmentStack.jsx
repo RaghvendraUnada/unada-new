@@ -144,7 +144,6 @@ const DevelopmentStack = () => {
             <OpenDetails title={boxTitle} desc={boxDesc} url={url} />
           </Grid>
           {DataArray.map((res, idx) => {
-            console.log(res.url);
             if (res.id) {
               return (
                 <Grid
@@ -248,64 +247,66 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Link to="application">
-                      {/* <Button sx={ButtonStyle}>
+                    <Box sx={{ width: "20%" }}>
+                      <Link to="application">
+                        {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
                       </Button> */}
-                      <Typography
-                        sx={{
-                          fontSize: "15px",
-                          width: "15%",
-                          fontFamily: "LGRegular",
-                          fontStyle: "normal",
-                          fontWeight: 400,
-                          marginTop: "1rem",
-                          color: "#9D9D9D",
-                          display: "flex",
-                          alignItems: "center",
-                          transition: "0.3s all linear",
-                          "&:hover": {
-                            color: "#000",
-                            ml: "5px",
-                            // fontSize: {
-                            //   lg: "20px",
-                            //   xl: "20px",
-                            //   md: "20px",
-                            // },
-                            transform: "scale(1.07)",
-                          },
-                        }}
-                        onMouseOut={() => {
-                          setIcon1("#9D9D9D");
-                          setBorder("");
-                        }}
-                        onMouseOver={() => {
-                          setIcon1("White");
-                          setBorder("black");
-                        }}
-                      >
-                        View
-                        <Box
+                        <Typography
                           sx={{
-                            p: 0.2,
-                            borderRadius: "20px",
-                            border: `1px solid ${border}`,
-                            background: border,
+                            fontSize: "15px",
+                            width: "15%",
+                            fontFamily: "LGRegular",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            marginTop: "1rem",
+                            color: "#9D9D9D",
                             display: "flex",
-                            marginLeft: "10px",
-                            marginBottom: "-3px",
+                            alignItems: "center",
+                            transition: "0.3s all linear",
+                            "&:hover": {
+                              color: "#000",
+                              ml: "5px",
+                              // fontSize: {
+                              //   lg: "20px",
+                              //   xl: "20px",
+                              //   md: "20px",
+                              // },
+                              transform: "scale(1.07)",
+                            },
+                          }}
+                          onMouseOut={() => {
+                            setIcon1("#9D9D9D");
+                            setBorder("");
+                          }}
+                          onMouseOver={() => {
+                            setIcon1("White");
+                            setBorder("black");
                           }}
                         >
-                          <EastSharpIcon
-                            fontSize="small"
+                          View
+                          <Box
                             sx={{
-                              color: icon1,
+                              p: 0.2,
+                              borderRadius: "20px",
+                              border: `1px solid ${border}`,
+                              background: border,
+                              display: "flex",
+                              marginLeft: "10px",
+                              marginBottom: "-3px",
                             }}
-                          />
-                        </Box>
-                      </Typography>
-                    </Link>
+                          >
+                            <EastSharpIcon
+                              fontSize="small"
+                              sx={{
+                                color: icon1,
+                              }}
+                            />
+                          </Box>
+                        </Typography>
+                      </Link>
+                    </Box>
                   </Box>
                 </Paper>
               </>
@@ -373,64 +374,66 @@ const DevelopmentStack = () => {
                       create a powerful online presence be it in the form
                       e-commerce solutions or custom development.
                     </Typography>
-                    <Link to="web">
-                      {/* <Button sx={ButtonStyle}>
+                    <Box sx={{ width: "20%" }}>
+                      <Link to="web">
+                        {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
                       </Button> */}
-                      <Typography
-                        sx={{
-                          fontSize: "15px",
-                          width: "15%",
-                          fontFamily: "LGRegular",
-                          fontStyle: "normal",
-                          fontWeight: 400,
-                          marginTop: "1rem",
-                          color: "#9D9D9D",
-                          display: "flex",
-                          alignItems: "center",
-                          transition: "0.3s all linear",
-                          "&:hover": {
-                            color: "#000",
-                            ml: "5px",
-                            // fontSize: {
-                            //   lg: "20px",
-                            //   xl: "20px",
-                            //   md: "20px",
-                            // },
-                            transform: "scale(1.07)",
-                          },
-                        }}
-                        onMouseOut={() => {
-                          setIcon1("#9D9D9D");
-                          setBorder("");
-                        }}
-                        onMouseOver={() => {
-                          setIcon1("White");
-                          setBorder("black");
-                        }}
-                      >
-                        View
-                        <Box
+                        <Typography
                           sx={{
-                            p: 0.2,
-                            borderRadius: "20px",
-                            border: `1px solid ${border}`,
-                            background: border,
+                            fontSize: "15px",
+                            width: "15%",
+                            fontFamily: "LGRegular",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            marginTop: "1rem",
+                            color: "#9D9D9D",
                             display: "flex",
-                            marginLeft: "10px",
-                            marginBottom: "-3px",
+                            alignItems: "center",
+                            transition: "0.3s all linear",
+                            "&:hover": {
+                              color: "#000",
+                              ml: "5px",
+                              // fontSize: {
+                              //   lg: "20px",
+                              //   xl: "20px",
+                              //   md: "20px",
+                              // },
+                              transform: "scale(1.07)",
+                            },
+                          }}
+                          onMouseOut={() => {
+                            setIcon1("#9D9D9D");
+                            setBorder("");
+                          }}
+                          onMouseOver={() => {
+                            setIcon1("White");
+                            setBorder("black");
                           }}
                         >
-                          <EastSharpIcon
-                            fontSize="small"
+                          View
+                          <Box
                             sx={{
-                              color: icon1,
+                              p: 0.2,
+                              borderRadius: "20px",
+                              border: `1px solid ${border}`,
+                              background: border,
+                              display: "flex",
+                              marginLeft: "10px",
+                              marginBottom: "-3px",
                             }}
-                          />
-                        </Box>
-                      </Typography>
-                    </Link>
+                          >
+                            <EastSharpIcon
+                              fontSize="small"
+                              sx={{
+                                color: icon1,
+                              }}
+                            />
+                          </Box>
+                        </Typography>
+                      </Link>
+                    </Box>
                   </Box>
                 </Paper>
               </>
@@ -492,64 +495,66 @@ const DevelopmentStack = () => {
                       researchers are experts in creating user experiences that
                       are both functional and aesthetically pleasing.
                     </Typography>
-                    <Link to="ui">
-                      {/* <Button sx={ButtonStyle}>
+                    <Box sx={{ width: "20%" }}>
+                      <Link to="ui">
+                        {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
                       </Button> */}
-                      <Typography
-                        sx={{
-                          fontSize: "15px",
-                          width: "15%",
-                          fontFamily: "LGRegular",
-                          fontStyle: "normal",
-                          fontWeight: 400,
-                          marginTop: "1rem",
-                          color: "#9D9D9D",
-                          display: "flex",
-                          alignItems: "center",
-                          transition: "0.3s all linear",
-                          "&:hover": {
-                            color: "#000",
-                            ml: "5px",
-                            // fontSize: {
-                            //   lg: "20px",
-                            //   xl: "20px",
-                            //   md: "20px",
-                            // },
-                            transform: "scale(1.07)",
-                          },
-                        }}
-                        onMouseOut={() => {
-                          setIcon1("#9D9D9D");
-                          setBorder("");
-                        }}
-                        onMouseOver={() => {
-                          setIcon1("White");
-                          setBorder("black");
-                        }}
-                      >
-                        View
-                        <Box
+                        <Typography
                           sx={{
-                            p: 0.2,
-                            borderRadius: "20px",
-                            border: `1px solid ${border}`,
-                            background: border,
+                            fontSize: "15px",
+                            width: "15%",
+                            fontFamily: "LGRegular",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            marginTop: "1rem",
+                            color: "#9D9D9D",
                             display: "flex",
-                            marginLeft: "10px",
-                            marginBottom: "-3px",
+                            alignItems: "center",
+                            transition: "0.3s all linear",
+                            "&:hover": {
+                              color: "#000",
+                              ml: "5px",
+                              // fontSize: {
+                              //   lg: "20px",
+                              //   xl: "20px",
+                              //   md: "20px",
+                              // },
+                              transform: "scale(1.07)",
+                            },
+                          }}
+                          onMouseOut={() => {
+                            setIcon1("#9D9D9D");
+                            setBorder("");
+                          }}
+                          onMouseOver={() => {
+                            setIcon1("White");
+                            setBorder("black");
                           }}
                         >
-                          <EastSharpIcon
-                            fontSize="small"
+                          View
+                          <Box
                             sx={{
-                              color: icon1,
+                              p: 0.2,
+                              borderRadius: "20px",
+                              border: `1px solid ${border}`,
+                              background: border,
+                              display: "flex",
+                              marginLeft: "10px",
+                              marginBottom: "-3px",
                             }}
-                          />
-                        </Box>
-                      </Typography>
-                    </Link>
+                          >
+                            <EastSharpIcon
+                              fontSize="small"
+                              sx={{
+                                color: icon1,
+                              }}
+                            />
+                          </Box>
+                        </Typography>
+                      </Link>
+                    </Box>
                   </Box>
                 </Paper>
               </>
@@ -611,64 +616,66 @@ const DevelopmentStack = () => {
                       designers is passionate about creating the most engaging
                       virtual experiences possible.
                     </Typography>
-                    <Link to="metaVerse">
-                      {/* <Button sx={ButtonStyle}>
+                    <Box sx={{ width: "20%" }}>
+                      <Link to="metaVerse">
+                        {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
                       </Button> */}
-                      <Typography
-                        sx={{
-                          fontSize: "15px",
-                          width: "15%",
-                          fontFamily: "LGRegular",
-                          fontStyle: "normal",
-                          fontWeight: 400,
-                          marginTop: "1rem",
-                          color: "#9D9D9D",
-                          display: "flex",
-                          alignItems: "center",
-                          transition: "0.3s all linear",
-                          "&:hover": {
-                            color: "#000",
-                            ml: "5px",
-                            // fontSize: {
-                            //   lg: "20px",
-                            //   xl: "20px",
-                            //   md: "20px",
-                            // },
-                            transform: "scale(1.07)",
-                          },
-                        }}
-                        onMouseOut={() => {
-                          setIcon1("#9D9D9D");
-                          setBorder("");
-                        }}
-                        onMouseOver={() => {
-                          setIcon1("White");
-                          setBorder("black");
-                        }}
-                      >
-                        View
-                        <Box
+                        <Typography
                           sx={{
-                            p: 0.2,
-                            borderRadius: "20px",
-                            border: `1px solid ${border}`,
-                            background: border,
+                            fontSize: "15px",
+                            width: "15%",
+                            fontFamily: "LGRegular",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            marginTop: "1rem",
+                            color: "#9D9D9D",
                             display: "flex",
-                            marginLeft: "10px",
-                            marginBottom: "-3px",
+                            alignItems: "center",
+                            transition: "0.3s all linear",
+                            "&:hover": {
+                              color: "#000",
+                              ml: "5px",
+                              // fontSize: {
+                              //   lg: "20px",
+                              //   xl: "20px",
+                              //   md: "20px",
+                              // },
+                              transform: "scale(1.07)",
+                            },
+                          }}
+                          onMouseOut={() => {
+                            setIcon1("#9D9D9D");
+                            setBorder("");
+                          }}
+                          onMouseOver={() => {
+                            setIcon1("White");
+                            setBorder("black");
                           }}
                         >
-                          <EastSharpIcon
-                            fontSize="small"
+                          View
+                          <Box
                             sx={{
-                              color: icon1,
+                              p: 0.2,
+                              borderRadius: "20px",
+                              border: `1px solid ${border}`,
+                              background: border,
+                              display: "flex",
+                              marginLeft: "10px",
+                              marginBottom: "-3px",
                             }}
-                          />
-                        </Box>
-                      </Typography>
-                    </Link>
+                          >
+                            <EastSharpIcon
+                              fontSize="small"
+                              sx={{
+                                color: icon1,
+                              }}
+                            />
+                          </Box>
+                        </Typography>
+                      </Link>
+                    </Box>
                   </Box>
                 </Paper>
               </>
@@ -733,64 +740,66 @@ const DevelopmentStack = () => {
                       a range of services, including custom AR and VR
                       development.
                     </Typography>
-                    <Link to="arvr">
-                      {/* <Button sx={ButtonStyle}>
+                    <Box sx={{ width: "20%" }}>
+                      <Link to="arvr">
+                        {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
                       </Button> */}
-                      <Typography
-                        sx={{
-                          fontSize: "15px",
-                          width: "15%",
-                          fontFamily: "LGRegular",
-                          fontStyle: "normal",
-                          fontWeight: 400,
-                          marginTop: "1rem",
-                          color: "#9D9D9D",
-                          display: "flex",
-                          alignItems: "center",
-                          transition: "0.3s all linear",
-                          "&:hover": {
-                            color: "#000",
-                            ml: "5px",
-                            // fontSize: {
-                            //   lg: "20px",
-                            //   xl: "20px",
-                            //   md: "20px",
-                            // },
-                            transform: "scale(1.07)",
-                          },
-                        }}
-                        onMouseOut={() => {
-                          setIcon1("#9D9D9D");
-                          setBorder("");
-                        }}
-                        onMouseOver={() => {
-                          setIcon1("White");
-                          setBorder("black");
-                        }}
-                      >
-                        View
-                        <Box
+                        <Typography
                           sx={{
-                            p: 0.2,
-                            borderRadius: "20px",
-                            border: `1px solid ${border}`,
-                            background: border,
+                            fontSize: "15px",
+                            width: "15%",
+                            fontFamily: "LGRegular",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            marginTop: "1rem",
+                            color: "#9D9D9D",
                             display: "flex",
-                            marginLeft: "10px",
-                            marginBottom: "-3px",
+                            alignItems: "center",
+                            transition: "0.3s all linear",
+                            "&:hover": {
+                              color: "#000",
+                              ml: "5px",
+                              // fontSize: {
+                              //   lg: "20px",
+                              //   xl: "20px",
+                              //   md: "20px",
+                              // },
+                              transform: "scale(1.07)",
+                            },
+                          }}
+                          onMouseOut={() => {
+                            setIcon1("#9D9D9D");
+                            setBorder("");
+                          }}
+                          onMouseOver={() => {
+                            setIcon1("White");
+                            setBorder("black");
                           }}
                         >
-                          <EastSharpIcon
-                            fontSize="small"
+                          View
+                          <Box
                             sx={{
-                              color: icon1,
+                              p: 0.2,
+                              borderRadius: "20px",
+                              border: `1px solid ${border}`,
+                              background: border,
+                              display: "flex",
+                              marginLeft: "10px",
+                              marginBottom: "-3px",
                             }}
-                          />
-                        </Box>
-                      </Typography>
-                    </Link>
+                          >
+                            <EastSharpIcon
+                              fontSize="small"
+                              sx={{
+                                color: icon1,
+                              }}
+                            />
+                          </Box>
+                        </Typography>
+                      </Link>
+                    </Box>
                   </Box>
                 </Paper>
               </>
@@ -857,64 +866,66 @@ const DevelopmentStack = () => {
                       and more, to help them improve security, efficiency, and
                       transparency in their operations.
                     </Typography>
-                    <Link to="blockchain">
-                      {/* <Button sx={ButtonStyle}>
+                    <Box sx={{ width: "20%" }}>
+                      <Link to="blockchain">
+                        {/* <Button sx={ButtonStyle}>
                         View{" "}
                         <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
                       </Button> */}
-                      <Typography
-                        sx={{
-                          fontSize: "15px",
-                          width: "15%",
-                          fontFamily: "LGRegular",
-                          fontStyle: "normal",
-                          fontWeight: 400,
-                          marginTop: "1rem",
-                          color: "#9D9D9D",
-                          display: "flex",
-                          alignItems: "center",
-                          transition: "0.3s all linear",
-                          "&:hover": {
-                            color: "#000",
-                            ml: "5px",
-                            // fontSize: {
-                            //   lg: "20px",
-                            //   xl: "20px",
-                            //   md: "20px",
-                            // },
-                            transform: "scale(1.07)",
-                          },
-                        }}
-                        onMouseOut={() => {
-                          setIcon1("#9D9D9D");
-                          setBorder("");
-                        }}
-                        onMouseOver={() => {
-                          setIcon1("White");
-                          setBorder("black");
-                        }}
-                      >
-                        View
-                        <Box
+                        <Typography
                           sx={{
-                            p: 0.2,
-                            borderRadius: "20px",
-                            border: `1px solid ${border}`,
-                            background: border,
+                            fontSize: "15px",
+                            width: "15%",
+                            fontFamily: "LGRegular",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            marginTop: "1rem",
+                            color: "#9D9D9D",
                             display: "flex",
-                            marginLeft: "10px",
-                            marginBottom: "-3px",
+                            alignItems: "center",
+                            transition: "0.3s all linear",
+                            "&:hover": {
+                              color: "#000",
+                              ml: "5px",
+                              // fontSize: {
+                              //   lg: "20px",
+                              //   xl: "20px",
+                              //   md: "20px",
+                              // },
+                              transform: "scale(1.07)",
+                            },
+                          }}
+                          onMouseOut={() => {
+                            setIcon1("#9D9D9D");
+                            setBorder("");
+                          }}
+                          onMouseOver={() => {
+                            setIcon1("White");
+                            setBorder("black");
                           }}
                         >
-                          <EastSharpIcon
-                            fontSize="small"
+                          View
+                          <Box
                             sx={{
-                              color: icon1,
+                              p: 0.2,
+                              borderRadius: "20px",
+                              border: `1px solid ${border}`,
+                              background: border,
+                              display: "flex",
+                              marginLeft: "10px",
+                              marginBottom: "-3px",
                             }}
-                          />
-                        </Box>
-                      </Typography>
-                    </Link>
+                          >
+                            <EastSharpIcon
+                              fontSize="small"
+                              sx={{
+                                color: icon1,
+                              }}
+                            />
+                          </Box>
+                        </Typography>
+                      </Link>
+                    </Box>
                   </Box>
                 </Paper>
               </>
@@ -964,7 +975,6 @@ const DevelopmentStack = () => {
 export default DevelopmentStack;
 
 const OpenDetails = (props) => {
-  console.log(props);
   const [icon1, setIcon1] = useState("#9D9D9D");
   const [border, setBorder] = useState("");
   return (
@@ -1012,64 +1022,66 @@ const OpenDetails = (props) => {
           <Typography sx={OpenDetailsBottomTextStyle} className={styles.Text}>
             {props.desc}
           </Typography>
-          <Link to={props.url}>
-            <Typography
-              sx={{
-                fontSize: {
-                  lg: "18px",
-                  xl: "18px",
-                  md: "18px",
-                },
-                width: "15%",
-                fontFamily: "LGRegular",
-                fontStyle: "normal",
-                fontWeight: 400,
-                marginTop: "1rem",
-                color: "#9D9D9D",
-                display: "flex",
-                alignItems: "center",
-                transition: "0.3s all linear",
-                "&:hover": {
-                  color: "#000",
-                  ml: "5px",
-                  // fontSize: {
-                  //   lg: "20px",
-                  //   xl: "20px",
-                  //   md: "20px",
-                  // },
-                  transform: "scale(1.07)",
-                },
-              }}
-              onMouseOut={() => {
-                setIcon1("#9D9D9D");
-                setBorder("");
-              }}
-              onMouseOver={() => {
-                setIcon1("White");
-                setBorder("black");
-              }}
-            >
-              View
-              <Box
+          <Box sx={{ width: "20%" }}>
+            <Link href={props.url}>
+              <Typography
                 sx={{
-                  p: 0.3,
-                  borderRadius: "20px",
-                  border: `1px solid ${border}`,
-                  background: border,
+                  fontSize: {
+                    lg: "18px",
+                    xl: "18px",
+                    md: "18px",
+                  },
+                  width: "100%",
+                  fontFamily: "LGRegular",
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  marginTop: "1rem",
+                  color: "#9D9D9D",
                   display: "flex",
-                  marginLeft: "10px",
-                  marginBottom: "-3px",
+                  alignItems: "center",
+                  transition: "0.3s all linear",
+                  "&:hover": {
+                    color: "#000",
+                    ml: "5px",
+                    // fontSize: {
+                    //   lg: "20px",
+                    //   xl: "20px",
+                    //   md: "20px",
+                    // },
+                    transform: "scale(1.07)",
+                  },
+                }}
+                onMouseOut={() => {
+                  setIcon1("#9D9D9D");
+                  setBorder("");
+                }}
+                onMouseOver={() => {
+                  setIcon1("White");
+                  setBorder("black");
                 }}
               >
-                <EastSharpIcon
-                  fontSize="small"
+                View
+                <Box
                   sx={{
-                    color: icon1,
+                    p: 0.3,
+                    borderRadius: "20px",
+                    border: `1px solid ${border}`,
+                    background: border,
+                    display: "flex",
+                    marginLeft: "10px",
+                    marginBottom: "-3px",
                   }}
-                />
-              </Box>
-            </Typography>
-          </Link>
+                >
+                  <EastSharpIcon
+                    fontSize="small"
+                    sx={{
+                      color: icon1,
+                    }}
+                  />
+                </Box>
+              </Typography>
+            </Link>
+          </Box>
         </Box>
       </Paper>
     </motion.div>
@@ -1077,8 +1089,10 @@ const OpenDetails = (props) => {
 };
 
 const PaperBoxStyle = {
+  bgcolor: "red",
+  // width: "0%",
   top: {
-    xl: "40%",
+    xl: "50%",
     lg: "40%",
     md: "40%",
     sm: "40%",
@@ -1128,6 +1142,11 @@ const OpenDetailsBottomTextStyle = {
 };
 
 const TransformedText = {
+  marginTop: {
+    xl: "-40px",
+    lg: "-40px",
+    md: "-40px",
+  },
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 500,
