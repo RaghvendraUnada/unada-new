@@ -117,7 +117,7 @@ const BlackTHeroComp = (props) => {
               sm: "30%",
               xs: "33%",
             },
-            left: "2%",
+            left: { xl: "2%", lg: "2%", md: "1%", sm: "0%", xs: "0%" },
             textAlign: {
               xl: "initial",
               lg: "initial",

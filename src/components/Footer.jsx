@@ -54,8 +54,8 @@ const Footer = () => {
           xl={4}
           lg={4}
           md={2}
-          sm={2.4}
-          xs={5.2}
+          sm={3.4}
+          xs={6.2}
           sx={{
             ...fooText,
             textAlign: "center",
@@ -70,7 +70,7 @@ const Footer = () => {
                 xl: "1.2rem",
                 lg: "1.2rem",
                 md: "1.2rem",
-                sm: "1.2rem",
+                sm: "0.9rem",
                 xs: "0.9rem",
               },
             }}
@@ -86,7 +86,7 @@ const Footer = () => {
           xl={4}
           lg={4}
           md={4}
-          sm={2.4}
+          sm={3.8}
           xs={2.4}
           sx={{
             // ...fooText,
