@@ -618,6 +618,11 @@ const activePaperText = {
   lineHeight: "28pxpx",
   marginTop: "2rem",
   color: "rgba(255, 255, 255, 0.8)",
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "black",
+    background: "white",
+  },
 };
 const MetaTextStyle = {
   fontFamily: "LGRegular",
@@ -629,6 +634,11 @@ const MetaTextStyle = {
     md: "9rem",
     sm: "8rem",
     xs: "5rem",
+  },
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "black",
+    background: "white",
   },
 
   // position: "absolute",
@@ -692,6 +702,11 @@ const paperTextStyle = {
   lineHeight: "45px",
   letterSpacing: "0.01px",
   color: " #FFFFFF",
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "black",
+    background: "white",
+  },
 };
 const mobileActivePaper = {
   background: "black",
