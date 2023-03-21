@@ -69,8 +69,8 @@ const Web = () => {
 
 export default Web;
 const AnimationSettings = {
-  transition: { duration: 0.8 },
-  initial: { opacity: 0.5 },
-  animate: { opacity: 1.2, scale: 0.5, transition: { duration: 1 } },
+  transition: { duration: 0.6 },
+  initial: { opacity: 0.2 },
+  animate: { opacity: 1 },
   exit: { opacity: 0.2 },
 };

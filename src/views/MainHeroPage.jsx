@@ -177,7 +177,8 @@ const MainHeroPage = () => {
               >
                 <Link to={"/"} style={{ textDecoration: "none" }}>
                   {colorState ? (
-                    <img
+                    <Box
+                      component="img"
                       src={WhiteLogo}
                       width="45px"
                       height={"auto"}
@@ -185,7 +186,8 @@ const MainHeroPage = () => {
                       style={{ marginTop: "7px" }}
                     />
                   ) : (
-                    <img
+                    <Box
+                      component="img"
                       src={Logo}
                       width="40px"
                       height={"auto"}
