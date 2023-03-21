@@ -119,7 +119,7 @@ const IntroMainText = {
   color: "#FFFFFF",
   "::selection": {
     WebkitTextFillColor: "black",
-    color: "red",
+    color: "#000",
     background: "white",
   },
 };
@@ -150,7 +150,7 @@ const IntroColorText = {
   textFillColor: "transparent",
   "::selection": {
     WebkitTextFillColor: "black",
-    color: "red",
+    color: "#000",
     background: "white",
   },
 };
@@ -176,7 +176,7 @@ const IntroParaText = {
   marginTop: "2rem",
   "::selection": {
     WebkitTextFillColor: "black",
-    color: "red",
+    color: "#000",
     background: "white",
   },
 };

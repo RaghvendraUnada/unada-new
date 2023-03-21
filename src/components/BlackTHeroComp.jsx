@@ -279,7 +279,7 @@ const heroTextStyle = {
   zIndex: 10,
   "::selection": {
     WebkitTextFillColor: "black",
-    color: "red",
+    color: "black",
     background: "white",
   },
 };
@@ -342,7 +342,7 @@ const MetaTextStyle = {
   },
   "::selection": {
     WebkitTextFillColor: "black",
-    color: "red",
+    color: "black",
     background: "white",
   },
 };
@@ -382,7 +382,7 @@ const heroMetaTextStyle = {
   color: "#FFFFFF",
   "::selection": {
     WebkitTextFillColor: "black",
-    color: "red",
+    color: "black",
     background: "white",
   },
 };
