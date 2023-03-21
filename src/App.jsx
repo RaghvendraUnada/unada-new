@@ -209,18 +209,22 @@ function App() {
                               locationdta.pathname === "/contact" ? (
                                 <Box
                                   component="img"
+                                  src={OpenButtonWhite}
                                   sx={{
+                                    width: {
+                                      xl: "50%",
+                                      lg: "50%",
+                                      md: "50%",
+                                      sm: "100%",
+                                      xs: "100%",
+                                    },
+                                    height: "auto",
+                                    maxWidth: "35px",
                                     transition: "0.3s all linear",
                                     "&:hover": {
                                       // transform: "scale(1.15)",
                                       transform: "rotate(360deg)",
                                     },
-                                  }}
-                                  src={OpenButtonWhite}
-                                  style={{
-                                    width: "50%",
-                                    height: "auto",
-                                    maxWidth: "35px",
                                   }}
                                   alt="whyChooseUsimg"
                                   className={HeaderStyles.MenuIcon}
@@ -234,13 +238,17 @@ function App() {
                                       // transform: "scale(1.15)",
                                       transform: "rotate(360deg)",
                                     },
+                                    width: {
+                                      xl: "50%",
+                                      lg: "50%",
+                                      md: "50%",
+                                      sm: "100%",
+                                      xs: "100%",
+                                    },
+                                    height: "auto",
+                                    maxWidth: "35px",
                                   }}
                                   src={OpenButton}
-                                  style={{
-                                    width: "50%",
-                                    height: "auto",
-                                    maxWidth: "28px",
-                                  }}
                                   alt="whyChooseUsimg"
                                   className={HeaderStyles.MenuIcon}
                                 />

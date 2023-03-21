@@ -218,9 +218,9 @@ const ContactUsSection = () => {
               fontSize: {
                 xl: "15px",
                 lg: "15px",
-                md: "12px",
-                sm: "8px",
-                xs: "8px",
+                md: "15px",
+                sm: "17px",
+                xs: "17px",
               },
               "&:hover": {
                 color: "#fff",
