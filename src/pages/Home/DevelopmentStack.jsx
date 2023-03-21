@@ -247,7 +247,7 @@ const DevelopmentStack = () => {
                       benefit unlimited storage capacity within the connected
                       network.
                     </Typography>
-                    <Box sx={{ width: "20%" }}>
+                    <Box sx={{ width: "10%" }}>
                       <Link to="application">
                         {/* <Button sx={ButtonStyle}>
                         View{" "}
@@ -374,7 +374,7 @@ const DevelopmentStack = () => {
                       create a powerful online presence be it in the form
                       e-commerce solutions or custom development.
                     </Typography>
-                    <Box sx={{ width: "20%" }}>
+                    <Box sx={{ width: "10%" }}>
                       <Link to="web">
                         {/* <Button sx={ButtonStyle}>
                         View{" "}
@@ -495,7 +495,7 @@ const DevelopmentStack = () => {
                       researchers are experts in creating user experiences that
                       are both functional and aesthetically pleasing.
                     </Typography>
-                    <Box sx={{ width: "20%" }}>
+                    <Box sx={{ width: "10%" }}>
                       <Link to="ui">
                         {/* <Button sx={ButtonStyle}>
                         View{" "}
@@ -616,7 +616,7 @@ const DevelopmentStack = () => {
                       designers is passionate about creating the most engaging
                       virtual experiences possible.
                     </Typography>
-                    <Box sx={{ width: "20%" }}>
+                    <Box sx={{ width: "10%" }}>
                       <Link to="metaVerse">
                         {/* <Button sx={ButtonStyle}>
                         View{" "}
@@ -740,7 +740,7 @@ const DevelopmentStack = () => {
                       a range of services, including custom AR and VR
                       development.
                     </Typography>
-                    <Box sx={{ width: "20%" }}>
+                    <Box sx={{ width: "10%" }}>
                       <Link to="arvr">
                         {/* <Button sx={ButtonStyle}>
                         View{" "}
@@ -866,7 +866,7 @@ const DevelopmentStack = () => {
                       and more, to help them improve security, efficiency, and
                       transparency in their operations.
                     </Typography>
-                    <Box sx={{ width: "20%" }}>
+                    <Box sx={{ width: "10%" }}>
                       <Link to="blockchain">
                         {/* <Button sx={ButtonStyle}>
                         View{" "}
@@ -1022,7 +1022,7 @@ const OpenDetails = (props) => {
           <Typography sx={OpenDetailsBottomTextStyle} className={styles.Text}>
             {props.desc}
           </Typography>
-          <Box sx={{ width: "20%" }}>
+          <Box sx={{ width: "10%" }}>
             <Link href={props.url}>
               <Typography
                 sx={{
