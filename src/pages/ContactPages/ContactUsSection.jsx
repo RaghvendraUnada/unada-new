@@ -256,9 +256,9 @@ const infotext = {
   fontStyle: "normal",
   fontWeight: 100,
   fontSize: {
-    xs: "1rem",
-    sm: "1rem",
-    md: "1.2rem",
+    xs: "1.3rem",
+    sm: "1.3rem",
+    md: "1.3rem",
     lg: "1.4rem",
     xl: "1.4rem",
   },

@@ -363,7 +363,7 @@ const EmployeeCard1 = (props) => {
       md={6}
       sm={6}
       xs={12}
-      sx={{ mx: "auto", mt: 0, p: 0 }}
+      sx={{ mx: "auto", mt: 0.25, p: 0 }}
       className={"employe-card employe-card-1"}
     >
       <Box
