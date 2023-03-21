@@ -117,6 +117,11 @@ const IntroMainText = {
   },
   letterSpacing: "-0.6",
   color: "#FFFFFF",
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "#000",
+    background: "white",
+  },
 };
 const IntroColorText = {
   fontFamily: "LGRegular",
@@ -143,6 +148,11 @@ const IntroColorText = {
   backgroundRepeat: "repeat",
   backgroundClip: "text",
   textFillColor: "transparent",
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "#000",
+    background: "white",
+  },
 };
 const IntroParaText = {
   fontFamily: "LGThin",
@@ -164,4 +174,9 @@ const IntroParaText = {
   },
   color: "#A3A3A3",
   marginTop: "2rem",
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "#000",
+    background: "white",
+  },
 };

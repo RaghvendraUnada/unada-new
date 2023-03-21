@@ -277,6 +277,11 @@ const heroTextStyle = {
   textTransform: "uppercase",
   color: "#fff",
   zIndex: 10,
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "black",
+    background: "white",
+  },
 };
 const MetaTextStyle = {
   fontFamily: "LGThin",
@@ -335,6 +340,11 @@ const MetaTextStyle = {
     sm: "rotate(0deg)",
     xs: "rotate(0deg)",
   },
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "black",
+    background: "white",
+  },
 };
 
 // const stylecss = {
@@ -370,4 +380,9 @@ const heroMetaTextStyle = {
     xs: "0.5rem",
   },
   color: "#FFFFFF",
+  "::selection": {
+    WebkitTextFillColor: "black",
+    color: "black",
+    background: "white",
+  },
 };
