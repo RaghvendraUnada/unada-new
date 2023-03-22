@@ -83,8 +83,8 @@ const ContactUsSection = () => {
           height: "auto",
           minHeight: {
             xs: "80vh",
-            sm: "100vh",
-            md: "100vh",
+            sm: "80vh",
+            md: "80vh",
             lg: "25vh",
             xl: "25vh",
           },

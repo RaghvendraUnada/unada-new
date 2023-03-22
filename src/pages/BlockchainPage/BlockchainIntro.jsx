@@ -6,7 +6,7 @@ const BlockchainIntro = () => {
     <BlackTIntroComp
       introImg={BlockchainIntroImg}
       Text1={"Bridge the gap between"}
-      ColorText={"2.0 & 3.0"}
+      ColorText={"web 2.0 & 3.0"}
       MetaText={
         "We specialize in providing blockchain-based solutions to a wide range of industries. We offer custom solutions that are tailored to the specific needs of our clients, helping them to enhance their products and services through the use of blockchain technology. Our team can provide guidance on the most suitable blockchain solutions for a particular industry or use case, as well as support with the implementation and deployment of these solutions."
       }

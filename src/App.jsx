@@ -211,6 +211,8 @@ function App() {
                                   component="img"
                                   src={OpenButtonWhite}
                                   sx={{
+                                    marginBottom: "20px",
+                                    // background: "red",
                                     width: {
                                       xl: "50%",
                                       lg: "50%",
@@ -364,7 +366,7 @@ function App() {
                             src={Logo}
                             width="40px"
                             height={"auto"}
-                            style={{ marginTop: "30px" }}
+                            style={{ marginTop: "20px" }}
                           />
                         </Link>
 
@@ -841,7 +843,7 @@ function App() {
                                         xs: "20px",
                                       },
                                       lineHeight: {
-                                        xl: "72px",
+                                        xl: "85px",
                                         lg: "60px",
                                         md: "50px",
                                         sm: "35px",
@@ -872,7 +874,7 @@ function App() {
                                         xs: "20px",
                                       },
                                       lineHeight: {
-                                        xl: "72px",
+                                        xl: "85px",
                                         lg: "60px",
                                         md: "50px",
                                         sm: "35px",
