@@ -96,6 +96,15 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
 
   const apply = async (e) => {
     e.preventDefault();
+    if (firstName === "") {
+      alert("please fill firstname");
+    } else if (lastName === "") {
+      alert("please fill lastname");
+    } else if (email === "") {
+      alert("please fill email");
+    } else if (file === "") {
+      alert("please fill file");
+    }
     setFirstName("");
     setLastName("");
     setEmail("");
@@ -164,41 +173,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
 
   const [searchQuery, setSearchQuery] = useState();
 
-  const [data, setData] = useState([
-    // { name: "Html" },
-    // { name: "Css" },
-    // { name: "Javascript" },
-  ]);
-  // const listOfSkill = [
-  //   {
-  //     id: 1,
-  //     SkillName: "Html",
-  //   },
-  //   {
-  //     id1: 2,
-  //     SkillName: "Css",
-  //   },
-  //   {
-  //     id: 3,
-  //     SkillName: "JavaScript",
-  //   },
-  //   {
-  //     id: 4,
-  //     SkillName: "Node JS",
-  //   },
-  //   {
-  //     id: 5,
-  //     SkillName: "Express JS",
-  //   },
-  //   {
-  //     id: 6,
-  //     SkillName: "ReactJS",
-  //   },
-  //   // {
-  //   //   id: 7,
-  //   //   skillName: "MongoDB",
-  //   // },
-  // ];
   const [listOfSkillss, setlistOfSkillss] = useState([]);
   const listSkilss = async () => {
     axios
@@ -1192,7 +1166,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 p: 2,
               }}
             >
-              <Button sx={ButtonStyle1} onClick={apply} type="submit">
+              <Button sx={ButtonStyle1} type="submit" onClick={apply}>
                 Submit
               </Button>
             </Box>

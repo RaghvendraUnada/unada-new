@@ -11,7 +11,15 @@ const ContactUsSection = () => {
   const [message, setMessage] = useState("");
   let location = useLocation();
   // console.log(location);
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (firstname === "") {
+      alert("please fill firstname");
+    } else if (lastname === "") {
+      alert("please fill lastname");
+    } else if (email === "") {
+      alert("please fill email");
+    }
     setFirstName("");
     setLastName("");
     setEmail("");
@@ -30,8 +38,8 @@ const ContactUsSection = () => {
         Message: message,
       })
       .then((res) => {
-        console.log(res);
         alert("Thank You!");
+        console.log(res);
       })
       .catch((err) => {
         console.log(err);
@@ -55,183 +63,185 @@ const ContactUsSection = () => {
   }, []);
 
   return (
-    <Grid
-      container
-      sx={{
-        height: "auto",
-        minHeight: {
-          xs: "100vh",
-          sm: "100vh",
-          md: "100vh",
-          lg: "25vh",
-          xl: "25vh",
-        },
-        borderRadius: "none",
-        bgcolor: "white",
-        display: "flex",
-        justifyContent: "center",
-        py: 5,
-      }}
-    >
-      <Box
+    <form onSubmit={handleSubmit}>
+      <Grid
+        container
         sx={{
-          width: {
-            xl: "50%",
-            lg: "50%",
-            md: "50%",
-            sm: "80%",
-            xs: "80%",
+          height: "auto",
+          minHeight: {
+            xs: "100vh",
+            sm: "100vh",
+            md: "100vh",
+            lg: "25vh",
+            xl: "25vh",
           },
-          display: "grid",
-          height: "600px",
-          flexDirection: "column",
-          alignItems: "center",
+          borderRadius: "none",
+          bgcolor: "white",
+          display: "flex",
           justifyContent: "center",
-          textAlign: "center",
-          //   bgcolor: "red",
+          py: 5,
         }}
       >
-        <Box>
-          <Typography sx={contacttext}>
-            <Fade top duration={1000}>
-              Contact Us
-            </Fade>
-          </Typography>
-          <Typography sx={infotext}>
-            Got a question? We'd love to hear from you. Send us a message and
-            we'll respond as soon as possible
-          </Typography>
-        </Box>
-        <Box>
-          <Typography sx={labeltext}>
-            Name:<span style={{ color: "#FF5F5F" }}>*</span>
-          </Typography>
+        <Box
+          sx={{
+            width: {
+              xl: "50%",
+              lg: "50%",
+              md: "50%",
+              sm: "80%",
+              xs: "80%",
+            },
+            display: "grid",
+            height: "600px",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            //   bgcolor: "red",
+          }}
+        >
+          <Box>
+            <Typography sx={contacttext}>
+              <Fade top duration={1000}>
+                Contact Us
+              </Fade>
+            </Typography>
+            <Typography sx={infotext}>
+              Got a question? We'd love to hear from you. Send us a message and
+              we'll respond as soon as possible
+            </Typography>
+          </Box>
+          <Box>
+            <Typography sx={labeltext}>
+              Name:<span style={{ color: "#FF5F5F" }}>*</span>
+            </Typography>
 
-          <Box sx={box}>
-            <input
-              className="contact-box"
-              type="text"
-              id="standard-textarea"
-              label="First name"
-              placeholder="First name"
-              variant="standard"
-              multiline
-              style={{
-                height: "60px",
-                width: "50%",
-                color: "black",
-                borderBottom: "2px solid #A7A7A7",
-                borderTop: "none",
-                borderLeft: "none",
-                borderRight: "none",
-              }}
-              value={firstname}
-              onChange={(e) => setFirstName(e.target.value)}
-              required
-            />
-            <input
-              type="text"
-              className="contact-box"
-              id="standard-textarea"
-              label="Last name"
-              placeholder="Last Name"
-              variant="standard"
-              multiline
-              style={{
-                height: "60px",
-                width: "50%",
-                color: "black",
-                borderBottom: "2px solid #A7A7A7",
-                borderTop: "none",
-                borderLeft: "none",
-                borderRight: "none",
-              }}
-              value={lastname}
-              onChange={(e) => setLastName(e.target.value)}
-              required
-            />
+            <Box sx={box}>
+              <input
+                className="contact-box"
+                type="text"
+                id="standard-textarea"
+                label="First name"
+                placeholder="First name"
+                variant="standard"
+                multiline
+                style={{
+                  height: "60px",
+                  width: "50%",
+                  color: "black",
+                  borderBottom: "2px solid #A7A7A7",
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
+                }}
+                value={firstname}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+              <input
+                type="text"
+                className="contact-box"
+                id="standard-textarea"
+                label="Last name"
+                placeholder="Last Name"
+                variant="standard"
+                multiline
+                style={{
+                  height: "60px",
+                  width: "50%",
+                  color: "black",
+                  borderBottom: "2px solid #A7A7A7",
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
+                }}
+                value={lastname}
+                onChange={(e) => setLastName(e.target.value)}
+                required
+              />
+            </Box>
           </Box>
-        </Box>
-        <Box>
-          <Typography sx={labeltext}>
-            Email:<span style={{ color: "#FF5F5F" }}>*</span>
-          </Typography>
-          <Box sx={box}>
-            <input
-              type="text"
-              className="contact-box"
-              id="standard-textarea"
-              label="Email"
-              placeholder="Enter your email"
-              variant="standard"
-              style={{
-                height: "60px",
+          <Box>
+            <Typography sx={labeltext}>
+              Email:<span style={{ color: "#FF5F5F" }}>*</span>
+            </Typography>
+            <Box sx={box}>
+              <input
+                type="text"
+                className="contact-box"
+                id="standard-textarea"
+                label="Email"
+                placeholder="Enter your email"
+                variant="standard"
+                style={{
+                  height: "60px",
+                  width: "100%",
+                  color: "black",
+                  borderBottom: "2px solid #A7A7A7",
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
+                }}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </Box>
+          </Box>
+          <Box>
+            <div id="section"></div>
+            <Typography sx={labeltext}>Message:</Typography>
+            <Box sx={box}>
+              <input
+                type="text"
+                className="contact-box"
+                id="standard-textarea"
+                label="Email"
+                placeholder="Enter your Message"
+                variant="standard"
+                style={{
+                  height: "60px",
+                  width: "100%",
+                  color: "black",
+                  // border: "none",
+                  borderBottom: "2px solid #A7A7A7",
+                  borderTop: "none",
+                  borderLeft: "none",
+                  borderRight: "none",
+                }}
+                multiline
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              />
+            </Box>
+          </Box>
+          <Box sx={ButtonStyle1}>
+            <Button
+              type="submit"
+              sx={{
+                textAlign: "center",
                 width: "100%",
-                color: "black",
-                borderBottom: "2px solid #A7A7A7",
-                borderTop: "none",
-                borderLeft: "none",
-                borderRight: "none",
+                borderRadius: "30px",
+                color: "#000",
+                fontSize: {
+                  xl: "15px",
+                  lg: "15px",
+                  md: "15px",
+                  sm: "17px",
+                  xs: "17px",
+                },
+                "&:hover": {
+                  color: "#fff",
+                },
               }}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+            >
+              Submit
+            </Button>
           </Box>
         </Box>
-        <Box>
-          <div id="section"></div>
-          <Typography sx={labeltext}>Message:</Typography>
-          <Box sx={box}>
-            <input
-              type="text"
-              className="contact-box"
-              id="standard-textarea"
-              label="Email"
-              placeholder="Enter your Message"
-              variant="standard"
-              style={{
-                height: "60px",
-                width: "100%",
-                color: "black",
-                // border: "none",
-                borderBottom: "2px solid #A7A7A7",
-                borderTop: "none",
-                borderLeft: "none",
-                borderRight: "none",
-              }}
-              multiline
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-            />
-          </Box>
-        </Box>
-
-        <Box sx={ButtonStyle1} onClick={handleSubmit}>
-          <Button
-            sx={{
-              textAlign: "center",
-              width: "100%",
-              borderRadius: "30px",
-              color: "#000",
-              fontSize: {
-                xl: "15px",
-                lg: "15px",
-                md: "15px",
-                sm: "17px",
-                xs: "17px",
-              },
-              "&:hover": {
-                color: "#fff",
-              },
-            }}
-          >
-            Submit
-          </Button>
-        </Box>
-      </Box>
-    </Grid>
+      </Grid>
+    </form>
   );
 };
 
