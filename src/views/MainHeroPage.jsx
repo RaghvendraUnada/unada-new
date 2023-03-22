@@ -241,6 +241,7 @@ const MainHeroPage = () => {
                       <Button
                         src={OpenButton}
                         sx={{
+                          mb: 1,
                           transition: "0.4s all linear",
                           // bgcolor: "red",
                           "&:hover": {
@@ -455,7 +456,7 @@ const MainHeroPage = () => {
                               xs: "20px",
                             },
                             lineHeight: {
-                              xl: "72px",
+                              xl: "85px",
                               lg: "60px",
                               md: "50px",
                               sm: "35px",
@@ -486,7 +487,7 @@ const MainHeroPage = () => {
                               xs: "20px",
                             },
                             lineHeight: {
-                              xl: "72px",
+                              xl: "85px",
                               lg: "60px",
                               md: "50px",
                               sm: "35px",

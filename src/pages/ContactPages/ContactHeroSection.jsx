@@ -83,6 +83,7 @@ const ContactHeroSection = () => {
         <Box
           sx={{
             height: "auto",
+            // minHeight: "350px",
             paddingY: "8rem",
             paddingX: "3rem",
             display: "flex",
@@ -104,7 +105,7 @@ const ContactHeroSection = () => {
           </Fade>
         </Box>
       </Grid>
-      <Grid item xl={6} lg={6} md={6} xs={12} sm={12}>
+      <Grid item xl={6} lg={6} md={6} xs={12} sm={12} sx={{}}>
         <Box
           sx={{
             width: "100%",

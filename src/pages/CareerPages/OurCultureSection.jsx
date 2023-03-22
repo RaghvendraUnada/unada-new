@@ -96,7 +96,7 @@ const OurCultureSection = () => {
         >
           <Marquee
             gradient={false}
-            speed={100}
+            speed={40}
             direction={"left"}
             infinite={true}
             style={{ height: "100%" }}
