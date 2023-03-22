@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
 import SwiperSliderCara from "../../Components/SwiperSlider/SwiperSliderCara";
 import IntroImg1 from "../../assets/Images/Career/IntroImg1.svg";
@@ -111,6 +114,47 @@ function CareerIntroSection() {
   const nextSlide = () => {
     setCurrentSlide((s) => (s === slidesCount - 2 ? 0 : s + 1));
   };
+
+  const [cursorVariant, setCursorVariant] = useState("default");
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+    },
+    text: {
+      height: 150,
+      width: 150,
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      mixBlendMode: "normal",
+    },
+  };
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  const textEnter = () => setCursorVariant("text");
+  const textLeave = () => setCursorVariant("default");
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
   return (
     <Grid
       container
@@ -136,6 +180,24 @@ function CareerIntroSection() {
           },
         }}
       >
+        {isInView ? (
+          <motion.div
+            variants={variants}
+            animate={cursorVariant}
+            style={{
+              backgroundColor: "white",
+              height: 50,
+              width: 50,
+              borderRadius: "50%",
+              position: "fixed",
+              top: 0,
+              left: 0,
+              pointerEvents: "none",
+              zIndex: 10000,
+              mixBlendMode: "difference",
+            }}
+          />
+        ) : null}
         <Typography sx={IntroMainText} className={selection.invert2}>
           We believe in building the future, one line of code at a time. We are
           looking for people who are voraciously curious and who are willing to

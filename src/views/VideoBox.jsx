@@ -11,56 +11,49 @@ import ReactCurvedText from "react-curved-text";
 
 const VideoBox = () => {
   return (
-    // <Box
-    //   sx={{
-    //     // top: {
-    //     //   sm: "-135px",
-    //     //   xs: "-135px",
-    //     //   md: "-100px",
-    //     //   lg: "-100px",
-    //     //   xl: "-100px",
-    //     // },
-    //     // left: {
-    //     //   sm: "-120px",
-    //     //   xs: "-120px",
-    //     //   md: "-100px",
-    //     //   lg: "-100px",
-    //     //   xl: "-100px",
-    //     // },
-
-    //   }}
-    // >
-    <div
+    <Box
       className={`${styles["torotateinlinear"]}`}
-      style={{
-        width: "200px",
-        height: "200px",
+      sx={{
+        // top: {
+        //   sm: "-135px",
+        //   xs: "-135px",
+        //   md: "-100px",
+        //   lg: "-100px",
+        //   xl: "-100px",
+        // },
+        // left: {
+        //   sm: "-120px",
+        //   xs: "-120px",
+        //   md: "-100px",
+        //   lg: "-100px",
+        //   xl: "-100px",
+        // },
         zIndex: "100",
         position: "absolute",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        // backgroundColor: "red",
+        // display: "flex",
+        // justifyContent: "end",
+        // alignItems: "end",
       }}
     >
-      <ReactCurvedText
-        width={"300px"}
-        height={"auto"}
-        cx={100}
-        cy={100}
-        rx={95}
-        ry={95}
-        startOffset={50}
-        reversed={false}
-        text="U  n  a  d  a  L  a  b"
-        textProps={{ style: { fontSize: 22 } }}
-        textPathProps={null}
-        tspanProps={null}
-        ellipseProps={null}
-        svgProps={null}
-      />
-    </div>
-    // </Box>
+      <Box sx={{}}>
+        <ReactCurvedText
+          width={300}
+          height={300}
+          cx={95}
+          cy={100}
+          rx={100}
+          ry={100}
+          startOffset={80}
+          reversed={false}
+          text="U  N  A  D  A  L  a  b"
+          textProps={{ style: { fontSize: 25, letterSpacing: 8 } }}
+          textPathProps={null}
+          tspanProps={null}
+          ellipseProps={null}
+          svgProps={null}
+        />
+      </Box>
+    </Box>
   );
 };
 

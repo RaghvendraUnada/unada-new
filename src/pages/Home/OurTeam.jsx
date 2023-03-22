@@ -99,7 +99,7 @@ const OurTeam = () => {
           }}
         >
         </motion.p> */}
-        <Fade top duration={1000}>
+        <Fade top duration={1200}>
           <Typography sx={OurTeamTextStyle} className={selection.zero}>
             Our Team
           </Typography>

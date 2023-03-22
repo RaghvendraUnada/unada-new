@@ -69,8 +69,8 @@ const CareerHeroSection = () => {
             </div>
           </Stack> */}
           <Box sx={{ width: "90%", mx: "auto" }}>
-            <Stack sx={{ marginTop: {} }}>
-              <Fade top duration={1000}>
+            <Fade top duration={1000}>
+              <Stack sx={{ marginTop: {} }}>
                 <Typography
                   // className="animate-charcter"
                   sx={{
@@ -86,8 +86,6 @@ const CareerHeroSection = () => {
                 >
                   Join a team
                 </Typography>
-              </Fade>
-              <Fade top duration={900}>
                 <Typography
                   // className="animate-charcter"
                   className={selection.invert}
@@ -103,9 +101,9 @@ const CareerHeroSection = () => {
                 >
                   Be a part of team who makes an impact.
                 </Typography>
-              </Fade>
-              {/* <img src={careerTitle} alt="title" width="80%" className="center-block" draggable="false" /> */}
-            </Stack>
+                {/* <img src={careerTitle} alt="title" width="80%" className="center-block" draggable="false" /> */}
+              </Stack>
+            </Fade>
           </Box>
         </Box>
       </Grid>
