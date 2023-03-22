@@ -1,5 +1,8 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/splide/dist/css/splide.min.css";
 import cul1 from "../../assets/Images/ourculture/cul1.webp";
 import cul2 from "../../assets/Images/ourculture/cul2.webp";
 import cul3 from "../../assets/Images/ourculture/cul3.webp";
@@ -52,19 +55,6 @@ const OurCultureSection = () => {
             Our Culture
           </Typography>
         </Fade>
-        {/* <Box
-          sx={{
-            width: {
-              xl: "30%",
-              lg: "30%",
-              md: "30%",
-              sm: "40%",
-              xs: "40%",
-            },
-            mx: "auto",
-          }}
-        >
-        </Box> */}
         <Typography sx={maintext} className={selection.invert}>
           #ReshapeTheFuture
         </Typography>
@@ -77,11 +67,16 @@ const OurCultureSection = () => {
           future.
         </Typography>
       </Box>
-
       <Box
         sx={{
           paddingTop: "7rem",
-          display: "flex",
+          display: {
+            xl: "flex",
+            lg: "flex",
+            md: "flex",
+            sm: "none",
+            xs: "none",
+          },
           flexDirection: "raw",
           width: "100%",
           maxWidth: "100%",
@@ -119,7 +114,7 @@ const OurCultureSection = () => {
                   <Box
                     component={"img"}
                     src={client}
-                    style={{
+                    sx={{
                       height: "100%",
                       width: "99.5%",
                       marginLeft: "auto",
@@ -127,47 +122,65 @@ const OurCultureSection = () => {
                     }}
                   />
                 </Grid>
-
-                /* <Box
-                  sx={{
-                    // flex: "none",
-                    boxSize: "100%",
-                    padding: "0.2rem",
-                    // flexDirection: "column",
-                    // gap: "0rem",
-                    width: "2%",
-                    height: "100%",
-                  }}
-                >
-                  <Box
-                    key={idx}
-                    src={client}
-                    style={{
-                      height: "90%",
-                      width: "99.5%",
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                    }}
-                    component="img"
-                    alt="hello"
-                    src={client}
-                  />
-                </Box> */
               );
             })}
           </Marquee>
-        </Box>{" "}
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          paddingTop: "7rem",
+          display: {
+            xl: "none",
+            lg: "none",
+            md: "none",
+            sm: "flex",
+            xs: "flex",
+          },
+          flexDirection: "raw",
+          width: "100%",
+          maxWidth: "100%",
+        }}
+      >
+        <Splide
+          options={{
+            type: "loop",
+            gap: "1px",
+            drag: false,
+            arrows: false,
+            pagination: false,
+            perPage: 3,
+            autoScroll: {
+              pauseOnHover: false,
+              pauseOnFocus: false,
+              rewind: false,
+              speed: 1,
+            },
+          }}
+          extensions={{ AutoScroll }}
+        >
+          {images.map((client, idx) => {
+            return (
+              <SplideSlide>
+                <Box
+                  component={"img"}
+                  src={client}
+                  sx={{
+                    height: "100%",
+                    width: "99.5%",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                />
+              </SplideSlide>
+            );
+          })}
+        </Splide>
       </Box>
     </Grid>
   );
 };
-{
-  /* <img
-  alt="Our Culture"
-  src={Ourculture}
-  style={{ width: "100%", height: "auto" }}
-/> */
-}
+
 export default OurCultureSection;
 const headtext = {
   display: "flex",

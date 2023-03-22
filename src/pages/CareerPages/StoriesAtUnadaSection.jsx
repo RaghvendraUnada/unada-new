@@ -9,24 +9,23 @@ import Slider from "react-slick";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import Fade from "react-reveal/Fade";
 import selection from "./selection.module.css";
-// import culture23 from "../../assets/Images/Career/realCulture/culture23.jpg";
-// import culture21 from "../../assets/Images/Career/realCulture/culture21.jpg";
-// import culture24 from "../../assets/Images/Career/realCulture/culture24.jpg";
-// import culture11 from "../../assets/Images/Career/realCulture/culture11.jpg";
-// import culture12 from "../../assets/Images/Career/realCulture/culture12.jpg";
-// import culture13 from "../../assets/Images/Career/realCulture/culture13.jpg";
-// import culture14 from "../../assets/Images/Career/realCulture/culture14.jpg";
-// import culture15 from "../../assets/Images/Career/realCulture/culture15.jpg";
-// import culture16 from "../../assets/Images/Career/realCulture/culture16.jpg";
-import culture23 from "../../assets/Images/Career/imginwebp/14.webp";
-import culture21 from "../../assets/Images/Career/imginwebp/15.webp";
-import culture24 from "../../assets/Images/Career/imginwebp/16.webp";
-import culture11 from "../../assets/Images/Career/imginwebp/17.webp";
-import culture12 from "../../assets/Images/Career/imginwebp/18.webp";
-import culture13 from "../../assets/Images/Career/imginwebp/19.webp";
-import culture14 from "../../assets/Images/Career/imginwebp/20.webp";
-import culture15 from "../../assets/Images/Career/imginwebp/21.webp";
-import culture16 from "../../assets/Images/Career/imginwebp/22.webp";
+// import culture23 from "../../assets/Images/Career/imginwebp/14.webp";
+// import culture21 from "../../assets/Images/Career/imginwebp/15.webp";
+// import culture24 from "../../assets/Images/Career/imginwebp/16.webp";
+// import culture11 from "../../assets/Images/Career/imginwebp/17.webp";
+// import culture12 from "../../assets/Images/Career/imginwebp/18.webp";
+// import culture13 from "../../assets/Images/Career/imginwebp/19.webp";
+// import culture14 from "../../assets/Images/Career/imginwebp/20.webp";
+// import culture15 from "../../assets/Images/Career/imginwebp/21.webp";
+// import culture16 from "../../assets/Images/Career/imginwebp/22.webp";
+import Unada1 from "../../assets/Images/unadalife/ul1.webp";
+import Unada2 from "../../assets/Images/unadalife/ul2.webp";
+import Unada3 from "../../assets/Images/unadalife/ul3.webp";
+import Unada4 from "../../assets/Images/unadalife/ul4.webp";
+import Unada5 from "../../assets/Images/unadalife/ul5.webp";
+import Unada6 from "../../assets/Images/unadalife/ul6.webp";
+import Unada7 from "../../assets/Images/unadalife/ul7.webp";
+import Unada8 from "../../assets/Images/unadalife/ul8.webp";
 const ImgArr = [
   // UnadaStoryImg,
   // UnadaStoryImg,
@@ -34,15 +33,14 @@ const ImgArr = [
   // UnadaStoryImg,
   // UnadaStoryImg,
   // UnadaStoryImg,
-  { src: culture21, text: "Our Design Team" },
-  { src: culture23, text: "Our Dev Team" },
-  { src: culture24, text: "Our 3D Team" },
-  { src: culture11, text: "Our just Team" },
-  { src: culture12, text: "Our Design Team" },
-  { src: culture13, text: "Our Design Team" },
-  { src: culture14, text: "Our Design Team" },
-  { src: culture15, text: "Our Design Team" },
-  { src: culture16, text: "Our Design Team" },
+  { src: Unada1, text: "Our Design Team" },
+  { src: Unada2, text: "Our Dev Team" },
+  { src: Unada3, text: "Our 3D Team" },
+  { src: Unada4, text: "Our just Team" },
+  { src: Unada5, text: "Our Design Team" },
+  { src: Unada6, text: "Our Design Team" },
+  { src: Unada7, text: "Our Design Team" },
+  { src: Unada8, text: "Our Design Team" },
 ];
 
 function SampleNextArrow(props) {
