@@ -4,6 +4,10 @@ import React from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+// import { useForm } from "react-hook-form";
+// import { zodResolver } from "@hookform/resolvers/zod";
+// import { z } from "zod";
+
 const ContactUsSection = () => {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -11,25 +15,34 @@ const ContactUsSection = () => {
   const [message, setMessage] = useState("");
   let location = useLocation();
   // console.log(location);
-  const handleSubmit = async (e) => {
+
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors },
+  // } = useForm({
+  //   resolver: zodResolver(
+  //     z.object({
+  //       firstname: z.string(),
+  //       lastname: z.string(),
+  //       email: z.string(),
+  //       message: z.string(),
+  //     })
+  //   ),
+  // });
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
-    if (firstname === "") {
-      alert("please fill firstname");
-    } else if (lastname === "") {
-      alert("please fill lastname");
-    } else if (email === "") {
-      alert("please fill email");
-    }
+    // if (firstname === "") {
+    //   alert("please fill firstname");
+    // } else if (lastname === "") {
+    //   alert("please fill lastname");
+    // } else if (email === "") {
+    //   alert("please fill email");
+    // }
     setFirstName("");
     setLastName("");
     setEmail("");
     setMessage("");
-    // console.log({
-    //   FirstName: firstname,
-    //   LastName: lastname,
-    //   Email: email,
-    //   Message: message,
-    // });
     return await axios
       .post("/contact_us/add_contact_data", {
         FirstName: firstname,
@@ -63,13 +76,13 @@ const ContactUsSection = () => {
   }, []);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmitForm}>
       <Grid
         container
         sx={{
           height: "auto",
           minHeight: {
-            xs: "100vh",
+            xs: "80vh",
             sm: "100vh",
             md: "100vh",
             lg: "25vh",
@@ -134,6 +147,7 @@ const ContactUsSection = () => {
                   borderLeft: "none",
                   borderRight: "none",
                 }}
+                // {...register("firstname")}
                 value={firstname}
                 onChange={(e) => setFirstName(e.target.value)}
                 required
@@ -157,6 +171,7 @@ const ContactUsSection = () => {
                 }}
                 value={lastname}
                 onChange={(e) => setLastName(e.target.value)}
+                // {...register("lastname")}
                 required
               />
             </Box>
@@ -184,6 +199,7 @@ const ContactUsSection = () => {
                 }}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                // {...register("email")}
                 required
               />
             </Box>
@@ -210,6 +226,7 @@ const ContactUsSection = () => {
                   borderRight: "none",
                 }}
                 multiline
+                // {...register("message")}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
