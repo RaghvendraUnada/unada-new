@@ -53,7 +53,7 @@ const Footer = () => {
           item
           xl={4}
           lg={4}
-          md={2}
+          md={3}
           sm={3.4}
           xs={5}
           sx={{

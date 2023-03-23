@@ -173,8 +173,6 @@ const ServicesPage = () => {
                   <Typography
                     sx={{
                       ...activePaperText,
-                      lineHeight: "20px",
-                      fontSize: "18px",
                     }}
                   >
                     Whether you're a game developer looking to create the next
