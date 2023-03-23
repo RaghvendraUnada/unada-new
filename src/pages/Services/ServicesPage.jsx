@@ -107,9 +107,29 @@ const ServicesPage = () => {
               <>
                 <Box sx={ActiveBoxStyles}>
                   <Fade top duration={1000}>
-                    <Typography sx={paperTextStyle}>Metaverse</Typography>
+                    <Typography
+                      sx={{
+                        ...paperTextStyle,
+                        lineHeight: {
+                          xl: "52px",
+                          lg: "50px",
+                        },
+                      }}
+                    >
+                      Metaverse
+                    </Typography>
                   </Fade>
-                  <Typography sx={activePaperText}>
+                  <Typography
+                    sx={{
+                      ...activePaperText,
+                      lineHeight: "20px",
+                      fontSize: {
+                        xl: "18px",
+                        lg: "16px",
+                        md: "15px",
+                      },
+                    }}
+                  >
                     Imagine a world where anything is possible! At Unada.
                   </Typography>
                   <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
@@ -168,11 +188,27 @@ const ServicesPage = () => {
               <>
                 <Box sx={ActiveBoxStyles}>
                   <Fade top duration={1000}>
-                    <Typography sx={paperTextStyle}>AR/VR</Typography>
+                    <Typography
+                      sx={{
+                        ...paperTextStyle,
+                        lineHeight: {
+                          xl: "30px",
+                          lg: "30px",
+                        },
+                      }}
+                    >
+                      AR/VR
+                    </Typography>
                   </Fade>
                   <Typography
                     sx={{
                       ...activePaperText,
+                      lineHeight: "17px",
+                      fontSize: {
+                        xl: "18px",
+                        lg: "16px",
+                        md: "15px",
+                      },
                     }}
                   >
                     Whether you're a game developer looking to create the next
@@ -234,9 +270,30 @@ const ServicesPage = () => {
               <>
                 <Box sx={ActiveBoxStyles}>
                   <Fade top duration={1000}>
-                    <Typography sx={paperTextStyle}>Blockchain</Typography>
+                    <Typography
+                      sx={{
+                        ...paperTextStyle,
+                        lineHeight: {
+                          xl: "45px",
+                          lg: "50px",
+                        },
+                        // background: "red",
+                      }}
+                    >
+                      Blockchain
+                    </Typography>
                   </Fade>
-                  <Typography sx={activePaperText}>
+                  <Typography
+                    sx={{
+                      ...activePaperText,
+                      lineHeight: "20px",
+                      fontSize: {
+                        xl: "18px",
+                        lg: "16px",
+                        md: "15px",
+                      },
+                    }}
+                  >
                     Our services include custom blockchain and web3 development.
                   </Typography>
                   <Link to={"/blockchain"} style={{ textDecoration: "none" }}>
