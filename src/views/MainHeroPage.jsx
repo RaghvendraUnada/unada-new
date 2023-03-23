@@ -183,7 +183,7 @@ const MainHeroPage = () => {
                       width="45px"
                       height={"auto"}
                       alt={colorState}
-                      style={{ marginTop: "7px" }}
+                      sx={{ marginTop: "7px" }}
                     />
                   ) : (
                     <Box
@@ -192,7 +192,7 @@ const MainHeroPage = () => {
                       width="40px"
                       height={"auto"}
                       alt={colorState}
-                      style={{ marginTop: "8px" }}
+                      sx={{ marginTop: "8px" }}
                     />
                   )}
                 </Link>
@@ -213,6 +213,7 @@ const MainHeroPage = () => {
                           height: "auto",
                           maxWidth: "35px",
                           // bgcolor: "red",
+                          backgroundColor: "red",
                           transition: "0.5s all linear",
                           opacity: 0,
                           "&:hover": {
@@ -243,6 +244,10 @@ const MainHeroPage = () => {
                         sx={{
                           mb: 1,
                           transition: "0.4s all linear",
+                          mt: {
+                            sm: 2,
+                            xs: 2,
+                          },
                           // bgcolor: "red",
                           "&:hover": {
                             background: "transparent",

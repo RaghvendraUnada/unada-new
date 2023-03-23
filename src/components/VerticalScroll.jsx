@@ -38,6 +38,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [open, setOpen] = useState(false);
   const [loading, setloading] = useState(false);
+  const [dragOver, setDragOver] = useState(false);
 
   const toggleLoader = () => {
     if (!loading) {
@@ -58,31 +59,40 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     setOpen(false);
   };
 
-  const handleFileChange = (event) => {
-    // if (fileRegex.test(event.dataTransfer.files[0])) {
-    //   const selectedFile = event.dataTransfer.files[0];
-    //   console.log(selectedFile);
-    // }
-    const fileRegex = /([a-zA-Z0-9\s_\.-:])+(.doc|.docx|.pdf)$/;
-    if (/jpeg|jpg|png|gif/.test(ext.toLowerCase())) {
-      return cb(new Error("Only images are allowed"), false);
-    }
+  // const handleFileChange = (event) => {
+  //   // if (fileRegex.test(event.dataTransfer.files[0])) {
+  //   //   const selectedFile = event.dataTransfer.files[0];
+  //   //   console.log(selectedFile);
+  //   // }
+  //   const fileRegex = /([a-zA-Z0-9\s_\.-:])+(.doc|.docx|.pdf)$/;
+  //   if (/jpeg|jpg|png|gif/.test(ext.toLowerCase())) {
+  //     return cb(new Error("Only images are allowed"), false);
+  //   }
+  // };
+
+  // const handleDragOver = (event) => {
+  //   event.preventDefault();
+  // };
+
+  // const handleDrop = (event) => {
+  //   event.preventDefault();
+  //   handleFileChange(event);
+  // };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    setDragOver(true);
   };
 
-  const handleDragOver = (event) => {
-    event.preventDefault();
-  };
-
-  const handleDrop = (event) => {
-    event.preventDefault();
-    handleFileChange(event);
+  const handleDragLeave = () => {
+    setDragOver(false);
   };
 
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
   const [experience, setExperience] = useState();
-  const [skill, setSkill] = useState("");
+  const [skill, setSkill] = useState([]);
   const [linkedin, setLinkedin] = useState();
   const [file, setFile] = useState();
   const [coverLetter, setCoverLetter] = useState();
@@ -91,6 +101,17 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [icon1, setIcon1] = useState("white");
   const [border, setBorder] = useState("white");
   const [focus, setFocus] = useState(false);
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setDragOver(false);
+    const coverLetterfile = e.dataTransfer.files[0];
+    // alert("File Upload");
+    console.log(coverLetterfile);
+    setCoverLetter(coverLetterfile);
+    console.log(coverLetter);
+    // handleFileUpload(file);
+  };
 
   // const [state,setState] = useState()
 
@@ -111,8 +132,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     setExperience("");
     setSkill("");
     setLinkedin("");
-    setFile("");
-    setCoverLetter("");
+    // setFile("");
+    // setCoverLetter("");
 
     // const data = {
     //   UserFirstName: firstName,
@@ -146,11 +167,24 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     //   // },
     // });
     var formdata = new FormData();
-    formdata.append("UserLastName", firstName);
-    formdata.append("coverLetter", coverLetter[0]);
-    formdata.append("resume", file[0]);
-    formdata.append("UserFirstName", lastName);
+    formdata.append("UserFirstName", firstName);
+    formdata.append("UserLastName", lastName);
     formdata.append("UserEmail", email);
+    formdata.append("UserExperience", experience);
+    formdata.append("UserSkills", selectedSkill);
+    formdata.append("UserLinkedInUrl", linkedin);
+    formdata.append("resume", file[0]);
+    formdata.append("coverLetter", coverLetter);
+    console.log(
+      firstName,
+      lastName,
+      email,
+      experience,
+      selectedSkill,
+      linkedin,
+      file[0],
+      coverLetter
+    );
 
     var requestOptions = {
       method: "POST",
@@ -158,10 +192,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       redirect: "follow",
     };
 
-    fetch(
-      "https:/https://unada-backend.unada.in/user_data/apply",
-      requestOptions
-    )
+    fetch("http://192.168.29.5:8000/user_data/apply", requestOptions)
       // fetch("http://192.168.29.5:8000/user_data/apply", requestOptions)
       .then((response) => {
         alert("data submitted");
@@ -186,7 +217,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       });
   };
 
-  var newSkills = "";
+  // var newSkills = "";
 
   const filterData = () => {
     const filteredData = listOfSkillss?.filter((item) => {
@@ -982,7 +1013,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     <input
                       type="file"
                       accept="application/pdf"
-                      // multiple
+                      multiple
                       // ref={uploadFileRef}
                       style={{
                         textTransform: "none",
@@ -995,15 +1026,21 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         },
                       }}
                       onChange={(e) => {
+                        // // setFile(e.target.files);
+                        // setLoader(true);
+                        // setTimeout(() => {
+                        //   setLoader(false);
+                        // }, [2000]);
+
+                        // e.preventDefault();
+                        // const resumefile = e.dataTransfer.files[0];
+                        // console.log(resumefile);
                         setFile(e.target.files);
-                        setLoader(true);
-                        setTimeout(() => {
-                          setLoader(false);
-                        }, [2000]);
                       }}
-                      onClick={() => {
-                        uploadFileRef.current.click();
-                      }}
+
+                      // onClick={() => {
+                      //   uploadFileRef.current.click();
+                      // }}
                     />
                     <Box
                       sx={{
@@ -1078,12 +1115,16 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       }}
                       // onDrag={handleDragOver}
                       // onDrop={handleDrop}
-                      onClick={() => {
-                        uploadFileRef2.current.click();
-                      }}
-                      onChange={(e) => {
-                        setCoverLetter(e.target.files);
-                      }}
+                      className={dragOver ? "drag-over" : ""}
+                      onDragOver={handleDragOver}
+                      onDragLeave={handleDragLeave}
+                      onDrop={handleDrop}
+                      // onClick={() => {
+                      //   uploadFileRef2.current.click();
+                      // }}
+                      // onChange={(e) => {
+                      //   setCoverLetter(e.target.files);
+                      // }}
                     >
                       <img src={Uploadimg} alt="img" />
                       <Typography
@@ -1098,7 +1139,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       >
                         Drag and drop here
                       </Typography>
-                      <Typography
+                      {/* <Typography
                         sx={{
                           fontFamily: "LGTrial",
                           fontStyle: "normal",
@@ -1109,19 +1150,19 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         }}
                       >
                         or
-                      </Typography>
+                      </Typography> */}
 
                       <input
                         type="file"
                         accept="application/pdf"
-                        ref={uploadFileRef2}
+                        // ref={uploadFileRef2}
                         style={{ display: "none" }}
-                        onChange={(e) => {
-                          setCoverLetter(e.target.files);
-                        }}
+                        // onChange={(e) => {
+                        //   setCoverLetter(e.target.files);
+                        // }}
                       />
                       {coverLetter?.file?.name}
-                      <Button
+                      {/* <Button
                         variant="outlined"
                         component="label"
                         sx={{
@@ -1144,7 +1185,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         >
                           Browse File
                         </Typography>
-                      </Button>
+                      </Button> */}
                     </Paper>
                   </Box>
                 </Box>

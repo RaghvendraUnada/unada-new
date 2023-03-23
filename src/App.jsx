@@ -212,13 +212,17 @@ function App() {
                                   src={OpenButtonWhite}
                                   sx={{
                                     marginBottom: "20px",
+                                    mt: {
+                                      sm: 0.5,
+                                      xs: 0.5,
+                                    },
                                     // background: "red",
                                     width: {
                                       xl: "50%",
                                       lg: "50%",
                                       md: "50%",
-                                      sm: "100%",
-                                      xs: "100%",
+                                      sm: "80%",
+                                      xs: "90%",
                                     },
                                     height: "auto",
                                     maxWidth: "35px",

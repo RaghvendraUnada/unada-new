@@ -101,20 +101,6 @@ const ChatSection = () => {
               gap: "20px",
             }}
           >
-            {/* <BsFacebook size={19} /> */}
-            {/* <AiFillInstagram size={24} /> */}
-            {/* <LinkedInIcon size={24} sx={{ fontSize: "24px" }} /> */}
-            {/* <BsTwitter size={19} /> */}
-            {/* <YouTubeIcon size={24} sx={{ fontSize: "24px" }} /> */}
-            {/* <DoorSlidingSharpIcon size={23} sx={{ fontSize: "23px" }} /> */}
-            <Box
-              component="img"
-              src={youtubestate}
-              sx={link}
-              onMouseOver={() => setyoutubestate(youtube)}
-              onMouseOut={() => setyoutubestate(youtubeblk)}
-              alt="glassdoor"
-            />
             <a href="https://in.linkedin.com/company/unadalabs" target="_blank">
               <Box
                 component="img"
@@ -135,6 +121,14 @@ const ChatSection = () => {
                 onMouseOut={() => setinstastate(instagramblk)}
               />
             </a>
+            <Box
+              component="img"
+              src={youtubestate}
+              sx={link}
+              onMouseOver={() => setyoutubestate(youtube)}
+              onMouseOut={() => setyoutubestate(youtubeblk)}
+              alt="glassdoor"
+            />
             <Box
               component="img"
               src={glassdorstate}
