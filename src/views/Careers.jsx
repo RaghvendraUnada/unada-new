@@ -14,16 +14,7 @@ import OurCultureSection from "../pages/CareerPages/OurCultureSection";
 import StoriesAtUnadaSection from "../pages/CareerPages/StoriesAtUnadaSection";
 import { motion } from "framer-motion";
 import { SendEvent } from "../utils/SendEvent";
-import { Link, useNavigate } from "react-router-dom";
 const Careers = () => {
-  const Navigate = useNavigate();
-  // window.onload(() => {
-  //   Navigate("/careers");
-  // });
-  window.onload = (event) => {
-    Navigate("/careers");
-    console.log("page is fully loaded");
-  };
   useEffect(() => {
     SendEvent("Careers Page");
   }, []);
