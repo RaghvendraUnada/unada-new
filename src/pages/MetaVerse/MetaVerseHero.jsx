@@ -139,9 +139,9 @@ const MetaVerseHero = () => {
       <BlackTHeroComp
         text1={"BUILDING"}
         ColorText={"IMMERSIVE"}
-        text2={"EXPERIENCES"}
+        text2={"EXPERIENCES and Spaces"}
         metaText1={"BRIDGING THE GAP"}
-        metaColorText={" BETWEEN VIRTUAL AND REAL"}
+        metaColorText={"BETWEEN VIRTUAL AND REAL"}
         HeroImg={MetaVerseHeroImg}
       />
     </>
