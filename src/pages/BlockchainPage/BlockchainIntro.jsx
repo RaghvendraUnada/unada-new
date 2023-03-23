@@ -8,7 +8,7 @@ const BlockchainIntro = () => {
       Text1={"Bridge the gap between"}
       ColorText={"web 2.0 & 3.0"}
       MetaText={
-        "We specialize in providing blockchain-based solutions to a wide range of industries. We offer custom solutions that are tailored to the specific needs of our clients, helping them to enhance their products and services through the use of blockchain technology. Our team can provide guidance on the most suitable blockchain solutions for a particular industry or use case, as well as support with the implementation and deployment of these solutions."
+        "Unada is at the forefront of the blockchain revolution, leveraging this groundbreaking technology to build a more secure, transparent, and decentralized future. With a team of experts in blockchain development, cryptography, and distributed systems, we're designing innovative solutions that enable businesses and individuals to exchange value, information, and assets in ways that were once impossible. Whether you're looking to streamline supply chain management, optimize financial transactions, or secure sensitive data, our blockchain technology is the key to unlocking new levels of efficiency, privacy, and trust."
       }
     />
   );
