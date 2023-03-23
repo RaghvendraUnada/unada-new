@@ -20,7 +20,7 @@ const DevelopmentStack = () => {
   const [Click5, setClick5] = useState(false);
   const [Click6, setClick6] = useState(false);
   const [boxDesc, setDesc] = useState(
-    "Adapt your warehousing capacities and network in real time. SpaceFill’s flexible model that enables you to benefit unlimited storage capacity within the connected network."
+    "We specialize in designing and creating innovative software applications for mobile devices. Whether you have a clear idea of what you want your app to do or you need help conceptualizing and designing a unique solution, we have the expertise to bring your vision to life."
   );
   const [url, setUrl] = useState("/application");
 
@@ -40,7 +40,7 @@ const DevelopmentStack = () => {
       id: 1,
       text: "Application Development",
       title: "Ultra-flexible logistics",
-      desc: "Adapt your warehousing capacities and network in real time. SpaceFill’s flexible model that enables you to benefit unlimited storage capacity within the connected network.",
+      desc: "We specialize in designing and creating innovative software applications for mobile devices. Whether you have a clear idea of what you want your app to do or you need help conceptualizing and designing a unique solution, we have the expertise to bring your vision to life.",
       url: "/application",
     },
     {
@@ -242,10 +242,11 @@ const DevelopmentStack = () => {
                     </Fade>
                     {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
-                      Adapt your warehousing capacities and network in real
-                      time. SpaceFill’s flexible model that enables you to
-                      benefit unlimited storage capacity within the connected
-                      network.
+                      We specialize in designing and creating innovative
+                      software applications for mobile devices. Whether you have
+                      a clear idea of what you want your app to do or you need
+                      help conceptualizing and designing a unique solution, we
+                      have the expertise to bring your vision to life.
                     </Typography>
                     <Box sx={{ width: "10%" }}>
                       <Link to="application">

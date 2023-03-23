@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography, Box } from "@mui/material";
 import Fade from "react-reveal/Fade";
 import selection from "../../pages/Home/home.module.css";
 
@@ -25,9 +25,14 @@ const InternshipSection = () => {
         <Typography sx={metaTextStyle} className={selection.zero}>
           We look forward to helping you jumpstart your career in tech!
         </Typography>
-        <Button disableRipple sx={ButtonStyle}>
+        {/* <Button disableRipple sx={ButtonStyle}>
           Apply
-        </Button>
+        </Button> */}
+        <Box mt={5}>
+          <Typography sx={{ fontSize: "1.5rem", color: "#000" }}>
+            Drop message on <span>hr@unada.io</span>
+          </Typography>
+        </Box>
       </Grid>
     </Grid>
   );

@@ -43,11 +43,11 @@ const Footer = () => {
           textAlign: "center",
         }}
       >
-        <Grid item xl={2} lg={2} md={2} sm={2.4} xs={2.4} sx={fooText}>
+        <Grid item xl={2} lg={2} md={2} sm={2.4} xs={2} sx={fooText}>
           Privacy policy
         </Grid>
-        <Grid item xl={2} lg={2} md={2} sm={2.4} xs={1} sx={{ ...fooText }}>
-          Terms
+        <Grid item xl={2} lg={2} md={2} sm={2.4} xs={2.6} sx={{ ...fooText }}>
+          Terms of service
         </Grid>
         <Grid
           item
@@ -55,7 +55,7 @@ const Footer = () => {
           lg={4}
           md={2}
           sm={3.4}
-          xs={6.2}
+          xs={5}
           sx={{
             ...fooText,
             textAlign: "center",

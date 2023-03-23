@@ -7,8 +7,8 @@ import AttrMarqueeBox from "../AttrMarqueeBox";
 const Attrs = [
   {
     image: Marqueeimg1,
-    text: "Games",
-    metaText: "Automate your Merge Request workflow",
+    text: "Gaming",
+    metaText: "The future of gaming is here in the metaverse.",
   },
   {
     image: Marqueeimg1,
@@ -19,7 +19,7 @@ const Attrs = [
   {
     image: Marqueeimg1,
     text: "Real estate",
-    metaText: "Automate your pull request workflow",
+    metaText: "Experience, explore and buy in the metaverse.",
   },
   {
     image: Marqueeimg1,
@@ -34,7 +34,8 @@ const Attrs = [
   {
     image: Marqueeimg1,
     text: "Workplace",
-    metaText: "Create and link issues with Sentry and automate issue creation",
+    metaText:
+      "The ultimate virtual workplace destination with collaboration in the virtual worlds. ",
   },
 ];
 const BlackTMarqueeRev = (props) => {

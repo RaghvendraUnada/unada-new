@@ -23,14 +23,14 @@ import Unada6 from "../../assets/Images/unadalife/ul6.webp";
 import Unada7 from "../../assets/Images/unadalife/ul7.webp";
 import Unada8 from "../../assets/Images/unadalife/ul8.webp";
 const ImgArr = [
-  { src: Unada1, text: "Our Design Team" },
-  { src: Unada2, text: "Our Design Team" },
-  { src: Unada3, text: "Our Design Team" },
-  { src: Unada4, text: "Our Design Team" },
-  { src: Unada5, text: "Our Design Team" },
-  { src: Unada6, text: "Our Design Team" },
-  { src: Unada7, text: "Our Design Team" },
-  { src: Unada8, text: "Our Design Team" },
+  { src: Unada1 },
+  { src: Unada2 },
+  { src: Unada3 },
+  { src: Unada4 },
+  { src: Unada5 },
+  { src: Unada6 },
+  { src: Unada7 },
+  { src: Unada8 },
 ];
 
 function SampleNextArrow(props) {

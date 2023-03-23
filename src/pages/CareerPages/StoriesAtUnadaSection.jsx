@@ -33,14 +33,14 @@ const ImgArr = [
   // UnadaStoryImg,
   // UnadaStoryImg,
   // UnadaStoryImg,
-  { src: Unada1, text: "Our Design Team" },
-  { src: Unada2, text: "Our Dev Team" },
-  { src: Unada3, text: "Our 3D Team" },
-  { src: Unada4, text: "Our just Team" },
-  { src: Unada5, text: "Our Design Team" },
-  { src: Unada6, text: "Our Design Team" },
-  { src: Unada7, text: "Our Design Team" },
-  { src: Unada8, text: "Our Design Team" },
+  { src: Unada1 },
+  { src: Unada2 },
+  { src: Unada3 },
+  { src: Unada4 },
+  { src: Unada5 },
+  { src: Unada6 },
+  { src: Unada7 },
+  { src: Unada8 },
 ];
 
 function SampleNextArrow(props) {

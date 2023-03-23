@@ -38,7 +38,9 @@ const WebHero = () => {
       <Grid container>
         <Intro
           imgUrl={introWeb}
-          mainTextIntro={"Web Development that tells your story"}
+          mainTextIntro={
+            "Custom web development that tells your story and drives results."
+          }
           subTextIntro={
             "As a leading web development company, our focus lies on providing the best web development solutions as per our clients requirements and vision. We work with a myriad of web based technologies and are language agnostic when it comes to delivering the desired results to our clients. From E-Commerce websites to building web technologies for specific business use cases, we do it all."
           }

@@ -99,7 +99,7 @@ const ContactHeroSection = () => {
             </Stack>
             <Stack>
               <Typography sx={contactText2} className={selection.invert2}>
-                Get in Touch !
+                Get in Touch!
               </Typography>
             </Stack>
           </Fade>
