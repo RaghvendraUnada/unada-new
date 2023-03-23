@@ -514,7 +514,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     sm: "none",
                     xs: "none",
                   },
-                  gap: "2rem",
+                  gap: "1.8rem",
                 }}
               >
                 <Typography sx={labeltext}>

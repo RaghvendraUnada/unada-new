@@ -29,6 +29,8 @@ import Nammish from "../../assets/Images/ourTeamCutOut/Nammish.webp";
 import Nishit from "../../assets/Images/ourTeamCutOut/Nishit.webp";
 import Aashvi from "../../assets/Images/ourTeamCutOut/Aashvi.webp";
 import Adi from "../../assets/Images/ourTeamCutOut/Adi.webp";
+import Aditiya from "../../assets/Images/ourTeamCutOut/Aditiya.webp";
+import Rohan from "../../assets/Images/ourTeamCutOut/Rohan.webp";
 import greyemptyimg from "../../assets/Images/ourTeam/greyemptyimg.svg";
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
@@ -301,7 +303,7 @@ const AnimatedGradientText = styled.h1`
 const EmployeeCard1 = (props) => {
   const nameListEmp = [
     {
-      img: greyemptyimg,
+      img: Rohan,
       name: "Rohan Hundia ",
       place: "Co-Founder & CEO ",
     },
@@ -424,7 +426,7 @@ const EmployeeCard1 = (props) => {
 const EmployeeCard2 = (props) => {
   const nameListEmp = [
     {
-      img: greyemptyimg,
+      img: Aditiya,
       name: "Aditya Vijay ",
       place: "Co-Founder & CTO",
     },
