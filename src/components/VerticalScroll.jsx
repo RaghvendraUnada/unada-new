@@ -114,6 +114,15 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   };
 
   // const [state,setState] = useState()
+  const [items, setItems] = useState([]);
+
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      const newItem = event.target.value;
+      setItems([...items, newItem]);
+      event.target.value = "";
+    }
+  }
 
   const apply = async (e) => {
     e.preventDefault();

@@ -122,7 +122,7 @@ export default function ChatUs(props) {
                   ...boxText,
                 }}
               >
-                Chat to us
+                Chat to us.
               </Typography>
             </Box>
             {/* </Link> */}

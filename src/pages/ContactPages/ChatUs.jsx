@@ -54,7 +54,7 @@ export default function ChatUs(props) {
                   },
                 }}
               >
-                Chat to us
+                Chat to us.
               </Typography>
             </Box>
           </Grid>

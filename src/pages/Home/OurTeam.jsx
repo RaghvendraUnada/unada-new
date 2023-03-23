@@ -486,7 +486,7 @@ const EmployeeCard2 = (props) => {
     },
     {
       img: greyemptyimg,
-      name: "Next is You",
+      name: "Next is You!",
       place: "",
     },
   ];
