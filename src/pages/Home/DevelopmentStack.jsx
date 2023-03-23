@@ -1024,7 +1024,7 @@ const OpenDetails = (props) => {
             {props.desc}
           </Typography>
           <Box sx={{ width: "10%" }}>
-            <Link href={props.url}>
+            <Link to={props.url}>
               <Typography
                 sx={{
                   fontSize: {

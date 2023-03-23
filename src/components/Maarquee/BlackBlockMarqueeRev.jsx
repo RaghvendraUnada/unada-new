@@ -7,35 +7,28 @@ import AttrMarqueeBox from "../AttrMarqueeBox";
 const Attrs = [
   {
     image: Marqueeimg1,
-    text: "Real Estate",
-    metaText: "Visualize weekend homes, corporate parks in AR/VR",
+    text: "Finance",
+    metaText: "Transforming finance with secure, transparent transactions",
   },
   {
     image: Marqueeimg1,
-    text: "E-Commerce",
-    metaText:
-      "How convenient would it be if you could try your apparel on you using AR",
+    text: "Healthcare",
+    metaText: "Unleash the power of health data with distributed ledgers",
+  },
+  {
+    image: Marqueeimg1,
+    text: "Social Media",
+    metaText: "Have ownership of the content you create and get paid",
   },
   {
     image: Marqueeimg1,
     text: "Gaming",
-    metaText: "The next generation of gaming in AR/VR",
-  },
-  {
-    image: Marqueeimg1,
-    text: "Corporate Training",
-    metaText: "Use AR to augment industrial and equipment training",
-  },
-  {
-    image: Marqueeimg1,
-    text: "Education",
-    metaText: "Leverage the power of education using AR/VR",
+    metaText: "Transforming in-gaming economies and player centrism",
   },
 ];
-
-const BlackTMarquee = (props) => {
+const BlackBlockMarqueeRev = (props) => {
   return (
-    <HorizontalScrollingList fromRight>
+    <HorizontalScrollingList>
       {Attrs.map((Attr, idx) => {
         return (
           <AttrMarqueeBox
@@ -50,5 +43,4 @@ const BlackTMarquee = (props) => {
     </HorizontalScrollingList>
   );
 };
-
-export default BlackTMarquee;
+export default BlackBlockMarqueeRev;

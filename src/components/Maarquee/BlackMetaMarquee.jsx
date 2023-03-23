@@ -23,17 +23,23 @@ const Attrs = [
   },
   {
     image: Marqueeimg1,
-    text: "Corporate Training",
-    metaText: "Use AR to augment industrial and equipment training",
+    text: "Workplace",
+    metaText:
+      "The ultimate virtual workplace destination with collaboration in the virtual worlds.",
   },
   {
     image: Marqueeimg1,
-    text: "Education",
-    metaText: "Leverage the power of education using AR/VR",
+    text: "Warehouse",
+    metaText: "Store, view and manage your goods in the metaverse.",
+  },
+  {
+    image: Marqueeimg1,
+    text: "Hotels & Resorts",
+    metaText: "Experience, relax and unwind in the ultimate virtual resort.",
   },
 ];
 
-const BlackTMarquee = (props) => {
+const BlackMetaMarquee = (props) => {
   return (
     <HorizontalScrollingList fromRight>
       {Attrs.map((Attr, idx) => {
@@ -51,4 +57,4 @@ const BlackTMarquee = (props) => {
   );
 };
 
-export default BlackTMarquee;
+export default BlackMetaMarquee;

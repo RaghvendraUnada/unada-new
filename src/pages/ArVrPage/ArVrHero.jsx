@@ -7,11 +7,11 @@ import BlackTHeroComp from "../../Components/BlackTHeroComp";
 const ArVrHero = () => {
   return (
     <BlackTHeroComp
-      text1={"LET YOUR"}
-      ColorText={"AR/VR"}
-      text2={"DO THE WORK"}
-      metaText1={"YOUR NIFTIES HAVE THE"}
-      metaColorText={"POWER TO PAY YOU"}
+      text1={"Experience a"}
+      ColorText={"new reality"}
+      text2={"with us"}
+      metaText1={"WHERE IMAGINATION"}
+      metaColorText={"MEET TECHNOLOGY"}
       HeroImg={ArVrHeroImg5}
     />
   );
