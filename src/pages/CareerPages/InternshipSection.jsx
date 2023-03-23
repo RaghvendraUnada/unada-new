@@ -29,8 +29,8 @@ const InternshipSection = () => {
           Apply
         </Button> */}
         <Box mt={5}>
-          <Typography sx={{ fontSize: "1.5rem", color: "#000" }}>
-            Drop message on <span>hr@unada.io</span>
+          <Typography sx={metaTextStyle}>
+            Drop message on hr@unada.io
           </Typography>
         </Box>
       </Grid>
