@@ -7,36 +7,35 @@ import AttrMarqueeBox from "../AttrMarqueeBox";
 const Attrs = [
   {
     image: Marqueeimg1,
-    text: "Gaming",
-    metaText: "The future of gaming is here in the metaverse.",
+    text: "Finance ",
+    metaText: "Transforming finance with secure, transparent transactions.",
   },
   {
     image: Marqueeimg1,
-    text: "Marketplace",
-    metaText:
-      "Create, search, and modify your issues from anywhere on your Mac",
+    text: "Healthcare ",
+    metaText: "Unleash the power of health data with distributed ledgers.",
   },
   {
     image: Marqueeimg1,
-    text: "Real estate",
-    metaText: "Experience, explore and buy in the metaverse.",
+    text: "Social Media ",
+    metaText: "Have ownership of the content you create and get paid.",
   },
   {
     image: Marqueeimg1,
-    text: "Office",
-    metaText: "Manage and respond to incidents directly in Slack",
+    text: "Gaming ",
+    metaText: "Transforming in-gaming economies and player centrism.",
   },
-  {
-    image: Marqueeimg1,
-    text: "Community",
-    metaText: "Automate your pull request workflow",
-  },
-  {
-    image: Marqueeimg1,
-    text: "Workplace",
-    metaText:
-      "The ultimate virtual workplace destination with collaboration in the virtual worlds. ",
-  },
+  // {
+  //   image: Marqueeimg1,
+  //   text: "Community",
+  //   metaText: "Automate your pull request workflow",
+  // },
+  // {
+  //   image: Marqueeimg1,
+  //   text: "Workplace",
+  //   metaText:
+  //     "The ultimate virtual workplace destination with collaboration in the virtual worlds. ",
+  // },
 ];
 const BlackTMarqueeRev = (props) => {
   return (
