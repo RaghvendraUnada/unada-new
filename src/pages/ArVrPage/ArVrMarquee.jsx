@@ -1,9 +1,8 @@
 import { Grid, Box } from "@mui/material";
 import React from "react";
-// import BlackTMarquee from "../../Components/Maarquee/BlackTMarquee";
-import BlackMetaMarquee from "../../Components/Maarquee/BlackMetaMarquee";
-import BlackMetaMarqueeRev from "../../Components/Maarquee/BlackMetaMarqueeRev";
-const MetaverseMarquee = () => {
+import BlackArVrMarquee from "../../Components/Maarquee/BlackArVrMarquee";
+import BlackArVrMarqueeRev from "../../Components/Maarquee/BlackArVrMarqueeRev";
+const ArVrMarquee = () => {
   return (
     <>
       <Grid
@@ -17,14 +16,14 @@ const MetaverseMarquee = () => {
           overflow: "hidden",
         }}
       >
-        <BlackMetaMarquee />
+        <BlackArVrMarquee />
 
         <Box sx={{ marginTop: "2rem" }}>
-          <BlackMetaMarqueeRev />
+          <BlackArVrMarqueeRev />
         </Box>
       </Grid>
     </>
   );
 };
 
-export default MetaverseMarquee;
+export default ArVrMarquee;

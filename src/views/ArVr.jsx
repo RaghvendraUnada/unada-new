@@ -3,7 +3,7 @@ import { Stack } from "@mui/material";
 import ArVrHero from "../pages/ArVrPage/ArVrHero";
 import ArVrIntro from "../pages/ArVrPage/ArVrIntro";
 import MetaVersePreviousProjects from "../pages/MetaVerse/MetaVersePreviousProjects";
-import MetaverseMarquee from "../pages/MetaVerse/MetaverseMarquee";
+import ArVrMarquee from "../pages/ArVrPage/ArVrMarquee";
 import { motion } from "framer-motion";
 import "../pages/Services/selectionwhite.module.css";
 import { SendEvent } from "../utils/SendEvent";
@@ -44,7 +44,7 @@ const ArVr = () => {
       >
         <ArVrHero />
         <ArVrIntro />
-        <MetaverseMarquee />
+        <ArVrMarquee />
         <MetaVersePreviousProjects />
         {/* <Footer /> */}
       </Stack>

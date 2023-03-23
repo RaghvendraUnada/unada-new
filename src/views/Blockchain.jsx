@@ -3,7 +3,7 @@ import { Stack } from "@mui/material";
 import MetaVersePreviousProjects from "../pages/MetaVerse/MetaVersePreviousProjects";
 import BlockchainHero from "../pages/BlockchainPage/BlockchainHero";
 import BlockchainIntro from "../pages/BlockchainPage/BlockchainIntro";
-import MetaverseMarquee from "../pages/MetaVerse/MetaverseMarquee";
+import BlockchainMarquee from "../pages/BlockchainPage/BlockchainMarquee";
 import { motion } from "framer-motion";
 import "../pages/MetaVerse/metaverse.module.css";
 import { SendEvent } from "../utils/SendEvent";
@@ -45,7 +45,7 @@ const Blockchain = () => {
         >
           <BlockchainHero />
           <BlockchainIntro />
-          <MetaverseMarquee />
+          <BlockchainMarquee />
           <MetaVersePreviousProjects />
         </Stack>
       </motion.div>

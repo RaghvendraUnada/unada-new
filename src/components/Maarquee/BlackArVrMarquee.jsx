@@ -32,9 +32,10 @@ const Attrs = [
     metaText: "Leverage the power of education using AR/VR",
   },
 ];
-const BlackTMarqueeRev = (props) => {
+
+const BlackArVrMarquee = (props) => {
   return (
-    <HorizontalScrollingList>
+    <HorizontalScrollingList fromRight>
       {Attrs.map((Attr, idx) => {
         return (
           <AttrMarqueeBox
@@ -49,4 +50,5 @@ const BlackTMarqueeRev = (props) => {
     </HorizontalScrollingList>
   );
 };
-export default BlackTMarqueeRev;
+
+export default BlackArVrMarquee;
