@@ -71,9 +71,7 @@ export default function ChatUs(props) {
   }
 
   async function openEmail(e) {
-    console.log("openEmail");
-    window.location.href =
-      "mailto:business@unada.io?subject=Subject&body=message%20goes%20here";
+    window.location.href = "mailto:business@unada.io";
   }
 
   return (
