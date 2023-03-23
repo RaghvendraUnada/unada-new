@@ -110,7 +110,7 @@ const ServicesPage = () => {
                     <Typography sx={paperTextStyle}>Metaverse</Typography>
                   </Fade>
                   <Typography sx={activePaperText}>
-                    Imagine a world where anything is possible! At Unada
+                    Imagine a world where anything is possible! At Unada.
                   </Typography>
                   <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
                     {/* <img
@@ -170,9 +170,15 @@ const ServicesPage = () => {
                   <Fade top duration={1000}>
                     <Typography sx={paperTextStyle}>AR/VR</Typography>
                   </Fade>
-                  <Typography sx={activePaperText}>
+                  <Typography
+                    sx={{
+                      ...activePaperText,
+                      lineHeight: "20px",
+                      fontSize: "18px",
+                    }}
+                  >
                     Whether you're a game developer looking to create the next
-                    big hit.
+                    big hit, or trying to curate immersive experiences.
                   </Typography>
                   <Link to={"/ArVr"} style={{ textDecoration: "none" }}>
                     {/* <img
@@ -312,7 +318,7 @@ const ServicesPage = () => {
                         Metaverse
                       </Typography>
                     </Fade>
-                    Imagine a world where anything is possible! At Unada
+                    Imagine a world where anything is possible! At Unada.
                     <br />
                     <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
                       {/* <Button sx={ButtonStyle}>View</Button> */}
@@ -389,7 +395,7 @@ const ServicesPage = () => {
                       </Typography>
                     </Fade>
                     Whether you're a game developer looking to create the next
-                    big hit.
+                    big hit, or trying to curate immersive experiences.
                     <br />
                     <Link to={"/ArVr"} style={{ textDecoration: "none" }}>
                       {/* <Button sx={ButtonStyle}>View</Button> */}
@@ -615,7 +621,7 @@ const activePaperText = {
   fontStyle: "normal",
   fontWeight: 400,
   fontSize: "20px",
-  lineHeight: "28pxpx",
+  lineHeight: "26px",
   marginTop: "2rem",
   color: "rgba(255, 255, 255, 0.8)",
   "::selection": {

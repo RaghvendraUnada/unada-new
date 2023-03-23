@@ -28,6 +28,8 @@ import Virendra from "../../assets/Images/ourTeamCutOut/Virendra.webp";
 import Nammish from "../../assets/Images/ourTeamCutOut/Nammish.webp";
 import Nishit from "../../assets/Images/ourTeamCutOut/Nishit.webp";
 import Aashvi from "../../assets/Images/ourTeamCutOut/Aashvi.webp";
+import Adi from "../../assets/Images/ourTeamCutOut/Adi.webp";
+import greyemptyimg from "../../assets/Images/ourTeam/greyemptyimg.svg";
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
   const [flip, setFlip] = useState(false);
@@ -299,11 +301,15 @@ const AnimatedGradientText = styled.h1`
 const EmployeeCard1 = (props) => {
   const nameListEmp = [
     {
-      img: Ronak,
-      name: "Ronak Goswami",
-      place: "Full Stack Developer",
+      img: greyemptyimg,
+      name: "Rohan Hundia ",
+      place: "Co-Founder & CEO ",
     },
-
+    {
+      img: Yash,
+      name: "Yash Deliwala ",
+      place: "Chief Vibes Officer",
+    },
     {
       img: Raghvendra,
       name: "Raghvendra Singh ",
@@ -312,47 +318,53 @@ const EmployeeCard1 = (props) => {
     {
       img: Shri,
       name: "Shrikant Kanthale ",
-      place: "Front-end Developer",
+      place: "L1 Web Developer",
     },
     {
-      img: Sandeep,
-      name: "Sandeep Singh",
-      place: "UI/UX",
-    },
-    {
-      img: Zaid,
-      name: "Shreyansh Sheth",
+      img: Ronak,
+      name: "Ronak Goswami",
       place: "Full Stack Developer",
     },
+
     {
       img: Akash,
       name: "Akash Mishra",
-      place: "Full-stack Developer",
-    },
-    {
-      img: Yash,
-      name: "Yash Deliwala ",
-      place: "HR",
+      place: "MERN Stack Developer ",
     },
     {
       img: Harsiddh,
       name: "Harsiddh Rajput ",
-      place: "3D",
+      place: "Senior 3D Developer",
     },
     {
-      img: Zaid,
+      img: greyemptyimg,
       name: "Devendra Chaudhari ",
-      place: "3D",
+      place: "3D Artist",
     },
     {
       img: Nishit,
-      name: "Nishit",
-      place: "3D",
+      name: "Nishit Godhani ",
+      place: "3D Intern ",
     },
     {
       img: Zaid,
       name: "Zaid Shaikh ",
       place: "Full Stack Developer",
+    },
+    {
+      img: Adi,
+      name: "Aditya Chauhan",
+      place: "3D Artist",
+    },
+    {
+      img: Virendra,
+      name: "Virendra Parihar",
+      place: "Senior Android Developer ",
+    },
+    {
+      img: Sandeep,
+      name: "Sandeep Singh",
+      place: "UI/UX Designer ",
     },
   ];
   return (
@@ -412,49 +424,45 @@ const EmployeeCard1 = (props) => {
 const EmployeeCard2 = (props) => {
   const nameListEmp = [
     {
-      img: Mit,
-      name: "Mit Shah",
-      place: "Full Stack Developer",
+      img: greyemptyimg,
+      name: "Aditya Vijay ",
+      place: "Co-Founder & CTO",
     },
     {
-      img: TeamImgOne,
-      name: "Dev Mistry",
-      place: "Full Stack Developer",
-    },
-    {
-      img: Jin,
-      name: "Jahnavi Makwana ",
-      place: "UI/UX",
-    },
-    {
-      img: TeamImgOne,
-      name: "Tejas Lohar",
-      place: "DevOps",
-    },
-    {
-      img: TeamImgOne,
+      img: greyemptyimg,
       name: "Samir Vitlani",
-      place: "UI/UX",
-    },
-    {
-      img: Khushboo,
-      name: "Khushboo Rai ",
-      place: "Andriod Developer",
+      place: "Project Manager & Lead ",
     },
     {
       img: Rutuja,
       name: "Rutuja Karnavat ",
-      place: "HR",
+      place: "Chief Vibes & People Officer ",
     },
     {
-      img: Virendra,
-      name: "Virendra Parihar",
-      place: "Andriod Developer",
+      img: greyemptyimg,
+      name: "Shreyansh Sheth",
+      place: "Full Stack Developer",
     },
     {
-      img: TeamImgOne,
+      img: Mit,
+      name: "Mit Shah",
+      place: "Development Intern ",
+    },
+    {
+      img: greyemptyimg,
+      name: "Dev Mistry",
+      place: "Development Intern",
+    },
+
+    {
+      img: greyemptyimg,
+      name: "Tejas Lohar",
+      place: "DevOps",
+    },
+    {
+      img: greyemptyimg,
       name: "Harikrushna Chauhan",
-      place: "Software Tester",
+      place: "Manual Tester",
     },
     {
       img: Nammish,
@@ -465,6 +473,21 @@ const EmployeeCard2 = (props) => {
       img: Aashvi,
       name: "aashvi zala ",
       place: "UI/UX",
+    },
+    {
+      img: Khushboo,
+      name: "Khushboo Rai ",
+      place: "Andriod Developer",
+    },
+    {
+      img: Jin,
+      name: "Jahnavi Makwana ",
+      place: "UI/UX Designer ",
+    },
+    {
+      img: greyemptyimg,
+      name: "Next is You",
+      place: "",
     },
   ];
   return (

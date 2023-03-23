@@ -1,6 +1,7 @@
 import { Paper, Typography, Box } from "@mui/material";
 import React from "react";
 import ClientMarquee from "../../components/Maarquee/ClientMarquee";
+import ClientMarqueeNew from "../../components/Maarquee/ClientMarqueeNew";
 import ClientMarqueeLeftToRight from "../../components/Maarquee/ClientMarqueeLeftToRight";
 import "./OurTeam.css";
 import Fade from "react-reveal/Fade";
@@ -43,7 +44,7 @@ const OurClients = () => {
       <Box sx={{ minHeight: "500px" }}>
         <ClientMarquee />
         <ClientMarqueeLeftToRight />
-        <ClientMarquee />
+        <ClientMarqueeNew />
       </Box>
     </Paper>
   );

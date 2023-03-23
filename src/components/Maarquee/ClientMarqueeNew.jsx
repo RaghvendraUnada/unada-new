@@ -17,25 +17,25 @@ import ClientBox from "../ClientBox";
 import axios from "axios";
 
 const clients = [
-  { image: Bxi },
   { image: Cineman },
-  { image: Ganesh },
   { image: IclWhite },
+  { image: Pots },
+  { image: Unispace },
   { image: Kushi },
+  { image: Bxi },
   { image: Maysixty },
   { image: Mirash },
-  { image: Pots },
-  { image: Strategic },
-  { image: Unispace },
-  { image: WhiteValley },
+  { image: Ganesh },
   { image: oho },
+  { image: Strategic },
+  { image: WhiteValley },
 ];
 
 const RandomFirstList = [...clients].sort(() => Math.random() - 0.6);
 const RandomSecondList = [...clients].sort(() => Math.random() - 0.6);
 const RandomThirdList = [...clients].sort(() => Math.random() - 0.6);
 
-const ClientMarquee = (props) => {
+const ClientMarqueeNew = (props) => {
   return (
     <HorizontalScrollingList fromRight>
       {clients.map((client, idx) => {
@@ -51,7 +51,7 @@ const ClientMarquee = (props) => {
   );
 };
 
-export default ClientMarquee;
+export default ClientMarqueeNew;
 
 // const [client, setclient] = React.useState();
 
