@@ -4,14 +4,14 @@ import React from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import Fade from "react-reveal/Fade";
-
+import { useNavigate } from "react-router-dom";
 const ContactUsSection = () => {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   let location = useLocation();
-
+  const navigate = useNavigate();
   const handleSubmitForm = async (e) => {
     e.preventDefault();
     setFirstName("");
@@ -38,14 +38,32 @@ const ContactUsSection = () => {
     if (location?.hash === "#section") {
       setTimeout(() => {
         window.scrollTo({ top: 800, behavior: "smooth" });
+        navigate("/contact");
       }, [1200]);
     } else if (location?.hash === "#miniSection") {
       setTimeout(() => {
         window.scrollTo({ top: 400, behavior: "smooth" });
+        navigate("/contact");
       }, [1200]);
     } else {
       return console.log(window.location.pathname);
     }
+  }, []);
+
+  // useEffect(() => {
+  //   if (history.scrollRestoration) {
+  //     history.scrollRestoration = "manual";
+  //   } else {
+  //     window.onbeforeunload = function () {
+  //       window.scrollTo(0, 0);
+  //     };
+  //   }
+  // }, []);
+
+  useEffect(() => {
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
   }, []);
 
   return (
@@ -101,7 +119,7 @@ const ContactUsSection = () => {
               Name:<span style={{ color: "#FF5F5F" }}>*</span>
             </Typography>
 
-            <Box sx={box}>
+            <Box sx={box} id="section">
               <input
                 className="contact-box"
                 type="text"

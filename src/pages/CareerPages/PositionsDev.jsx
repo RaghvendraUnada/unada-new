@@ -26,14 +26,21 @@ const PositionsDev = () => {
     if (location?.hash === "#section") {
       setTimeout(() => {
         window.scrollTo({ top: 3640, behavior: "smooth" });
+        navigate("/careers");
       }, [1200]);
     } else if (location?.hash === "#miniSection") {
       setTimeout(() => {
         window.scrollTo({ top: 500, behavior: "smooth" });
+        navigate("/careers");
       }, [1200]);
     } else {
       return console.log(window.location.pathname);
     }
+  }, []);
+  useEffect(() => {
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
   }, []);
   return (
     <Grid
