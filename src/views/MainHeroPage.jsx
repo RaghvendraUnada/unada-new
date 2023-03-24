@@ -357,6 +357,7 @@ const MainHeroPage = () => {
                 width="40px"
                 height="30px"
                 style={{ marginTop: "22px" }}
+                onClick={() => window.location.reload()}
               />
               {/* </Link> */}
 

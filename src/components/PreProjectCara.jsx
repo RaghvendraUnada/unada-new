@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import pre1 from "../assets/Images/cara/pre1.png";
 import pre2 from "../assets/Images/cara/pre2.png";
 import pre3 from "../assets/Images/cara/pre3.png";
-// import ExploreIcon from "../assets/Images/Services/ExploreIcon.svg";X
 import blackArrowImg from "../assets/Images/Services/blackArrowImg.svg";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
