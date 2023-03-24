@@ -37,8 +37,8 @@ const Ui = () => {
 
 export default Ui;
 const AnimationSettings = {
-  transition: { duration: 0.5 },
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },
+  transition: { duration: 1.1 },
 };

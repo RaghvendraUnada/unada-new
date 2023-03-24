@@ -77,7 +77,7 @@ const HeroIntro = () => {
           },
         }}
       >
-        {isInView ? (
+        {/* {isInView ? (
           <motion.div
             className={heroIntro.cursorchange}
             variants={variants}
@@ -95,7 +95,7 @@ const HeroIntro = () => {
               mixBlendMode: "difference",
             }}
           />
-        ) : null}
+        ) : null} */}
         <Typography sx={TextStyle} ref={ref} className={selection.invert2}>
           We build and use <br className={selection.invert2} />
           <span style={{ color: "#70ADFF" }} className={selection.invert2}>

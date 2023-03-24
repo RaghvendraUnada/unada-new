@@ -33,7 +33,7 @@ const AnimatedRoutes = ({ setColorState }) => {
     }, 500);
   }, [Location.pathname]);
   return (
-    <AnimatePresence>
+    <AnimatePresence exitBeforeEnter>
       <Routes location={Location} key={Location.pathname}>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/careers" element={<Careers />} />
