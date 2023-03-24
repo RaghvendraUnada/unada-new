@@ -31,7 +31,7 @@ import Aashvi from "../../assets/Images/ourTeamCutOut/Aashvi.webp";
 import Adi from "../../assets/Images/ourTeamCutOut/Adi.webp";
 import Aditiya from "../../assets/Images/ourTeamCutOut/Aditiya.webp";
 import Rohan from "../../assets/Images/ourTeamCutOut/Rohan.webp";
-import greyemptyimg from "../../assets/Images/ourTeam/greyemptyimg.svg";
+import greyemptyimg from "../../assets/Images/ourTeamCutOut/greyemptyimg.svg";
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
   const [flip, setFlip] = useState(false);

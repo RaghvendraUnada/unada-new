@@ -14,6 +14,7 @@ import BigArrowImg from "../../assets/Images/Services/BigArrowImg.svg";
 import styles from "./Service.module.css";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion";
 import { useNavigate, Link } from "react-router-dom";
 const ServicesPage = () => {
   const navigate = useNavigate();
@@ -83,6 +84,7 @@ const ServicesPage = () => {
             </Box>
           </Paper>
         </Grid>
+
         <Grid item xl={3.5} lg={3.5} md={3.5} sm={12} xs={12}>
           <Paper
             onClick={() => {
@@ -251,6 +253,7 @@ const ServicesPage = () => {
           </Paper>
         </Grid>
       </Grid>
+
       {/* MobileView */}
       <Grid
         container
@@ -481,6 +484,12 @@ const ServicesPage = () => {
   );
 };
 
+const AnimationSettings = {
+  transition: { duration: 0.5 },
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 const paperStyle = {
   width: "auto",
 

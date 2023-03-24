@@ -284,7 +284,7 @@ function App() {
                     >
                       <Paper
                         sx={{
-                          width: "95%",
+                          width: "98%",
                           mx: "auto",
                           display: "flex",
                           justifyContent: "space-between",

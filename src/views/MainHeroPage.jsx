@@ -339,7 +339,7 @@ const MainHeroPage = () => {
           >
             <Paper
               sx={{
-                width: "95%",
+                width: "98%",
                 mx: "auto",
                 display: "flex",
                 justifyContent: "space-between",
@@ -355,8 +355,8 @@ const MainHeroPage = () => {
               <img
                 src={Logo}
                 width="40px"
-                height={"auto"}
-                style={{ marginTop: "30px" }}
+                height="30px"
+                style={{ marginTop: "22px" }}
               />
               {/* </Link> */}
 
@@ -711,7 +711,7 @@ const ButtonStyle = {
   color: "#393939",
   fontStyle: "normal",
   fontWeight: 400,
-  mt: { xl: "17px", lg: "17px", md: "17px", sm: "17px", xs: "25px" },
+  mt: { xl: "15px", lg: "15px", md: "15px", sm: "15px", xs: "25px" },
   width: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   "&:hover": {
