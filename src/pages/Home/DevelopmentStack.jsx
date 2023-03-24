@@ -1,7 +1,5 @@
-import { Paper, Typography, Box, Grid, Button } from "@mui/material";
+import { Paper, Typography, Box, Grid } from "@mui/material";
 import React, { useState } from "react";
-import ServicesPage from "../Services/ServicesPage";
-import { HiArrowRight } from "react-icons/hi";
 import styles from "./DevStack.module.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -81,7 +79,7 @@ const DevelopmentStack = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Paper
         sx={{
           display: {
@@ -867,7 +865,7 @@ const DevelopmentStack = () => {
           </Grid>
         </Grid>
       </Paper>
-    </>
+    </React.Fragment>
   );
 };
 
@@ -1065,33 +1063,6 @@ const TransformedText = {
   "&:hover": {
     color: "#000",
   },
-  // textAlign: "left",
-};
-
-const TransformedTextTwo = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 500,
-  lineHeight: "45px",
-  display: "flex",
-  letterSpacing: "1px",
-  color: "#000000",
-  fontSize: {
-    xl: "40px",
-    lg: "40px",
-    md: "35px",
-    sm: "8rem",
-    xs: "5rem",
-  },
-  textAlign: "center",
-  opacity: 1,
-  transform: {
-    xl: "rotate(0deg)",
-    lg: "rotate(0deg)",
-    md: "rotate(-90deg)",
-    sm: "rotate(0deg)",
-    xs: "rotate(0deg)",
-  },
 };
 
 const paperStyle = {
@@ -1121,158 +1092,6 @@ const paperStyle = {
   },
 };
 
-const inActiveboxStyle = {
-  position: "absolute",
-  bottom: "5%",
-  display: "flex",
-  padding: "2rem",
-  alignItems: "baseline",
-};
-const ActiveBoxStyles = {
-  position: "absolute",
-  bottom: "5%",
-  padding: "2rem",
-};
-const ServicePaperStyle = {
-  width: "auto",
-
-  height: {
-    xl: "97vh",
-    lg: "97vh",
-    md: "97vh",
-    sm: "10vh",
-    xs: "10vh",
-  },
-  borderRight: "1px solid rgba(163, 163, 163, 0.3)",
-  borderBottom: {
-    xl: "1px solid rgba(163, 163, 163, 0.3)",
-    lg: "1px solid rgba(163, 163, 163, 0.3)",
-    md: "1px solid rgba(163, 163, 163, 0.3)",
-    sm: "1px solid rgba(163, 163, 163, 0.3)",
-    xs: "1px solid rgba(163, 163, 163, 0.3)",
-  },
-  background: "black",
-  position: "relative",
-};
-const mobilePaper = {
-  width: "auto",
-  padding: "3rem",
-  background: "#000000",
-  border: "1px solid #191919",
-};
-const mobileHeadText = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 500,
-  fontSize: "30px",
-  lineHeight: "45px",
-  letterSpacing: 0.01,
-
-  color: "#FFFFFF",
-};
-const activePaperText = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 400,
-  fontSize: "20px",
-  lineHeight: "28pxpx",
-  marginTop: "2rem",
-  color: "rgba(255, 255, 255, 0.8)",
-};
-const MetaTextStyle = {
-  fontFamily: "LGMedium",
-  fontStyle: "normal",
-  fontWeight: 500,
-  fontSize: {
-    xl: "10rem",
-    lg: "9.5rem",
-    md: "9rem",
-    sm: "8rem",
-    xs: "5rem",
-  },
-  letterSpacing: "0.01px",
-  textAlign: "center",
-  color: "rgba(255, 255, 255, 0.2)",
-
-  opacity: 0.5,
-  transform: {
-    xl: "rotate(-90deg)",
-    lg: "rotate(-90deg)",
-    md: "rotate(-90deg)",
-    sm: "rotate(0deg)",
-    xs: "rotate(0deg)",
-  },
-};
-
-const paperTextStyle = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 500,
-  fontSize: {
-    xl: "4.2rem",
-    lg: "4.2rem",
-    md: "3.7rem",
-    sm: "3.2rem",
-    xs: "3rem",
-  },
-  lineHeight: "45px",
-  letterSpacing: "0.01px",
-  color: " #FFFFFF",
-};
-const mobileActivePaper = {
-  background: "black",
-  border: "1px solid #191919",
-  textAlign: "center",
-  padding: "2rem",
-};
-const mobileActivePapertext = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 500,
-  background: "linear-gradient(90deg, #1488CC 0%, #2B32B2 100%)",
-  backgroundSize: " 100%",
-  backgroundRepeat: "repeat",
-  backgroundClip: "text",
-  textFillColor: "transparent",
-  fontSize: "35px",
-  lineHeight: "45px",
-  textAlign: "center",
-  letterSpacing: 0.01,
-};
-const mobileActivePaperMetaText = {
-  fontFamily: "LGRegular",
-  padding: "2rem",
-  fontStyle: "normal",
-  textAlign: "justify",
-  fontWeight: 400,
-  fontSize: {
-    sm: "35px",
-    xs: "15px",
-  },
-  lineHeight: {
-    sm: "42px",
-    xs: "21px",
-  },
-  color: "white",
-  position: "absolute",
-  top: "25%",
-};
-const ButtonStyle = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 400,
-  fontSize: {
-    sm: "12px",
-    xs: "12px",
-  },
-  padding: "0.5rem 1rem",
-  letterSpacing: 0.01,
-  borderRadius: "30px",
-  border: "1px #000 solid",
-  color: "#000",
-  marginTop: "2rem",
-  opacity: 0.7,
-};
 const ServiceText = {
   fontFamily: "LGRegular",
   fontStyle: "normal",

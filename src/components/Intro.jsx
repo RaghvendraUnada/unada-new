@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Box, Paper, Grid } from "@mui/material";
 import Fade from "react-reveal/Fade";
+
 const Intro = ({ imgUrl, mainTextIntro, subTextIntro }) => {
   return (
     <Paper elevation={0}>
@@ -38,18 +39,7 @@ const Intro = ({ imgUrl, mainTextIntro, subTextIntro }) => {
           sm={12}
           xs={12}
           sx={{
-            // marginTop: "2rem",
             textAlign: { lg: "left", xl: "left", xs: "center", sm: "center" },
-            // marginTop: {
-            //   xl: "10rem",
-            //   lg: "10rem",
-            //   md: "9rem",
-            //   sm: "4rem",
-            //   xs: "4rem",
-            // },
-            // marginTop: "inherit",
-            // background: "red",
-
             justifyContent: "center",
             display: {
               xl: "flex",
@@ -116,13 +106,7 @@ const Intro = ({ imgUrl, mainTextIntro, subTextIntro }) => {
           background: "#fff",
           width: "100%",
           height: "100%",
-          // minHeight: {
-          //   xl: "100vh",
-          //   lg: "100vh",
-          //   md: "100vh",
-          //   sm: "0vh",
-          //   xs: "0vh",
-          // },
+
           display: {
             xl: "none",
             lg: "none",
@@ -130,7 +114,6 @@ const Intro = ({ imgUrl, mainTextIntro, subTextIntro }) => {
             xs: "none",
             sm: "flex",
           },
-          // borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
           marginLeft: "auto",
           marginRight: "auto",
           marginTop: { lg: "0rem", xl: "0rem", xs: "0rem", sm: "rem" },
@@ -163,18 +146,7 @@ const Intro = ({ imgUrl, mainTextIntro, subTextIntro }) => {
             <Fade top duration={1000}>
               <Typography sx={mainText}>{mainTextIntro}</Typography>
             </Fade>
-            <Box
-              mt={2}
-              // sx={{
-              //   marginBottom: {
-              //     lg: "0rem",
-              //     xl: "0rem",
-              //     md: "1rem",
-              //     sm: "2rem",
-              //     xs: "2rem",
-              //   },
-              // }}
-            >
+            <Box mt={2}>
               <Typography sx={subText}>{subTextIntro}</Typography>
             </Box>
           </Box>
@@ -199,7 +171,6 @@ const mainText = {
     sm: "3.5rem",
     xs: "3.5rem",
   },
-  // marginTop: { sm: "4rem", xs: "4rem" },
   width: { xl: "80%", lg: "80%", md: "80%", sm: "85%", xs: "85%" },
   marginLeft: "auto",
   marginRight: "auto",

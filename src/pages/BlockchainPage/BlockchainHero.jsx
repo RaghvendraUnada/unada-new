@@ -11,10 +11,7 @@ const BlockchainHero = () => {
       text2={"SOLUTIONS"}
       metaText1={"LEADING THE WAY IN"}
       metaColorText={"BLOCKCHAIN INNOVATION."}
-      //   HeroImg={ArVrHeroImg2}
-      //   HeroImg={ArVrImg1}
       HeroImg={BlockchainHeroImg}
-      // HeroImg={ArVrHeroImg6}
     />
   );
 };

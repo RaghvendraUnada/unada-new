@@ -1,13 +1,11 @@
 import React from "react";
 import { Grid, Typography, Box, Paper, Stack } from "@mui/material";
-// import thumb from "../../assets/Images/Application/thumb.svg";
 const StackList = ({ headerName, imgUrlLogo }) => {
   return (
     <Paper
       elevation={0}
       sx={{
         height: "100%",
-        // minHeight: "100vh",
         marginTop: "0.5rem",
       }}
     >
@@ -18,7 +16,6 @@ const StackList = ({ headerName, imgUrlLogo }) => {
               display: "flex",
               justifyContent: "center",
               textAlign: "center",
-              //   background: "red",
             }}
           >
             <Typography sx={mainText}>{headerName}</Typography>
@@ -58,7 +55,6 @@ const StackList = ({ headerName, imgUrlLogo }) => {
       </Paper>
       <hr
         style={{
-          // color: "red",
           borderBottom: "4px solid rgba(245, 245, 245, 1)",
           marginTop: "4rem",
         }}
@@ -84,47 +80,4 @@ const mainText = {
   marginLeft: "auto",
   marginRight: "auto",
   textAlign: "center",
-};
-
-const mainPage = {
-  marginLeft: "auto",
-  marginRight: "auto",
-  width: "85%",
-  borderRadius: "2rem",
-  py: 1,
-  mt: 5,
-};
-
-const PageStyle = {
-  display: "flex",
-  justifyContent: "center",
-  padding: { xl: "1.5rem", lg: "1.5rem", md: "1.5rem", sm: "1rem", xs: "1rem" },
-  height: { xl: "15rem", lg: "15rem", md: "15rem", sm: "24rem", xs: "28rem" },
-  background: "linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0))",
-  width: "100%",
-  borderRadius: "2rem",
-};
-
-const TestStyle = {
-  width: "60%",
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 500,
-  fontSize: { xl: "2rem", lg: "2rem", md: "1.5rem", sm: "1rem", xs: "1rem" },
-  color: "#212121",
-  lineHeight: { sm: "inherit", xs: "inherit" },
-};
-
-const text = {
-  color: "#121212",
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 400,
-  fontSize: {
-    xl: "1.2rem",
-    lg: "1.2rem",
-    md: "1.5rem",
-    sm: "1.2rem",
-    xs: "1.2rem",
-  },
 };

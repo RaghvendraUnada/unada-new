@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Typography, Box, Paper } from "@mui/material";
 import styles from "./Contact.module.css";
 import { useState } from "react";
 import EastSharpIcon from "@mui/icons-material/EastSharp";

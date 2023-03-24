@@ -3,7 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import Slider from "react-slick";
-import { GrNext, GrPrevious } from "react-icons/gr";
+import { GrNext } from "react-icons/gr";
 import Fade from "react-reveal/Fade";
 import selection from "./selection.module.css";
 import Unada1 from "../../assets/Images/unadalife/ul1.webp";

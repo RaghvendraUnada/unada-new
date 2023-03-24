@@ -346,12 +346,6 @@ const MainHeroPage = () => {
               }}
               elevation={0}
             >
-              {/* <Link
-                to={"/"}
-                style={{
-                  textDecoration: "none",
-                }}
-              > */}
               <img
                 src={Logo}
                 width="40px"
@@ -359,7 +353,6 @@ const MainHeroPage = () => {
                 style={{ marginTop: "22px" }}
                 onClick={() => window.location.reload()}
               />
-              {/* </Link> */}
 
               <Button sx={ButtonStyle} onClick={() => setOpen(false)}>
                 Close
@@ -662,48 +655,6 @@ const hue = keyframes`
    -webkit-filter: hue-rotate(-360deg);
  }
 `;
-// const AnimatedGradientText = styled.h1`
-//   background-image: -webkit-linear-gradient(
-//     2deg,
-//     rgba(201, 75, 234, 1) 0%,
-//     rgba(112, 62, 195, 1),
-//     rgba(59, 33, 140, 1),
-//     rgba(26, 16, 66, 1),
-//     rgba(54, 9, 52, 1),
-//     rgba(170, 2, 87, 1)
-//   );
-//   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   -webkit-animation: ${hue} 10s infinite linear;
-//   font-family: LGRegular;
-//   font-size: 65px;
-//   font-weight: 550;
-//   margin: 0;
-//   // text-transform: uppercase;
-//   padding: 0;
-//   // overflow-wrap: break-word;
-//   text-rendering: optimizelegibility;
-//   -moz-osx-font-smoothing: grayscale;
-//   @media (max-width: 1200px) {
-//     font-size: 65px;
-//     lineheight: 75px;
-//   }
-//   @media (max-width: 992px) {
-//     font-size: 25px;
-//     lineheight: 65px;
-//   }
-//   @media (max-width: 768px) {
-//     lineheight: 55px;
-//   }
-//   @media (max-width: 576px) {
-//     lineheight: 50px;
-//   }
-//   @media (max-width: 320px) {
-//     lineheight: 45px;
-//     font-size: 10px;
-//   }
-// `;
 
 const ButtonStyle = {
   fontFamily: "LGRegular",
@@ -733,9 +684,6 @@ const ButtonStyle = {
   "& .MuiTouchRipple-rippleVisible": {
     color: "transparent !important",
   },
-};
-const LinkStyles = {
-  textDecoration: "none",
 };
 
 const ContactUsButton = {
@@ -767,15 +715,4 @@ const centerMainText = {
   backgroundRepeat: "repeat",
   backgroundClip: "text",
   textFillColor: "transparent",
-};
-const colorBoxGradientStyle = {
-  "&:hover": {
-    backgroundImage: `url(${GradientImage})`,
-    backgroundRepeat: "repeat",
-    backgroundClip: "text",
-    textFillColor: "transparent",
-    backgroundSize: "contain",
-    WebkitTextFillColor: "transparent",
-    opacity: 1,
-  },
 };

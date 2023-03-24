@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import Carousel from "react-spring-3d-carousel";
-// import uuidv4 from "uuid";
 import { config } from "react-spring";
 import CaraImg from "../../assets/Images/MetaVerse/CaraImg1.svg";
+
 export default class Example extends Component {
   state = {
     goToSlide: 0,
     offsetRadius: 2,
-    // showNavigation: true,
     config: config.gentle,
   };
 
@@ -141,7 +140,6 @@ export default class Example extends Component {
           slides={this.slides}
           goToSlide={this.state.goToSlide}
           offsetRadius={this.state.offsetRadius}
-          // showNavigation={true}
           animationConfig={"slow"}
         />
       </div>

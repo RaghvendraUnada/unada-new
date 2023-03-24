@@ -1,60 +1,9 @@
 import React from "react";
-import Card from "../../Components/Caraousol/Card";
 import { Grid, Paper, Typography } from "@mui/material";
-import Carousel from "../../Components/Caraousol/Carousel";
-import cara1 from "../../assets/Images/MetaVerse/CaraImg1.svg";
-import cara2 from "../../assets/Images/MetaVerse/CaraImg2.svg";
-import cara3 from "../../assets/Images/MetaVerse/CaraImg3.svg";
-import cara4 from "../../assets/Images/MetaVerse/CaraImg4.svg";
-import cara5 from "../../assets/Images/MetaVerse/CaraImg5.svg";
 import { Box } from "@mui/system";
-import Slider3dNew from "../../Components/Slider3dNew";
-import SpringSlider from "../../Components/SpringSlider/SpringSlider";
 import PreProjectCara from "../../components/PreProjectCara";
 import Fade from "react-reveal/Fade";
 const MetaVersePreviousProjects = () => {
-  let cards = [
-    {
-      key: 1,
-      content: <Card imagen={cara1} />,
-    },
-    {
-      key: 2,
-      content: <Card imagen={cara2} />,
-    },
-    {
-      key: 3,
-      content: <Card imagen={cara3} />,
-    },
-    {
-      key: 4,
-      content: <Card imagen={cara4} />,
-    },
-    {
-      key: 5,
-      content: <Card imagen={cara5} />,
-    },
-    {
-      key: 6,
-      content: <Card imagen={cara1} />,
-    },
-    {
-      key: 7,
-      content: <Card imagen={cara2} />,
-    },
-    {
-      key: 8,
-      content: <Card imagen={cara3} />,
-    },
-    {
-      key: 9,
-      content: <Card imagen={cara4} />,
-    },
-    {
-      key: 10,
-      content: <Card imagen={cara5} />,
-    },
-  ];
   return (
     <Paper
       elevation={0}

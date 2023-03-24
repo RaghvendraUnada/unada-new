@@ -29,4 +29,3 @@ const Map = () => {
 };
 
 export default Map;
-// https://youtu.be/F2hvAqyrqMI

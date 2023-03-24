@@ -1,19 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-// Import Swiper React components
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import IntoImg1 from "../../assets/Images/Career/IntroImg1.svg";
-import IntoImg2 from "../../assets/Images/Career/IntroImg2.svg";
-import IntoImg3 from "../../assets/Images/Career/IntroImg3.svg";
 import Slider from "react-slick";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
-// import required modules
 import "./SwiperCss.css";
-// import required modules
-import { Scrollbar } from "swiper";
-import { Box, TextField, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import selection from "../../pages/Home/home.module.css";
 
 export default function SwiperSliderCara(props) {
@@ -155,7 +147,6 @@ const SwiperText = {
   fontFamily: "LGTrial",
   fontStyle: "normal",
   fontWeight: 400,
-  // fontSize: "16.5839px",
   fontSize: {
     xl: "16.5839px",
     lg: "16.5839px",

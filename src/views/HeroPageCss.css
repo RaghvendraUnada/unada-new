@@ -3,22 +3,6 @@
   width: "1000px";
 }
 
-/* @media only screen and (max-width: 600px) {
-  .VideoPositioning {
-    width: 800px;
-    margin-left: -200px;
-    margin-right: auto;
-  }
-} */
-
-/* @media only screen and (max-width: 320px) {
-  .VideoPositioning {
-    width: 720px;
-    margin-left: -150px;
-    margin-right: auto;
-    margin-bottom: 50px;
-  }
-} */
 @media only screen and (min-width: 320px) and (max-width: 375px) {
   .VideoPositioning {
     width: 720px;
@@ -28,7 +12,6 @@
   }
   .textMainClass {
     line-height: 40px;
-    /* font-family: "MBFCanno"; */
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 400px) {

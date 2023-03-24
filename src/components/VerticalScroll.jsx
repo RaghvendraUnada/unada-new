@@ -165,8 +165,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       });
   };
 
-  // var newSkills = "";
-
   const filterData = () => {
     const filteredData = listOfSkillss?.filter((item) => {
       if (item?.toLowerCase().includes(searchQuery?.toLowerCase())) {
@@ -180,7 +178,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     filterData();
     listSkilss();
   }, [searchQuery]);
-  // const [searchQuery, setSearchQuery] = useState("");
 
   const [selectedSkill, setSelectedSkill] = useState([]);
 
@@ -212,7 +209,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
 
   let SkillData = [];
   return (
-    <>
+    <React.Fragment>
       <Box sx={scrolltext}>
         <Box
           sx={{
@@ -257,7 +254,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     xs: "center",
                   },
                   gap: "1rem",
-                  // width: "70%",
                   marginLeft: "auto",
                   marginRight: "auto",
                   width: {
@@ -394,7 +390,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   top: "0.5rem",
                 }}
               >
-                {/* <CloseIcon sx={{ color: "white" }} /> */}
                 <Typography sx={closeBtn}>Close</Typography>
               </IconButton>
               <Box
@@ -469,7 +464,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   }}
                 >
                   <input
-                    // id="standard-textarea"
                     type="text"
                     label="First name"
                     placeholder="First name"
@@ -512,21 +506,12 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   }}
                 >
                   <input
-                    // id="standard-textarea"
                     type="email"
                     label="Email"
-                    // type="email"
                     placeholder="Enter your email"
                     variant="standard"
                     multiline
                     style={{
-                      // width: {
-                      //   xl: "87%",
-                      //   lg: "87%",
-                      //   md: "87%",
-                      //   sm: "95%",
-                      //   xs: "94%",
-                      // },
                       width: "87%",
                       color: "white",
                       borderBottom: "2px solid white",
@@ -565,10 +550,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   }}
                 >
                   <input
-                    // id="standard-textarea"
                     type="number"
                     label="Experience"
-                    // type="email"
                     min={0}
                     placeholder="Enter your Experience"
                     variant="standard"
@@ -590,20 +573,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     required
                   />
                 </Box>
-                {/* <Box sx={{ background: "red" }}>
-                  <input
-                    type="search"
-                    placeholder="Search"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
-                  {filterData().map((item) => (
-                    <div key={item.name}>
-                      <h2>{item.name}</h2>
-                      <p>{item.age}</p>
-                    </div>
-                  ))}
-                </Box> */}
                 <Typography sx={labeltext}>Skills:</Typography>
                 <Grid
                   container
@@ -632,7 +601,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       sm: "85%",
                       xs: "85%",
                     },
-                    // bgcolor: "red",
                     overflowY: "scroll",
                   }}
                 >
@@ -648,268 +616,109 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     {searchQuery
                       ? filterData().map((item) => {
                           return (
-                            <>
-                              {/* <Box sx={{}}>
-                                <Grid
-                                  container
-                                  sx={{
-                                    width: {
-                                      xl: "80%",
-                                      lg: "80%",
-                                      md: "50%",
-                                      sm: "50%",
-                                      xs: "60%",
-                                    },
-                                    // mx: "auto",
-                                    ml: {
-                                      xl: "6rem",
-                                      lg: "6rem",
-                                      md: "8rem",
-                                      sm: "6rem",
-                                      xs: "4rem",
-                                    },
-                                    display: "flex",
-                                    justifyContent: "flex-start",
-                                    gap: "20px",
-                                    cursor: "pointer",
-                                    // bgcolor: "red",
-                                  }}
-                                  // onClick={listOfSkill}
-                                >
-                                  {items.map((item, index) => (
-                                    <Box
-                                      key={index}
-                                      sx={{
-                                        border: "2px solid grey",
-                                        borderRadius: "15px",
-                                        width: "auto",
-                                        minWidth: {
-                                          xl: "15%",
-                                          lg: "15%",
-                                          md: "15%",
-                                          sm: "15%",
-                                          xs: "40%",
-                                        },
-                                        height: "auto",
-                                        textAlign: "center",
-                                        p: 0.5,
-                                      }}
-                                      onClick={() => {
-                                        StoreSelectedSkill(item);
-                                      }}
-                                    >
-                                      <Box
-                                        sx={{
-                                          display: "flex",
-                                          gap: "4px",
-                                          justifyContent: "space-around",
-                                          p: 0.2,
-                                          // bgcolor: "red",
-                                        }}
-                                      >
-                                        <Typography
-                                          sx={{
-                                            ...skillText,
-                                            color: "#fff",
-                                            fontSize: "1.2rem",
-                                          }}
-                                        >
-                                          {item}
-                                        </Typography>
-
-                                        <CloseIcon
-                                          onClick={() => removeElement(item)}
-                                          sx={{
-                                            color: "white",
-                                            mt: 0.2,
-                                            fontSize: "15px",
-                                            textAlign: "left",
-                                            cursor: "pointer",
-                                          }}
-                                        />
-                                      </Box>
-                                    </Box>
-                                  ))}
-                                </Grid>
-                              </Box> */}
+                            <Box
+                              sx={{
+                                border: "2px solid grey",
+                                borderRadius: {
+                                  xl: "30px",
+                                  lg: "30px",
+                                  md: "30px",
+                                  sm: "15px",
+                                  xs: "15px",
+                                },
+                                width: "auto",
+                                p: 0.5,
+                                height: "auto",
+                                color: "#fff",
+                                textAlign: "center",
+                                mb: 1,
+                                display: "flex",
+                                justifyContent: "center",
+                                gap: "20px",
+                                ml: 1,
+                              }}
+                              onClick={() => {
+                                StoreSelectedSkill(item);
+                              }}
+                            >
                               <Box
                                 sx={{
-                                  border: "2px solid grey",
-                                  borderRadius: {
-                                    xl: "30px",
-                                    lg: "30px",
-                                    md: "30px",
-                                    sm: "15px",
-                                    xs: "15px",
-                                  },
-                                  width: "auto",
-                                  p: 0.5,
-                                  height: "auto",
-                                  color: "#fff",
-                                  textAlign: "center",
-                                  // p: 1,
-                                  mb: 1,
                                   display: "flex",
-                                  justifyContent: "center",
-                                  gap: "20px",
-                                  // position: "relative",
-                                  ml: 1,
-                                }}
-                                onClick={() => {
-                                  StoreSelectedSkill(item);
+                                  gap: "4px",
+                                  justifyContent: "space-around",
+                                  p: 0.2,
                                 }}
                               >
-                                <Box
+                                <Typography
                                   sx={{
-                                    display: "flex",
-                                    gap: "4px",
-                                    justifyContent: "space-around",
-                                    p: 0.2,
-                                    // bgcolor: "red",
+                                    ...skillText,
+                                    color: "#fff",
+                                    fontSize: "1.2rem",
                                   }}
                                 >
-                                  <Typography
-                                    sx={{
-                                      ...skillText,
-                                      color: "#fff",
-                                      fontSize: "1.2rem",
-                                    }}
-                                  >
-                                    <div key={item}>{item}</div>
-                                  </Typography>
-
-                                  {/* <CloseIcon
-                                    onClick={() => removeElement(idx)}
-                                    sx={{
-                                      color: "white",
-                                      mt: 0.2,
-                                      fontSize: "15px",
-                                      textAlign: "left",
-                                      cursor: "pointer",
-                                    }}
-                                  /> */}
-                                </Box>
+                                  <div key={item}>{item}</div>
+                                </Typography>
                               </Box>
-                            </>
+                            </Box>
                           );
                         })
                       : null}
                   </Box>
 
-                  {/* <Box
-                    sx={{
-                      border: "2px solid grey",
-                      borderRadius: {
-                        xl: "30px",
-                        lg: "30px",
-                        md: "30px",
-                        sm: "15px",
-                        xs: "15px",
-                      },
-                      width: "auto",
-                      p: 0.5,
-                      height: "auto",
-                      color: "#fff",
-                      textAlign: "center",
-                      // p: 1,
-                      mb: 1,
-                      display: "flex",
-                      justifyContent: "center",
-                      gap: "20px",
-                      // position: "relative",
-                      ml: 1,
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        display: "flex",
-                        gap: "4px",
-                        justifyContent: "space-around",
-                        p: 0.2,
-                        // bgcolor: "red",
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          ...skillText,
-                          color: "#fff",
-                          fontSize: "1.2rem",
-                        }}
-                      >
-                        {el.skillName}
-                      </Typography>
-
-                      <CloseIcon
-                        onClick={() => removeElement(idx)}
-                        sx={{
-                          color: "white",
-                          mt: 0.2,
-                          fontSize: "15px",
-                          textAlign: "left",
-                          cursor: "pointer",
-                        }}
-                      />
-                    </Box>
-                  </Box> */}
                   {selectedSkill?.map((el, idx) => {
                     return (
-                      <>
+                      <Box
+                        sx={{
+                          border: "2px solid grey",
+                          borderRadius: {
+                            xl: "30px",
+                            lg: "30px",
+                            md: "30px",
+                            sm: "15px",
+                            xs: "15px",
+                          },
+                          width: "auto",
+                          p: 0.5,
+                          height: "auto",
+                          color: "#fff",
+                          textAlign: "center",
+                          mb: 1,
+                          display: "flex",
+                          justifyContent: "center",
+                          gap: "20px",
+                          ml: 1,
+                        }}
+                      >
                         <Box
                           sx={{
-                            border: "2px solid grey",
-                            borderRadius: {
-                              xl: "30px",
-                              lg: "30px",
-                              md: "30px",
-                              sm: "15px",
-                              xs: "15px",
-                            },
-                            width: "auto",
-                            p: 0.5,
-                            height: "auto",
-                            color: "#fff",
-                            textAlign: "center",
-                            // p: 1,
-                            mb: 1,
                             display: "flex",
-                            justifyContent: "center",
-                            gap: "20px",
-                            // position: "relative",
-                            ml: 1,
+                            gap: "4px",
+                            justifyContent: "space-around",
+                            p: 0.2,
                           }}
                         >
-                          <Box
+                          <Typography
                             sx={{
-                              display: "flex",
-                              gap: "4px",
-                              justifyContent: "space-around",
-                              p: 0.2,
-                              // bgcolor: "red",
+                              ...skillText,
+                              color: "#fff",
+                              fontSize: "1.2rem",
                             }}
                           >
-                            <Typography
-                              sx={{
-                                ...skillText,
-                                color: "#fff",
-                                fontSize: "1.2rem",
-                              }}
-                            >
-                              {el}
-                            </Typography>
+                            {el}
+                          </Typography>
 
-                            <CloseIcon
-                              onClick={() => removeElement(el)}
-                              sx={{
-                                color: "white",
-                                mt: 0.2,
-                                fontSize: "15px",
-                                textAlign: "left",
-                                cursor: "pointer",
-                              }}
-                            />
-                          </Box>
+                          <CloseIcon
+                            onClick={() => removeElement(el)}
+                            sx={{
+                              color: "white",
+                              mt: 0.2,
+                              fontSize: "15px",
+                              textAlign: "left",
+                              cursor: "pointer",
+                            }}
+                          />
                         </Box>
-                      </>
+                      </Box>
                     );
                   })}
                 </Grid>
@@ -923,7 +732,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       sm: "50%",
                       xs: "60%",
                     },
-                    // mx: "auto",
                     ml: {
                       xl: "6rem",
                       lg: "6rem",
@@ -935,9 +743,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     justifyContent: "flex-start",
                     gap: "20px",
                     cursor: "pointer",
-                    // bgcolor: "red",
                   }}
-                  // onClick={listOfSkill}
                 >
                   {listOfSkillss?.map((el, idx) => {
                     return (
@@ -957,12 +763,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                             height: "auto",
                             textAlign: "center",
                             p: 0.5,
-                            // color: "#fff",
-                            // bgcolor: "#fff",
-                            // opacity: 0.8,
-                            // "&:hover": {
-                            //   opacity: 1,
-                            // },
                           }}
                           onClick={() => {
                             StoreSelectedSkill(el);
@@ -985,7 +785,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         sm: "50%",
                         xs: "60%",
                       },
-                      // mx: "auto",
                       ml: {
                         xl: "6rem",
                         lg: "6rem",
@@ -1047,7 +846,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     gap: "2rem",
                     display: "flex",
                     flexDirection: "column",
-                    // background: "red",
                     marginTop: {
                       xl: "7.5rem",
                       lg: "7.5rem",
@@ -1066,7 +864,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       id="standard-textarea"
                       type="url"
                       label="Linked in url"
-                      // type="url"
                       placeholder="Paste URL here"
                       variant="standard"
                       multiline
@@ -1100,7 +897,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       type="file"
                       accept="application/pdf"
                       multiple
-                      // ref={uploadFileRef}
                       style={{
                         textTransform: "none",
                         fontSize: "16px",
@@ -1108,7 +904,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         color: "white",
                         "&:hover": {
                           background: "#FAFAFA",
-                          // color: "white",
                         },
                       }}
                       onChange={(e) => {
@@ -1164,18 +959,10 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                           cursor: "pointer",
                         },
                       }}
-                      // onDrag={handleDragOver}
-                      // onDrop={handleDrop}
                       className={dragOver ? "drag-over" : ""}
                       onDragOver={handleDragOver}
                       onDragLeave={handleDragLeave}
                       onDrop={handleDrop}
-                      // onClick={() => {
-                      //   uploadFileRef2.current.click();
-                      // }}
-                      // onChange={(e) => {
-                      //   setCoverLetter(e.target.files);
-                      // }}
                     >
                       <img src={Uploadimg} alt="img" />
                       <Typography
@@ -1190,53 +977,13 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       >
                         Drag and drop here
                       </Typography>
-                      {/* <Typography
-                        sx={{
-                          fontFamily: "LGTrial",
-                          fontStyle: "normal",
-                          fontWeight: 400,
-                          fontSize: 12,
-                          letterSpacing: 0.171613,
-                          color: "#FFFFFF",
-                        }}
-                      >
-                        or
-                      </Typography> */}
 
                       <input
                         type="file"
                         accept="application/pdf"
-                        // ref={uploadFileRef2}
                         style={{ display: "none" }}
-                        // onChange={(e) => {
-                        //   setCoverLetter(e.target.files);
-                        // }}
                       />
                       {coverLetter?.file?.name}
-                      {/* <Button
-                        variant="outlined"
-                        component="label"
-                        sx={{
-                          textTransform: "none",
-                          border: "none",
-                        }}
-                        onClick={() => {
-                          uploadFileRef2.current.click();
-                        }}
-                      >
-                        <Typography
-                          sx={{
-                            fontFamily: "LGTrial",
-                            fontStyle: "normal",
-                            fontWeight: 500,
-                            fontSize: 12,
-                            letterSpacing: 0.171613,
-                            color: "#0051ED",
-                          }}
-                        >
-                          Browse File
-                        </Typography>
-                      </Button> */}
                     </Paper>
                   </Box>
                 </Box>
@@ -1251,7 +998,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 mt: {
                   xl: "0px",
                   lg: "0rem",
-                  // md: "8rem",
                   sm: "-4rem",
                   xs: "-6rem",
                 },
@@ -1265,7 +1011,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
           </Box>
         </Dialog>
       </form>
-    </>
+    </React.Fragment>
   );
 };
 
@@ -1324,7 +1070,6 @@ const ButtonStyle1 = {
     sm: "0.8rem 5.5rem",
     xs: "0.8rem 5.5rem",
   },
-  // background: "transparent",
   display: "flex",
   justifyContent: "space-evenly",
   alignItems: "center",
@@ -1450,5 +1195,4 @@ const closeBtn = {
     bgcolor: "transparent",
     textDecoration: "line-through",
   },
-  // ml: "2.3%",
 };

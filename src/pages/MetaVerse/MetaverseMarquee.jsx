@@ -4,7 +4,7 @@ import BlackMetaMarquee from "../../Components/Maarquee/BlackMetaMarquee";
 import BlackMetaMarqueeRev from "../../Components/Maarquee/BlackMetaMarqueeRev";
 const MetaverseMarquee = () => {
   return (
-    <>
+    <React.Fragment>
       <Grid
         container
         sx={{
@@ -22,7 +22,7 @@ const MetaverseMarquee = () => {
           <BlackMetaMarqueeRev />
         </Box>
       </Grid>
-    </>
+    </React.Fragment>
   );
 };
 

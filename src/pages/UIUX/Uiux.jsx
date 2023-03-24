@@ -4,8 +4,7 @@ import Intro from "../../components/Intro";
 import Ux from "../../assets/Images/UIUX/uxpng.png";
 import uiintro from "../../assets/Images/UIUX/uiintro.svg";
 import { Grid, Paper } from "@mui/material";
-const data = ["Social Media Agencies", "Healthcare", "Fashion"];
-const data1 = ["Branding", "Gaming", "Fintech", "E-Commerce"];
+
 const Uiux = () => {
   return (
     <Paper elevation={0}>

@@ -8,9 +8,8 @@ import OurClients from "../pages/Home/OurClients";
 import ChatSection from "../pages/CareerPages/ChatSection";
 import { motion } from "framer-motion";
 import MainHeroPage from "./MainHeroPage";
-import LazyLoad from "react-lazy-load";
-import VideoBox from "./VideoBox";
 import { useLocation } from "react-router-dom";
+import Footer from "../components/Footer";
 const Home = () => {
   const currentLocation = useLocation();
   const [location, setLocation] = useState();
@@ -71,6 +70,17 @@ const Home = () => {
               sx={{ position: "relative" }}
             >
               <ChatSection />
+            </Grid>
+            <Grid
+              item
+              xl={12}
+              lg={12}
+              md={12}
+              sm={12}
+              xs={12}
+              sx={{ position: "relative" }}
+            >
+              <Footer />
             </Grid>
           </Grid>
         </Paper>

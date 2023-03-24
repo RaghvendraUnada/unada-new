@@ -13,7 +13,7 @@ const Blockchain = () => {
     SendEvent("BlockChain Page");
   });
   return (
-    <>
+    <React.Fragment>
       <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
         <Stack
           sx={{
@@ -26,7 +26,7 @@ const Blockchain = () => {
           <MetaVersePreviousProjects />
         </Stack>
       </motion.div>
-    </>
+    </React.Fragment>
   );
 };
 const AnimationSettings = {

@@ -4,7 +4,7 @@ import BlackBlockMarquee from "../../Components/Maarquee/BlackBlockMarquee";
 import BlackBlockMarqueeRev from "../../Components/Maarquee/BlackBlockMarqueeRev";
 const BlockchainMarquee = () => {
   return (
-    <>
+    <React.Fragment>
       <Grid
         container
         sx={{
@@ -22,7 +22,7 @@ const BlockchainMarquee = () => {
           <BlackBlockMarqueeRev />
         </Box>
       </Grid>
-    </>
+    </React.Fragment>
   );
 };
 

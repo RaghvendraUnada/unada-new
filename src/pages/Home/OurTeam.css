@@ -10,45 +10,23 @@
 .employe-card {
   position: relative;
   left: 0px;
-  /* animation: imageAnimation1 7s linear infinite; */
 }
 
 @keyframes imageAnimation1 {
   0% {
-    /* transform: translateY(0%); */
-
     bottom: 3%;
   }
-
-  /* 97% {
-    top: -70%;
-  } */
-
   95% {
-    /* transform: translateY(-500%); */
     bottom: 56%;
-
-    /* top: -120%; */
-  }
-
-  100% {
-    /* bottom: 100%; */
   }
 }
 
 .culture-card {
   position: relative;
   left: 0px;
-  /* animation: slide 5s linear infinite; */
 }
 
 @keyframes slide {
-  /* 0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-1000px, 0, 0);
-  } */
   0% {
     left: 0px;
   }
@@ -57,7 +35,6 @@
   }
 }
 
-/* new css */
 .gallery {
   position: relative;
   width: 100%;
@@ -92,14 +69,9 @@
 }
 
 .gallery-image {
-  /*padding-bottom: 2.35em;*/
   animation: marqueeTop 20s linear infinite;
   -webkit-animation: marqueeTop 20s linear infinite;
 }
-
-/* .gallery-h--tb .gallery-image {
-  animation: marqueeBottom 10s linear infinite;
-} */
 
 .gallery-image__img {
   padding-top: 06vh;
@@ -110,7 +82,6 @@
 
 .gallery-h {
   overflow: hidden;
-  /* background-color: red; */
 }
 
 @keyframes marqueeTop {

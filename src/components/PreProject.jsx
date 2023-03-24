@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import pre1 from "../assets/Images/cara/pre1.png";
 import pre2 from "../assets/Images/cara/pre2.png";
 import pre3 from "../assets/Images/cara/pre3.png";
-import mobile from "../assets/Images/cara/mobile.png";
-import blackArrowImg from "../assets/Images/Services/blackArrowImg.svg";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import styles from "../pages/Services/Service.module.css";
 import Fade from "react-reveal/Fade";
@@ -73,7 +71,6 @@ const PreProject = () => {
           position: "relative",
         }}
       >
-        {/* left  */}
         <Box
           sx={{
             marginLeft: "auto",
@@ -105,7 +102,6 @@ const PreProject = () => {
             <EastSharpIcon fontSize="large" sx={{ color: icon1 }} />
           </Box>
         </Box>
-        {/* right  */}
         <Box
           sx={{
             marginLeft: "auto",

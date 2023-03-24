@@ -21,6 +21,7 @@ import { keyframes } from "styled-components";
 import styled from "styled-components";
 import selection from "../../pages/Home/home.module.css";
 import Fade from "react-reveal/Fade";
+
 const OurCultureSection = () => {
   const images = [
     cul1,

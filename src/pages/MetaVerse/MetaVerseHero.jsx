@@ -4,7 +4,7 @@ import MetaVerseHeroImg from "../../assets/Images/MetaVerse/MetaverseHeroImg.svg
 import "./metaverse.module.css";
 const MetaVerseHero = () => {
   return (
-    <>
+    <React.Fragment>
       <BlackTHeroComp
         text1={"BUILDING"}
         ColorText={"IMMERSIVE"}
@@ -13,7 +13,7 @@ const MetaVerseHero = () => {
         metaColorText={"BETWEEN VIRTUAL AND REAL"}
         HeroImg={MetaVerseHeroImg}
       />
-    </>
+    </React.Fragment>
   );
 };
 

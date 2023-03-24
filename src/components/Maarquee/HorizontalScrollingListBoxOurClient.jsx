@@ -7,7 +7,6 @@ const HorizontalScrollingListBoxOurClient = ({ children, fromRight }) => {
     <Marquee
       gradient={false}
       speed={10}
-      // pauseOnHover={true}
       pauseOnClick={true}
       style={{
         height: "auto",

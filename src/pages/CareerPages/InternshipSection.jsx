@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Grid, Typography, Box } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import Fade from "react-reveal/Fade";
 import selection from "../../pages/Home/home.module.css";
 
@@ -28,10 +28,8 @@ const InternshipSection = () => {
         <Typography sx={metaTextStyle} className={selection.zero}>
           We look forward to helping you jumpstart your career in tech!
         </Typography>
-        {/* <Button disableRipple sx={ButtonStyle}>
-          Apply
-        </Button> */}
-        <Box mt={5} sx={{}}>
+
+        <Box mt={5}>
           <Typography sx={metaTextStyle}>
             Drop message on{" "}
             <a onClick={openEmail} style={{ color: "blue", cursor: "pointer" }}>

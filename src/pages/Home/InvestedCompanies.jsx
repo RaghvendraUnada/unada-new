@@ -1,5 +1,5 @@
-import { Grid, Paper, Typography } from "@mui/material";
-import { Box, minHeight } from "@mui/system";
+import { Grid, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import React from "react";
 import PharmeasyImg from "../../assets/Images/InvestedCompanies/Pharmeasy.png";
 import UnispaceImg from "../../assets/Images/InvestedCompanies/Unispace.png";
@@ -16,7 +16,6 @@ const InvestedCompanies = () => {
         bgcolor: "black",
         height: "auto",
         minHeight: "400px",
-        // maxHeight:""
         position: "relative",
         marginTop: "0px",
       }}
@@ -63,11 +62,6 @@ const InvestedCompanies = () => {
           container
           sx={{
             py: 5,
-            // alignSelf: "center",
-            // position: "absolute",
-            // top: "50%",
-            // left: "50%",
-            // transform: "translate(-50%,-50%)",
           }}
         >
           <ImageBox img={PharmeasyImg} mx="auto" />

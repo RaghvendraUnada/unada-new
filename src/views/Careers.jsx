@@ -11,12 +11,14 @@ import OurCultureSection from "../pages/CareerPages/OurCultureSection";
 import StoriesAtUnadaSection from "../pages/CareerPages/StoriesAtUnadaSection";
 import { motion } from "framer-motion";
 import { SendEvent } from "../utils/SendEvent";
+
+import Footer from "../components/Footer";
 const Careers = () => {
   useEffect(() => {
     SendEvent("Careers Page");
   }, []);
   return (
-    <>
+    <React.Fragment>
       <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
         <Stack
           sx={{
@@ -32,9 +34,10 @@ const Careers = () => {
           <InternshipSection />
           <StoriesAtUnadaSection />
           <ChatSection />
+          <Footer />
         </Stack>
       </motion.div>
-    </>
+    </React.Fragment>
   );
 };
 const AnimationSettings = {
