@@ -1,6 +1,5 @@
 import { Grid, Box } from "@mui/material";
 import React from "react";
-// import BlackTMarquee from "../../Components/Maarquee/BlackTMarquee";
 import BlackMetaMarquee from "../../Components/Maarquee/BlackMetaMarquee";
 import BlackMetaMarqueeRev from "../../Components/Maarquee/BlackMetaMarqueeRev";
 const MetaverseMarquee = () => {

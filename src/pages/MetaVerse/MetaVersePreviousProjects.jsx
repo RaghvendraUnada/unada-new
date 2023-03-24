@@ -80,7 +80,6 @@ const MetaVersePreviousProjects = () => {
           height: "100%",
           minHeight: "auto",
           my: "50px",
-          // background: "red",
         }}
       >
         <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
@@ -141,29 +140,7 @@ const prevProjectText = {
     background: "white",
   },
 };
-const prevProjectColorText = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 500,
-  fontSize: {
-    xl: "18px",
-    lg: "18px",
-    md: "15px",
-    sm: "14px",
-    xs: "14px",
-  },
-  lineHeight: "160%",
-  textAlign: "center",
-  color: "rgba(255, 255, 255, 0.3)",
-  background:
-    "linear-gradient(to right, #D325E6 0%, 32.67543911933899%, #6E24B9 65.35087823867798%, 82.67543911933899%, #240D5D 100%)",
-  // background:
-  //   "linear-gradient(to left, rgba(201, 75, 234, 1) 0%, 11.84210553765297%, rgba(112, 62, 195, 1) 23.68421107530594%, 34.21052619814873%, rgba(59, 33, 140, 1) 44.736841320991516%, 55.04385977983475%, rgba(26, 16, 66, 1) 65.35087823867798%, 72.14912474155426%, rgba(54, 9, 52, 1) 78.94737124443054%, 89.47368562221527%, rgba(170, 2, 87, 1) 100%)",
-  backgroundSize: " 100%",
-  backgroundRepeat: "repeat",
-  backgroundClip: "text",
-  textFillColor: "transparent",
-};
+
 const prevProjectMetaText = {
   fontFamily: "Inter",
   width: {

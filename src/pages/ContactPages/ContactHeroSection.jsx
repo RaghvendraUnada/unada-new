@@ -1,12 +1,8 @@
 import React from "react";
 import { Grid, Typography, Stack, Box } from "@mui/material";
-import contactHero from "../../assets/Images/Contact/contactHero.svg";
-import contactHeromb from "../../assets/Images/Contact/contactHeromb.svg";
-import culture2 from "../../assets/Images/Career/realCulture/cultureEdit2.jpg";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import contactHeroReal from "../../assets/Images/unadalife/getintouch.webp";
-import contactTitle from "../../assets/images/new/contact.png";
 import Fade from "react-reveal/Fade";
 import selection from "../Home/home.module.css";
 const hue = keyframes`

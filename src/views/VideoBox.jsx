@@ -1,8 +1,4 @@
 import { Box } from "@mui/material";
-import akar from "../assets/akar-icons_vr-ar.png";
-import ETH from "../assets/ETH.png";
-import Etherium from "../assets/Ethereum-icon-purple.png";
-import layers from "../assets/layers-1320568243494671052.png";
 import styles from "./Video.module.css";
 import ReactCurvedText from "react-curved-text";
 

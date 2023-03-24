@@ -1,26 +1,16 @@
 import React from "react";
-import { Grid, Typography, Box, Paper, Stack } from "@mui/material";
+import { Grid, Box, Paper, Stack } from "@mui/material";
 import HeroPage from "../../components/HeroPage";
 import Intro from "../../components/Intro";
-import webHero from "../../assets/Images/Web/newHeroPng.png";
-// import webHero1 from "../../assets/Images/Application/WebImg.png";
 import webHero1 from "../../assets/Images/Application/webnewShadow.svg";
 import introWeb from "../../assets/Images/Web/introWeb.svg";
-import TechStack from "../Application/TechStack";
 const data = [
   "Fashion & Cosmetics",
   "Media & OTT",
   "Real Estate",
   "E-Commerce",
 ];
-const data1 = [
-  "Manufacturing",
-  "Warehousing",
-  "Online Publishing",
-  "Fintech",
-  // "Online Publishing",
-  // "Warehousing",
-];
+const data1 = ["Manufacturing", "Warehousing", "Online Publishing", "Fintech"];
 const WebHero = () => {
   return (
     <Paper elevation={0} sx={{}}>
@@ -46,7 +36,6 @@ const WebHero = () => {
           }
         />
       </Grid>
-      {/* <TechStack textone={data1} text={data} text1={"Technology"} /> */}
     </Paper>
   );
 };

@@ -13,32 +13,9 @@ const ArVr = () => {
     SendEvent("Arvr Page");
   }, []);
   return (
-    // <motion.div
-    //   initial={{ width: "100%", opacity: 0 }}
-    //   animate={{
-    //     width: "100%",
-    //     opacity: 1,
-    //     transition: { duration: 1, ease: "easeInOut" },
-    //   }}
-    //   exit={{
-    //     x: window.innerWidth,
-    //     opacity: 0,
-    //     transition: { duration: 1, ease: "easeInOut" },
-    //   }}
-    //   transition={{
-    //     ease: "easeInOut",
-    //     duration: "1s",
-    //   }}
-    //   // initial={{ opacity: 1 }}
-    //   // animate={{ opacity: 2 }}
-    //   // exit={{ opicity: 1 }}
-    // >
     <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
       <Stack
         sx={{
-          // maxWidth: "2000px",
-          // marginLeft: "auto",
-          // marginRight: "auto",
           background: "black",
         }}
       >
@@ -46,7 +23,6 @@ const ArVr = () => {
         <ArVrIntro />
         <ArVrMarquee />
         <MetaVersePreviousProjects />
-        {/* <Footer /> */}
       </Stack>
     </motion.div>
   );

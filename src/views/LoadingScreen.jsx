@@ -21,7 +21,6 @@ const LoadingScreen = () => {
         sx={{
           height: "auto",
           width: "auto",
-          // minWidth: "50%",
         }}
       />
     </Grid>

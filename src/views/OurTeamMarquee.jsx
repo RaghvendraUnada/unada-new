@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import HorizontalScrollingListBoxOurClient from "../components/Maarquee/HorizontalScrollingListBoxOurClient.jsx";
 import { Box, Grid } from "@mui/material";
-import axios from "axios";
 import CaraProjectBoxOurClient from "../components/CaraProjectBoxOurClient.jsx";
 import client1 from "../assets/Images/clients/client1.svg";
 const clients = [
