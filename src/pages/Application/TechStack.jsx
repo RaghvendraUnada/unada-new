@@ -15,7 +15,6 @@ const TechStack = (props) => {
           height: "100%",
           boxShadow: "rgba(0, 0, 0, 0.0364)",
           borderRadius: "0px",
-          // bgcolor: "red",
         }}
       >
         <Grid container>
@@ -26,7 +25,6 @@ const TechStack = (props) => {
                 justifyContent: "center",
                 textAlign: "center",
                 boxShadow: "rgba(0, 0, 0, 0.0364)",
-                // bgcolor: "red",
               }}
             >
               <Fade top duration={1000}>
@@ -38,10 +36,7 @@ const TechStack = (props) => {
         <Paper
           elevation={0}
           sx={{
-            // marginTop: "1rem",
-            // marginBottom: "2rem",
             borderTop: "0.1px solid rgba(0, 0, 0, 0.0364)",
-            // bgcolor: "red",
           }}
         >
           <Grid
@@ -212,14 +207,6 @@ const TechStack = (props) => {
                   })}
                 </Grid>
                 <Grid item xl={6} lg={6} md={6} sm={6} xs={6}>
-                  {/* <Typography sx={IndustriesNameText}>
-                  <BsCheck2
-                    size={20}
-                    color={"#4caf50"}
-                    style={{ alignItems: "center" }}
-                  />
-                  Manufacturing
-                </Typography> */}
                   {props?.text?.map((res, idx) => {
                     return (
                       <Typography sx={IndustriesNameText} key={idx}>
@@ -246,8 +233,6 @@ export default TechStack;
 
 const mainText = {
   fontSize: { xl: "5rem", lg: "5rem", md: "4rem", sm: "3rem", xs: "3rem" },
-  //   color: "(90.12deg, #2340FF 0.2%, #0ABFBC 79.48%)",
-  //   background: "linear-gradient(90deg, #90BFFF 0%, #2F80ED 50%, #2D9EE0 100%)",
   background: "linear-gradient(90.12deg, #2340FF 0.2%, #0ABFBC 79.48%)",
   backgroundSize: " 100%",
   backgroundRepeat: "repeat",
@@ -271,9 +256,7 @@ const mainPage = {
   border: "1px solid rgba(163, 163, 163, 0.3)",
   py: 1,
   mt: 5,
-  // boxShadow: "0 8px 10px -1px rgba(0, 0, 0, 0.0364)",
   boxShadow: "0 6px 8px 4px rgba(0, 0, 0, 0.0364)",
-  // borderRadius: "10rem solid F5F5F5",
 };
 const mainPageSmall = {
   borderRadius: "0px",
@@ -281,24 +264,17 @@ const mainPageSmall = {
   marginLeft: "auto",
   marginRight: "auto",
   width: { xl: "85%", lg: "85%", md: "90%", sm: "95%", xs: "auto" },
-  // borderRadius: { xl: "2rem", lg: "2rem", md: "2rem", sm: "2rem", xs: "0rem" },
-  // border: "1px solid rgba(163, 163, 163, 0.3)",
   py: 1,
   mt: 5,
   boxShadow: "0 16px 20px -5px black",
-  // boxShadow: "0 6px 8px 4px rgba(0, 0, 0, 0.0364)",
-  // borderRadius: "10rem solid F5F5F5",
 };
-// rgba(0, 0, 0, 0.0364)
 const PageStyle = {
   display: "flex",
   justifyContent: "center",
   padding: { xl: "1.5rem", lg: "1.5rem", md: "1.5rem", sm: "1rem", xs: "1rem" },
-  // height: { xl: "15rem", lg: "15rem", md: "15rem", sm: "24rem", xs: "28rem" },
   background: "linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0))",
   width: "100%",
   borderRadius: "2rem",
-  //   background: "red",
 };
 const IndustriesNameText = {
   fontFamily: "LGRegular",
@@ -324,14 +300,10 @@ const IndustriesNameText = {
     xs: "12px",
   },
   marginLeft: "30px",
-  // scale: 1,
   transition: "0.3s all linear",
   "&:hover": {
-    // fontSize: "15px",
-    // scale: 1.2,
     transform: "scale(1.07)",
   },
-  // background: "green",
 };
 
 const TestStyle = {
@@ -353,9 +325,6 @@ const TestStyle = {
     sm: "center",
     xs: "center",
   },
-  //   padding: { xl: "0.5rem", lg: "0.5rem", md: "0.5rem", sm: "1rem", xs: "1rem" },
-  // lineHeight: "38px",
-  // ml: 2,
   color: "#212121",
   lineHeight: { sm: "inherit", xs: "inherit" },
 };
@@ -372,5 +341,4 @@ const text = {
     sm: "1.2rem",
     xs: "1.2rem",
   },
-  //   lineHeight: "30px",
 };

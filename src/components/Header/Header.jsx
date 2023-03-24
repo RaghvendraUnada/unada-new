@@ -1,6 +1,5 @@
 import { Box, Button, Paper, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-// import OpenButton from "../../assests/Icons/OpenButton.png";
 import Close from "../../assets/Images/Header/CloseButton.svg";
 import OpenButton from "../../assets/Images/Header/MenuIcon.svg";
 import OpenButtonWhite from "../../assets/Images/Header/MenuIconWhite.svg";
@@ -36,7 +35,6 @@ const Header = () => {
         maxWidth: "1800px",
         transition: "all 1s ",
         bgcolor: "transparent",
-        // backdropFilter: scrollState || open ? "blur(1px)" : "0px",
         position: "absolute",
         zIndex: 100000,
         borderRadius: "0px",
@@ -93,12 +91,6 @@ const Header = () => {
                   style={{ marginTop: "8px" }}
                 />
               )}
-              {/* <img
-                src={Logo}
-                width="50px"
-                height={"auto"}
-                style={{ marginTop: "10px" }}
-              /> */}
             </Link>
             {!open ? (
               <Button
@@ -119,28 +111,20 @@ const Header = () => {
                       height: "auto",
                       maxWidth: "35px",
                     }}
-                    // style={{ width: "90%", height: "auto", maxWidth: "35px" }}
                     alt="whyChooseUsimg"
                     className={HeaderStyles.MenuIcon}
                   />
                 ) : (
                   <img
-                    // src={OpenButton}
                     style={{
                       width: "90%",
                       height: "auto",
                       maxWidth: "28px",
                     }}
-                    // style={{ width: "90%", height: "auto", maxWidth: "35px" }}
                     alt="whyChooseUsimg"
                     className={HeaderStyles.MenuIcon}
                   />
                 )}
-                {/* <img
-                  src={OpenButton}
-                  style={{ width: "90%", height: "auto", maxWidth: "35px" }}
-                  alt="whyChooseUsimg"
-                /> */}
               </Button>
             ) : (
               <Button
@@ -149,7 +133,6 @@ const Header = () => {
                 onClick={() => setOpen(false)}
               >
                 <img
-                  // src={Close}
                   alt="Close"
                   style={{ width: "90%", height: "auto", maxWidth: "35px" }}
                 />
@@ -161,8 +144,6 @@ const Header = () => {
                 navigate("/contact");
               }}
             >
-              {/* <Typography sx={ContactUsText}>Get in touch</Typography> */}
-              {/* <HiArrowRight size={16} /> */}
               <img
                 src={arrowheader}
                 alt="arrow"
@@ -172,7 +153,6 @@ const Header = () => {
           </Paper>
         </Paper>
       ) : null}
-      {/* {open ? ( */}
       <Paper
         sx={{
           width: "100%",
@@ -182,8 +162,6 @@ const Header = () => {
           marginRight: "auto",
           marginTop: open ? "0vh" : "-100vh",
           transition: "all 1s ",
-
-          // bgcolor: open ? "#fff" : "transparent",,
         }}
         elevation={0}
       >
@@ -208,7 +186,6 @@ const Header = () => {
 
           <Button disableRipple sx={ButtonStyle} onClick={() => setOpen(false)}>
             <img
-              // src={Close}
               alt="Close"
               style={{
                 width: "75%",
@@ -222,7 +199,6 @@ const Header = () => {
         <List sx={{ py: 5, height: "80vh", overflowY: "scroll" }}>
           <ListItem
             sx={{
-              // mt: 1,
               cursor: "pointer",
               borderTop: "1px solid #DBDBDB",
               borderBottom: "1px solid #DBDBDB",
@@ -231,7 +207,6 @@ const Header = () => {
                 borderBottom: "1px solid #000",
               },
             }}
-            // className={HeaderStyles.Text}
           >
             <Link
               onClick={() => {
@@ -244,7 +219,6 @@ const Header = () => {
                   : HeaderStyles.navbarListText
               }
               to="/"
-              // style={{ margin: "auto" }}
             >
               Home
             </Link>
@@ -252,7 +226,6 @@ const Header = () => {
 
           <ListItem
             sx={{
-              // mt: 1,
               cursor: "pointer",
               borderBottom: "1px solid #DBDBDB",
               "&:hover": {
@@ -278,7 +251,6 @@ const Header = () => {
           </ListItem>
           <ListItem
             sx={{
-              // mt: 1,
               cursor: "pointer",
               borderBottom: "1px solid #DBDBDB",
               "&:hover": {
@@ -303,144 +275,8 @@ const Header = () => {
               Contact us
             </Link>
           </ListItem>
-          {/* <ListItem
-            className={HeaderStyles.linkPaper}
-            sx={{
-              // mt: 1,
-              cursor: "pointer",
-              borderBottom: "1px solid #DBDBDB",
-              "&:hover": {
-                borderBottom: "1px solid #000",
-                borderTop: "1px solid #000",
-              },
-            }}
-          >
-            <Link
-              onClick={() => {
-                setOpen(false);
-                setLocationData("/service");
-              }}
-              className={
-                location === "/service"
-                  ? HeaderStyles.navbarListTextActive
-                  : HeaderStyles.navbarListText
-              }
-              style={LinkStyles}
-              to="/service"
-            >
-              Service
-            </Link>
-          </ListItem> */}
-          {/* <ListItem
-            sx={{
-              // mt: 1,
-              cursor: "pointer",
-              borderBottom: "1px solid #DBDBDB",
-              "&:hover": {
-                borderBottom: "1px solid #000",
-                borderTop: "1px solid #000",
-              },
-            }}
-          >
-            <Link
-              onClick={() => {
-                setOpen(false);
-                setLocationData("/blockchain");
-              }}
-              className={
-                location === "/blockchain"
-                  ? HeaderStyles.navbarListTextActive
-                  : HeaderStyles.navbarListText
-              }
-              style={LinkStyles}
-              to="/blockchain"
-            >
-              Blockchain
-            </Link>
-          </ListItem> */}
-          {/* <ListItem
-            sx={{
-              // mt: 1,
-              cursor: "pointer",
-              borderBottom: "1px solid #DBDBDB",
-              "&:hover": {
-                borderBottom: "1px solid #000",
-                borderTop: "1px solid #000",
-              },
-            }}
-          >
-            <Link
-              onClick={() => {
-                setOpen(false);
-                setLocationData("/web");
-              }}
-              className={
-                location === "/web"
-                  ? HeaderStyles.navbarListTextActive
-                  : HeaderStyles.navbarListText
-              }
-              style={LinkStyles}
-              to="/web"
-            >
-              Web
-            </Link>
-          </ListItem> */}
-          {/* <ListItem
-            sx={{
-              // mt: 1,
-              cursor: "pointer",
-              borderBottom: "1px solid #DBDBDB",
-              "&:hover": {
-                borderBottom: "1px solid #000",
-                borderTop: "1px solid #000",
-              },
-            }}
-          >
-            <Link
-              onClick={() => {
-                setOpen(false);
-                setLocationData("/application");
-              }}
-              className={
-                location === "/application"
-                  ? HeaderStyles.navbarListTextActive
-                  : HeaderStyles.navbarListText
-              }
-              style={LinkStyles}
-              to="/application"
-            >
-              Application
-            </Link>
-          </ListItem> */}
-          {/* <ListItem
-            sx={{
-              mt: 1,
-              cursor: "pointer",
-              borderBottom: "1px solid #DBDBDB",
-              "&:hover": {
-                borderBottom: "1px solid #000",
-              },
-            }}
-          >
-            <Link
-              onClick={() => {
-                setOpen(false);
-                setLocationData("/whiteService");
-              }}
-              className={
-                location === "/whiteService"
-                  ? HeaderStyles.navbarListTextActive
-                  : HeaderStyles.navbarListText
-              }
-              style={LinkStyles}
-              to="/whiteService"
-            >
-              WhiteService
-            </Link>
-          </ListItem> */}
         </List>
       </Paper>
-      {/* ) : null} */}
     </Paper>
   );
 };
@@ -470,9 +306,7 @@ const ContactUsButton = {
   width: "123px",
   height: "30px",
   background: " #FFFFFF",
-  // boxShadow: "0px 0px 3px rgba(51, 211, 212, 0.18)",
   borderRadius: "8px",
-  // display: "flex",
   px: 0,
   zIndex: 0,
   mt: 1,
@@ -482,7 +316,6 @@ const ContactUsButton = {
   paddingTop: "1rem",
   paddingBottom: "1rem",
   display: { xl: "flex", lg: "flex", md: "flex", sm: "none", xs: "none" },
-  // boxShadow: "10px 10px 10px 10px black",
   WebkitBoxShadow: "7px 7px 36px -1px rgba(0,0,0,0.75)",
   MozBoxShadow: "7px 7px 36px -1px rgba(0,0,0,0.75)",
   boxShadow: "7px 7px 36px -1px rgba(0,0,0,0.75)",
@@ -494,7 +327,6 @@ const ContactUsText = {
   fontWeight: 400,
   fontSize: "14px",
   lineHeight: "20px",
-  // color: "#000000",
   background:
     "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
   textTransform: "none",

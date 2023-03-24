@@ -16,7 +16,6 @@ const Vision = () => {
             xs: "none",
           },
           height: "100%",
-          // minHeight: "100vh",
           borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
           borderRadius: "0px",
         }}
@@ -26,7 +25,6 @@ const Vision = () => {
           sx={{
             background: "#fff",
             width: "90%",
-            //   height: "100%",
             marginLeft: "auto",
             marginRight: "auto",
             marginTop: { lg: "0rem", xl: "0rem", xs: "1rem", sm: "1rem" },
@@ -110,34 +108,6 @@ const Vision = () => {
                   app.
                 </Typography>
               </Box>
-              {/* <Box
-            mt={4}
-            sx={{
-              alignItems: "start",
-              marginRight: {
-                xl: "auto",
-                lg: "auto",
-                md: "auto",
-                sm: "center",
-                xs: "center",
-              },
-            }}
-          >
-            <Button
-              variant="contained"
-              sx={{
-                borderRadius: "9rem",
-                background: "#0D6EFD",
-                fontSize: "1.8rem",
-                padding: "0.8rem 2rem",
-                fontWeight: 500,
-                // lineHeight: "2.9rem",
-                fontFamily: "LGLight",
-              }}
-            >
-              Get Started
-            </Button>
-          </Box> */}
             </Box>
           </Grid>
         </Grid>
@@ -154,8 +124,6 @@ const Vision = () => {
             xs: "flex",
           },
           height: "100%",
-          // minHeight: "100vh",
-          // borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
           borderRadius: "0px",
         }}
       >
@@ -164,7 +132,6 @@ const Vision = () => {
           sx={{
             background: "#fff",
             width: "90%",
-            //   height: "100%",
             marginLeft: "auto",
             marginRight: "auto",
             marginTop: { lg: "0rem", xl: "0rem", xs: "0rem", sm: "rem" },
@@ -188,11 +155,6 @@ const Vision = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                // padding: {
-                //   xl: "1rem",
-                //   lg: "1rem",
-                //   md: "3rem",
-                // },
               }}
             >
               <Typography sx={mainText}>
@@ -221,34 +183,6 @@ const Vision = () => {
                   app.
                 </Typography>
               </Box>
-              {/* <Box
-            mt={4}
-            sx={{
-              alignItems: "start",
-              marginRight: {
-                xl: "auto",
-                lg: "auto",
-                md: "auto",
-                sm: "center",
-                xs: "center",
-              },
-            }}
-          >
-            <Button
-              variant="contained"
-              sx={{
-                borderRadius: "9rem",
-                background: "#0D6EFD",
-                fontSize: "1.8rem",
-                padding: "0.8rem 2rem",
-                fontWeight: 500,
-                // lineHeight: "2.9rem",
-                fontFamily: "LGLight",
-              }}
-            >
-              Get Started
-            </Button>
-          </Box> */}
             </Box>
           </Grid>
         </Grid>
@@ -272,7 +206,6 @@ const mainText = {
     sm: "3.8rem",
     xs: "3.8rem",
   },
-  // marginTop: { sm: "4rem", xs: "4rem" },
   width: { xl: "80%", lg: "80%", md: "80%", sm: "85%", xs: "85%" },
   marginLeft: "auto",
   marginRight: "auto",

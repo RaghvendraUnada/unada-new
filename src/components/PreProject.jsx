@@ -4,7 +4,6 @@ import pre1 from "../assets/Images/cara/pre1.png";
 import pre2 from "../assets/Images/cara/pre2.png";
 import pre3 from "../assets/Images/cara/pre3.png";
 import mobile from "../assets/Images/cara/mobile.png";
-// import ExploreIcon from "../assets/Images/Services/ExploreIcon.svg";X
 import blackArrowImg from "../assets/Images/Services/blackArrowImg.svg";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import styles from "../pages/Services/Service.module.css";
@@ -28,7 +27,6 @@ const PreProject = () => {
         paddingBottom: "60px",
         height: "100%",
         position: "relative",
-        // minHeight: { lg: "100vh", md: "100vh", sm: "40vh", xs: "40vh" },
       }}
     >
       <Grid
@@ -39,9 +37,6 @@ const PreProject = () => {
         sm={12}
         xs={12}
         sx={{
-          // width: "90%",
-          // marginLeft: "auto",
-          // marginRight: "auto",
           paddingLeft: {
             xl: "3.5rem",
             lg: "3.5rem",
@@ -60,8 +55,6 @@ const PreProject = () => {
             xl: "2rem",
             lg: "2rem",
             md: "0rem",
-            // sm: "4rem",
-            // xs: "4rem",
           },
         }}
       >
@@ -76,7 +69,6 @@ const PreProject = () => {
           width: "95%",
           marginLeft: "auto",
           marginRight: "auto",
-          // background: "red",
           overflow: "hidden",
           position: "relative",
         }}
@@ -158,7 +150,6 @@ const PreProject = () => {
               sm: "1.8rem",
               xs: "1rem",
             },
-            // marginLeft: "-160px",
             marginTop: "2rem",
             marginLeft: {
               xl: "-250px",
@@ -169,16 +160,8 @@ const PreProject = () => {
             },
           }}
           id="abc"
-          // ref={myRef}
           ref={scollToRef}
         >
-          {/* <Box component="img" id="ill" alt="hello" sx={imge} src={pre1} />
-          <Box ref={boxRef} component="img" alt="hello" sx={imge} src={pre2} />
-          <Box component="img" alt="hello" sx={imge} src={pre3} />
-          <Box component="img" alt="hello" sx={imge} src={pre1} />
-          <Box component="img" alt="hello" sx={imge} src={pre2} />
-          <Box component="img" alt="hello" sx={imge} src={pre3} /> */}
-
           <Box class={preStyles.hover03}>
             <figure>
               <Box component="img" className={preStyles.imgs} src={pre1} />
@@ -241,11 +224,4 @@ const mainText = {
     xs: "0rem",
   },
   marginTop: "6rem",
-  // marginBottom: "2rem",
 };
-
-// const imge = {
-//   height: "350px",
-//   width: "600px",
-//   cursor: "pointer",
-// };
