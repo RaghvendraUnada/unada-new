@@ -364,13 +364,3 @@ const manageGrid = {
     backgroundImage: "linear-gradient(to top, #EDEDED 0%, #EDEDED 100%);",
   },
 };
-const boxText1 = {
-  ...boxText,
-  fontSize: {
-    xl: "2.5rem",
-    lg: "2.5rem",
-    md: "2rem",
-    sm: "1.8rem",
-    xs: "1.6rem",
-  },
-};

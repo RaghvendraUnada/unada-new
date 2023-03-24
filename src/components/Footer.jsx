@@ -1,5 +1,6 @@
 import React from "react";
-import { Typography, Paper, Grid, Stack, Button } from "@mui/material";
+import { Typography, Paper, Grid } from "@mui/material";
+
 const Footer = () => {
   return (
     <Paper

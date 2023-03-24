@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Paper, Typography, Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Fade from "react-reveal/Fade";
+
 const BlackTHeroComp = (props) => {
   const Navigate = useNavigate();
   return (
@@ -18,13 +19,7 @@ const BlackTHeroComp = (props) => {
           sm: "100vh",
           xs: "100vh",
         },
-        // maxHeight: {
-        //   xl: "800px",
-        //   lg: "800px",
-        //   md: "100vh",
-        //   sm: "100vh",
-        //   xs: "100vh",
-        // },
+
         maxWidth: "2000px",
         mx: "auto",
         borderBottom: {
@@ -209,7 +204,6 @@ const BoxStyle = {
   maxWidth: "720px",
   ml: "auto",
   mr: "0px",
-  // float: "right",
 };
 
 const paperStyle = {
@@ -238,14 +232,6 @@ const paperStyle = {
     cursor: "pointer",
     opacity: 1,
   },
-  // display: {
-  //   xl: "block",
-  //   lg: "block",
-  //   md: "block",
-  //   sm: "none",
-  //   xs: "none",
-  // },
-  //   bord,
 };
 const heroTextStyle = {
   fontFamily: "LGBold",
@@ -265,14 +251,6 @@ const heroTextStyle = {
     sm: "50px",
     xs: "35px",
   },
-
-  //   marginTop: {
-  //     xl: "8rem",
-  //     lg: "8rem",
-  //     md: "8rem",
-  //     sm: "0rem",
-  //     xs: "0rem",
-  //   },
 
   textTransform: "uppercase",
   color: "#fff",
@@ -294,41 +272,7 @@ const MetaTextStyle = {
     sm: "8rem",
     xs: "5rem",
   },
-
-  // position: "absolute",
-  // lineHeight: "100px",
   letterSpacing: "0.01px",
-  // top: {
-  //   xl: "65%",
-  //   lg: "65%",
-  //   md: "65%",
-  //   sm: "-3%",
-  //   xs: "-10%",
-  // },
-  // left: {
-  //   xl: "8%",
-  //   lg: "8%",
-  //   md: "-10%",
-  //   sm: "35%",
-  //   xs: "32%",
-  // },
-  // bottom: {
-  //   xl: "25%",
-  //   lg: "25%",
-  //   md: "25%",
-  //   sm: "5%",
-  //   xs: "-10%",
-  // },
-  // left: {
-  //   xl: "10%",
-  //   lg: "10%",
-  //   md: "-5%",
-  //   sm: "40%",
-  //   xs: "30%",
-  // },
-  // top: "65%",
-  // left: "10%",
-
   textAlign: "center",
   color: "rgba(255, 255, 255, 0.2)",
 
@@ -347,12 +291,6 @@ const MetaTextStyle = {
   },
 };
 
-// const stylecss = {
-//   position: "absolute",
-//   top: "50%",
-//   left: "50%",
-//   transform: "translate(-50%,-50%)",
-// };
 const heroMetaTextStyle = {
   fontFamily: "LGBold",
   fontStyle: "normal",
@@ -365,13 +303,6 @@ const heroMetaTextStyle = {
     xs: "1.5rem",
   },
   lineHeight: "25px",
-  // marginLeft: {
-  //   xl: "2rem",
-  //   lg: "2rem",
-  //   md: "2rem",
-  //   sm: "0rem",
-  //   xs: "0rem",
-  // },
   marginTop: {
     xl: "2rem",
     lg: "2rem",

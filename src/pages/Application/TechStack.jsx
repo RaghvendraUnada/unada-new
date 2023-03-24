@@ -1,14 +1,14 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Button } from "@mui/material";
-
 import thumb from "../../assets/Images/Application/thumb.svg";
 import { BsCheck2 } from "react-icons/bs";
 import TechMarque from "../../components/Maarquee/TechMarque";
 import Fade from "react-reveal/Fade";
+
 const TechStack = (props) => {
   let storeData = props.Tech;
   return (
-    <>
+    <React.Fragment>
       <Paper
         elevation={0}
         sx={{
@@ -225,7 +225,7 @@ const TechStack = (props) => {
           </Grid>
         </Paper>
       </Paper>
-    </>
+    </React.Fragment>
   );
 };
 

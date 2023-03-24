@@ -1,10 +1,11 @@
 import React from "react";
-import { Typography, Box, Paper, Grid, Button } from "@mui/material";
+import { Typography, Box, Paper, Grid } from "@mui/material";
 import vision from "../../assets/Images/Application/vision.svg";
 import Fade from "react-reveal/Fade";
+
 const Vision = () => {
   return (
-    <>
+    <React.Fragment>
       <Paper
         elevation={0}
         sx={{
@@ -187,7 +188,7 @@ const Vision = () => {
           </Grid>
         </Grid>
       </Paper>
-    </>
+    </React.Fragment>
   );
 };
 

@@ -1,9 +1,6 @@
 import { Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import heroIntro from "./HeroIntro.module.scss";
-import Fade from "react-reveal/Fade";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import selection from "./home.module.css";

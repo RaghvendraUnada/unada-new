@@ -3,19 +3,16 @@ import { useState } from "react";
 import { Grid, Paper, Typography, Box, Button } from "@mui/material";
 import MetaImgServices from "../../assets/Images/Services/Metaverse.png";
 import BlockChainImg from "../../assets/Images/Services/Blockchain.png";
-import EthImg from "../../assets/Images/Services/EthImg.svg";
 import ArVrimg from "../../assets/Images/Services/ARVR.png";
-import blockchain from "../../assets/Images/Services/blockchain.svg";
 import ArVrMobImg from "../../assets/Images/Services/ARVR.png";
 import BlockChainMobImg from "../../assets/Images/Services/Blockchain.png";
 import MobileMetaImg from "../../assets/Images/Services/Metaverse.png";
 import ExploreIcon from "../../assets/Images/Services/ExploreIcon.svg";
-import BigArrowImg from "../../assets/Images/Services/BigArrowImg.svg";
 import styles from "./Service.module.css";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import Fade from "react-reveal/Fade";
-import { motion } from "framer-motion";
 import { useNavigate, Link } from "react-router-dom";
+
 const ServicesPage = () => {
   const navigate = useNavigate();
   const [paper1, setPaper1] = useState(true);
@@ -29,7 +26,7 @@ const ServicesPage = () => {
   const [icon3, setIcon3] = useState("White");
 
   return (
-    <>
+    <React.Fragment>
       <Grid
         container
         sx={{
@@ -480,16 +477,10 @@ const ServicesPage = () => {
           )}
         </Grid>
       </Grid>
-    </>
+    </React.Fragment>
   );
 };
 
-const AnimationSettings = {
-  transition: { duration: 0.5 },
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-};
 const paperStyle = {
   width: "auto",
 
@@ -672,23 +663,5 @@ const mobileActivePaperMetaText = {
   position: "absolute",
   top: "70%",
 };
-const ButtonStyle = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 400,
-  fontSize: {
-    sm: "35px",
-    xs: "15px",
-  },
-  lineHeight: {
-    sm: "42px",
-    xs: "21px",
-  },
-  padding: "1rem 2rem",
-  letterSpacing: 0.01,
-  borderRadius: "30px",
-  border: "1px white solid",
-  color: "#FFFFFF",
-  marginTop: "2rem",
-};
+
 export default ServicesPage;

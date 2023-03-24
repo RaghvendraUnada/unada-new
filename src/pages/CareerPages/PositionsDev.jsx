@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Typography, Box, Paper, Grid, Stack, Button } from "@mui/material";
+import { Typography, Box, Grid, Button } from "@mui/material";
 import VerticalScroll from "../../components/VerticalScroll";
 import { keyframes } from "styled-components";
 import styled from "styled-components";

@@ -1,17 +1,13 @@
 import { Grid, Paper, Typography, Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import TeamImgOne from "../../assets/Images/Home/OurTeam/ImgOne.png";
-import TeamImgTwo from "../../assets/Images/Home/OurTeam/ImgTwo.png";
 import "./OurTeam.css";
-import Marquee from "react-marquee-master";
-import { motion } from "framer-motion";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
-import teamTitle from "../../assets/images/new/team.png";
 import axios from "axios";
 import Fade from "react-reveal/Fade";
 import selection from "./home.module.css";
-import { useSpring, animated } from "react-spring";
+import { useSpring } from "react-spring";
 import Zaid from "../../assets/Images/ourTeamCutOut/Zaid.webp";
 import Raghvendra from "../../assets/Images/ourTeamCutOut/Raghvendra.webp";
 import Ronak from "../../assets/Images/ourTeamCutOut/Ronak.webp";

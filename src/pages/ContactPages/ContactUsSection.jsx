@@ -1,10 +1,11 @@
-import { Typography, Box, Grid, TextField, Button } from "@mui/material";
+import { Typography, Box, Grid, Button } from "@mui/material";
 import { useState, useEffect } from "react";
 import React from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import { useNavigate } from "react-router-dom";
+
 const ContactUsSection = () => {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -49,16 +50,6 @@ const ContactUsSection = () => {
       return console.log(window.location.pathname);
     }
   }, []);
-
-  // useEffect(() => {
-  //   if (history.scrollRestoration) {
-  //     history.scrollRestoration = "manual";
-  //   } else {
-  //     window.onbeforeunload = function () {
-  //       window.scrollTo(0, 0);
-  //     };
-  //   }
-  // }, []);
 
   useEffect(() => {
     window.onbeforeunload = function () {
@@ -137,7 +128,6 @@ const ContactUsSection = () => {
                   borderLeft: "none",
                   borderRight: "none",
                 }}
-                // {...register("firstname")}
                 value={firstname}
                 onChange={(e) => setFirstName(e.target.value)}
                 required
@@ -161,7 +151,6 @@ const ContactUsSection = () => {
                 }}
                 value={lastname}
                 onChange={(e) => setLastName(e.target.value)}
-                // {...register("lastname")}
                 required
               />
             </Box>
@@ -189,7 +178,6 @@ const ContactUsSection = () => {
                 }}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                // {...register("email")}
                 required
               />
             </Box>
@@ -209,14 +197,12 @@ const ContactUsSection = () => {
                   height: "60px",
                   width: "100%",
                   color: "black",
-                  // border: "none",
                   borderBottom: "2px solid #A7A7A7",
                   borderTop: "none",
                   borderLeft: "none",
                   borderRight: "none",
                 }}
                 multiline
-                // {...register("message")}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
@@ -281,8 +267,6 @@ const infotext = {
   },
   color: "#A3A3A3",
   paddingX: {
-    // xs: "2rem",
-    // sm: "2rem",
     md: "4rem",
     lg: "8rem",
     xl: "8rem",
@@ -302,7 +286,6 @@ const box = {
   justifyContent: "center",
   gap: 3,
   width: "100%",
-  //   bgcolor: "red",
 };
 
 const ButtonStyle1 = {

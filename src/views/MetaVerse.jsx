@@ -4,7 +4,6 @@ import MetaVersePreviousProjects from "../pages/MetaVerse/MetaVersePreviousProje
 import MetaVerseHero from "../pages/MetaVerse/MetaVerseHero";
 import MetaVerseIntro from "../pages/MetaVerse/MetaVerseIntro";
 import MetaverseMarquee from "../pages/MetaVerse/MetaverseMarquee";
-import Slider3dNew from "../Components/Slider3dNew";
 import { motion } from "framer-motion";
 import selection from "../pages/MetaVerse/metaverse.module.css";
 import { SendEvent } from "../utils/SendEvent";

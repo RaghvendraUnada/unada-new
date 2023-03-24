@@ -1,29 +1,18 @@
-import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Stack, Box, Paper, Button, Typography } from "@mui/material";
-import Close from "../src/assets/Images/Header/CloseButton.svg";
 import OpenButton from "../src/assets/Images/Header/newHeader.svg";
 import OpenButtonWhite from "../src/assets/Images/Header/whiteHamberger.svg";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
 import HeaderStyles from "../src/Components/Header/Header.module.scss";
-import { Link, useNavigate } from "react-router-dom";
-import arrowheader from "../src/assets/Images/Header/headl.png";
-// import { HiArrowRight } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import Logo from "../src/assets/Images/Header/Logo.png";
 import WhiteLogo from "../src/assets/Images/Header/unada-logo.png";
-import WhatsappIcon from "./assets/Images/WhatsappIcon.png";
 
-import { HiArrowRight } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 
-import { Scrollbars } from "react-custom-scrollbars";
-import { FaArrowAltCircleUp } from "react-icons/fa";
-import "./index.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header/Header";
 import AnimatedRoutes from "./AnimatedRoutes";
 import LoadingScreen from "./views/LoadingScreen";
 
@@ -65,10 +54,6 @@ function App() {
   // const navigate = useNavigate();
   const [locationdata, setLocationData] = useState("");
   let location = window.location.pathname;
-  // const [mousePosition, setMousePosition] = useState({
-  //   x: 0,
-  //   y: 0,
-  // });
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -97,16 +82,10 @@ function App() {
   }, [pathname]);
 
   return (
-    <>
+    <React.Fragment>
       {loading === false ? (
         <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
           <Paper elevation={0} sx={{ bgcolor: "transparent" }}>
-            {/* <motion.div
-        className="cursor"
-        variants={variants}
-        animate={cursorVariant}
-        /> */}
-
             <Stack
               sx={{
                 maxWidth: "2000px",
@@ -116,7 +95,6 @@ function App() {
               }}
             >
               <Box sx={{ position: "relative" }}>
-                {/* <BrowserRouter> */}
                 {locationdta.pathname !== "/" ? (
                   <Paper
                     sx={{
@@ -235,7 +213,6 @@ function App() {
                                   sx={{
                                     transition: "0.3s all linear",
                                     "&:hover": {
-                                      // transform: "scale(1.15)",
                                       transform: "rotate(360deg)",
                                     },
                                     width: {
@@ -447,20 +424,13 @@ function App() {
                   <AnimatedRoutes setColorState={setColorState} />
                 ) : null}
               </Box>
-
-              {locationdta.pathname === "/home" ||
-              locationdta.pathname === "/whiteService" ||
-              locationdta.pathname === "/service" ||
-              open ? null : (
-                <Footer />
-              )}
             </Stack>
           </Paper>
         </motion.div>
       ) : (
         <LoadingScreen />
       )}
-    </>
+    </React.Fragment>
   );
 }
 
@@ -539,95 +509,24 @@ const ButtonStyle = {
   height: { xl: "35px", lg: "35px", md: "33px", sm: "30px", xs: "20px" },
   zIndex: 6,
   cursor: "pointer",
-  // background: "red",
   "&:hover": {
     bgcolor: "transparent",
     textDecoration: "line-through",
-    // background: "#fff",
-    // width: "100%",
-    // transition: "width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)",
   },
   ml: "2.3%",
 };
-const LinkStyles = {
-  textDecoration: "none",
-};
-
-const ContactUsButton = {
-  width: "137px",
-  height: "41px",
-  borderRadius: "28px",
-  px: 0,
-  zIndex: 0,
-  border: "0.5px solid #CCCCCC",
-  mt: 1,
-  justifyContent: "space-evenly",
-  cursor: "pointer",
-  alignItems: "center",
-  paddingTop: "1rem",
-  paddingBottom: "1rem",
-};
-
-const ContactUsText = {
-  fontFamily: "LGRegular",
-  fontStyle: "normal",
-  fontWeight: 400,
-  fontSize: "17px",
-  background: "#4E4E4E",
-  backgroundClip: "text",
-  "&:hover": {
-    background:
-      "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
-    textTransform: "none",
-    backgroundSize: " 100%",
-    backgroundRepeat: "repeat",
-    backgroundClip: "text",
-    textFillColor: "transparent",
-  },
-};
-
-// const centerMainText = {
-//   fontFamily: "BSSign",
-//   fontStyle: "normal",
-//   fontWeight: 400,
-//   fontSize: "50px",
-//   lineHeight: 1.8,
-//   textAlign: "center",
-//   background:
-//     "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
-//   textTransform: "none",
-//   backgroundSize: " 100%",
-//   backgroundRepeat: "repeat",
-//   backgroundClip: "text",
-//   textFillColor: "transparent",
-// };
 
 const centerMainText = {
   fontFamily: "Alex Brush",
   fontStyle: "normal",
   fontWeight: 400,
-  // fontSize: "50px",
-  // lineHeight: 2,
   textAlign: "center",
   fontSize: { xl: "42px", lg: "42px", md: "40px", sm: "30px", xs: "30px" },
   background:
     "linear-gradient(to right,rgba(201, 75, 234, 1) 0%,11.84210553765297%,rgba(112, 62, 195, 1) 23.68421107530594%,34.21052619814873%,rgba(59, 33, 140, 1) 44.736841320991516%,55.04385977983475%,rgba(26, 16, 66, 1) 65.35087823867798%,72.14912474155426%,rgba(54, 9, 52, 1) 78.94737124443054%,89.47368562221527%,rgba(170, 2, 87, 1) 100%)",
-  // "linear-gradient( to left,rgba(209, 51, 232, 1) 0%,  11.84210553765297%,rgba(114, 49, 191, 1) 23.68421107530594%,34.21052619814873%,rgba(64, 25, 132, 1) 44.736841320991516%,55.04385977983475%,rgba(29, 12, 64, 1) 65.35087823867798%,72.14912474155426%,rgba(81, 5, 43, 1) 78.94737124443054%,89.47368562221527%,rgba(192, 1, 81, 1) 100%)",
   textTransform: "none",
   backgroundSize: " 100%",
   backgroundRepeat: "repeat",
   backgroundClip: "text",
   textFillColor: "transparent",
-  // mt: 2,
-};
-
-const colorBoxGradientStyle = {
-  background:
-    "linear-gradient(to right,rgba(201, 75, 234, 1) 0%,11.84210553765297%,rgba(112, 62, 195, 1) 23.68421107530594%,34.21052619814873%,rgba(59, 33, 140, 1) 44.736841320991516%,55.04385977983475%,rgba(26, 16, 66, 1) 65.35087823867798%,72.14912474155426%,rgba(54, 9, 52, 1) 78.94737124443054%,89.47368562221527%,rgba(170, 2, 87, 1) 100%)",
-  WebkitBackgroundClip: "text",
-  // backgroundRepeat: "repeat-x",
-  // backgroundSize: "50%",
-  // width: "30%",
-  WebkitTextFillColor: "transparent",
-  backgroundClip: "text",
 };

@@ -15,6 +15,7 @@ const data = ["Social Media Agencies", "Healthcare", "Fashion"];
 const Tech = [adobe, ai, figmanew, pronew, ps];
 import { motion } from "framer-motion";
 import { SendEvent } from "../utils/SendEvent";
+
 const Ui = () => {
   useEffect(() => {
     SendEvent("UI Page");
@@ -36,6 +37,7 @@ const Ui = () => {
 };
 
 export default Ui;
+
 const AnimationSettings = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },

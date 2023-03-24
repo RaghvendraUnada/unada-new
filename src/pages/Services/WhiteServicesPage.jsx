@@ -1,20 +1,17 @@
 import React from "react";
 import { useState } from "react";
 import { Grid, Paper, Typography, Box, Button } from "@mui/material";
-import WhiteServiceAppIcon from "../../assets/Images/Services/WhiteServiceAppIcon.svg";
-import WhiteServiceWebIcon from "../../assets/Images/Services/WhiteServiceWebIcon.svg";
-import WhiteServiceuiuxIcon from "../../assets/Images/Services/WhiteServiceuiuxIcon.svg";
 import Applicationimg from "../../assets/Images/Services/Application.png";
 import Websiteimg from "../../assets/Images/Services/Website.png";
 import uiuximg from "../../assets/Images/Services/UIUX.png";
 import ApplicationMobile from "../../assets/Images/Services/ApplicationMobile.png";
-import ExploreIcon from "../../assets/Images/Services/ExploreIcon.svg";
 import blackArrowImg from "../../assets/Images/Services/blackArrowImg.svg";
 import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import Fade from "react-reveal/Fade";
 import selection from "./whiteservice.module.css";
+
 const WhiteServicesPage = () => {
   const navigate = useNavigate();
   const [paper1, setPaper1] = useState(true);

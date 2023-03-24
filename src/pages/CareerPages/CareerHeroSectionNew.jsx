@@ -1,9 +1,10 @@
 import React from "react";
-import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
+import { Typography, Box, Grid, Stack } from "@mui/material";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import selection from "../../pages/Home/home.module.css";
+
 const CareerHeroSection = () => {
   return (
     <Grid
@@ -88,20 +89,6 @@ const CareerHeroSection = () => {
 };
 export default CareerHeroSection;
 
-const careertext = {
-  fontSize: { xl: "9rem", lg: "9rem", md: "4rem", sm: "4rem", xs: "4rem" },
-  color: "black",
-  lineHeight: { xl: "9rem", lg: "8rem", md: "5rem", sm: "4rem", xs: "4rem" },
-  letterSpacing: "0.1rem",
-  fontWeight: 500,
-  fontFamily: "LGTrial",
-};
-const scrolltext = {
-  fontSize: { xl: "5rem", lg: "4rem", md: "3rem", sm: "3rem", xs: "3rem" },
-  fontFamily: "LGRegular",
-  letterSpacing: "0.1rem",
-};
-
 const hue = keyframes`
  from {
    -webkit-filter: hue-rotate(0deg);
@@ -110,27 +97,6 @@ const hue = keyframes`
    -webkit-filter: hue-rotate(-360deg);
  }
 `;
-const touch = {
-  width: { xl: "60%", lg: "60%", md: "60%", sm: "100%", xs: "100%" },
-  marginLeft: "auto",
-  marginRight: "auto",
-  fontSize: { xl: "9rem", lg: "9rem", md: "4rem", sm: "4rem", xs: "4rem" },
-  letterSpacing: "0.1rem",
-  lineHeight: {
-    xl: "9.5rem",
-    lg: "8rem",
-    md: "5rem",
-    sm: "6rem",
-    xs: "6rem",
-  },
-  fontWeight: 500,
-  fontFamily: "LGRegular",
-  background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
-  backgroundSize: " 120%",
-  backgroundRepeat: "repeat",
-  backgroundClip: "text",
-  textFillColor: "transparent",
-};
 
 const AnimatedGradientText = styled.h1`
   background-image: -webkit-linear-gradient(

@@ -28,11 +28,6 @@ const clients = [
   { image: cara3, hrefLink: "https://www.youtube.com/watch?v=ZqFCn4Nia4o" },
   { image: cara4, hrefLink: "https://www.youtube.com/watch?v=ZqFCn4Nia4o" },
   { image: cara5, hrefLink: "https://www.youtube.com/watch?v=lHgtB7DuOD8" },
-  //   { image: pre1 },
-  //   { image: pre2 },
-  //   { image: pre3 },
-  //   { image: pre1 },
-  //   { image: pre2 },
 ];
 const RandomFirstList = [...clients].sort(() => Math.random() - 0.6);
 const RandomSecondList = [...clients].sort(() => Math.random() - 0.6);

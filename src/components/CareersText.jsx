@@ -16,9 +16,4 @@ const scrolltext = {
   fontSize: { xl: "2rem", lg: "2rem", md: "3rem", sm: "3rem", xs: "3rem" },
   fontFamily: "LGRegular",
   transform: "rotate(90deg)",
-  // bgcolor: "red",
-  // width: "auto",
-  // textAlign: "left",
-  // maxWidth: "250px",
-  // height: "40px",
 };

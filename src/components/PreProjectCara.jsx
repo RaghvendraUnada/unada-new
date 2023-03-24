@@ -1,16 +1,9 @@
-import { Grid, Box, Typography, Button, Paper } from "@mui/material";
+import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import pre1 from "../assets/Images/cara/pre1.png";
-import pre2 from "../assets/Images/cara/pre2.png";
-import pre3 from "../assets/Images/cara/pre3.png";
-import blackArrowImg from "../assets/Images/Services/blackArrowImg.svg";
-import { Link } from "react-router-dom";
 import { useRef } from "react";
-import OurClients from "../pages/Home/OurClients";
 
 import CaraProject from "../components/Maarquee/CaraProject";
 const PreProject = () => {
-  const boxRef = useRef();
   const scollToRef = useRef();
   useEffect(() => {
     return scollToRef?.current?.scroll(100, 0);
@@ -51,7 +44,6 @@ const mainText = {
     xs: "0rem",
   },
   marginTop: "6rem",
-  // marginBottom: "2rem",
 };
 
 const imge = {

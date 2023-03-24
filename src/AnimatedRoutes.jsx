@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Careers from "./views/Careers";
 import Contact from "./views/Contact";
 import MetaVerse from "./views/MetaVerse";
@@ -12,9 +12,7 @@ import ArVr from "./views/ArVr";
 import Blockchain from "./views/Blockchain";
 import Home from "./views/Home";
 import { AnimatePresence } from "framer-motion";
-import MainHeroPage from "./views/MainHeroPage";
-import Example from "./Components/SpringSlider/SpringSlider";
-import Marquee from "./views/OurTeamMarquee";
+
 const AnimatedRoutes = ({ setColorState }) => {
   const Location = useLocation();
   useEffect(() => {

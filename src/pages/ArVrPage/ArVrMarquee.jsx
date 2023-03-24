@@ -2,9 +2,10 @@ import { Grid, Box } from "@mui/material";
 import React from "react";
 import BlackArVrMarquee from "../../Components/Maarquee/BlackArVrMarquee";
 import BlackArVrMarqueeRev from "../../Components/Maarquee/BlackArVrMarqueeRev";
+
 const ArVrMarquee = () => {
   return (
-    <>
+    <React.Fragment>
       <Grid
         container
         sx={{
@@ -17,12 +18,11 @@ const ArVrMarquee = () => {
         }}
       >
         <BlackArVrMarquee />
-
         <Box sx={{ marginTop: "2rem" }}>
           <BlackArVrMarqueeRev />
         </Box>
       </Grid>
-    </>
+    </React.Fragment>
   );
 };
 

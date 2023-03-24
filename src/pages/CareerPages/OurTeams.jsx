@@ -7,6 +7,7 @@ import DevIcon2 from "../../assets/Images/Career/DevIcon2.svg";
 import DevIcon3 from "../../assets/Images/Career/DevIcon3.svg";
 import DevIcon4 from "../../assets/Images/Career/DevIcon4.svg";
 import styles from "./OurTeam.module.css";
+
 const OurTeams = () => {
   return (
     <Grid

@@ -7,11 +7,7 @@ const Slider3dNew = () => {
       className="carousel"
       sx={{
         height: "100vh",
-        // background: "blue",
         zIndex: 1,
-        // width: "auto",
-        // display: "flex",
-        // justifyContent: "center",
       }}
     >
       {[...Array(5)].map((e, idx) => (
@@ -19,7 +15,6 @@ const Slider3dNew = () => {
           className="carousel-item"
           key={idx}
           sx={{
-            // backgroundColor: "red",
             display: "flex",
             justifyContent: "center",
             width: {
@@ -39,7 +34,6 @@ const Slider3dNew = () => {
                 sm: "1.5",
                 xs: "1",
               },
-              //   borderRadius: "50px",
             }}
             src={Images}
           ></Box>

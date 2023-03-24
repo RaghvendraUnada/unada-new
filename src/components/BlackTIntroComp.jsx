@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Box, Typography } from "@mui/material";
 import Fade from "react-reveal/Fade";
+
 const BlackTIntroComp = (props) => {
   return (
     <Grid
@@ -68,7 +69,6 @@ const BlackTIntroComp = (props) => {
               sm: "100%",
               xs: "100%",
             },
-            // marginTop: "2rem",
             marginLeft: {
               xl: "5rem",
               lg: "5rem",
