@@ -1,9 +1,7 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
-import VerticalText from "../../components/Maarquee/VerticalText";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
-import careerTitle from "../../assets/images/new/career_title.png";
 import Fade from "react-reveal/Fade";
 import selection from "../../pages/Home/home.module.css";
 const CareerHeroSection = () => {

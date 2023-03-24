@@ -3,8 +3,6 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
-import SwiperSliderCara from "../../Components/SwiperSlider/SwiperSliderCara";
-import IntroImg1 from "../../assets/Images/Career/IntroImg1.svg";
 import Slider from "react-slick";
 import "./CareerIntroSection.css";
 import selection from "../../pages/Home/home.module.css";

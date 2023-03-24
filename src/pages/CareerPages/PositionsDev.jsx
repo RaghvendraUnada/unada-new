@@ -3,7 +3,6 @@ import { Typography, Box, Paper, Grid, Stack, Button } from "@mui/material";
 import VerticalScroll from "../../components/VerticalScroll";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
-import positionTitle from "../../assets/images/new/position.png";
 import { useNavigate } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import axios from "axios";
@@ -194,27 +193,6 @@ const PositionsDev = () => {
 
 export default PositionsDev;
 
-const mainText = {
-  fontSize: { xl: "5rem", lg: "5rem", md: "4rem", sm: "3rem", xs: "3rem" },
-  color: "#212121",
-  letterSpacing: "-0.1rem",
-  fontWeight: 500,
-  fontFamily: "LGTrial",
-  marginTop: { sm: "4rem", xs: "4rem" },
-  width: { xl: "90%", lg: "90%", md: "90%", sm: "88%", xs: "90%" },
-  textAlign: {
-    xl: "left",
-    lg: "left",
-    md: "center",
-    sm: "center",
-    xs: "center",
-  },
-  background: "linear-gradient(0deg, #FFFFFF, #FFFFFF)",
-  backgroundSize: " 100%",
-  backgroundRepeat: "repeat",
-  backgroundClip: "text",
-  textFillColor: "transparent",
-};
 const hue = keyframes`
  from {
    -webkit-filter: hue-rotate(0deg);
@@ -288,15 +266,6 @@ const AnimatedGradientText = styled.h1`
     margin-top: 0rem;
   }
 `;
-
-const careertext = {
-  fontSize: { xl: "9rem", lg: "9rem", md: "4rem", sm: "4rem", xs: "4rem" },
-  color: "White",
-  lineHeight: { xl: "9rem", lg: "8rem", md: "5rem", sm: "4rem", xs: "4rem" },
-  letterSpacing: "0.1rem",
-  fontWeight: 500,
-  fontFamily: "LGRegular",
-};
 
 const subText = {
   width: { xl: "90%", lg: "90%", md: "90%", sm: "85%", xs: "85%" },

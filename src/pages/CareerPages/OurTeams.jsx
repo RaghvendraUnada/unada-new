@@ -13,10 +13,6 @@ const OurTeams = () => {
       container
       sx={{
         background: "#000",
-
-        // marginTop: "10rem",
-        // padding: "2rem 2rem",
-        // borderBottom: "1px solid white",
       }}
     >
       <Grid
@@ -60,7 +56,6 @@ const OurTeams = () => {
             src={WebDevIcon}
             alt="Mobile Icon"
             className={styles.ourTeamIcons}
-            // style={{ marginBottom: "9rem" }}
           />
         </Grid>
         <Grid
@@ -76,7 +71,6 @@ const OurTeams = () => {
             src={MobileIcon}
             alt="Mobile Icon"
             className={styles.ourTeamIcons}
-            // style={{ marginBottom: "9rem" }}
           />
         </Grid>
         <Grid

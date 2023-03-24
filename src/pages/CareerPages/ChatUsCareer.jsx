@@ -4,34 +4,18 @@ import {
   Paper,
   Grid,
   Button,
-  TextField,
-  InputAdornment,
-  InputLabel,
-  FormControl,
-  OutlinedInput,
-  DialogTitle,
-  DialogContentText,
-  DialogContent,
-  DialogActions,
   Modal,
   Tooltip,
   tooltipClasses,
 } from "@mui/material";
 
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import chat from "../../assets/Images/Contact/chat.svg";
 import arrow from "../../assets/Images/Contact/arrow.svg";
 import phone from "../../assets/Images/Contact/phone.svg";
 import Frame from "../../assets/Images/Contact/Frame.svg";
 import send from "../../assets/Images/Contact/send.svg";
-import Dialog from "@mui/material/Dialog";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
 import call from "../../assets/Images/Career/call.svg";
-import clipboard from "../../assets/Images/Career/clipboard.svg";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import locationContact from "../../assets/Images/Career/locationContact.svg";
 import whatsappiucon from "../../assets/Images/Career/whatsappiucon.svg";
@@ -41,7 +25,6 @@ import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 export default function ChatUs(props) {
   const [open, setOpen] = React.useState(false);
-  const [copyText, setCopyText] = useState("");
   const navigate = useNavigate();
   const handleCopy = () => {
     navigator.clipboard.writeText("https://wa.me/919898989898");
@@ -572,12 +555,6 @@ const boxText1 = {
     xs: "1.6rem",
   },
 };
-const boxText2 = {
-  ...boxText,
-};
-const boxText3 = {
-  ...boxText,
-};
 
 const contactUs = {
   fontFamily: "LGRegular",
@@ -713,8 +690,6 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: { xl: 400, lg: 400, md: 400, sm: 400, xs: 300 },
-  // height: { sm: 400, xs: 300 },
-  // height: 300,
   bgcolor: "background.paper",
   border: "2px solid #fff",
   boxShadow: 24,

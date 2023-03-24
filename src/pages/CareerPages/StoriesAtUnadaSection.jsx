@@ -1,10 +1,7 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import SwiperSliderCara from "../../Components/SwiperSlider/SwiperSliderCara";
-import UnadaStoryImg from "../../assets/Images/Career/IntroImg1.svg";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
-import storiesTitle from "../../assets/images/new/stories.png";
 import Slider from "react-slick";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import Fade from "react-reveal/Fade";

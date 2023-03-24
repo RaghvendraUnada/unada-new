@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
+import { Typography, Box, Paper, Grid } from "@mui/material";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
@@ -16,13 +16,10 @@ import cul10 from "../../assets/Images/ourculture/cul10.webp";
 import cul11 from "../../assets/Images/ourculture/cul11.webp";
 import cul12 from "../../assets/Images/ourculture/cul12.webp";
 import cul13 from "../../assets/Images/ourculture/cul13.webp";
-import HorizontalScrollingList from "../../Components/Maarquee/HorizontalScrollingList";
 import Marquee from "react-fast-marquee";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
-import reshapeTitle from "../../assets/images/new/reshape.png";
 import selection from "../../pages/Home/home.module.css";
-// import "./OurTeam.module.css";
 import Fade from "react-reveal/Fade";
 const OurCultureSection = () => {
   const images = [
@@ -203,10 +200,7 @@ const maintext = {
   },
   fontFamily: "LGTrial",
   fontweight: "bold",
-  // display: "flex",
-  // justifyContent: "center",
   textalign: "center",
-  // background: "rgb(2,0,36)",
   background:
     "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(47,128,237,1) 44%, rgba(45,158,224,1) 100%)",
   backgroundSize: "100%",
@@ -259,23 +253,3 @@ const AnimatedGradientText = styled.h1`
   -moz-osx-font-smoothing: grayscale;
   margin: auto;
 `;
-
-// <Grid
-//   container
-//   sx={{
-//     width: "100%",
-//     height: "100%",
-//   }}
-//   key={idx}
-// >
-//   <Box
-//     component={"img"}
-//     src={client}
-//     style={{
-//       height: "100%",
-//       width: "99.5%",
-//       marginLeft: "auto",
-//       marginRight: "auto",
-//     }}
-//   />
-// </Grid>
