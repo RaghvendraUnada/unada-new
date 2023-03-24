@@ -99,47 +99,6 @@ const DevelopmentStack = () => {
         elevation={0}
       >
         <Grid container>
-          {/* <Grid item xl={1} lg={1} md={1}>
-            <Paper
-              elevation={0}
-              sx={paperStyle}
-              onClick={() => {
-                setNumberOne("1");
-                setBoxtextOne("Application Development");
-              }}
-            >
-              <Box sx={PaperBoxStyle}>
-                <Typography
-                  sx={{
-                    ...TransformedText,
-                    color: "#000000",
-                    marginBottom: "-20px",
-                    transition: "all 5s",
-                  }}
-                  className={styles.Text}
-                >
-                  <Typography
-                    className={styles.Text}
-                    sx={{
-                      ...TransformedText,
-                      color: "#000000",
-                      width: "20px",
-                      minWidth: "20px",
-                      maxWidth: "20px",
-                      mb: "-40px",
-                      ml: "-60px",
-                      transform: "rotate(90deg)",
-                      transition: "all 5s",
-                    }}
-                  >
-                    {numberOne}
-                  </Typography>
-                  {boxtextOne}
-                </Typography>
-              </Box>
-            </Paper>
-          </Grid> */}
-
           <Grid item xl={6} lg={6} md={6}>
             <OpenDetails title={boxTitle} desc={boxDesc} url={url} />
           </Grid>
@@ -213,7 +172,6 @@ const DevelopmentStack = () => {
               <>
                 <Paper
                   sx={{
-                    // height: "50vh",
                     cursor: "pointer",
                   }}
                 >
@@ -225,7 +183,6 @@ const DevelopmentStack = () => {
                       justifyContent: "start",
                       gap: "5rem",
                       borderBottom: "1px solid grey",
-                      // cursor: "pointer",
                     }}
                   >
                     <Typography sx={NumTextStyle}>1</Typography>
@@ -233,14 +190,12 @@ const DevelopmentStack = () => {
                       Application Development
                     </Typography>
                   </Box>
-                  {/* <Box> */}
                   <Box sx={{ padding: "3rem" }}>
                     <Fade top duration={1000}>
                       <Typography sx={verticalText}>
                         Application Development
                       </Typography>
                     </Fade>
-                    {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
                       We specialize in designing and creating innovative
                       software applications for mobile devices. Whether you have
@@ -250,10 +205,6 @@ const DevelopmentStack = () => {
                     </Typography>
                     <Box sx={{ width: "10%" }}>
                       <Link to="application">
-                        {/* <Button sx={ButtonStyle}>
-                        View{" "}
-                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button> */}
                         <Typography
                           sx={{
                             fontSize: "15px",
@@ -269,11 +220,6 @@ const DevelopmentStack = () => {
                             "&:hover": {
                               color: "#000",
                               ml: "5px",
-                              // fontSize: {
-                              //   lg: "20px",
-                              //   xl: "20px",
-                              //   md: "20px",
-                              // },
                               transform: "scale(1.07)",
                             },
                           }}
@@ -377,10 +323,6 @@ const DevelopmentStack = () => {
                     </Typography>
                     <Box sx={{ width: "10%" }}>
                       <Link to="web">
-                        {/* <Button sx={ButtonStyle}>
-                        View{" "}
-                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button> */}
                         <Typography
                           sx={{
                             fontSize: "15px",
@@ -396,11 +338,6 @@ const DevelopmentStack = () => {
                             "&:hover": {
                               color: "#000",
                               ml: "5px",
-                              // fontSize: {
-                              //   lg: "20px",
-                              //   xl: "20px",
-                              //   md: "20px",
-                              // },
                               transform: "scale(1.07)",
                             },
                           }}
@@ -498,10 +435,6 @@ const DevelopmentStack = () => {
                     </Typography>
                     <Box sx={{ width: "10%" }}>
                       <Link to="ui">
-                        {/* <Button sx={ButtonStyle}>
-                        View{" "}
-                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button> */}
                         <Typography
                           sx={{
                             fontSize: "15px",
@@ -517,11 +450,6 @@ const DevelopmentStack = () => {
                             "&:hover": {
                               color: "#000",
                               ml: "5px",
-                              // fontSize: {
-                              //   lg: "20px",
-                              //   xl: "20px",
-                              //   md: "20px",
-                              // },
                               transform: "scale(1.07)",
                             },
                           }}
@@ -619,10 +547,6 @@ const DevelopmentStack = () => {
                     </Typography>
                     <Box sx={{ width: "10%" }}>
                       <Link to="metaVerse">
-                        {/* <Button sx={ButtonStyle}>
-                        View{" "}
-                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button> */}
                         <Typography
                           sx={{
                             fontSize: "15px",
@@ -638,11 +562,6 @@ const DevelopmentStack = () => {
                             "&:hover": {
                               color: "#000",
                               ml: "5px",
-                              // fontSize: {
-                              //   lg: "20px",
-                              //   xl: "20px",
-                              //   md: "20px",
-                              // },
                               transform: "scale(1.07)",
                             },
                           }}
@@ -743,10 +662,6 @@ const DevelopmentStack = () => {
                     </Typography>
                     <Box sx={{ width: "10%" }}>
                       <Link to="arvr">
-                        {/* <Button sx={ButtonStyle}>
-                        View{" "}
-                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button> */}
                         <Typography
                           sx={{
                             fontSize: "15px",
@@ -762,11 +677,6 @@ const DevelopmentStack = () => {
                             "&:hover": {
                               color: "#000",
                               ml: "5px",
-                              // fontSize: {
-                              //   lg: "20px",
-                              //   xl: "20px",
-                              //   md: "20px",
-                              // },
                               transform: "scale(1.07)",
                             },
                           }}
@@ -837,7 +747,6 @@ const DevelopmentStack = () => {
               <>
                 <Paper
                   sx={{
-                    // height: "50vh",
                     cursor: "pointer",
                   }}
                 >
@@ -854,10 +763,8 @@ const DevelopmentStack = () => {
                     <Typography sx={NumTextStyle}>6</Typography>
                     <Typography sx={ServiceText}>Blockchain</Typography>
                   </Box>
-                  {/* <Box> */}
                   <Box sx={{ padding: "3rem" }}>
                     <Typography sx={verticalText}>Blockchain</Typography>
-                    {/* </Box> */}
                     <Typography sx={paperTextStyle1}>
                       Our services include custom blockchain and web3
                       development, consulting on blockchain and web3 strategy
@@ -869,10 +776,6 @@ const DevelopmentStack = () => {
                     </Typography>
                     <Box sx={{ width: "10%" }}>
                       <Link to="blockchain">
-                        {/* <Button sx={ButtonStyle}>
-                        View{" "}
-                        <HiArrowRight size={10} style={{ marginLeft: "7px" }} />
-                      </Button> */}
                         <Typography
                           sx={{
                             fontSize: "15px",
@@ -888,11 +791,6 @@ const DevelopmentStack = () => {
                             "&:hover": {
                               color: "#000",
                               ml: "5px",
-                              // fontSize: {
-                              //   lg: "20px",
-                              //   xl: "20px",
-                              //   md: "20px",
-                              // },
                               transform: "scale(1.07)",
                             },
                           }}
@@ -1044,11 +942,6 @@ const OpenDetails = (props) => {
                   "&:hover": {
                     color: "#000",
                     ml: "5px",
-                    // fontSize: {
-                    //   lg: "20px",
-                    //   xl: "20px",
-                    //   md: "20px",
-                    // },
                     transform: "scale(1.07)",
                   },
                 }}
@@ -1091,7 +984,6 @@ const OpenDetails = (props) => {
 
 const PaperBoxStyle = {
   bgcolor: "red",
-  // width: "0%",
   top: {
     xl: "50%",
     lg: "40%",
@@ -1127,7 +1019,6 @@ const OpenDetailsTextStyle = {
   lineHeight: { xl: "75px", lg: "65px", md: "55px", sm: "50px", xs: "45px" },
   textTransform: "uppercase",
   background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%)",
-  // background: "red",
   backgroundClip: "text",
   textFillColor: "transparent",
 };
@@ -1139,7 +1030,6 @@ const OpenDetailsBottomTextStyle = {
   fontSize: "22px",
   lineHeight: "33px",
   color: "#010101",
-  // mb: 8,
 };
 
 const TransformedText = {
@@ -1226,11 +1116,9 @@ const paperStyle = {
   position: "relative",
   borderRadius: "0px",
   boxShadow: "none",
-  // color: "red",
   "&:hover": {
     color: "black",
   },
-  //   bord,
 };
 
 const inActiveboxStyle = {
@@ -1265,14 +1153,6 @@ const ServicePaperStyle = {
   },
   background: "black",
   position: "relative",
-
-  //   "&:hover": {
-  //     background: `url(${MetaImgServices})`,
-  //     backgroundPosition: "center",
-  //     backgroundSize: "cover",
-  //     backgroundRepeat: "none",
-  //   },
-  // padding: "3rem",
 };
 const mobilePaper = {
   width: "auto",
@@ -1344,7 +1224,6 @@ const mobileActivePaper = {
   border: "1px solid #191919",
   textAlign: "center",
   padding: "2rem",
-  // position: "relative",
 };
 const mobileActivePapertext = {
   fontFamily: "LGRegular",
@@ -1386,10 +1265,6 @@ const ButtonStyle = {
     sm: "12px",
     xs: "12px",
   },
-  // lineHeight: {
-  //   sm: "42px",
-  //   xs: "21px",
-  // },
   padding: "0.5rem 1rem",
   letterSpacing: 0.01,
   borderRadius: "30px",
@@ -1397,10 +1272,6 @@ const ButtonStyle = {
   color: "#000",
   marginTop: "2rem",
   opacity: 0.7,
-  // "&:hover": {
-  //   borderRadius: "15px solid black",
-  //   color: "#fff",
-  // },
 };
 const ServiceText = {
   fontFamily: "LGRegular",
@@ -1435,17 +1306,11 @@ const verticalText = {
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
   textFillColor: "transparent",
-  // position: "absolute",
-  // bottom: "50%",
-  // right: "-20rem",
-
-  // transform: "rotate(90deg)",
 };
 const paperTextStyle1 = {
   fontFamily: "LGRegular",
   fontStyle: "normal",
   fontWeight: 400,
-  // fontSize: "12px",
   fontSize: "1.4rem",
   lineHeight: "17px",
   color: "#010101",
@@ -1457,5 +1322,4 @@ const paperTextStyle1 = {
     xs: "60%",
   },
   marginTop: "2rem",
-  // background: "red",
 };

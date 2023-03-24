@@ -51,7 +51,6 @@ const PositionsDev = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          // borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
           borderRight: "1px solid rgba(163, 163, 163, 0.3)",
         }}
       >
@@ -108,7 +107,6 @@ const PositionsDev = () => {
                   backgroundRepeat: "repeat",
                   backgroundClip: "text",
                   textFillColor: "transparent",
-                  // textAlign: "center",
                 }}
                 className={selection.invert2}
               >
@@ -116,14 +114,6 @@ const PositionsDev = () => {
               </Typography>
             </Fade>
           </Box>
-
-          {/* <AnimatedGradientText> Positions</AnimatedGradientText> */}
-          {/* <img
-            src={positionTitle}
-            alt="position"
-            style={{ marginLeft: "-120px" }}
-            draggable="false"
-          /> */}
           <Typography sx={{ ...subText, mt: 2 }} className={selection.invert2}>
             Didn’t find any suitable role, but you believe we should have you?
             Get in touch as we’d love to connect.
@@ -158,7 +148,6 @@ const PositionsDev = () => {
               sx={ButtonStyle}
               className="demoBtn"
               onClick={() => {
-                // location.push("/contact#section");
                 navigate("/contact#section");
               }}
             >
@@ -180,7 +169,6 @@ const PositionsDev = () => {
           color: "white",
           display: "flex",
           flexDirection: "column",
-          // gap: "20px",
           overflowY: "scroll",
           borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
         }}
@@ -199,43 +187,6 @@ const PositionsDev = () => {
             />
           );
         })}
-        {/* <VerticalScroll
-        key={idx}
-          positionDevo={"Full Stack Developer"}
-          pos1={"Ahmedabad"}
-          pos2={"Full Time"}
-          pos3={"Office"}
-        />
-        <VerticalScroll
-          positionDevo={"Senior UI/UX Designer"}
-          pos1={"Ahmedabad"}
-          pos2={"Full Time"}
-          pos3={"Office"}
-        />
-        <VerticalScroll
-          positionDevo={"UI/UX Intern"}
-          pos1={"Ahmedabad"}
-          pos2={"Full Time"}
-          pos3={"Office"}
-        />
-        <VerticalScroll
-          positionDevo={"Graphic Designer"}
-          pos1={"Ahmedabad"}
-          pos2={"Full Time"}
-          pos3={"Office"}
-        />
-        <VerticalScroll
-          positionDevo={"3D Designer Intern"}
-          pos1={"Ahmedabad"}
-          pos2={"Full Time"}
-          pos3={"Office"}
-        />
-        <VerticalScroll
-          positionDevo={"Full Stack Deve"}
-          pos1={"Ahmedabad"}
-          pos2={"Full Time"}
-          pos3={"Office"}
-        /> */}
       </Grid>
     </Grid>
   );
@@ -243,30 +194,14 @@ const PositionsDev = () => {
 
 export default PositionsDev;
 
-// const mainText1 = {
-//   ...mainText,
-//   background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%)",
-//   // lineHeight: {
-//   //   xl: "5rem",
-//   //   lg: "5rem",
-//   //   md: "4rem",
-//   //   sm: "3rem",
-//   //   xs: "3rem",
-//   // },
-//   marginTop: { sm: "0rem", xs: "0rem" },
-// };
-
 const mainText = {
   fontSize: { xl: "5rem", lg: "5rem", md: "4rem", sm: "3rem", xs: "3rem" },
   color: "#212121",
   letterSpacing: "-0.1rem",
   fontWeight: 500,
   fontFamily: "LGTrial",
-  // lineHeight: { xl: "5rem", lg: "5rem", md: "5rem", sm: "4rem", xs: "4rem" },
   marginTop: { sm: "4rem", xs: "4rem" },
   width: { xl: "90%", lg: "90%", md: "90%", sm: "88%", xs: "90%" },
-  // marginLeft: "auto",
-  // marginRight: "auto",
   textAlign: {
     xl: "left",
     lg: "left",

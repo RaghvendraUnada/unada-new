@@ -4,8 +4,6 @@ import VerticalText from "../../components/Maarquee/VerticalText";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
 import careerTitle from "../../assets/images/new/career_title.png";
-// import "./CareerHeroSectionNew.css";
-// import CareersText from "../../components/CareersText";
 import Fade from "react-reveal/Fade";
 import selection from "../../pages/Home/home.module.css";
 const CareerHeroSection = () => {
@@ -14,7 +12,6 @@ const CareerHeroSection = () => {
       container
       sx={{
         height: "101vh",
-        // minHeight: "100vh",
         minHeight: {
           xl: "750px",
           lg: "700px",
@@ -34,7 +31,6 @@ const CareerHeroSection = () => {
         sx={{
           display: "flex",
           alignItems: "center",
-          // paddingTop: "5rem",
           backgroundColor: "white",
           textAlign: "center",
         }}
@@ -53,26 +49,10 @@ const CareerHeroSection = () => {
             marginRight: "auto",
           }}
         >
-          {/* <Stack sx={{ marginTop: {} }}>
-            <Typography sx={careertext}>Join a team</Typography>
-            <div className="content">
-              <h2>
-                <Typography sx={touch}>
-                  Be part of a team who makes an impact.
-                </Typography>
-              </h2>
-              <h2>
-                <Typography sx={touch}>
-                  Be part of a team who makes an impact.
-                </Typography>
-              </h2>
-            </div>
-          </Stack> */}
           <Box sx={{ width: "90%", mx: "auto" }}>
             <Fade top duration={1000}>
               <Stack sx={{ marginTop: {} }}>
                 <Typography
-                  // className="animate-charcter"
                   sx={{
                     ...textStyle1,
                     background: "black",
@@ -87,7 +67,6 @@ const CareerHeroSection = () => {
                   Join a team
                 </Typography>
                 <Typography
-                  // className="animate-charcter"
                   className={selection.invert}
                   sx={{
                     ...textStyle1,
@@ -101,7 +80,6 @@ const CareerHeroSection = () => {
                 >
                   Be a part of team who makes an impact.
                 </Typography>
-                {/* <img src={careerTitle} alt="title" width="80%" className="center-block" draggable="false" /> */}
               </Stack>
             </Fade>
           </Box>
@@ -154,10 +132,7 @@ const touch = {
   backgroundRepeat: "repeat",
   backgroundClip: "text",
   textFillColor: "transparent",
-  // animation: `${hue} 10s infinite linear`,
 };
-
-// linear-gradient(to right, rgb(201, 75, 234) 0%, 11.8421055377%, rgb(112, 62, 195) 23.6842110753%, 34.2105261981%, rgb(59, 33, 140) 44.736841321%, 55.0438597798%, rgb(26, 16, 66) 65.3508782387%, 72.1491247416%, rgb(54, 9, 52) 78.9473712444%, 89.4736856222%, rgb(170, 2, 87) 100%);
 
 const AnimatedGradientText = styled.h1`
   background-image: -webkit-linear-gradient(

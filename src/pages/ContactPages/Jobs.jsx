@@ -11,12 +11,9 @@ const Jobs = () => {
   const [icon1, setIcon1] = useState("White");
   const navigate = useNavigate();
   function handleClicks() {
-    // location.push("/contact/#section");
     navigate("/careers#section");
   }
   return (
-    // <div id="section">
-
     <Paper
       onClick={handleClicks}
       elevation={0}
@@ -28,7 +25,6 @@ const Jobs = () => {
         height: "40vh",
         width: "100vw",
         display: "flex",
-        // flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
         px: 5,
@@ -72,17 +68,6 @@ const Jobs = () => {
           },
         }}
       >
-        {/* <img
-            src={arrwhite}
-            alt="chat"
-            className="chat-arrow-img"
-            style={{
-              height: "auto",
-              minwidth: "1%",
-              color: "#fff",
-              cursor: "pointer",
-            }}
-          /> */}
         <Box
           className={styles.BigArrowImg}
           onMouseOut={() => setIcon1("white")}

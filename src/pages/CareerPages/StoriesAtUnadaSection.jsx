@@ -9,15 +9,6 @@ import Slider from "react-slick";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import Fade from "react-reveal/Fade";
 import selection from "./selection.module.css";
-// import culture23 from "../../assets/Images/Career/imginwebp/14.webp";
-// import culture21 from "../../assets/Images/Career/imginwebp/15.webp";
-// import culture24 from "../../assets/Images/Career/imginwebp/16.webp";
-// import culture11 from "../../assets/Images/Career/imginwebp/17.webp";
-// import culture12 from "../../assets/Images/Career/imginwebp/18.webp";
-// import culture13 from "../../assets/Images/Career/imginwebp/19.webp";
-// import culture14 from "../../assets/Images/Career/imginwebp/20.webp";
-// import culture15 from "../../assets/Images/Career/imginwebp/21.webp";
-// import culture16 from "../../assets/Images/Career/imginwebp/22.webp";
 import Unada1 from "../../assets/Images/unadalife/ul1.webp";
 import Unada2 from "../../assets/Images/unadalife/ul2.webp";
 import Unada3 from "../../assets/Images/unadalife/ul3.webp";
@@ -27,12 +18,6 @@ import Unada6 from "../../assets/Images/unadalife/ul6.webp";
 import Unada7 from "../../assets/Images/unadalife/ul7.webp";
 import Unada8 from "../../assets/Images/unadalife/ul8.webp";
 const ImgArr = [
-  // UnadaStoryImg,
-  // UnadaStoryImg,
-  // UnadaStoryImg,
-  // UnadaStoryImg,
-  // UnadaStoryImg,
-  // UnadaStoryImg,
   { src: Unada1 },
   { src: Unada2 },
   { src: Unada3 },
@@ -198,32 +183,6 @@ const StoriesAtUnadaSection = () => {
         >
           <Slider {...settings}>
             {ImgArr?.map((slide, sid) => (
-              // <Box
-              //   key={`slide-${sid}`}
-              //   sx={{
-              //     flex: "none",
-              //     boxSize: "100%",
-              //     padding: "1.5rem",
-              //     flexDirection: "column",
-              //     gap: "1rem",
-              //     width: "33%",
-              //     height: "auto",
-              //   }}
-              // >
-              //   <Box
-              //     sx={{
-              //       backgroundSize: "cover",
-              //       width: "100%",
-              //       mx: "auto",
-              //       height: "auto",
-              //       maxHeight: "400px",
-              //     }}
-              //     component="img"
-              //     alt="hello"
-              //     src={slide}
-              //   />
-              //   <Typography sx={SwiperText}>Studio 25 Tiktok</Typography>
-              // </Box>
               <Box
                 key={`slide-${sid}`}
                 sx={{
@@ -233,7 +192,6 @@ const StoriesAtUnadaSection = () => {
                   flexDirection: "column",
                   gap: "1rem",
                   width: "33%",
-                  // background: "red",
                 }}
               >
                 <Box
@@ -249,10 +207,7 @@ const StoriesAtUnadaSection = () => {
                   alt="hello"
                   src={slide.src}
                 />
-                <Typography sx={SwiperText}>
-                  {/* Studio 25 Tiktok */}
-                  {slide.text}
-                </Typography>
+                <Typography sx={SwiperText}>{slide.text}</Typography>
               </Box>
             ))}
           </Slider>

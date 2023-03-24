@@ -33,57 +33,9 @@ const ContactHeroSection = () => {
           marginBottom: "auto",
         }}
       >
-        {/* <Stack sx={{ marginTop: {} }}>
-            <Typography sx={contactText}>Contact</Typography>
-          </Stack> */}
-        {/* <Stack> */}
-        {/* <AnimatedGradientText>Get in Touch !</AnimatedGradientText> */}
-        {/* <Box
-            className="bg-gradient-text"
-            sx={{
-              fontSize: {
-                lg: "8rem",
-                md: "5rem",
-                sm: "5rem",
-                xs: "5rem",
-                lineHeight: "150px",
-              },
-              textAlign: "start",
-              marginTop: "1rem",
-              // margin: "2rem auto",
-            }}
-          >
-            Get in Touch !
-          </Box> */}
-        {/* <Box
-            className="content"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            sx={{
-              padding: {
-                xl: "2rem",
-                lg: "2rem",
-                md: "2rem",
-                sm: "2rem",
-                xs: "2rem",
-              },
-              width: "95%",
-              // marginLeft: "auto",
-              marginRight: "auto",
-              marginY: "5rem",
-            }}
-          >
-            <h2>Get in Touch !</h2>
-            <h2>Get in Touch !</h2>
-          </Box> */}
-        {/* <Typography sx={contactText2}>Get in Touch !</Typography> */}
-        {/* </Stack> */}
-        {/* <img src={contactTitle} alt="contact" width="70%" draggable="false" /> */}
         <Box
           sx={{
             height: "auto",
-            // minHeight: "350px",
             paddingY: "8rem",
             paddingX: "3rem",
             display: "flex",
@@ -182,11 +134,7 @@ const contactText2 = {
   letterSpacing: "0.1rem",
   fontWeight: 500,
   fontFamily: "LGRegular",
-  //   color: "blue",
   background: "linear-gradient(90deg, #90BFFF 0%, #2F80ED 50%, #2D9EE0 100%)",
-
-  //   background:
-  //     "linear-gradient(to left, rgba(144, 191, 255, 1) 0%, 32.67543911933899%, rgba(47, 128, 237, 1) 65.35087823867798%, 82.67543911933899%, rgba(45, 158, 224, 1) 100%);",
   backgroundSize: " 100%",
   backgroundRepeat: "repeat",
   backgroundClip: "text",
@@ -244,45 +192,3 @@ const AnimatedGradientText = styled.h1`
     width: 100%;
   }
 `;
-
-// const AnimatedGradientTexts = styled.h1`
-//   background-image: -webkit-linear-gradient(
-//     2deg,
-//     rgba(201, 75, 234, 1) 0%,
-//     rgba(144, 191, 255, 1) rgba(47, 128, 237, 1) rgba(45, 158, 224, 1)
-//       rgba(255, 255, 255, 1)
-//   );
-//   letter-spacing: 0.1rem;
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   -webkit-animation: ${hue} 10s infinite linear;
-//   font-family: LGTrial;
-//   font-weight: 500;
-//   text-align: left;
-//   text-rendering: optimizelegibility;
-//   -moz-osx-font-smoothing: grayscale;
-//   font-size: 85px;
-
-//   @media (max-width: 1200px) {
-//     width: 100%;
-//     font-size: 5rem;
-//   }
-//   @media (max-width: 992px) {
-//     font-size: 5rem;
-//     width: 100%;
-//   }
-//   @media (max-width: 895px) {
-//     font-size: 4.5rem;
-//     margin: auto;
-//     margin-top: 1rem;
-//     text-align: center;
-//   }
-//   @media (max-width: 576px) {
-//     font-size: 4.5rem;
-//     width: 100%;
-//   }
-//   @media (max-width: 320px) {
-//     font-size: 3.4rem;
-//     width: 100%;
-//   }
-// `;

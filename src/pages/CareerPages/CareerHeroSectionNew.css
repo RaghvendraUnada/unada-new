@@ -12,7 +12,6 @@
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  /* text-fill-color: transparent; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -22,14 +21,6 @@
   font-weight: 500;
   font-size: 50px;
   width: 100%;
-  /* lineHeight: {
-    xl: "76px",
-    lg: "76px",
-    md: "58px",
-    sm: "50px",
-    xs: "45px",
-  },
-  letterSpacing: 1, */
 }
 
 @keyframes textclip {
