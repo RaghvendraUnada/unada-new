@@ -4,34 +4,18 @@ import {
   Paper,
   Grid,
   Button,
-  TextField,
-  InputAdornment,
-  InputLabel,
-  FormControl,
-  OutlinedInput,
-  DialogTitle,
-  DialogContentText,
-  DialogContent,
-  DialogActions,
   Modal,
   Tooltip,
   tooltipClasses,
 } from "@mui/material";
 
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import chat from "../../assets/Images/Contact/chat.svg";
 import arrow from "../../assets/Images/Contact/arrow.svg";
 import phone from "../../assets/Images/Contact/phone.svg";
 import Frame from "../../assets/Images/Contact/Frame.svg";
 import send from "../../assets/Images/Contact/send.svg";
-import Dialog from "@mui/material/Dialog";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
 import call from "../../assets/Images/Career/call.svg";
-import clipboard from "../../assets/Images/Career/clipboard.svg";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import locationContact from "../../assets/Images/Career/locationContact.svg";
 import whatsappiucon from "../../assets/Images/Career/whatsappiucon.svg";
@@ -41,12 +25,7 @@ import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 export default function ChatUs(props) {
   const [open, setOpen] = React.useState(false);
-  const [copyText, setCopyText] = useState("");
   const navigate = useNavigate();
-  // const handleCopy = () => {
-  //   navigator.clipboard.writeText(copyText);
-  //   alert("Copied");
-  // };
   const handleCopy = () => {
     navigator.clipboard.writeText("https://wa.me/919898989898");
     alert("Copied");
@@ -85,14 +64,11 @@ export default function ChatUs(props) {
           sm={6}
           sx={{
             ...manageGrid,
-            // borderLeft: "0.5px solid rgba(163, 163, 163, 0.3)",
           }}
         >
           <Grid item xl={6} lg={6} md={6} xs={6} sm={6}>
-            {/* <Link to="contact"> */}
             <Box
               onClick={() => {
-                // location.push("/contact#section");
                 navigate("/contact#section");
               }}
               sx={{
@@ -160,15 +136,7 @@ export default function ChatUs(props) {
           onClick={handleClickOpen}
           sx={{ ...manageGrid, cursor: "pointer" }}
         >
-          <Grid
-            item
-            xl={6}
-            lg={6}
-            md={6}
-            xs={6}
-            sm={6}
-            // onClick={handleClickOpen}
-          >
+          <Grid item xl={6} lg={6} md={6} xs={6} sm={6}>
             <Box
               sx={{
                 padding: {
@@ -306,7 +274,6 @@ export default function ChatUs(props) {
                       <Box
                         sx={{
                           display: "flex",
-                          // gap: "80px",
                           justifyContent: "space-between",
                         }}
                       >
@@ -318,7 +285,6 @@ export default function ChatUs(props) {
                             p: 0.5,
                             cursor: "pointer",
                             display: "flex",
-                            // justifyContent: "flex-end",
                           }}
                           onClick={handleCopy}
                         >
@@ -390,7 +356,6 @@ export default function ChatUs(props) {
           sm={6}
           sx={{
             ...manageGrid,
-            // borderLeft: "0.5px solid rgba(163, 163, 163, 0.3)",
           }}
         >
           <Grid item xl={6} lg={6} md={6} xs={6} sm={6}>
@@ -524,8 +489,6 @@ export default function ChatUs(props) {
 }
 
 const boxText = {
-  // marginTop: "1rem",
-  // width: { xl: "30%", lg: "30%", md: "30%", sm: "60%", xs: "80%" },
   fontWeight: 500,
   lineHeight: {
     xl: "2.5rem",
@@ -548,8 +511,6 @@ const boxText = {
 const manageGrid = {
   borderTop: "0.5px solid rgba(163, 163, 163, 0.3)",
   borderRight: "0.5px solid rgba(163, 163, 163, 0.3)",
-  //   borderTop: "0.5px solid rgba(163, 163, 163, 0.3)",
-  //   borderTop: "0.5px solid rgba(163, 163, 163, 0.3)",
   height: "50vh",
 
   minHeight: {
@@ -580,9 +541,6 @@ const manageGrid = {
   justifyContent: "flex-start",
   flexWrap: "wrap",
   "&:hover": {
-    // background: "rgba(237, 237, 237, 1)",
-    // backgroundImage: "linear-gradient(-20deg, #00CDAC 0%, #8DDAD5 100%)",
-    // backgroundImage:
     backgroundImage: "linear-gradient(to top, #EDEDED 0%, #EDEDED 100%);",
   },
   cursor: "pointer",
@@ -590,7 +548,6 @@ const manageGrid = {
 
 const boxText1 = {
   ...boxText,
-  //   width: { xl: "100%", lg: "100%", md: "40%", sm: "50%", xs: "100%" },
   fontSize: {
     xl: "2.5rem",
     lg: "2.5rem",
@@ -598,14 +555,6 @@ const boxText1 = {
     sm: "1.8rem",
     xs: "1.6rem",
   },
-};
-const boxText2 = {
-  ...boxText,
-  //   width: { xl: "50%", lg: "50%", md: "40%", sm: "50%", xs: "100%" },
-};
-const boxText3 = {
-  ...boxText,
-  //   width: { xl: "50%", lg: "50%", md: "40%", sm: "50%", xs: "100%" },
 };
 
 const contactUs = {
@@ -742,8 +691,6 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: { xl: 400, lg: 400, md: 400, sm: 400, xs: 300 },
-  // height: { sm: 400, xs: 300 },
-  // height: 300,
   bgcolor: "background.paper",
   border: "2px solid #fff",
   boxShadow: 24,

@@ -1,12 +1,6 @@
 import React from "react";
-import { Typography, Box, Paper, Grid, Stack, Skeleton } from "@mui/material";
-// import UnadaLife from "../../assets/Images/Career/unadalife.svg";
-// import UnadaSLife1 from "../../assets/Images/Career/unadaslife1.svg";
-// import UnadaSLife2 from "../../assets/Images/Career/unadaslife2.svg";
-// import UnadaSLife3 from "../../assets/Images/Career/unadalife3.svg";
+import { Typography, Box, Grid } from "@mui/material";
 import unadasLifeImg from "../../assets/Images/unadalife/unadalife.webp";
-// import culture5 from "../../assets/Images/Career/realCulture/"
-// import Skeleton from '@mui/material/Skeleton'
 import selection from "../../pages/Home/home.module.css";
 
 function UnadalifeSection() {
@@ -37,7 +31,6 @@ function UnadalifeSection() {
               width: "100%",
               height: "auto",
               objectFit: "contain",
-              // bgcolor: "red",
             }}
           />
           <Box
@@ -51,7 +44,6 @@ function UnadalifeSection() {
                 xs: "80%",
               },
               width: "100%",
-              // bgcolor: "red",
             }}
           >
             <Typography sx={text} className={selection.invert}>
@@ -74,26 +66,9 @@ const text = {
     sm: "7em",
     xs: "5.8rem",
   },
-  // position: "absolute",
   fontFamily: "LGTrial",
-  // top: {
-  //   xl: "75%",
-  //   lg: "73.5%",
-  //   md: "85%",
-  //   sm: "82.5%",
-  //   xs: "83%",
-  // },
-  // left: {
-  //   xl: "15%",
-  //   lg: "15%",
-  //   md: "23%",
-  //   sm: "20%",
-  //   xs: "15%",
-  // },
-
   fontWeight: 600,
   textAlign: "center",
-  // color: "#171717",
   background: "linear-gradient(182.5deg, #000000 35%, #272727 70%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",

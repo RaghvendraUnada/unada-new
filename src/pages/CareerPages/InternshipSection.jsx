@@ -79,7 +79,6 @@ const ButtonStyle = {
     sm: "19px",
     xs: "19px",
   },
-  //   marginTop: "2rem",
   padding: "2rem 9rem",
   letterSpacing: 0.01,
   borderRadius: "30px",

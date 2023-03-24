@@ -3,13 +3,6 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
-import SwiperSliderCara from "../../Components/SwiperSlider/SwiperSliderCara";
-import IntroImg1 from "../../assets/Images/Career/IntroImg1.svg";
-// import Arrow1 from "../../assets/Images/material-symbols_arrow-back-ios-new-rounded-1.png";
-// import Arrow1 from "../../assets/Images/material-symbols_arrow-back-ios-new-rounded.png "
-
-// import IntroImg2 from "../../assets/Images/Career/IntroImg2.svg";
-// import IntroImg3 from "../../assets/Images/Career/IntroImg3.svg";
 import Slider from "react-slick";
 import "./CareerIntroSection.css";
 import selection from "../../pages/Home/home.module.css";
@@ -52,16 +45,11 @@ function SamplePrevArrow(props) {
       style={{
         ...style,
         display: "block",
-        // background: "green",
         width: 20,
         height: 20,
         margin: "auto",
-        // border: "solid #fff",
         border: "none",
-        // backgroundColor: "red",
         borderRadius: "none",
-        // borderWidth: "0 3px 3px 0",
-        // transform: "rotate(135deg)",
       }}
       onClick={onClick}
     />
@@ -249,7 +237,6 @@ function CareerIntroSection() {
                   flexDirection: "column",
                   gap: "1rem",
                   width: "33%",
-                  // background: "red",
                 }}
               >
                 <Box

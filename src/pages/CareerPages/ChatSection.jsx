@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 import { Grid, Typography, Box } from "@mui/material";
 import ChatUsCareer from "../CareerPages/ChatUsCareer";
-import { AiFillInstagram } from "react-icons/ai";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { BsFacebook, BsTwitter } from "react-icons/bs";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import DoorSlidingSharpIcon from "@mui/icons-material/DoorSlidingSharp";
-// import glassdoor from "../../assets/Images/Career/glassdoor.svg";
-// import instagram from "../../assets/Images/Career/instagram.svg";
-// import linkedin from "../../assets/Images/Career/linkdin.svg";
-// import youtube from "../../assets/Images/Career/Youtube.svg";
 import glassdoor from "../../assets/Images/Career/glassdoor.svg";
 import instagram from "../../assets/Images/Career/instagram.svg";
 import linkedin from "../../assets/Images/Career/linkdin.svg";
@@ -19,7 +10,6 @@ import instagramblk from "../../assets/Images/Career/instagramblack.svg";
 import linkedinblk from "../../assets/Images/Career/linkdinblack.svg";
 import youtubeblk from "../../assets/Images/Career/youtubeblack.svg";
 import Fade from "react-reveal/Fade";
-import selection from "./chat.module.css";
 import "./chat.module.css";
 
 const ChatSection = () => {
@@ -32,14 +22,6 @@ const ChatSection = () => {
       container
       sx={{
         background: "white",
-        // minHeight: {
-        //   xl: "100vh",
-        //   lg: "100vh",
-        //   md: "100vh",
-        //   sm: "100vh",
-        //   xs: "100vh",
-        // },
-        // mb: { xl: 8.3, lg: 8, md: 8, sm: 0, xs: -8 },
         position: "relative",
       }}
     >
