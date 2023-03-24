@@ -33,7 +33,6 @@ const RandomSecondList = [...clients].sort(() => Math.random() - 0.6);
 const RandomThirdList = [...clients].sort(() => Math.random() - 0.6);
 
 const ClientMarqueeLeftToRight = (props) => {
-  // console.log("props", props);
   return (
     <HorizontalScrollingList>
       {clients.map((client, idx) => {

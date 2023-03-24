@@ -23,7 +23,6 @@ const RevolutionSetion = () => {
       sx={{
         background: "white",
         textAlign: "center",
-        // padding: "11.2rem 8rem ",
         p: { xl: 10, lg: 10, md: 8, sm: 5, xs: 3 },
       }}
     >
@@ -81,7 +80,6 @@ const ButtonStyle = {
     sm: "19px",
     xs: "19px",
   },
-  //   marginTop: "2rem",
   padding: "2rem 4rem",
   letterSpacing: 0.01,
   borderRadius: "30px",

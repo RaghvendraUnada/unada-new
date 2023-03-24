@@ -66,7 +66,6 @@ export default function ChatUs(props) {
   let location = useLocation();
 
   function handleClicks() {
-    console.log("sajndkjnaskj");
     location.push("/contact#section");
   }
 

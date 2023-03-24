@@ -59,26 +59,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     setOpen(false);
   };
 
-  // const handleFileChange = (event) => {
-  //   // if (fileRegex.test(event.dataTransfer.files[0])) {
-  //   //   const selectedFile = event.dataTransfer.files[0];
-  //   //   console.log(selectedFile);
-  //   // }
-  //   const fileRegex = /([a-zA-Z0-9\s_\.-:])+(.doc|.docx|.pdf)$/;
-  //   if (/jpeg|jpg|png|gif/.test(ext.toLowerCase())) {
-  //     return cb(new Error("Only images are allowed"), false);
-  //   }
-  // };
-
-  // const handleDragOver = (event) => {
-  //   event.preventDefault();
-  // };
-
-  // const handleDrop = (event) => {
-  //   event.preventDefault();
-  //   handleFileChange(event);
-  // };
-
   const handleDragOver = (e) => {
     e.preventDefault();
     setDragOver(true);
@@ -106,11 +86,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     e.preventDefault();
     setDragOver(false);
     const coverLetterfile = e.dataTransfer.files[0];
-    // alert("File Upload");
-    console.log(coverLetterfile);
     setCoverLetter(coverLetterfile);
-    console.log(coverLetter);
-    // handleFileUpload(file);
   };
 
   // const [state,setState] = useState()
@@ -139,40 +115,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     setExperience("");
     setSkill("");
     setLinkedin("");
-    // setFile("");
-    // setCoverLetter("");
-
-    // const data = {
-    //   UserFirstName: firstName,
-    //   UserLastName: lastName,
-    //   UserEmail: email,
-    //   UserExperience: experience,
-    //   UserSkills: skill,
-    //   UserLinkedInUrl: linkedin,
-    //   resume: file,
-    //   coverLetter: coverLetter,
-    // };
-
-    // return await axios
-    //   .post("user_data/apply", data, {
-    //     headers: {
-    //       "Content-type": "multipart/form-data",
-    //       "Content-Length": JSON.stringify(data).length,
-    //     },
-    //   })
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-    // await fetch("http://192.168.29.5:8000/user_data/apply", {
-    //   method: "POST",
-    //   body: formData,
-    //   // headers: {
-    //   //   "Content-type": "multipart/form-data",
-    //   // },
-    // });
     var formdata = new FormData();
     formdata.append("UserFirstName", firstName);
     formdata.append("UserLastName", lastName);
@@ -216,7 +158,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     axios
       .get("/skills/get_all_skill")
       .then((response) => {
-        console.log("----->", response.data.SkillData[0].Skills);
         setlistOfSkillss(response.data.SkillData[0].Skills);
       })
       .catch((error) => {
@@ -264,8 +205,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   }
 
   const [loader, setLoader] = useState(false);
-
-  // console.log(listOfSkill, selectedSkill);
 
   useEffect(() => {
     listOfSkillss?.includes(selectedSkill);
@@ -1173,21 +1112,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                         },
                       }}
                       onChange={(e) => {
-                        // // setFile(e.target.files);
-                        // setLoader(true);
-                        // setTimeout(() => {
-                        //   setLoader(false);
-                        // }, [2000]);
-
-                        // e.preventDefault();
-                        // const resumefile = e.dataTransfer.files[0];
-                        // console.log(resumefile);
                         setFile(e.target.files);
                       }}
-
-                      // onClick={() => {
-                      //   uploadFileRef.current.click();
-                      // }}
                     />
                     <Box
                       sx={{
@@ -1209,28 +1135,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       </>
                     ) : null}
                   </Box>
-                  {/* {file?.length} */}
-                  {/* <Button
-                      sx={{
-                        textTransform: "none",
-                        fontSize: "16px",
-                        fontFamily: "LGTrial",
-                        color: "black",
-                        background: "#FAFAFA",
-                        borderRadius: "none",
-                        "&:hover": {
-                          background: "#FAFAFA",
-                          // color: "white",
-                        },
-                      }}
-                      variant="contained"
-                      onClick={() => {
-                        console.log(uploadFileRef);
-                        uploadFileRef.current.click();
-                      }}
-                    >
-                      Choose file
-                    </Button> */}
 
                   <Typography sx={labeltext}>Cover letter</Typography>
                   <Box

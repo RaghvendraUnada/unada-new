@@ -25,12 +25,10 @@ const PositionsDev = () => {
   }, []);
   useEffect(() => {
     if (location?.hash === "#section") {
-      console.log("=====>hello");
       setTimeout(() => {
         window.scrollTo({ top: 3640, behavior: "smooth" });
       }, [1200]);
     } else if (location?.hash === "#miniSection") {
-      console.log("=====>hello");
       setTimeout(() => {
         window.scrollTo({ top: 500, behavior: "smooth" });
       }, [1200]);

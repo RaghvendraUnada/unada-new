@@ -14,31 +14,9 @@ const ContactUsSection = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   let location = useLocation();
-  // console.log(location);
 
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm({
-  //   resolver: zodResolver(
-  //     z.object({
-  //       firstname: z.string(),
-  //       lastname: z.string(),
-  //       email: z.string(),
-  //       message: z.string(),
-  //     })
-  //   ),
-  // });
   const handleSubmitForm = async (e) => {
     e.preventDefault();
-    // if (firstname === "") {
-    //   alert("please fill firstname");
-    // } else if (lastname === "") {
-    //   alert("please fill lastname");
-    // } else if (email === "") {
-    //   alert("please fill email");
-    // }
     setFirstName("");
     setLastName("");
     setEmail("");
@@ -61,12 +39,10 @@ const ContactUsSection = () => {
 
   useEffect(() => {
     if (location?.hash === "#section") {
-      console.log("=====>hello");
       setTimeout(() => {
         window.scrollTo({ top: 800, behavior: "smooth" });
       }, [1200]);
     } else if (location?.hash === "#miniSection") {
-      console.log("=====>hello");
       setTimeout(() => {
         window.scrollTo({ top: 400, behavior: "smooth" });
       }, [1200]);

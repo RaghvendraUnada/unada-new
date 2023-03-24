@@ -24,9 +24,7 @@ const Header = () => {
   //   }
   // });
 
-  useEffect(() => {
-    console.log(location);
-  }, [useLocation().pathname]);
+  useEffect(() => {}, [useLocation().pathname]);
 
   return (
     <Paper

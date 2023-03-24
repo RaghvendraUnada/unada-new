@@ -52,13 +52,3 @@ const ClientMarquee = (props) => {
 };
 
 export default ClientMarquee;
-
-// const [client, setclient] = React.useState();
-
-// React.useEffect(() => {
-//   axios.get("/clients/get_clients").then((response) => {
-//     setclient(response.data);
-//     // console.log("===>", post[0].ClientLogo[0]);
-//     console.log("===>", client);
-//   });
-// }, []);
