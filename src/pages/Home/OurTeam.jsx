@@ -536,10 +536,8 @@ const OurTeamTextStyle = {
   fontWeight: 400,
   fontSize: { xl: "120px", lg: "100px", md: "80px", sm: "60px", xs: "40px" },
   lineHeight: { xl: "97px", lg: "75px", md: "60px", sm: "45px", xs: "30px" },
-  /* or 118% */
   letterSpacing: "2.97231px",
   color: "#000000",
-  // ml: 10,
   textAlign: "center",
   mx: "auto",
 };
@@ -552,7 +550,6 @@ const TeamNameTextStyle = {
   lineHeight: { xl: "36px", lg: "36px", md: "30px", sm: "25px", xs: "20px" },
   letterSpacing: "0.01px",
   color: "#000",
-  // ml: 2,
   mt: 0.5,
   ml: { xl: 0, lg: 0, md: 0, sm: 0, xs: 1 },
 };

@@ -25,30 +25,6 @@ const WhiteServicesPage = () => {
   const [click3, setClick3] = useState(false);
 
   return (
-    // <motion.div
-    //   initial={{ width: "100%", opacity: 0 }}
-    //   animate={{
-    //     width: "100%",
-    //     opacity: 1,
-    //     transition: { duration: 1, ease: "easeInOut" },
-    //   }}
-    //   exit={{
-    //     x: window.innerWidth,
-    //     opacity: 0,
-    //     transition: { duration: 1.3, ease: "easeInOut" },
-    //   }}
-    //   transition={{
-    //     ease: "easeInOut",
-    //     duration: "1s",
-    //   }}
-    //   // initial={{ opacity: 0.5 }}
-    //   // animate={{ opacity: 5 }}
-    //   // exit={{
-    //   //   opicity: 0.5,
-    //   //   transition: { duration: 0.7 },
-    //   //   background: "black",
-    //   // }}
-    // >
     <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
       <Paper
         elevation={0}
@@ -89,13 +65,6 @@ const WhiteServicesPage = () => {
               {paper1 ? (
                 <>
                   <Box sx={ActiveBoxStyles}>
-                    {/* <img
-                      src={WhiteServiceAppIcon}
-                      alt="servicesAppimg"
-                      style={{
-                        marginBottom: "2rem",
-                      }}
-                    /> */}
                     <Fade top duration={1000}>
                       <Typography sx={paperTextStyle}>Application</Typography>
                     </Fade>
@@ -142,13 +111,6 @@ const WhiteServicesPage = () => {
               {paper2 ? (
                 <>
                   <Box sx={ActiveBoxStyles}>
-                    {/* <img
-                      src={WhiteServiceWebIcon}
-                      alt="servicesAppimg"
-                      style={{
-                        marginBottom: "2rem",
-                      }}
-                    /> */}
                     <Fade top duration={1000}>
                       <Typography sx={paperTextStyle}>Website</Typography>
                     </Fade>
@@ -193,13 +155,6 @@ const WhiteServicesPage = () => {
               {paper3 ? (
                 <>
                   <Box sx={ActiveBoxStyles}>
-                    {/* <img
-                      src={WhiteServiceAppIcon}
-                      alt="servicesAppimg"
-                      style={{
-                        marginBottom: "2rem",
-                      }}
-                    /> */}
                     <Fade top duration={1000}>
                       <Typography sx={paperTextStyle}>UI/UX</Typography>
                     </Fade>
@@ -290,7 +245,6 @@ const WhiteServicesPage = () => {
             sm={12}
             xs={12}
             sx={{ paddingTop: "10rem" }}
-            // sx={{ marginTop: "10rem" }}
           >
             {click1 ? (
               <Paper
@@ -310,8 +264,6 @@ const WhiteServicesPage = () => {
                     style={{
                       height: "10%",
                       width: "100%",
-                      // mx: "auto",
-                      // marginTop: "1rem",
                       position: "relative",
                     }}
                   />
@@ -334,7 +286,6 @@ const WhiteServicesPage = () => {
                           justifyContent: "center",
                         }}
                       >
-                        {/* <Button sx={ButtonStyle}>View</Button> */}
                         <Button sx={ButtonStyle}>
                           <EastSharpIcon fontSize="large" />
                         </Button>
@@ -360,11 +311,7 @@ const WhiteServicesPage = () => {
                     }}
                   >
                     <Typography sx={mobileHeadText}>Application</Typography>
-                    <img
-                      src={blackArrowImg}
-                      alt="nextImg"
-                      // style={{ height: "2px", width: "2px" }}
-                    />
+                    <img src={blackArrowImg} alt="nextImg" />
                   </Box>
                 </Paper>
               </>
@@ -415,7 +362,6 @@ const WhiteServicesPage = () => {
                           justifyContent: "center",
                         }}
                       >
-                        {/* <Button sx={ButtonStyle}>View</Button> */}
                         <Button sx={ButtonStyle}>
                           <EastSharpIcon fontSize="large" />
                         </Button>
@@ -441,25 +387,13 @@ const WhiteServicesPage = () => {
                     }}
                   >
                     <Typography sx={mobileHeadText}>Website</Typography>
-                    <img
-                      src={blackArrowImg}
-                      alt="nextImg"
-                      // style={{ height: "2px", width: "2px" }}
-                    />
+                    <img src={blackArrowImg} alt="nextImg" />
                   </Box>
                 </Paper>
               </>
             )}
           </Grid>
-          <Grid
-            item
-            xl={12}
-            lg={12}
-            md={12}
-            sm={12}
-            xs={12}
-            // sx={{ marginBottom: "50rem" ,paddingBottom: }}
-          >
+          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
             {click3 ? (
               <>
                 <Paper
@@ -502,7 +436,6 @@ const WhiteServicesPage = () => {
                           justifyContent: "center",
                         }}
                       >
-                        {/* <Button sx={ButtonStyle}>View</Button> */}
                         <Button sx={ButtonStyle}>
                           <EastSharpIcon fontSize="large" />
                         </Button>
@@ -528,27 +461,22 @@ const WhiteServicesPage = () => {
                     }}
                   >
                     <Typography sx={mobileHeadText}>UI/UX</Typography>
-                    <img
-                      src={blackArrowImg}
-                      alt="nextImg"
-                      // style={{ height: "2px", width: "2px" }}
-                    />
+                    <img src={blackArrowImg} alt="nextImg" />
                   </Box>
                 </Paper>
               </>
             )}
           </Grid>
-          {/* <Grid item xl={12} lg={12} md={12} sm={12} xs={12}></Grid> */}
         </Grid>
       </Paper>
     </motion.div>
   );
 };
 const AnimationSettings = {
-  transition: { duration: 0.5 },
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   exit: { opacity: 0 },
+  transition: { duration: 1.1 },
 };
 
 const paperStyle = {
@@ -569,7 +497,6 @@ const paperStyle = {
     sm: "1px solid rgba(163, 163, 163, 0.3)",
     xs: "1px solid rgba(163, 163, 163, 0.3)",
   },
-  //   background: "white",
   position: "relative",
   opacity: 0.5,
   "&:hover": {
@@ -577,7 +504,6 @@ const paperStyle = {
     background: "rgba(29, 29, 29, 0.12)",
   },
   cursor: "pointer",
-  //   bord,
 };
 const inActiveboxStyle = {
   position: "absolute",
@@ -660,41 +586,7 @@ const MetaTextStyle = {
     sm: "8rem",
     xs: "5rem",
   },
-
-  // position: "absolute",
-  // lineHeight: "100px",
   letterSpacing: "0.01px",
-  // top: {
-  //   xl: "65%",
-  //   lg: "65%",
-  //   md: "65%",
-  //   sm: "-3%",
-  //   xs: "-10%",
-  // },
-  // left: {
-  //   xl: "8%",
-  //   lg: "8%",
-  //   md: "-10%",
-  //   sm: "35%",
-  //   xs: "32%",
-  // },
-  // bottom: {
-  //   xl: "25%",
-  //   lg: "25%",
-  //   md: "25%",
-  //   sm: "5%",
-  //   xs: "-10%",
-  // },
-  // left: {
-  //   xl: "10%",
-  //   lg: "10%",
-  //   md: "-5%",
-  //   sm: "40%",
-  //   xs: "30%",
-  // },
-  // top: "65%",
-  // left: "10%",
-
   textAlign: "center",
   color: "#000",
 
@@ -726,8 +618,6 @@ const paperTextStyle = {
 const mobileActivePaper = {
   border: "1px solid rgba(163, 163, 163, 0.3)",
   textAlign: "center",
-  // padding: "2rem",
-  //   bgcolor: "yellow",
   height: "100%",
 };
 const mobileActivePapertext = {
@@ -741,10 +631,8 @@ const mobileActivePapertext = {
   backgroundClip: "text",
   textFillColor: " ",
   fontSize: "35px",
-  // lineHeight: "45px",
   textAlign: "center",
   letterSpacing: 0.01,
-  // marginBottom: "8rem",
 };
 const mobileActivePaperMetaText = {
   fontFamily: "LGThin",
@@ -761,7 +649,6 @@ const mobileActivePaperMetaText = {
     xs: "21px",
   },
   color: "black",
-  // top: "-25%",
 };
 const ButtonStyle = {
   fontFamily: "LGRegular",

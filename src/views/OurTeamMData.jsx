@@ -8,7 +8,6 @@ const OurTeamMData = (props) => {
       gradient={false}
       speed={50}
       pauseOnHover={false}
-      // pauseOnClick={true}
       direction={"left"}
       style={{
         width: "100%",

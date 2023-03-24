@@ -124,7 +124,6 @@ const TextStyle = {
     xs: "25.2753px",
   },
   lineHeight: { xl: "97px", lg: "75px", md: "45px", sm: "45px", xs: "35px" },
-  /* or 118% */
   letterSpacing: "2.97231px",
   color: "#D9D9D9",
 };

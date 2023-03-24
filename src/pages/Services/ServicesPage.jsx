@@ -115,12 +115,6 @@ const ServicesPage = () => {
                     Imagine a world where anything is possible! At Unada.
                   </Typography>
                   <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
-                    {/* <img
-                      src={BigArrowImg}
-                      className={styles.BigArrowImg}
-                      alt="nextImg"
-                      // style={{ height: "100px", width: "100" }}
-                    /> */}
                     <Box
                       className={styles.BigArrowImg}
                       onMouseOut={() => setIcon1("white")}
@@ -177,12 +171,6 @@ const ServicesPage = () => {
                     big hit, or trying to curate immersive experiences.
                   </Typography>
                   <Link to={"/ArVr"} style={{ textDecoration: "none" }}>
-                    {/* <img
-                      src={BigArrowImg}
-                      alt="nextImg"
-                      className={styles.BigArrowImg}
-                      // style={{ height: "100px", width: "100px" }}
-                    /> */}
                     <Box
                       className={styles.BigArrowImg}
                       onMouseOut={() => setIcon2("white")}
@@ -238,12 +226,6 @@ const ServicesPage = () => {
                     Our services include custom blockchain and web3 development.
                   </Typography>
                   <Link to={"/blockchain"} style={{ textDecoration: "none" }}>
-                    {/* <img
-                      src={BigArrowImg}
-                      alt="nextImg"
-                      className={styles.BigArrowImg}
-                      // style={{ height: "100px", width: "100px" }}
-                    /> */}
                     <Box
                       className={styles.BigArrowImg}
                       onMouseOut={() => setIcon3("white")}
@@ -318,7 +300,6 @@ const ServicesPage = () => {
                     Imagine a world where anything is possible! At Unada.
                     <br />
                     <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
-                      {/* <Button sx={ButtonStyle}>View</Button> */}
                       <Box
                         className={styles.BigArrowImgmb}
                         onMouseOut={() => setIcon1("white")}
@@ -353,13 +334,7 @@ const ServicesPage = () => {
                   }}
                 >
                   <Typography sx={mobileHeadText}>Metaverse</Typography>
-                  <img
-                    src={ExploreIcon}
-                    alt="nextImg"
-                    // onClick={}
-
-                    // style={{ height: "2px", width: "2px" }}
-                  />
+                  <img src={ExploreIcon} alt="nextImg" />
                 </Box>
               </Paper>
             </>
@@ -395,7 +370,6 @@ const ServicesPage = () => {
                     big hit, or trying to curate immersive experiences.
                     <br />
                     <Link to={"/ArVr"} style={{ textDecoration: "none" }}>
-                      {/* <Button sx={ButtonStyle}>View</Button> */}
                       <Box
                         className={styles.BigArrowImgmb}
                         onMouseOut={() => setIcon2("white")}
@@ -430,11 +404,7 @@ const ServicesPage = () => {
                   }}
                 >
                   <Typography sx={mobileHeadText}>AR/VR</Typography>
-                  <img
-                    src={ExploreIcon}
-                    alt="nextImg"
-                    // style={{ height: "2px", width: "2px" }}
-                  />
+                  <img src={ExploreIcon} alt="nextImg" />
                 </Box>
               </Paper>
             </>
@@ -469,7 +439,6 @@ const ServicesPage = () => {
                     Our services include custom blockchain and web3 development.
                     <br />
                     <Link to={"/blockchain"} style={{ textDecoration: "none" }}>
-                      {/* <Button sx={ButtonStyle}>View</Button> */}
                       <Box
                         className={styles.BigArrowImgmb}
                         onMouseOut={() => setIcon3("white")}
@@ -504,17 +473,12 @@ const ServicesPage = () => {
                   }}
                 >
                   <Typography sx={mobileHeadText}>Blockchain</Typography>
-                  <img
-                    src={ExploreIcon}
-                    alt="nextImg"
-                    // style={{ height: "2px", width: "2px" }}
-                  />
+                  <img src={ExploreIcon} alt="nextImg" />
                 </Box>
               </Paper>
             </>
           )}
         </Grid>
-        {/* <Grid item xl={12} lg={12} md={12} sm={12} xs={12}></Grid> */}
       </Grid>
     </>
   );
@@ -552,8 +516,6 @@ const paperStyle = {
     cursor: "pointer",
     opacity: 1,
   },
-
-  //   bord,
 };
 
 const inActiveboxStyle = {
@@ -574,7 +536,6 @@ const ActiveBoxStyles = {
 const ServicePaperStyle = {
   width: "auto",
   objectFit: "cover",
-  // backgroundRepeat: "no-repeat",
   height: {
     xl: "100vh",
     lg: "100vh",
@@ -591,17 +552,7 @@ const ServicePaperStyle = {
     xs: "1px solid rgba(163, 163, 163, 0.3)",
   },
   position: "relative",
-  // background: `url(${MetaImgServices})`,
   opacity: 0.5,
-  // transition: "4s all linear",
-  // "&:hover": {
-  //   background: `url(${MetaImgServices})`,
-  //   backgroundPosition: "center",
-  //   backgroundSize: "cover",
-
-  //   backgroundRepeat: "no-repeat",
-  // },
-  // padding: "3rem",
 };
 const mobilePaper = {
   width: "auto",
@@ -649,41 +600,7 @@ const MetaTextStyle = {
     color: "black",
     background: "white",
   },
-
-  // position: "absolute",
-  // lineHeight: "100px",
   letterSpacing: "0.01px",
-  // top: {
-  //   xl: "65%",
-  //   lg: "65%",
-  //   md: "65%",
-  //   sm: "-3%",
-  //   xs: "-10%",
-  // },
-  // left: {
-  //   xl: "8%",
-  //   lg: "8%",
-  //   md: "-10%",
-  //   sm: "35%",
-  //   xs: "32%",
-  // },
-  // bottom: {
-  //   xl: "25%",
-  //   lg: "25%",
-  //   md: "25%",
-  //   sm: "5%",
-  //   xs: "-10%",
-  // },
-  // left: {
-  //   xl: "10%",
-  //   lg: "10%",
-  //   md: "-5%",
-  //   sm: "40%",
-  //   xs: "30%",
-  // },
-  // top: "65%",
-  // left: "10%",
-
   textAlign: "center",
   color: "rgba(255, 255, 255, 0.2)",
 
@@ -722,7 +639,6 @@ const mobileActivePaper = {
   border: "1px solid #191919",
   textAlign: "center",
   padding: { xl: "2rem", lg: "2rem", md: "2rem", sm: "1rem", xs: "0rem" },
-  // position: "relative",
 };
 const mobileActivePapertext = {
   fontFamily: "LGRegular",
