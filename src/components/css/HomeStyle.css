@@ -1,17 +1,9 @@
-/* .slider {
-  text-align: center;
-  height: auto;
-  position: relative;
-} */
-
 .text-box {
   display: inline-block;
   position: relative;
 }
 .videoTag {
-  /* background-color: black; */
   background: transparent;
-  /* height: 500px; */
   height: 100%;
   min-height: 100%;
   max-height: 100%;
@@ -26,11 +18,9 @@
   line-height: 30px;
   text-align: center;
   letter-spacing: 10.8378px;
-  /* color: #000b52; */
   background: #000b52;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* font-family: "Inter", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif; */
 }
 
 video {
@@ -50,7 +40,6 @@ video {
   .textMainClass {
     font-size: 3.5rem;
     letter-spacing: 3.8378px;
-    /* line-height: 10px; */
   }
   .videoTag {
     margin-left: "500px";

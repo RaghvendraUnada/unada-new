@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Typography, Box, Paper, Grid, Button } from "@mui/material";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import Fade from "react-reveal/Fade";
-// import { useHistory } from "react-router-dom";
 const HeroPage = ({
   mainText1,
   subText1,
@@ -21,13 +20,11 @@ const HeroPage = ({
   const location = useLocation();
 
   function handleClicks() {
-    // location.push("/contact/#section");
     navigate("/contact#section");
     setColor("red");
   }
 
   function handleClicksMobile() {
-    // location.push("/contact/#section");
     navigate("/contact#miniSection");
   }
 
@@ -37,13 +34,6 @@ const HeroPage = ({
         container
         sx={{
           height: "100%",
-          // minHeight: {
-          //   xl: "100vh",
-          //   lg: "100vh",
-          //   md: "100vh",
-          //   sm: "20vh",
-          //   xs: "10vh",
-          // },
           display: {
             xl: "flex",
             lg: "flex",
@@ -55,8 +45,6 @@ const HeroPage = ({
           width: "100vw",
           overflow: "hidden",
           p: 0,
-          // marginLeft: "auto",
-          // marginRight: "auto",
           borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
           position: "relative",
         }}
@@ -73,7 +61,6 @@ const HeroPage = ({
             position: "relative",
             justifyContent: "center",
             alignItems: "center",
-            // borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
           }}
         >
           <Box
@@ -83,7 +70,6 @@ const HeroPage = ({
               maxWidth: "500px",
               display: "flex",
               flexDirection: "column",
-              // position: "absolute",
               justifyContent: "center",
               alignItems: "center",
               padding: {
@@ -102,7 +88,6 @@ const HeroPage = ({
             <Box
               mt={3}
               sx={{
-                // alignItems: "start",
                 marginRight: {
                   xl: "auto",
                   lg: "auto",
@@ -137,48 +122,11 @@ const HeroPage = ({
                     fontWeight: 500,
                     fontFamily: "LGLight",
                     textTransform: "capitalize",
-                    // "&:focus": { color: "black" },
                   }}
                 >
                   Get started
                 </Button>
               </Box>
-              {/* <a href="/contact/#section"> */}
-              {/* <Button
-                onClick={handleClicks}
-                variant="contained"
-                onFocusVisible
-                sx={{
-                  color: "#fff",
-                  borderRadius: "9rem",
-                  fontSize: "1.7rem",
-                  padding: "1.1rem 2.6rem",
-                  fontWeight: 500,
-                  fontFamily: "LGLight",
-                  textTransform: "capitalize",
-                  "&:hover": {
-                    fontSize: "1.75rem",
-                  },
-                  "&:focus": { color: "black" },
-                }}
-              >
-                Get Started
-              </Button> */}
-
-              {/* <button
-                onClick={handleClick}
-                style={{
-                  borderRadius: "9rem",
-                  fontSize: "1.7rem",
-                  padding: "1.1rem 2.6rem",
-                  fontWeight: 500,
-                  fontFamily: "LGLight",
-                  textTransform: "capitalize",
-                  background: active ? "blue" : "blue",
-                }}
-              >
-                GetStarted
-              </button> */}
             </Box>
           </Box>
         </Grid>
@@ -192,7 +140,6 @@ const HeroPage = ({
           xs={12}
           sx={{
             height: "100%",
-            // maxHeight: "100%",
             minHeight: {
               xl: "100vh",
               lg: "100vh",
@@ -283,9 +230,6 @@ const HeroPage = ({
           width: "100vw",
           overflow: "hidden",
           p: 0,
-          // marginLeft: "auto",
-          // marginRight: "auto",
-          // borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
           position: "relative",
         }}
       >
@@ -301,7 +245,6 @@ const HeroPage = ({
             position: "relative",
             justifyContent: "center",
             alignItems: "center",
-            // borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
           }}
         >
           <Box
@@ -311,7 +254,6 @@ const HeroPage = ({
               maxWidth: "500px",
               display: "flex",
               flexDirection: "column",
-              // position: "absolute",
               justifyContent: "center",
               alignItems: "center",
               padding: {
@@ -339,7 +281,6 @@ const HeroPage = ({
           xs={12}
           sx={{
             height: "100%",
-            // maxHeight: "100%",
             maxHeight: {
               xl: "100vh",
               lg: "100vh",
@@ -351,7 +292,6 @@ const HeroPage = ({
             alignItems: "center",
             justifyContent: "center",
             alignContent: "center",
-            // marginTop: "auto",
           }}
         >
           <Paper
@@ -372,18 +312,10 @@ const HeroPage = ({
           <Box
             mb={0}
             sx={{
-              // alignItems: "start",
               marginRight: {
                 sm: "center",
                 xs: "center",
               },
-
-              // padding: {
-              //   xl: "1rem",
-              //   lg: "1rem",
-              //   md: "3rem",
-              //   sm: "1rem",
-              // },
               textAlign: {
                 xl: "left",
                 lg: "left",
@@ -393,7 +325,6 @@ const HeroPage = ({
               },
             }}
           >
-            {/* <a href="contact"> */}
             <Button
               onClick={handleClicksMobile}
               variant="contained"
@@ -403,17 +334,12 @@ const HeroPage = ({
                 fontSize: "1.8rem",
                 padding: "0.8rem 2rem",
                 fontWeight: 500,
-                // lineHeight: "2.9rem",
                 fontFamily: "LGLight",
                 textTransform: "capitalize",
-                // "&:focus": {
-                //   backgroundColor: "transparent",
-                // },
               }}
             >
               Get Started
             </Button>
-            {/* </a> */}
           </Box>
         </Grid>
       </Grid>
@@ -433,21 +359,12 @@ const paperStyle = {
     xs: "10vh",
   },
   borderLeft: "1px solid rgba(163, 163, 163, 0.3)",
-
-  // borderBottom: {
-  //   xl: "1px solid rgba(163, 163, 163, 0.3)",
-  //   lg: "1px solid rgba(163, 163, 163, 0.3)",
-  //   md: "1px solid rgba(163, 163, 163, 0.3)",
-  //   sm: "1px solid rgba(163, 163, 163, 0.3)",
-  //   xs: "1px solid rgba(163, 163, 163, 0.3)",
-  // },
   background: "#fff",
   position: "relative",
   cursor: "pointer",
   "&:hover": {
     background: "rgba(0, 0, 0, 0.03)",
   },
-  //   bord,
 };
 
 const MetaTextStyle = {
@@ -489,17 +406,11 @@ const ButtonStyle1 = {
   },
   width: "100%",
   color: "#fff",
-  // background: "transparent",
   display: "flex",
   alignItems: "center",
   borderRadius: "30px",
   border: "0px black solid",
   background: "rgba(13, 110, 253, 1)",
-  // "&:hover": {
-  //   opacity: 1,
-  //   color: "#fff",
-  //   background: "black",
-  // },
 };
 
 const mainText = {

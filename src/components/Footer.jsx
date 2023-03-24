@@ -6,11 +6,6 @@ const Footer = () => {
       elevation={0}
       sx={{
         background: "#000",
-        // width: "100%",
-        // minWidth: "1800px",
-        // maxWidth: "1800px",
-        // height: "45px",
-        // alignItems: "center",
       }}
     >
       <Grid
@@ -28,7 +23,6 @@ const Footer = () => {
             lg: "20px",
             md: "20px",
             sm: "10px",
-            // xs: "10px",
           },
           width: "100%",
           marginLeft: "auto",
@@ -59,11 +53,9 @@ const Footer = () => {
           sx={{
             ...fooText,
             textAlign: "center",
-            // color: "#fff",
             opacity: 1,
           }}
         >
-          {/* Preferences */}
           <Typography
             sx={{
               fontSize: {
@@ -78,9 +70,6 @@ const Footer = () => {
             Copyright © 2023 Unada Labs Pvt Ltd.
           </Typography>
         </Grid>
-        {/* <Grid item xl={2} lg={2} md={2} sm={2.4} xs={2.4} sx={fooText}>
-         
-        </Grid> */}
         <Grid
           item
           xl={4}
@@ -89,7 +78,6 @@ const Footer = () => {
           sm={3.8}
           xs={2.4}
           sx={{
-            // ...fooText,
             fontFamily: "LGRegular",
             fontStyle: "normal",
             fontWeight: 400,
@@ -132,7 +120,6 @@ const fooText = {
     sm: "1.2rem",
     xs: "1.0rem",
   },
-  // mt: 1,
   opacity: 0.6,
   textAlign: "left",
   cursor: "pointer",
