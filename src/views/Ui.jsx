@@ -24,26 +24,6 @@ const Ui = () => {
     SendEvent("UI Page");
   }, []);
   return (
-    // <motion.div
-    //   initial={{ width: "100%", opacity: 0 }}
-    //   animate={{
-    //     width: "100%",
-    //     opacity: 1,
-    //     transition: { duration: 1, ease: "easeInOut" },
-    //   }}
-    //   exit={{
-    //     x: -window.innerWidth,
-    //     opacity: 0,
-    //     transition: { duration: 1, ease: "easeInOut" },
-    //   }}
-    //   transition={{
-    //     ease: "easeInOut",
-    //     duration: "1s",
-    //   }}
-    //   // initial={{ opacity: 1 }}
-    //   // animate={{ opacity: 2 }}
-    //   // exit={{ opicity: 1 }}
-    // >
     <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
       <Stack>
         <Uiux />
@@ -53,7 +33,6 @@ const Ui = () => {
           text={data}
           Tech={Tech}
         />
-        {/* <ClientMarquee /> */}
         <PreProject />
       </Stack>
     </motion.div>

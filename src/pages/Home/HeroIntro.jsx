@@ -96,7 +96,6 @@ const HeroIntro = () => {
             }}
           />
         ) : null}
-        {/* <Fade top duration={1500}> */}
         <Typography sx={TextStyle} ref={ref} className={selection.invert2}>
           We build and use <br className={selection.invert2} />
           <span style={{ color: "#70ADFF" }} className={selection.invert2}>
@@ -106,8 +105,6 @@ const HeroIntro = () => {
           <br className={selection.invert2} />
           to reshape the future.
         </Typography>
-        {/* </Fade> */}
-        {/* </motion.p> */}
       </Box>
     </Paper>
   );
@@ -127,7 +124,6 @@ const TextStyle = {
     xs: "25.2753px",
   },
   lineHeight: { xl: "97px", lg: "75px", md: "45px", sm: "45px", xs: "35px" },
-  /* or 118% */
   letterSpacing: "2.97231px",
   color: "#D9D9D9",
 };

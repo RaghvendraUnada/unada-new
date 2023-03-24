@@ -58,12 +58,10 @@ const ParentTextStyle = {
   fontWeight: 500,
   fontSize: "45px",
   lineHeight: "48px",
-  /* or 194% */
   letterSpacing: "1px",
   color: "#FFFFFF",
 
   textAlign: "center",
-  //   color: "#B2B2B2",
 };
 
 const ChildTextStyle = {
@@ -72,7 +70,6 @@ const ChildTextStyle = {
   fontWeight: 400,
   fontSize: "16px",
   lineHeight: "31px",
-  /* or 194% */
   textAlign: "center",
   color: "#B2B2B2",
   mt: 2,

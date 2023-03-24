@@ -1,10 +1,5 @@
-/* ::selection {
-    -webkit-text-fill-color: black;
-    color: black;
-    background: white;
-} */
 ::selection {
-    -webkit-text-fill-color: white;
-    color: white;
-    background: black;
+  -webkit-text-fill-color: white;
+  color: white;
+  background: black;
 }

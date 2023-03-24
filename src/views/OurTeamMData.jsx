@@ -9,7 +9,6 @@ const OurTeamMData = (props) => {
       gradient={false}
       speed={50}
       pauseOnHover={false}
-      // pauseOnClick={true}
       direction={"left"}
       style={{
         width: "100%",
@@ -55,10 +54,7 @@ const OurTeamMData = (props) => {
               src={client.TeamMemberImage}
               alt="Team Member"
             />
-            <Box>
-              {/* <Typography sx={TextStyleOne}>{client.TeamMemberName}</Typography>
-              <Typography sx={TextStyleTwo}>{client.TeamMemberName}</Typography> */}
-            </Box>
+            <Box></Box>
           </Box>
         );
       })}
