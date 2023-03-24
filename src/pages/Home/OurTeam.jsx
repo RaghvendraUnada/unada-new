@@ -294,7 +294,7 @@ const EmployeeCard1 = (props) => {
     {
       img: Yash,
       name: "Yash Deliwala ",
-      place: "Chief Vibes Officer",
+      place: "President People and Vibes",
     },
     {
       img: Raghvendra,
@@ -452,12 +452,12 @@ const EmployeeCard2 = (props) => {
     },
     {
       img: Nammish,
-      name: "Nammish Gadhiya ",
+      name: "Namish Gadhiya ",
       place: "Full Stack Developer",
     },
     {
       img: Aashvi,
-      name: "aashvi zala ",
+      name: "Aashvi zala ",
       place: "UI/UX",
     },
     {

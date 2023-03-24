@@ -2,8 +2,8 @@ import React from "react";
 import { Grid, Box, Paper, Stack } from "@mui/material";
 import HeroPage from "../../components/HeroPage";
 import Intro from "../../components/Intro";
-import webHero1 from "../../assets/Images/Application/webnewShadow.svg";
-import introWeb from "../../assets/Images/Web/introWeb.svg";
+import webHero1 from "../../assets/Images/Application/webnewShadow.webp";
+import introWeb from "../../assets/Images/Web/introWeb.webp";
 const data = [
   "Fashion & Cosmetics",
   "Media & OTT",

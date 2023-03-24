@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Box, Paper, Grid, Button } from "@mui/material";
-import vision from "../../assets/Images/Application/vision.svg";
+import vision from "../../assets/Images/Application/vision.webp";
 import Fade from "react-reveal/Fade";
 const Vision = () => {
   return (
