@@ -14,9 +14,16 @@ import WhiteLogo from "../../assets/Images/Header/unada-logo.png";
 import { LineAxisOutlined } from "@mui/icons-material";
 
 const Header = () => {
-  useEffect(() => {
-    console.log(location);
-  }, [useLocation().pathname]);
+  // window.addEventListener("scroll", () => {
+  //   if (window.scrollY > 100) {
+  //     setScroll(true);
+  //   } else if (window.scrollY < 100) {
+  //     setScroll(false);
+  //   } else {
+  //   }
+  // });
+
+  useEffect(() => {}, [useLocation().pathname]);
 
   return (
     <Paper

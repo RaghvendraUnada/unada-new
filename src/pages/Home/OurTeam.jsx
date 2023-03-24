@@ -88,21 +88,6 @@ const OurTeam = () => {
         }}
         elevation={0}
       >
-        {/* <motion.p
-          viewport={{ once: false }}
-          exit={{ y: 0 }}
-          transition={{ duration: 0.8, ease: "linear" }}
-          initial="top"
-          whileInView="visible"
-          variants={{
-            top: { y: -100 },
-            exit: { y: 0 },
-
-            visible: { y: 0, opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}
-        >
-        </motion.p> */}
         <Fade top duration={1200}>
           <Typography sx={OurTeamTextStyle} className={selection.zero}>
             Our Team
@@ -144,7 +129,6 @@ const OurTeam = () => {
               maxHeight: "100%",
             }}
           >
-            {/* <img src={teamTitle} alt="team" width="60%" draggable="false" /> */}
             <Box
               sx={{
                 width: "90%",
@@ -545,37 +529,6 @@ const EmployeeCard2 = (props) => {
     </Grid>
   );
 };
-
-// const EmployeeCard2 = () => {
-//   return (
-//     <Grid
-//       // scrollEnabled={false}
-//       // nestedScrollEnabled={false}
-//       item
-//       xl={6}
-//       lg={6}
-//       md={6}
-//       sm={6}
-//       xs={12}
-//       sx={{ mx: "auto", mt: 4 }}
-//       className={"employe-card employe-card-2"}
-//     >
-//       <Box
-//         // scrollEnabled={false}
-//         sx={{
-//           // width: "90%",
-//           // maxWidth: "500px",
-//           height: "auto",
-//           mx: "auto",
-//         }}
-//       >
-//         <img src={TeamImgTwo} style={{ width: "100%", height: "100%" }} />
-//         <Typography sx={TeamNameTextStyle}>Alex Rook</Typography>
-//         <Typography sx={TeamProfessionTextStyle}>Web Designer</Typography>
-//       </Box>
-//     </Grid>
-//   );
-// };
 
 const OurTeamTextStyle = {
   fontFamily: "LGLight",

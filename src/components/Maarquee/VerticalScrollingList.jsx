@@ -3,7 +3,6 @@ import Marquee from "react-fast-marquee";
 import ICLWhite from "../../assets/images/clients/icl-white.svg";
 
 const VerticalScrollingList = ({ children, fromRight }) => {
-  // console.log("fromRight",fromRight)
   return (
     <Box
       sx={{
@@ -18,7 +17,6 @@ const VerticalScrollingList = ({ children, fromRight }) => {
           height: "100vh",
           marginLeft: "auto",
           marginRight: "auto",
-          // background: "red",
         }}
       >
         {children}
