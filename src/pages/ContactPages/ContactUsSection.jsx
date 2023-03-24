@@ -1,12 +1,9 @@
-import { Paper, Typography, Box, Grid, TextField, Button } from "@mui/material";
+import { Typography, Box, Grid, TextField, Button } from "@mui/material";
 import { useState, useEffect } from "react";
 import React from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import Fade from "react-reveal/Fade";
-// import { useForm } from "react-hook-form";
-// import { zodResolver } from "@hookform/resolvers/zod";
-// import { z } from "zod";
 
 const ContactUsSection = () => {
   const [firstname, setFirstName] = useState("");
@@ -86,7 +83,6 @@ const ContactUsSection = () => {
             alignItems: "center",
             justifyContent: "center",
             textAlign: "center",
-            //   bgcolor: "red",
           }}
         >
           <Box>

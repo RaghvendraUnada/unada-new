@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import TeamImgOne from "../assets/Images/Home/OurTeam/ImgOne.png";
 import { Box, Typography } from "@mui/material";
 import Marquee from "react-fast-marquee";
 
@@ -55,10 +54,6 @@ const OurTeamMData = (props) => {
               src={client.TeamMemberImage}
               alt="Team Member"
             />
-            <Box>
-              {/* <Typography sx={TextStyleOne}>{client.TeamMemberName}</Typography>
-              <Typography sx={TextStyleTwo}>{client.TeamMemberName}</Typography> */}
-            </Box>
           </Box>
         );
       })}

@@ -1,5 +1,4 @@
 import React, { useEffect, lazy, Suspense, useState } from "react";
-// import UnadaVid from "../assets/UnadaBGvid.mp4";
 import UnadaVid from "../assets/newAnimationVideo.mp4";
 import { Paper, Box, Button, Typography } from "@mui/material";
 import "../Components/css/HomeStyle.css";
@@ -10,18 +9,14 @@ import { useNavigate, Navigate } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
 import Logo from "../../src/assets/Images/Header/Logo.png";
 import WhiteLogo from "../../src/assets/Images/Header/unada-logo.png";
-import Close from "../../src/assets/Images/Header/CloseButton.svg";
 import OpenButton from "../../src/assets/Images/Header/newHeader.svg";
 import OpenButtonWhite from "../../src/assets/Images/Header/MenuIconWhite.svg";
 import HeaderStyles from "../../src/Components/Header/Header.module.scss";
 import arrowheader from "../../src/assets/Images/Header/headl.png";
 import Fade from "react-reveal/Fade";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
 import { Link } from "react-router-dom";
-import { HiArrowRight } from "react-icons/hi";
 import { keyframes } from "styled-components";
-import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import "./HeroPageCss.css";
 
@@ -61,7 +56,6 @@ const MainHeroPage = () => {
   const [open, setOpen] = useState(false);
   const [scrollState, setScroll] = useState(false);
   const [colorState, setColorState] = useState(false);
-  // const navigate = useNavigate();
   const [locationdata, setLocationData] = useState("");
   let location = window.location.pathname;
   const [mousePosition, setMousePosition] = useState({
@@ -97,26 +91,6 @@ const MainHeroPage = () => {
     }
   };
   return (
-    // <motion.div
-    //   initial={{ width: "100%", opacity: 0 }}
-    //   animate={{
-    //     width: "100%",
-    //     opacity: 1,
-    //     transition: { duration: 1, ease: "easeInOut" },
-    //   }}
-    //   exit={{
-    //     x: window.innerWidth,
-    //     opacity: 0,
-    //     transition: { duration: 1, ease: "easeInOut" },
-    //   }}
-    //   transition={{
-    //     ease: "easeInOut",
-    //     duration: "1s",
-    //   }}
-    //   // initial={{ opacity: 1 }}
-    //   // animate={{ opacity: 2 }}
-    //   // exit={{ opicity: 1 }}
-    // >
     <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
       <Paper
         elevation={0}
@@ -155,7 +129,6 @@ const MainHeroPage = () => {
                 width: "100%",
                 transition: "all 1s",
                 bgcolor: "transparent",
-                // background: "red",
                 borderRadius: "0px",
                 mt: scrollState ? "0%" : "1%",
               }}
@@ -170,7 +143,6 @@ const MainHeroPage = () => {
                   marginRight: "auto",
                   display: "flex",
                   justifyContent: "space-between",
-                  // bgcolor: "transparent",
                   background: "transparent",
                 }}
                 elevation={0}
@@ -212,12 +184,10 @@ const MainHeroPage = () => {
                           width: "40%",
                           height: "auto",
                           maxWidth: "35px",
-                          // bgcolor: "red",
                           backgroundColor: "red",
                           transition: "0.5s all linear",
                           opacity: 0,
                           "&:hover": {
-                            // bgcolor: "red",
                             transform: "scale(1.1)",
                             opacity: 1,
                           },
@@ -248,10 +218,8 @@ const MainHeroPage = () => {
                             sm: 2,
                             xs: 2,
                           },
-                          // bgcolor: "red",
                           "&:hover": {
                             background: "transparent",
-                            // transform: "scale(1.15)",
                             transform: "rotate(360deg)",
                           },
                           "&:focus": {
@@ -319,7 +287,6 @@ const MainHeroPage = () => {
                         },
                         color: "#4E4E4E",
                         "&:hover": {
-                          // on hover rotate image
                           "& img": {
                             transform: "rotate(10deg)",
                             transition: "all 0.6s ease-in-out",
@@ -364,10 +331,8 @@ const MainHeroPage = () => {
               marginLeft: "auto",
               marginRight: "auto",
               marginTop: open ? "0vh" : "-100vh",
-              // opacity : open ? 1 :
               transition: "all 1s ",
               borderRadius: "0px",
-              // background: "red",
               position: open ? "fixed" : "initial",
             }}
             elevation={0}
@@ -378,7 +343,6 @@ const MainHeroPage = () => {
                 mx: "auto",
                 display: "flex",
                 justifyContent: "space-between",
-                // bgcolor: "transparent",
               }}
               elevation={0}
             >
@@ -442,7 +406,6 @@ const MainHeroPage = () => {
                           xs: "50px",
                         },
                         pt: 1,
-                        // ...colorBoxGradientStyle,
                       }}
                       className={
                         location === res.location
@@ -467,13 +430,13 @@ const MainHeroPage = () => {
                               sm: "35px",
                               xs: "35px",
                             },
-                            // "&:hover": {
+
                             backgroundImage: `url(${GradientImage})`,
                             backgroundRepeat: "repeat",
                             backgroundClip: "text",
                             textFillColor: "transparent",
                             backgroundSize: "cover",
-                            // },
+
                             textAlign: "left",
                             height: "100%",
                           }}
@@ -551,27 +514,7 @@ const MainHeroPage = () => {
               }}
               elevation={0}
             >
-              <div
-                // sx={{
-                //   position: "relative",
-                //   width: {
-                //     xl: "1000px",
-                //     lg: "1000px",
-                //     md: "900px",
-                //     sm: "850px",
-                //     xs: "700px",
-                //   },
-                //   ml: {
-                //     xl: "auto",
-                //     lg: "auto",
-                //     md: "auto",
-                //     sm: "0%",
-                //     xs: "-60%",
-                //   },
-                //   mr: "auto",
-                // }}
-                className="VideoPositioning"
-              >
+              <div className="VideoPositioning">
                 <video
                   className="videoTag"
                   autoPlay
@@ -602,7 +545,6 @@ const MainHeroPage = () => {
                     className="textMainClass"
                     style={{
                       fontFamily: "MBFCanno",
-                      // lineHeight: "70px",
                     }}
                   >
                     REDEFINING TECHNOLOGIES
@@ -692,9 +634,6 @@ const MainHeroPage = () => {
               <img
                 src={SideArrowImg}
                 style={{ filter: "invert(1)" }}
-                // autoPlay
-                // muted
-                // loop
                 alt="arrowImg"
               />
             </Box>

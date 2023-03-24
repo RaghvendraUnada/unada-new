@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
-import arrwhite from "../../assets/Images/Contact/arrwhite.svg";
 import { Link } from "react-router-dom";
 import styles from "./Contact.module.css";
 import { useState } from "react";

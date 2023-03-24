@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box, Paper, Grid, Stack } from "@mui/material";
+import { Box, Paper, Grid } from "@mui/material";
 const Map = () => {
   return (
     <Paper elevation={0} sx={{ borderRadius: "0px", background: "#000" }}>

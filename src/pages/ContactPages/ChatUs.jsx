@@ -317,7 +317,6 @@ export default function ChatUs(props) {
 }
 const boxText = {
   marginTop: "1rem",
-  //   width: { xl: "30%", lg: "30%", md: "30%", sm: "60%", xs: "80%" },
   fontWeight: 500,
   lineHeight: {
     xl: "2.5rem",
@@ -337,7 +336,6 @@ const boxText = {
   fontFamily: "LGRegular",
 };
 const manageGrid = {
-  // border: "0.5px solid rgba(163, 163, 163, 0.3)",
   borderTop: "0.5px solid rgba(163, 163, 163, 0.3)",
   borderRight: "0.5px solid rgba(163, 163, 163, 0.3)",
   height: "100%",
@@ -368,7 +366,6 @@ const manageGrid = {
 };
 const boxText1 = {
   ...boxText,
-  //   width: { xl: "100%", lg: "100%", md: "40%", sm: "50%", xs: "100%" },
   fontSize: {
     xl: "2.5rem",
     lg: "2.5rem",
@@ -376,12 +373,4 @@ const boxText1 = {
     sm: "1.8rem",
     xs: "1.6rem",
   },
-};
-const boxText2 = {
-  ...boxText,
-  //   width: { xl: "50%", lg: "50%", md: "40%", sm: "50%", xs: "100%" },
-};
-const boxText3 = {
-  ...boxText,
-  //   width: { xl: "50%", lg: "50%", md: "40%", sm: "50%", xs: "100%" },
 };

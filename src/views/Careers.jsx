@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
 import { Stack } from "@mui/material";
-
-// import CareerHeroSection from "../pages/CareerPages/CareerHeroSection";
 import UnadalifeSection from "../pages/CareerPages/UnadalifeSection";
 import PositionsDev from "../pages/CareerPages/PositionsDev";
 import CareerIntroSection from "../pages/CareerPages/CareerIntroSection";
 import CareerHeroSection from "../pages/CareerPages/CareerHeroSectionNew";
-import OurTeams from "../pages/CareerPages/OurTeams";
 import RevolutionSetion from "../pages/CareerPages/RevolutionSetion";
 import InternshipSection from "../pages/CareerPages/InternshipSection";
 import ChatSection from "../pages/CareerPages/ChatSection";
@@ -20,26 +17,6 @@ const Careers = () => {
   }, []);
   return (
     <>
-      {/* <motion.div
-        initial={{ width: "100%", opacity: 0 }}
-        animate={{
-          width: "100%",
-          opacity: 1,
-          transition: { duration: 1, ease: "easeInOut" },
-        }}
-        exit={{
-          x: window.innerWidth,
-          opacity: 0,
-          transition: { duration: 1, ease: "easeInOut" },
-        }}
-        transition={{
-          ease: "easeInOut",
-          duration: "1s",
-        }}
-        // initial={{ opacity: 1 }}
-        // animate={{ opacity: 2 }}
-        // exit={{ opicity: 1 }}
-      > */}
       <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
         <Stack
           sx={{
