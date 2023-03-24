@@ -1,5 +1,5 @@
 import React from "react";
-import ChatAppImg from "../../assets/Images/Application/appSun.png";
+import ChatAppImg from "../../assets/Images/Application/appSun.webp";
 import HeroPage from "../../components/HeroPage";
 
 const ApplicationHero = () => {
