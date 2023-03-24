@@ -4,6 +4,9 @@ import Fade from "react-reveal/Fade";
 import selection from "../../pages/Home/home.module.css";
 
 const InternshipSection = () => {
+  async function openEmail(e) {
+    window.location.href = "mailto:hr@unada.io";
+  }
   return (
     <Grid
       container
@@ -28,9 +31,13 @@ const InternshipSection = () => {
         {/* <Button disableRipple sx={ButtonStyle}>
           Apply
         </Button> */}
-        <Box mt={5}>
+        <Box mt={5} sx={{}}>
           <Typography sx={metaTextStyle}>
-            Drop message on hr@unada.io
+            Drop message on{" "}
+            <a onClick={openEmail} style={{ color: "blue", cursor: "pointer" }}>
+              {" "}
+              hr@unada.io{" "}
+            </a>
           </Typography>
         </Box>
       </Grid>

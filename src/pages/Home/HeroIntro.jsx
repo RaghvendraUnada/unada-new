@@ -77,7 +77,7 @@ const HeroIntro = () => {
           },
         }}
       >
-        {isInView ? (
+        {/* {isInView ? (
           <motion.div
             className={heroIntro.cursorchange}
             variants={variants}
@@ -95,8 +95,7 @@ const HeroIntro = () => {
               mixBlendMode: "difference",
             }}
           />
-        ) : null}
-        {/* <Fade top duration={1500}> */}
+        ) : null} */}
         <Typography sx={TextStyle} ref={ref} className={selection.invert2}>
           We build and use <br className={selection.invert2} />
           <span style={{ color: "#70ADFF" }} className={selection.invert2}>
@@ -106,8 +105,6 @@ const HeroIntro = () => {
           <br className={selection.invert2} />
           to reshape the future.
         </Typography>
-        {/* </Fade> */}
-        {/* </motion.p> */}
       </Box>
     </Paper>
   );
