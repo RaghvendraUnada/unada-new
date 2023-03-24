@@ -199,7 +199,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       redirect: "follow",
     };
 
-    fetch("http://192.168.29.5:8000/user_data/apply", requestOptions)
+    fetch("https://unada-backend.unada.in/user_data/apply", requestOptions)
       // fetch("http://192.168.29.5:8000/user_data/apply", requestOptions)
       .then((response) => {
         alert("data submitted");
@@ -1108,6 +1108,11 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     gap: "2rem",
                     display: "flex",
                     flexDirection: "column",
+                    // background: "red",
+                    marginTop: {
+                      xl: "7.5rem",
+                      lg: "7.5rem",
+                    },
                   }}
                 >
                   <Typography sx={labeltext}>Linked in url:</Typography>
@@ -1341,7 +1346,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 backgroundColor: "black",
                 mt: {
                   xl: "0px",
-                  lg: "3rem",
+                  lg: "0rem",
                   // md: "8rem",
                   sm: "-4rem",
                   xs: "-6rem",
