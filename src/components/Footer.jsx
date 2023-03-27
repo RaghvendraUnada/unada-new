@@ -32,7 +32,7 @@ const Footer = () => {
           maxHeight: "45px",
           display: "flex",
           position: "absolute",
-          bottom: "-0.65%",
+          // bottom: "-0.65%",
           alignItems: "center",
           background: "black",
           textAlign: "center",
@@ -64,7 +64,7 @@ const Footer = () => {
                 lg: "1.2rem",
                 md: "1.2rem",
                 sm: "0.9rem",
-                xs: "0.9rem",
+                xs: "0.8rem",
               },
             }}
           >
@@ -118,8 +118,8 @@ const fooText = {
     xl: "1.2rem",
     lg: "1.2rem",
     md: "1.2rem",
-    sm: "1.2rem",
-    xs: "1.0rem",
+    sm: "0.9rem",
+    xs: "0.9rem",
   },
   opacity: 0.6,
   textAlign: "left",

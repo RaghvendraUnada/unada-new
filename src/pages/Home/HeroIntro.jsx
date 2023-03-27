@@ -51,8 +51,8 @@ const HeroIntro = () => {
       sx={{
         borderRadius: "0px",
         bgcolor: "#000000",
-        height: "100vh",
-        minHeight: { xl: "100%", lg: "100%", md: "100%", xs: "100%" },
+        height: { xl: "100vh", lg: "100vh", md: "70vh", xs: "70vh" },
+        minHeight: { xl: "100%", lg: "100%", md: "80%", xs: "80%" },
         maxHeight: "700px",
         display: "flex",
         justifyContent: "center",

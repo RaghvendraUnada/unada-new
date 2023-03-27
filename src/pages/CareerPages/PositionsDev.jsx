@@ -45,7 +45,17 @@ const PositionsDev = () => {
   return (
     <Grid
       container
-      sx={{ height: "100%", minHeight: "100vh", background: "#000" }}
+      sx={{
+        height: "100%",
+        minHeight: {
+          xl: "100vh",
+          lg: "100vh",
+          md: "100vh",
+          sm: "80vh",
+          xs: "80vh",
+        },
+        background: "#000",
+      }}
     >
       <Grid
         item
