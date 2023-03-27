@@ -12,6 +12,7 @@ import Unispace from "../../assets/images/clients/unispace-white.webp";
 import WhiteValley from "../../assets/images/clients/white-valley-white.webp";
 import oho from "../../assets/images/clients/ohoclient.webp";
 import ClientBox from "../ClientBox";
+import { Box } from "@mui/material";
 const clients = [
   { image: Bxi },
   { image: Cineman },
@@ -33,11 +34,13 @@ const RandomThirdList = [...clients].sort(() => Math.random() - 0.6);
 
 const ClientMarqueeLeftToRight = (props) => {
   return (
-    <HorizontalScrollingList>
-      {clients.map((client, idx) => {
-        return <ClientBox key={idx} image={client.image} />;
-      })}
-    </HorizontalScrollingList>
+    <Box>
+      <HorizontalScrollingList>
+        {clients.map((client, idx) => {
+          return <ClientBox key={idx} image={client.image} />;
+        })}
+      </HorizontalScrollingList>
+    </Box>
   );
 };
 

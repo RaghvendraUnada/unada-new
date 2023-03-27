@@ -83,7 +83,11 @@ const ChatSection = () => {
               gap: "20px",
             }}
           >
-            <a href="https://in.linkedin.com/company/unadalabs" target="_blank">
+            <a
+              href="https://in.linkedin.com/company/unadalabs"
+              target="_blank"
+              alt="glassdoor"
+            >
               <Box
                 component="img"
                 src={linkedinstate}
@@ -93,7 +97,11 @@ const ChatSection = () => {
                 onMouseOut={() => setlinkedinstate(linkedinblk)}
               />
             </a>
-            <a href="https://www.instagram.com/unadalabs/" target="_blank">
+            <a
+              href="https://www.instagram.com/unadalabs/"
+              target="_blank"
+              alt="glassdoor"
+            >
               <Box
                 component="img"
                 src={instastate}
@@ -130,6 +138,7 @@ const ChatSection = () => {
               <a
                 href="https://www.google.com/maps/place/Unada+Labs+Pvt+Ltd/@23.0268336,71.9641296,10z/data=!4m10!1m2!2m1!1sunada!3m6!1s0x395e858b56c3d6d9:0x8d6913b386518d79!8m2!3d23.0268336!4d72.5244323!15sCgV1bmFkYZIBEHNvZnR3YXJlX2NvbXBhbnngAQA!16s%2Fg%2F11spxlkc5z"
                 target="_blank"
+                alt="glassdoor"
                 style={{
                   color: "rgba(15, 15, 15, 0.5)",
                 }}

@@ -316,7 +316,11 @@ const WhiteServicesPage = () => {
           </Grid>
           <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
             {click2 ? (
-              <>
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                {...AnimationSettings}
+              >
                 <Paper
                   sx={{
                     ...mobileActivePaper,
@@ -366,7 +370,7 @@ const WhiteServicesPage = () => {
                     </Typography>
                   </Box>
                 </Paper>
-              </>
+              </motion.div>
             ) : (
               <>
                 <Paper
@@ -392,7 +396,11 @@ const WhiteServicesPage = () => {
           </Grid>
           <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
             {click3 ? (
-              <>
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                {...AnimationSettings}
+              >
                 <Paper
                   sx={{
                     ...mobileActivePaper,
@@ -440,7 +448,7 @@ const WhiteServicesPage = () => {
                     </Typography>
                   </Box>
                 </Paper>
-              </>
+              </motion.div>
             ) : (
               <>
                 <Paper
