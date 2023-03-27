@@ -1,8 +1,8 @@
 import { Grid, Box, Typography, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import pre1 from "../assets/Images/cara/pre1.png";
-import pre2 from "../assets/Images/cara/pre2.png";
-import pre3 from "../assets/Images/cara/pre3.png";
+import pre2 from "../assets/Images/cara/mobile1.webp";
+import pre3 from "../assets/Images/cara/Fram1.png";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import styles from "../pages/Services/Service.module.css";
 import Fade from "react-reveal/Fade";
