@@ -209,16 +209,33 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       <Box sx={scrolltext}>
         <Box
           sx={{
-            width: "95%",
+            width: {
+              xl: "95%",
+              lg: "95%",
+              md: "95%",
+              sm: "100%",
+              xs: "100%",
+            },
             marginLeft: "auto",
             marginRight: "auto",
-            padding: "15px",
+            padding: {
+              xl: "15px",
+              lg: "15px",
+              md: "15px",
+              sm: "8px",
+              xs: "8px",
+            },
             borderBottom: "1px solid rgba(163, 163, 163, 0.3)",
+            // bgcolor: "red",
           }}
         >
           <Grid
             container
-            sx={{ display: "flex", justifyContent: "space-evenly" }}
+            sx={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              // bgcolor: "red",
+            }}
           >
             <Grid
               item
@@ -226,15 +243,16 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
               lg={6}
               md={6}
               sm={6}
-              xs={12}
+              xs={8}
               sx={{
                 padding: {
                   xl: "4rem 0rem 4rem 0rem",
                   lg: "2rem 0rem 2rem 0rem",
                   md: "2rem 0rem 2rem 0rem",
-                  sm: "35px",
-                  xs: "30px",
+                  sm: "0rem 0rem 0rem 0rem",
+                  xs: "1rem 1rem 1rem 0rem",
                 },
+                // bgcolor: "red",
               }}
             >
               <Typography sx={textPos}>{positionDevo}</Typography>
@@ -246,8 +264,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     xl: "left",
                     lg: "left",
                     md: "left",
-                    sm: "center",
-                    xs: "center",
+                    sm: "left",
+                    xs: "left",
                   },
                   gap: "1rem",
                   marginLeft: "auto",
@@ -259,6 +277,8 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                     sm: "100%",
                     xs: "100%",
                   },
+                  // bgcolor: "red",
+                  // overflow: "hidden",
                 }}
               >
                 <Button sx={ButtonStyle}>{pos1}</Button>
@@ -272,7 +292,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
               lg={6}
               md={6}
               sm={6}
-              xs={12}
+              xs={4}
               sx={{
                 display: "flex",
                 flexDirection: "row",
@@ -282,17 +302,18 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   xl: "end",
                   lg: "end",
                   md: "end",
-                  sm: "center",
-                  xs: "center",
+                  sm: "end",
+                  xs: "end",
                 },
                 textAlign: {
                   xl: "right",
                   lg: "right",
                   md: "right",
-                  sm: "center",
-                  xs: "center",
+                  sm: "right",
+                  xs: "right",
                 },
-                marginTop: "0.5rem",
+                // marginTop: "0.5rem",
+                // bgcolor: "red",
               }}
               className={selection.zero}
             >
@@ -312,10 +333,26 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                 <EastSharpIcon
                   fontSize="small"
                   sx={{
-                    p: 0.3,
-                    ml: 3,
+                    p: {
+                      xl: 0.3,
+                      lg: 0.3,
+                      md: 0.3,
+                    },
+                    ml: {
+                      xl: 3,
+                      lg: 3,
+                      md: 3,
+                      sm: 1,
+                      xs: 1,
+                    },
                     color: icon1,
-                    fontSize: "20px",
+                    fontSize: {
+                      xl: "20px",
+                      lg: "20px",
+                      md: "20px",
+                      sm: "10px",
+                      xs: "10px",
+                    },
                     borderRadius: "20px",
                     border: `1px solid ${border}`,
                     zIndex: 1,
@@ -1025,17 +1062,30 @@ const ButtonStyle = {
     xl: "12px",
     lg: "12px",
     md: "10px",
-    sm: "10px",
-    xs: "10px",
+    sm: "8px",
+    xs: "8px",
   },
-  textAlign: { lg: "left", xl: "left", md: "left", sm: "center", xs: "center" },
-  padding: "0rem 1rem",
+  textAlign: { lg: "left", xl: "left", md: "left", sm: "left", xs: "left" },
+  padding: {
+    xl: "0rem 1rem",
+    lg: "0rem 1rem",
+    md: "0rem 1rem",
+    sm: "1px 0.1px 1px 0.1px",
+    xs: "1px 0.1px 1px 0.1px",
+  },
+  // bgcolor: "red",
   letterSpacing: 0.01,
   borderRadius: "30px",
   border: "1px grey solid",
   color: "rgba(255, 255, 255, 0.5)",
   textTransform: "capitalize",
-  marginTop: "2rem",
+  marginTop: {
+    xl: "2rem",
+    lg: "2rem",
+    md: "2rem",
+    sm: "0.2rem",
+    xs: "0.2rem",
+  },
   opacity: 0.7,
   "&:hover": {
     opacity: 1,
@@ -1064,8 +1114,9 @@ const ButtonStyle1 = {
     lg: "1rem 5.8rem",
     md: "0.8rem 5.5rem",
     sm: "0.8rem 5.5rem",
-    xs: "0.8rem 5.5rem",
+    xs: "1rem 2.5rem",
   },
+  // bgcolor: "red",
   display: "flex",
   justifyContent: "space-evenly",
   alignItems: "center",
@@ -1073,7 +1124,6 @@ const ButtonStyle1 = {
   borderRadius: "30px",
   border: "2px rgba(255, 255, 255, 1) solid",
   color: "rgba(255, 255, 255, 1)",
-
   opacity: 0.8,
 
   "&:hover": {
@@ -1095,13 +1145,13 @@ const textPos = {
     xl: "2.3rem",
     lg: "2.3rem",
     md: "2.3rem",
-    sm: "2.3rem",
-    xs: "2.3rem",
+    sm: "2.5rem",
+    xs: "2.5rem",
   },
   fontFamily: "LGRegular",
   fontWeight: 500,
 
-  textAlign: { lg: "left", xl: "left", md: "left", sm: "center", xs: "center" },
+  textAlign: { lg: "left", xl: "left", md: "left", sm: "left", xs: "left" },
   "::selection": {
     WebkitTextFillColor: "black",
     color: "black",
