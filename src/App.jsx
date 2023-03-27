@@ -55,7 +55,7 @@ function App() {
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
+    setTimeout(() => setLoading(false), 1500);
   }, []);
   const [cursorVariant, setCursorVariant] = useState("default");
   window.addEventListener("scroll", () => {

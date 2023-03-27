@@ -1,5 +1,5 @@
 import React, { useEffect, lazy, Suspense, useState } from "react";
-import UnadaVid from "../assets/newAnimationVideo.mp4";
+import UnadaVid from "../assets/newHomeHeroV.mp4";
 import { Paper, Box, Button, Typography } from "@mui/material";
 import "../Components/css/HomeStyle.css";
 import { motion } from "framer-motion";
