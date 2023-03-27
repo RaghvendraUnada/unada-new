@@ -325,21 +325,24 @@ const HeroPage = ({
               },
             }}
           >
-            <Button
+            <Box
               onClick={handleClicksMobile}
               variant="contained"
               sx={{
+                width: "50%",
+                mx: "auto",
                 borderRadius: "9rem",
                 background: "#0D6EFD",
                 fontSize: "1.8rem",
-                padding: "0.8rem 2rem",
-                fontWeight: 500,
+                padding: "1.5rem 2rem",
+                fontWeight: 50,
                 fontFamily: "LGLight",
                 textTransform: "capitalize",
+                color: "#fff",
               }}
             >
               Get Started
-            </Button>
+            </Box>
           </Box>
         </Grid>
       </Grid>
