@@ -1,6 +1,6 @@
 import React from "react";
 import BlackTHeroComp from "../../Components/BlackTHeroComp";
-import MetaVerseHeroImg from "../../assets/Images/MetaVerse/MetaverseHeroImg.svg";
+import MetaVerseHeroImg from "../../assets/Images/MetaVerse/MetaverseHeroImg.webp";
 import "./metaverse.module.css";
 const MetaVerseHero = () => {
   return (

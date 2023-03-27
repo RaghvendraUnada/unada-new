@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import HeroPage from "../../components/HeroPage";
 import Intro from "../../components/Intro";
-import Ux from "../../assets/Images/UIUX/uxpng.png";
+import Ux from "../../assets/Images/UIUX/uxpng.svg";
 import uiintro from "../../assets/Images/UIUX/uiintro.svg";
 import { Grid, Paper } from "@mui/material";
 

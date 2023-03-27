@@ -1,5 +1,5 @@
 import React from "react";
-import BlockchainIntroImg from "../../assets/Images/Blockchain/BlockchainIntoImg.svg";
+import BlockchainIntroImg from "../../assets/Images/Blockchain/BlockchainIntoImg.webp";
 import BlackTIntroComp from "../../Components/BlackTIntroComp";
 const BlockchainIntro = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import MetaVerseIntroImg from "../../assets/Images/MetaVerse/MetaVerseIntroImg.svg";
+import MetaVerseIntroImg from "../../assets/Images/MetaVerse/MetaVerseIntroImg.webp";
 import BlackTIntroComp from "../../Components/BlackTIntroComp";
 const MetaVerseIntro = () => {
   return (

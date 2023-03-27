@@ -1,5 +1,5 @@
 import React from "react";
-import ArVrIntroImg from "../../assets/Images/ArVr/arvrpng.png";
+import ArVrIntroImg from "../../assets/Images/ArVr/arvrpng.webp";
 import BlackTIntroComp from "../../Components/BlackTIntroComp";
 
 const ArVrIntro = () => {

@@ -1,14 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { Grid, Paper, Typography, Box, Button } from "@mui/material";
-import WhiteServiceAppIcon from "../../assets/Images/Services/WhiteServiceAppIcon.svg";
-import WhiteServiceWebIcon from "../../assets/Images/Services/WhiteServiceWebIcon.svg";
-import WhiteServiceuiuxIcon from "../../assets/Images/Services/WhiteServiceuiuxIcon.svg";
 import Applicationimg from "../../assets/Images/Services/Application.webp";
 import Websiteimg from "../../assets/Images/Services/Website.webp";
 import uiuximg from "../../assets/Images/Services/UIUX.webp";
 import ApplicationMobile from "../../assets/Images/Services/ApplicationMobile.webp";
-import ExploreIcon from "../../assets/Images/Services/ExploreIcon.svg";
 import blackArrowImg from "../../assets/Images/Services/blackArrowImg.svg";
 import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";

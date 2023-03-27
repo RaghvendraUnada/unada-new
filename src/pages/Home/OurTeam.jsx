@@ -1,6 +1,5 @@
 import { Grid, Paper, Typography, Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import TeamImgOne from "../../assets/Images/Home/OurTeam/ImgOne.png";
 import "./OurTeam.css";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
@@ -49,13 +48,7 @@ const OurTeam = () => {
       })
       .catch((err) => console.log(err));
   };
-  const leftImages = [
-    TeamImgOne,
-    TeamImgOne,
-    TeamImgOne,
-    TeamImgOne,
-    TeamImgOne,
-  ];
+
   useEffect(() => {
     FetchTeamData();
   }, []);

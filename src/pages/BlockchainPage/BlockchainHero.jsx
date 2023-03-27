@@ -1,6 +1,6 @@
 import React from "react";
 
-import BlockchainHeroImg from "../../assets/Images/Blockchain/BlockchainHeroImg.svg";
+import BlockchainHeroImg from "../../assets/Images/Blockchain/BlockchainHeroImg.webp";
 import BlackTHeroComp from "../../Components/BlackTHeroComp";
 
 const BlockchainHero = () => {
