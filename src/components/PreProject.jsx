@@ -73,63 +73,76 @@ const PreProject = () => {
       >
         <Box
           sx={{
-            marginLeft: "auto",
-            position: "absolute",
-            left: {
-              xs: "1%",
+            display: {
+              xl: "flex",
+              lg: "flex",
+              md: "flex",
+              sm: "flex",
+              xs: "none",
             },
-            bottom: {
-              xs: "10%",
-              lg: "7%",
-            },
-            transform: "rotate(180deg)",
-            cursor: "pointer",
-
-            zIndex: "10",
           }}
         >
           <Box
-            className={styles.CarouselArrowImg}
-            onMouseOut={() => setIcon1("black")}
-            onMouseOver={() => setIcon1("white")}
-            onClick={() => {
-              scollToRef?.current?.scroll(
-                scollToRef?.current?.scrollLeft - boxRef?.current?.offsetWidth,
-                0
-              );
+            sx={{
+              marginLeft: "auto",
+              position: "absolute",
+              left: {
+                xs: "1%",
+              },
+              bottom: {
+                xs: "10%",
+                lg: "7%",
+              },
+              transform: "rotate(180deg)",
+              cursor: "pointer",
+
+              zIndex: "10",
             }}
           >
-            <EastSharpIcon fontSize="large" sx={{ color: icon1 }} />
+            <Box
+              className={styles.CarouselArrowImg}
+              onMouseOut={() => setIcon1("black")}
+              onMouseOver={() => setIcon1("white")}
+              onClick={() => {
+                scollToRef?.current?.scroll(
+                  scollToRef?.current?.scrollLeft -
+                    boxRef?.current?.offsetWidth,
+                  0
+                );
+              }}
+            >
+              <EastSharpIcon fontSize="large" sx={{ color: icon1 }} />
+            </Box>
           </Box>
-        </Box>
-        <Box
-          sx={{
-            marginLeft: "auto",
-            position: "absolute",
-            right: {
-              xs: "1%",
-            },
-            bottom: {
-              xs: "10%",
-              lg: "7%",
-            },
-            cursor: "pointer",
-
-            zIndex: "10",
-          }}
-        >
           <Box
-            className={styles.CarouselArrowImg}
-            onMouseOut={() => setIcon2("black")}
-            onMouseOver={() => setIcon2("white")}
-            onClick={() => {
-              scollToRef?.current?.scroll(
-                scollToRef?.current?.scrollLeft + boxRef?.current?.offsetWidth,
-                0
-              );
+            sx={{
+              marginLeft: "auto",
+              position: "absolute",
+              right: {
+                xs: "1%",
+              },
+              bottom: {
+                xs: "10%",
+                lg: "7%",
+              },
+              cursor: "pointer",
+              zIndex: "10",
             }}
           >
-            <EastSharpIcon fontSize="large" sx={{ color: icon2 }} />
+            <Box
+              className={styles.CarouselArrowImg}
+              onMouseOut={() => setIcon2("black")}
+              onMouseOver={() => setIcon2("white")}
+              onClick={() => {
+                scollToRef?.current?.scroll(
+                  scollToRef?.current?.scrollLeft +
+                    boxRef?.current?.offsetWidth,
+                  0
+                );
+              }}
+            >
+              <EastSharpIcon fontSize="large" sx={{ color: icon2 }} />
+            </Box>
           </Box>
         </Box>
         <Box
@@ -190,6 +203,78 @@ const PreProject = () => {
           </Box>
         </Box>
       </Grid>
+      <Box
+        sx={{
+          display: {
+            xl: "none",
+            lg: "none",
+            md: "none",
+            sm: "none",
+            xs: "flex",
+          },
+        }}
+      >
+        <Box
+          sx={{
+            marginLeft: "auto",
+            position: "absolute",
+            left: {
+              xs: "1%",
+            },
+            bottom: {
+              xs: "5%",
+              lg: "7%",
+            },
+            transform: "rotate(180deg)",
+            cursor: "pointer",
+
+            zIndex: "10",
+          }}
+        >
+          <Box
+            className={styles.CarouselArrowImg}
+            onMouseOut={() => setIcon1("black")}
+            onMouseOver={() => setIcon1("white")}
+            onClick={() => {
+              scollToRef?.current?.scroll(
+                scollToRef?.current?.scrollLeft - boxRef?.current?.offsetWidth,
+                0
+              );
+            }}
+          >
+            <EastSharpIcon fontSize="large" sx={{ color: icon1 }} />
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            marginLeft: "auto",
+            position: "absolute",
+            right: {
+              xs: "1%",
+            },
+            bottom: {
+              xs: "5%",
+              lg: "7%",
+            },
+            cursor: "pointer",
+            zIndex: "10",
+          }}
+        >
+          <Box
+            className={styles.CarouselArrowImg}
+            onMouseOut={() => setIcon2("black")}
+            onMouseOver={() => setIcon2("white")}
+            onClick={() => {
+              scollToRef?.current?.scroll(
+                scollToRef?.current?.scrollLeft + boxRef?.current?.offsetWidth,
+                0
+              );
+            }}
+          >
+            <EastSharpIcon fontSize="large" sx={{ color: icon2 }} />
+          </Box>
+        </Box>
+      </Box>
     </Grid>
   );
 };
