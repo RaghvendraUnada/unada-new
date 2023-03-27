@@ -53,10 +53,10 @@ function App() {
   const [locationdata, setLocationData] = useState("");
   let location = window.location.pathname;
 
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   setTimeout(() => setLoading(false), 2000);
-  // }, []);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000);
+  }, []);
   const [cursorVariant, setCursorVariant] = useState("default");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 100) {
@@ -81,98 +81,63 @@ function App() {
 
   return (
     <>
-      {/* {loading === false ? ( */}
-      <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
-        <Paper elevation={0} sx={{ bgcolor: "transparent" }}>
-          <Stack
-            sx={{
-              maxWidth: "2000px",
-              marginLeft: "auto",
-              marginRight: "auto",
-              position: "relative",
-            }}
-          >
-            <Box sx={{ position: "relative" }}>
-              {locationdta.pathname !== "/" ? (
-                <Paper
-                  sx={{
-                    left: "auto",
-                    right: "auto",
-                    width: "100%",
-                    height: "auto",
-                    minWidth: "100vw",
-                    transition: "all 1s ",
-                    bgcolor: "transparent",
-                    position: "absolute",
-                    zIndex: 100000,
-                    borderRadius: "0px",
-                    overflowY: "scroll",
-                  }}
-                  elevation={0}
-                >
-                  {!open ? (
-                    <Paper
-                      sx={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        height: scrollState ? "60px" : "60px",
-                        width: "100%",
-                        transition: "all 1s",
-                        bgcolor: "transparent",
-                        borderRadius: "0px",
-                        mt: scrollState ? "0%" : "1%",
-                      }}
-                      elevation={0}
-                    >
+      {loading === false ? (
+        <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
+          <Paper elevation={0} sx={{ bgcolor: "transparent" }}>
+            <Stack
+              sx={{
+                maxWidth: "2000px",
+                marginLeft: "auto",
+                marginRight: "auto",
+                position: "relative",
+              }}
+            >
+              <Box sx={{ position: "relative" }}>
+                {locationdta.pathname !== "/" ? (
+                  <Paper
+                    sx={{
+                      left: "auto",
+                      right: "auto",
+                      width: "100%",
+                      height: "auto",
+                      minWidth: "100vw",
+                      transition: "all 1s ",
+                      bgcolor: "transparent",
+                      position: "absolute",
+                      zIndex: 100000,
+                      borderRadius: "0px",
+                      overflowY: "scroll",
+                    }}
+                    elevation={0}
+                  >
+                    {!open ? (
                       <Paper
                         sx={{
-                          width: "2000px",
-                          padding: "0rem 2rem",
-                          mx: "auto",
-                          marginLeft: 0,
-                          marginRight: "auto",
                           display: "flex",
                           justifyContent: "space-between",
+                          height: scrollState ? "60px" : "60px",
+                          width: "100%",
+                          transition: "all 1s",
                           bgcolor: "transparent",
+                          borderRadius: "0px",
+                          mt: scrollState ? "0%" : "1%",
                         }}
                         elevation={0}
                       >
-                        <Link to={"/"} style={{ textDecoration: "none" }}>
-                          {locationdta.pathname === "/metaVerse" ||
-                          locationdta.pathname === "/home" ||
-                          locationdta.pathname === "/service" ||
-                          locationdta.pathname === "/ArVr" ||
-                          locationdta.pathname === "/blockchain" ||
-                          locationdta.pathname === "/contact" ? (
-                            <Box
-                              component="img"
-                              src={WhiteLogo}
-                              width="45px"
-                              height={"auto"}
-                              alt={colorState}
-                              style={{ marginTop: "7px" }}
-                            />
-                          ) : (
-                            <Box
-                              component="img"
-                              src={Logo}
-                              width="40px"
-                              height={"auto"}
-                              alt={colorState}
-                              style={{ marginTop: "8px" }}
-                            />
-                          )}
-                        </Link>
-                        {!open ? (
-                          <Box
-                            sx={{
-                              ...ButtonStyle,
-                              mt: 0.75,
-                            }}
-                            onClick={() => {
-                              setOpen(true), setNavFalse(true);
-                            }}
-                          >
+                        <Paper
+                          sx={{
+                            width: "2000px",
+                            padding: "0rem 2rem",
+                            mx: "auto",
+                            marginLeft: 0,
+                            marginRight: "auto",
+                            display: "flex",
+                            justifyContent: "space-between",
+                            bgcolor: "transparent",
+                          }}
+                          elevation={0}
+                        >
+                          <Link to={"/"} style={{ textDecoration: "none" }}>
                             {locationdta.pathname === "/metaVerse" ||
                             locationdta.pathname === "/home" ||
                             locationdta.pathname === "/service" ||
@@ -181,251 +146,286 @@ function App() {
                             locationdta.pathname === "/contact" ? (
                               <Box
                                 component="img"
-                                src={OpenButtonWhite}
-                                sx={{
-                                  marginBottom: "20px",
-                                  mt: {
-                                    sm: 0.5,
-                                    xs: 0.5,
-                                  },
-                                  width: {
-                                    xl: "50%",
-                                    lg: "50%",
-                                    md: "50%",
-                                    sm: "80%",
-                                    xs: "90%",
-                                  },
-                                  height: "auto",
-                                  maxWidth: "35px",
-                                  transition: "0.3s all linear",
-                                  "&:hover": {
-                                    transform: "rotate(360deg)",
-                                  },
-                                }}
-                                alt="whyChooseUsimg"
-                                className={HeaderStyles.MenuIcon}
+                                src={WhiteLogo}
+                                width="45px"
+                                height={"auto"}
+                                alt={colorState}
+                                style={{ marginTop: "7px" }}
                               />
                             ) : (
                               <Box
                                 component="img"
-                                sx={{
-                                  transition: "0.3s all linear",
-                                  "&:hover": {
-                                    transform: "rotate(360deg)",
-                                  },
-                                  width: {
-                                    xl: "50%",
-                                    lg: "50%",
-                                    md: "50%",
-                                    sm: "100%",
-                                    xs: "100%",
-                                  },
-                                  height: "auto",
-                                  maxWidth: "35px",
-                                }}
-                                src={OpenButton}
-                                alt="whyChooseUsimg"
-                                className={HeaderStyles.MenuIcon}
+                                src={Logo}
+                                width="40px"
+                                height={"auto"}
+                                alt={colorState}
+                                style={{ marginTop: "8px" }}
                               />
                             )}
-                          </Box>
-                        ) : (
-                          <Button
-                            sx={ButtonStyle}
-                            onClick={() => {
-                              setNavFalse(true), setOpen(false);
-                            }}
-                          >
-                            Close
-                          </Button>
-                        )}
+                          </Link>
+                          {!open ? (
+                            <Box
+                              sx={{
+                                ...ButtonStyle,
+                                mt: 0.75,
+                              }}
+                              onClick={() => {
+                                setOpen(true), setNavFalse(true);
+                              }}
+                            >
+                              {locationdta.pathname === "/metaVerse" ||
+                              locationdta.pathname === "/home" ||
+                              locationdta.pathname === "/service" ||
+                              locationdta.pathname === "/ArVr" ||
+                              locationdta.pathname === "/blockchain" ||
+                              locationdta.pathname === "/contact" ? (
+                                <Box
+                                  component="img"
+                                  src={OpenButtonWhite}
+                                  sx={{
+                                    marginBottom: "20px",
+                                    mt: {
+                                      sm: 0.5,
+                                      xs: 0.5,
+                                    },
+                                    width: {
+                                      xl: "50%",
+                                      lg: "50%",
+                                      md: "50%",
+                                      sm: "80%",
+                                      xs: "90%",
+                                    },
+                                    height: "auto",
+                                    maxWidth: "35px",
+                                    transition: "0.3s all linear",
+                                    "&:hover": {
+                                      transform: "rotate(360deg)",
+                                    },
+                                  }}
+                                  alt="whyChooseUsimg"
+                                  className={HeaderStyles.MenuIcon}
+                                />
+                              ) : (
+                                <Box
+                                  component="img"
+                                  sx={{
+                                    transition: "0.3s all linear",
+                                    "&:hover": {
+                                      transform: "rotate(360deg)",
+                                    },
+                                    width: {
+                                      xl: "50%",
+                                      lg: "50%",
+                                      md: "50%",
+                                      sm: "100%",
+                                      xs: "100%",
+                                    },
+                                    height: "auto",
+                                    maxWidth: "35px",
+                                  }}
+                                  src={OpenButton}
+                                  alt="whyChooseUsimg"
+                                  className={HeaderStyles.MenuIcon}
+                                />
+                              )}
+                            </Box>
+                          ) : (
+                            <Button
+                              sx={ButtonStyle}
+                              onClick={() => {
+                                setNavFalse(true), setOpen(false);
+                              }}
+                            >
+                              Close
+                            </Button>
+                          )}
+                        </Paper>
                       </Paper>
-                    </Paper>
-                  ) : null}
+                    ) : null}
 
-                  <Paper
-                    sx={{
-                      width: "100%",
-                      height: "90%",
-                      minHeight: "100vh",
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                      marginTop: open ? "0vh" : "-100vh",
-                      transition: navfalse ? "all 1s" : "all 0s",
-                      borderRadius: "0px",
-                      bgcolor: open ? "#fff" : "transparent",
-                    }}
-                    elevation={0}
-                  >
                     <Paper
                       sx={{
-                        width: "98%",
-                        mx: "auto",
-                        display: "flex",
-                        justifyContent: "space-between",
+                        width: "100%",
+                        height: "90%",
+                        minHeight: "100vh",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                        marginTop: open ? "0vh" : "-100vh",
+                        transition: navfalse ? "all 1s" : "all 0s",
+                        borderRadius: "0px",
+                        bgcolor: open ? "#fff" : "transparent",
                       }}
                       elevation={0}
                     >
-                      <Link
-                        to={"/"}
-                        style={{
-                          textDecoration: "none",
-                          marginTop: "1px",
+                      <Paper
+                        sx={{
+                          width: "98%",
+                          mx: "auto",
+                          display: "flex",
+                          justifyContent: "space-between",
                         }}
+                        elevation={0}
                       >
-                        <Box
-                          component="img"
-                          src={Logo}
-                          width="40px"
-                          height={"auto"}
-                          style={{ marginTop: "20px" }}
-                        />
-                      </Link>
+                        <Link
+                          to={"/"}
+                          style={{
+                            textDecoration: "none",
+                            marginTop: "1px",
+                          }}
+                        >
+                          <Box
+                            component="img"
+                            src={Logo}
+                            width="40px"
+                            height={"auto"}
+                            style={{ marginTop: "20px" }}
+                          />
+                        </Link>
 
-                      <Button
-                        sx={ButtonStyle}
-                        onClick={() => {
-                          setOpen(false), setNavFalse(false);
+                        <Button
+                          sx={ButtonStyle}
+                          onClick={() => {
+                            setOpen(false), setNavFalse(false);
+                          }}
+                        >
+                          Close
+                        </Button>
+                      </Paper>
+                      <List
+                        sx={{
+                          py: 3,
+                          height: "85vh",
+                          overflowY: "scroll",
+                          zIndex: 1,
                         }}
                       >
-                        Close
-                      </Button>
-                    </Paper>
-                    <List
-                      sx={{
-                        py: 3,
-                        height: "85vh",
-                        overflowY: "scroll",
-                        zIndex: 1,
-                      }}
-                    >
-                      {HeaderArray.map((res, idx) => {
-                        return (
-                          <Link
-                            onClick={() => {
-                              setNavFalse(false);
-                              setOpen(false);
-                              setLocationData(res.location);
-                            }}
-                            className={HeaderStyles.Text}
-                            to={res.location}
-                            style={{
-                              textDecoration: "none",
-                            }}
-                          >
-                            <Box
-                              sx={{
-                                mt: 0,
-                                pl: 2,
-                                cursor: "pointer",
-                                borderTop: "1px solid #DBDBDB",
-                                borderBottom: "1px solid #DBDBDB",
-                                "&:hover": {
-                                  borderTop: "1px solid #000",
-                                  borderBottom: "1px solid #000",
-                                },
-                                fontFamily: "JekoNormal",
-                                textAlign: "left",
-                                height: {
-                                  xl: "100px",
-                                  lg: "100px",
-                                  md: "100px",
-                                  sm: "50px",
-                                  xs: "50px",
-                                },
-                                pt: 1,
+                        {HeaderArray.map((res, idx) => {
+                          return (
+                            <Link
+                              onClick={() => {
+                                setNavFalse(false);
+                                setOpen(false);
+                                setLocationData(res.location);
                               }}
-                              className={
-                                location === res.location
-                                  ? HeaderStyles.navbarListTextActive
-                                  : HeaderStyles.navbarListText
-                              }
+                              className={HeaderStyles.Text}
+                              to={res.location}
+                              style={{
+                                textDecoration: "none",
+                              }}
                             >
-                              {location === res.location ? (
-                                <Typography
-                                  sx={{
-                                    fontSize: {
-                                      xl: "60px",
-                                      lg: "50px",
-                                      md: "35px",
-                                      sm: "25px",
-                                      xs: "20px",
-                                    },
-                                    lineHeight: {
-                                      xl: "85px",
-                                      lg: "60px",
-                                      md: "50px",
-                                      sm: "35px",
-                                      xs: "35px",
-                                    },
-                                    backgroundImage: `url(${GradientImage})`,
-                                    backgroundRepeat: "repeat",
-                                    backgroundClip: "text",
-                                    textFillColor: "transparent",
-                                    backgroundSize: "cover",
-                                    textAlign: "left",
-                                    height: "100%",
-                                  }}
-                                  className={HeaderStyles.neww}
-                                >
-                                  {res?.text}
-                                </Typography>
-                              ) : (
-                                <Typography
-                                  sx={{
-                                    fontSize: {
-                                      xl: "60px",
-                                      lg: "50px",
-                                      md: "35px",
-                                      sm: "25px",
-                                      xs: "20px",
-                                    },
-                                    lineHeight: {
-                                      xl: "85px",
-                                      lg: "60px",
-                                      md: "50px",
-                                      sm: "35px",
-                                      xs: "35px",
-                                    },
-                                    "&:hover": {
+                              <Box
+                                sx={{
+                                  mt: 0,
+                                  pl: 2,
+                                  cursor: "pointer",
+                                  borderTop: "1px solid #DBDBDB",
+                                  borderBottom: "1px solid #DBDBDB",
+                                  "&:hover": {
+                                    borderTop: "1px solid #000",
+                                    borderBottom: "1px solid #000",
+                                  },
+                                  fontFamily: "JekoNormal",
+                                  textAlign: "left",
+                                  height: {
+                                    xl: "100px",
+                                    lg: "100px",
+                                    md: "100px",
+                                    sm: "50px",
+                                    xs: "50px",
+                                  },
+                                  pt: 1,
+                                }}
+                                className={
+                                  location === res.location
+                                    ? HeaderStyles.navbarListTextActive
+                                    : HeaderStyles.navbarListText
+                                }
+                              >
+                                {location === res.location ? (
+                                  <Typography
+                                    sx={{
+                                      fontSize: {
+                                        xl: "60px",
+                                        lg: "50px",
+                                        md: "35px",
+                                        sm: "25px",
+                                        xs: "20px",
+                                      },
+                                      lineHeight: {
+                                        xl: "85px",
+                                        lg: "60px",
+                                        md: "50px",
+                                        sm: "35px",
+                                        xs: "35px",
+                                      },
                                       backgroundImage: `url(${GradientImage})`,
                                       backgroundRepeat: "repeat",
                                       backgroundClip: "text",
                                       textFillColor: "transparent",
                                       backgroundSize: "cover",
-                                    },
-                                    textAlign: "left",
-                                    height: "100%",
-                                  }}
-                                  className={HeaderStyles.neww}
-                                >
-                                  {res?.text}
-                                </Typography>
-                              )}
-                            </Box>
-                          </Link>
-                        );
-                      })}
-                      <Box sx={{ mt: open ? 2.7 : -10.7 }}>
-                        <Typography sx={centerMainText}>
-                          Innovative Disruption
-                        </Typography>
-                      </Box>
-                    </List>
+                                      textAlign: "left",
+                                      height: "100%",
+                                    }}
+                                    className={HeaderStyles.neww}
+                                  >
+                                    {res?.text}
+                                  </Typography>
+                                ) : (
+                                  <Typography
+                                    sx={{
+                                      fontSize: {
+                                        xl: "60px",
+                                        lg: "50px",
+                                        md: "35px",
+                                        sm: "25px",
+                                        xs: "20px",
+                                      },
+                                      lineHeight: {
+                                        xl: "85px",
+                                        lg: "60px",
+                                        md: "50px",
+                                        sm: "35px",
+                                        xs: "35px",
+                                      },
+                                      "&:hover": {
+                                        backgroundImage: `url(${GradientImage})`,
+                                        backgroundRepeat: "repeat",
+                                        backgroundClip: "text",
+                                        textFillColor: "transparent",
+                                        backgroundSize: "cover",
+                                      },
+                                      textAlign: "left",
+                                      height: "100%",
+                                    }}
+                                    className={HeaderStyles.neww}
+                                  >
+                                    {res?.text}
+                                  </Typography>
+                                )}
+                              </Box>
+                            </Link>
+                          );
+                        })}
+                        <Box sx={{ mt: open ? 2.7 : -10.7 }}>
+                          <Typography sx={centerMainText}>
+                            Innovative Disruption
+                          </Typography>
+                        </Box>
+                      </List>
+                    </Paper>
                   </Paper>
-                </Paper>
-              ) : null}
+                ) : null}
 
-              {!open || location === "/" ? (
-                <AnimatedRoutes setColorState={setColorState} />
-              ) : null}
-            </Box>
-          </Stack>
-        </Paper>
-      </motion.div>
-      {/* ) : ( */}
-      {/* <LoadingScreen /> */}
-      {/* )} */}
+                {!open || location === "/" ? (
+                  <AnimatedRoutes setColorState={setColorState} />
+                ) : null}
+              </Box>
+            </Stack>
+          </Paper>
+        </motion.div>
+      ) : (
+        <LoadingScreen />
+      )}
     </>
   );
 }

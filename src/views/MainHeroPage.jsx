@@ -587,7 +587,19 @@ const MainHeroPage = () => {
                 style={{ filter: "invert(1)" }}
                 alt="arrowImg"
               />
-              <span>Explore</span>
+              <Box
+                sx={{
+                  display: {
+                    xl: "flex",
+                    lg: "flex",
+                    md: "flex",
+                    sm: "none",
+                    xs: "none",
+                  },
+                }}
+              >
+                <span>Explore</span>
+              </Box>
             </Box>
 
             <Box
@@ -624,8 +636,19 @@ const MainHeroPage = () => {
                 textTransform: "uppercase",
               }}
             >
-              <span>Explore</span>
-
+              <Box
+                sx={{
+                  display: {
+                    xl: "flex",
+                    lg: "flex",
+                    md: "flex",
+                    sm: "none",
+                    xs: "none",
+                  },
+                }}
+              >
+                <span>Explore</span>
+              </Box>
               <img
                 src={SideArrowImg}
                 style={{ filter: "invert(1)" }}
