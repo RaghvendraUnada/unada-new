@@ -696,7 +696,7 @@ const mobileActivePaperMetaText = {
   },
   color: "white",
   position: "absolute",
-  top: "70%",
+  top: "68%",
 };
 
 export default ServicesPage;

@@ -335,7 +335,7 @@ const HeroPage = ({
                 background: "#0D6EFD",
                 fontSize: "1.8rem",
                 padding: "1.5rem 2rem",
-                fontWeight: 50,
+                fontWeight: 500,
                 fontFamily: "LGLight",
                 textTransform: "capitalize",
                 color: "#fff",
