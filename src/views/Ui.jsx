@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Stack, Box } from "@mui/material";
 import Uiux from "../pages/UIUX/Uiux";
-import PreProject from "../components/PreProject";
+import PreProjectUi from "../components/PreProjectUi";
 import adobe from "../assets/Images/UIUX/adobe.svg";
 import ai from "../assets/Images/UIUX/ai.svg";
 import figmanew from "../assets/Images/UIUX/figmanew.svg";
@@ -30,7 +30,7 @@ const Ui = () => {
           text={data}
           Tech={Tech}
         />
-        <PreProject />
+        <PreProjectUi />
       </Stack>
     </motion.div>
   );
