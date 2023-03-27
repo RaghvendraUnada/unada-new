@@ -98,7 +98,7 @@ const ImageBox = (props) => {
           bgcolor: "transparent",
         }}
       >
-        <img src={props.img} width="75%" height="auto" />
+        <img src={props.img} width="75%" height="auto" alt="companies" />
       </Box>
     </Grid>
   );

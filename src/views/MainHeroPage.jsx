@@ -514,6 +514,7 @@ const MainHeroPage = () => {
                   autoPlay
                   loop
                   muted
+                  alt="mainVideo"
                   style={{
                     height: "100%",
                     minHeight: "85vh",
@@ -521,7 +522,7 @@ const MainHeroPage = () => {
                     width: "100%",
                   }}
                 >
-                  <source src={UnadaVid} type="video/mp4" />
+                  <source src={UnadaVid} type="video/mp4" alt="mainVideo" />
                 </video>
               </div>
               <Box

@@ -17,7 +17,7 @@ const CaraProjectBox = ({ image, name, hrefLink }) => {
         height: "auto",
       }}
     >
-      <a href={hrefLink} target="_blank">
+      <a href={hrefLink} target="_blank" alt="img">
         <img
           style={{
             height: "auto",

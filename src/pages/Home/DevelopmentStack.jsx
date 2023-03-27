@@ -201,7 +201,7 @@ const DevelopmentStack = () => {
                       help conceptualizing and designing a unique solution, we
                       have the expertise to bring your vision to life.
                     </Typography>
-                    <Box sx={{ width: "10%" }}>
+                    <Box sx={{ width: "20%", mx: "auto" }}>
                       <Link to="application">
                         <Typography
                           sx={{
@@ -214,6 +214,7 @@ const DevelopmentStack = () => {
                             color: "#9D9D9D",
                             display: "flex",
                             alignItems: "center",
+                            textAlign: "center",
                             transition: "0.3s all linear",
                             "&:hover": {
                               color: "#000",
@@ -319,7 +320,7 @@ const DevelopmentStack = () => {
                       create a powerful online presence be it in the form
                       e-commerce solutions or custom development.
                     </Typography>
-                    <Box sx={{ width: "10%" }}>
+                    <Box sx={{ width: "20%", mx: "auto" }}>
                       <Link to="web">
                         <Typography
                           sx={{
@@ -431,7 +432,7 @@ const DevelopmentStack = () => {
                       researchers are experts in creating user experiences that
                       are both functional and aesthetically pleasing.
                     </Typography>
-                    <Box sx={{ width: "10%" }}>
+                    <Box sx={{ width: "20%", mx: "auto" }}>
                       <Link to="ui">
                         <Typography
                           sx={{
@@ -543,7 +544,7 @@ const DevelopmentStack = () => {
                       designers is passionate about creating the most engaging
                       virtual experiences possible.
                     </Typography>
-                    <Box sx={{ width: "10%" }}>
+                    <Box sx={{ width: "20%", mx: "auto" }}>
                       <Link to="metaVerse">
                         <Typography
                           sx={{
@@ -658,7 +659,7 @@ const DevelopmentStack = () => {
                       a range of services, including custom AR and VR
                       development.
                     </Typography>
-                    <Box sx={{ width: "10%" }}>
+                    <Box sx={{ width: "20%", mx: "auto" }}>
                       <Link to="arvr">
                         <Typography
                           sx={{
@@ -772,7 +773,7 @@ const DevelopmentStack = () => {
                       and more, to help them improve security, efficiency, and
                       transparency in their operations.
                     </Typography>
-                    <Box sx={{ width: "10%" }}>
+                    <Box sx={{ width: "20%", mx: "auto" }}>
                       <Link to="blockchain">
                         <Typography
                           sx={{
@@ -1119,7 +1120,7 @@ const verticalText = {
   fontSize: "32.6073px",
   lineHeight: "38px",
   textTransform: "uppercase",
-
+  textAlign: "center",
   background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
@@ -1138,7 +1139,8 @@ const paperTextStyle1 = {
     lg: "50%",
     md: "100%",
     sm: "50%",
-    xs: "60%",
+    xs: "100%",
   },
   marginTop: "2rem",
+  textAlign: "center",
 };

@@ -11,7 +11,7 @@ import styles from "./Service.module.css";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import Fade from "react-reveal/Fade";
 import { useNavigate, Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 const ServicesPage = () => {
   const navigate = useNavigate();
   const [paper1, setPaper1] = useState(true);
@@ -267,219 +267,255 @@ const ServicesPage = () => {
           paddingTop: "7rem",
         }}
       >
-        <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-          {click1 ? (
-            <>
-              <Paper
-                sx={mobileActivePaper}
-                onClick={() => {
-                  setClick1(false);
-                }}
+        <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
+          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+            {click1 ? (
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                {...AnimationSettings}
               >
-                <Box sx={{ position: "relative" }}>
-                  <img
-                    src={MobileMetaImg}
-                    alt="metaVerseImg"
-                    style={{
-                      height: "70%",
-                      width: "100%",
-                      marginTop: "2rem",
-                      position: "relative",
-                    }}
-                  />
-                  <Typography sx={mobileActivePaperMetaText}>
-                    <Fade top duration={1000}>
-                      <Typography sx={mobileActivePapertext} mb={2}>
-                        Metaverse
-                      </Typography>
-                    </Fade>
-                    Imagine a world where anything is possible! At Unada.
-                    <br />
-                    <Link to={"/metaVerse"} style={{ textDecoration: "none" }}>
-                      <Box
-                        className={styles.BigArrowImgmb}
-                        onMouseOut={() => setIcon1("white")}
-                        onMouseOver={() => setIcon1("black")}
-                        sx={{
-                          "&:hover": {
-                            color: "black",
-                          },
-                        }}
-                      >
-                        <EastSharpIcon fontSize="large" sx={{ color: icon1 }} />
-                      </Box>
-                    </Link>
-                  </Typography>
-                </Box>
-              </Paper>
-            </>
-          ) : (
-            <>
-              <Paper
-                sx={mobilePaper}
-                onClick={() => {
-                  setClick1(true);
-                  setClick2(false);
-                  setClick3(false);
-                }}
-              >
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
+                <Paper
+                  sx={mobileActivePaper}
+                  onClick={() => {
+                    setClick1(false);
                   }}
                 >
-                  <Typography sx={mobileHeadText}>Metaverse</Typography>
-                  <img src={ExploreIcon} alt="nextImg" />
-                </Box>
-              </Paper>
-            </>
-          )}
-        </Grid>
-        <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-          {click2 ? (
-            <>
-              <Paper
-                sx={mobileActivePaper}
-                onClick={() => {
-                  setClick2(false);
-                }}
-              >
-                <Box sx={{ position: "relative" }}>
-                  <img
-                    src={ArVrMobImg}
-                    alt="metaVerseImg"
-                    style={{
-                      height: "80%",
-                      width: "100%",
-                      marginTop: "2rem",
-                      position: "relative",
-                    }}
-                  />
-                  <Typography sx={mobileActivePaperMetaText}>
-                    <Fade top duration={1000}>
-                      <Typography sx={mobileActivePapertext} mb={2}>
-                        AR/VR
-                      </Typography>
-                    </Fade>
-                    Whether you're a game developer looking to create the next
-                    big hit, or trying to curate immersive experiences.
-                    <br />
-                    <Link to={"/ArVr"} style={{ textDecoration: "none" }}>
-                      <Box
-                        className={styles.BigArrowImgmb}
-                        onMouseOut={() => setIcon2("white")}
-                        onMouseOver={() => setIcon2("black")}
-                        sx={{
-                          "&:hover": {
-                            color: "black",
-                          },
-                        }}
+                  <Box sx={{ position: "relative" }}>
+                    <img
+                      src={MobileMetaImg}
+                      alt="metaVerseImg"
+                      style={{
+                        height: "70%",
+                        width: "100%",
+                        marginTop: "2rem",
+                        position: "relative",
+                      }}
+                    />
+                    <Typography sx={mobileActivePaperMetaText}>
+                      <Fade top duration={1000}>
+                        <Typography sx={mobileActivePapertext} mb={2}>
+                          Metaverse
+                        </Typography>
+                      </Fade>
+                      Imagine a world where anything is possible! At Unada.
+                      <br />
+                      <Link
+                        to={"/metaVerse"}
+                        style={{ textDecoration: "none" }}
                       >
-                        <EastSharpIcon fontSize="large" sx={{ color: icon2 }} />
-                      </Box>
-                    </Link>
-                  </Typography>
-                </Box>
-              </Paper>
-            </>
-          ) : (
-            <>
-              <Paper
-                sx={mobilePaper}
-                onClick={() => {
-                  setClick1(false);
-                  setClick2(true);
-                  setClick3(false);
-                }}
-              >
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
+                        <Box
+                          className={styles.BigArrowImgmb}
+                          onMouseOut={() => setIcon1("white")}
+                          onMouseOver={() => setIcon1("black")}
+                          sx={{
+                            "&:hover": {
+                              color: "black",
+                            },
+                          }}
+                        >
+                          <EastSharpIcon
+                            fontSize="large"
+                            sx={{ color: icon1 }}
+                          />
+                        </Box>
+                      </Link>
+                    </Typography>
+                  </Box>
+                </Paper>
+              </motion.div>
+            ) : (
+              <>
+                <Paper
+                  sx={mobilePaper}
+                  onClick={() => {
+                    setClick1(true);
+                    setClick2(false);
+                    setClick3(false);
                   }}
                 >
-                  <Typography sx={mobileHeadText}>AR/VR</Typography>
-                  <img src={ExploreIcon} alt="nextImg" />
-                </Box>
-              </Paper>
-            </>
-          )}
-        </Grid>
-        <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-          {click3 ? (
-            <>
-              <Paper
-                sx={mobileActivePaper}
-                onClick={() => {
-                  setClick3(false);
-                }}
-              >
-                <Box sx={{ position: "relative" }}>
-                  <img
-                    src={BlockChainMobImg}
-                    alt="metaVerseImg"
-                    style={{
-                      height: "80%",
-                      width: "100%",
-                      marginTop: "2rem",
-                      position: "relative",
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
                     }}
-                  />
-                  <Typography sx={mobileActivePaperMetaText}>
-                    <Fade top duration={1000}>
-                      <Typography sx={mobileActivePapertext} mb={2}>
-                        Blockchain
-                      </Typography>
-                    </Fade>
-                    Our services include custom blockchain and web3 development.
-                    <br />
-                    <Link to={"/blockchain"} style={{ textDecoration: "none" }}>
-                      <Box
-                        className={styles.BigArrowImgmb}
-                        onMouseOut={() => setIcon3("white")}
-                        onMouseOver={() => setIcon3("black")}
-                        sx={{
-                          "&:hover": {
-                            color: "black",
-                          },
-                        }}
-                      >
-                        <EastSharpIcon fontSize="large" sx={{ color: icon3 }} />
-                      </Box>
-                    </Link>
-                  </Typography>
-                </Box>
-              </Paper>
-            </>
-          ) : (
-            <>
-              <Paper
-                sx={mobilePaper}
-                onClick={() => {
-                  setClick1(false);
-                  setClick2(false);
-                  setClick3(true);
-                }}
+                  >
+                    <Typography sx={mobileHeadText}>Metaverse</Typography>
+                    <img src={ExploreIcon} alt="nextImg" />
+                  </Box>
+                </Paper>
+              </>
+            )}
+          </Grid>
+          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+            {click2 ? (
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                {...AnimationSettings}
               >
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
+                <Paper
+                  sx={mobileActivePaper}
+                  onClick={() => {
+                    setClick2(false);
                   }}
                 >
-                  <Typography sx={mobileHeadText}>Blockchain</Typography>
-                  <img src={ExploreIcon} alt="nextImg" />
-                </Box>
-              </Paper>
-            </>
-          )}
-        </Grid>
+                  <Box sx={{ position: "relative" }}>
+                    <img
+                      src={ArVrMobImg}
+                      alt="metaVerseImg"
+                      style={{
+                        height: "80%",
+                        width: "100%",
+                        marginTop: "2rem",
+                        position: "relative",
+                      }}
+                    />
+                    <Typography sx={mobileActivePaperMetaText}>
+                      <Fade top duration={1000}>
+                        <Typography sx={mobileActivePapertext} mb={2}>
+                          AR/VR
+                        </Typography>
+                      </Fade>
+                      Whether you're a game developer looking to create the next
+                      big hit, or trying to curate immersive experiences.
+                      <br />
+                      <Link to={"/ArVr"} style={{ textDecoration: "none" }}>
+                        <Box
+                          className={styles.BigArrowImgmb}
+                          onMouseOut={() => setIcon2("white")}
+                          onMouseOver={() => setIcon2("black")}
+                          sx={{
+                            "&:hover": {
+                              color: "black",
+                            },
+                          }}
+                        >
+                          <EastSharpIcon
+                            fontSize="large"
+                            sx={{ color: icon2 }}
+                          />
+                        </Box>
+                      </Link>
+                    </Typography>
+                  </Box>
+                </Paper>
+              </motion.div>
+            ) : (
+              <>
+                <Paper
+                  sx={mobilePaper}
+                  onClick={() => {
+                    setClick1(false);
+                    setClick2(true);
+                    setClick3(false);
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <Typography sx={mobileHeadText}>AR/VR</Typography>
+                    <img src={ExploreIcon} alt="nextImg" />
+                  </Box>
+                </Paper>
+              </>
+            )}
+          </Grid>
+          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+            {click3 ? (
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                {...AnimationSettings}
+              >
+                <Paper
+                  sx={mobileActivePaper}
+                  onClick={() => {
+                    setClick3(false);
+                  }}
+                >
+                  <Box sx={{ position: "relative" }}>
+                    <img
+                      src={BlockChainMobImg}
+                      alt="metaVerseImg"
+                      style={{
+                        height: "80%",
+                        width: "100%",
+                        marginTop: "2rem",
+                        position: "relative",
+                      }}
+                    />
+                    <Typography sx={mobileActivePaperMetaText}>
+                      <Fade top duration={1000}>
+                        <Typography sx={mobileActivePapertext} mb={2}>
+                          Blockchain
+                        </Typography>
+                      </Fade>
+                      Our services include custom blockchain and web3
+                      development.
+                      <br />
+                      <Link
+                        to={"/blockchain"}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Box
+                          className={styles.BigArrowImgmb}
+                          onMouseOut={() => setIcon3("white")}
+                          onMouseOver={() => setIcon3("black")}
+                          sx={{
+                            "&:hover": {
+                              color: "black",
+                            },
+                          }}
+                        >
+                          <EastSharpIcon
+                            fontSize="large"
+                            sx={{ color: icon3 }}
+                          />
+                        </Box>
+                      </Link>
+                    </Typography>
+                  </Box>
+                </Paper>
+              </motion.div>
+            ) : (
+              <>
+                <Paper
+                  sx={mobilePaper}
+                  onClick={() => {
+                    setClick1(false);
+                    setClick2(false);
+                    setClick3(true);
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <Typography sx={mobileHeadText}>Blockchain</Typography>
+                    <img src={ExploreIcon} alt="nextImg" />
+                  </Box>
+                </Paper>
+              </>
+            )}
+          </Grid>
+        </motion.div>
       </Grid>
     </React.Fragment>
   );
 };
 
+const AnimationSettings = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { duration: 0.9 },
+};
 const paperStyle = {
   width: "auto",
 
