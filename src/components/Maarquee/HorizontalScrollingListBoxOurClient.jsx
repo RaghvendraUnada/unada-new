@@ -1,6 +1,4 @@
-import { Box, Stack } from "@mui/system";
 import Marquee from "react-fast-marquee";
-import ICLWhite from "../../assets/images/clients/icl-white.svg";
 
 const HorizontalScrollingListBoxOurClient = ({ children, fromRight }) => {
   return (

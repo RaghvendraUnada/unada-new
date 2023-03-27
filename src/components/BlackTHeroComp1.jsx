@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid, Paper, Typography, Box } from "@mui/material";
-import { width } from "@mui/system";
 
 const BlackTHeroComp = (props) => {
   return (

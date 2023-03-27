@@ -1,5 +1,4 @@
 import HorizontalScrollingList from "./HorizontalScrollingList";
-import { Box } from "@mui/system";
 import Marqueeimg1 from "../../assets/Images/MetaVerse/MarqueeImg1.svg";
 
 import AttrMarqueeBox from "../AttrMarqueeBox";

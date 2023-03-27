@@ -1,5 +1,4 @@
 import VerticalScrollingList from "./VerticalScrollingList";
-import { Box } from "@mui/system";
 import CareersText from "../CareersText";
 
 const clients = [

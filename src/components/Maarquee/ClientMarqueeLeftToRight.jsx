@@ -1,5 +1,4 @@
 import HorizontalScrollingList from "./HorizontalScrollingList";
-import { Box } from "@mui/system";
 import Bxi from "../../assets/images/clients/bxi-white.webp";
 import Cineman from "../../assets/images/clients/cineman-white.webp";
 import Ganesh from "../../assets/images/clients/ganesh-white.webp";

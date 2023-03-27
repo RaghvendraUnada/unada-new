@@ -1,17 +1,13 @@
 import { Box, Button, Paper, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import Close from "../../assets/Images/Header/CloseButton.svg";
-import OpenButton from "../../assets/Images/Header/MenuIcon.svg";
 import OpenButtonWhite from "../../assets/Images/Header/MenuIconWhite.svg";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import HeaderStyles from "./Header.module.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import arrowheader from "../../assets/Images/Header/arrowheader.svg";
-import { HiArrowRight } from "react-icons/hi";
 import Logo from "../../assets/Images/Header/Logo.png";
 import WhiteLogo from "../../assets/Images/Header/unada-logo.png";
-import { LineAxisOutlined } from "@mui/icons-material";
 
 const Header = () => {
   useEffect(() => {}, [useLocation().pathname]);

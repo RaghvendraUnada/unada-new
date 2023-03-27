@@ -1,20 +1,6 @@
 import HorizontalScrollingListBox from "./HorizontalScrollingListBox";
 import { Box } from "@mui/system";
-import Bxi from "../../assets/images/clients/bxi-white.webp";
-import Cineman from "../../assets/images/clients/cineman-white.webp";
-import Ganesh from "../../assets/images/clients/ganesh-white.webp";
-import IclWhite from "../../assets/images/clients/icl-white.webp";
-import Kushi from "../../assets/images/clients/khushi-white.webp";
-import Maysixty from "../../assets/images/clients/maysixty-white.webp";
-import Mirash from "../../assets/images/clients/mirash-white.webp";
-import Pots from "../../assets/images/clients/pots-white.webp";
-import Strategic from "../../assets/images/clients/strategic-white.webp";
-import Unispace from "../../assets/images/clients/unispace-white.webp";
-import WhiteValley from "../../assets/images/clients/white-valley-white.webp";
 import CaraProjectBox from "../CaraProjectBox";
-import pre1 from "../../assets/Images/cara/pre1.png";
-import pre2 from "../../assets/Images/cara/pre2.png";
-import pre3 from "../../assets/Images/cara/pre3.png";
 import Images from "../../assets/Images/MetaVerse/CaraImg1.svg";
 import cara1 from "../../assets/Images/MetaVerse/CaraImg1.svg";
 import cara2 from "../../assets/Images/MetaVerse/CaraImg2.svg";
@@ -22,12 +8,12 @@ import cara3 from "../../assets/Images/MetaVerse/CaraImg3.svg";
 import cara4 from "../../assets/Images/MetaVerse/CaraImg4.svg";
 import cara5 from "../../assets/Images/MetaVerse/CaraImg5.svg";
 const clients = [
-  { image: Images, hrefLink: "https://www.youtube.com/watch?v=lHgtB7DuOD8" },
-  { image: cara1, hrefLink: "https://www.youtube.com/watch?v=ZqFCn4Nia4o" },
-  { image: cara2, hrefLink: "https://www.youtube.com/watch?v=ZqFCn4Nia4o" },
-  { image: cara3, hrefLink: "https://www.youtube.com/watch?v=ZqFCn4Nia4o" },
-  { image: cara4, hrefLink: "https://www.youtube.com/watch?v=ZqFCn4Nia4o" },
-  { image: cara5, hrefLink: "https://www.youtube.com/watch?v=lHgtB7DuOD8" },
+  { image: Images, hrefLink: "https://www.youtube.com/" },
+  { image: cara1, hrefLink: "https://www.youtube.com/" },
+  { image: cara2, hrefLink: "https://www.youtube.com/" },
+  { image: cara3, hrefLink: "https://www.youtube.com/" },
+  { image: cara4, hrefLink: "https://www.youtube.com/" },
+  { image: cara5, hrefLink: "https://www.youtube.com/" },
 ];
 const RandomFirstList = [...clients].sort(() => Math.random() - 0.6);
 const RandomSecondList = [...clients].sort(() => Math.random() - 0.6);

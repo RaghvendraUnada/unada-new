@@ -1,5 +1,5 @@
 import HorizontalScrollingList from "./HorizontalScrollingList";
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 
 const TechMarque = (props) => {
   return (

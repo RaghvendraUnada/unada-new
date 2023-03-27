@@ -441,7 +441,7 @@ const EmployeeCard2 = (props) => {
     },
     {
       img: Nammish,
-      name: "Namish Gadhiya ",
+      name: "Naimish Gadhiya ",
       place: "Full Stack Developer",
     },
     {

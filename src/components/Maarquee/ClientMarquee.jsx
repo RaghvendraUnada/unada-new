@@ -1,5 +1,4 @@
 import HorizontalScrollingList from "./HorizontalScrollingList";
-import { Box } from "@mui/system";
 import React from "react";
 import Bxi from "../../assets/images/clients/bxi-white.webp";
 import Cineman from "../../assets/images/clients/cineman-white.webp";
@@ -14,7 +13,6 @@ import Unispace from "../../assets/images/clients/unispace-white.webp";
 import WhiteValley from "../../assets/images/clients/white-valley-white.webp";
 import oho from "../../assets/images/clients/ohoclient.webp";
 import ClientBox from "../ClientBox";
-import axios from "axios";
 
 const clients = [
   { image: Bxi },
