@@ -42,7 +42,6 @@ export default RevolutionSetion;
 const textStyle = {
   fontFamily: "LGTrial",
   fontStyle: "normal",
-  // width: "100%",
   fontWeight: 500,
   fontSize: {
     xl: "80px",

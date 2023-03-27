@@ -173,7 +173,6 @@ const paperStyle = {
   },
   background: "black",
   position: "relative",
-  //   bord,
 };
 const heroTextStyle = {
   fontFamily: "LGBold",

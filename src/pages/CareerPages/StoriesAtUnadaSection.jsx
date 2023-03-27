@@ -318,7 +318,6 @@ const SwiperText = {
   fontFamily: "LGTrial",
   fontStyle: "normal",
   fontWeight: 400,
-  // fontSize: "16.5839px",
   fontSize: {
     xl: "16.5839px",
     lg: "16.5839px",

@@ -7,8 +7,6 @@ const HorizontalScrollingList = ({ children, fromRight }) => {
     <Marquee
       gradient={false}
       speed={60}
-      // pauseOnHover={true}
-      // pauseOnClick={true}
       direction={fromRight ? "left" : "right"}
       style={{
         height: "130px",

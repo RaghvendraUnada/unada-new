@@ -45,7 +45,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
       setTimeout(() => {
         setloading(true);
       }, 3000);
-      // setloading(true);
     } else {
       setloading(false);
     }
@@ -76,7 +75,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
   const [linkedin, setLinkedin] = useState();
   const [file, setFile] = useState();
   const [coverLetter, setCoverLetter] = useState();
-  // const uploadFileRef = useRef();
   const uploadFileRef2 = useRef();
   const [icon1, setIcon1] = useState("white");
   const [border, setBorder] = useState("white");
@@ -89,7 +87,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     setCoverLetter(coverLetterfile);
   };
 
-  // const [state,setState] = useState()
   const [items, setItems] = useState([]);
 
   function handleKeyDown(event) {
@@ -142,7 +139,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
     };
 
     fetch("https://unada-backend.unada.in/user_data/apply", requestOptions)
-      // fetch("http://192.168.29.5:8000/user_data/apply", requestOptions)
       .then((response) => {
         alert("data submitted");
         response.text();
