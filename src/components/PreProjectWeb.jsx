@@ -1,9 +1,9 @@
 import { Grid, Box, Typography, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import pre1 from "../assets/Images/cara/Frame_6.webp";
-import pre2 from "../assets/Images/cara/Frame_5.webp";
-import pre3 from "../assets/Images/cara/Frame_4.webp";
-import pre4 from "../assets/Images/cara/Frame_7.webp";
+import pre1 from "../assets/Images/cara/Frame_8.webp";
+import pre2 from "../assets/Images/cara/Frame_9.webp";
+import pre3 from "../assets/Images/cara/Frame_10.webp";
+// import pre4 from "../assets/Images/cara/Frame7.webp";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import styles from "../pages/Services/Service.module.css";
 import Fade from "react-reveal/Fade";
@@ -12,7 +12,7 @@ import preStyles from "./preproject.module.scss";
 function convertRemToPixels(rem) {
   return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 }
-const PreProject = () => {
+const PreProjectWeb = () => {
   const [icon1, setIcon1] = useState("black");
   const [icon2, setIcon2] = useState("black");
   const boxRef = useRef();
@@ -197,11 +197,7 @@ const PreProject = () => {
               <Box component="img" className={preStyles.imgs} src={pre3} />
             </figure>
           </Box>
-          <Box class={preStyles.hover03}>
-            <figure>
-              <Box component="img" className={preStyles.imgs} src={pre4} />
-            </figure>
-          </Box>
+
           <Box class={preStyles.hover03}>
             <figure>
               <Box component="img" className={preStyles.imgs} src={pre1} />
@@ -215,11 +211,6 @@ const PreProject = () => {
           <Box class={preStyles.hover03}>
             <figure>
               <Box component="img" className={preStyles.imgs} src={pre3} />
-            </figure>
-          </Box>
-          <Box class={preStyles.hover03}>
-            <figure>
-              <Box component="img" className={preStyles.imgs} src={pre4} />
             </figure>
           </Box>
         </Box>
@@ -300,7 +291,7 @@ const PreProject = () => {
   );
 };
 
-export default PreProject;
+export default PreProjectWeb;
 
 const mainText = {
   width: "100%",

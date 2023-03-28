@@ -248,7 +248,7 @@ const WhiteServicesPage = () => {
                 sx={{
                   ...mobileActivePaper,
                   height: "60%",
-                  minHeight: "80vh",
+                  minHeight: "72vh",
                 }}
                 onClick={() => {
                   setClick1(false);
@@ -325,7 +325,7 @@ const WhiteServicesPage = () => {
                   sx={{
                     ...mobileActivePaper,
                     height: "60%",
-                    minHeight: "85vh",
+                    minHeight: "72vh",
                   }}
                   onClick={() => {
                     setClick2(false);
@@ -405,7 +405,7 @@ const WhiteServicesPage = () => {
                   sx={{
                     ...mobileActivePaper,
                     height: "60%",
-                    minHeight: "85vh",
+                    minHeight: "72vh",
                   }}
                   onClick={() => {
                     setClick3(false);

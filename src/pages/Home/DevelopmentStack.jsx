@@ -201,7 +201,7 @@ const DevelopmentStack = () => {
                       help conceptualizing and designing a unique solution, we
                       have the expertise to bring your vision to life.
                     </Typography>
-                    <Box sx={{ width: "20%", mx: "auto" }}>
+                    <Box sx={{ width: { sm: "10%", xs: "20%" }, mx: "auto" }}>
                       <Link to="application">
                         <Typography
                           sx={{
@@ -320,7 +320,7 @@ const DevelopmentStack = () => {
                       create a powerful online presence be it in the form
                       e-commerce solutions or custom development.
                     </Typography>
-                    <Box sx={{ width: "20%", mx: "auto" }}>
+                    <Box sx={{ width: { sm: "10%", xs: "20%" }, mx: "auto" }}>
                       <Link to="web">
                         <Typography
                           sx={{
@@ -432,7 +432,7 @@ const DevelopmentStack = () => {
                       researchers are experts in creating user experiences that
                       are both functional and aesthetically pleasing.
                     </Typography>
-                    <Box sx={{ width: "20%", mx: "auto" }}>
+                    <Box sx={{ width: { sm: "10%", xs: "20%" }, mx: "auto" }}>
                       <Link to="ui">
                         <Typography
                           sx={{
@@ -544,7 +544,7 @@ const DevelopmentStack = () => {
                       designers is passionate about creating the most engaging
                       virtual experiences possible.
                     </Typography>
-                    <Box sx={{ width: "20%", mx: "auto" }}>
+                    <Box sx={{ width: { sm: "10%", xs: "20%" }, mx: "auto" }}>
                       <Link to="metaVerse">
                         <Typography
                           sx={{
@@ -659,7 +659,7 @@ const DevelopmentStack = () => {
                       a range of services, including custom AR and VR
                       development.
                     </Typography>
-                    <Box sx={{ width: "20%", mx: "auto" }}>
+                    <Box sx={{ width: { sm: "10%", xs: "20%" }, mx: "auto" }}>
                       <Link to="arvr">
                         <Typography
                           sx={{
@@ -773,7 +773,7 @@ const DevelopmentStack = () => {
                       and more, to help them improve security, efficiency, and
                       transparency in their operations.
                     </Typography>
-                    <Box sx={{ width: "20%", mx: "auto" }}>
+                    <Box sx={{ width: { sm: "10%", xs: "20%" }, mx: "auto" }}>
                       <Link to="blockchain">
                         <Typography
                           sx={{
@@ -1100,7 +1100,6 @@ const ServiceText = {
   fontSize: "19.066px",
   lineHeight: "23px",
   letterSpacing: 0.50165,
-
   color: "#000000",
 };
 const NumTextStyle = {
@@ -1110,7 +1109,6 @@ const NumTextStyle = {
   fontSize: "18.0594px",
   lineHeight: "20px",
   letterSpacing: 0.0050165,
-
   color: "#000000",
 };
 const verticalText = {
@@ -1138,7 +1136,7 @@ const paperTextStyle1 = {
     xl: "50%",
     lg: "50%",
     md: "100%",
-    sm: "50%",
+    sm: "100%",
     xs: "100%",
   },
   marginTop: "2rem",

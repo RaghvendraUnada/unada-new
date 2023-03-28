@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Stack } from "@mui/material";
 import WebHero from "../pages/Web/WebHero";
-import PreProject from "../components/PreProject";
+import PreProjectWeb from "../components/PreProjectWeb";
 import aws from "../assets/Images/Web/aws.svg";
 import css from "../assets/Images/Web/css.svg";
 import html from "../assets/Images/Web/html.svg";
@@ -38,7 +38,7 @@ const Web = () => {
           text={data}
           Tech={Tech}
         />
-        <PreProject />
+        <PreProjectWeb />
       </Stack>
     </motion.div>
   );

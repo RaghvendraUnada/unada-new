@@ -1,22 +1,29 @@
 import { Grid, Box, Typography, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import pre1 from "../assets/Images/cara/Frame4.webp";
-import pre2 from "../assets/Images/cara/Frame5.webp";
-import pre3 from "../assets/Images/cara/Frame6.webp";
-import pre4 from "../assets/Images/cara/Frame7.webp";
+import pre1 from "../assets/Images/cara/Frame_1.webp";
+import pre2 from "../assets/Images/cara/Frame_2.webp";
+import pre3 from "../assets/Images/cara/Frame_3.webp";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import styles from "../pages/Services/Service.module.css";
 import Fade from "react-reveal/Fade";
 import { useRef } from "react";
 import preStyles from "./preproject.module.scss";
+function convertRemToPixels(rem) {
+  return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
 const PreProjectUi = () => {
   const [icon1, setIcon1] = useState("black");
   const [icon2, setIcon2] = useState("black");
   const boxRef = useRef();
   const scollToRef = useRef();
   useEffect(() => {
-    return scollToRef?.current?.scroll(100, 0);
-  });
+    scollToRef?.current?.scroll(
+      scollToRef?.current?.scrollLeft +
+        boxRef?.current?.offsetWidth / 2 +
+        convertRemToPixels(3.5),
+      0
+    );
+  }, [boxRef]);
 
   return (
     <Grid
@@ -72,7 +79,7 @@ const PreProjectUi = () => {
           position: "relative",
         }}
       >
-        <Box
+        {/* <Box
           sx={{
             display: {
               xl: "flex",
@@ -107,7 +114,8 @@ const PreProjectUi = () => {
               onClick={() => {
                 scollToRef?.current?.scroll(
                   scollToRef?.current?.scrollLeft -
-                    boxRef?.current?.offsetWidth,
+                    boxRef?.current?.offsetWidth +
+                    convertRemToPixels(-3.5),
                   0
                 );
               }}
@@ -137,7 +145,8 @@ const PreProjectUi = () => {
               onClick={() => {
                 scollToRef?.current?.scroll(
                   scollToRef?.current?.scrollLeft +
-                    boxRef?.current?.offsetWidth,
+                    boxRef?.current?.offsetWidth +
+                    convertRemToPixels(3.5),
                   0
                 );
               }}
@@ -145,7 +154,7 @@ const PreProjectUi = () => {
               <EastSharpIcon fontSize="large" sx={{ color: icon2 }} />
             </Box>
           </Box>
-        </Box>
+        </Box> */}
         <Box
           sx={{
             display: "flex",
@@ -162,8 +171,8 @@ const PreProjectUi = () => {
             },
             marginTop: "2rem",
             marginLeft: {
-              xl: "-250px",
-              lg: "-250px",
+              xl: "0px",
+              lg: "0px",
               md: "-250px",
               sm: "-90px",
               xs: "-90px",
@@ -172,7 +181,7 @@ const PreProjectUi = () => {
           id="abc"
           ref={scollToRef}
         >
-          <Box class={preStyles.hover03}>
+          <Box class={preStyles.hover03} ref={boxRef}>
             <figure>
               <Box component="img" className={preStyles.imgs} src={pre1} />
             </figure>
@@ -187,11 +196,7 @@ const PreProjectUi = () => {
               <Box component="img" className={preStyles.imgs} src={pre3} />
             </figure>
           </Box>
-          <Box class={preStyles.hover03}>
-            <figure>
-              <Box component="img" className={preStyles.imgs} src={pre4} />
-            </figure>
-          </Box>
+
           <Box class={preStyles.hover03}>
             <figure>
               <Box component="img" className={preStyles.imgs} src={pre1} />
@@ -205,11 +210,6 @@ const PreProjectUi = () => {
           <Box class={preStyles.hover03}>
             <figure>
               <Box component="img" className={preStyles.imgs} src={pre3} />
-            </figure>
-          </Box>
-          <Box class={preStyles.hover03}>
-            <figure>
-              <Box component="img" className={preStyles.imgs} src={pre4} />
             </figure>
           </Box>
         </Box>
@@ -217,10 +217,10 @@ const PreProjectUi = () => {
       <Box
         sx={{
           display: {
-            xl: "none",
-            lg: "none",
-            md: "none",
-            sm: "none",
+            xl: "flex",
+            lg: "flex",
+            md: "flex",
+            sm: "flex",
             xs: "flex",
           },
         }}
@@ -234,7 +234,7 @@ const PreProjectUi = () => {
             },
             bottom: {
               xs: "5%",
-              lg: "7%",
+              lg: "1%",
             },
             transform: "rotate(180deg)",
             cursor: "pointer",
@@ -265,7 +265,7 @@ const PreProjectUi = () => {
             },
             bottom: {
               xs: "5%",
-              lg: "7%",
+              lg: "1%",
             },
             cursor: "pointer",
             zIndex: "10",
