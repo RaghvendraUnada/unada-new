@@ -8,7 +8,7 @@ import SideArrowImg2 from "../assets/Images/Home/SideArrowImg2.svg";
 import { useNavigate, Navigate } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
 import Logo from "../../src/assets/Images/Header/Logo.png";
-import WhiteLogo from "../../src/assets/Images/Header/unada-logo.png";
+import WhiteLogo from "../../src/assets/Images/Header/unada-logo.webp";
 import OpenButton from "../../src/assets/Images/Header/newHeader.svg";
 import OpenButtonWhite from "../../src/assets/Images/Header/MenuIconWhite.svg";
 import HeaderStyles from "../../src/Components/Header/Header.module.scss";

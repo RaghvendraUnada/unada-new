@@ -14,6 +14,7 @@ body {
   min-height: 100vh;
   -webkit-tap-highlight-color: transparent;
   font-family: "MBFCanno";
+  font-display: swap;
 }
 
 html {
@@ -39,49 +40,60 @@ html {
 @font-face {
   font-family: "MBFCanno";
   src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "LGBold";
   src: url("../src/assets/Fonts/LG/LabilGrotesk-Bold.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "LGLight";
   src: url("../src/assets/Fonts/LG/LabilGrotesk-Light.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "LGMedium";
   src: url("../src/assets/Fonts/LG/LabilGrotesk-Medium.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "LGRegular";
   src: url("../src/assets/Fonts/LG/LabilGrotesk-Regular.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "LGThin";
   src: url("../src/assets/Fonts/LG/LabilGrotesk-Thin.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "LGTrial";
   src: url("../src/assets/Fonts/LG/labilgrotesktrial-regular.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "MBFCanno";
   src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "SF Pro Display";
   src: url("../src/assets/Fonts/sf-pro-display/SFPRODISPLAYMEDIUM.OTF");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Jeko Bold";
   src: url("../src/assets/Fonts/FontsFree-Net-Jeko-Bold.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "JekoNormal";
   src: url("../src/assets/Fonts/Jeko/JekoDEMO-Medium.otf");
+  font-display: swap;
 }
 
 ::-webkit-scrollbar {

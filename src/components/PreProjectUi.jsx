@@ -1,14 +1,15 @@
 import { Grid, Box, Typography, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import pre1 from "../assets/Images/cara/Frame1.webp";
-import pre2 from "../assets/Images/cara/Frame2.webp";
-import pre3 from "../assets/Images/cara/Frame3.webp";
+import pre1 from "../assets/Images/cara/Frame4.webp";
+import pre2 from "../assets/Images/cara/Frame5.webp";
+import pre3 from "../assets/Images/cara/Frame6.webp";
+import pre4 from "../assets/Images/cara/Frame7.webp";
 import EastSharpIcon from "@mui/icons-material/EastSharp";
 import styles from "../pages/Services/Service.module.css";
 import Fade from "react-reveal/Fade";
 import { useRef } from "react";
 import preStyles from "./preproject.module.scss";
-const PreProject = () => {
+const PreProjectUi = () => {
   const [icon1, setIcon1] = useState("black");
   const [icon2, setIcon2] = useState("black");
   const boxRef = useRef();
@@ -188,6 +189,11 @@ const PreProject = () => {
           </Box>
           <Box class={preStyles.hover03}>
             <figure>
+              <Box component="img" className={preStyles.imgs} src={pre4} />
+            </figure>
+          </Box>
+          <Box class={preStyles.hover03}>
+            <figure>
               <Box component="img" className={preStyles.imgs} src={pre1} />
             </figure>
           </Box>
@@ -199,6 +205,11 @@ const PreProject = () => {
           <Box class={preStyles.hover03}>
             <figure>
               <Box component="img" className={preStyles.imgs} src={pre3} />
+            </figure>
+          </Box>
+          <Box class={preStyles.hover03}>
+            <figure>
+              <Box component="img" className={preStyles.imgs} src={pre4} />
             </figure>
           </Box>
         </Box>
@@ -279,7 +290,7 @@ const PreProject = () => {
   );
 };
 
-export default PreProject;
+export default PreProjectUi;
 
 const mainText = {
   width: "100%",

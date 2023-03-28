@@ -7,7 +7,7 @@ import HeaderStyles from "./Header.module.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import arrowheader from "../../assets/Images/Header/arrowheader.svg";
 import Logo from "../../assets/Images/Header/Logo.png";
-import WhiteLogo from "../../assets/Images/Header/unada-logo.png";
+import WhiteLogo from "../../assets/Images/Header/unada-logo.webp";
 
 const Header = () => {
   useEffect(() => {}, [useLocation().pathname]);
