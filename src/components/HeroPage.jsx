@@ -339,6 +339,7 @@ const HeroPage = ({
                 fontFamily: "LGLight",
                 textTransform: "capitalize",
                 color: "#fff",
+                // mb: "95px",
               }}
             >
               Get Started
