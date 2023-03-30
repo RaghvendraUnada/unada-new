@@ -6,7 +6,6 @@ import styled from "styled-components";
 import axios from "axios";
 import Fade from "react-reveal/Fade";
 import selection from "./home.module.css";
-import { useSpring } from "react-spring";
 import Zaid from "../../assets/Images/ourTeamCutOut/Zaid.webp";
 import Raghvendra from "../../assets/Images/ourTeamCutOut/Raghvendra.webp";
 import Ronak from "../../assets/Images/ourTeamCutOut/Ronak.webp";
@@ -30,15 +29,6 @@ import greyemptyimg from "../../assets/Images/ourTeamCutOut/greyemptyimg.svg";
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
   const [flip, setFlip] = useState(false);
-
-  const props = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    reset: true,
-    flip: false,
-    delay: 800,
-    onRest: () => setFlip(!flip),
-  });
 
   const FetchTeamData = async () => {
     await axios
