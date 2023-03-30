@@ -51,24 +51,31 @@ const VideoBox = React.lazy(() => import("./VideoBox"));
 
 const MainHeroPage = () => {
   const navigate = useNavigate();
-
+  const Rlocation = useLocation();
   const [WhatsappView, setWhatsappView] = useState(false);
   const [open, setOpen] = useState(false);
   const [scrollState, setScroll] = useState(false);
   const [colorState, setColorState] = useState(false);
   const [locationdata, setLocationData] = useState("");
-  let location = window.location.pathname;
+  let location = Rlocation.pathname;
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
   });
   const CurrentLocation = useLocation();
   const [cursorVariant, setCursorVariant] = useState("default");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
-      setWhatsappView(true);
-    } else setWhatsappView(false);
-  });
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        setWhatsappView(true);
+      } else setWhatsappView(false);
+    });
+    document.onkeydown = function (evt) {
+      if (evt.key === "Escape") {
+        setOpen(false);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     SendEvent("Home Page Hero Section");
@@ -85,11 +92,7 @@ const MainHeroPage = () => {
       setColorState(false);
     }
   }, [location]);
-  document.onkeydown = function (evt) {
-    if (evt.key === "Escape") {
-      setOpen(false);
-    }
-  };
+
   return (
     <motion.div initial="hidden" animate="visible" {...AnimationSettings}>
       <Paper

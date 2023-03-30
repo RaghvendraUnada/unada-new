@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <motion.div
       className="bg-white"
-      initial="hidden"
+      initial={typeof window === "undefined" ? "visible" : "hidden"}
       animate="visible"
       {...AnimationSettings}
     >

@@ -51,24 +51,25 @@ function App() {
 
   const [navfalse, setNavFalse] = useState(false);
   const [locationdata, setLocationData] = useState("");
-  let location = window.location.pathname;
+  let location = locationdta.pathname;
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => setLoading(false), 1500);
   }, []);
   const [cursorVariant, setCursorVariant] = useState("default");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
-      setWhatsappView(true);
-    } else setWhatsappView(false);
-  });
-  document.onkeydown = function (evt) {
-    if (evt.key === "Escape") {
-      setOpen(false);
-    }
-  };
-
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        setWhatsappView(true);
+      } else setWhatsappView(false);
+    });
+    document.onkeydown = function (evt) {
+      if (evt.key === "Escape") {
+        setOpen(false);
+      }
+    };
+  }, []);
   const { pathname } = useLocation();
   useEffect(() => {
     document.documentElement.scrollTo({
