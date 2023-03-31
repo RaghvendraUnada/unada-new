@@ -275,13 +275,13 @@ const ServicesPage = () => {
                 animate="visible"
                 {...AnimationSettings}
               >
-                <Paper
-                  sx={mobileActivePaper}
-                  onClick={() => {
-                    setClick1(false);
-                  }}
-                >
-                  <Box sx={{ position: "relative" }}>
+                <Paper sx={{ ...mobileActivePaper, position: "relative" }}>
+                  <Box
+                    sx={{ position: "relative" }}
+                    onClick={() => {
+                      setClick1(false);
+                    }}
+                  >
                     <img
                       src={MobileMetaImg}
                       alt="metaVerseImg"
@@ -300,27 +300,34 @@ const ServicesPage = () => {
                       </Fade>
                       Imagine a world where anything is possible! At Unada.
                       <br />
-                      <Link
-                        to={"/metaVerse"}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <Box
-                          className={styles.BigArrowImgmb}
-                          onMouseOut={() => setIcon1("white")}
-                          onMouseOver={() => setIcon1("black")}
-                          sx={{
-                            "&:hover": {
-                              color: "black",
-                            },
-                          }}
-                        >
-                          <EastSharpIcon
-                            fontSize="large"
-                            sx={{ color: icon1 }}
-                          />
-                        </Box>
-                      </Link>
                     </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      left: "5%",
+                      bottom: "6.5%",
+                    }}
+                  >
+                    <Link
+                      to={"/metaVerse"}
+                      style={{
+                        textDecoration: "none",
+                      }}
+                    >
+                      <Box
+                        className={styles.BigArrowImgmb}
+                        onMouseOut={() => setIcon1("white")}
+                        onMouseOver={() => setIcon1("black")}
+                        sx={{
+                          "&:hover": {
+                            color: "black",
+                          },
+                        }}
+                      >
+                        <EastSharpIcon fontSize="large" sx={{ color: icon1 }} />
+                      </Box>
+                    </Link>
                   </Box>
                 </Paper>
               </motion.div>
@@ -354,13 +361,13 @@ const ServicesPage = () => {
                 animate="visible"
                 {...AnimationSettings}
               >
-                <Paper
-                  sx={mobileActivePaper}
-                  onClick={() => {
-                    setClick2(false);
-                  }}
-                >
-                  <Box sx={{ position: "relative" }}>
+                <Paper sx={{ ...mobileActivePaper, position: "relative" }}>
+                  <Box
+                    sx={{ position: "relative" }}
+                    onClick={() => {
+                      setClick2(false);
+                    }}
+                  >
                     <img
                       src={ArVrMobImg}
                       alt="metaVerseImg"
@@ -380,24 +387,34 @@ const ServicesPage = () => {
                       Whether you're a game developer looking to create the next
                       big hit, or trying to curate immersive experiences.
                       <br />
-                      <Link to={"/ArVr"} style={{ textDecoration: "none" }}>
-                        <Box
-                          className={styles.BigArrowImgmb}
-                          onMouseOut={() => setIcon2("white")}
-                          onMouseOver={() => setIcon2("black")}
-                          sx={{
-                            "&:hover": {
-                              color: "black",
-                            },
-                          }}
-                        >
-                          <EastSharpIcon
-                            fontSize="large"
-                            sx={{ color: icon2 }}
-                          />
-                        </Box>
-                      </Link>
                     </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      left: "5%",
+                      bottom: "6.5%",
+                    }}
+                  >
+                    <Link
+                      to={"/ArVr"}
+                      style={{
+                        textDecoration: "none",
+                      }}
+                    >
+                      <Box
+                        className={styles.BigArrowImgmb}
+                        onMouseOut={() => setIcon2("white")}
+                        onMouseOver={() => setIcon2("black")}
+                        sx={{
+                          "&:hover": {
+                            color: "black",
+                          },
+                        }}
+                      >
+                        <EastSharpIcon fontSize="large" sx={{ color: icon2 }} />
+                      </Box>
+                    </Link>
                   </Box>
                 </Paper>
               </motion.div>
@@ -431,13 +448,13 @@ const ServicesPage = () => {
                 animate="visible"
                 {...AnimationSettings}
               >
-                <Paper
-                  sx={mobileActivePaper}
-                  onClick={() => {
-                    setClick3(false);
-                  }}
-                >
-                  <Box sx={{ position: "relative" }}>
+                <Paper sx={{ ...mobileActivePaper, position: "relative" }}>
+                  <Box
+                    sx={{ position: "relative" }}
+                    onClick={() => {
+                      setClick3(false);
+                    }}
+                  >
                     <img
                       src={BlockChainMobImg}
                       alt="metaVerseImg"
@@ -457,27 +474,34 @@ const ServicesPage = () => {
                       Our services include custom blockchain and web3
                       development.
                       <br />
-                      <Link
-                        to={"/blockchain"}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <Box
-                          className={styles.BigArrowImgmb}
-                          onMouseOut={() => setIcon3("white")}
-                          onMouseOver={() => setIcon3("black")}
-                          sx={{
-                            "&:hover": {
-                              color: "black",
-                            },
-                          }}
-                        >
-                          <EastSharpIcon
-                            fontSize="large"
-                            sx={{ color: icon3 }}
-                          />
-                        </Box>
-                      </Link>
                     </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      left: "5%",
+                      bottom: "6.5%",
+                    }}
+                  >
+                    <Link
+                      to={"/blockchain"}
+                      style={{
+                        textDecoration: "none",
+                      }}
+                    >
+                      <Box
+                        className={styles.BigArrowImgmb}
+                        onMouseOut={() => setIcon3("white")}
+                        onMouseOver={() => setIcon3("black")}
+                        sx={{
+                          "&:hover": {
+                            color: "black",
+                          },
+                        }}
+                      >
+                        <EastSharpIcon fontSize="large" sx={{ color: icon3 }} />
+                      </Box>
+                    </Link>
                   </Box>
                 </Paper>
               </motion.div>
