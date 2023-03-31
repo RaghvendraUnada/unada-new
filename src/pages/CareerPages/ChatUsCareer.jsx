@@ -697,7 +697,7 @@ const style = {
   boxShadow: 24,
   borderRadius: "20px",
   p: { xl: 3, lg: 3, md: 3, sm: 3, xs: 1.5 },
-  minHeight: "480px",
+  minHeight: "440px",
 };
 const LightTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
