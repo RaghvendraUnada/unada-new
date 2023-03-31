@@ -41,7 +41,11 @@ const OurClients = () => {
           efficient when hiring your crew for your next mission to space.
         </Typography>
       </Box>
-      <Box sx={{ minHeight: "500px" }}>
+      <Box
+        sx={{
+          minHeight: "500px",
+        }}
+      >
         <ClientMarquee />
         <ClientMarqueeLeftToRight />
         <ClientMarqueeNew />
