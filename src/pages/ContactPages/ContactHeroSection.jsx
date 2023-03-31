@@ -33,14 +33,30 @@ const ContactHeroSection = () => {
           sx={{
             height: "auto",
             paddingY: "8rem",
-            paddingX: "3rem",
+            paddingX: {
+              xl: "3rem",
+              lg: "3rem",
+              md: "3rem",
+              sm: "3rem",
+              xs: "15rem",
+            },
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
           }}
         >
           <Fade top duration={1000}>
-            <Stack sx={{ marginTop: {} }}>
+            <Stack
+              sx={{
+                marginLeft: {
+                  xl: "0px",
+                  lg: "0px",
+                  md: "0px",
+                  sm: "0px",
+                  xs: "25px",
+                },
+              }}
+            >
               <Typography sx={contactText} className={selection.invert2}>
                 Contact
               </Typography>
@@ -120,7 +136,7 @@ const contactText = {
     lg: "left",
     md: "left",
     sm: "left",
-    xs: "left",
+    xs: "center",
   },
   lineHeight: { xl: "5rem", lg: "5rem", md: "4rem", sm: "4rem", xs: "4rem" },
 };

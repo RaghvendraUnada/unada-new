@@ -374,11 +374,26 @@ const EmployeeCard1 = (props) => {
                 },
               }}
             >
-              <img
+              <Box
+                component="img"
+                src={el.img}
+                className={selection.zero}
+                sx={{
+                  width: {
+                    xl: "100%",
+                    lg: "100%",
+                    md: "100%",
+                    sm: "98%",
+                    xs: "95%",
+                  },
+                  height: "100%",
+                }}
+              />
+              {/* <img
                 src={el.img}
                 style={{ width: "100%", height: "100%" }}
                 className={selection.zero}
-              />
+              /> */}
               <Typography sx={TeamNameTextStyle} className={selection.zero}>
                 {el.name}
               </Typography>
@@ -497,11 +512,26 @@ const EmployeeCard2 = (props) => {
                 },
               }}
             >
-              <img
+              <Box
+                component="img"
+                src={el.img}
+                className={selection.zero}
+                sx={{
+                  width: {
+                    xl: "100%",
+                    lg: "100%",
+                    md: "100%",
+                    sm: "98%",
+                    xs: "95%",
+                  },
+                  height: "100%",
+                }}
+              />
+              {/* <img
                 src={el.img}
                 style={{ width: "100%", height: "100%" }}
                 className={selection.zero}
-              />
+              /> */}
               <Typography sx={TeamNameTextStyle} className={selection.zero}>
                 {el.name}
               </Typography>
@@ -535,7 +565,7 @@ const TeamNameTextStyle = {
   fontFamily: "LGMedium",
   fontStyle: "normal",
   fontWeight: 500,
-  fontSize: { xl: "23px", lg: "23px", md: "20px", sm: "16px", xs: "16px" },
+  fontSize: { xl: "23px", lg: "23px", md: "20px", sm: "16px", xs: "14px" },
   lineHeight: { xl: "36px", lg: "36px", md: "30px", sm: "25px", xs: "20px" },
   letterSpacing: "0.01px",
   color: "#000",
