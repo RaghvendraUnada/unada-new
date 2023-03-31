@@ -202,14 +202,14 @@ const StoriesAtUnadaSection = () => {
                       lg: "auto",
                       md: "auto",
                       sm: "auto",
-                      xs: "280px",
+                      xs: "300px",
                     },
                     minHeight: {
                       xl: "345px",
                       lg: "345px",
                       md: "345px",
                       sm: "345px",
-                      xs: "280px",
+                      xs: "300px",
                     },
                   }}
                   component="img"

@@ -17,7 +17,7 @@ import Frame from "../../assets/Images/Contact/Frame.svg";
 import send from "../../assets/Images/Contact/send.svg";
 import call from "../../assets/Images/Career/call.svg";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import locationContact from "../../assets/Images/Career/locationContact.svg";
+import locationContact from "../../assets/Images/Career/locationContact.webp";
 import whatsappiucon from "../../assets/Images/Career/whatsappiucon.svg";
 import cross from "../../assets/Images/Career/cross.svg";
 import { Link, useLocation } from "react-router-dom";

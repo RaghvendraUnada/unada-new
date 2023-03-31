@@ -99,52 +99,49 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
 
   const apply = async (e) => {
     e.preventDefault();
-    if (firstName === "") {
-      alert("please fill firstname");
-    } else if (lastName === "") {
-      alert("please fill lastname");
-    } else if (email === "") {
-      alert("please fill email");
+    if (firstName === "" || lastName === "" || email === "" || !file) {
+      alert("please fill all required fields");
+    } else {
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setExperience("");
+      setSkill("");
+      setLinkedin("");
+      var formdata = new FormData();
+      formdata.append("UserFirstName", firstName);
+      formdata.append("UserLastName", lastName);
+      formdata.append("UserEmail", email);
+      formdata.append("UserExperience", experience);
+      formdata.append("UserSkills", selectedSkill);
+      formdata.append("UserLinkedInUrl", linkedin);
+      formdata.append("resume", file[0]);
+      formdata.append("coverLetter", coverLetter);
+      console.log(
+        firstName,
+        lastName,
+        email,
+        experience,
+        selectedSkill,
+        linkedin,
+        file[0],
+        coverLetter
+      );
+
+      var requestOptions = {
+        method: "POST",
+        body: formdata,
+        redirect: "follow",
+      };
+
+      fetch("https://unada-backend.unada.in/user_data/apply", requestOptions)
+        .then((response) => {
+          alert("data submitted");
+          response.text();
+        })
+        .then((result) => console.log(result))
+        .catch((error) => console.log("error", error));
     }
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setExperience("");
-    setSkill("");
-    setLinkedin("");
-    var formdata = new FormData();
-    formdata.append("UserFirstName", firstName);
-    formdata.append("UserLastName", lastName);
-    formdata.append("UserEmail", email);
-    formdata.append("UserExperience", experience);
-    formdata.append("UserSkills", selectedSkill);
-    formdata.append("UserLinkedInUrl", linkedin);
-    formdata.append("resume", file[0]);
-    formdata.append("coverLetter", coverLetter);
-    console.log(
-      firstName,
-      lastName,
-      email,
-      experience,
-      selectedSkill,
-      linkedin,
-      file[0],
-      coverLetter
-    );
-
-    var requestOptions = {
-      method: "POST",
-      body: formdata,
-      redirect: "follow",
-    };
-
-    fetch("https://unada-backend.unada.in/user_data/apply", requestOptions)
-      .then((response) => {
-        alert("data submitted");
-        response.text();
-      })
-      .then((result) => console.log(result))
-      .catch((error) => console.log("error", error));
   };
 
   const [searchQuery, setSearchQuery] = useState();
