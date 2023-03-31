@@ -197,8 +197,20 @@ const StoriesAtUnadaSection = () => {
                     width: "100%",
                     maxHeight: "400px",
                     mx: "auto",
-                    height: "auto",
-                    minHeight: "345px",
+                    height: {
+                      xl: "auto",
+                      lg: "auto",
+                      md: "auto",
+                      sm: "auto",
+                      xs: "280px",
+                    },
+                    minHeight: {
+                      xl: "345px",
+                      lg: "345px",
+                      md: "345px",
+                      sm: "345px",
+                      xs: "280px",
+                    },
                   }}
                   component="img"
                   alt="hello"
