@@ -18,8 +18,8 @@ import send from "../../assets/Images/Contact/send.svg";
 import call from "../../assets/Images/Career/call.svg";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import locationContact from "../../assets/Images/Career/locationContact.webp";
-import whatsappiucon from "../../assets/Images/Career/whatsappiucon.svg";
-import cross from "../../assets/Images/Career/cross.svg";
+import whatsappiucon from "../../assets/Images/Career/whatsappiucon.webp";
+import cross from "../../assets/Images/Career/cross.webp";
 import { Link, useLocation } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
@@ -241,7 +241,7 @@ export default function ChatUs(props) {
                       >
                         <img
                           src={call}
-                          style={{ width: "auto", height: "auto" }}
+                          style={{ width: "auto", height: "15px" }}
                         />
                         <Typography sx={callUs}>Call us</Typography>
                       </Box>
@@ -697,6 +697,7 @@ const style = {
   boxShadow: 24,
   borderRadius: "20px",
   p: { xl: 3, lg: 3, md: 3, sm: 3, xs: 1.5 },
+  minHeight: "480px",
 };
 const LightTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
