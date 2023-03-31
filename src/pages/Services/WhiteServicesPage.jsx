@@ -250,11 +250,12 @@ const WhiteServicesPage = () => {
                   height: "60%",
                   minHeight: "72vh",
                 }}
-                onClick={() => {
-                  setClick1(false);
-                }}
               >
-                <Box>
+                <Box
+                  onClick={() => {
+                    setClick1(false);
+                  }}
+                >
                   <img
                     src={ApplicationMobile}
                     alt="metaVerseImg"
@@ -274,22 +275,23 @@ const WhiteServicesPage = () => {
                       We specialize in designing and creating innovative
                       software applications for mobile devices.
                       <br />
-                      <Link
-                        to={"/application"}
-                        style={{
-                          textDecoration: "none",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <Button sx={ButtonStyle}>
-                          <EastSharpIcon fontSize="large" />
-                        </Button>
-                      </Link>
                     </Typography>
                   </Box>
                 </Box>
+                <Link
+                  to={"/application"}
+                  style={{
+                    textDecoration: "none",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <Button sx={ButtonStyle}>
+                    <EastSharpIcon fontSize="large" />
+                  </Button>
+                </Link>
               </Paper>
             ) : (
               <>
@@ -327,11 +329,12 @@ const WhiteServicesPage = () => {
                     height: "60%",
                     minHeight: "72vh",
                   }}
-                  onClick={() => {
-                    setClick2(false);
-                  }}
                 >
-                  <Box>
+                  <Box
+                    onClick={() => {
+                      setClick2(false);
+                    }}
+                  >
                     <img
                       src={Websiteimg}
                       alt="metaVerseImg"
@@ -354,21 +357,25 @@ const WhiteServicesPage = () => {
                       help conceptualizing and designing a unique solution, we
                       have the expertise to bring your vision to life
                       <br />
-                      <Link
-                        to={"/web"}
-                        style={{
-                          textDecoration: "none",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <Button sx={ButtonStyle}>
-                          <EastSharpIcon fontSize="large" />
-                        </Button>
-                      </Link>
                     </Typography>
                   </Box>
+                  <Link
+                    to={"/web"}
+                    style={{
+                      textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: "10px",
+                    }}
+                    onClick={() => {
+                      setClick2(true);
+                    }}
+                  >
+                    <Button sx={ButtonStyle}>
+                      <EastSharpIcon fontSize="large" />
+                    </Button>
+                  </Link>
                 </Paper>
               </motion.div>
             ) : (
@@ -407,11 +414,12 @@ const WhiteServicesPage = () => {
                     height: "60%",
                     minHeight: "72vh",
                   }}
-                  onClick={() => {
-                    setClick3(false);
-                  }}
                 >
-                  <Box>
+                  <Box
+                    onClick={() => {
+                      setClick3(false);
+                    }}
+                  >
                     <img
                       src={uiuximg}
                       alt="metaVerseImg"
@@ -432,21 +440,22 @@ const WhiteServicesPage = () => {
                       help conceptualizing and designing a unique solution, we
                       have the expertise to bring your vision to life
                       <br />
-                      <Link
-                        to={"/ui"}
-                        style={{
-                          textDecoration: "none",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <Button sx={ButtonStyle}>
-                          <EastSharpIcon fontSize="large" />
-                        </Button>
-                      </Link>
                     </Typography>
                   </Box>
+                  <Link
+                    to={"/ui"}
+                    style={{
+                      textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    <Button sx={ButtonStyle}>
+                      <EastSharpIcon fontSize="large" />
+                    </Button>
+                  </Link>
                 </Paper>
               </motion.div>
             ) : (
