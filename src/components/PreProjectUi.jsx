@@ -177,7 +177,6 @@ const PreProjectUi = () => {
               sm: "-90px",
               xs: "-30px",
             },
-            background: "red",
           }}
           id="abc"
           ref={scollToRef}
