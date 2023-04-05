@@ -383,10 +383,12 @@ const EmployeeCard1 = (props) => {
                     xl: "100%",
                     lg: "100%",
                     md: "100%",
-                    sm: "98%",
+                    sm: "95%",
                     xs: "95%",
                   },
+                  mx: "auto",
                   height: "100%",
+                  ml: { xl: 0, lg: 0, md: 0, xs: 1, sm: 1 },
                 }}
               />
               {/* <img
@@ -521,10 +523,11 @@ const EmployeeCard2 = (props) => {
                     xl: "100%",
                     lg: "100%",
                     md: "100%",
-                    sm: "98%",
+                    sm: "95%",
                     xs: "95%",
                   },
                   height: "100%",
+                  mx: "auto",
                 }}
               />
               {/* <img

@@ -77,8 +77,8 @@ export default function ChatUs(props) {
                   xl: "1.5rem",
                   lg: "1.5rem",
                   md: "1rem",
-                  sm: "1rem",
-                  xs: "1rem",
+                  sm: "0rem",
+                  xs: "0rem",
                 },
               }}
             >
@@ -697,7 +697,13 @@ const style = {
   boxShadow: 24,
   borderRadius: "20px",
   p: { xl: 3, lg: 3, md: 3, sm: 3, xs: 1.5 },
-  minHeight: "480px",
+  minHeight: {
+    xl: "440px",
+    lg: "440px",
+    md: "440px",
+    sm: "400px",
+    xs: "400px",
+  },
 };
 const LightTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />

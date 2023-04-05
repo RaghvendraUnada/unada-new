@@ -119,14 +119,20 @@ const ChatSection = () => {
               onMouseOut={() => setyoutubestate(youtubeblk)}
               alt="glassdoor"
             />
-            <Box
-              component="img"
-              src={glassdorstate}
-              sx={link}
-              onMouseOver={() => setglassdorstate(glassdoor)}
-              onMouseOut={() => setglassdorstate(glassdoorblk)}
+            <a
+              href="https://www.glassdoor.co.in/Overview/Working-at-Unada-Labs-EI_IE8512556.11,21.htm"
+              target="_blank"
               alt="glassdoor"
-            />
+            >
+              <Box
+                component="img"
+                src={glassdorstate}
+                sx={link}
+                onMouseOver={() => setglassdorstate(glassdoor)}
+                onMouseOut={() => setglassdorstate(glassdoorblk)}
+                alt="glassdoor"
+              />
+            </a>
           </Box>
           <Box
             sx={{

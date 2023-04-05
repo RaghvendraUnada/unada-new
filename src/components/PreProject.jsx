@@ -176,7 +176,7 @@ const PreProject = () => {
               lg: "0px",
               md: "-250px",
               sm: "-90px",
-              xs: "-90px",
+              xs: "-30px",
             },
           }}
           id="abc"
