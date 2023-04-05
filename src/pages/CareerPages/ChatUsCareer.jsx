@@ -94,6 +94,14 @@ export default function ChatUs(props) {
               <Typography
                 sx={{
                   ...boxText,
+                  // background: "red",
+                  width: {
+                    xl: "100%",
+                    lg: "100%",
+                    md: "100%",
+                    sm: "80%",
+                    xs: "80%",
+                  },
                 }}
               >
                 Chat to us.
@@ -181,6 +189,13 @@ export default function ChatUs(props) {
                   <Typography
                     sx={{
                       ...boxText,
+                      // width: {
+                      //   xl: "100%",
+                      //   lg: "100%",
+                      //   md: "100%",
+                      //   sm: "160%",
+                      //   xs: "170%",
+                      // },
                     }}
                   >
                     Give us a phone call.
@@ -383,6 +398,13 @@ export default function ChatUs(props) {
               <Typography
                 sx={{
                   ...boxText,
+                  // width: {
+                  //   xl: "100%",
+                  //   lg: "100%",
+                  //   md: "100%",
+                  //   sm: "160%",
+                  //   xs: "170%",
+                  // },
                 }}
               >
                 Book a consultation.
@@ -451,6 +473,13 @@ export default function ChatUs(props) {
                 <Typography
                   sx={{
                     ...boxText,
+                    // width: {
+                    //   xl: "100%",
+                    //   lg: "100%",
+                    //   md: "100%",
+                    //   sm: "160%",
+                    //   xs: "170%",
+                    // },
                   }}
                 >
                   Drop us an email.
@@ -507,6 +536,7 @@ const boxText = {
   },
   color: "#0F0F0F",
   fontFamily: "LGRegular",
+  // backgroundColor: "red",
 };
 
 const manageGrid = {
