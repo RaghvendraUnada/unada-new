@@ -77,8 +77,8 @@ export default function ChatUs(props) {
                   xl: "1.5rem",
                   lg: "1.5rem",
                   md: "1rem",
-                  sm: "1rem",
-                  xs: "1rem",
+                  sm: "0rem",
+                  xs: "0rem",
                 },
               }}
             >

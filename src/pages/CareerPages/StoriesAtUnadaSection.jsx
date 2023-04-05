@@ -209,7 +209,7 @@ const StoriesAtUnadaSection = () => {
                       lg: "345px",
                       md: "345px",
                       sm: "345px",
-                      xs: "300px",
+                      xs: "345px",
                     },
                   }}
                   component="img"

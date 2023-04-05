@@ -596,7 +596,6 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                       },
                       color: "white",
                       borderBottom: "2px solid white",
-                      bgcolor: "red",
                     }}
                     value={experience}
                     onChange={(e) => setExperience(e.target.value)}
@@ -756,53 +755,62 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
                   container
                   sx={{
                     width: {
-                      xl: "80%",
-                      lg: "80%",
-                      md: "50%",
-                      sm: "50%",
-                      xs: "60%",
+                      xl: "88%",
+                      lg: "88%",
+                      md: "88%",
+                      sm: "88%",
+                      xs: "88%",
                     },
-                    ml: {
-                      xl: "6rem",
-                      lg: "6rem",
-                      md: "8rem",
-                      sm: "6rem",
-                      xs: "4rem",
-                    },
+                    mx: "auto",
+
                     display: "flex",
                     justifyContent: "flex-start",
                     gap: "20px",
                     cursor: "pointer",
                   }}
                 >
-                  {listOfSkillss?.map((el, idx) => {
-                    return (
-                      <>
-                        <Box
-                          sx={{
-                            border: "2px solid grey",
-                            borderRadius: "15px",
-                            width: "auto",
-                            minWidth: {
-                              xl: "15%",
-                              lg: "15%",
-                              md: "15%",
-                              sm: "15%",
-                              xs: "40%",
-                            },
-                            height: "auto",
-                            textAlign: "center",
-                            p: 0.5,
-                          }}
-                          onClick={() => {
-                            StoreSelectedSkill(el);
-                          }}
-                        >
-                          <Typography sx={skillText}>{el}</Typography>
-                        </Box>
-                      </>
-                    );
-                  })}
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignContent: "center",
+                      alignItems: "center",
+                      flexWrap: "wrap",
+                      gap: "10px",
+                    }}
+                  >
+                    {listOfSkillss?.map((el, idx) => {
+                      return (
+                        <>
+                          <Box
+                            sx={{
+                              border: "2px solid grey",
+                              borderRadius: "15px",
+
+                              width: "auto",
+                              // minWidth: {
+                              //   xl: "12%",
+                              //   lg: "12%",
+                              //   md: "15%",
+                              //   sm: "15%",
+                              //   xs: "40%",
+                              // },
+                              maxWidth: "200px",
+                              height: "auto",
+                              textAlign: "center",
+                              px: 1,
+                              py: 0.3,
+                            }}
+                            onClick={() => {
+                              StoreSelectedSkill(el);
+                            }}
+                          >
+                            <Typography sx={skillText}>{el}</Typography>
+                          </Box>
+                        </>
+                      );
+                    })}
+                  </Box>
                 </Grid>
                 <Box sx={{}}>
                   <Grid
