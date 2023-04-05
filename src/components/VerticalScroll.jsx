@@ -880,7 +880,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
               >
                 <Box
                   sx={{
-                    mt: 8,
+                    mt: { xl: 8, lg: 8, md: 8, sm: 0, xs: 0 },
                     gap: "2rem",
                     display: "flex",
                     flexDirection: "column",
