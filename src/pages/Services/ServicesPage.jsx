@@ -24,6 +24,15 @@ const ServicesPage = () => {
   const [icon2, setIcon2] = useState("White");
   const [icon3, setIcon3] = useState("White");
 
+  const [stopText, setStopText] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setStopText(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <React.Fragment>
       <Grid
@@ -380,16 +389,18 @@ const ServicesPage = () => {
                         position: "relative",
                       }}
                     />
-                    <Typography sx={mobileActivePaperMetaText}>
-                      <Fade top duration={1000}>
-                        <Typography sx={mobileActivePapertext} mb={2}>
-                          AR/VR
-                        </Typography>
-                      </Fade>
-                      Whether you're a game developer looking to create the next
-                      big hit, or trying to curate immersive experiences.
-                      <br />
-                    </Typography>
+                    {stopText ? (
+                      <Typography sx={mobileActivePaperMetaText}>
+                        <Fade top duration={1000}>
+                          <Typography sx={mobileActivePapertext} mb={2}>
+                            AR/VR
+                          </Typography>
+                        </Fade>
+                        Whether you're a game developer looking to create the
+                        next big hit, or trying to curate immersive experiences.
+                        <br />
+                      </Typography>
+                    ) : null}
                   </Box>
                   <Box
                     sx={{
@@ -467,16 +478,18 @@ const ServicesPage = () => {
                         position: "relative",
                       }}
                     />
-                    <Typography sx={mobileActivePaperMetaText}>
-                      <Fade top duration={1000}>
-                        <Typography sx={mobileActivePapertext} mb={2}>
-                          Blockchain
-                        </Typography>
-                      </Fade>
-                      Our services include custom blockchain and web3
-                      development.
-                      <br />
-                    </Typography>
+                    {stopText ? (
+                      <Typography sx={mobileActivePaperMetaText}>
+                        <Fade top duration={1000}>
+                          <Typography sx={mobileActivePapertext} mb={2}>
+                            Blockchain
+                          </Typography>
+                        </Fade>
+                        Our services include custom blockchain and web3
+                        development.
+                        <br />
+                      </Typography>
+                    ) : null}
                   </Box>
                   <Box
                     sx={{
