@@ -278,7 +278,7 @@ function App() {
                           src={Logo}
                           width="40px"
                           height={"auto"}
-                          style={{ marginTop: "20px" }}
+                          sx={{ marginTop: "20px", marginLeft: "15px" }}
                         />
                       </Link>
 

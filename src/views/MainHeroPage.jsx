@@ -339,7 +339,7 @@ const MainHeroPage = () => {
           >
             <Paper
               sx={{
-                width: "98%",
+                width: "94%",
                 mx: "auto",
                 display: "flex",
                 justifyContent: "space-between",
@@ -349,7 +349,7 @@ const MainHeroPage = () => {
               <img
                 src={Logo}
                 width="40px"
-                height="30px"
+                height="auto"
                 style={{ marginTop: "22px" }}
                 onClick={() => window.location.reload()}
               />
