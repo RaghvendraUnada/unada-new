@@ -257,8 +257,8 @@ const MetaText = {
     xl: "24px",
     lg: "24px",
     md: "16px",
-    sm: "14px",
-    xs: "10px",
+    sm: "16px",
+    xs: "12px",
   },
   lineHeight: {
     xl: "36px",

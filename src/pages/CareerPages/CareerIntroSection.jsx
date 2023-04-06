@@ -206,7 +206,7 @@ function CareerIntroSection() {
           hear from you!
         </Typography>
       </Box>
-      <Grid
+      {/* <Grid
         container
         sx={{
           width: "98%",
@@ -259,6 +259,83 @@ function CareerIntroSection() {
                     mx: "auto",
                     height: "auto",
                     minHeight: "340px",
+                  }}
+                  component="img"
+                  alt="hello"
+                  src={slide.src}
+                />
+                <Typography sx={SwiperText}>{slide.text}</Typography>
+              </Box>
+            ))}
+          </Slider>
+        </Box>
+      </Grid> */}
+      <Grid
+        container
+        sx={{
+          width: "95%",
+          mx: "auto",
+          height: "100%",
+        }}
+      >
+        <Box
+          sx={{
+            width: {
+              xl: "98%",
+              lg: "98%",
+              md: "95%",
+              sm: "95%",
+              xs: "95%",
+            },
+            mx: "auto",
+            py: {
+              xl: "2rem",
+              lg: "2rem",
+              md: "1rem",
+              sm: "0.5rem",
+              xs: "0rem",
+            },
+          }}
+        >
+          <Slider {...settings}>
+            {ImgArr?.map((slide, sid) => (
+              <Box
+                key={`slide-${sid}`}
+                sx={{
+                  flex: "none",
+                  boxSize: "100%",
+                  padding: "1.5rem",
+                  flexDirection: "column",
+                  gap: "1rem",
+                  width: "33%",
+                }}
+              >
+                <Box
+                  sx={{
+                    backgroundSize: "cover",
+                    width: {
+                      xl: "350px",
+                      lg: "350px",
+                      md: "350px",
+                      sm: "280px",
+                      xs: "280px",
+                    },
+                    maxHeight: "400px",
+                    mx: "auto",
+                    height: {
+                      xl: "auto",
+                      lg: "auto",
+                      md: "auto",
+                      sm: "auto",
+                      xs: "300px",
+                    },
+                    minHeight: {
+                      xl: "345px",
+                      lg: "345px",
+                      md: "345px",
+                      sm: "345px",
+                      xs: "330px",
+                    },
                   }}
                   component="img"
                   alt="hello"
