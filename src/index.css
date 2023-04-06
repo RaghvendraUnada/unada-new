@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@font-face {
+/* @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap"); */
+/* @font-face {
   font-family: "MBFCanno";
   src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
 }
@@ -7,7 +7,7 @@
 @font-face {
   font-family: "MBFCanno";
   src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
-}
+} */
 
 body {
   background: #000;
@@ -37,7 +37,7 @@ html {
   }
 }
 
-@font-face {
+/* @font-face {
   font-family: "MBFCanno";
   src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
   font-display: swap;
@@ -94,7 +94,7 @@ html {
   font-family: "JekoNormal";
   src: url("../src/assets/Fonts/Jeko/JekoDEMO-Medium.otf");
   font-display: swap;
-}
+} */
 
 ::-webkit-scrollbar {
   display: none;

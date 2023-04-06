@@ -16,6 +16,9 @@ const Map = () => {
           <Box sx={{ background: "#000" }}>
             <iframe
               scrolling="no"
+              style={{
+                border: "none",
+              }}
               width="100%"
               height="690px"
               id="gmap_canvas"

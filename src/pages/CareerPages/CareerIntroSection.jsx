@@ -242,8 +242,20 @@ function CareerIntroSection() {
                 <Box
                   sx={{
                     backgroundSize: "cover",
-                    width: "100%",
-                    maxHeight: "400px",
+                    width: {
+                      xl: "100%",
+                      lg: "100%",
+                      md: "100%",
+                      sm: "90%",
+                      xs: "90%",
+                    },
+                    maxHeight: {
+                      xl: "400px",
+                      lg: "400px",
+                      md: "400px",
+                      sm: "320px",
+                      xs: "320px",
+                    },
                     mx: "auto",
                     height: "auto",
                     minHeight: "340px",

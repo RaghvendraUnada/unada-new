@@ -153,7 +153,9 @@ const ServicesPage = () => {
                 opacity: 1,
               },
             }}
-            onMouseOver={() => setPaper2(true)}
+            onMouseOver={() => {
+              setPaper2(true);
+            }}
             onMouseOut={() => setPaper2(ture)}
           >
             {paper2 ? (
@@ -586,12 +588,12 @@ const ActiveBoxStyles = {
 const ServicePaperStyle = {
   width: "auto",
   objectFit: "cover",
-  height: {
+  minHeight: {
     xl: "100vh",
     lg: "100vh",
     md: "100vh",
-    sm: "10vh",
-    xs: "10vh",
+    sm: "100vh",
+    xs: "100vh",
   },
   borderRight: "1px solid rgba(163, 163, 163, 0.3)",
   borderBottom: {

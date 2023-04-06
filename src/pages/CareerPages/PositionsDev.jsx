@@ -52,7 +52,7 @@ const PositionsDev = () => {
           lg: "100vh",
           md: "100vh",
           sm: "80vh",
-          xs: "80vh",
+          xs: "65vh",
         },
         background: "#000",
       }}

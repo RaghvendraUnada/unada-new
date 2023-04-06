@@ -194,7 +194,13 @@ const StoriesAtUnadaSection = () => {
                 <Box
                   sx={{
                     backgroundSize: "cover",
-                    width: "100%",
+                    width: {
+                      xl: "350px",
+                      lg: "350px",
+                      md: "350px",
+                      sm: "280px",
+                      xs: "280px",
+                    },
                     maxHeight: "400px",
                     mx: "auto",
                     height: {
@@ -209,7 +215,7 @@ const StoriesAtUnadaSection = () => {
                       lg: "345px",
                       md: "345px",
                       sm: "345px",
-                      xs: "345px",
+                      xs: "330px",
                     },
                   }}
                   component="img"

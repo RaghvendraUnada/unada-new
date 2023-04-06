@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap%27");
+/* @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap%27"); */
 
 body {
   background: #000;
@@ -50,7 +50,7 @@ html {
   }
 }
 
-@font-face {
+/* @font-face {
   font-family: "MBFCanno";
   src: url("../src/assets/Fonts/MBFCannoRegular/MBFCannoRegular.otf");
 }
@@ -95,7 +95,7 @@ html {
 @font-face {
   font-family: "BSSign";
   src: url("../src/assets/Fonts/Brotherside-Signature.ttf");
-}
+} */
 
 button:focus {
   background-color: inherit !important;

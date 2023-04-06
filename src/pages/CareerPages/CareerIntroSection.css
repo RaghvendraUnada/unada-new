@@ -54,11 +54,19 @@
   border-color: #f00;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 426px) {
   .slick-next {
-    right: -7px;
+    right: -5px;
   }
   .slick-prev:before {
-    margin-left: -12px;
+    margin-left: -10px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .slick-next {
+    right: -3px;
+  }
+  .slick-prev:before {
+    margin-left: -7px;
   }
 }

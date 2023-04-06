@@ -38,24 +38,32 @@ const ContactHeroSection = () => {
               lg: "3rem",
               md: "3rem",
               sm: "3rem",
-              xs: "15rem",
+              xs: "6rem",
             },
             display: "flex",
             flexDirection: "column",
-            alignItems: "flex-start",
+            alignItems: {
+              xl: "flex-start",
+              lg: "flex-start",
+              md: "flex-start",
+              sm: "flex-start",
+              xs: "center",
+            },
           }}
         >
           <Fade top duration={1000}>
             <Stack
-              sx={{
-                marginLeft: {
-                  xl: "0px",
-                  lg: "0px",
-                  md: "0px",
-                  sm: "0px",
-                  xs: "25px",
-                },
-              }}
+              sx={
+                {
+                  // marginLeft: {
+                  //   xl: "0px",
+                  //   lg: "0px",
+                  //   md: "0px",
+                  //   sm: "0px",
+                  //   xs: "15px",
+                  // },
+                }
+              }
             >
               <Typography sx={contactText} className={selection.invert2}>
                 Contact
