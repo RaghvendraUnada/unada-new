@@ -26,6 +26,11 @@ import Aashvi from "../../assets/Images/ourTeamCutOut/Aashvi.webp";
 import Adi from "../../assets/Images/ourTeamCutOut/Adi.webp";
 import Aditiya from "../../assets/Images/ourTeamCutOut/Aditiya.webp";
 import Rohan from "../../assets/Images/ourTeamCutOut/Rohan.webp";
+import tejas from "../../assets/Images/ourTeamCutOut/tejas.webp";
+import new3D from "../../assets/Images/ourTeamCutOut/new3D.webp";
+import hari from "../../assets/Images/ourTeamCutOut/hari.webp";
+import fluterwala from "../../assets/Images/ourTeamCutOut/fluterwala.webp";
+import devendra from "../../assets/Images/ourTeamCutOut/devendra.webp";
 import greyemptyimg from "../../assets/Images/ourTeamCutOut/greyemptyimg.svg";
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
@@ -312,7 +317,7 @@ const EmployeeCard1 = (props) => {
       place: "Senior 3D Developer",
     },
     {
-      img: greyemptyimg,
+      img: devendra,
       name: "Devendra Chaudhari ",
       place: "3D Artist",
     },
@@ -436,9 +441,9 @@ const EmployeeCard2 = (props) => {
       place: "Full Stack Developer",
     },
     {
-      img: Mit,
-      name: "Mit Shah",
-      place: "Development Intern ",
+      img: fluterwala,
+      name: "kamlesh prajapat",
+      place: " flutter intern ",
     },
     {
       img: greyemptyimg,
@@ -447,12 +452,12 @@ const EmployeeCard2 = (props) => {
     },
 
     {
-      img: greyemptyimg,
+      img: tejas,
       name: "Tejas Lohar",
       place: "DevOps",
     },
     {
-      img: greyemptyimg,
+      img: hari,
       name: "Harikrushna Chauhan",
       place: "Manual Tester",
     },
@@ -477,9 +482,9 @@ const EmployeeCard2 = (props) => {
       place: "UI/UX Designer ",
     },
     {
-      img: greyemptyimg,
-      name: "Next is You!",
-      place: "",
+      img: new3D,
+      name: "Radhika Panjwani",
+      place: "Unity3D Developer",
     },
   ];
   return (

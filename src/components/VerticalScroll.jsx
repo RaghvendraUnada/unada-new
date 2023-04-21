@@ -99,7 +99,7 @@ const VerticalScroll = ({ positionDevo, pos1, pos2, pos3 }) => {
 
   const apply = async (e) => {
     e.preventDefault();
-    if (firstName === "" || lastName === "" || email === "" || !file) {
+    if (firstName.includes === "" || lastName === "" || email === "" || !file) {
       alert("please fill all required fields");
     } else {
       setFirstName("");
