@@ -263,7 +263,7 @@ export default function ChatUs(props) {
                       <Typography sx={phNo}>+91 9510983354</Typography>
                     </Box>
                     <a
-                      href="https://api.whatsapp.com/send/?phone=918980298568&text&type=phone_number&app_absent=0"
+                      href="https://api.whatsapp.com/send/?phone=919510983354&text&type=phone_number&app_absent=0"
                       target="_blank"
                       alt="wtsp"
                     >

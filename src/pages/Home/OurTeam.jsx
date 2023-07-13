@@ -285,11 +285,11 @@ const EmployeeCard1 = (props) => {
       name: "Rohan Hundia ",
       place: "Co-Founder & CEO ",
     },
-    {
-      img: Yash,
-      name: "Yash Deliwala ",
-      place: "President People and Vibes",
-    },
+    // {
+    //   img: Yash,
+    //   name: "Yash Deliwala ",
+    //   place: "President People and Vibes",
+    // },
     {
       img: Raghvendra,
       name: "Raghvendra Singh ",
@@ -298,12 +298,12 @@ const EmployeeCard1 = (props) => {
     {
       img: Shri,
       name: "Shrikant Kanthale ",
-      place: "L1 Web Developer",
+      place: "L1 Full Stack Developer",
     },
     {
       img: Ronak,
       name: "Ronak Goswami",
-      place: "Full Stack Developer",
+      place: "Jr.Full Stack Developer",
     },
 
     {
@@ -314,7 +314,7 @@ const EmployeeCard1 = (props) => {
     {
       img: Harsiddh,
       name: "Harsiddh Rajput ",
-      place: "Senior 3D Developer",
+      place: "Sr.3D Developer",
     },
     {
       img: devendra,
@@ -329,22 +329,22 @@ const EmployeeCard1 = (props) => {
     {
       img: Zaid,
       name: "Zaid Shaikh ",
-      place: "Full Stack Developer",
+      place: "Jr.Full Stack Developer",
     },
-    {
-      img: Adi,
-      name: "Aditya Chauhan",
-      place: "3D Artist",
-    },
+    // {
+    //   img: Adi,
+    //   name: "Aditya Chauhan",
+    //   place: "3D Artist",
+    // },
     {
       img: Virendra,
       name: "Virendra Parihar",
-      place: "Senior Android Developer ",
+      place: "Sr.Android Developer ",
     },
     {
       img: Sandeep,
       name: "Sandeep Singh",
-      place: "UI/UX Designer ",
+      place: "Jr.UI/UX Designer ",
     },
   ];
   return (
@@ -430,31 +430,31 @@ const EmployeeCard2 = (props) => {
       name: "Samir Vitlani",
       place: "Project Manager & Lead ",
     },
-    {
-      img: Rutuja,
-      name: "Rutuja Karnavat ",
-      place: "Chief Vibes & People Officer ",
-    },
+    // {
+    //   img: Rutuja,
+    //   name: "Rutuja Karnavat ",
+    //   place: "Chief Vibes & People Officer ",
+    // },
     {
       img: greyemptyimg,
       name: "Shreyansh Sheth",
       place: "Full Stack Developer",
     },
-    {
-      img: fluterwala,
-      name: "kamlesh prajapat",
-      place: " flutter intern ",
-    },
+    // {
+    //   img: fluterwala,
+    //   name: "kamlesh prajapat",
+    //   place: " Flutter Intern ",
+    // },
     {
       img: greyemptyimg,
       name: "Dev Mistry",
-      place: "Development Intern",
+      place: "Web Development Intern",
     },
 
     {
       img: tejas,
       name: "Tejas Lohar",
-      place: "DevOps",
+      place: "DevOps Engineer",
     },
     {
       img: hari,
@@ -464,12 +464,12 @@ const EmployeeCard2 = (props) => {
     {
       img: Nammish,
       name: "Naimish Gadhiya ",
-      place: "Full Stack Developer",
+      place: "Jr.Full Stack Developer",
     },
     {
       img: Aashvi,
-      name: "Aashvi zala ",
-      place: "UI/UX",
+      name: "Aashvi Zala ",
+      place: "UI-UX Intern",
     },
     {
       img: Khushboo,
@@ -479,12 +479,12 @@ const EmployeeCard2 = (props) => {
     {
       img: Jin,
       name: "Jahnavi Makwana ",
-      place: "UI/UX Designer ",
+      place: "Jr.UI/UX Designer ",
     },
     {
       img: new3D,
       name: "Radhika Panjwani",
-      place: "Unity3D Developer",
+      place: "Unity Developer",
     },
   ];
   return (
