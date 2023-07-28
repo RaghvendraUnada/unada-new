@@ -329,7 +329,7 @@ const EmployeeCard1 = (props) => {
     {
       img: Zaid,
       name: "Zaid Shaikh ",
-      place: "Jr.Full Stack Developer",
+      place: "Full Stack Developer",
     },
     // {
     //   img: Adi,
