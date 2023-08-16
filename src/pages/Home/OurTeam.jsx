@@ -1,37 +1,41 @@
-import { Grid, Paper, Typography, Box } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import "./OurTeam.css";
-import { keyframes } from "styled-components";
-import styled from "styled-components";
-import axios from "axios";
-import Fade from "react-reveal/Fade";
-import selection from "./home.module.css";
-import { useSpring } from "react-spring";
-import Zaid from "../../assets/Images/ourTeamCutOut/Zaid.webp";
-import Raghvendra from "../../assets/Images/ourTeamCutOut/Raghvendra.webp";
-import Ronak from "../../assets/Images/ourTeamCutOut/Ronak.webp";
-import Shri from "../../assets/Images/ourTeamCutOut/Shri.webp";
-import Sandeep from "../../assets/Images/ourTeamCutOut/Sandeep.webp";
-import Akash from "../../assets/Images/ourTeamCutOut/Akash.webp";
-import Yash from "../../assets/Images/ourTeamCutOut/Yash.webp";
-import Harsiddh from "../../assets/Images/ourTeamCutOut/Harsiddh.webp";
-import Mit from "../../assets/Images/ourTeamCutOut/Mit.webp";
-import Khushboo from "../../assets/Images/ourTeamCutOut/Khushboo.webp";
-import Jin from "../../assets/Images/ourTeamCutOut/Jin.webp";
-import Rutuja from "../../assets/Images/ourTeamCutOut/Rutuja.webp";
-import Virendra from "../../assets/Images/ourTeamCutOut/Virendra.webp";
-import Nammish from "../../assets/Images/ourTeamCutOut/Nammish.webp";
-import Nishit from "../../assets/Images/ourTeamCutOut/Nishit.webp";
-import Aashvi from "../../assets/Images/ourTeamCutOut/Aashvi.webp";
-import Adi from "../../assets/Images/ourTeamCutOut/Adi.webp";
-import Aditiya from "../../assets/Images/ourTeamCutOut/Aditiya.webp";
-import Rohan from "../../assets/Images/ourTeamCutOut/Rohan.webp";
-import tejas from "../../assets/Images/ourTeamCutOut/tejas.webp";
-import new3D from "../../assets/Images/ourTeamCutOut/new3D.webp";
-import hari from "../../assets/Images/ourTeamCutOut/hari.webp";
-import fluterwala from "../../assets/Images/ourTeamCutOut/fluterwala.webp";
-import devendra from "../../assets/Images/ourTeamCutOut/devendra.webp";
-import greyemptyimg from "../../assets/Images/ourTeamCutOut/greyemptyimg.svg";
+import { Grid, Paper, Typography, Box } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import './OurTeam.css';
+import { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import axios from 'axios';
+import Fade from 'react-reveal/Fade';
+import selection from './home.module.css';
+import { useSpring } from 'react-spring';
+import Zaid from '../../assets/Images/ourTeamCutOut/Zaid.webp';
+import Raghvendra from '../../assets/Images/ourTeamCutOut/Raghvendra.webp';
+import Ronak from '../../assets/Images/ourTeamCutOut/Ronak.webp';
+import Shri from '../../assets/Images/ourTeamCutOut/Shri.webp';
+import Sandeep from '../../assets/Images/ourTeamCutOut/Sandeep.webp';
+import Akash from '../../assets/Images/ourTeamCutOut/Akash.webp';
+import Yash from '../../assets/Images/ourTeamCutOut/Yash.webp';
+import Harsiddh from '../../assets/Images/ourTeamCutOut/Harsiddh.webp';
+import Mit from '../../assets/Images/ourTeamCutOut/Mit.webp';
+import Khushboo from '../../assets/Images/ourTeamCutOut/Khushboo.webp';
+import Jin from '../../assets/Images/ourTeamCutOut/Jin.webp';
+import Rutuja from '../../assets/Images/ourTeamCutOut/Rutuja.webp';
+import Virendra from '../../assets/Images/ourTeamCutOut/Virendra.webp';
+import Nammish from '../../assets/Images/ourTeamCutOut/Nammish.webp';
+import Nishit from '../../assets/Images/ourTeamCutOut/Nishit.webp';
+import Aashvi from '../../assets/Images/ourTeamCutOut/Aashvi.webp';
+import Adi from '../../assets/Images/ourTeamCutOut/Adi.webp';
+import Aditiya from '../../assets/Images/ourTeamCutOut/Aditiya.webp';
+import Rohan from '../../assets/Images/ourTeamCutOut/Rohan.webp';
+import tejas from '../../assets/Images/ourTeamCutOut/tejas.webp';
+import new3D from '../../assets/Images/ourTeamCutOut/new3D.webp';
+import hari from '../../assets/Images/ourTeamCutOut/hari.webp';
+import fluterwala from '../../assets/Images/ourTeamCutOut/fluterwala.webp';
+import devendra from '../../assets/Images/ourTeamCutOut/devendra.webp';
+import greyemptyimg from '../../assets/Images/ourTeamCutOut/greyemptyimg.svg';
+import Shreyansh from '../../assets/Images/ourTeamCutOut/Shreyansh.png';
+import Dev from '../../assets/Images/ourTeamCutOut/Dev.png';
+import Sameer from '../../assets/Images/ourTeamCutOut/Sameer.png';
+import Roshni from '../../assets/Images/ourTeamCutOut/Roshni.png';
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
   const [flip, setFlip] = useState(false);
@@ -47,7 +51,7 @@ const OurTeam = () => {
 
   const FetchTeamData = async () => {
     await axios
-      .get("team/get_members")
+      .get('team/get_members')
       .then((res) => {
         setTeamData(res.data);
       })
@@ -62,23 +66,23 @@ const OurTeam = () => {
     <Paper
       elevation={0}
       sx={{
-        borderRadius: "0px",
-        border: "none",
-        boxShadow: "none",
+        borderRadius: '0px',
+        border: 'none',
+        boxShadow: 'none',
       }}
     >
       <Paper
         sx={{
-          borderRadius: "0px",
-          border: "none",
-          boxShadow: "none",
-          width: "100%",
-          height: { xl: "100%", lg: "100%", md: "80%", xs: "80%" },
-          minHeight: { xl: "270px", lg: "270px", md: "150px", xs: "150px" },
-          maxHeight: "270px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          borderRadius: '0px',
+          border: 'none',
+          boxShadow: 'none',
+          width: '100%',
+          height: { xl: '100%', lg: '100%', md: '80%', xs: '80%' },
+          minHeight: { xl: '270px', lg: '270px', md: '150px', xs: '150px' },
+          maxHeight: '270px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
         elevation={0}
       >
@@ -90,21 +94,21 @@ const OurTeam = () => {
       </Paper>
       <Paper
         sx={{
-          borderTop: "1px solid rgba(163, 163, 163, 0.3)",
-          height: "100%",
+          borderTop: '1px solid rgba(163, 163, 163, 0.3)',
+          height: '100%',
         }}
         elevation={0}
       >
         <Grid
           container
           sx={{
-            height: "100%",
+            height: '100%',
             maxHeight: {
-              xl: "650px",
-              lg: "650px",
-              md: "650px",
-              sm: "100%",
-              xs: "100%",
+              xl: '650px',
+              lg: '650px',
+              md: '650px',
+              sm: '100%',
+              xs: '100%',
             },
           }}
         >
@@ -116,26 +120,26 @@ const OurTeam = () => {
             sm={12}
             xs={12}
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              minHeight: "200px",
-              maxHeight: "100%",
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              minHeight: '200px',
+              maxHeight: '100%',
             }}
           >
             <Box
               sx={{
-                width: "90%",
-                height: "auto",
-                mx: "auto",
-                maxWidth: "400px",
-                maxHeight: "400px",
+                width: '90%',
+                height: 'auto',
+                mx: 'auto',
+                maxWidth: '400px',
+                maxHeight: '400px',
                 textAlign: {
-                  xl: "initial",
-                  lg: "initial",
-                  md: "initial",
-                  sm: "center",
-                  xs: "center",
+                  xl: 'initial',
+                  lg: 'initial',
+                  md: 'initial',
+                  sm: 'center',
+                  xs: 'center',
                 },
                 mb: { xl: 6, lg: 6, md: 6, sm: 0, xs: 0 },
               }}
@@ -145,15 +149,15 @@ const OurTeam = () => {
               </Typography>
               <Typography sx={coloredText} className={selection.invert}>
                 boundaries of technology and make it happen.
-              </Typography>{" "}
+              </Typography>{' '}
             </Box>
           </Grid>
           <Grid item xl={8} lg={8} md={7} sm={12} xs={12}>
             <Paper
               elevation={0}
               sx={{
-                boxShadow: "0px",
-                bgcolor: "transparent",
+                boxShadow: '0px',
+                bgcolor: 'transparent',
                 pt: 2,
                 mb: 0,
               }}
@@ -161,18 +165,18 @@ const OurTeam = () => {
               <Paper
                 elevation={0}
                 sx={{
-                  borderLeft: "1px solid rgba(163, 163, 163, 0.3)",
-                  borderRadius: "0px",
-                  width: "100%",
-                  height: "100%",
-                  minHeight: "600px",
-                  maxHeight: "600px",
-                  overflowY: "hidden",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  flexDirection: "row",
-                  position: "relative",
+                  borderLeft: '1px solid rgba(163, 163, 163, 0.3)',
+                  borderRadius: '0px',
+                  width: '100%',
+                  height: '100%',
+                  minHeight: '600px',
+                  maxHeight: '600px',
+                  overflowY: 'hidden',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  flexDirection: 'row',
+                  position: 'relative',
                   p: 0,
                 }}
               >
@@ -219,18 +223,18 @@ const OurTeam = () => {
 export default OurTeam;
 
 const TextStyle = {
-  fontFamily: "LGTrial",
-  fontStyle: "normal",
+  fontFamily: 'LGTrial',
+  fontStyle: 'normal',
   fontWeight: 500,
-  fontSize: { xl: "60px", lg: "60px", md: "40px", sm: "30px", xs: "30px" },
-  lineHeight: { xl: "75px", lg: "75px", md: "60px", sm: "30px", xs: "30px" },
-  color: "#000",
+  fontSize: { xl: '60px', lg: '60px', md: '40px', sm: '30px', xs: '30px' },
+  lineHeight: { xl: '75px', lg: '75px', md: '60px', sm: '30px', xs: '30px' },
+  color: '#000',
   textAlign: {
-    xl: "left",
-    lg: "left",
-    md: "left",
-    sm: "center",
-    xs: "center",
+    xl: 'left',
+    lg: 'left',
+    md: 'left',
+    sm: 'center',
+    xs: 'center',
   },
 };
 const hue = keyframes`
@@ -282,54 +286,54 @@ const EmployeeCard1 = (props) => {
   const nameListEmp = [
     {
       img: Rohan,
-      name: "Rohan Hundia ",
-      place: "Co-Founder & CEO ",
+      name: 'Rohan Hundia ',
+      place: 'Co-Founder & CEO ',
     },
-    // {
-    //   img: Yash,
-    //   name: "Yash Deliwala ",
-    //   place: "President People and Vibes",
-    // },
+    {
+      img: Roshni,
+      name: 'Roshni Hendricks',
+      place: ' Chief People Officer',
+    },
     {
       img: Raghvendra,
-      name: "Raghvendra Singh ",
-      place: "Full Stack Developer",
+      name: 'Raghvendra Singh ',
+      place: 'Full Stack Developer',
     },
     {
       img: Shri,
-      name: "Shrikant Kanthale ",
-      place: "L1 Full Stack Developer",
+      name: 'Shrikant Kanthale ',
+      place: 'L1 Full Stack Developer',
     },
     {
       img: Ronak,
-      name: "Ronak Goswami",
-      place: "Jr.Full Stack Developer",
+      name: 'Ronak Goswami',
+      place: 'Jr.Full Stack Developer',
     },
 
     {
       img: Akash,
-      name: "Akash Mishra",
-      place: "MERN Stack Developer ",
+      name: 'Akash Mishra',
+      place: 'MERN Stack Developer ',
     },
     {
       img: Harsiddh,
-      name: "Harsiddh Rajput ",
-      place: "Sr.3D Developer",
+      name: 'Harsiddh Rajput ',
+      place: 'Sr.3D Developer',
     },
     {
       img: devendra,
-      name: "Devendra Chaudhari ",
-      place: "3D Artist",
+      name: 'Devendra Chaudhari ',
+      place: '3D Artist',
     },
     {
       img: Nishit,
-      name: "Nishit Godhani ",
-      place: "3D Intern ",
+      name: 'Nishit Godhani ',
+      place: '3D Intern ',
     },
     {
       img: Zaid,
-      name: "Zaid Shaikh ",
-      place: "Full Stack Developer",
+      name: 'Zaid Shaikh ',
+      place: 'Full Stack Developer',
     },
     // {
     //   img: Adi,
@@ -338,13 +342,13 @@ const EmployeeCard1 = (props) => {
     // },
     {
       img: Virendra,
-      name: "Virendra Parihar",
-      place: "Sr.Android Developer ",
+      name: 'Virendra Parihar',
+      place: 'Sr.Android Developer ',
     },
     {
       img: Sandeep,
-      name: "Sandeep Singh",
-      place: "Jr.UI/UX Designer ",
+      name: 'Sandeep Singh',
+      place: 'Jr.UI/UX Designer ',
     },
   ];
   return (
@@ -355,27 +359,27 @@ const EmployeeCard1 = (props) => {
       md={6}
       sm={6}
       xs={12}
-      sx={{ mx: "auto", mt: 0.25, p: 0 }}
-      className={"employe-card employe-card-1"}
+      sx={{ mx: 'auto', mt: 0.25, p: 0 }}
+      className={'employe-card employe-card-1'}
     >
       <Box
         sx={{
-          height: "auto",
-          mx: "auto",
+          height: 'auto',
+          mx: 'auto',
         }}
       >
         {nameListEmp?.map((el, idx) => {
           return (
             <Box
               sx={{
-                mt: idx === 0 ? "-30px" : 0,
-                height: "100%",
+                mt: idx === 0 ? '-30px' : 0,
+                height: '100%',
                 minHeight: {
-                  xl: "380px",
-                  lg: "380px",
-                  md: "350px",
-                  sm: "300px",
-                  xs: "250px",
+                  xl: '380px',
+                  lg: '380px',
+                  md: '350px',
+                  sm: '300px',
+                  xs: '250px',
                 },
               }}
             >
@@ -385,14 +389,14 @@ const EmployeeCard1 = (props) => {
                 className={selection.zero}
                 sx={{
                   width: {
-                    xl: "100%",
-                    lg: "100%",
-                    md: "100%",
-                    sm: "95%",
-                    xs: "95%",
+                    xl: '100%',
+                    lg: '100%',
+                    md: '100%',
+                    sm: '95%',
+                    xs: '95%',
                   },
-                  mx: "auto",
-                  height: "100%",
+                  mx: 'auto',
+                  height: '100%',
                   ml: { xl: 0, lg: 0, md: 0, xs: 1, sm: 1 },
                 }}
               />
@@ -422,13 +426,13 @@ const EmployeeCard2 = (props) => {
   const nameListEmp = [
     {
       img: Aditiya,
-      name: "Aditya Vijay ",
-      place: "Co-Founder & CTO",
+      name: 'Aditya Vijay ',
+      place: 'Co-Founder & CTO',
     },
     {
-      img: greyemptyimg,
-      name: "Samir Vitlani",
-      place: "Project Manager & Lead ",
+      img: Sameer,
+      name: 'Samir Vitlani',
+      place: 'Project Manager & Lead ',
     },
     // {
     //   img: Rutuja,
@@ -436,9 +440,10 @@ const EmployeeCard2 = (props) => {
     //   place: "Chief Vibes & People Officer ",
     // },
     {
-      img: greyemptyimg,
-      name: "Shreyansh Sheth",
-      place: "Full Stack Developer",
+      // img: greyemptyimg,
+      img: Shreyansh,
+      name: 'Shreyansh Sheth',
+      place: 'Full Stack Developer',
     },
     // {
     //   img: fluterwala,
@@ -446,45 +451,50 @@ const EmployeeCard2 = (props) => {
     //   place: " Flutter Intern ",
     // },
     {
-      img: greyemptyimg,
-      name: "Dev Mistry",
-      place: "Web Development Intern",
+      img: Dev,
+      name: 'Dev Mistry',
+      place: 'Web Development Intern',
     },
 
     {
       img: tejas,
-      name: "Tejas Lohar",
-      place: "DevOps Engineer",
+      name: 'Tejas Lohar',
+      place: 'DevOps Engineer',
     },
     {
       img: hari,
-      name: "Harikrushna Chauhan",
-      place: "Manual Tester",
+      name: 'Harikrushna Chauhan',
+      place: 'Manual Tester',
     },
     {
       img: Nammish,
-      name: "Naimish Gadhiya ",
-      place: "Jr.Full Stack Developer",
+      name: 'Naimish Gadhiya ',
+      place: 'Jr.Full Stack Developer',
     },
     {
       img: Aashvi,
-      name: "Aashvi Zala ",
-      place: "UI-UX Intern",
+      name: 'Aashvi Zala ',
+      place: 'UI-UX Intern',
     },
     {
       img: Khushboo,
-      name: "Khushboo Rai ",
-      place: "Andriod Developer",
+      name: 'Khushboo Rai ',
+      place: 'Andriod Developer',
     },
     {
       img: Jin,
-      name: "Jahnavi Makwana ",
-      place: "Jr.UI/UX Designer ",
+      name: 'Jahnavi Makwana ',
+      place: 'Jr.UI/UX Designer ',
     },
     {
       img: new3D,
-      name: "Radhika Panjwani",
-      place: "Unity Developer",
+      name: 'Radhika Panjwani',
+      place: 'Unity Developer',
+    },
+    {
+      img: greyemptyimg,
+      name: 'Next is You!!',
+      // place: 'Unity Developer',
     },
   ];
   return (
@@ -495,27 +505,27 @@ const EmployeeCard2 = (props) => {
       md={6}
       sm={6}
       xs={12}
-      sx={{ mx: "auto", mt: 4 }}
-      className={"employe-card employe-card-1"}
+      sx={{ mx: 'auto', mt: 4 }}
+      className={'employe-card employe-card-1'}
     >
       <Box
         sx={{
-          height: "auto",
-          mx: "auto",
+          height: 'auto',
+          mx: 'auto',
         }}
       >
         {nameListEmp?.map((el, idx) => {
           return (
             <Box
               sx={{
-                mt: idx === 0 ? "-60px" : 0,
-                height: "100%",
+                mt: idx === 0 ? '-60px' : 0,
+                height: '100%',
                 minHeight: {
-                  xl: "380px",
-                  lg: "380px",
-                  md: "350px",
-                  sm: "300px",
-                  xs: "250px",
+                  xl: '380px',
+                  lg: '380px',
+                  md: '350px',
+                  sm: '300px',
+                  xs: '250px',
                 },
               }}
             >
@@ -525,14 +535,14 @@ const EmployeeCard2 = (props) => {
                 className={selection.zero}
                 sx={{
                   width: {
-                    xl: "100%",
-                    lg: "100%",
-                    md: "100%",
-                    sm: "95%",
-                    xs: "95%",
+                    xl: '100%',
+                    lg: '100%',
+                    md: '100%',
+                    sm: '95%',
+                    xs: '95%',
                   },
-                  height: "100%",
-                  mx: "auto",
+                  height: '100%',
+                  mx: 'auto',
                 }}
               />
               {/* <img
@@ -558,49 +568,49 @@ const EmployeeCard2 = (props) => {
 };
 
 const OurTeamTextStyle = {
-  fontFamily: "LGLight",
-  fontStyle: "normal",
+  fontFamily: 'LGLight',
+  fontStyle: 'normal',
   fontWeight: 400,
-  fontSize: { xl: "120px", lg: "100px", md: "80px", sm: "60px", xs: "40px" },
-  lineHeight: { xl: "97px", lg: "75px", md: "60px", sm: "45px", xs: "30px" },
-  letterSpacing: "2.97231px",
-  color: "#000000",
-  textAlign: "center",
-  mx: "auto",
+  fontSize: { xl: '120px', lg: '100px', md: '80px', sm: '60px', xs: '40px' },
+  lineHeight: { xl: '97px', lg: '75px', md: '60px', sm: '45px', xs: '30px' },
+  letterSpacing: '2.97231px',
+  color: '#000000',
+  textAlign: 'center',
+  mx: 'auto',
 };
 
 const TeamNameTextStyle = {
-  fontFamily: "LGMedium",
-  fontStyle: "normal",
+  fontFamily: 'LGMedium',
+  fontStyle: 'normal',
   fontWeight: 500,
-  fontSize: { xl: "23px", lg: "23px", md: "20px", sm: "16px", xs: "14px" },
-  lineHeight: { xl: "36px", lg: "36px", md: "30px", sm: "25px", xs: "20px" },
-  letterSpacing: "0.01px",
-  color: "#000",
+  fontSize: { xl: '23px', lg: '23px', md: '20px', sm: '16px', xs: '14px' },
+  lineHeight: { xl: '36px', lg: '36px', md: '30px', sm: '25px', xs: '20px' },
+  letterSpacing: '0.01px',
+  color: '#000',
   mt: 0.5,
   ml: { xl: 0, lg: 0, md: 0, sm: 0, xs: 1 },
 };
 
 const TeamProfessionTextStyle = {
-  fontFamily: "LGMedium",
-  fontStyle: "normal",
+  fontFamily: 'LGMedium',
+  fontStyle: 'normal',
   fontWeight: 500,
-  fontSize: { xl: "15px", lg: "15px", md: "14px", sm: "12px", xs: "12px" },
-  lineHeight: { xl: "20px", lg: "18px", md: "16px", sm: "16px", xs: "15px" },
-  letterSpacing: "0.01px",
-  color: "#000",
+  fontSize: { xl: '15px', lg: '15px', md: '14px', sm: '12px', xs: '12px' },
+  lineHeight: { xl: '20px', lg: '18px', md: '16px', sm: '16px', xs: '15px' },
+  letterSpacing: '0.01px',
+  color: '#000',
   mb: 3,
   ml: { xl: 0, lg: 0, md: 0, sm: 0, xs: 1 },
 };
 
 const coloredText = {
-  fontSize: { xl: "55px", lg: "50px", md: "40px", sm: "30px", xs: "30px" },
-  lineHeight: { xl: "75px", lg: "75px", md: "60px", sm: "35px", xs: "30px" },
+  fontSize: { xl: '55px', lg: '50px', md: '40px', sm: '30px', xs: '30px' },
+  lineHeight: { xl: '75px', lg: '75px', md: '60px', sm: '35px', xs: '30px' },
   fontWeight: 500,
-  fontFamily: "LGRegular",
-  background: "linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);",
-  backgroundSize: " 100%",
-  backgroundRepeat: "repeat",
-  backgroundClip: "text",
-  textFillColor: "transparent",
+  fontFamily: 'LGRegular',
+  background: 'linear-gradient(90deg, #091E3A 0%, #2F80ED 50%, #2D9EE0 100%);',
+  backgroundSize: ' 100%',
+  backgroundRepeat: 'repeat',
+  backgroundClip: 'text',
+  textFillColor: 'transparent',
 };
