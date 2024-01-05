@@ -290,11 +290,6 @@ const EmployeeCard1 = (props) => {
       place: 'Co-Founder & CEO ',
     },
     {
-      img: Roshni,
-      name: 'Roshni Hendricks',
-      place: ' Chief People Officer',
-    },
-    {
       img: Raghvendra,
       name: 'Raghvendra Singh ',
       place: 'Full Stack Developer',
@@ -335,16 +330,7 @@ const EmployeeCard1 = (props) => {
       name: 'Zaid Shaikh ',
       place: 'Full Stack Developer',
     },
-    // {
-    //   img: Adi,
-    //   name: "Aditya Chauhan",
-    //   place: "3D Artist",
-    // },
-    {
-      img: Virendra,
-      name: 'Virendra Parihar',
-      place: 'Sr.Android Developer ',
-    },
+
     {
       img: Sandeep,
       name: 'Sandeep Singh',
@@ -434,26 +420,10 @@ const EmployeeCard2 = (props) => {
       name: 'Samir Vitlani',
       place: 'Project Manager & Lead ',
     },
-    // {
-    //   img: Rutuja,
-    //   name: "Rutuja Karnavat ",
-    //   place: "Chief Vibes & People Officer ",
-    // },
     {
-      // img: greyemptyimg,
       img: Shreyansh,
       name: 'Shreyansh Sheth',
       place: 'Full Stack Developer',
-    },
-    // {
-    //   img: fluterwala,
-    //   name: "kamlesh prajapat",
-    //   place: " Flutter Intern ",
-    // },
-    {
-      img: Dev,
-      name: 'Dev Mistry',
-      place: 'Web Development Intern',
     },
 
     {
@@ -471,15 +441,21 @@ const EmployeeCard2 = (props) => {
       name: 'Naimish Gadhiya ',
       place: 'Jr.Full Stack Developer',
     },
+    // {
+    //   img: Aashvi,
+    //   name: 'Aashvi Zala ',
+    //   place: 'UI-UX Intern',
+    // },
     {
-      img: Aashvi,
-      name: 'Aashvi Zala ',
-      place: 'UI-UX Intern',
+      img: Adi,
+      name: 'Aditya Chauhan',
+      place: '3D Artist',
     },
+
     {
-      img: Khushboo,
-      name: 'Khushboo Rai ',
-      place: 'Andriod Developer',
+      img: Virendra,
+      name: 'Virendra Parihar',
+      place: 'Sr.Android Developer ',
     },
     {
       img: Jin,
@@ -491,11 +467,11 @@ const EmployeeCard2 = (props) => {
       name: 'Radhika Panjwani',
       place: 'Unity Developer',
     },
-    {
-      img: greyemptyimg,
-      name: 'Next is You!!',
-      // place: 'Unity Developer',
-    },
+    // {
+    //   img: greyemptyimg,
+    //   name: 'Next is You!!',
+    //   // place: 'Unity Developer',
+    // },
   ];
   return (
     <Grid
