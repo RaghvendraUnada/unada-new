@@ -20,6 +20,7 @@ import Khushboo from '../../assets/Images/ourTeamCutOut/Khushboo.webp';
 import Jin from '../../assets/Images/ourTeamCutOut/Jin.webp';
 import Rutuja from '../../assets/Images/ourTeamCutOut/Rutuja.webp';
 import Virendra from '../../assets/Images/ourTeamCutOut/Virendra.webp';
+import Virendraa from '../../assets/Images/ourTeamCutOut/Virendraa.webp';
 import Nammish from '../../assets/Images/ourTeamCutOut/Nammish.webp';
 import Nishit from '../../assets/Images/ourTeamCutOut/Nishit.webp';
 import Aashvi from '../../assets/Images/ourTeamCutOut/Aashvi.webp';
@@ -36,6 +37,16 @@ import Shreyansh from '../../assets/Images/ourTeamCutOut/Shreyansh.png';
 import Dev from '../../assets/Images/ourTeamCutOut/Dev.png';
 import Sameer from '../../assets/Images/ourTeamCutOut/Sameer.png';
 import Roshni from '../../assets/Images/ourTeamCutOut/Roshni.png';
+import Amar from '../../assets/Images/ourTeamCutOut/Amar.webp';
+import Akanksha from '../../assets/Images/ourTeamCutOut/Akanksha.webp';
+import Maharshi from '../../assets/Images/ourTeamCutOut/Maharshi.webp';
+import Dhrumil from '../../assets/Images/ourTeamCutOut/Dhrumil.webp';
+import Mahesh from '../../assets/Images/ourTeamCutOut/Mahesh.webp';
+import Aniket from '../../assets/Images/ourTeamCutOut/Aniket.webp';
+import Nilesh from '../../assets/Images/ourTeamCutOut/Nilesh.webp';
+import Umesh from '../../assets/Images/ourTeamCutOut/Umesh.webp';
+import Neil from '../../assets/Images/ourTeamCutOut/Neil.webp';
+import komal from '../../assets/Images/ourTeamCutOut/komal.webp';
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
   const [flip, setFlip] = useState(false);
@@ -302,7 +313,7 @@ const EmployeeCard1 = (props) => {
     {
       img: Ronak,
       name: 'Ronak Goswami',
-      place: 'Jr.Full Stack Developer',
+      place: 'Full Stack Developer',
     },
 
     {
@@ -313,7 +324,7 @@ const EmployeeCard1 = (props) => {
     {
       img: Harsiddh,
       name: 'Harsiddh Rajput ',
-      place: 'Sr.3D Developer',
+      place: '3D Team Leader ',
     },
     {
       img: devendra,
@@ -323,7 +334,7 @@ const EmployeeCard1 = (props) => {
     {
       img: Nishit,
       name: 'Nishit Godhani ',
-      place: '3D Intern ',
+      place: '3D Artist ',
     },
     {
       img: Zaid,
@@ -335,6 +346,31 @@ const EmployeeCard1 = (props) => {
       img: Sandeep,
       name: 'Sandeep Singh',
       place: 'Jr.UI/UX Designer ',
+    },
+    {
+      img: Akanksha,
+      name: 'Akanksha Rai',
+      place: 'Business development Manager ',
+    },
+    {
+      img: Dhrumil,
+      name: 'Dhrumil Shah',
+      place: 'Intern AI/ML ',
+    },
+    {
+      img: Mahesh,
+      name: 'Mahesh V N ',
+      place: 'Senior Mern Stack Developer  ',
+    },
+    {
+      img: Umesh,
+      name: 'Umesh Dangar',
+      place: 'Jr. Web Developer ',
+    },
+    {
+      img: Nilesh,
+      name: 'Nilesh Dhrangu',
+      place: '3D Artist ',
     },
   ];
   return (
@@ -453,7 +489,7 @@ const EmployeeCard2 = (props) => {
     },
 
     {
-      img: Virendra,
+      img: Virendraa,
       name: 'Virendra Parihar',
       place: 'Sr.Android Developer ',
     },
@@ -466,6 +502,31 @@ const EmployeeCard2 = (props) => {
       img: new3D,
       name: 'Radhika Panjwani',
       place: 'Unity Developer',
+    },
+    {
+      img: Maharshi,
+      name: 'Maharshi Brahmbhatt',
+      place: 'Business development executive',
+    },
+    {
+      img: Amar,
+      name: 'Amar Singh',
+      place: 'Intern AI/ML',
+    },
+    {
+      img: Aniket,
+      name: 'Ankit Mistry',
+      place: 'Flutter Developer',
+    },
+    {
+      img: Neil,
+      name: 'Neil Joseph',
+      place: 'QA Engineer',
+    },
+    {
+      img: komal,
+      name: 'Komal Patel',
+      place: 'Marketing Head',
     },
     // {
     //   img: greyemptyimg,
