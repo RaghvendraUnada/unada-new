@@ -47,6 +47,9 @@ import Nilesh from '../../assets/Images/ourTeamCutOut/Nilesh.webp';
 import Umesh from '../../assets/Images/ourTeamCutOut/Umesh.webp';
 import Neil from '../../assets/Images/ourTeamCutOut/Neil.webp';
 import komal from '../../assets/Images/ourTeamCutOut/komal.webp';
+import rahul from '../../assets/Images/ourTeamCutOut/rahul.webp';
+import jagruti from '../../assets/Images/ourTeamCutOut/jagruti.webp';
+import swati from '../../assets/Images/ourTeamCutOut/swati.webp';
 const OurTeam = () => {
   const [teamData, setTeamData] = useState();
   const [flip, setFlip] = useState(false);
@@ -372,6 +375,16 @@ const EmployeeCard1 = (props) => {
       name: 'Nilesh Dhrangu',
       place: '3D Artist ',
     },
+    {
+      img: rahul,
+      name: ' Rahul Chaudhary',
+      place: '3D Environment Artist ',
+    },
+    {
+      img: jagruti,
+      name: ' Jagruti Suthar',
+      place: ' Full Stack Developer ',
+    },
   ];
   return (
     <Grid
@@ -528,11 +541,16 @@ const EmployeeCard2 = (props) => {
       name: 'Komal Patel',
       place: 'Marketing Head',
     },
-    // {
-    //   img: greyemptyimg,
-    //   name: 'Next is You!!',
-    //   // place: 'Unity Developer',
-    // },
+    {
+      img: swati,
+      name: 'Swati Khot',
+      place: 'Chief People Officer',
+    },
+    {
+      img: greyemptyimg,
+      name: 'Next is You!!',
+      // place: 'Unity Developer',
+    },
   ];
   return (
     <Grid
